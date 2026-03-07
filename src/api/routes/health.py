@@ -24,7 +24,7 @@ async def _check_mongodb() -> str:
         logger.warning("MongoDB health check failed: %s", e)
         return f"error: {e!s}"
     finally:
-        client.close()
+        await client.aclose()
 
 
 async def _check_redis() -> str:

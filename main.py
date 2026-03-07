@@ -1,27 +1,18 @@
-"""Application runner.
-
-Sets ``WindowsSelectorEventLoopPolicy`` on Windows *before* uvicorn creates
-the event loop, which is required for psycopg3 / AsyncPostgresSaver.
-
-Usage:
-    uv run python main.py
-    # or in production:
-    uv run python main.py --host 0.0.0.0 --port 8001
-"""
-
 import sys
 
 if sys.platform == "win32":
     import asyncio
-
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 import uvicorn
+from src.main import app
 
 if __name__ == "__main__":
     uvicorn.run(
-        "src.main:app",
+        app,
         host="0.0.0.0",
-        port=8001,
-        reload=True,
+        port=8000,
+        reload=False,
+        workers=1,
+        loop="asyncio",
     )

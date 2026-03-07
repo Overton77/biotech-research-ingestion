@@ -1,4 +1,4 @@
-"""Socket.IO ASGI app — /research namespace, Redis adapter."""
+"""Socket.IO ASGI app — /research namespace with CORS."""
 
 import logging
 from typing import Any
@@ -14,23 +14,25 @@ from src.api.socketio.handlers import (
 
 logger = logging.getLogger(__name__)
 
-settings = get_settings()
+_sio: socketio.AsyncServer | None = None
 
-# Redis manager for multi-process room broadcast
-client_manager = socketio.AsyncRedisManager(settings.REDIS_URL)
 
-# AsyncServer with ASGI mode
-sio = socketio.AsyncServer(
-    async_mode="asgi",
-    client_manager=client_manager,
-    logger=logger.isEnabledFor(logging.DEBUG),
-    engineio_logger=False,
-)
+def get_sio() -> socketio.AsyncServer:
+    global _sio
+    if _sio is None:
+        settings = get_settings()
+        cors = [settings.WEB_ORIGIN, "http://localhost:3000"]
+        _sio = socketio.AsyncServer(
+            async_mode="asgi",
+            cors_allowed_origins=cors,
+            logger=logger.isEnabledFor(logging.DEBUG),
+            engineio_logger=False,
+        )
+        _sio.register_namespace(ResearchNamespace("/research"))
+    return _sio
 
 
 class ResearchNamespace(socketio.AsyncNamespace):
-    """Namespace /research — thread and run rooms, send_message handled in handlers."""
-
     namespace = "/research"
 
     async def on_connect(self, sid: str, environ: Any, auth: Any) -> bool:
@@ -44,13 +46,6 @@ class ResearchNamespace(socketio.AsyncNamespace):
         thread_id = data.get("thread_id")
         if thread_id:
             room = f"thread:{thread_id}"
-            await self.enter_room(sid, room)
-            logger.debug("sid=%s joined room %s", sid, room)
-
-    async def on_join_run(self, sid: str, data: dict[str, Any]) -> None:
-        run_id = data.get("run_id")
-        if run_id:
-            room = f"run:{run_id}"
             await self.enter_room(sid, room)
             logger.debug("sid=%s joined room %s", sid, room)
 
@@ -89,17 +84,10 @@ class ResearchNamespace(socketio.AsyncNamespace):
         await handle_plan_rejected(self.emit, thread_id, interrupt_id, notes)
 
 
-sio.register_namespace(ResearchNamespace("/research"))
-
-
 def get_sio_mount_app() -> socketio.ASGIApp:
-    """Return a Socket.IO ASGI app suitable for mounting inside FastAPI.
+    """Return a Socket.IO ASGI app for mounting inside FastAPI.
 
-    Mount at ``/socket.io`` with an empty socketio_path so that
-    Starlette strips the prefix before handing off to Socket.IO::
-
-        app.mount("/socket.io", get_sio_mount_app())
-
-    Clients should connect with ``{ path: "/socket.io" }`` (the default).
+    Mount at ``/socket.io`` with empty socketio_path so Starlette strips
+    the prefix before handing off to Socket.IO.
     """
-    return socketio.ASGIApp(sio, socketio_path="")
+    return socketio.ASGIApp(get_sio(), socketio_path="")
