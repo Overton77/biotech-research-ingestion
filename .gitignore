@@ -1,0 +1,144 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+*.env 
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[co]
+*.pyo
+*.pyd
+*.pyd.lock
+*.log
+*.pid
+*.cover
+*.pyc
+*.egg
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+*.sqlite3
+*.db
+.env
+.env.*
+.venv/
+venv/
+pip-wheel-metadata/
+.Python
+sitecustomize.pyc
+
+# Test/coverage
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+*.pytest_cache/
+.tox/
+.mypy_cache/
+.cache/
+.nox/
+
+# Build and packaging
+build/
+dist/
+wheels/
+sdist/
+*.whl
+
+# Jupyter / IPython
+.ipynb_checkpoints
+*.ipynb
+
+# VS Code
+.history/
+
+# Output/
+output/
+outputs/
+reports/
+
+# MongoDB
+*.mongodb
+*.bson
+*.ns
+*.wt
+*.snappy
+*.gz
+*.tar.gz
+dump/
+data/db/
+mongodb-data/
+
+# PostgreSQL/Postgres
+*.pgsql
+pgdata/
+postgres-data/
+*.db
+*.sql
+*.dump
+
+# Docker
+docker-compose.override.yml
+Dockerfile.*
+docker-compose.yml.*
+.docker/
+docker-data/
+*~docker-compose.yml
+
+# Local AWS
+.aws/
+*.pem
+*.key
+
+# LangChain
+langchain.db/
+langchain.logs/
+langchain_cache/
+.session_cache/
+llama_index.db/
+vectorstore/
+cache/
+
+# Secrets & Credentials
+*.env
+*.env.*
+secrets.yaml
+secrets.yml
+*.bak
+
+# Node (sometimes used for tools/linting in Python projects)
+node_modules/
+
+# Miscellaneous
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+
+# Ignore macOS Finder files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore relevant project subdir caches
+**/__pycache__/
+**/.pytest_cache/

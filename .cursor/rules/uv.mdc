@@ -1,0 +1,10 @@
+---
+description: Use uv for package management and running scripts
+alwaysApply: true
+---
+
+# uv
+
+- **Package management**: Use `uv` only (add, remove, sync, lock). Never use `pip`, `pipenv`, or `poetry` for installs.
+- **Running**: Use `uv run` for scripts and entrypoints (e.g. `uv run python main.py`, `uv run pytest`). Do not assume a pre-activated venv.
+- **Creating/using env**: Prefer `uv sync` and `uv venv`; do not document or use `python -m venv` or manual pip workflows.

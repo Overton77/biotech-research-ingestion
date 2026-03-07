@@ -1,0 +1,70 @@
+---
+description: Async-first, event-loop friendly Python for FastAPI, Beanie, LangChain/LangGraph and deep agents. Non-blocking I/O, concurrency, and context managers.
+alwaysApply: false
+---
+
+# Async & Non-Blocking Python
+
+Prefer **async/await**, event-loop–managed execution, and non-blocking I/O everywhere. Never block the event loop with sync I/O or CPU-heavy work in async contexts.
+
+## Core rules
+
+- **Endpoints & services**: Use `async def` and `await` for all I/O. No `def` for route handlers that do DB/HTTP/agent calls.
+- **Blocking work**: Run sync/CPU-bound code via `asyncio.to_thread()` or `run_in_threadpool`; never `time.sleep()`, sync HTTP, or sync DB in an async path.
+- **Context managers**: Use `async with` for async resources (HTTP clients, DB sessions, file I/O). Use FastAPI `lifespan` for startup/shutdown, not `@app.on_event`.
+- **Concurrency**: Use `asyncio.gather()` or `asyncio.TaskGroup` (3.11+) for parallel async work; avoid spawning threads for I/O.
+
+## FastAPI
+
+- All route handlers: `async def`. Inject async dependencies; use `AsyncSession` / async DB clients.
+- Background work: fire-and-forget with `asyncio.create_task()` only when you don’t need the result in the response; use `BackgroundTasks` for “after response” work that must complete.
+- Never call blocking I/O (e.g. `requests`, sync Mongo client, `open()` without a thread) inside an async endpoint.
+
+## Beanie (MongoDB)
+
+- Use Beanie’s async API only: `await Model.find_one()`, `await doc.insert()`, `await Model.find().to_list()`, etc.
+- Init Beanie with `await init_beanie(database=async_db, document_models=[...])` in lifespan, where `async_db` is the database from an `AsyncMongoClient`. Never use a sync Mongo client in async code.
+
+## LangChain / LangGraph / deep agents
+
+- Prefer **async entrypoints**: `ainvoke`, `astream`, `astream_events` for chains and agents; use LangGraph’s async `ainvoke`/`astream` for graph execution.
+- If a callable is sync-only, run it in a thread: `await asyncio.to_thread(sync_invoke, graph, input)` so the event loop stays non-blocking.
+- Tool implementations used by agents: implement async tools (`async def tool_fn(...)`) when possible so the agent runtime doesn’t block.
+
+## Concurrency & futures
+
+- Parallel independent calls: `await asyncio.gather(*[fetch_one(x) for x in items])` or `async with asyncio.TaskGroup() as tg: tg.create_task(...)`.
+- Timeouts: wrap awaits in `asyncio.wait_for(awaitable, timeout=...)`; use `asyncio.timeout()` (3.11+) where appropriate.
+- Don’t hold references to unfinished tasks without awaiting or cancelling them; avoid fire-and-forget unless intentional (e.g. logging, non-critical side effects).
+
+## Quick examples
+
+```python
+# ❌ Blocking in async
+async def handler():
+    time.sleep(1)           # blocks event loop
+    requests.get(url)       # blocks
+    doc = Model.find_one()  # sync Beanie usage
+
+# ✅ Non-blocking
+async def handler():
+    await asyncio.sleep(1)
+    async with httpx.AsyncClient() as client:
+        r = await client.get(url)
+    doc = await Model.find_one()
+```
+
+```python
+# ✅ CPU or sync-only code off the event loop
+from fastapi.concurrency import run_in_threadpool
+result = await run_in_threadpool(sync_cpu_or_sync_lib, arg)
+# or
+result = await asyncio.to_thread(sync_cpu_or_sync_lib, arg)
+```
+
+```python
+# ✅ LangGraph async
+result = await graph.ainvoke(state, config=config)
+async for chunk in graph.astream_events(state, config=config):
+    ...
+```
