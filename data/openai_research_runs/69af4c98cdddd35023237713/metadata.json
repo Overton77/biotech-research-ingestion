@@ -1,0 +1,81 @@
+{
+  "run_id": "69af4c98cdddd35023237713",
+  "plan_id": "69af4c98cdddd35023237712",
+  "thread_id": "67d1f2a9c4b8e31f9d7c2a10",
+  "openai_response_id": "resp_0906d62c2ca687ce0069af4c9a91ac81a3b7546db56977f77e",
+  "status": "failed",
+  "openai_status": "failed",
+  "status_history": [
+    {
+      "source": "internal",
+      "status": "queued",
+      "at": "2026-03-09T22:41:28.201580+00:00",
+      "details": {
+        "reason": "run created from approved plan"
+      }
+    },
+    {
+      "source": "internal",
+      "status": "in_progress",
+      "at": "2026-03-09T22:41:32.579677+00:00",
+      "details": {
+        "stage": "launch"
+      }
+    },
+    {
+      "source": "openai",
+      "status": "queued",
+      "at": "2026-03-09T22:41:32.579718+00:00",
+      "details": {
+        "response_id": "resp_0906d62c2ca687ce0069af4c9a91ac81a3b7546db56977f77e"
+      }
+    },
+    {
+      "source": "openai",
+      "status": "in_progress",
+      "at": "2026-03-09T22:41:33.666379+00:00",
+      "details": {
+        "response_id": "resp_0906d62c2ca687ce0069af4c9a91ac81a3b7546db56977f77e"
+      }
+    },
+    {
+      "source": "openai",
+      "status": "failed",
+      "at": "2026-03-09T22:42:04.474780+00:00",
+      "details": {
+        "response_id": "resp_0906d62c2ca687ce0069af4c9a91ac81a3b7546db56977f77e"
+      }
+    },
+    {
+      "source": "internal",
+      "status": "failed",
+      "at": "2026-03-09T22:42:04.985322+00:00",
+      "details": {
+        "stage": "persist"
+      }
+    }
+  ],
+  "created_at": "2026-03-09T22:41:28.201000",
+  "submitted_at": "2026-03-09T22:41:32.579000",
+  "started_at": "2026-03-09T22:41:32.579000",
+  "last_polled_at": "2026-03-09T22:42:04.985302+00:00",
+  "completed_at": null,
+  "failed_at": "2026-03-09T22:42:04.985311+00:00",
+  "cancelled_at": null,
+  "artifacts": {
+    "request": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\data\\openai_research_runs\\69af4c98cdddd35023237713\\request.json",
+    "initial_response": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\data\\openai_research_runs\\69af4c98cdddd35023237713\\initial_response.json",
+    "final_response": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\data\\openai_research_runs\\69af4c98cdddd35023237713\\final_response.json",
+    "output_items": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\data\\openai_research_runs\\69af4c98cdddd35023237713\\output_items.json",
+    "annotations": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\data\\openai_research_runs\\69af4c98cdddd35023237713\\annotations.json",
+    "citations": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\data\\openai_research_runs\\69af4c98cdddd35023237713\\citations.json",
+    "metadata": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\data\\openai_research_runs\\69af4c98cdddd35023237713\\metadata.json"
+  },
+  "usage": null,
+  "incomplete_details": null,
+  "error_message": "Your organization must be verified to use the model `o3-deep-research`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate.",
+  "error_payload": {
+    "code": "model_not_found",
+    "message": "Your organization must be verified to use the model `o3-deep-research`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate."
+  }
+}

@@ -1,5 +1,7 @@
 # Execution Plan — Deep Biotech Research Agent System
 
+# This execution plan from 4 onward will change after the deep research system is implemented and tested.
+
 **Status:** `[active]`  
 **Version:** 1.0  
 **Scope:** `biotech-research-ingestion` + `biotech-research-web`

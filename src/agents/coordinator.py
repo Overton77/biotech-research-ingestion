@@ -6,7 +6,7 @@ import logging
 from typing import Any
 
 from langchain.agents import create_agent
-from langchain.agents.middleware import HumanInTheLoopMiddleware
+from langchain.agents.middleware import HumanInTheLoopMiddleware 
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.store.memory import InMemoryStore
@@ -30,6 +30,7 @@ COORDINATOR_SYSTEM_PROMPT = """You are the Coordinator for a Deep Biotech Resear
     - context: A brief summary of what you found via web search
   The plan will be paused for human review before execution begins.
 - After a plan is approved, confirm the approval to the user and summarize next steps.
+  After plan approval, the system will automatically compile and execute a research mission using Deep Agent workers. You do not trigger execution yourself — that is handled externally via the API.
 - If a plan is rejected, ask the user what changes they want and create a revised plan.
 - Be concise and focused on the research objectives.
 """
@@ -57,10 +58,12 @@ def create_coordinator_graph(tools: list[Any] | None = None) -> Any:
     settings = get_settings()
 
     model = ChatOpenAI(
-        model="gpt-4o",
+        model="gpt-5-mini",
         api_key=settings.OPENAI_API_KEY or "not-set",
         temperature=0,
-    )
+    ) 
+
+    
 
     if tools is None:
         tools = [get_web_search_tool(), create_research_plan]

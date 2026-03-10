@@ -1,0 +1,56 @@
+{
+  "background": true,
+  "completed_at": null,
+  "conversation": null,
+  "created_at": 1773096090.0,
+  "error": {
+    "code": "model_not_found",
+    "message": "Your organization must be verified to use the model `o3-deep-research`. Please go to: https://platform.openai.com/settings/organization/general and click on Verify Organization. If you just verified, it can take up to 15 minutes for access to propagate."
+  },
+  "frequency_penalty": 0.0,
+  "id": "resp_0906d62c2ca687ce0069af4c9a91ac81a3b7546db56977f77e",
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": null,
+  "max_tool_calls": 225,
+  "metadata": {},
+  "model": "o3-deep-research-2025-06-26",
+  "object": "response",
+  "output": [],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": null,
+  "reasoning": {
+    "effort": "medium",
+    "generate_summary": null,
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "auto",
+  "status": "failed",
+  "store": true,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tools": [
+    {
+      "search_content_types": null,
+      "search_context_size": "medium",
+      "type": "web_search_preview",
+      "user_location": null
+    }
+  ],
+  "top_logprobs": 0,
+  "top_p": 1.0,
+  "truncation": "disabled",
+  "usage": null,
+  "user": null
+}

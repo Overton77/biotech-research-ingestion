@@ -12,6 +12,12 @@ class ThreadCreate(BaseModel):
     title: str = Field(default="New research", max_length=500)
 
 
+class ThreadUpdate(BaseModel):
+    """Request body for PATCH /threads/{id}."""
+
+    title: str = Field(min_length=1, max_length=500)
+
+
 class ThreadResponse(BaseModel):
     """Thread as returned by API."""
 

@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field
 class AgentConfig(BaseModel):
     """Per-task agent configuration."""
 
-    model: str = "anthropic:claude-sonnet-4-20250514"
+    model: str = "openai:gpt-5"
     system_prompt: str = ""
     tools: list[str] = Field(default_factory=list)
     backend_type: Literal["state", "filesystem", "composite"] = "state"

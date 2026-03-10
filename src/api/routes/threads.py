@@ -7,7 +7,7 @@ from beanie.odm.fields import PydanticObjectId
 
 from src.models import Thread, Message
 from src.api.schemas.common import envelope, CursorPage
-from src.api.schemas.threads import ThreadCreate, ThreadResponse, MessageResponse
+from src.api.schemas.threads import ThreadCreate, ThreadUpdate, ThreadResponse, MessageResponse
 
 router = APIRouter(prefix="/threads", tags=["threads"])
 
@@ -92,6 +92,36 @@ async def get_thread(thread_id: str) -> dict:
     if not thread:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Thread not found")
     return envelope(_thread_to_response(thread))
+
+
+@router.patch("/{thread_id}")
+async def update_thread(thread_id: str, body: ThreadUpdate) -> dict:
+    """Rename a thread."""
+    try:
+        oid = PydanticObjectId(thread_id)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Thread not found")
+    thread = await Thread.get(oid)
+    if not thread:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Thread not found")
+    thread.title = body.title
+    thread.updated_at = datetime.utcnow()
+    await thread.save()
+    return envelope(_thread_to_response(thread))
+
+
+@router.delete("/{thread_id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_thread(thread_id: str) -> None:
+    """Delete a thread and all its messages."""
+    try:
+        oid = PydanticObjectId(thread_id)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Thread not found")
+    thread = await Thread.get(oid)
+    if not thread:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Thread not found")
+    await Message.find(Message.thread_id == oid).delete()
+    await thread.delete()
 
 
 @router.get("/{thread_id}/messages")

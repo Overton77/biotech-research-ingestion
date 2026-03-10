@@ -1,5 +1,6 @@
-"""Plan REST routes — GET, PATCH, POST approve."""
+"""Plan REST routes — GET, PATCH, POST approve, POST launch."""
 
+import logging
 from datetime import datetime
 
 from fastapi import APIRouter, HTTPException, status
@@ -8,6 +9,8 @@ from pydantic import BaseModel, Field
 
 from src.models.plan import ResearchPlan
 from src.api.schemas.common import envelope
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/plans", tags=["plans"])
 
@@ -102,3 +105,68 @@ async def approve_plan(plan_id: str, body: PlanApproveBody | None = None) -> dic
     plan.updated_at = datetime.utcnow()
     await plan.save()
     return envelope(_plan_to_dict(plan))
+
+
+# ---------------------------------------------------------------------------
+# POST /plans/{plan_id}/launch — compile mission + start execution
+# ---------------------------------------------------------------------------
+
+async def _get_plan_or_404(plan_id: str) -> ResearchPlan:
+    try:
+        oid = PydanticObjectId(plan_id)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Plan not found")
+    plan = await ResearchPlan.get(oid)
+    if not plan:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Plan not found")
+    return plan
+
+
+@router.post("/{plan_id}/launch", status_code=status.HTTP_202_ACCEPTED)
+async def launch_plan(plan_id: str) -> dict:
+    """
+    Compile a ResearchMission from an approved plan and start a Temporal workflow.
+    Returns mission_id + workflow_id immediately.
+    """
+    from src.infrastructure.temporal.client import get_temporal_client
+    from src.infrastructure.temporal.worker import DEEP_RESEARCH_TASK_QUEUE
+    from src.infrastructure.temporal.workflows.deep_research import DeepResearchMissionWorkflow
+    from src.research.compiler.mission_creator import (
+        MissionCompilationError,
+        UnapprovedPlanError,
+        create_mission_from_plan,
+    )
+
+    plan = await _get_plan_or_404(plan_id)
+
+    if plan.status != "approved":
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Plan must be approved before launch",
+        )
+
+    try:
+        mission = await create_mission_from_plan(plan)
+    except UnapprovedPlanError as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
+    except MissionCompilationError as e:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e))
+
+    temporal_client = await get_temporal_client()
+    workflow_id = f"deep-research-{mission.id}"
+    await temporal_client.start_workflow(
+        DeepResearchMissionWorkflow.run,
+        str(mission.id),
+        id=workflow_id,
+        task_queue=DEEP_RESEARCH_TASK_QUEUE,
+    )
+
+    plan.status = "executing"
+    plan.updated_at = datetime.utcnow()
+    await plan.save()
+
+    return envelope({
+        "mission_id": str(mission.id),
+        "workflow_id": workflow_id,
+        "status": "accepted",
+    })

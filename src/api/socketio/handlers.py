@@ -1,11 +1,12 @@
 """Socket.IO event handlers — send_message, plan_approved, plan_rejected."""
 
 import logging
+from datetime import datetime
 from typing import Any
 
 from beanie.odm.fields import PydanticObjectId
 
-from src.models.plan import ResearchPlan
+from src.models.plan import AgentConfig, ResearchPlan, ResearchTask
 from src.services.coordinator_service import (
     stream_coordinator_response,
     persist_messages,
@@ -40,7 +41,6 @@ def _extract_plan_from_interrupt(interrupt_payload: dict[str, Any]) -> tuple[dic
 
     first = raw[0]
 
-    # LangGraph wraps interrupt data in an Interrupt object with .value
     val = first.value if hasattr(first, "value") else (first if isinstance(first, dict) else {})
 
     if isinstance(val, dict):
@@ -64,6 +64,34 @@ def _extract_plan_from_interrupt(interrupt_payload: dict[str, Any]) -> tuple[dic
         interrupt_id = str(first.id)
 
     return plan, interrupt_id
+
+
+def _coerce_tasks_to_models(raw_tasks: list[dict[str, Any]]) -> list[ResearchTask]:
+    """Convert lightweight coordinator task dicts into ResearchTask models.
+
+    The coordinator agent only provides id/title/description/stage/dependencies.
+    We fill in sensible defaults for agent_config, inputs, outputs so the plan
+    document is structurally valid for the mission compiler later.
+    """
+    result: list[ResearchTask] = []
+    for t in raw_tasks:
+        try:
+            result.append(
+                ResearchTask(
+                    id=t.get("id", ""),
+                    title=t.get("title", ""),
+                    description=t.get("description", ""),
+                    stage=t.get("stage", ""),
+                    dependencies=t.get("dependencies", []),
+                    estimated_duration_minutes=t.get("estimated_duration_minutes"),
+                    agent_config=AgentConfig(),
+                    inputs=[],
+                    outputs=[],
+                )
+            )
+        except Exception as exc:
+            logger.warning("Skipping malformed task dict: %s — %s", t, exc)
+    return result
 
 
 async def handle_send_message(
@@ -116,14 +144,16 @@ async def handle_send_message(
 
             register_pending_interrupt(interrupt_id, thread_id)
 
-            # Persist plan to MongoDB (simplified — no strict ResearchTask validation)
             try:
+                raw_tasks = plan_dict.get("tasks") or []
+                task_models = _coerce_tasks_to_models(raw_tasks)
+
                 doc = ResearchPlan(
                     thread_id=tid,
                     title=plan_dict.get("title") or "Research Plan",
                     objective=plan_dict.get("objective") or "",
                     stages=plan_dict.get("stages") or [],
-                    tasks=[],
+                    tasks=task_models,
                     status="pending_approval",
                 )
                 await doc.insert()
@@ -154,13 +184,104 @@ async def handle_send_message(
         )
 
 
+async def _launch_mission_for_plan(
+    emit_fn: Any,
+    plan_id: str,
+    thread_id: str,
+) -> None:
+    """Compile a ResearchMission from the approved plan and start a Temporal workflow."""
+    from src.infrastructure.temporal.client import get_temporal_client
+    from src.infrastructure.temporal.worker import DEEP_RESEARCH_TASK_QUEUE
+    from src.infrastructure.temporal.workflows.deep_research import DeepResearchMissionWorkflow
+    from src.research.compiler.mission_creator import (
+        MissionCompilationError,
+        UnapprovedPlanError,
+        create_mission_from_plan,
+    )
+
+    room = f"thread:{thread_id}"
+
+    plan_doc = await ResearchPlan.get(PydanticObjectId(plan_id))
+    if not plan_doc:
+        await emit_fn(
+            "mission_launch_error",
+            {"message": "Plan not found", "plan_id": plan_id, "thread_id": thread_id},
+            room=room,
+        )
+        return
+
+    if plan_doc.status != "approved":
+        logger.warning("Plan %s status is '%s', expected 'approved'", plan_id, plan_doc.status)
+        await emit_fn(
+            "mission_launch_error",
+            {"message": f"Plan status is '{plan_doc.status}', expected 'approved'", "plan_id": plan_id, "thread_id": thread_id},
+            room=room,
+        )
+        return
+
+    try:
+        await emit_fn(
+            "mission_compiling",
+            {"plan_id": plan_id, "thread_id": thread_id},
+            room=room,
+        )
+
+        mission = await create_mission_from_plan(plan_doc)
+
+        temporal_client = await get_temporal_client()
+        workflow_id = f"deep-research-{mission.id}"
+        handle = await temporal_client.start_workflow(
+            DeepResearchMissionWorkflow.run,
+            str(mission.id),
+            id=workflow_id,
+            task_queue=DEEP_RESEARCH_TASK_QUEUE,
+        )
+
+        plan_doc.status = "executing"
+        plan_doc.updated_at = datetime.utcnow()
+        await plan_doc.save()
+
+        logger.info(
+            "Mission %s launched via Temporal workflow %s for plan %s",
+            mission.id,
+            handle.id,
+            plan_id,
+        )
+
+        await emit_fn(
+            "mission_launched",
+            {
+                "mission_id": str(mission.id),
+                "plan_id": plan_id,
+                "thread_id": thread_id,
+                "workflow_id": workflow_id,
+            },
+            room=room,
+        )
+
+    except (UnapprovedPlanError, MissionCompilationError) as e:
+        logger.exception("Mission compilation failed for plan %s: %s", plan_id, e)
+        await emit_fn(
+            "mission_launch_error",
+            {"message": str(e), "plan_id": plan_id, "thread_id": thread_id},
+            room=room,
+        )
+    except Exception as e:
+        logger.exception("Failed to launch mission for plan %s: %s", plan_id, e)
+        await emit_fn(
+            "mission_launch_error",
+            {"message": str(e), "plan_id": plan_id, "thread_id": thread_id},
+            room=room,
+        )
+
+
 async def handle_plan_approved(
     emit_fn: Any,
     thread_id: str,
     interrupt_id: str,
     plan: dict[str, Any],
 ) -> None:
-    """Resume Coordinator with an approved plan."""
+    """Resume Coordinator with an approved plan, then compile + launch the mission."""
     if get_thread_id_for_interrupt(interrupt_id) != thread_id:
         await emit_fn(
             "error",
@@ -212,6 +333,29 @@ async def handle_plan_approved(
         tid = PydanticObjectId(thread_id)
         await persist_messages(tid, "[Plan approved]", assistant_content, run_id=None)
         await emit_fn("coordinator_stream_end", {"thread_id": thread_id}, room=room)
+
+        # ---- Auto-launch mission from the approved plan ----
+        plan_id = plan.get("id") if plan else None
+        if plan_id:
+            plan_doc = await ResearchPlan.get(PydanticObjectId(plan_id))
+            if plan_doc and plan_doc.status == "pending_approval":
+                plan_doc.status = "approved"
+                plan_doc.approved_at = datetime.utcnow()
+                plan_doc.updated_at = datetime.utcnow()
+
+                if plan and plan.get("tasks") and not plan_doc.tasks:
+                    plan_doc.tasks = _coerce_tasks_to_models(plan["tasks"])
+
+                await plan_doc.save()
+                logger.info("Plan %s marked as approved", plan_id)
+
+            await _launch_mission_for_plan(emit_fn, plan_id, thread_id)
+        else:
+            logger.warning(
+                "No plan_id in approval payload for thread %s — cannot auto-launch mission",
+                thread_id,
+            )
+
     except Exception as e:
         logger.exception("plan_approved failed for thread_id=%s: %s", thread_id, e)
         await emit_fn("error", {"message": str(e), "code": "coordinator_error"}, room=room)

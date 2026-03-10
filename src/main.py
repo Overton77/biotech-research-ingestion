@@ -1,5 +1,6 @@
 """FastAPI application with lifespan-managed MongoDB and LangGraph persistence."""
-
+from __future__ import annotations  
+import src.main 
 import logging
 from contextlib import asynccontextmanager
 from typing import AsyncIterator
@@ -10,11 +11,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from pymongo import AsyncMongoClient
 
 from src.agents.coordinator import get_coordinator_graph, reset_coordinator_graph
-from src.api.routes import health, plans, threads
+from src.api.routes import health, plans, threads, openai_research
+from src.api.routes.missions import router as missions_router
 from src.api.socketio.server import get_sio_mount_app
 from src.config import get_settings
 from src.models import Message, Thread
-from src.models.plan import ResearchPlan
+from src.models.plan import ResearchPlan 
+from src.models.openai_research import OpenAIResearchPlan, OpenAIResearchRun
+from src.research.models.mission import ResearchMission, ResearchRun
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -36,9 +40,13 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
         await init_beanie(
             database=app.state.mongo_db,
-            document_models=[Thread, Message, ResearchPlan],
+            document_models=[
+                Thread, Message, ResearchPlan,
+                OpenAIResearchPlan, OpenAIResearchRun,
+                ResearchMission, ResearchRun,
+            ],
         )
-        logger.info("Beanie initialized (Thread, Message, ResearchPlan)")
+        logger.info("Beanie initialized (Thread, Message, ResearchPlan, OpenAI*, ResearchMission, ResearchRun)")
 
         yield
 
@@ -76,6 +84,8 @@ def create_app() -> FastAPI:
     app.include_router(health.router, prefix="/api/v1")
     app.include_router(threads.router, prefix="/api/v1")
     app.include_router(plans.router, prefix="/api/v1")
+    app.include_router(openai_research.router, prefix="/api/v1")
+    app.include_router(missions_router, prefix="/api/v1")
 
     app.mount("/socket.io", get_sio_mount_app())
 

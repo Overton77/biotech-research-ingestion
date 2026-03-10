@@ -1,0 +1,6 @@
+system.enableActivityEagerExecution:
+  - value: true
+    constraints: {}
+frontend.enableServerVersionCheck:
+  - value: true
+    constraints: {}

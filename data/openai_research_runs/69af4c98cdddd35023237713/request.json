@@ -1,0 +1,65 @@
+{
+  "run_id": "69af4c98cdddd35023237713",
+  "plan_id": "69af4c98cdddd35023237712",
+  "thread_id": "67d1f2a9c4b8e31f9d7c2a10",
+  "model": "o3-deep-research",
+  "request_input": "# OpenAI Deep Research Mission\n\n## System Instructions\nYou are preparing a concise company research memo for an internal biotech software team. Focus on factual company overview, notable executives, flagship diagnostic products, and key product characteristics. Do not expand into a broad longevity-industry analysis. Prefer official company pages and clearly note uncertainty where information is incomplete or marketing-driven.\n\n## Research Objective\nProduce a concise company fundamentals brief on TruDiagnostic, with emphasis on leadership, company overview, and core diagnostic products.\n\n## User Request\nResearch TruDiagnostic at a company-fundamentals level. Summarize what the company does, identify notable executives and leadership roles, describe its main biological age and biomarker testing products, and explain what each flagship product is intended to measure or deliver. Keep the scope focused and practical rather than exhaustive.\n\n## Coordinator Notes\nThis is a scoped provider research task for product and company understanding, not a broad industry landscape. Prioritize official company sources first, then use high-quality secondary sources only as needed to clarify leadership or product details.\n\n## Seeded Sources / Hints\n1. [url] https://www.trudiagnostic.com | label=company homepage | REQUIRED\n2. [url] https://www.trudiagnostic.com/team | label=team page | REQUIRED\n3. [query] TruDiagnostic executives products biological age test | label=company fundamentals query\n4. [note] Keep scope minimal: company overview, notable executives, top diagnostic products, what the products measure, and source-backed summary only. | label=scope control | REQUIRED\n\n## Output Requirements\nReturn markdown with sections for Executive Summary, Company Overview, Notable Executives, Flagship Products, and Sources. Include a compact comparison table for the top products and cite claims throughout.\n\n## Important Instructions\n- Work in the first person where appropriate if that helps match the user's request.\n- Prefer primary and authoritative sources where possible.\n- Be explicit about uncertainty when evidence is incomplete.\n- Use citations throughout the report.\n- If comparisons are useful, include tables.\n",
+  "request_tools": [
+    {
+      "type": "web_search_preview"
+    }
+  ],
+  "request_metadata": {
+    "plan_id": "69af4c98cdddd35023237712",
+    "thread_id": "67d1f2a9c4b8e31f9d7c2a10",
+    "plan_title": "TruDiagnostic company fundamentals",
+    "objective": "Produce a concise company fundamentals brief on TruDiagnostic, with emphasis on leadership, company overview, and core diagnostic products.",
+    "requested_tools": [
+      "web_search_preview"
+    ],
+    "seeded_sources": [
+      {
+        "type": "url",
+        "value": "https://www.trudiagnostic.com",
+        "label": "company homepage",
+        "description": null,
+        "required": true,
+        "metadata": {}
+      },
+      {
+        "type": "url",
+        "value": "https://www.trudiagnostic.com/team",
+        "label": "team page",
+        "description": null,
+        "required": true,
+        "metadata": {}
+      },
+      {
+        "type": "query",
+        "value": "TruDiagnostic executives products biological age test",
+        "label": "company fundamentals query",
+        "description": null,
+        "required": false,
+        "metadata": {}
+      },
+      {
+        "type": "note",
+        "value": "Keep scope minimal: company overview, notable executives, top diagnostic products, what the products measure, and source-backed summary only.",
+        "label": "scope control",
+        "description": null,
+        "required": true,
+        "metadata": {}
+      }
+    ]
+  },
+  "openai_request_payload": {
+    "model": "o3-deep-research",
+    "input": "# OpenAI Deep Research Mission\n\n## System Instructions\nYou are preparing a concise company research memo for an internal biotech software team. Focus on factual company overview, notable executives, flagship diagnostic products, and key product characteristics. Do not expand into a broad longevity-industry analysis. Prefer official company pages and clearly note uncertainty where information is incomplete or marketing-driven.\n\n## Research Objective\nProduce a concise company fundamentals brief on TruDiagnostic, with emphasis on leadership, company overview, and core diagnostic products.\n\n## User Request\nResearch TruDiagnostic at a company-fundamentals level. Summarize what the company does, identify notable executives and leadership roles, describe its main biological age and biomarker testing products, and explain what each flagship product is intended to measure or deliver. Keep the scope focused and practical rather than exhaustive.\n\n## Coordinator Notes\nThis is a scoped provider research task for product and company understanding, not a broad industry landscape. Prioritize official company sources first, then use high-quality secondary sources only as needed to clarify leadership or product details.\n\n## Seeded Sources / Hints\n1. [url] https://www.trudiagnostic.com | label=company homepage | REQUIRED\n2. [url] https://www.trudiagnostic.com/team | label=team page | REQUIRED\n3. [query] TruDiagnostic executives products biological age test | label=company fundamentals query\n4. [note] Keep scope minimal: company overview, notable executives, top diagnostic products, what the products measure, and source-backed summary only. | label=scope control | REQUIRED\n\n## Output Requirements\nReturn markdown with sections for Executive Summary, Company Overview, Notable Executives, Flagship Products, and Sources. Include a compact comparison table for the top products and cite claims throughout.\n\n## Important Instructions\n- Work in the first person where appropriate if that helps match the user's request.\n- Prefer primary and authoritative sources where possible.\n- Be explicit about uncertainty when evidence is incomplete.\n- Use citations throughout the report.\n- If comparisons are useful, include tables.\n",
+    "background": true,
+    "tools": [
+      {
+        "type": "web_search_preview"
+      }
+    ]
+  }
+}
