@@ -75,7 +75,9 @@ async def compile_subagent(
         model=model,
         tools=tools,
         system_prompt=config.system_prompt,
-        middleware=middleware,
+        middleware=middleware, 
+        checkpointer=ctx.checkpointer,
+        store=ctx.store,
     )
 
     logger.info(
