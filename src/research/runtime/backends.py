@@ -1,27 +1,32 @@
-"""Workspace path builders and backend factories for research missions.
-
-Path layout:
-  /tmp/research_missions/{mission_id}/tasks/{task_id}/
-      workspace/
-      outputs/
-      scratch/
-      subagents/{subagent_name}/
-          workspace/
-          outputs/
-          scratch/
-"""
+"""Workspace path builders and backend factories for research missions."""
 
 from __future__ import annotations
 
 import asyncio
+import os
 from pathlib import Path
 from typing import Any, Callable
 
 from deepagents.backends import FilesystemBackend
 
 
+def _default_workspace_root() -> Path:
+    # Adjust parents[N] to match your actual project layout.
+    # Example assumes this file lives somewhere like:
+    # src/.../workspace.py  -> project root is parents[2] or parents[3]
+    project_root = Path(__file__).resolve().parents[2]
+    return project_root / ".deepagents" / "research_missions"
+
+
+def workspace_root() -> Path:
+    override = os.environ.get("DEEP_AGENTS_WORKSPACE_ROOT")
+    root = Path(override).expanduser().resolve() if override else _default_workspace_root().resolve()
+    root.mkdir(parents=True, exist_ok=True)
+    return root
+
+
 def mission_root(mission_id: str) -> Path:
-    return Path("/tmp/research_missions") / mission_id
+    return workspace_root() / mission_id
 
 
 def task_root(mission_id: str, task_id: str) -> Path:
@@ -33,7 +38,6 @@ def subagent_root(mission_id: str, task_id: str, subagent_name: str) -> Path:
 
 
 async def ensure_task_workspace(mission_id: str, task_id: str) -> Path:
-    """Create workspace directories for a task. Returns task root path."""
     root = task_root(mission_id, task_id)
     for subdir in ("workspace", "outputs", "scratch"):
         target = root / subdir
@@ -44,7 +48,6 @@ async def ensure_task_workspace(mission_id: str, task_id: str) -> Path:
 async def ensure_subagent_workspace(
     mission_id: str, task_id: str, subagent_name: str
 ) -> Path:
-    """Create workspace directories for a subagent. Returns subagent root."""
     root = subagent_root(mission_id, task_id, subagent_name)
     for subdir in ("workspace", "outputs", "scratch"):
         target = root / subdir
@@ -55,20 +58,26 @@ async def ensure_subagent_workspace(
 def build_task_backend(
     mission_id: str,
     task_id: str,
-    store: Any,
-) -> Callable:
+) -> Callable[[Any], Any]:
     """
-    Return a CompositeBackend factory (callable that takes runtime).
-    Routes /memories/ → StoreBackend(runtime), everything else → FilesystemBackend.
+    Composite backend:
+    - filesystem for workspace/output/scratch
+    - store-backed persistence for /memories/
     """
-    root = task_root(mission_id, task_id)
+    root = task_root(mission_id, task_id).resolve()
 
     def backend_factory(runtime: Any) -> Any:
         from deepagents.backends import StoreBackend
         from deepagents.backends.composite import CompositeBackend
+
         return CompositeBackend(
-            default=FilesystemBackend(root_dir=str(root)),
-            routes={"/memories/": StoreBackend(runtime)},
+            default=FilesystemBackend(
+                root_dir=str(root),
+                virtual_mode=True,
+            ),
+            routes={
+                "/memories/": StoreBackend(runtime),
+            },
         )
 
     return backend_factory
@@ -80,8 +89,10 @@ def build_subagent_backend(
     subagent_name: str,
 ) -> FilesystemBackend:
     """
-    Return a plain FilesystemBackend for a subagent.
-    Subagents get their own isolated workspace, not a composite backend.
+    Isolated filesystem backend for a subagent.
     """
-    root = subagent_root(mission_id, task_id, subagent_name)
-    return FilesystemBackend(root_dir=str(root))
+    root = subagent_root(mission_id, task_id, subagent_name).resolve()
+    return FilesystemBackend(
+        root_dir=str(root),
+        virtual_mode=True,
+    )

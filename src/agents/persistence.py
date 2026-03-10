@@ -4,7 +4,8 @@ from __future__ import annotations
 
 import asyncio
 import logging
-import os
+import os 
+from langgraph.checkpoint.memory import MemorySaver
 from contextlib import AsyncExitStack
 from typing import Optional, Tuple
 
@@ -13,7 +14,6 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
 from langgraph.store.memory import InMemoryStore
 from langgraph.store.postgres.aio import AsyncPostgresStore
-import selectors
 
 logger = logging.getLogger(__name__)
 
@@ -25,11 +25,22 @@ _checkpointer: Optional[AsyncPostgresSaver | InMemorySaver] = None
 _lock = asyncio.Lock()
 
 
-async def get_persistence() -> Tuple[AsyncPostgresStore | InMemoryStore, AsyncPostgresSaver | InMemorySaver]:
+def _resolve_db_uri(explicit_uri: str | None = None) -> str | None:
+    return (
+        explicit_uri
+        or os.environ.get("DEEP_AGENTS_POSTGRES_URI")
+        or os.environ.get("POSTGRES_URL")
+        or os.environ.get("POSTGRES_URI")
+    )
+
+
+async def get_persistence(
+    uri: str | None = None,
+) -> Tuple[AsyncPostgresStore | InMemoryStore, AsyncPostgresSaver | InMemorySaver]:
     """
     Initialize once per process and return (store, checkpointer).
 
-    - store: long-term memory across threads / sessions
+    - store: long-term durable memory across threads / sessions
     - checkpointer: thread-scoped persistence for graph state, interrupts, resume
     """
     global _stack, _store, _checkpointer
@@ -41,12 +52,15 @@ async def get_persistence() -> Tuple[AsyncPostgresStore | InMemoryStore, AsyncPo
         if _store is not None and _checkpointer is not None:
             return _store, _checkpointer
 
-        db_uri = os.environ.get("POSTGRES_URL") or os.environ.get("POSTGRES_URI")
+        db_uri = _resolve_db_uri(uri)
         if not db_uri:
-            logger.warning("POSTGRES_URL/POSTGRES_URI not set; falling back to in-memory persistence")
+            logger.warning(
+                "No Postgres URI configured; falling back to in-memory persistence"
+            )
             _store = InMemoryStore()
             _checkpointer = InMemorySaver()
             return _store, _checkpointer
+
         try:
             stack = AsyncExitStack()
 
@@ -57,9 +71,9 @@ async def get_persistence() -> Tuple[AsyncPostgresStore | InMemoryStore, AsyncPo
                 AsyncPostgresSaver.from_conn_string(db_uri)
             )
 
-            # Safe to call repeatedly; creates tables/migrations if needed.
-            asyncio.run(store.setup(), loop_factory=asyncio.SelectorEventLoop(selectors.SelectSelector()))
-            asyncio.run(checkpointer.setup(), loop_factory=asyncio.SelectorEventLoop(selectors.SelectSelector()))
+            # Must be called the first time these are used.
+            await store.setup()
+            await checkpointer.setup()
 
             _stack = stack
             _store = store
@@ -72,17 +86,16 @@ async def get_persistence() -> Tuple[AsyncPostgresStore | InMemoryStore, AsyncPo
             logger.exception(
                 "Failed to initialize Postgres persistence; falling back to in-memory persistence"
             )
-            if _stack is not None:
-                await _stack.aclose()
-                _stack = None
+            if stack is not None:
+                await stack.aclose()
 
+            _stack = None
             _store = InMemoryStore()
             _checkpointer = InMemorySaver()
             return _store, _checkpointer
 
 
 async def close_persistence() -> None:
-    """Close shared persistence resources on application shutdown."""
     global _stack, _store, _checkpointer
 
     if _stack is not None:
@@ -92,4 +105,19 @@ async def close_persistence() -> None:
     _store = None
     _checkpointer = None
 
-    logger.info("Closed LangGraph persistence resources")
+    logger.info("Closed LangGraph persistence resources")  
+
+# In Memory store and checkpointer 
+
+def _get_checkpointer() -> MemorySaver:
+    global _checkpointer
+    if _checkpointer is None:
+        _checkpointer = MemorySaver()
+    return _checkpointer
+
+
+def _get_store() -> InMemoryStore:
+    global _store
+    if _store is None:
+        _store = InMemoryStore()
+    return _store

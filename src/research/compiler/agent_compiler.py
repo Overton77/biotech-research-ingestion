@@ -8,12 +8,16 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Optional
+
+from langgraph.checkpoint.memory import InMemorySaver
 
 from deepagents import CompiledSubAgent, create_deep_agent
 from deepagents.backends import FilesystemBackend
 from deepagents.middleware.filesystem import FilesystemMiddleware
-from langchain.agents import create_agent
+from langchain.agents import create_agent 
+from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver    
+from langgraph.store.postgres.aio import AsyncPostgresStore 
 from langchain.agents.middleware import TodoListMiddleware
 from langchain.chat_models import init_chat_model
 from langgraph.store.memory import InMemoryStore
@@ -36,7 +40,8 @@ class RuntimeContext:
 
     mission_id: str
     task_id: str
-    store: InMemoryStore
+    store: InMemoryStore | AsyncPostgresStore 
+    checkpointer: Optional[InMemorySaver | AsyncPostgresSaver]
 
 
 async def compile_subagent(

@@ -9,8 +9,9 @@ from langchain.agents import create_agent
 from langchain.agents.middleware import HumanInTheLoopMiddleware 
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
-from langgraph.store.memory import InMemoryStore
-
+from langgraph.store.memory import InMemoryStore 
+import os 
+from src.agents.persistence import get_persistence, _get_checkpointer, _get_store
 from src.agents.tools.create_plan import create_research_plan
 from src.agents.tools.web_search import get_web_search_tool
 from src.config import get_settings
@@ -37,25 +38,26 @@ COORDINATOR_SYSTEM_PROMPT = """You are the Coordinator for a Deep Biotech Resear
 
 _coordinator_graph: Any = None
 _checkpointer: MemorySaver | None = None
-_store: InMemoryStore | None = None
+_store: InMemoryStore | None = None 
+postgres_uri = os.environ.get("POSTGRES_URI")
 
 
-def _get_checkpointer() -> MemorySaver:
-    global _checkpointer
-    if _checkpointer is None:
-        _checkpointer = MemorySaver()
-    return _checkpointer
 
 
-def _get_store() -> InMemoryStore:
-    global _store
-    if _store is None:
-        _store = InMemoryStore()
-    return _store
 
+async def create_coordinator_graph(tools: list[Any] | None = None, use_in_memory: bool = False) -> Any:
+    settings = get_settings()  
 
-def create_coordinator_graph(tools: list[Any] | None = None) -> Any:
-    settings = get_settings()
+    store = None    
+    checkpointer = None   
+
+    if use_in_memory:
+        store = _get_store()
+        checkpointer = _get_checkpointer()
+    else:
+        store, checkpointer = await get_persistence(postgres_uri) 
+
+    
 
     model = ChatOpenAI(
         model="gpt-5-mini",
@@ -72,8 +74,8 @@ def create_coordinator_graph(tools: list[Any] | None = None) -> Any:
         model=model,
         tools=tools,
         system_prompt=COORDINATOR_SYSTEM_PROMPT,
-        checkpointer=_get_checkpointer(),
-        store=_get_store(),
+        checkpointer=checkpointer,
+        store=store,
         middleware=[
             HumanInTheLoopMiddleware(
                 interrupt_on={

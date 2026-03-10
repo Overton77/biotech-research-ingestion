@@ -12,13 +12,19 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from langchain.chat_models import init_chat_model
-from langchain.agents import create_agent
+from langchain.agents import create_agent 
+from src.agents.persistence import get_persistence 
+import os  
+from dotenv import load_dotenv
 
 from src.research.models.mission import ResearchMissionDraft
 
 if TYPE_CHECKING:
     from src.models.plan import ResearchPlan
 
+load_dotenv() 
+
+postgres_uri = os.environ.get("POSTGRES_URI")
 logger = logging.getLogger(__name__)
 
 _PROMPTS_DIR = Path(__file__).parent / "prompts"
@@ -120,14 +126,18 @@ async def compile_mission_draft(
     Retries up to max_retries times with validation error feedback.
     """
     system_prompt = _build_compiler_system_prompt()
-    user_message = _plan_to_compiler_prompt(plan)
+    user_message = _plan_to_compiler_prompt(plan) 
+
+    store, checkpointer = await get_persistence(postgres_uri)  
 
     model = init_chat_model(model_name)
 
     mission_agent = create_agent(
         model,
         system_prompt=system_prompt,
-        response_format=ResearchMissionDraft,
+        response_format=ResearchMissionDraft, 
+        checkpointer=checkpointer,
+        store=store,
     )
 
     last_error: Exception | None = None

@@ -13,14 +13,19 @@ from __future__ import annotations
 import logging
 from datetime import datetime
 from operator import add
-from typing import Annotated, Any
+from typing import Annotated, Any 
+from langchain_core.runnables import RunnableConfig
+from langgraph.runtime import Runtime
+from src.agents.persistence import get_persistence
 
 from beanie.odm.fields import PydanticObjectId
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph
 from langgraph.graph.state import CompiledStateGraph
+from langgraph.store.base import BaseStore
 from langgraph.store.memory import InMemoryStore
-from typing_extensions import TypedDict
+from typing_extensions import TypedDict 
+import os 
 
 from src.research.compiler.agent_compiler import RuntimeContext
 from src.research.models.mission import (
@@ -31,9 +36,15 @@ from src.research.models.mission import (
     TaskResult,
 )
 from src.research.persistence.research_run_writer import ResearchRunWriter
-from src.research.runtime.task_executor import execute_task as execute_task_def
+from src.research.runtime.task_executor import execute_task as execute_task_def 
+from dotenv import load_dotenv  
 
-logger = logging.getLogger(__name__)
+load_dotenv() 
+
+
+logger = logging.getLogger(__name__)  
+
+deep_agents_postgres_uri = os.environ.get("DEEP_AGENTS_POSTGRES_URI")
 
 
 # ---------------------------------------------------------------------------
@@ -164,18 +175,20 @@ async def select_next_task(state: MissionRunnerState) -> dict:
     return {"current_task_id": queue[0]}
 
 
-async def run_task(state: MissionRunnerState) -> dict:
+async def run_task(state: MissionRunnerState, config: RunnableConfig, runtime: Runtime) -> dict:
     """Execute the current task using the Deep Agent pipeline."""
     task_id = state["current_task_id"]
     if not task_id:
         return {"task_results": [], "events": []}
 
     task_def = state["task_defs_by_id"][task_id]
-    store = _get_store()
+    _, checkpointer = await get_persistence(deep_agents_postgres_uri) 
     ctx = RuntimeContext(
         mission_id=state["mission_id"],
         task_id=task_id,
-        store=store,
+        store=runtime.store,
+        checkpointer=checkpointer, 
+
     )
 
     mission = state["mission"]
@@ -281,7 +294,7 @@ async def finalize_mission(state: MissionRunnerState) -> dict:
 # Graph Assembly
 # ---------------------------------------------------------------------------
 
-def build_mission_runner() -> CompiledStateGraph:
+async def build_mission_runner() -> CompiledStateGraph:
     """Build and compile the MissionRunner LangGraph StateGraph."""
     builder = StateGraph(MissionRunnerState)
 
@@ -312,8 +325,8 @@ def build_mission_runner() -> CompiledStateGraph:
     )
     builder.add_edge("finalize_mission", END)
 
-    checkpointer = MemorySaver()
-    return builder.compile(checkpointer=checkpointer)
+    store, checkpointer = await get_persistence(deep_agents_postgres_uri)
+    return builder.compile(checkpointer=checkpointer, store=store)
 
 
 def get_mission_runner() -> CompiledStateGraph:
