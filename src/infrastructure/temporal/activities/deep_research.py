@@ -4,7 +4,8 @@ from __future__ import annotations
 
 import logging
 
-from temporalio import activity
+from temporalio import activity 
+
 
 logger = logging.getLogger(__name__)
 
@@ -18,11 +19,14 @@ async def run_deep_research_mission(mission_id: str) -> dict:
     around it (retry, timeout, visibility).  We can decompose into finer
     activities later.
     """
+    from src.research.middleware.progress_callback import create_progress_callback
     from src.research.runtime.mission_runner import run_mission
 
     activity.logger.info("Starting deep-research mission %s", mission_id)
 
-    result = await run_mission(mission_id)
+    progress_callback = create_progress_callback(mission_id)
+
+    result = await run_mission(mission_id, progress_callback=progress_callback)
 
     status = result.get("mission_status", "unknown")
     completed = len(result.get("completed_task_ids", []))

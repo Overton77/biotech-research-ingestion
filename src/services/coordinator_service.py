@@ -2,13 +2,16 @@
 
 import logging
 from typing import Any, Callable, Awaitable
+from typing_extensions import TypedDict
 
 from langchain_core.messages import HumanMessage
 from langgraph.types import Command
 
 from src.agents.coordinator import get_coordinator_graph
-from src.models import Message, Thread
+from src.models import Message, Thread 
+from langchain_core.runnables import RunnableConfig
 from beanie.odm.fields import PydanticObjectId
+from langgraph.graph.state import CompiledStateGraph
 
 logger = logging.getLogger(__name__)
 
@@ -43,8 +46,8 @@ async def stream_coordinator_response(
 ) -> tuple[str, dict[str, Any] | None]:
     """Run the Coordinator with a user message, stream events, return
     (assistant_content, interrupt_payload)."""
-    graph = get_coordinator_graph()
-    config = {
+    graph: CompiledStateGraph = await get_coordinator_graph()
+    config: RunnableConfig = {
         "configurable": {"thread_id": thread_id},
         "metadata": {"thread_id": thread_id},
     }
@@ -149,8 +152,8 @@ async def resume_coordinator_after_approval(
         Reject   -> {"decisions": [{"type": "reject", "message": "..."}]}
         Edit     -> {"decisions": [{"type": "edit", "edited_action": {"name": ..., "args": {...}}}]}
     """
-    graph = get_coordinator_graph()
-    config = {
+    graph: CompiledStateGraph = await get_coordinator_graph()
+    config: RunnableConfig = {
         "configurable": {"thread_id": thread_id},
         "metadata": {"thread_id": thread_id},
     }

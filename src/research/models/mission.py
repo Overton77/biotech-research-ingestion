@@ -125,7 +125,7 @@ class ArtifactRef(BaseModel):
     task_id: str
     name: str
     artifact_type: str  # "report", "document", "json", "log"
-    storage: Literal["filesystem", "mongo_inline"] = "filesystem"
+    storage: Literal["filesystem", "s3", "mongo_inline"] = "filesystem"
     path: str | None = None
     content_inline: str | None = None
     content_type: str = "text/plain"

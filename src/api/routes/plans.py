@@ -15,6 +15,41 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/plans", tags=["plans"])
 
 
+# ---------------------------------------------------------------------------
+# GET /plans — paginated list
+# ---------------------------------------------------------------------------
+
+@router.get("")
+async def list_plans(
+    skip: int = 0,
+    limit: int = 20,
+    thread_id: str | None = None,
+    status_filter: str | None = None,
+) -> dict:
+    """List research plans with pagination."""
+    limit = min(limit, 100)
+    query: dict = {}
+    if thread_id:
+        query["thread_id"] = PydanticObjectId(thread_id)
+    if status_filter:
+        query["status"] = status_filter
+
+    total = await ResearchPlan.find(query).count()
+    plans = await (
+        ResearchPlan.find(query)
+        .sort("-created_at")
+        .skip(skip)
+        .limit(limit)
+        .to_list()
+    )
+    return envelope({
+        "items": [_plan_to_dict(p) for p in plans],
+        "total": total,
+        "skip": skip,
+        "limit": limit,
+    })
+
+
 def _plan_to_dict(p: ResearchPlan) -> dict:
     return {
         "id": str(p.id),

@@ -7,22 +7,25 @@ compile_subagent: CompiledSubAgentConfig → CompiledSubAgent wrapping create_ag
 from __future__ import annotations
 
 import logging
-from dataclasses import dataclass
-from typing import Any, Optional
+from dataclasses import dataclass, field
+from typing import Any, Awaitable, Callable, Optional
 
 from langgraph.checkpoint.memory import InMemorySaver
+from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
+from langgraph.store.memory import InMemoryStore
+from langgraph.store.postgres.aio import AsyncPostgresStore
 
 from deepagents import CompiledSubAgent, create_deep_agent
-from deepagents.backends import FilesystemBackend
 from deepagents.middleware.filesystem import FilesystemMiddleware
-from langchain.agents import create_agent 
-from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver    
-from langgraph.store.postgres.aio import AsyncPostgresStore 
+from langchain.agents import create_agent
 from langchain.agents.middleware import TodoListMiddleware
 from langchain.chat_models import init_chat_model
-from langgraph.store.memory import InMemoryStore
 
 from src.research.models.mission import CompiledSubAgentConfig, TaskDef
+from src.research.middleware.progress_middleware import (
+    ProgressCallback,
+    ResearchProgressMiddleware,
+)
 from src.research.runtime.backends import (
     build_subagent_backend,
     build_task_backend,
@@ -42,6 +45,7 @@ class RuntimeContext:
     task_id: str
     store: InMemoryStore | AsyncPostgresStore 
     checkpointer: Optional[InMemorySaver | AsyncPostgresSaver]
+    progress_callback: ProgressCallback | None = field(default=None)
 
 
 async def compile_subagent(
@@ -65,6 +69,15 @@ async def compile_subagent(
     middleware: list[Any] = [FilesystemMiddleware(backend=backend)]
     if config.use_todo_middleware:
         middleware.append(TodoListMiddleware())
+
+    # Progress middleware for real-time dashboard
+    if ctx.progress_callback:
+        middleware.append(ResearchProgressMiddleware(
+            mission_id=ctx.mission_id,
+            task_id=ctx.task_id,
+            subagent_name=config.name,
+            progress_callback=ctx.progress_callback,
+        ))
 
     # 5. Build model (fall back to default if not specified)
     model_name = config.model_name or "openai:gpt-5-mini"
@@ -110,8 +123,9 @@ async def compile_main_task_agent(
     # 2. Resolve tools
     tools = resolve_tool_profile(cfg.tool_profile_name)
 
-    # 3. Build backend factory
-    backend = build_task_backend(ctx.mission_id, ctx.task_id, ctx.store)
+    # 3. Build backend factory — StoreBackend inside the composite reads runtime.store
+    #    at invocation time; no need to pass ctx.store at build time.
+    backend = build_task_backend(ctx.mission_id, ctx.task_id)
 
     # 4. Compile declared subagents
     subagents: list[CompiledSubAgent] = []
@@ -122,14 +136,27 @@ async def compile_main_task_agent(
     # 5. Build model
     model = init_chat_model(cfg.model_name)
 
-    # 6. Assemble agent
+    # 6. Build main agent middleware (progress tracking for the deep agent itself)
+    main_middleware: list[Any] = []
+    if ctx.progress_callback:
+        main_middleware.append(ResearchProgressMiddleware(
+            mission_id=ctx.mission_id,
+            task_id=ctx.task_id,
+            subagent_name=None,
+            progress_callback=ctx.progress_callback,
+        ))
+
+    # 7. Assemble agent — pass both store and checkpointer so the deep agent's
+    #    internal graph is fully persisted with the deep-agents Postgres backend.
     agent = create_deep_agent(
         model=model,
         tools=tools,
         system_prompt=cfg.system_prompt,
         backend=backend,
         store=ctx.store,
+        checkpointer=ctx.checkpointer,
         subagents=subagents,
+        middleware=main_middleware if main_middleware else None,
     )
 
     logger.info(

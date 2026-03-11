@@ -1,18 +1,61 @@
-"""Mission REST routes — GET mission state, GET runs for a mission."""
+"""Mission REST routes — list, detail, status, runs, S3 outputs, artifacts."""
 
 from __future__ import annotations
 
 import logging
+from typing import Any
 
 from beanie.odm.fields import PydanticObjectId
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Query, status
 
 from src.api.schemas.common import envelope
 from src.research.models.mission import ResearchMission, ResearchRun
+from src.research.persistence.runs_s3 import (
+    ResearchRunS3Paths,
+    get_research_runs_s3_store,
+)
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/missions", tags=["missions"])
+
+
+# ---------------------------------------------------------------------------
+# GET /missions — paginated list
+# ---------------------------------------------------------------------------
+
+@router.get("")
+async def list_missions(
+    skip: int = 0,
+    limit: int = 20,
+    research_plan_id: str | None = None,
+    thread_id: str | None = None,
+    status_filter: str | None = None,
+) -> dict:
+    """List research missions with pagination."""
+    limit = min(limit, 100)
+    query: dict = {}
+    if research_plan_id:
+        query["research_plan_id"] = PydanticObjectId(research_plan_id)
+    if thread_id:
+        query["thread_id"] = PydanticObjectId(thread_id)
+    if status_filter:
+        query["status"] = status_filter
+
+    total = await ResearchMission.find(query).count()
+    missions = await (
+        ResearchMission.find(query)
+        .sort("-created_at")
+        .skip(skip)
+        .limit(limit)
+        .to_list()
+    )
+    return envelope({
+        "items": [_mission_to_dict(m) for m in missions],
+        "total": total,
+        "skip": skip,
+        "limit": limit,
+    })
 
 
 def _mission_to_dict(m: ResearchMission) -> dict:
@@ -109,4 +152,150 @@ async def get_mission_status(mission_id: str) -> dict:
         "pending_tasks": total_tasks - len(completed_tasks) - len(failed_tasks),
         "completed_task_ids": completed_tasks,
         "failed_task_ids": failed_tasks,
+    })
+
+
+# ---------------------------------------------------------------------------
+# S3 Output Retrieval
+# ---------------------------------------------------------------------------
+
+async def _safe_s3_get_json(key: str) -> dict[str, Any] | None:
+    try:
+        s3 = get_research_runs_s3_store().s3
+        return await s3.get_json(key)
+    except Exception:
+        return None
+
+
+async def _safe_s3_get_text(key: str) -> str | None:
+    try:
+        s3 = get_research_runs_s3_store().s3
+        return await s3.get_text(key)
+    except Exception:
+        return None
+
+
+@router.get("/{mission_id}/outputs")
+async def get_mission_outputs(mission_id: str) -> dict:
+    """Return full mission-level outputs from S3."""
+    try:
+        oid = PydanticObjectId(mission_id)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Mission not found")
+
+    mission = await ResearchMission.get(oid)
+    if not mission:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Mission not found")
+
+    paths = ResearchRunS3Paths(mission_id=mission_id)
+
+    mission_json = await _safe_s3_get_json(paths.mission_json_key())
+    mission_draft = await _safe_s3_get_json(paths.mission_draft_json_key())
+    final_report_md = await _safe_s3_get_text(paths.final_report_markdown_key())
+    final_report_json = await _safe_s3_get_json(paths.final_report_json_key())
+    summary = await _safe_s3_get_json(paths.summary_json_key())
+    task_runs_index = await _safe_s3_get_json(paths.task_runs_index_key())
+
+    return envelope({
+        "mission": mission_json,
+        "mission_draft": mission_draft,
+        "final_report_markdown": final_report_md,
+        "final_report_json": final_report_json,
+        "summary": summary,
+        "task_runs_index": task_runs_index,
+    })
+
+
+@router.get("/{mission_id}/runs/{task_id}/outputs")
+async def get_task_run_outputs(
+    mission_id: str,
+    task_id: str,
+    attempt_number: int = Query(default=1, ge=1),
+) -> dict:
+    """Return full task-level outputs from S3, with MongoDB fallback."""
+    try:
+        oid = PydanticObjectId(mission_id)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Mission not found")
+
+    paths = ResearchRunS3Paths(mission_id=mission_id)
+
+    run_json = await _safe_s3_get_json(paths.run_json_key(task_id, attempt_number))
+    resolved_inputs = await _safe_s3_get_json(paths.resolved_inputs_key(task_id, attempt_number))
+    outputs = await _safe_s3_get_json(paths.outputs_key(task_id, attempt_number))
+    events = await _safe_s3_get_json(paths.events_key(task_id, attempt_number))
+
+    # Fallback to MongoDB if S3 has no data
+    if run_json is None:
+        run_doc = await ResearchRun.find_one({
+            "mission_id": oid,
+            "task_id": task_id,
+            "attempt_number": attempt_number,
+        })
+        if not run_doc:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Run not found")
+
+        return envelope({
+            "run": _run_to_dict(run_doc),
+            "resolved_inputs": run_doc.resolved_inputs_snapshot,
+            "outputs": run_doc.outputs_snapshot,
+            "events": None,
+            "source": "mongodb",
+        })
+
+    return envelope({
+        "run": run_json,
+        "resolved_inputs": resolved_inputs,
+        "outputs": outputs,
+        "events": events,
+        "source": "s3",
+    })
+
+
+@router.get("/{mission_id}/runs/{task_id}/artifacts")
+async def get_task_artifacts(
+    mission_id: str,
+    task_id: str,
+    attempt_number: int = Query(default=1, ge=1),
+) -> dict:
+    """Return artifact metadata for a task run."""
+    try:
+        oid = PydanticObjectId(mission_id)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Mission not found")
+
+    run_doc = await ResearchRun.find_one({
+        "mission_id": oid,
+        "task_id": task_id,
+        "attempt_number": attempt_number,
+    })
+    if not run_doc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Run not found")
+
+    return envelope([a.model_dump() for a in run_doc.artifacts])
+
+
+@router.get("/{mission_id}/runs/{task_id}/artifacts/{artifact_name}/content")
+async def get_artifact_content(
+    mission_id: str,
+    task_id: str,
+    artifact_name: str,
+    attempt_number: int = Query(default=1, ge=1),
+    artifact_type: str = Query(default="report"),
+) -> dict:
+    """Return artifact content from S3 or a presigned URL for large files."""
+    paths = ResearchRunS3Paths(mission_id=mission_id)
+    key = paths.artifact_key(task_id, attempt_number, artifact_type, artifact_name)
+
+    content = await _safe_s3_get_text(key)
+    if content is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Artifact not found in S3",
+        )
+
+    return envelope({
+        "artifact_name": artifact_name,
+        "artifact_type": artifact_type,
+        "content": content,
     })

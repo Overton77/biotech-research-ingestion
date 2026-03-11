@@ -49,6 +49,20 @@ class ResearchNamespace(socketio.AsyncNamespace):
             await self.enter_room(sid, room)
             logger.debug("sid=%s joined room %s", sid, room)
 
+    async def on_join_mission(self, sid: str, data: dict[str, Any]) -> None:
+        mission_id = data.get("mission_id")
+        if mission_id:
+            room = f"mission:{mission_id}"
+            await self.enter_room(sid, room)
+            logger.debug("sid=%s joined mission room %s", sid, room)
+
+    async def on_leave_mission(self, sid: str, data: dict[str, Any]) -> None:
+        mission_id = data.get("mission_id")
+        if mission_id:
+            room = f"mission:{mission_id}"
+            await self.leave_room(sid, room)
+            logger.debug("sid=%s left mission room %s", sid, room)
+
     async def on_send_message(self, sid: str, data: dict[str, Any]) -> None:
         thread_id = data.get("thread_id")
         content = data.get("content") or ""

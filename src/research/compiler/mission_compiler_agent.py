@@ -11,20 +11,18 @@ import logging
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from langchain.chat_models import init_chat_model
-from langchain.agents import create_agent 
-from src.agents.persistence import get_persistence 
-import os  
 from dotenv import load_dotenv
+from langchain.agents import create_agent
+from langchain.chat_models import init_chat_model
+from langchain_core.runnables import RunnableConfig
 
+from src.agents.persistence import get_deep_agents_persistence
 from src.research.models.mission import ResearchMissionDraft
 
 if TYPE_CHECKING:
     from src.models.plan import ResearchPlan
 
-load_dotenv() 
-
-postgres_uri = os.environ.get("POSTGRES_URI")
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 _PROMPTS_DIR = Path(__file__).parent / "prompts"
@@ -124,11 +122,13 @@ async def compile_mission_draft(
     Call the Mission Compiler LLM Agent with the approved plan.
     Returns a validated ResearchMissionDraft.
     Retries up to max_retries times with validation error feedback.
-    """
+    """ 
+
+    config: RunnableConfig = {"configurable": {"thread_id": plan.thread_id}} 
     system_prompt = _build_compiler_system_prompt()
     user_message = _plan_to_compiler_prompt(plan) 
 
-    store, checkpointer = await get_persistence(postgres_uri)  
+    store, checkpointer = await get_deep_agents_persistence()
 
     model = init_chat_model(model_name)
 
@@ -157,7 +157,7 @@ async def compile_mission_draft(
                 "messages": [
                     {"role": "user", "content": current_message},
                 ],
-            })
+            }, config=config)
 
             mission_draft = result["structured_response"]
 

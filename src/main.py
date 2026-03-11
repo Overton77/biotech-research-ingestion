@@ -12,7 +12,9 @@ from pymongo import AsyncMongoClient
 
 from src.agents.coordinator import get_coordinator_graph, reset_coordinator_graph
 from src.api.routes import health, plans, threads, openai_research
+from src.api.routes.internal import router as internal_router
 from src.api.routes.missions import router as missions_router
+from src.api.routes.runs import router as runs_router
 from src.api.socketio.server import get_sio_mount_app
 from src.config import get_settings
 from src.models import Message, Thread
@@ -31,7 +33,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     mongo_client: AsyncMongoClient | None = None
 
     try:
-        get_coordinator_graph()
+        await get_coordinator_graph()
         logger.info("Coordinator graph initialized")
 
         mongo_client = AsyncMongoClient(settings.MONGODB_URI)
@@ -51,7 +53,9 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         yield
 
     finally:
-        reset_coordinator_graph()
+        await reset_coordinator_graph()  
+        # add deep agents later  
+
 
         if mongo_client is not None:
             try:
@@ -86,6 +90,8 @@ def create_app() -> FastAPI:
     app.include_router(plans.router, prefix="/api/v1")
     app.include_router(openai_research.router, prefix="/api/v1")
     app.include_router(missions_router, prefix="/api/v1")
+    app.include_router(runs_router, prefix="/api/v1")
+    app.include_router(internal_router, prefix="/api/v1")
 
     app.mount("/socket.io", get_sio_mount_app())
 

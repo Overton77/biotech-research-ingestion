@@ -1,6 +1,8 @@
 """Temporal worker — runs both OpenAI-research and deep-research task queues."""
 
-from __future__ import annotations
+from __future__ import annotations 
+from src.infrastructure.runtime.windows_asyncio import configure_windows_asyncio 
+configure_windows_asyncio()
 
 import asyncio
 import logging

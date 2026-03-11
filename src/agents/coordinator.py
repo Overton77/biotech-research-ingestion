@@ -3,18 +3,30 @@
 from __future__ import annotations
 
 import logging
-from typing import Any
+import os
+from typing import Any, Tuple, Literal, Optional
 
+from dotenv import load_dotenv
 from langchain.agents import create_agent
-from langchain.agents.middleware import HumanInTheLoopMiddleware 
+from langchain.agents.middleware import HumanInTheLoopMiddleware
+from langchain_core.tools import BaseTool
 from langchain_openai import ChatOpenAI
-from langgraph.checkpoint.memory import MemorySaver
-from langgraph.store.memory import InMemoryStore 
-import os 
-from src.agents.persistence import get_persistence, _get_checkpointer, _get_store
+from langgraph.graph.state import CompiledStateGraph
+from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
+from langgraph.store.postgres.aio import AsyncPostgresStore
+
+from src.agents.persistence import (
+    ENV_COORDINATOR_URI,
+    ENV_POSTGRES_URI,
+    ENV_POSTGRES_URL,
+    close_persistence,
+    get_coordinator_persistence,
+)
 from src.agents.tools.create_plan import create_research_plan
 from src.agents.tools.web_search import get_web_search_tool
 from src.config import get_settings
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -36,27 +48,19 @@ COORDINATOR_SYSTEM_PROMPT = """You are the Coordinator for a Deep Biotech Resear
 - Be concise and focused on the research objectives.
 """
 
-_coordinator_graph: Any = None
-_checkpointer: MemorySaver | None = None
-_store: InMemoryStore | None = None 
-postgres_uri = os.environ.get("POSTGRES_URI")
+_coordinator_graph: CompiledStateGraph | None = None
 
 
 
-
-
-async def create_coordinator_graph(tools: list[Any] | None = None, use_in_memory: bool = False) -> Any:
+async def create_coordinator_graph(tools: list[BaseTool] | None = None) -> CompiledStateGraph:
     settings = get_settings()  
 
-    store = None    
-    checkpointer = None   
+    
 
-    if use_in_memory:
-        store = _get_store()
-        checkpointer = _get_checkpointer()
-    else:
-        store, checkpointer = await get_persistence(postgres_uri) 
-
+    
+    persistence_bundle: Tuple[AsyncPostgresStore, AsyncPostgresSaver] = await get_coordinator_persistence() 
+    store: AsyncPostgresStore = persistence_bundle[0]
+    checkpointer: AsyncPostgresSaver = persistence_bundle[1]
     
 
     model = ChatOpenAI(
@@ -92,17 +96,22 @@ async def create_coordinator_graph(tools: list[Any] | None = None, use_in_memory
     return agent
 
 
-def get_coordinator_graph(tools: list[Any] | None = None) -> Any:
+async def get_coordinator_graph(tools: list[BaseTool] | None = None) -> CompiledStateGraph:
     """Return the coordinator graph, creating it lazily on first call."""
     global _coordinator_graph
     if _coordinator_graph is None:
-        _coordinator_graph = create_coordinator_graph(tools=tools)
+        _coordinator_graph = await create_coordinator_graph(tools=tools)
     return _coordinator_graph
 
 
-def reset_coordinator_graph() -> None:
+async def reset_coordinator_graph() -> None:
     """Reset cached graph on shutdown."""
-    global _coordinator_graph, _checkpointer, _store
+    global _coordinator_graph
     _coordinator_graph = None
-    _checkpointer = None
-    _store = None
+    uri = (
+        os.environ.get(ENV_COORDINATOR_URI)
+        or os.environ.get(ENV_POSTGRES_URL)
+        or os.environ.get(ENV_POSTGRES_URI)
+    )
+    if uri:
+        await close_persistence(uri)

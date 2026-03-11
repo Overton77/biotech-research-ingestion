@@ -26,7 +26,17 @@ class Settings(BaseSettings):
         default=None,
         alias="POSTGRES_URI",
         description="PostgreSQL URL for LangGraph. Optional if LANGGRAPH_CHECKPOINTER=memory.",
+    ) 
+
+    COORDINATOR_POSTGRES_URI: str | None = Field(
+        default=None,
+        alias="COORDINATOR_POSTGRES_URI",
+        description="PostgreSQL URL for coordinator agent. Optional if LANGGRAPH_CHECKPOINTER=memory.",
     )
+    DEEP_AGENTS_POSTGRES_URI: str | None = Field(
+        default=None,
+        alias="DEEP_AGENTS_POSTGRES_URI",
+    ) 
 
     # Redis (Socket.IO adapter, future: interrupt state)
     REDIS_URL: str = Field(default="redis://localhost:6379/0", description="Redis URL")
