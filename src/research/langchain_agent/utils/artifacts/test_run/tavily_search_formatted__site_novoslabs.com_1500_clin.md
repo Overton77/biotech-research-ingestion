@@ -1,0 +1,56 @@
+Search query: 1500 clinicians
+
+Meta: request_id=5f30ad2f-1df5-48a5-ad20-996589139abf, response_time_s=0.65
+
+=== Web Results ===
+[Result 1]
+Title: NOVOS | Clinically Studied Longevity Platform for Healthspan & Aging
+URL: https://novoslabs.com/?srsltid=AfmBOorQcCpaIkAFUtQfAZjPMjf3og4rStAO8AsvU83TqbT8PjhyG4Xt
+Score: 0.9979
+Content:
+[Learn more](https://novoslabs.com/blog/supplements/novos-core-clinical-trial-results-longevity-supplement/). NOVOS Core Clinical supported healthy endothelial responsiveness with sustained effects measuring **approximately 1.26x to 4.65x** of leading studied supplements, **outperforming** tea **polyphenols**, **cocoa flavanols**, **beetroot nitrates**, and demonstrating effects comparable to those reported for **weight loss,** **aerobic exercise,** and **resistance** **training**.\* [Learn more.](https://novoslabs.com/blog/longevity-aging-science/novos-core-clinical-trial-results-longevity-supplement/). NOVOS Core Clinical helped support healthy arterial flexibility with effect sizes **exceeding** those reported for **magnesium** and **omega-3s**, and comparable to published results for **weight loss**, DASH heart health **diets**, and **structured exercise** — an effect **rarely observed with dietary supplements**.\* [Learn more.](https://novoslabs.com/blog/longevity-aging-science/novos-core-clinical-trial-results-longevity-supplement/). placebo in adults already in the normal range, **exceeding effect sizes reported for common supplements** including **beetroot/nitrate** and **p …[truncated]
+
+[Result 2]
+Title: NOVOS Core® Longevity Supplement | Clinically Studied Formula
+URL: https://novoslabs.com/product/novos-core/?srsltid=AfmBOoqIWZjWRJ8odNv4UmObHSWNK9RuxPpRNIfNH84bI1AS3IDtv6oR
+Score: 0.9933
+Content:
+The formulation is further supported by mechanistic studies and preclinical lifespan research, providing **multi-level scientific evidence** that **NOVOS Core Clinical supports foundational aspects of healthy aging biology.\***. NOVOS Core Clinical was designed to support the biology of aging as a connected system and evaluated as a complete formulation through mechanistic research, preclinical lifespan studies, and human clinical trials — not trends, theories, or ingredient-by-ingredient claims.\*. NOVOS Core Clinical supported healthy endothelial responsiveness with sustained effects measuring **approximately 1.26x to 4.65x** of leading studied supplements, **outperforming** tea **polyphenols**, **cocoa flavanols**, **beetroot nitrates**, and demonstrating effects comparable to those reported for **weight loss,** **aerobic exercise,** and **resistance** **training**.\* [Learn more.](https://novoslabs.com/blog/longevity-aging-science/novos-core-clinical-trial-results-longevity-supplement/). NOVOS Core Clinical helped support healthy arterial flexibility with effect sizes **exceeding** those reported for **magnesium** and **omega-3s**, and comparable to published results for **weig …[truncated]
+
+[Result 3]
+Title: Cognition Archive - NOVOS
+URL: https://novoslabs.com/category/cognition/feed/?srsltid=AfmBOoocLI4CQ8l_hMLy7wTvYgMHzMPCzqvoCsA7IZ_d8bK5XG6B6AR3
+Score: 0.9903
+Content:
+world's top longevity scientists and medical doctors that helped people take control of their health spans and lifespans. All right. Welcome, Dr. Verburgh. Dr.
+
+[Result 4]
+Title: NOVOS Webinar Series: Supplements
+URL: https://novoslabs.com/blog/supplements/novos-webinar-series-supplements-2/?srsltid=AfmBOor_rV4s6vnKrmltVLS92z0NbiSEytXE4WycVjVLtKjMy4aIA-yj
+Score: 0.9624
+Content:
+Dr. Kris: And that’s also one of the reasons why quite a lot of medical doctors that are often not well versed in the science of supplements have some, let’s say, reservations about supplements because they will quote some studies that don’t show any effect of supplements. A lot of people say or believe, and as one of the misunderstandings we will discuss during this presentation about supplements is that if you eat healthy, you don’t need supplements, but we think that’s a big, let’s say underestimation of, or underestimate of the importance of supplements. Dr. Kris: Well, it’s just a lot of those supplements have already very interesting data behind them. Dr. Kris: And so we look at ingredients that can extend lifespan in multiple species, that have been known to have health effects in humans, that are known to be taken for decades in humans like glucosamine or alpha ketoglutarate, glycine, these supplements all around for a very long time.
+
+[Result 5]
+Title: Epigenetic Deregulation and Aging - NOVOS
+URL: https://novoslabs.com/blog/longevity/epigenetics-and-aging/?srsltid=AfmBOoqxACF9EQsaaffdeDitIjVgE0KYaaC0VwzneG3nl7tZCm_qJ6et
+Score: 0.9582
+Content:
+This understanding of heterochromatin erosion sets the stage for examining specific epigenetic modifications such as DNA methylation, histone changes, and non-coding RNA interactions, and their roles in the aging process. Internal damagers like cellular inflammation and metabolic byproducts can disrupt epigenetic markers, altering gene expression and cellular behavior.31 External damagers, such as ultraviolet (UV) radiation, environmental pollutants, and reactive oxygen species (ROS), further challenge the epigenome’s integrity.3233 These factors introduce errors and modifications to the DNA and associated proteins, leading to a gradual degradation of the epigenetic landscape though single epigenetic mutations termed “epimutations”.34 This entropy not only impacts the function of individual cells but can also contribute to broader organismal aging and the onset of disease. This loss is partly caused by the induction of the DNA damage response, which in turn contributes further to the erosion of epigenetic information.42 In fact the inhibition of a specific type of transposable element led to the reversal of various hallmarks of aging in mouse and human cells with accelerated aging  …[truncated]
+
+[Result 6]
+Title: Lysine and Anti-Aging: Benefits for Skin, Collagen & Longevity
+URL: https://novoslabs.com/blog/supplements/lysine-anti-aging-benefits/?srsltid=AfmBOopqPxQz2iGLlo7QuCQDuR9lCPSoC3RJhkuYs5Zxyzmx0Zz1IG7_
+Score: 0.7341
+Content:
+# Lysine and Anti-Aging: Can This Amino Acid Help You Stay Younger Longer? ### Lysine for Anti-Aging. ## Does Lysine Help With Aging Skin? Research suggests that lysine and anti-aging may go hand in hand, particularly when it comes to the skin. ## Lysine for Skin Aging: Can Lysine Help You Look Younger? Lysine supports many aspects of overall health, but its impact on skin aging is especially noteworthy. With lysine support, the skin can maintain more of its firmness and show fewer visible signs of aging. If you’re already consuming lysine through diet or supplements, adding NOVOS Core can help round out your longevity regimen. ## Lysine & Anti-Aging: Strengthening Skin From the Inside Out. Lysine may not make headlines the way that some nutrients do, but it’s nonetheless a powerful player in aging. As science continues to highlight the benefits of lysine for longevity and skin health, it makes sense to consider this amino acid as part of a holistic anti-aging lifestyle.
+
+[Result 7]
+Title: NOVOS Core Vs. Blueprint: Comparing Longevity Supplements
+URL: https://novoslabs.com/blog/supplements/novos-core-vs-blueprint-comparing-longevity-supplements/?srsltid=AfmBOoq_9oIzWtIz1cTtOsABLCj-NAHTAr9PSBWq_r3oTioWVqT8-ZwL
+Score: 0.7154
+Content:
+If you’ve seen headlines about the Bryan Johnson Blueprint or its new “Longevity Mix,” you’ve probably wondered how it stacks up against science-backed supplements like NOVOS Core. ## Ingredients Comparison: NOVOS Core Vs. Blueprint Longevity Mix. Both routines rely on overlapping compounds linked to longevity — alpha-ketoglutarate (AKG), glycine, magnesium, and L-theanine, among others. However, Bryan Johnson’s Blueprint and NOVOS Core differ in context and formulation quite a bit. Both Blueprint and NOVOS share an interest in longevity science, but their approaches to applying it couldn’t be more different. Furthermore, in one study, NOVOS Core extended the lifespan of aged mice by nearly 20% — more than any supplement ever studied. If you admire Blueprint’s ambition but want something sustainable, safe, and scientifically vetted, NOVOS Core is your go-to longevity supplement. #### Is NOVOS Core similar to Bryan Johnson’s Blueprint stack? Yes — through science-backed lifestyle choices and supplements like NOVOS Core that target biological aging at the cellular level.
+
+=== Image Results ===
+(no images)

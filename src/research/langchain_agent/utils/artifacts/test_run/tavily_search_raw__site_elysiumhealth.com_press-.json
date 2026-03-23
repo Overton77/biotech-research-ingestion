@@ -1,0 +1,21 @@
+{
+  "query": "site:elysiumhealth.com \"press-releases\" 2024 2025 Elysium",
+  "results": {
+    "query": "press-releases 2024 2025 Elysium",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "url": "https://www.elysiumhealth.com/blogs/aging101/top-10-longevity-studies-of-2024",
+        "title": "Top 10 longevity studies of 2024",
+        "content": "Here are the top 10 aging and longevity studies of 2024 as chosen by our expert team of scientists, including Elysium co-founder and renowned longevity",
+        "score": 0.98525,
+        "published_date": "Tue, 24 Dec 2024 00:00:00 GMT",
+        "raw_content": null
+      }
+    ],
+    "response_time": 1.56,
+    "request_id": "2560303f-d8e4-4ab4-95e6-9e13a2bdfdfc"
+  }
+}

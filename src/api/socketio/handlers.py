@@ -6,7 +6,7 @@ from typing import Any
 
 from beanie.odm.fields import PydanticObjectId
 
-from src.models.plan import AgentConfig, ResearchPlan, ResearchTask
+from src.models.plan import ResearchPlan, ResearchTask, StarterSource
 from src.services.coordinator_service import (
     stream_coordinator_response,
     persist_messages,
@@ -53,6 +53,7 @@ def _extract_plan_from_interrupt(interrupt_payload: dict[str, Any]) -> tuple[dic
                 "stages": args.get("stages", []),
                 "tasks": args.get("tasks", []),
                 "context": args.get("context", ""),
+                "starter_sources": args.get("starter_sources", []),
                 "status": "pending_approval",
                 "version": 1,
             }
@@ -70,8 +71,8 @@ def _coerce_tasks_to_models(raw_tasks: list[dict[str, Any]]) -> list[ResearchTas
     """Convert lightweight coordinator task dicts into ResearchTask models.
 
     The coordinator agent only provides id/title/description/stage/dependencies.
-    We fill in sensible defaults for agent_config, inputs, outputs so the plan
-    document is structurally valid for the mission compiler later.
+    We fill in sensible defaults for inputs, outputs. Agent configuration is
+    produced later by the Mission Compiler.
     """
     result: list[ResearchTask] = []
     for t in raw_tasks:
@@ -84,13 +85,30 @@ def _coerce_tasks_to_models(raw_tasks: list[dict[str, Any]]) -> list[ResearchTas
                     stage=t.get("stage", ""),
                     dependencies=t.get("dependencies", []),
                     estimated_duration_minutes=t.get("estimated_duration_minutes"),
-                    agent_config=AgentConfig(),
                     inputs=[],
                     outputs=[],
                 )
             )
         except Exception as exc:
             logger.warning("Skipping malformed task dict: %s — %s", t, exc)
+    return result
+
+
+def _coerce_starter_sources(raw: list[dict[str, Any]] | None) -> list[StarterSource]:
+    """Convert coordinator starter_sources dicts into StarterSource models."""
+    if not raw:
+        return []
+    result: list[StarterSource] = []
+    for s in raw:
+        try:
+            result.append(
+                StarterSource(
+                    url=s.get("url", ""),
+                    description=s.get("description", ""),
+                )
+            )
+        except Exception as exc:
+            logger.warning("Skipping malformed starter_source: %s — %s", s, exc)
     return result
 
 
@@ -148,12 +166,14 @@ async def handle_send_message(
                 raw_tasks = plan_dict.get("tasks") or []
                 task_models = _coerce_tasks_to_models(raw_tasks)
 
+                starter_sources = _coerce_starter_sources(plan_dict.get("starter_sources"))
                 doc = ResearchPlan(
                     thread_id=tid,
                     title=plan_dict.get("title") or "Research Plan",
                     objective=plan_dict.get("objective") or "",
                     stages=plan_dict.get("stages") or [],
                     tasks=task_models,
+                    starter_sources=starter_sources,
                     status="pending_approval",
                 )
                 await doc.insert()
@@ -163,6 +183,7 @@ async def handle_send_message(
                 plan_dict["created_at"] = doc.created_at.isoformat()
                 plan_dict["updated_at"] = doc.updated_at.isoformat()
                 plan_dict["version"] = doc.version
+                plan_dict["starter_sources"] = [s.model_dump() for s in doc.starter_sources]
             except Exception as e:
                 logger.warning("Failed to persist plan: %s", e)
 
@@ -315,6 +336,7 @@ async def handle_plan_approved(
                                 "stages": plan.get("stages", []),
                                 "tasks": plan.get("tasks", []),
                                 "context": plan.get("context", ""),
+                                "starter_sources": plan.get("starter_sources", []),
                             },
                         },
                     }
@@ -345,6 +367,8 @@ async def handle_plan_approved(
 
                 if plan and plan.get("tasks") and not plan_doc.tasks:
                     plan_doc.tasks = _coerce_tasks_to_models(plan["tasks"])
+                if plan and plan.get("starter_sources") is not None:
+                    plan_doc.starter_sources = _coerce_starter_sources(plan["starter_sources"])
 
                 await plan_doc.save()
                 logger.info("Plan %s marked as approved", plan_id)

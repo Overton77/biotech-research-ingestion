@@ -1,0 +1,93 @@
+{
+  "query": "Elysium Health press site:elysiumhealth.com",
+  "results": {
+    "query": "Elysium Health press",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "url": "https://www.elysiumhealth.com/blogs/press-quotes/new-york-magazine",
+        "title": "New York Magazine",
+        "content": "Most impressively, the company's co-founder is Leonard Guarente, who heads MIT's aging center and is one of the pioneers of aging science, a contender for",
+        "score": 0.98557,
+        "published_date": "Wed, 18 Aug 2021 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/blogs/press-quotes/time",
+        "title": "TIME",
+        "content": "These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition.",
+        "score": 0.9822,
+        "published_date": "Wed, 18 Aug 2021 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/blogs/press-quotes/instyle",
+        "title": "InStyle",
+        "content": "Victoria Beckham swears by Elysium Health's Basis capsules, which were developed by MIT scientist Dr. Leonard Guarente, and contain Elysium's proprietary",
+        "score": 0.97653,
+        "published_date": "Tue, 17 Aug 2021 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/pages/news-media",
+        "title": "Elysium In The News",
+        "content": "We are proud that Elysium and our products—Basis, Matter, and Index—have been featured in top-tier publications and outlets since the company's launch in",
+        "score": 0.97263,
+        "published_date": "Wed, 18 Aug 2021 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/pages/team",
+        "title": "Our Team",
+        "content": "The Elysium team is made up of individuals who are passionate about creating a fundamentally new approach to healthcare.",
+        "score": 0.97078,
+        "published_date": "Tue, 17 Aug 2021 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://ca.elysiumhealth.com/",
+        "title": "Science 101",
+        "content": "Basis combats aging on the deepest level—in your cells—and replenishes the molecule NAD+, vital to healthy functioning. Fight fatigue, boost cellular energy,",
+        "score": 0.96438,
+        "published_date": "Tue, 17 Aug 2021 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/products/mosaic",
+        "title": "Mosaic – Skin Aging + Collagen Support",
+        "content": "Mosaic is a daily supplement to combat skin aging and protect collagen for radiant, youthful skin. Proven, visible results in as little as 3 weeks.",
+        "score": 0.96212,
+        "published_date": "Wed, 04 Oct 2023 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/blogs/press-releases/elysium-health%E2%84%A2-announces-fda-acceptance-of-investigational-new-drug-application-to-evaluate-basis%E2%84%A2-for-prevention-of-acute-kidney-injury-in-surgical-cardiac-patients",
+        "title": "Elysium Health™ Announces FDA Acceptance of Investigational New Drug Application to Evaluate BASIS™ for Prevention of Acute Kidney Injury in Surgical Cardiac Patients",
+        "content": "NEW YORK (September 19, 2019) Elysium Health, Inc.™, a life sciences company developing clinically validated health products based on aging",
+        "score": 0.95458,
+        "published_date": "Thu, 19 Sep 2019 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/pages/science-behind-mosaic",
+        "title": "The Science Behind Mosaic: A Whole-Body Approach to Skin Care",
+        "content": "Mosaic is a single daily supplement that combats skin aging from the innermost layers, across the entire body, for visibly healthy, youthful skin.",
+        "score": 0.95197,
+        "published_date": "Wed, 04 Oct 2023 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.elysiumhealth.com/",
+        "title": "Elysium Health - Healthy Aging Supplements",
+        "content": "Breakthroughs in aging research are no longer a myth of science fiction but scientific fact. Elysium makes first-of-their-kind health products and",
+        "score": 0.9455,
+        "published_date": "Sat, 07 Feb 2015 00:00:00 GMT",
+        "raw_content": null
+      }
+    ],
+    "response_time": 1.18,
+    "request_id": "ff4a0628-92b8-4f8f-ac64-66b38ee612ba"
+  }
+}

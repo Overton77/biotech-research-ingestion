@@ -1,0 +1,33 @@
+{
+  "url": "https://upgradelabs.com",
+  "instructions": "Find About, Press, Locations, Franchise, Services, Leadership pages. Return formatted output.",
+  "results": {
+    "base_url": "https://upgradelabs.com",
+    "results": [
+      "https://maps.app.goo.gl/gvvQXLcmRbRLswwM8",
+      "https://maps.app.goo.gl/ws8ihVHQxvHAT5y26",
+      "https://maps.app.goo.gl/y8qmrRiQTnKA76t28",
+      "https://upgradelabs.com/about",
+      "https://upgradelabs.com/category/press",
+      "https://upgradelabs.com/franchise",
+      "https://upgradelabs.com/locations",
+      "https://upgradelabs.com/press",
+      "https://upgradelabs.com/press/club-industry-upgrade-labs-goes-global",
+      "https://upgradelabs.com/press/fox-news-10-tips-to-live-to-be-100-far-more-than-wishful-thinking-say-longevity-experts",
+      "https://upgradelabs.com/press/franchise-org-upgrade-labs-continues-north-american-expansion-with-canadian-development-deal",
+      "https://upgradelabs.com/press/franchisetimes-biohacking-franchise-upgrade-labs-heads-north-with-canada-deal",
+      "https://upgradelabs.com/press/franchising-com-upgrade-labs-new-development-deal-signed-in-austin",
+      "https://upgradelabs.com/press/franchising-com-upgrade-labs-to-open-new-facility-in-austin",
+      "https://upgradelabs.com/press/law-of-attraction-secrets-podcast-unlock-the-secrets-of-biohacking-with-dave-asprey",
+      "https://upgradelabs.com/press/page/2",
+      "https://upgradelabs.com/press/the-chalkboard-mag-dave-asprey-on-anti-nutrients-the-deficiency-no-one-is-talking-about",
+      "https://upgradelabs.com/press/the-commune-podcast-update-your-brain-with-dave-asprey",
+      "https://upgradelabs.com/press/the-dhru-purohit-podcast-the-lucky-charms-vs-steak-controversy-toxic-super-foods-better-fibers-fasting-tips-and-why-minerals-matter",
+      "https://upgradelabs.com/press/the-kris-gethin-podcast-what-makes-a-biohacker-find-out-with-dave-asprey",
+      "https://upgradelabs.com/press/the-wall-street-journal-the-next-fountain-of-youth-craze-peptide-injections",
+      "https://upgradelabs.com/press/wellspa360-5-cutting-edge-biohacking-treatments-from-upgrade-labs"
+    ],
+    "response_time": 4.57,
+    "request_id": "0f7bf3d0-4a03-414c-894c-eff4a364acd2"
+  }
+}

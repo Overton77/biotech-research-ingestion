@@ -1,0 +1,563 @@
+{
+  "source_report": "elysium-products-and-specs",
+  "organizations": [
+    {
+      "name": "Elysium Health",
+      "aliases": [],
+      "orgType": "Company",
+      "businessModel": "B2C",
+      "description": "",
+      "websiteUrl": "https://www.elysiumhealth.com",
+      "legalName": "",
+      "primaryIndustryTags": [
+        "Supplements",
+        "Health"
+      ],
+      "regionsServed": [],
+      "headquartersCity": "",
+      "headquartersCountry": "",
+      "searchFields": [
+        "name",
+        "websiteUrl",
+        "primaryIndustryTags"
+      ]
+    }
+  ],
+  "persons": [],
+  "org_person_relationships": [],
+  "products": [
+    {
+      "name": "Basis",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "NAD+ Supplement for Cellular Aging",
+      "intendedUse": "",
+      "priceAmount": 65.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Signal",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "Mitochondrial Support for Metabolic Aging",
+      "intendedUse": "",
+      "priceAmount": 60.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Matter",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "Tri\u2011Vitamin Complex for Brain Aging",
+      "intendedUse": "",
+      "priceAmount": 60.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Cofactor",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "Advanced Collagen System with NAD+ Boost",
+      "intendedUse": "",
+      "priceAmount": 75.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Format",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "Immune Health + Senolytic System",
+      "intendedUse": "",
+      "priceAmount": 60.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Senolytic Complex",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "Clear Senescent Cells",
+      "intendedUse": "",
+      "priceAmount": 35.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Vision",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "Eye Longevity + Protection",
+      "intendedUse": "",
+      "priceAmount": 60.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Longevity Starter Pack",
+      "brandName": "",
+      "productDomain": "Supplements",
+      "productType": "",
+      "description": "Bundle of one-month supplies of Basis, Signal, Matter, Format",
+      "intendedUse": "",
+      "priceAmount": 199.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "name": "Index",
+      "brandName": "",
+      "productDomain": "Health Tests",
+      "productType": "",
+      "description": "Biological age test",
+      "intendedUse": "",
+      "priceAmount": 299.0,
+      "currency": "USD",
+      "synonyms": [],
+      "searchFields": [
+        "name",
+        "description"
+      ]
+    }
+  ],
+  "compound_ingredients": [
+    {
+      "product_name": "Basis",
+      "compoundName": "Nicotinamide Riboside Chloride",
+      "formType": "Capsule",
+      "dose": 250.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Basis",
+      "compoundName": "Pterostilbene",
+      "formType": "Capsule",
+      "dose": 50.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Signal",
+      "compoundName": "NMN (\u03b2\u2011Nicotinamide Mononucleotide)",
+      "formType": "Capsule",
+      "dose": 250.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Signal",
+      "compoundName": "SIRT3 Activation Complex (Honokiol, Viniferin)",
+      "formType": "Capsule",
+      "dose": 150.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Matter",
+      "compoundName": "Vitamin B6",
+      "formType": "Tablet",
+      "dose": 20.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Matter",
+      "compoundName": "Folate",
+      "formType": "Tablet",
+      "dose": 800.0,
+      "doseUnit": "mcg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Matter",
+      "compoundName": "Vitamin B12",
+      "formType": "Tablet",
+      "dose": 500.0,
+      "doseUnit": "mcg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Matter",
+      "compoundName": "Omega\u20113 Lysine Complex",
+      "formType": "Tablet",
+      "dose": 550.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Matter",
+      "compoundName": "Bilberry Extract",
+      "formType": "Tablet",
+      "dose": 160.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Cofactor",
+      "compoundName": "Collagen peptides (grass-fed bovine)",
+      "formType": "Scoop",
+      "dose": 20.0,
+      "doseUnit": "g",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Cofactor",
+      "compoundName": "Nicotinamide Riboside",
+      "formType": "Scoop",
+      "dose": 250.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Cofactor",
+      "compoundName": "Hyaluronic Acid",
+      "formType": "Scoop",
+      "dose": 120.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Cofactor",
+      "compoundName": "Vitamin C",
+      "formType": "Scoop",
+      "dose": 90.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Format",
+      "compoundName": "Vitamin C",
+      "formType": "Capsule",
+      "dose": 90.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Format",
+      "compoundName": "Zinc",
+      "formType": "Capsule",
+      "dose": 5.5,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Format",
+      "compoundName": "Selenium",
+      "formType": "Capsule",
+      "dose": 27.0,
+      "doseUnit": "mcg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Format",
+      "compoundName": "Inflammaging Complex",
+      "formType": "Capsule",
+      "dose": 650.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Format",
+      "compoundName": "Senolytic Complex",
+      "formType": "Capsule",
+      "dose": 1150.0,
+      "doseUnit": "mg",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "dose",
+        "doseUnit",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Senolytic Complex",
+      "compoundName": "Quercetin (Sophora japonica)",
+      "formType": "Capsule",
+      "dose": null,
+      "doseUnit": "",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Senolytic Complex",
+      "compoundName": "Fisetin (Rhus succedanea)",
+      "formType": "Capsule",
+      "dose": null,
+      "doseUnit": "",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Senolytic Complex",
+      "compoundName": "Chinese Ginseng (Panax notoginseng)",
+      "formType": "Capsule",
+      "dose": null,
+      "doseUnit": "",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Senolytic Complex",
+      "compoundName": "Chestnut Rose (Rosa roxburghii)",
+      "formType": "Capsule",
+      "dose": null,
+      "doseUnit": "",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Vision",
+      "compoundName": "PIXEL Complex (Lutein, Meso\u2011zeaxanthin, Zeaxanthin)",
+      "formType": "Softgel",
+      "dose": null,
+      "doseUnit": "",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "role"
+      ]
+    },
+    {
+      "product_name": "Vision",
+      "compoundName": "Astaxanthin",
+      "formType": "Softgel",
+      "dose": null,
+      "doseUnit": "",
+      "role": "Active Ingredient",
+      "bioavailabilityNotes": "",
+      "searchFields": [
+        "product_name",
+        "compoundName",
+        "formType",
+        "role"
+      ]
+    }
+  ]
+}

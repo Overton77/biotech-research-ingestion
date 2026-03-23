@@ -1,0 +1,406 @@
+{
+  "source_report": "arl-company-fundamentals",
+  "organizations": [
+    {
+      "name": "Analytical Resource Laboratories",
+      "aliases": [
+        "ARL"
+      ],
+      "orgType": "COMPANY",
+      "businessModel": "B2C",
+      "description": "Independent third-party consumer products analytical testing laboratory founded circa 2000. Offers microbiological testing, instrumental analytical chemistry (HPLC, GC, ICP-MS, HPTLC, PCR), method development and validation, stability/shelf-life studies, heavy metals testing, cannabinoid profiling, allergen and PFAS analyses, environmental monitoring, and related services. Markets ISO/IEC 17025:2017 accreditation, FDA registration, DEA licensure and cGLP compliance. Operates a multi-site U.S. footprint (including Lehi, UT and other U.S. locations).",
+      "legalName": "",
+      "websiteUrl": "https://www.analyticalresource.com",
+      "primaryIndustryTags": [
+        "Dietary supplements",
+        "Nutraceuticals",
+        "Personal care / cosmetics",
+        "Food and beverage",
+        "Pharmaceutical / clinical manufacturing",
+        "Cannabinoid / Kratom testing",
+        "Consumer product analytical testing"
+      ],
+      "regionsServed": [
+        "United States"
+      ],
+      "headquartersCity": "",
+      "headquartersCountry": "",
+      "searchFields": [
+        "name",
+        "aliases",
+        "description",
+        "businessModel",
+        "primaryIndustryTags"
+      ]
+    }
+  ],
+  "persons": [
+    {
+      "canonicalName": "Matthew R. Lewis",
+      "givenName": "Matthew R.",
+      "familyName": "Lewis",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Jacob Teller",
+      "givenName": "Jacob",
+      "familyName": "Teller",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Lance Pyper",
+      "givenName": "Lance",
+      "familyName": "Pyper",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Christopher Loke",
+      "givenName": "Christopher",
+      "familyName": "Loke",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Clara Langevin",
+      "givenName": "Clara",
+      "familyName": "Langevin",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Renee Tran",
+      "givenName": "Renee",
+      "familyName": "Tran",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Megan Ward",
+      "givenName": "Megan",
+      "familyName": "Ward",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Audrey Larsen",
+      "givenName": "Audrey",
+      "familyName": "Larsen",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Andrea Helm",
+      "givenName": "Andrea",
+      "familyName": "Helm",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Dana Dunn",
+      "givenName": "Dana",
+      "familyName": "Dunn",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    },
+    {
+      "canonicalName": "Christopher Loke",
+      "givenName": "Christopher",
+      "familyName": "Loke",
+      "honorific": "",
+      "bio": "",
+      "primaryDomain": "Laboratory testing",
+      "specialties": [],
+      "expertiseTags": [],
+      "degrees": [],
+      "linkedinUrl": "",
+      "searchFields": [
+        "canonicalName",
+        "bio",
+        "primaryDomain",
+        "specialties",
+        "expertiseTags"
+      ]
+    }
+  ],
+  "products": [],
+  "compound_ingredients": [],
+  "org_person_relationships": [
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Matthew R. Lewis",
+      "relationship_type": "FOUNDED_BY",
+      "roleTitle": "Founder",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Matthew R. Lewis",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "CEO",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Jacob Teller",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Director of Quality",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Lance Pyper",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Director of Partnerships",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Christopher Loke",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Director of Marketing and Branding",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Clara Langevin",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Chemistry Lab Manager",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Renee Tran",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Method Development Manager",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Megan Ward",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Microbiology Technical Manager",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Audrey Larsen",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Sample Management Team Manager",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Andrea Helm",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Business Development Manager",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    },
+    {
+      "org_name": "Analytical Resource Laboratories",
+      "person_name": "Dana Dunn",
+      "relationship_type": "HAS_EXECUTIVE_ROLE",
+      "roleTitle": "Partnerships Manager",
+      "department": "",
+      "seniority": "",
+      "isCurrent": true,
+      "searchFields": [
+        "roleTitle",
+        "department",
+        "seniority"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+## Vector Search / Embedding Convention
+
+For vector search and Neo4j vector indexes, nodes and relationships support:
+
+- **searchText** (string): The text used to create embeddings and perform vector searches. Provide explicitly, or derive from searchFields.
+- **searchFields** (string[]): Optional. Property names whose values concatenate to form searchText. Use either custom searchText OR searchFields.
+- **embedding** (list<float>): The embedding vector stored on the node/relationship.
+- **embeddingModel** (string): Model used to generate embeddings (e.g., text-embedding-3-small).
+- **embeddingDimensions** (int): Dimension count of the embedding vector.
+
+---
+
+Product
+Node
+
+Label: :Product
+
+Primary identifier
+
+productId (string UUID) — canonical ID
+
+Other identifier keys used for MERGE / matching (your upsert supports multiple identifier keys)
+
+gtin (string)
+
+upc (string)
+
+ndcCode (string) (present in earlier org/product snippets, and common in your product shape)
+
+productFingerprint (string) (often derived / hashed)
+
+Properties
+
+productId (uuid string)
+
+createdAt (datetime)
+
+Core
+
+name (string)
+
+synonyms (string[]) (unique set)
+
+Classification (enums)
+
+productDomain (ENUM: ProductDomain) (enum definition not found in current_kg_enums.txt)
+
+productType (ENUM: ProductType) (enum definition not found in current_kg_enums.txt)
+
+riskClass (ENUM: RiskClass) (enum definition not found in current_kg_enums.txt)
+
+Commercial
+
+brandName (string)
+
+modelNumber (string)
+
+currency (string) (likely ISO-4217; if you have an enum, plug it in)
+
+priceAmount (float/decimal)
+
+Regulatory / identity
+
+gtin (string)
+
+upc (string)
+
+productFingerprint (string)
+
+Narrative
+
+intendedUse (string)
+
+description (string)
+
+Temporal validity
+
+validAt (datetime)
+
+invalidAt (datetime)
+
+expiredAt (datetime)
+
+Vector search
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["name","synonyms","brandName","intendedUse","description"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+Product Relationships (outgoing from Product)
+
+1. (p:Product)-[r:DELIVERS_LAB_TEST]->(lt:LabTest)
+
+Relationship properties
+
+role (string) (could be enum; not found in enums file)
+
+quantity (number)
+
+componentName (string)
+
+claimIds (string[])
+
+createdAt, validAt, invalidAt, expiredAt (datetime)
+
+Vector search (DELIVERS_LAB_TEST)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["role","componentName","quantity"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+Target node: :LabTest key + properties commonly set
+
+labTestId (uuid string)
+
+createdAt (datetime)
+
+name (string)
+
+synonyms (string[])
+
+loincCodes (string[])
+
+cptCodes (string[])
+
+whatItMeasures (string)
+
+prepRequirements (string)
+
+validAt, invalidAt, expiredAt (datetime)
+
+2. (p:Product)-[r:IMPLEMENTS_PANEL]->(pd:PanelDefinition)
+
+Relationship properties
+
+panelRole (string) (could be enum; not found in enums file)
+
+versionLabel (string)
+
+claimIds (string[])
+
+createdAt, validAt, invalidAt, expiredAt (datetime)
+
+Vector search (IMPLEMENTS_PANEL)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["panelRole","versionLabel"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+Target node: :PanelDefinition
+
+panelDefinitionId (uuid string)
+
+createdAt (datetime)
+
+canonicalName (string)
+
+aliases (string[])
+
+description (string)
+
+validAt, invalidAt, expiredAt (datetime)
+
+3. (p:Product)-[r:CONTAINS_COMPOUND_FORM]->(cf:CompoundForm) And (p: Product)-[r: CONTAINS_COMPOUND] -> (c: Compound).
+
+Relationship properties
+
+dose (number)
+
+doseUnit (string) (likely enum; not found in enums file)
+
+role (string) (could be enum; not found in enums file)
+
+standardizedTo (string)
+
+claimIds (string[])
+
+createdAt, validAt, invalidAt, expiredAt (datetime)
+
+Vector search (CONTAINS_COMPOUND_FORM / CONTAINS_COMPOUND)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["dose","doseUnit","role","standardizedTo"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+Target node: :CompoundForm
+
+compoundFormId (uuid string)
+
+createdAt (datetime)
+
+canonicalName (string)
+
+formType (string) (likely enum; not found in enums file)
+
+chemicalDifferences (string)
+
+stabilityProfile (string)
+
+solubilityProfile (string)
+
+bioavailabilityNotes (string)
+
+regulatoryStatusSummary (string)
+
+Vector search (CompoundForm)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["canonicalName","formType","chemicalDifferences","bioavailabilityNotes"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+4. (p:Product)-[r:FOLLOWS_PATHWAY]->(rp:RegulatoryPathway)
+
+Relationship properties
+
+jurisdictionId (string)
+
+claimIds (string[])
+
+createdAt, validAt, invalidAt, expiredAt (datetime)
+
+Target node: :RegulatoryPathway
+
+pathwayId (uuid string)
+
+createdAt (datetime)
+
+authority (string) (likely enum; not found in enums file)
+
+pathwayType (string) (likely enum; not found in enums file)
+
+pathwayName (string)
+
+requirementsSummary (string)
+
+validAt, invalidAt, expiredAt (datetime)
+
+Vector search (RegulatoryPathway)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["pathwayName","authority","pathwayType","requirementsSummary"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+Vector search (FOLLOWS_PATHWAY)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["jurisdictionId"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+5. (p:Product)-[r:IN_CATEGORY]->(pc:ProductCategory)
+
+Relationship properties
+
+claimIds (string[])
+
+createdAt, validAt, invalidAt, expiredAt (datetime)
+
+Target node: :ProductCategory
+
+categoryId (uuid string)
+
+createdAt (datetime)
+
+name (string)
+
+description (string)
+
+aliases (string[])
+
+validAt, invalidAt, expiredAt (datetime)
+
+Vector search (ProductCategory)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["name","description","aliases"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+Vector search (IN_CATEGORY)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: (relationship type + target category context)
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+6. (p:Product)-[r:USES_PLATFORM]->(tp:TechnologyPlatform)
+
+Relationship properties
+
+claimIds (string[])
+
+createdAt, validAt, invalidAt, expiredAt (datetime)
+
+Target node: :TechnologyPlatform
+
+platformId (uuid string)
+
+createdAt (datetime)
+
+canonicalName (string)
+
+aliases (string[])
+
+platformType (ENUM: PlatformType) ✅ (exists in your enums file)
+
+description (string)
+
+validAt, invalidAt, expiredAt (datetime)
+
+Vector search (USES_PLATFORM)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: (relationship type + target platform context)
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+7. (p:Product)-[r:HAS_REGULATORY_STATUS]->(rs:RegulatoryStatus)
+
+Relationship properties
+
+status (string) (duplication exists: also on node; you allow both)
+
+effectiveDate (date/datetime)
+
+statusDetails (string)
+
+claimIds (string[])
+
+createdAt, validAt, invalidAt, expiredAt (datetime)
+
+Target node: :RegulatoryStatus
+
+regulatoryStatusId (uuid string)
+
+createdAt (datetime)
+
+status (string) (likely enum; not found in enums file)
+
+effectiveDate (date/datetime)
+
+statusDetails (string)
+
+validAt, invalidAt, expiredAt (datetime)
+
+Vector search (RegulatoryStatus)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["status","statusDetails"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)
+
+Vector search (HAS_REGULATORY_STATUS)
+searchText (string) — custom text, or derived from searchFields
+searchFields (string[]) — optional: ["status","effectiveDate","statusDetails"]
+embedding (list<float>)
+embeddingModel (string)
+embeddingDimensions (int)

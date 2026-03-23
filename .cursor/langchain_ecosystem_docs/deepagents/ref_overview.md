@@ -1,0 +1,72 @@
+# deepagents
+
+> Python package
+
+📖 [View in docs](https://reference.langchain.com/python/deepagents)
+
+## Classes
+
+- [`SkillMetadata`](https://reference.langchain.com/python/deepagents/middleware/skills/SkillMetadata)
+- [`SkillsState`](https://reference.langchain.com/python/deepagents/middleware/skills/SkillsState)
+- [`SkillsStateUpdate`](https://reference.langchain.com/python/deepagents/middleware/skills/SkillsStateUpdate)
+- [`SkillsMiddleware`](https://reference.langchain.com/python/deepagents/middleware/skills/SkillsMiddleware)
+- [`SubAgent`](https://reference.langchain.com/python/deepagents/middleware/subagents/SubAgent)
+- [`CompiledSubAgent`](https://reference.langchain.com/python/deepagents/middleware/subagents/CompiledSubAgent)
+- [`SubAgentMiddleware`](https://reference.langchain.com/python/deepagents/middleware/subagents/SubAgentMiddleware)
+- [`PatchToolCallsMiddleware`](https://reference.langchain.com/python/deepagents/middleware/patch_tool_calls/PatchToolCallsMiddleware)
+- [`MemoryState`](https://reference.langchain.com/python/deepagents/middleware/memory/MemoryState)
+- [`MemoryStateUpdate`](https://reference.langchain.com/python/deepagents/middleware/memory/MemoryStateUpdate)
+- [`MemoryMiddleware`](https://reference.langchain.com/python/deepagents/middleware/memory/MemoryMiddleware)
+- [`FileData`](https://reference.langchain.com/python/deepagents/middleware/filesystem/FileData)
+- [`FilesystemState`](https://reference.langchain.com/python/deepagents/middleware/filesystem/FilesystemState)
+- [`FilesystemMiddleware`](https://reference.langchain.com/python/deepagents/middleware/filesystem/FilesystemMiddleware)
+- [`SummarizationEvent`](https://reference.langchain.com/python/deepagents/middleware/summarization/SummarizationEvent)
+- [`TruncateArgsSettings`](https://reference.langchain.com/python/deepagents/middleware/summarization/TruncateArgsSettings)
+- [`SummarizationState`](https://reference.langchain.com/python/deepagents/middleware/summarization/SummarizationState)
+- [`SummarizationDefaults`](https://reference.langchain.com/python/deepagents/middleware/summarization/SummarizationDefaults)
+- [`SummarizationToolMiddleware`](https://reference.langchain.com/python/deepagents/middleware/summarization/SummarizationToolMiddleware)
+- [`BaseSandbox`](https://reference.langchain.com/python/deepagents/backends/sandbox/BaseSandbox)
+- [`StateBackend`](https://reference.langchain.com/python/deepagents/backends/state/StateBackend)
+- [`FileDownloadResponse`](https://reference.langchain.com/python/deepagents/backends/protocol/FileDownloadResponse)
+- [`FileUploadResponse`](https://reference.langchain.com/python/deepagents/backends/protocol/FileUploadResponse)
+- [`FileInfo`](https://reference.langchain.com/python/deepagents/backends/protocol/FileInfo)
+- [`GrepMatch`](https://reference.langchain.com/python/deepagents/backends/protocol/GrepMatch)
+- [`WriteResult`](https://reference.langchain.com/python/deepagents/backends/protocol/WriteResult)
+- [`EditResult`](https://reference.langchain.com/python/deepagents/backends/protocol/EditResult)
+- [`BackendProtocol`](https://reference.langchain.com/python/deepagents/backends/protocol/BackendProtocol)
+- [`ExecuteResponse`](https://reference.langchain.com/python/deepagents/backends/protocol/ExecuteResponse)
+- [`SandboxBackendProtocol`](https://reference.langchain.com/python/deepagents/backends/protocol/SandboxBackendProtocol)
+- [`LocalShellBackend`](https://reference.langchain.com/python/deepagents/backends/local_shell/LocalShellBackend)
+- [`CompositeBackend`](https://reference.langchain.com/python/deepagents/backends/composite/CompositeBackend)
+- [`BackendContext`](https://reference.langchain.com/python/deepagents/backends/store/BackendContext)
+- [`StoreBackend`](https://reference.langchain.com/python/deepagents/backends/store/StoreBackend)
+- [`FilesystemBackend`](https://reference.langchain.com/python/deepagents/backends/filesystem/FilesystemBackend)
+
+## Functions
+
+- [`get_default_model()`](https://reference.langchain.com/python/deepagents/graph/get_default_model)
+- [`resolve_model()`](https://reference.langchain.com/python/deepagents/graph/resolve_model)
+- [`create_deep_agent()`](https://reference.langchain.com/python/deepagents/graph/create_deep_agent)
+- [`append_to_system_message()`](https://reference.langchain.com/python/deepagents/middleware/_utils/append_to_system_message)
+- [`compute_summarization_defaults()`](https://reference.langchain.com/python/deepagents/middleware/summarization/compute_summarization_defaults)
+- [`create_summarization_middleware()`](https://reference.langchain.com/python/deepagents/middleware/summarization/create_summarization_middleware)
+- [`create_summarization_tool_middleware()`](https://reference.langchain.com/python/deepagents/middleware/summarization/create_summarization_tool_middleware)
+- [`sanitize_tool_call_id()`](https://reference.langchain.com/python/deepagents/backends/utils/sanitize_tool_call_id)
+- [`format_content_with_line_numbers()`](https://reference.langchain.com/python/deepagents/backends/utils/format_content_with_line_numbers)
+- [`check_empty_content()`](https://reference.langchain.com/python/deepagents/backends/utils/check_empty_content)
+- [`file_data_to_string()`](https://reference.langchain.com/python/deepagents/backends/utils/file_data_to_string)
+- [`create_file_data()`](https://reference.langchain.com/python/deepagents/backends/utils/create_file_data)
+- [`update_file_data()`](https://reference.langchain.com/python/deepagents/backends/utils/update_file_data)
+- [`format_read_response()`](https://reference.langchain.com/python/deepagents/backends/utils/format_read_response)
+- [`perform_string_replacement()`](https://reference.langchain.com/python/deepagents/backends/utils/perform_string_replacement)
+- [`truncate_if_too_long()`](https://reference.langchain.com/python/deepagents/backends/utils/truncate_if_too_long)
+- [`validate_path()`](https://reference.langchain.com/python/deepagents/backends/utils/validate_path)
+- [`grep_matches_from_files()`](https://reference.langchain.com/python/deepagents/backends/utils/grep_matches_from_files)
+- [`build_grep_results_dict()`](https://reference.langchain.com/python/deepagents/backends/utils/build_grep_results_dict)
+- [`format_grep_matches()`](https://reference.langchain.com/python/deepagents/backends/utils/format_grep_matches)
+- [`execute_accepts_timeout()`](https://reference.langchain.com/python/deepagents/backends/protocol/execute_accepts_timeout)
+
+## Types
+
+- [`BackendFactory`](https://reference.langchain.com/python/deepagents/backends/protocol/BackendFactory)
+- [`BACKEND_TYPES`](https://reference.langchain.com/python/deepagents/backends/protocol/BACKEND_TYPES)

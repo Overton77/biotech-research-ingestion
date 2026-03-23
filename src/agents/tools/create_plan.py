@@ -20,6 +20,7 @@ def create_research_plan(
     stages: list[str],
     tasks: list[dict],
     context: str = "",
+    starter_sources: list[dict] | None = None,
 ) -> dict[str, Any]:
     """Create a structured research plan for human review and approval.
 
@@ -39,6 +40,8 @@ def create_research_plan(
                - dependencies (list[str]): ids of tasks this depends on
                - estimated_duration_minutes (int): rough estimate
         context: Optional summary of web research that informed the plan.
+        starter_sources: Optional list of {url, description} for key sources to use
+                         when the mission is compiled (e.g. papers, docs, pages).
     """
     plan: dict[str, Any] = {
         "title": title,
@@ -46,6 +49,7 @@ def create_research_plan(
         "stages": stages,
         "tasks": tasks,
         "context": context,
+        "starter_sources": starter_sources or [],
         "status": "approved",
         "version": 1,
     }

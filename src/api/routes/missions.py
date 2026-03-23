@@ -68,9 +68,11 @@ def _mission_to_dict(m: ResearchMission) -> dict:
         "global_context": m.global_context,
         "global_constraints": m.global_constraints,
         "success_criteria": m.success_criteria,
-        "task_defs": [td.model_dump() for td in m.task_defs],
+        "task_defs": [td.model_dump(mode="json") for td in m.task_defs],
         "dependency_map": m.dependency_map,
+        "reverse_dependency_map": m.reverse_dependency_map,
         "status": m.status,
+        "summary": m.summary.model_dump(mode="json") if m.summary else None,
         "created_at": m.created_at.isoformat(),
         "updated_at": m.updated_at.isoformat(),
     }
@@ -85,7 +87,7 @@ def _run_to_dict(r: ResearchRun) -> dict:
         "status": r.status,
         "resolved_inputs_snapshot": r.resolved_inputs_snapshot,
         "outputs_snapshot": r.outputs_snapshot,
-        "artifacts": [a.model_dump() for a in r.artifacts],
+        "artifacts": [a.model_dump(mode="json") for a in r.artifacts],
         "error_message": r.error_message,
         "started_at": r.started_at.isoformat() if r.started_at else None,
         "completed_at": r.completed_at.isoformat() if r.completed_at else None,
@@ -106,6 +108,47 @@ async def get_mission(mission_id: str) -> dict:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Mission not found")
 
     return envelope(_mission_to_dict(mission))
+
+
+@router.get("/{mission_id}/manifest")
+async def get_mission_manifest(mission_id: str) -> dict:
+    """Fetch the mission manifest (comprehensive task results + sources + quality)."""
+    try:
+        oid = PydanticObjectId(mission_id)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Mission not found")
+
+    mission = await ResearchMission.get(oid)
+    if not mission:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Mission not found")
+
+    s3_store = get_research_runs_s3_store()
+    try:
+        manifest = await s3_store.get_manifest(mission)
+        return envelope(manifest)
+    except Exception:
+        logger.debug("Manifest not in S3 for mission %s, building from MongoDB", mission_id)
+        return envelope(_build_basic_manifest_from_mongo(mission))
+
+
+def _build_basic_manifest_from_mongo(mission: ResearchMission) -> dict:
+    """Fallback manifest built from the MongoDB document when S3 is unavailable."""
+    return {
+        "mission_id": str(mission.id),
+        "title": mission.title,
+        "status": mission.status,
+        "completed_at": mission.updated_at.isoformat() if mission.updated_at else None,
+        "tasks": [
+            {
+                "task_id": td.task_id,
+                "name": td.name,
+                "status": "unknown",
+            }
+            for td in mission.task_defs
+        ],
+        "summary": mission.summary.model_dump(mode="json") if mission.summary else None,
+        "source": "mongodb_fallback",
+    }
 
 
 @router.get("/{mission_id}/runs")
@@ -272,7 +315,7 @@ async def get_task_artifacts(
     if not run_doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Run not found")
 
-    return envelope([a.model_dump() for a in run_doc.artifacts])
+    return envelope([a.model_dump(mode="json") for a in run_doc.artifacts])
 
 
 @router.get("/{mission_id}/runs/{task_id}/artifacts/{artifact_name}/content")

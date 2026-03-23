@@ -1,0 +1,7 @@
+{
+  "$schema": "https://langgra.ph/schema.json",
+  "dependencies": ["."],
+  "graphs": {
+    "deep_agent_test": "./src/research/tests/test_deep_agent.py:agent"
+  }
+}

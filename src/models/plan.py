@@ -1,24 +1,18 @@
 """Research plan and task models — Pydantic + Beanie."""
 
 from datetime import datetime
-from typing import Any, Literal
+from typing import Literal
 
 from beanie import Document
 from beanie.odm.fields import PydanticObjectId
 from pydantic import BaseModel, Field
 
 
-class AgentConfig(BaseModel):
-    """Per-task agent configuration."""
+class StarterSource(BaseModel):
+    """A starter reference (URL + description) for the Mission Compiler to use."""
 
-    model: str = "openai:gpt-5"
-    system_prompt: str = ""
-    tools: list[str] = Field(default_factory=list)
-    backend_type: Literal["state", "filesystem", "composite"] = "state"
-    backend_root_dir: str | None = None
-    interrupt_on: dict[str, Any] | None = None
-    max_retries: int = 6
-    timeout: int = 120
+    url: str = ""
+    description: str = ""
 
 
 class TaskInputRef(BaseModel):
@@ -41,14 +35,13 @@ class TaskOutputSpec(BaseModel):
 
 
 class ResearchTask(BaseModel):
-    """A single task in a research plan."""
+    """A single task in a research plan. Agent configuration is produced by the Mission Compiler."""
 
     id: str
     title: str
     description: str
     stage: str
     sub_stage: str | None = None
-    agent_config: AgentConfig
     inputs: list[TaskInputRef] = Field(default_factory=list)
     outputs: list[TaskOutputSpec] = Field(default_factory=list)
     dependencies: list[str] = Field(default_factory=list)
@@ -63,6 +56,7 @@ class ResearchPlan(Document):
     objective: str = ""
     stages: list[str] = Field(default_factory=list)
     tasks: list[ResearchTask] = Field(default_factory=list)
+    starter_sources: list[StarterSource] = Field(default_factory=list)
     status: Literal[
         "draft",
         "pending_approval",

@@ -1,0 +1,10 @@
+---
+globs: src/research/langchain_agent/**
+alwaysApply: false
+---
+
+In this directory we are creating the biotech entities and general deep research agents with langchain  
+create_agent() agents and their entire ecosystem.
+
+You can now use the .agents/skills folder in this codebase biotech-research-ingestion which contains up to date
+documentation for langchain , langgraph and deepagents. In this folder we are creating a type of deep agent with langchains create_agent and all of the modern features of the langchain ecosystem, Middleware, Tools, Skills, Filesystem, LangMem for Memory

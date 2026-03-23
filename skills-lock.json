@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "skills": {
+    "deep-agents-core": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "f82c2219a3e3b91f04165a395ced7ab75ec3b8e3d82c0f5684c53eec746c35c7"
+    },
+    "deep-agents-memory": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "c4fccc7409e8b80bb5f6dbf18b677ea55b7ab8515cb734f3141205ceccb8c2ee"
+    },
+    "deep-agents-orchestration": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "fb3a558ec0c485ae813e23140cd2ff7df7b8e00b6538eea760816fa78546180e"
+    },
+    "framework-selection": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "6cae8c25368173e2d72818c4a29dfdfcca7b51ad9b720454daa2b984d4f24e3c"
+    },
+    "langchain-dependencies": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "c0f6bdbf1d896c2d913984ec151d30c1d1ed53fdaa94495fc37495726bf946a1"
+    },
+    "langchain-fundamentals": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "7f23a1fb935bb09221a7fb4e50d484abbe3ba93767de832b1904cf9101ff1fe2"
+    },
+    "langchain-middleware": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "be362ccdfaefac1b8d8b89eb5b806648f5ba8b125f548f6262588e0199b63ffe"
+    },
+    "langchain-rag": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "25f569409285938fcb078ed2d14893f7d620131a28107f7a5c16f48b40bee24a"
+    },
+    "langgraph-fundamentals": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "43a226ecc442ba6d6091eea39cf587a7583fa532e73db58259e35b1393c31418"
+    },
+    "langgraph-human-in-the-loop": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "084b2c75d68a0000e665005372b010651c444247dc7e5ed340c4bc022b85e680"
+    },
+    "langgraph-persistence": {
+      "source": "langchain-ai/langchain-skills",
+      "sourceType": "github",
+      "computedHash": "41777ec7edc4504e45564917459202021245f3cdf90157e4a65dd6641cd0c1d7"
+    },
+    "langsmith-dataset": {
+      "source": "langchain-ai/langsmith-skills",
+      "sourceType": "github",
+      "computedHash": "13300c5146863e1e6b35b40af509ee5b61eef0bfee0d0ded999152d0a68f8e16"
+    },
+    "langsmith-evaluator": {
+      "source": "langchain-ai/langsmith-skills",
+      "sourceType": "github",
+      "computedHash": "b8587dcf767255c952aefc4d91d8d3fc3b94f601986a1bff7385ab20bf72e46d"
+    },
+    "langsmith-trace": {
+      "source": "langchain-ai/langsmith-skills",
+      "sourceType": "github",
+      "computedHash": "75b946c909c003e31f138307249c4a27a8becbd0be3b659d0acfd211781025be"
+    },
+    "tavily-best-practices": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "b1912363d3ad92011952118994dbf9e01bcd6544aab166f9bf1ce243cd44f7a0"
+    },
+    "tavily-cli": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "524054fc3d04cf2acc47b00f263ccffc82b086fc9eb031c80a54f8f840c46f54"
+    },
+    "tavily-crawl": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "0fb681b713040b33cea5a7accf46e44f8f718e36da1c1d8b2cd7f54f574da8e7"
+    },
+    "tavily-extract": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "c3f85118a29d8adf7f90acb87d28eb2d3526a7c92d4b276df7ec800675114664"
+    },
+    "tavily-map": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "8b059fd854895eecfb6999b4ca7eb268dc324a04d4515d9f81d867a4bfd538ba"
+    },
+    "tavily-research": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "8f0d7dc0a3d838fc647c5666f7dd398626d35b8f95bd7f0ae2512df8927d8f29"
+    },
+    "tavily-search": {
+      "source": "tavily-ai/skills",
+      "sourceType": "github",
+      "computedHash": "8cc6213302c9e74916e135d8abf462b8b0fc1ddea328b6f6a6a3f1d7d4b5c2ac"
+    }
+  }
+}

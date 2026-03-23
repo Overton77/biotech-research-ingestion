@@ -160,7 +160,12 @@ def format_tavily_crawl_response(
 
         lines: List[str] = []
         lines.append(f"=== Crawl Results: {base_url} ===")
-        lines.append(f"Pages: {len(results)}")
+        total_pages = len(results)
+        lines.append(f"Pages: {total_pages}")
+        if max_results is not None and total_pages > len(results_local):
+            lines.append(
+                f"Note: Showing {len(results_local)} of {total_pages} pages (formatter max_results cap)."
+            )
         if response_time is not None:
             lines.append(f"Response time: {response_time}")
         if request_id:
@@ -215,56 +220,72 @@ async def tavily_search(
     client: AsyncTavilyClient,
     query: str,
     max_results: int = 5,
-    search_depth: Literal["basic", "advanced"] = "basic",
+    search_depth: Literal["basic", "advanced", "fast", "ultra-fast"] = "basic",
     topic: Optional[Literal["general", "news", "finance"]] = None,
+    time_range: Optional[Literal["day", "week", "month", "year"]] = None,
     include_images: bool = False,
     include_raw_content: bool | Literal["markdown", "text"] = False,
     include_domains: Optional[List[str]] = None,
     exclude_domains: Optional[List[str]] = None,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
+    country: Optional[str] = None,
+    timeout: float = 60.0,
+    include_favicon: bool = False,
+    include_usage: bool = False,
+    auto_parameters: bool = False,
 ) -> Dict[str, Any]:
     if not isinstance(query, str) or not query.strip():
         raise ValueError("tavily_search: query must be non-empty")
-
-    # NOTE: explicit keyword args only; only pass domain args if not None
-    if include_domains is not None or exclude_domains is not None:
-        return await client.search(
-            query=query,
-            max_results=max_results,
-            search_depth=search_depth,
-            topic=topic,
-            include_images=include_images,
-            include_raw_content=include_raw_content,
-            include_domains=include_domains,
-            exclude_domains=exclude_domains,
-            start_date=start_date,
-            end_date=end_date,
+    # Tavily guideline: search string, not a long prompt (see tavily-best-practices/search.md).
+    if len(query) > 400:
+        raise ValueError(
+            "tavily_search: query exceeds 400 characters; split into shorter sub-queries."
         )
 
-    return await client.search(
-        query=query,
-        max_results=max_results,
-        search_depth=search_depth,
-        topic=topic,
-        include_images=include_images,
-        include_raw_content=include_raw_content,
-        start_date=start_date,
-        end_date=end_date,
-    )
+    payload: Dict[str, Any] = {
+        "query": query,
+        "max_results": max_results,
+        "search_depth": search_depth,
+        "topic": topic,
+        "include_images": include_images,
+        "include_raw_content": include_raw_content,
+        "start_date": start_date,
+        "end_date": end_date,
+        "timeout": timeout,
+        "include_favicon": include_favicon,
+        "include_usage": include_usage,
+        "auto_parameters": auto_parameters,
+    }
+    if time_range is not None:
+        payload["time_range"] = time_range
+    if country is not None:
+        payload["country"] = country
+    if include_domains is not None:
+        payload["include_domains"] = include_domains
+    if exclude_domains is not None:
+        payload["exclude_domains"] = exclude_domains
+
+    return await client.search(**payload)
 
 async def tavily_search_multiple(
     client: AsyncTavilyClient,
     queries: List[str],
     max_results: int = 5,
-    search_depth: Literal["basic", "advanced"] = "basic",
+    search_depth: Literal["basic", "advanced", "fast", "ultra-fast"] = "basic",
     topic: Optional[Literal["general", "news", "finance"]] = None,
+    time_range: Optional[Literal["day", "week", "month", "year"]] = None,
     include_images: bool = False,
     include_raw_content: bool | Literal["markdown", "text"] = False,
     include_domains: Optional[List[str]] = None,
     exclude_domains: Optional[List[str]] = None,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
+    country: Optional[str] = None,
+    timeout: float = 60.0,
+    include_favicon: bool = False,
+    include_usage: bool = False,
+    auto_parameters: bool = False,
     concurrency: int = 5,
 ) -> List[Dict[str, Any]]:
     sem = asyncio.Semaphore(concurrency)
@@ -277,18 +298,26 @@ async def tavily_search_multiple(
                 max_results=max_results,
                 search_depth=search_depth,
                 topic=topic,
+                time_range=time_range,
                 include_images=include_images,
                 include_raw_content=include_raw_content,
                 include_domains=include_domains,
                 exclude_domains=exclude_domains,
                 start_date=start_date,
                 end_date=end_date,
+                country=country,
+                timeout=timeout,
+                include_favicon=include_favicon,
+                include_usage=include_usage,
+                auto_parameters=auto_parameters,
             )
             # preserve query
             res["__query"] = q
             return res
 
     cleaned = [q.strip() for q in queries if isinstance(q, str) and q.strip()]
+    if not cleaned:
+        raise ValueError("tavily_search_multiple: queries must contain at least one non-empty string.")
     return await asyncio.gather(*[_one(q) for q in cleaned])
 
 def format_tavily_search_response(
@@ -296,6 +325,7 @@ def format_tavily_search_response(
     *,
     max_results: Optional[int] = None,
     max_content_chars: Optional[int] = None,
+    query_hint: Optional[str] = None,
 ) -> str:
     """
     Format Tavily search results into a compact, LLM-friendly string.
@@ -320,31 +350,45 @@ def format_tavily_search_response(
         response: Tavily search response or list of result objects.
         max_results: Optional cap on number of results to format.
         max_content_chars: Optional cap on content length per result.
+        query_hint: If the API response has no `query` field, show this as the search line.
 
     Returns:
         A well-structured string ready to feed to a summarization model.
     """
     # Normalize to dict with "results" and "images"
+    meta: Optional[Dict[str, Any]] = None
     if isinstance(response, list):
         results = response
         images: List[Any] = []
         query_str = None
     elif isinstance(response, dict):
+        meta = response
         results = response.get("results") or []
         images = response.get("images") or []
-        query_str = response.get("query") 
+        query_str = response.get("query")
+    else:
+        return f"(unexpected response type: {type(response).__name__})"
 
-
+    display_query = (query_str or "").strip() or (query_hint or "").strip() or None
 
     if max_results is not None:
         results = results[:max_results]
 
     lines: List[str] = []
 
-    # Optional header with original query
-    if query_str:
-        lines.append(f"Search query: {query_str}")
+    if display_query:
+        lines.append(f"Search query: {display_query}")
         lines.append("")
+
+    if meta:
+        meta_bits: List[str] = []
+        if meta.get("request_id"):
+            meta_bits.append(f"request_id={meta['request_id']}")
+        if meta.get("response_time") is not None:
+            meta_bits.append(f"response_time_s={meta['response_time']}")
+        if meta_bits:
+            lines.append(f"Meta: {', '.join(meta_bits)}")
+            lines.append("")
 
     # --- Main results ---
     lines.append("=== Web Results ===")
@@ -418,6 +462,8 @@ async def tavily_extract(
     include_images: bool = False,
     include_favicon: bool = False,
     format: Literal["markdown", "text"] = "markdown",
+    timeout: float = 30.0,
+    include_usage: bool = False,
 ) -> Dict[str, Any]:
     urls_list = [urls] if isinstance(urls, str) else list(urls or [])
     urls_list = [u for u in urls_list if isinstance(u, str) and u.strip()]
@@ -433,6 +479,8 @@ async def tavily_extract(
             include_images=include_images,
             include_favicon=include_favicon,
             format=format,
+            timeout=timeout,
+            include_usage=include_usage,
         )
 
     return await client.extract(
@@ -441,6 +489,8 @@ async def tavily_extract(
         include_images=include_images,
         include_favicon=include_favicon,
         format=format,
+        timeout=timeout,
+        include_usage=include_usage,
     )
 
 async def tavily_map(
@@ -450,6 +500,14 @@ async def tavily_map(
     max_depth: int = 1,
     max_breadth: int = 20,
     limit: int = 25,
+    select_paths: Optional[List[str]] = None,
+    select_domains: Optional[List[str]] = None,
+    exclude_paths: Optional[List[str]] = None,
+    exclude_domains: Optional[List[str]] = None,
+    allow_external: Optional[bool] = None,
+    include_images: bool = False,
+    timeout: float = 150.0,
+    include_usage: bool = False,
 ) -> Dict[str, Any]:
     """
     Async wrapper around Tavily's map method.
@@ -472,6 +530,14 @@ async def tavily_map(
             max_depth=max_depth,
             max_breadth=max_breadth,
             limit=limit,
+            select_paths=select_paths,
+            select_domains=select_domains,
+            exclude_paths=exclude_paths,
+            exclude_domains=exclude_domains,
+            allow_external=allow_external,
+            include_images=include_images,
+            timeout=timeout,
+            include_usage=include_usage,
         )
 
     # instructions is None → do not pass it
@@ -480,6 +546,14 @@ async def tavily_map(
         max_depth=max_depth,
         max_breadth=max_breadth,
         limit=limit,
+        select_paths=select_paths,
+        select_domains=select_domains,
+        exclude_paths=exclude_paths,
+        exclude_domains=exclude_domains,
+        allow_external=allow_external,
+        include_images=include_images,
+        timeout=timeout,
+        include_usage=include_usage,
     )
 
 
@@ -507,6 +581,15 @@ def format_tavily_extract_response(
         results = results[:max_results]
 
     lines: List[str] = []
+
+    meta_bits: List[str] = []
+    if response.get("request_id"):
+        meta_bits.append(f"request_id={response['request_id']}")
+    if response.get("response_time") is not None:
+        meta_bits.append(f"response_time_s={response['response_time']}")
+    if meta_bits:
+        lines.append(f"Meta: {', '.join(meta_bits)}")
+        lines.append("")
 
     # --- Main results ---
     lines.append("=== Extracted Web Content ===")
@@ -567,7 +650,12 @@ def format_tavily_extract_response(
     return "\n".join(lines).strip()
 
 
-def format_tavily_map_response(response: Dict[str, Any], urls_override: Optional[List[str]] = None) -> str:
+def format_tavily_map_response(
+    response: Dict[str, Any],
+    urls_override: Optional[List[str]] = None,
+    *,
+    stats: Optional[Dict[str, int]] = None,
+) -> str:
     """
     Format Tavily map results into a simple list of URLs.
 
@@ -575,6 +663,9 @@ def format_tavily_map_response(response: Dict[str, Any], urls_override: Optional
         response: Tavily map response (dict with 'base_url' and 'results' list of URLs).
         urls_override: Optional list of URLs to use instead of response['results'].
                       Useful when URLs have been deduped/capped after the API call.
+        stats: Optional counts from the tool layer, e.g.
+               {"raw_count": N, "deduped_count": M, "returned_count": K} so the model
+               knows when output was capped.
 
     Returns:
         A formatted string with base URL and list of discovered URLs.
@@ -584,7 +675,25 @@ def format_tavily_map_response(response: Dict[str, Any], urls_override: Optional
 
     lines: List[str] = []
     lines.append(f"=== Site Map: {base_url} ===")
-    lines.append(f"Discovered {len(results)} URL(s):")
+    if stats:
+        raw_c = stats.get("raw_count")
+        ded_c = stats.get("deduped_count")
+        ret_c = stats.get("returned_count")
+        parts: List[str] = []
+        if raw_c is not None:
+            parts.append(f"from API: {raw_c}")
+        if ded_c is not None:
+            parts.append(f"after dedupe: {ded_c}")
+        if ret_c is not None:
+            parts.append(f"returned to you: {ret_c}")
+        if parts:
+            lines.append("URL counts - " + "; ".join(parts))
+        if ded_c is not None and len(results) < ded_c:
+            lines.append(
+                f"Note: Listing {len(results)} URLs here (truncated vs dedupe set; raise max_return_urls if needed)."
+            )
+        lines.append("")
+    lines.append(f"Discovered {len(results)} URL(s) in this message:")
     lines.append("")
 
     if not results:

@@ -1,0 +1,697 @@
+{
+  "version": "1.0",
+  "nodes": {
+    "Organization": {
+      "mergeKey": "organizationId",
+      "extractable": true,
+      "extractionClass": "ExtractedOrganization",
+      "searchFields": ["name", "aliases", "description", "businessModel", "primaryIndustryTags"],
+      "properties": {
+        "organizationId":                  { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":                       { "type": "datetime", "system": true },
+        "validAt":                         { "type": "datetime", "system": true },
+        "name":                            { "type": "string",  "required": true },
+        "aliases":                         { "type": "array",   "items": "string" },
+        "orgType":                         { "type": "string",  "default": "COMPANY" },
+        "businessModel":                   { "type": "string",  "default": "B2C" },
+        "description":                     { "type": "string" },
+        "legalName":                       { "type": "string" },
+        "websiteUrl":                      { "type": "string" },
+        "primaryIndustryTags":             { "type": "array",   "items": "string" },
+        "regionsServed":                   { "type": "array",   "items": "string" },
+        "headquartersCity":                { "type": "string" },
+        "headquartersCountry":             { "type": "string" },
+        "legalStructure":                  { "type": "string",  "extract": false },
+        "ownershipType":                   { "type": "string",  "extract": false },
+        "jurisdictionsOfIncorporation":    { "type": "array",   "items": "string", "extract": false },
+        "publicTicker":                    { "type": "string",  "extract": false },
+        "fundingStage":                    { "type": "string",  "extract": false },
+        "defaultCollectionModes":          { "type": "array",   "items": "string", "extract": false },
+        "defaultRegionsAvailable":         { "type": "array",   "items": "string", "extract": false },
+        "employeeCountMin":                { "type": "int",     "extract": false },
+        "employeeCountMax":                { "type": "int",     "extract": false },
+        "employeeCountAsOf":               { "type": "datetime","extract": false },
+        "revenueAnnualMin":                { "type": "float",   "extract": false },
+        "revenueAnnualMax":                { "type": "float",   "extract": false },
+        "revenueAnnualCurrency":           { "type": "string",  "extract": false },
+        "revenueAnnualAsOf":               { "type": "datetime","extract": false },
+        "valuationMin":                    { "type": "float",   "extract": false },
+        "valuationMax":                    { "type": "float",   "extract": false },
+        "valuationCurrency":               { "type": "string",  "extract": false },
+        "valuationAsOf":                   { "type": "datetime","extract": false }
+      }
+    },
+
+    "Person": {
+      "mergeKey": "personId",
+      "extractable": true,
+      "extractionClass": "ExtractedPerson",
+      "searchFields": ["canonicalName", "bio", "primaryDomain", "specialties", "expertiseTags"],
+      "properties": {
+        "personId":           { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":          { "type": "datetime", "system": true },
+        "validAt":            { "type": "datetime", "system": true },
+        "canonicalName":      { "type": "string",  "required": true },
+        "givenName":          { "type": "string" },
+        "familyName":         { "type": "string" },
+        "middleName":         { "type": "string",  "extract": false },
+        "suffix":             { "type": "string",  "extract": false },
+        "honorific":          { "type": "string" },
+        "aliases":            { "type": "array",   "items": "string", "extract": false },
+        "bio":                { "type": "string" },
+        "primaryDomain":      { "type": "string" },
+        "specialties":        { "type": "array",   "items": "string" },
+        "expertiseTags":      { "type": "array",   "items": "string" },
+        "affiliationSummary": { "type": "string",  "extract": false },
+        "degrees":            { "type": "array",   "items": "string" },
+        "credentialIds":      { "type": "array",   "items": "string", "extract": false },
+        "orcid":              { "type": "string",  "extract": false },
+        "npi":                { "type": "string",  "extract": false },
+        "licenseIds":         { "type": "array",   "items": "string", "extract": false },
+        "websiteUrl":         { "type": "string",  "extract": false },
+        "email":              { "type": "string",  "extract": false },
+        "linkedinUrl":        { "type": "string" },
+        "twitterUrl":         { "type": "string",  "extract": false },
+        "githubUrl":          { "type": "string",  "extract": false },
+        "scholarUrl":         { "type": "string",  "extract": false },
+        "headshotUrl":        { "type": "string",  "extract": false },
+        "publicFigure":       { "type": "bool",    "extract": false },
+        "notabilityNotes":    { "type": "string",  "extract": false }
+      }
+    },
+
+    "Product": {
+      "mergeKey": "productId",
+      "extractable": true,
+      "extractionClass": "ExtractedProduct",
+      "searchFields": ["name", "synonyms", "brandName", "intendedUse", "description"],
+      "properties": {
+        "productId":          { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":          { "type": "datetime", "system": true },
+        "validAt":            { "type": "datetime", "system": true },
+        "name":               { "type": "string",  "required": true },
+        "synonyms":           { "type": "array",   "items": "string" },
+        "productDomain":      { "type": "string",  "default": "SUPPLEMENT" },
+        "productType":        { "type": "string" },
+        "brandName":          { "type": "string" },
+        "priceAmount":        { "type": "float" },
+        "currency":           { "type": "string",  "default": "USD" },
+        "intendedUse":        { "type": "string" },
+        "description":        { "type": "string" },
+        "modelNumber":        { "type": "string",  "extract": false },
+        "ndcCode":            { "type": "string",  "extract": false },
+        "upc":                { "type": "string",  "extract": false },
+        "gtin":               { "type": "string",  "extract": false },
+        "riskClass":          { "type": "string",  "extract": false }
+      }
+    },
+
+    "CompoundForm": {
+      "mergeKey": "compoundFormId",
+      "extractable": false,
+      "extractionNote": "Extracted via denormalized ExtractedCompoundIngredient (CompoundForm properties + CONTAINS_COMPOUND_FORM relationship).",
+      "searchFields": ["canonicalName", "formType", "chemicalDifferences", "bioavailabilityNotes"],
+      "properties": {
+        "compoundFormId":          { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":               { "type": "datetime", "system": true },
+        "validAt":                 { "type": "datetime", "system": true },
+        "canonicalName":           { "type": "string",  "required": true },
+        "formType":                { "type": "string" },
+        "chemicalDifferences":     { "type": "string" },
+        "stabilityProfile":        { "type": "string" },
+        "solubilityProfile":       { "type": "string" },
+        "bioavailabilityNotes":    { "type": "string" },
+        "regulatoryStatusSummary": { "type": "string" }
+      }
+    },
+
+    "PhysicalLocation": {
+      "mergeKey": "locationId",
+      "extractable": false,
+      "searchFields": ["canonicalName", "locationType", "city", "region", "countryCode", "placeTags"],
+      "properties": {
+        "locationId":       { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":        { "type": "datetime", "system": true },
+        "canonicalName":    { "type": "string" },
+        "locationType":     { "type": "string" },
+        "addressLine1":     { "type": "string" },
+        "addressLine2":     { "type": "string" },
+        "city":             { "type": "string" },
+        "region":           { "type": "string" },
+        "postalCode":       { "type": "string" },
+        "countryCode":      { "type": "string" },
+        "geoLat":           { "type": "float" },
+        "geoLon":           { "type": "float" },
+        "timezone":         { "type": "string" },
+        "jurisdiction":     { "type": "string" },
+        "placeTags":        { "type": "array",  "items": "string" },
+        "contactPhone":     { "type": "string" },
+        "contactEmail":     { "type": "string" }
+      }
+    },
+
+    "Listing": {
+      "mergeKey": "listingId",
+      "extractable": false,
+      "searchFields": ["title", "description", "listingDomain", "brandName", "pricingNotes"],
+      "properties": {
+        "listingId":             { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":             { "type": "datetime", "system": true },
+        "listingDomain":         { "type": "string" },
+        "title":                 { "type": "string" },
+        "description":           { "type": "string" },
+        "sku":                   { "type": "string" },
+        "url":                   { "type": "string" },
+        "brandName":             { "type": "string" },
+        "currency":              { "type": "string" },
+        "priceAmount":           { "type": "float" },
+        "priceType":             { "type": "string" },
+        "pricingNotes":          { "type": "string" },
+        "regionsAvailable":      { "type": "array",  "items": "string" },
+        "requiresAppointment":   { "type": "bool" },
+        "collectionMode":        { "type": "string" }
+      }
+    },
+
+    "ManufacturingProcess": {
+      "mergeKey": "manufacturingProcessId",
+      "extractable": false,
+      "searchFields": ["canonicalName", "processType", "description", "inputs", "outputs", "qualityRisks"],
+      "properties": {
+        "manufacturingProcessId": { "type": "string", "format": "uuid", "system": true },
+        "createdAt":              { "type": "datetime", "system": true },
+        "canonicalName":          { "type": "string" },
+        "processType":            { "type": "string" },
+        "description":            { "type": "string" },
+        "inputs":                 { "type": "array", "items": "string" },
+        "outputs":                { "type": "array", "items": "string" },
+        "qualityRisks":           { "type": "array", "items": "string" },
+        "scalabilityLevel":       { "type": "string" }
+      }
+    },
+
+    "TechnologyPlatform": {
+      "mergeKey": "platformId",
+      "extractable": false,
+      "searchFields": ["canonicalName", "aliases", "platformType", "description"],
+      "properties": {
+        "platformId":    { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":     { "type": "datetime", "system": true },
+        "canonicalName": { "type": "string" },
+        "aliases":       { "type": "array",  "items": "string" },
+        "platformType":  { "type": "string" },
+        "description":   { "type": "string" }
+      }
+    },
+
+    "LabTest": {
+      "mergeKey": "labTestId",
+      "extractable": false,
+      "searchFields": ["name", "synonyms", "loincCodes", "whatItMeasures"],
+      "properties": {
+        "labTestId":         { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":         { "type": "datetime", "system": true },
+        "name":              { "type": "string",  "required": true },
+        "synonyms":          { "type": "array",   "items": "string" },
+        "loincCodes":        { "type": "array",   "items": "string" },
+        "cptCodes":          { "type": "array",   "items": "string" },
+        "whatItMeasures":    { "type": "string" },
+        "prepRequirements":  { "type": "string" }
+      }
+    },
+
+    "PanelDefinition": {
+      "mergeKey": "panelDefinitionId",
+      "extractable": false,
+      "searchFields": ["canonicalName", "aliases", "description"],
+      "properties": {
+        "panelDefinitionId": { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":         { "type": "datetime", "system": true },
+        "canonicalName":     { "type": "string",  "required": true },
+        "aliases":           { "type": "array",   "items": "string" },
+        "description":       { "type": "string" }
+      }
+    },
+
+    "RegulatoryPathway": {
+      "mergeKey": "pathwayId",
+      "extractable": false,
+      "searchFields": ["pathwayName", "authority", "pathwayType", "requirementsSummary"],
+      "properties": {
+        "pathwayId":              { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":              { "type": "datetime", "system": true },
+        "authority":              { "type": "string" },
+        "pathwayType":            { "type": "string" },
+        "pathwayName":            { "type": "string" },
+        "requirementsSummary":    { "type": "string" }
+      }
+    },
+
+    "RegulatoryStatus": {
+      "mergeKey": "regulatoryStatusId",
+      "extractable": false,
+      "searchFields": ["status", "statusDetails"],
+      "properties": {
+        "regulatoryStatusId": { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":          { "type": "datetime", "system": true },
+        "status":             { "type": "string" },
+        "effectiveDate":      { "type": "datetime" },
+        "statusDetails":      { "type": "string" }
+      }
+    },
+
+    "ProductCategory": {
+      "mergeKey": "categoryId",
+      "extractable": false,
+      "searchFields": ["name", "description", "aliases"],
+      "properties": {
+        "categoryId":  { "type": "string",  "format": "uuid", "system": true },
+        "createdAt":   { "type": "datetime", "system": true },
+        "name":        { "type": "string" },
+        "description": { "type": "string" },
+        "aliases":     { "type": "array",  "items": "string" }
+      }
+    }
+  },
+
+  "relationships": {
+    "_OrgPersonRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedOrgPersonRelationship",
+      "from": "Organization",
+      "to": "Person",
+      "note": "Virtual grouping. Set relationship_type to one of the coveredTypes.",
+      "coveredTypes": ["EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER", "HAS_SCIENTIFIC_ADVISOR", "HAS_EXECUTIVE_ROLE"],
+      "searchFields": ["roleTitle", "department", "seniority"],
+      "properties": {
+        "org_name":          { "type": "string",  "required": true },
+        "person_name":       { "type": "string",  "required": true },
+        "relationship_type": { "type": "string",  "required": true },
+        "roleTitle":         { "type": "string" },
+        "department":        { "type": "string" },
+        "seniority":         { "type": "string" },
+        "isCurrent":         { "type": "bool",   "default": true }
+      }
+    },
+
+    "EMPLOYS": {
+      "extractable": false,
+      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=EMPLOYS",
+      "from": "Organization",
+      "to": "Person",
+      "searchFields": ["roleTitle", "department", "roleFunction", "seniority", "employmentType"],
+      "properties": {
+        "createdAt":      { "type": "datetime", "system": true },
+        "validAt":        { "type": "datetime", "system": true },
+        "roleTitle":      { "type": "string" },
+        "department":     { "type": "string" },
+        "roleFunction":   { "type": "string" },
+        "seniority":      { "type": "string" },
+        "employmentType": { "type": "string" },
+        "startDate":      { "type": "datetime" },
+        "endDate":        { "type": "datetime" },
+        "isCurrent":      { "type": "bool" },
+        "claimIds":       { "type": "array", "items": "string" }
+      }
+    },
+
+    "FOUNDED_BY": {
+      "extractable": false,
+      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=FOUNDED_BY",
+      "from": "Organization",
+      "to": "Person",
+      "searchFields": ["founderRole"],
+      "properties": {
+        "createdAt":     { "type": "datetime", "system": true },
+        "validAt":       { "type": "datetime", "system": true },
+        "founderRole":   { "type": "string" },
+        "foundingDate":  { "type": "datetime" },
+        "isCurrent":     { "type": "bool" },
+        "claimIds":      { "type": "array", "items": "string" }
+      }
+    },
+
+    "HAS_BOARD_MEMBER": {
+      "extractable": false,
+      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=HAS_BOARD_MEMBER",
+      "from": "Organization",
+      "to": "Person",
+      "searchFields": ["boardRole", "committee"],
+      "properties": {
+        "createdAt":  { "type": "datetime", "system": true },
+        "validAt":    { "type": "datetime", "system": true },
+        "boardRole":  { "type": "string" },
+        "committee":  { "type": "string" },
+        "startDate":  { "type": "datetime" },
+        "endDate":    { "type": "datetime" },
+        "isCurrent":  { "type": "bool" },
+        "claimIds":   { "type": "array", "items": "string" }
+      }
+    },
+
+    "HAS_SCIENTIFIC_ADVISOR": {
+      "extractable": false,
+      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=HAS_SCIENTIFIC_ADVISOR",
+      "from": "Organization",
+      "to": "Person",
+      "searchFields": ["advisorType", "focusAreas"],
+      "properties": {
+        "createdAt":   { "type": "datetime", "system": true },
+        "validAt":     { "type": "datetime", "system": true },
+        "advisorType": { "type": "string" },
+        "focusAreas":  { "type": "array", "items": "string" },
+        "startDate":   { "type": "datetime" },
+        "endDate":     { "type": "datetime" },
+        "isCurrent":   { "type": "bool" },
+        "claimIds":    { "type": "array", "items": "string" }
+      }
+    },
+
+    "HAS_EXECUTIVE_ROLE": {
+      "extractable": false,
+      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=HAS_EXECUTIVE_ROLE",
+      "from": "Organization",
+      "to": "Person",
+      "searchFields": ["executiveRole"],
+      "properties": {
+        "createdAt":      { "type": "datetime", "system": true },
+        "validAt":        { "type": "datetime", "system": true },
+        "executiveRole":  { "type": "string" },
+        "startDate":      { "type": "datetime" },
+        "endDate":        { "type": "datetime" },
+        "isCurrent":      { "type": "bool" },
+        "claimIds":       { "type": "array", "items": "string" }
+      }
+    },
+
+    "HAS_LOCATION": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "PhysicalLocation",
+      "searchFields": ["locationRole"],
+      "properties": {
+        "createdAt":    { "type": "datetime", "system": true },
+        "validAt":      { "type": "datetime", "system": true },
+        "locationRole": { "type": "string" },
+        "isPrimary":    { "type": "bool" },
+        "startDate":    { "type": "datetime" },
+        "endDate":      { "type": "datetime" },
+        "claimIds":     { "type": "array", "items": "string" }
+      }
+    },
+
+    "OWNS_OR_CONTROLS": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "Organization",
+      "searchFields": ["relationshipType", "controlType", "ownershipPercent"],
+      "properties": {
+        "createdAt":        { "type": "datetime", "system": true },
+        "validAt":          { "type": "datetime", "system": true },
+        "relationshipType": { "type": "string" },
+        "ownershipPercent": { "type": "float" },
+        "controlType":      { "type": "string" },
+        "effectiveFrom":    { "type": "datetime" },
+        "effectiveTo":      { "type": "datetime" },
+        "isCurrent":        { "type": "bool" },
+        "claimIds":         { "type": "array", "items": "string" }
+      }
+    },
+
+    "LISTS": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "Listing",
+      "searchFields": ["listRole", "channel", "availabilityNotes"],
+      "properties": {
+        "createdAt":               { "type": "datetime", "system": true },
+        "validAt":                 { "type": "datetime", "system": true },
+        "listRole":                { "type": "string" },
+        "channel":                 { "type": "string" },
+        "regionsOverrides":        { "type": "array", "items": "string" },
+        "collectionModesOverrides":{ "type": "array", "items": "string" },
+        "availabilityNotes":       { "type": "string" },
+        "claimIds":                { "type": "array", "items": "string" }
+      }
+    },
+
+    "OFFERS_PRODUCT": {
+      "extractable": false,
+      "extractionNote": "Inferred in neo4j_writer from product.brandName matching org.name — not directly extracted by LLM.",
+      "from": "Organization",
+      "to": "Product",
+      "searchFields": [],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "channel":   { "type": "string" }
+      }
+    },
+
+    "SUPPLIES_COMPOUND_FORM": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "CompoundForm",
+      "searchFields": [],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "MANUFACTURES": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "CompoundForm",
+      "searchFields": ["claimIds"],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "MANUFACTURES_PRODUCT": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "Product",
+      "searchFields": ["claimIds"],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "CONTRACT_MANUFACTURER_FOR_ORGANIZATION": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "Organization",
+      "searchFields": ["claimIds"],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "CONTRACT_MANUFACTURER_FOR_PRODUCT": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "Product",
+      "searchFields": ["claimIds"],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "CONTRACT_MANUFACTURER_FOR_COMPOUND_FORM": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "CompoundForm",
+      "searchFields": ["claimIds"],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "PERFORMS_MANUFACTURING_PROCESS": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "ManufacturingProcess",
+      "searchFields": ["role"],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "role":      { "type": "string" },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "DEVELOPS_PLATFORM": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "TechnologyPlatform",
+      "searchFields": ["relationshipRole", "notes", "source"],
+      "properties": {
+        "createdAt":        { "type": "datetime", "system": true },
+        "validAt":          { "type": "datetime", "system": true },
+        "relationshipRole": { "type": "string" },
+        "notes":            { "type": "string" },
+        "source":           { "type": "string" },
+        "claimIds":         { "type": "array", "items": "string" }
+      }
+    },
+
+    "USES_PLATFORM": {
+      "extractable": false,
+      "from": "Organization",
+      "to": "TechnologyPlatform",
+      "searchFields": ["usageContext", "notes", "source"],
+      "properties": {
+        "createdAt":    { "type": "datetime", "system": true },
+        "validAt":      { "type": "datetime", "system": true },
+        "usageContext": { "type": "string" },
+        "isPrimary":    { "type": "bool" },
+        "notes":        { "type": "string" },
+        "source":       { "type": "string" },
+        "claimIds":     { "type": "array", "items": "string" }
+      }
+    },
+
+    "CONTAINS_COMPOUND_FORM": {
+      "extractable": true,
+      "extractionClass": "ExtractedCompoundIngredient",
+      "from": "Product",
+      "to": "CompoundForm",
+      "note": "Denormalized model: includes CompoundForm node properties (compoundName=canonicalName, formType) plus relationship properties.",
+      "searchFields": ["compoundName", "formType", "bioavailabilityNotes"],
+      "properties": {
+        "product_name":        { "type": "string", "required": true, "note": "Reference to parent Product.name" },
+        "compoundName":        { "type": "string", "required": true, "note": "Maps to CompoundForm.canonicalName" },
+        "formType":            { "type": "string" },
+        "dose":                { "type": "float" },
+        "doseUnit":            { "type": "string" },
+        "role":                { "type": "string", "default": "active" },
+        "bioavailabilityNotes":{ "type": "string" }
+      }
+    },
+
+    "CONTAINS_COMPOUND": {
+      "extractable": false,
+      "from": "Product",
+      "to": "CompoundForm",
+      "searchFields": ["dose", "doseUnit", "role"],
+      "properties": {
+        "createdAt":        { "type": "datetime", "system": true },
+        "validAt":          { "type": "datetime", "system": true },
+        "dose":             { "type": "float" },
+        "doseUnit":         { "type": "string" },
+        "role":             { "type": "string" },
+        "standardizedTo":   { "type": "string" },
+        "claimIds":         { "type": "array", "items": "string" }
+      }
+    },
+
+    "DELIVERS_LAB_TEST": {
+      "extractable": false,
+      "from": "Product",
+      "to": "LabTest",
+      "searchFields": ["role", "componentName", "quantity"],
+      "properties": {
+        "createdAt":     { "type": "datetime", "system": true },
+        "validAt":       { "type": "datetime", "system": true },
+        "role":          { "type": "string" },
+        "quantity":      { "type": "int" },
+        "componentName": { "type": "string" },
+        "claimIds":      { "type": "array", "items": "string" }
+      }
+    },
+
+    "IMPLEMENTS_PANEL": {
+      "extractable": false,
+      "from": "Product",
+      "to": "PanelDefinition",
+      "searchFields": ["panelRole", "versionLabel"],
+      "properties": {
+        "createdAt":     { "type": "datetime", "system": true },
+        "validAt":       { "type": "datetime", "system": true },
+        "panelRole":     { "type": "string" },
+        "versionLabel":  { "type": "string" },
+        "claimIds":      { "type": "array", "items": "string" }
+      }
+    },
+
+    "FOLLOWS_PATHWAY": {
+      "extractable": false,
+      "from": "Product",
+      "to": "RegulatoryPathway",
+      "searchFields": ["jurisdictionId"],
+      "properties": {
+        "createdAt":      { "type": "datetime", "system": true },
+        "validAt":        { "type": "datetime", "system": true },
+        "jurisdictionId": { "type": "string" },
+        "claimIds":       { "type": "array", "items": "string" }
+      }
+    },
+
+    "IN_CATEGORY": {
+      "extractable": false,
+      "from": "Product",
+      "to": "ProductCategory",
+      "searchFields": [],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "HAS_REGULATORY_STATUS": {
+      "extractable": false,
+      "from": "Product",
+      "to": "RegulatoryStatus",
+      "searchFields": ["status", "effectiveDate", "statusDetails"],
+      "properties": {
+        "createdAt":     { "type": "datetime", "system": true },
+        "validAt":       { "type": "datetime", "system": true },
+        "status":        { "type": "string" },
+        "effectiveDate": { "type": "datetime" },
+        "statusDetails": { "type": "string" },
+        "claimIds":      { "type": "array", "items": "string" }
+      }
+    },
+
+    "INCLUDES_LABTEST": {
+      "extractable": false,
+      "from": "PanelDefinition",
+      "to": "LabTest",
+      "searchFields": ["notes"],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "required":  { "type": "bool" },
+        "quantity":  { "type": "int" },
+        "notes":     { "type": "string" },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "INCLUDES_BIOMARKER": {
+      "extractable": false,
+      "from": "PanelDefinition",
+      "to": "Biomarker",
+      "searchFields": [],
+      "properties": {
+        "createdAt": { "type": "datetime", "system": true },
+        "validAt":   { "type": "datetime", "system": true },
+        "claimIds":  { "type": "array", "items": "string" }
+      }
+    }
+  }
+}

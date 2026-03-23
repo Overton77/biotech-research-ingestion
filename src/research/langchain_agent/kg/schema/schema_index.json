@@ -1,0 +1,110 @@
+[
+  {
+    "chunk_id": "organization",
+    "label": "Organization",
+    "description": "Company, nonprofit, manufacturer, clinic, or any organizational entity. Use when the report mentions a company, brand, or institution.",
+    "keywords": [
+      "company",
+      "organization",
+      "brand",
+      "manufacturer",
+      "founded",
+      "hq",
+      "employees",
+      "revenue"
+    ],
+    "node_labels": [
+      "Organization",
+      "PhysicalLocation",
+      "Listing",
+      "ManufacturingProcess",
+      "TechnologyPlatform"
+    ],
+    "relationship_types": [
+      "HAS_LOCATION",
+      "OWNS_OR_CONTROLS",
+      "LISTS",
+      "OFFERS_PRODUCT",
+      "SUPPLIES_COMPOUND_FORM",
+      "MANUFACTURES",
+      "EMPLOYS",
+      "FOUNDED_BY",
+      "HAS_BOARD_MEMBER",
+      "HAS_SCIENTIFIC_ADVISOR",
+      "HAS_EXECUTIVE_ROLE"
+    ]
+  },
+  {
+    "chunk_id": "person",
+    "label": "Person",
+    "description": "Named individual — executive, founder, scientist, advisor. Use when the report names specific people with roles or credentials.",
+    "keywords": [
+      "founder",
+      "CEO",
+      "scientist",
+      "advisor",
+      "team",
+      "leadership",
+      "person",
+      "doctor",
+      "PhD",
+      "MD"
+    ],
+    "node_labels": ["Person"],
+    "relationship_types": [
+      "EMPLOYS",
+      "FOUNDED_BY",
+      "HAS_BOARD_MEMBER",
+      "HAS_SCIENTIFIC_ADVISOR",
+      "HAS_EXECUTIVE_ROLE"
+    ]
+  },
+  {
+    "chunk_id": "product",
+    "label": "Product",
+    "description": "Supplement, device, diagnostic, or service product. Use when the report lists products with names, ingredients, prices, or specs.",
+    "keywords": [
+      "supplement",
+      "product",
+      "capsule",
+      "dose",
+      "ingredient",
+      "price",
+      "SKU",
+      "catalog",
+      "formulation"
+    ],
+    "node_labels": [
+      "Product",
+      "CompoundForm",
+      "ProductCategory",
+      "RegulatoryStatus",
+      "RegulatoryPathway"
+    ],
+    "relationship_types": [
+      "OFFERS_PRODUCT",
+      "CONTAINS_COMPOUND_FORM",
+      "CONTAINS_COMPOUND",
+      "IN_CATEGORY",
+      "FOLLOWS_PATHWAY",
+      "HAS_REGULATORY_STATUS"
+    ]
+  },
+  {
+    "chunk_id": "labtest",
+    "label": "LabTest / PanelDefinition",
+    "description": "Diagnostic lab test, biomarker panel, or specimen. Use when the report covers diagnostic products or test panels.",
+    "keywords": [
+      "lab test",
+      "biomarker",
+      "panel",
+      "diagnostic",
+      "LOINC",
+      "CPT",
+      "specimen",
+      "blood draw"
+    ],
+    "node_labels": ["LabTest", "PanelDefinition", "Biomarker", "Specimen"],
+    "relationship_types": ["DELIVERS_LAB_TEST", "IMPLEMENTS_PANEL", "INCLUDES_LABTEST", "INCLUDES_BIOMARKER"]
+  }
+]

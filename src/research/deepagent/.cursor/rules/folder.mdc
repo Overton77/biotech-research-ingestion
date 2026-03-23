@@ -1,0 +1,8 @@
+---
+globs: src/research/deepagent/**
+alwaysApply: false
+---
+
+---
+
+In this directory we are creating the biotech entities and general deep research agents with langchain deepagents and the langchain ecosystem.

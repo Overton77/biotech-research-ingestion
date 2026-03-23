@@ -20,7 +20,6 @@ from src.agents.tools.utils.tavily_functions import (
 
 
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
-from typing import Optional, Set
 
 def _normalize_url_for_dedupe(
     url: str,
@@ -152,13 +151,21 @@ async def tavily_search(
         "Max results to return (1–20). Higher increases recall but adds noise + tokens."
     ] = 10,
     search_depth: Annotated[
-        Literal["basic", "advanced"],
-        "basic=faster/cheaper; advanced=better relevance + more evidence snippets per source."
+        Literal["basic", "advanced", "fast", "ultra-fast"],
+        "ultra-fast/fast lower latency; basic balanced; advanced highest relevance (higher cost)."
     ] = "advanced",
     topic: Annotated[
         Optional[Literal["general", "news", "finance"]],
         "Retrieval category hint. Use 'news' for recent coverage, 'finance' for market/earnings context."
     ] = "general",
+    time_range: Annotated[
+        Optional[Literal["day", "week", "month", "year"]],
+        "Relative recency filter. Prefer this or start_date/end_date for news-style queries."
+    ] = None,
+    country: Annotated[
+        Optional[str],
+        "Boost results toward a country (e.g. 'united states')."
+    ] = None,
     include_images: Annotated[
         bool,
         "Include image URLs (usually unnecessary for validation)."
@@ -190,18 +197,21 @@ async def tavily_search(
         max_results=max_results,
         search_depth=search_depth,
         topic=topic,
+        time_range=time_range,
         include_images=include_images,
         include_raw_content=include_raw_content,
         include_domains=include_domains,
         exclude_domains=exclude_domains,
         start_date=start_date,
         end_date=end_date,
+        country=country,
     )   
 
     formatted = format_tavily_search_response(
         search_results,
         max_results=max_results,
-        max_content_chars=1200,  
+        max_content_chars=1200,
+        query_hint=query,
     )
 
     
@@ -319,26 +329,42 @@ async def tavily_map(
         bool,
         "Drop ?query strings during dedupe. NOT recommended for ecommerce (variants/SKUs may be encoded in query params)."
     ] = False,
+    select_paths: Annotated[
+        Optional[List[str]],
+        "Optional regex list to include only matching URL paths (e.g. ['/products/.*', '/docs/.*'])."
+    ] = None,
+    exclude_paths: Annotated[
+        Optional[List[str]],
+        "Optional regex list to exclude paths (e.g. ['/blog/.*', '/careers/.*'])."
+    ] = None,
+    allow_external: Annotated[
+        Optional[bool],
+        "False = stay on-site discovery; None = Tavily default for map."
+    ] = None,
 ) -> str:
-        map_results = await _tavily_map_fn(
+    map_results = await _tavily_map_fn(
         client=async_tavily_client,
         url=url,
         instructions=instructions,
         max_depth=max_depth,
         max_breadth=max_breadth,
         limit=limit,
+        select_paths=select_paths,
+        exclude_paths=exclude_paths,
+        allow_external=allow_external,
     )
 
-   
+    raw_urls: list[str] = list(map_results.get("results", []) or [])
+    if dedupe:
+        raw_urls = dedupe_urls(
+            raw_urls,
+            drop_fragment=drop_fragment,
+            drop_query=drop_query,
+        )
+    if max_return_urls is not None and max_return_urls >= 0:
+        raw_urls = raw_urls[:max_return_urls]
 
-
-        urls: list[str] = (map_results.get("results", []) or []) 
-
-    
-    
-
-   
-        return format_tavily_map_response(map_results, urls_override=urls)
+    return format_tavily_map_response(map_results, urls_override=raw_urls)
 
 
 
@@ -346,7 +372,7 @@ async def tavily_map(
 @tool(
     description=(
         "Crawl a website starting from a root URL using Tavily Crawl. "
-        "Returns either a formatted raw crawl output, or a summarized output if your runtime supports summarization-with-citations."
+        "Returns either a formatted raw crawl output, or a summarized output if your runtime supports summarization-with-citations." 
     ),
     parse_docstring=False,
 )

@@ -57,7 +57,8 @@ def _plan_to_dict(p: ResearchPlan) -> dict:
         "title": p.title,
         "objective": p.objective,
         "stages": p.stages,
-        "tasks": [t.model_dump() for t in p.tasks],
+        "tasks": [t.model_dump(mode="json") for t in p.tasks],
+        "starter_sources": [s.model_dump(mode="json") for s in p.starter_sources],
         "status": p.status,
         "created_at": p.created_at.isoformat(),
         "updated_at": p.updated_at.isoformat(),
@@ -74,6 +75,7 @@ class PlanPatch(BaseModel):
     objective: str | None = None
     stages: list[str] | None = None
     tasks: list[dict] | None = None
+    starter_sources: list[dict] | None = None
     status: str | None = None
 
 
@@ -111,6 +113,9 @@ async def update_plan(plan_id: str, body: PlanPatch) -> dict:
     if body.tasks is not None:
         from src.models.plan import ResearchTask
         plan.tasks = [ResearchTask.model_validate(t) for t in body.tasks]
+    if body.starter_sources is not None:
+        from src.models.plan import StarterSource
+        plan.starter_sources = [StarterSource.model_validate(s) for s in body.starter_sources]
     if body.status is not None:
         plan.status = body.status
     plan.updated_at = datetime.utcnow()
