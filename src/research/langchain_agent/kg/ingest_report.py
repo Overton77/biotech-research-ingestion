@@ -165,6 +165,20 @@ async def _run(args: argparse.Namespace) -> None:
             print(f"\n[ingest_report] Extraction JSON written to: {out}")
         return
 
+    # Parse research_date if provided
+    from datetime import datetime as dt, timezone as tz
+    research_date = None
+    if args.research_date:
+        research_date = dt.fromisoformat(args.research_date).replace(tzinfo=tz.utc)
+
+    temporal_scope = None
+    if args.temporal_scope:
+        from src.research.langchain_agent.kg.extraction_models import TemporalScope
+        temporal_scope = TemporalScope(
+            mode=args.temporal_scope,
+            description=f"Temporal scope: {args.temporal_scope}",
+        )
+
     # Full run — connect to Neo4j and write
     settings = Neo4jAuraSettings.from_env()
     async with Neo4jAuraClient(settings) as client:
@@ -176,13 +190,17 @@ async def _run(args: argparse.Namespace) -> None:
             neo4j_client=client,
             context=args.context or "",
             schema_index=schema_index,
+            research_date=research_date,
+            temporal_scope=temporal_scope,
         )
 
-    print("\n[ingest_report] Ingestion complete.")
+    print("\n[ingest_report] Ingestion complete (bitemporal mode).")
     print(f"  Chunks used:      {result['chunks_used']}")
     print(f"  Total nodes:      {result['total_nodes']}")
     print(f"  Rels written:     {result['total_rels_written']}")
     print(f"  Rels skipped:     {result['total_rels_skipped']}")
+    print(f"  States created:   {result.get('states_created', 0)}")
+    print(f"  States skipped:   {result.get('states_skipped', 0)}")
     counts = result.get("node_counts", {})
     if counts:
         print(
@@ -244,6 +262,18 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default="",
         metavar="PATH",
         help="If set, write the KGExtractionResult as JSON to this path.",
+    )
+    parser.add_argument(
+        "--research_date",
+        default="",
+        metavar="YYYY-MM-DD",
+        help="ISO date when the research is considered current (validFrom default). Defaults to today.",
+    )
+    parser.add_argument(
+        "--temporal_scope",
+        default="",
+        choices=["", "current", "as_of_date", "date_range", "unknown"],
+        help="Temporal scope mode for this ingestion run.",
     )
     parser.add_argument(
         "--log_level",

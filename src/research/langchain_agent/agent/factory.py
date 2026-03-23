@@ -150,8 +150,6 @@ def _create_research_prompt_middleware(
 ):
     """Build a dynamic_prompt middleware using the given prompt_spec and reminders."""
 
-    base_prompt = prompt_spec.render_base_prompt()
-
     @dynamic_prompt
     def research_prompt_fragment(request: ModelRequest) -> str:
         state = request.state
@@ -169,6 +167,13 @@ def _create_research_prompt_middleware(
         max_step_budget = state.get("max_step_budget", 12)
         final_report_ready = state.get("final_report_ready", False)
         report_required_sections = state.get("report_required_sections", []) or []
+
+        current_date = state.get("current_date", "")
+        research_date = state.get("research_date", "")
+        temporal_scope_mode = state.get("temporal_scope_mode", "current")
+        temporal_scope_description = state.get("temporal_scope_description", "")
+
+        base_prompt = prompt_spec.render_base_prompt(current_date=current_date or None)
 
         semantic_memories = state.get("semantic_memories", "") or "Semantic:\n- none"
         episodic_memories = state.get("episodic_memories", "") or "Episodic:\n- none"
@@ -189,6 +194,17 @@ def _create_research_prompt_middleware(
             f"- report_path: {report_path}",
             f"- final_report_ready: {final_report_ready}",
         ]
+
+        if current_date or research_date or temporal_scope_mode != "current":
+            lines.append("")
+            lines.append("Temporal context:")
+            if current_date:
+                lines.append(f"- current_date: {current_date}")
+            if research_date:
+                lines.append(f"- research_date: {research_date}")
+            lines.append(f"- temporal_scope: {temporal_scope_mode}")
+            if temporal_scope_description:
+                lines.append(f"- temporal_note: {temporal_scope_description}")
 
         if official_domains:
             lines.append(f"- official_domains: {', '.join(official_domains)}")

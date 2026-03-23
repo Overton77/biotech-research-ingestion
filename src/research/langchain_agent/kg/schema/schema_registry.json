@@ -1,15 +1,18 @@
 {
-  "version": "1.0",
+  "version": "2.0",
+  "temporalModel": "bitemporal_identity_state",
+  "notes": "v2.0: identity/state separation with bitemporal HAS_STATE relationships. Identity nodes hold stable anchor properties. State nodes hold immutable descriptive snapshots.",
   "nodes": {
     "Organization": {
       "mergeKey": "organizationId",
       "extractable": true,
       "extractionClass": "ExtractedOrganization",
+      "stateLabel": "OrganizationState",
+      "identityProperties": ["organizationId", "name", "aliases"],
       "searchFields": ["name", "aliases", "description", "businessModel", "primaryIndustryTags"],
       "properties": {
         "organizationId":                  { "type": "string",  "format": "uuid", "system": true },
         "createdAt":                       { "type": "datetime", "system": true },
-        "validAt":                         { "type": "datetime", "system": true },
         "name":                            { "type": "string",  "required": true },
         "aliases":                         { "type": "array",   "items": "string" },
         "orgType":                         { "type": "string",  "default": "COMPANY" },
@@ -46,11 +49,12 @@
       "mergeKey": "personId",
       "extractable": true,
       "extractionClass": "ExtractedPerson",
+      "stateLabel": "PersonState",
+      "identityProperties": ["personId", "canonicalName"],
       "searchFields": ["canonicalName", "bio", "primaryDomain", "specialties", "expertiseTags"],
       "properties": {
         "personId":           { "type": "string",  "format": "uuid", "system": true },
         "createdAt":          { "type": "datetime", "system": true },
-        "validAt":            { "type": "datetime", "system": true },
         "canonicalName":      { "type": "string",  "required": true },
         "givenName":          { "type": "string" },
         "familyName":         { "type": "string" },
@@ -84,11 +88,12 @@
       "mergeKey": "productId",
       "extractable": true,
       "extractionClass": "ExtractedProduct",
+      "stateLabel": "ProductState",
+      "identityProperties": ["productId", "name", "synonyms"],
       "searchFields": ["name", "synonyms", "brandName", "intendedUse", "description"],
       "properties": {
         "productId":          { "type": "string",  "format": "uuid", "system": true },
         "createdAt":          { "type": "datetime", "system": true },
-        "validAt":            { "type": "datetime", "system": true },
         "name":               { "type": "string",  "required": true },
         "synonyms":           { "type": "array",   "items": "string" },
         "productDomain":      { "type": "string",  "default": "SUPPLEMENT" },
@@ -110,11 +115,12 @@
       "mergeKey": "compoundFormId",
       "extractable": false,
       "extractionNote": "Extracted via denormalized ExtractedCompoundIngredient (CompoundForm properties + CONTAINS_COMPOUND_FORM relationship).",
+      "stateLabel": "CompoundFormState",
+      "identityProperties": ["compoundFormId", "canonicalName"],
       "searchFields": ["canonicalName", "formType", "chemicalDifferences", "bioavailabilityNotes"],
       "properties": {
         "compoundFormId":          { "type": "string",  "format": "uuid", "system": true },
         "createdAt":               { "type": "datetime", "system": true },
-        "validAt":                 { "type": "datetime", "system": true },
         "canonicalName":           { "type": "string",  "required": true },
         "formType":                { "type": "string" },
         "chemicalDifferences":     { "type": "string" },
@@ -302,7 +308,10 @@
       "searchFields": ["roleTitle", "department", "roleFunction", "seniority", "employmentType"],
       "properties": {
         "createdAt":      { "type": "datetime", "system": true },
-        "validAt":        { "type": "datetime", "system": true },
+        "validFrom":      { "type": "datetime", "system": true },
+        "validTo":        { "type": "datetime", "system": true },
+        "recordedFrom":   { "type": "datetime", "system": true },
+        "recordedTo":     { "type": "datetime", "system": true },
         "roleTitle":      { "type": "string" },
         "department":     { "type": "string" },
         "roleFunction":   { "type": "string" },
@@ -691,6 +700,114 @@
         "createdAt": { "type": "datetime", "system": true },
         "validAt":   { "type": "datetime", "system": true },
         "claimIds":  { "type": "array", "items": "string" }
+      }
+    },
+
+    "HAS_STATE": {
+      "extractable": false,
+      "note": "Bitemporal attachment between identity and state nodes. System-managed — not directly extracted by LLM.",
+      "from": "_IdentityNode",
+      "to": "_StateNode",
+      "searchFields": [],
+      "properties": {
+        "createdAt":    { "type": "datetime", "system": true },
+        "validFrom":    { "type": "datetime", "system": true, "note": "When the state became true in the domain." },
+        "validTo":      { "type": "datetime", "system": true, "note": "When the state ceased being true. Null = active." },
+        "recordedFrom": { "type": "datetime", "system": true, "note": "When the system learned/stored this state." },
+        "recordedTo":   { "type": "datetime", "system": true, "note": "When the system stopped believing this. Null = current belief." }
+      }
+    }
+  },
+
+  "stateNodes": {
+    "OrganizationState": {
+      "mergeKey": "stateId",
+      "parentLabel": "Organization",
+      "note": "Immutable snapshot of Organization descriptive properties.",
+      "properties": {
+        "stateId":              { "type": "string",  "format": "uuid", "system": true },
+        "stateHash":            { "type": "string",  "system": true, "note": "SHA-256 of normalized state properties for change detection." },
+        "sourceReport":         { "type": "string",  "system": true },
+        "createdAt":            { "type": "datetime", "system": true },
+        "orgType":              { "type": "string" },
+        "businessModel":        { "type": "string" },
+        "description":          { "type": "string" },
+        "legalName":            { "type": "string" },
+        "websiteUrl":           { "type": "string" },
+        "primaryIndustryTags":  { "type": "array",   "items": "string" },
+        "regionsServed":        { "type": "array",   "items": "string" },
+        "headquartersCity":     { "type": "string" },
+        "headquartersCountry":  { "type": "string" },
+        "searchText":           { "type": "string",  "system": true },
+        "searchFields":         { "type": "array",   "items": "string", "system": true },
+        "embedding":            { "type": "array",   "items": "float", "system": true },
+        "embeddingModel":       { "type": "string",  "system": true },
+        "embeddingDimensions":  { "type": "int",     "system": true }
+      }
+    },
+    "PersonState": {
+      "mergeKey": "stateId",
+      "parentLabel": "Person",
+      "note": "Immutable snapshot of Person descriptive properties.",
+      "properties": {
+        "stateId":           { "type": "string",  "format": "uuid", "system": true },
+        "stateHash":         { "type": "string",  "system": true },
+        "sourceReport":      { "type": "string",  "system": true },
+        "createdAt":         { "type": "datetime", "system": true },
+        "givenName":         { "type": "string" },
+        "familyName":        { "type": "string" },
+        "honorific":         { "type": "string" },
+        "degrees":           { "type": "array",   "items": "string" },
+        "bio":               { "type": "string" },
+        "primaryDomain":     { "type": "string" },
+        "specialties":       { "type": "array",   "items": "string" },
+        "expertiseTags":     { "type": "array",   "items": "string" },
+        "linkedinUrl":       { "type": "string" },
+        "searchText":        { "type": "string",  "system": true },
+        "searchFields":      { "type": "array",   "items": "string", "system": true },
+        "embedding":         { "type": "array",   "items": "float", "system": true },
+        "embeddingModel":    { "type": "string",  "system": true },
+        "embeddingDimensions": { "type": "int",   "system": true }
+      }
+    },
+    "ProductState": {
+      "mergeKey": "stateId",
+      "parentLabel": "Product",
+      "note": "Immutable snapshot of Product descriptive properties.",
+      "properties": {
+        "stateId":            { "type": "string",  "format": "uuid", "system": true },
+        "stateHash":          { "type": "string",  "system": true },
+        "sourceReport":       { "type": "string",  "system": true },
+        "createdAt":          { "type": "datetime", "system": true },
+        "brandName":          { "type": "string" },
+        "productDomain":      { "type": "string" },
+        "productType":        { "type": "string" },
+        "description":        { "type": "string" },
+        "intendedUse":        { "type": "string" },
+        "priceAmount":        { "type": "float" },
+        "currency":           { "type": "string" },
+        "searchText":         { "type": "string",  "system": true },
+        "searchFields":       { "type": "array",   "items": "string", "system": true },
+        "embedding":          { "type": "array",   "items": "float", "system": true },
+        "embeddingModel":     { "type": "string",  "system": true },
+        "embeddingDimensions": { "type": "int",    "system": true }
+      }
+    },
+    "CompoundFormState": {
+      "mergeKey": "stateId",
+      "parentLabel": "CompoundForm",
+      "note": "Immutable snapshot of CompoundForm descriptive properties.",
+      "properties": {
+        "stateId":            { "type": "string",  "format": "uuid", "system": true },
+        "stateHash":          { "type": "string",  "system": true },
+        "sourceReport":       { "type": "string",  "system": true },
+        "createdAt":          { "type": "datetime", "system": true },
+        "formType":           { "type": "string" },
+        "searchText":         { "type": "string",  "system": true },
+        "searchFields":       { "type": "array",   "items": "string", "system": true },
+        "embedding":          { "type": "array",   "items": "float", "system": true },
+        "embeddingModel":     { "type": "string",  "system": true },
+        "embeddingDimensions": { "type": "int",    "system": true }
       }
     }
   }

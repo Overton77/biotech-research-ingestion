@@ -10,12 +10,18 @@ Ties together:
 
 Callable from run_mission.py as a post-step or from ingest_report.py as a
 standalone CLI run.
+
+Temporal context flows through the entire pipeline:
+  - IngestionTemporalContext is built from the caller's parameters.
+  - The extraction agent receives current_date and temporal_scope.
+  - The neo4j_writer uses temporal context for bitemporal properties.
 """
 
 from __future__ import annotations
 
 import asyncio
 import logging
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -23,7 +29,11 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
 from src.research.langchain_agent.kg.embedder import DEFAULT_EMBEDDING_DIMENSIONS, DEFAULT_EMBEDDING_MODEL, embed_batch
 from src.research.langchain_agent.kg.extractor import build_extraction_agent, extract_kg_entities
-from src.research.langchain_agent.kg.extraction_models import KGExtractionResult
+from src.research.langchain_agent.kg.extraction_models import (
+    IngestionTemporalContext,
+    KGExtractionResult,
+    TemporalScope,
+)
 from src.research.langchain_agent.kg.neo4j_writer import write_extraction_to_neo4j
 from src.research.langchain_agent.kg.schema_selector import (
     build_schema_selector_agent,
@@ -109,7 +119,7 @@ async def _build_search_texts(
 ) -> dict[str, str]:
     """
     Generate searchText for every node.  LLM nodes run concurrently.
-    Returns a map: node_key → searchText string.
+    Returns a map: node_key -> searchText string.
     """
     llm_tasks: dict[str, asyncio.Task] = {}
     concat_results: dict[str, str] = {}
@@ -161,17 +171,20 @@ async def run_kg_ingestion(
     schema_index: list[dict] | None = None,
     schema_root: Path | None = None,
     context: str = "",
+    # Temporal parameters
+    research_date: datetime | None = None,
+    temporal_scope: TemporalScope | None = None,
 ) -> dict[str, Any]:
     """
     Run the full KG ingestion pipeline for a single research report.
 
     Steps:
-        1. Schema selection  — lightweight LLM picks relevant schema chunks.
-        2. Schema loading    — selected .md files are read from disk.
-        3. Entity extraction — extraction agent produces KGExtractionResult.
-        4. searchText gen    — LLM for Org/Person/Product; field-concat for rest.
-        5. Batch embed       — one OpenAI embedding call for all searchTexts.
-        6. Neo4j write       — MERGE nodes and relationships.
+        1. Schema selection  -- lightweight LLM picks relevant schema chunks.
+        2. Schema loading    -- selected chunks build extraction contract.
+        3. Entity extraction -- extraction agent produces KGExtractionResult.
+        4. searchText gen    -- LLM for Org/Person/Product; field-concat for rest.
+        5. Batch embed       -- one OpenAI embedding call for all searchTexts.
+        6. Neo4j write       -- identity/state nodes + temporal relationships.
 
     Args:
         report_text:     Full text of the final research report.
@@ -179,18 +192,30 @@ async def run_kg_ingestion(
         targets:         Entity/domain targets (e.g. ["Elysium Health"]).
         stage_type:      Stage type string (e.g. "targeted_extraction").
         neo4j_client:    Connected Neo4jAuraClient.
-        selector_llm:    Override the schema-selector LLM (default: gpt-4o-mini).
-        extraction_llm:  Override the extraction LLM (default: gpt-4o).
-        searchtext_llm:  Override the searchText LLM (default: gpt-4o-mini).
+        selector_llm:    Override the schema-selector LLM.
+        extraction_llm:  Override the extraction LLM.
+        searchtext_llm:  Override the searchText LLM.
         embedder:        Override the OpenAIEmbeddings instance.
         schema_index:    Pre-loaded schema index (default: loads from disk).
         schema_root:     Base path for resolving schema .md files.
         context:         Optional mission context string for searchText grounding.
+        research_date:   When the research is considered current (validFrom default).
+        temporal_scope:  Temporal scope configuration for this research.
 
     Returns:
         Dict with keys: extraction, chunks_used, node_counts, total_nodes,
-        total_rels_written, total_rels_skipped.
+        total_rels_written, total_rels_skipped, states_created, states_skipped.
     """
+    ingestion_time = datetime.now(timezone.utc)
+    scope = temporal_scope or TemporalScope()
+
+    temporal_ctx = IngestionTemporalContext(
+        research_date=research_date or ingestion_time,
+        ingestion_time=ingestion_time,
+        temporal_scope=scope,
+        source_report=source_report,
+    )
+
     # Build agents once -------------------------------------------------------
     sel_llm = selector_llm or build_selector_llm()
     ext_llm = extraction_llm or build_extraction_llm()
@@ -223,11 +248,14 @@ async def run_kg_ingestion(
 
     # Step 3: Entity extraction -----------------------------------------------
     logger.info("[kg_ingestion] Step 3: entity extraction")
+    current_date_str = (research_date or ingestion_time).strftime("%Y-%m-%d")
     extraction: KGExtractionResult = await extract_kg_entities(
         report_text=report_text,
         selected_schema_text=selected_schema_text,
         agent=extraction_agent,
         source_report=source_report,
+        current_date=current_date_str,
+        temporal_scope_description=scope.description,
     )
 
     # Step 4: searchText generation -------------------------------------------
@@ -243,19 +271,18 @@ async def run_kg_ingestion(
 
     embeddings_list = await embed_batch(texts_to_embed, embedder=emb)
 
-    # Build the combined embeddings map expected by write_extraction_to_neo4j
-    # Keys: "node_key" for embedding, "searchtext:node_key" for the text
     node_embeddings: dict[str, Any] = {}
     for node_key, embedding in zip(node_keys, embeddings_list):
         node_embeddings[node_key] = embedding
         node_embeddings[f"searchtext:{node_key}"] = search_texts[node_key]
 
     # Step 6: Neo4j write -----------------------------------------------------
-    logger.info("[kg_ingestion] Step 6: writing to Neo4j")
+    logger.info("[kg_ingestion] Step 6: writing to Neo4j (bitemporal mode)")
     counts = await write_extraction_to_neo4j(
         client=neo4j_client,
         extraction=extraction,
         node_embeddings=node_embeddings,
+        temporal_ctx=temporal_ctx,
     )
 
     total_nodes = (
@@ -266,10 +293,13 @@ async def run_kg_ingestion(
     )
 
     logger.info(
-        "[kg_ingestion] Done. nodes=%d, rels_written=%d, rels_skipped=%d",
+        "[kg_ingestion] Done. nodes=%d, rels_written=%d, rels_skipped=%d, "
+        "states_created=%d, states_skipped=%d",
         total_nodes,
         counts["rels_written"],
         counts["rels_skipped"],
+        counts["states_created"],
+        counts["states_skipped"],
     )
 
     return {
@@ -279,4 +309,6 @@ async def run_kg_ingestion(
         "total_nodes": total_nodes,
         "total_rels_written": counts["rels_written"],
         "total_rels_skipped": counts["rels_skipped"],
+        "states_created": counts["states_created"],
+        "states_skipped": counts["states_skipped"],
     }

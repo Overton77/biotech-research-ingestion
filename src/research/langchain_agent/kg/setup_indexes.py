@@ -65,7 +65,7 @@ def _fulltext_index_cypher(
 
 
 async def _setup(dry_run: bool = False) -> None:
-    from src.test_runs.neo4j_aura import Neo4jAuraClient, Neo4jAuraSettings
+    from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient, Neo4jAuraSettings
 
     settings = Neo4jAuraSettings.from_env()
 

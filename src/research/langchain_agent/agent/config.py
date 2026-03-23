@@ -8,6 +8,7 @@ from __future__ import annotations
 import asyncio
 import json
 from dataclasses import dataclass, field
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Sequence
 
@@ -17,6 +18,7 @@ from pydantic import BaseModel, Field, field_validator
 from langchain.agents import AgentState
 from langchain.tools import BaseTool
 
+from src.research.langchain_agent.kg.extraction_models import TemporalScope
 from src.research.langchain_agent.tools_for_test.tavily_tools import (
     search_web,
     extract_from_urls,
@@ -101,6 +103,19 @@ class MissionSliceInput(BaseModel):
 
     max_step_budget: int = 12
 
+    # --- Temporal configuration ---
+    temporal_scope: TemporalScope = Field(
+        default_factory=TemporalScope,
+        description="Temporal scope for this research stage. Defaults to 'current'.",
+    )
+    research_date: Optional[str] = Field(
+        default=None,
+        description=(
+            "ISO date (YYYY-MM-DD) of when the research is considered current. "
+            "Defaults to today if not set. Used as validFrom for ingested facts."
+        ),
+    )
+
     @field_validator("selected_tool_names")
     @classmethod
     def validate_tool_names(cls, value: List[str]) -> List[str]:
@@ -108,6 +123,16 @@ class MissionSliceInput(BaseModel):
         if unknown:
             raise ValueError(f"Unknown tool names: {unknown}")
         return value
+
+    @property
+    def effective_research_date(self) -> str:
+        """Return the research_date or today's date as ISO string."""
+        return self.research_date or date.today().isoformat()
+
+    @property
+    def effective_current_date(self) -> str:
+        """Return today's date as ISO string (always real wall-clock date)."""
+        return date.today().isoformat()
 
 
 class RunPathsInput(BaseModel):
@@ -225,12 +250,17 @@ class ResearchPromptSpec:
         ]
     )
 
-    def render_base_prompt(self) -> str:
+    def render_base_prompt(self, *, current_date: str | None = None) -> str:
+        effective_date = current_date or date.today().isoformat()
         lines: List[str] = [
             self.agent_identity,
             "",
+            f"Today's date: {effective_date}",
+            "",
             "Your job is to complete one bounded biotech research stage or sub-stage.",
             "You MUST produce a well-structured markdown report with specific section headers.",
+            "Always be explicit about temporal context: when citing facts, note the date or",
+            "time frame they apply to (e.g. 'as of March 2026', 'since 2023', 'formerly').",
             "",
             "Domain scope:",
         ]
@@ -322,6 +352,12 @@ class BiotechResearchAgentState(AgentState):
     written_file_paths: List[str]
     edited_file_paths: List[str]
 
+    # Temporal context
+    current_date: str
+    research_date: str
+    temporal_scope_mode: str
+    temporal_scope_description: str
+
 
 def build_run_paths(task_slug: str) -> RunPathsInput:
     return RunPathsInput(
@@ -367,6 +403,11 @@ def input_to_agent_state(run_input: MissionSliceInput) -> Dict[str, Any]:
         "read_file_paths": [],
         "written_file_paths": [],
         "edited_file_paths": [],
+        # Temporal context
+        "current_date": run_input.effective_current_date,
+        "research_date": run_input.effective_research_date,
+        "temporal_scope_mode": run_input.temporal_scope.mode,
+        "temporal_scope_description": run_input.temporal_scope.description,
     }
 
 

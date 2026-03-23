@@ -197,8 +197,15 @@ def write_graph_state_snapshots(
 
 
 def _build_user_message(run_input: MissionSliceInput) -> str:
-    """Build the initial user message; include dependency reports and report template."""
+    """Build the initial user message; include dependency reports, temporal context, and report template."""
     parts = []
+
+    # Temporal context header
+    parts.append(f"Current date: {run_input.effective_current_date}")
+    parts.append(f"Research date: {run_input.effective_research_date}")
+    if run_input.temporal_scope.mode != "current":
+        parts.append(f"Temporal scope: {run_input.temporal_scope.mode} — {run_input.temporal_scope.description}")
+    parts.append("")
 
     if run_input.dependency_reports:
         parts.append("Reports from prior stages (use for context):")
@@ -215,6 +222,12 @@ def _build_user_message(run_input: MissionSliceInput) -> str:
         parts.append("")
 
     parts.append(run_input.user_objective)
+    parts.append("")
+    parts.append(
+        "IMPORTANT: When reporting facts, be explicit about temporal context. "
+        "State when facts were verified, note dates for roles/positions, and "
+        "flag anything that may be outdated or time-sensitive."
+    )
 
     if run_input.report_required_sections:
         parts.append("")

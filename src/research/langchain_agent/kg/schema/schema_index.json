@@ -15,12 +15,14 @@
     ],
     "node_labels": [
       "Organization",
+      "OrganizationState",
       "PhysicalLocation",
       "Listing",
       "ManufacturingProcess",
       "TechnologyPlatform"
     ],
     "relationship_types": [
+      "HAS_STATE",
       "HAS_LOCATION",
       "OWNS_OR_CONTROLS",
       "LISTS",
@@ -50,8 +52,9 @@
       "PhD",
       "MD"
     ],
-    "node_labels": ["Person"],
+    "node_labels": ["Person", "PersonState"],
     "relationship_types": [
+      "HAS_STATE",
       "EMPLOYS",
       "FOUNDED_BY",
       "HAS_BOARD_MEMBER",
@@ -76,12 +79,15 @@
     ],
     "node_labels": [
       "Product",
+      "ProductState",
       "CompoundForm",
+      "CompoundFormState",
       "ProductCategory",
       "RegulatoryStatus",
       "RegulatoryPathway"
     ],
     "relationship_types": [
+      "HAS_STATE",
       "OFFERS_PRODUCT",
       "CONTAINS_COMPOUND_FORM",
       "CONTAINS_COMPOUND",
