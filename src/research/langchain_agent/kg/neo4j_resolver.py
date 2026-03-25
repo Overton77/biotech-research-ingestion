@@ -14,7 +14,8 @@ Why this stops duplicates:
 
 Fulltext index names must match what setup_indexes.py creates:
   organization_fulltext_idx, person_fulltext_idx,
-  product_fulltext_idx, compound_form_fulltext_idx
+  product_fulltext_idx, compound_form_fulltext_idx,
+  lab_test_fulltext_idx, panel_definition_fulltext_idx
 """
 
 from __future__ import annotations
@@ -183,4 +184,30 @@ async def resolve_compound_form_id(
         name_property="canonicalName",
         id_property="compoundFormId",
         fulltext_index="compound_form_fulltext_idx",
+    )
+
+
+async def resolve_lab_test_id(
+    client: Neo4jAuraClient, name: str
+) -> str | None:
+    return await resolve_node_id(
+        client=client,
+        label="LabTest",
+        name=name,
+        name_property="name",
+        id_property="labTestId",
+        fulltext_index="lab_test_fulltext_idx",
+    )
+
+
+async def resolve_panel_definition_id(
+    client: Neo4jAuraClient, canonical_name: str
+) -> str | None:
+    return await resolve_node_id(
+        client=client,
+        label="PanelDefinition",
+        name=canonical_name,
+        name_property="canonicalName",
+        id_property="panelDefinitionId",
+        fulltext_index="panel_definition_fulltext_idx",
     )

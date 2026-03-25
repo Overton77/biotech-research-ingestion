@@ -1,242 +1,311 @@
-Meta: request_id=6d93ad46-cafc-4a97-ad86-8a27239a75fb, response_time_s=15.59
+Meta: request_id=e2f7cd65-5661-477a-aaab-825af4bb9efc, response_time_s=0.01
 
 === Extracted Web Content ===
 [Result 1]
-Title: ![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-URL: https://drinkag1.com/suppfacts-ag1
+Title: [Skip to content](MainContent)
+URL: https://shop.trudiagnostic.com/products/truage-truhealth
 Content:
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+[Skip to content](#MainContent)
 
-50,000+ verified 5-star reviews for AG1 products
+* + [Shop All](/collections/shopfront)
+  + [About TruAge](https://www.trudiagnostic.com/truage)
+  + [About TruHealth](https://www.trudiagnostic.com/truhealth)
 
-All About AG1
+  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
 
-AG1 is the Daily Health Drink that combines a multivitamin, pre- and probiotics, and a blend of superfoods into one powerful serving. This makes your health routine easier by delivering what your body needs most–daily nutrients and gut health support.\*
+  [**TruHealth™ Test**](/products/truhealth)
 
-See Supplement Facts
+  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
+* + [Our Science](https://www.trudiagnostic.com/science)
+  + [Our Research](https://www.trudiagnostic.com/research)
+* + [Healthcare Providers](https://www.trudiagnostic.com/providers)
+  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
+  + [Lab Processing](https://www.trudiagnostic.com/lab)
+* [Login](https://portal.trudiagnostic.com/sign-in)
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/7e2b33aba84eac112b6769b29c04de6aae68468c-139x52.svg)
+* Our Tests 
 
-## Less supplements. More benefits.
+  [Shop Tests](/collections/shopfront)
 
-You’d need multiple supplements to nourish whole body health.\* One serving of AG1 replaces:
+  [About TruAge™](https://www.trudiagnostic.com/truage)
 
-![]()
+  [About TruHealth™](https://www.trudiagnostic.com/truhealth)
 
-## Less supplements. More benefits.
+  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
 
-You’d need multiple supplements to nourish whole body health.\* One serving of AG1 replaces:
+  [**TruHealth™ Test**](/products/truhealth)
 
-![]()
+  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
+* How It Works 
+  + [Our Science](https://www.trudiagnostic.com/science)
+  + [Our Research](https://www.trudiagnostic.com/research)
+* Partner with Us 
+  + [Healthcare Providers](https://www.trudiagnostic.com/providers)
+  + [Researchers](https://www.trudiagnostic.com/research-services)
+  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
+  + [Lab Processing](https://www.trudiagnostic.com/lab)
 
-## What AG1 is not
+[Login](https://portal.trudiagnostic.com/sign-in)   [Cart](/cart)
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/16154d7ccc1e764065e558d4af32832b8ed8cf7e-42x42.svg)
+# TruAge + TruHealth™
 
-### Protein Supplement
+48 reviews
 
-While AG1 contains pea protein to optimize digestive comfort, it does not replace a protein supplement.
+Measures +180 biomarkers, this kit tells you how fast you’re aging and how your nutritional and biological systems are performing.
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/16154d7ccc1e764065e558d4af32832b8ed8cf7e-42x42.svg)
+* 180+ Blood Biomarkers Analyzed
+* Biological Age Score (OMICmAge™)
+* 11 Organ Systems Age Scores
+* Pace of Aging (DunedinPACE™)
+* Nutrient & Vitamin Levels
+* Amino Acid & Antioxidant Levels
+* Metabolic & Energy Health
+* Inflammation & Immune Function
+* Toxin & Heavy Metal Exposure
+* Cardiovascular Health & Lipid Panel
+* Neurocognitive Health Markers
+* Stress & Oxidative Damage
+* Cellular Energy & NAD+
 
-### Meal Replacement
+HSA / FSA Accepted
 
-AG1 does not provide enough calories to skip a meal. It is designed to complement a healthy diet, not replace one.
+Comprehensive Testing
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/16154d7ccc1e764065e558d4af32832b8ed8cf7e-42x42.svg)
+Science from Harvard, Duke, & Yale
 
-### Green Juice
+Easy and Convenient
 
-AG1 provides nutrients from fruits and vegetables but removes excess sugar by using high quality extracts.
+\* Subscriptions are US only
 
-## Better ingredients are just the start of the journey
+HSA / FSA Accepted
 
-AG1 is made from 75 select ingredients that are optimized for impact and to help you build your nutritional foundation.
+---
 
-See Supplement Facts
+* 180+ Blood Biomarkers Analyzed
+* Biological Age Score (OMICmAge™)
+* 11 Organ Systems Age Scores
+* Pace of Aging (DunedinPACE™)
+* Nutrient & Vitamin Levels
+* Amino Acid & Antioxidant Levels
+* Metabolic & Energy Health
+* Inflammation & Immune Function
+* Toxin & Heavy Metal Exposure
+* Cardiovascular Health & Lipid Panel
+* Neurocognitive Health Markers
+* Stress & Oxidative Damage
+* Cellular Energy & NAD+
 
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fe298e51335b84cb0475f24c5bda1438e9dd155ce-4212x2808.jpg%3Fauto%3Dformat&w=1920&q=75)
+* Easy, at-home testing (no lab visits)
+* Measures over 180+ biomarkers to deliver an in-depth assessment of your brain, gut, immune, metabolic, and nutritional systems.
+* Tracks how quickly your body is aging each year.
+* Helps you make smarter lifestyle choices to feel younger and live healthier with personalized recommendations.
 
-AG1 supports gut health with soothing, easy-to absorb ingredients that boost digestion and help ease bloating.\*
+* Built on cutting-edge epigenetic research
+* Measures over 100,000 DNA markers for unmatched accuracy
+* Developed with world-leading scientists and validated algorithms
+* Backed by peer-reviewed studies and proven in published research
 
-Prebiotics and probiotics work together with digestive enzymes to promote a strong gut barrier and boost nutrient absorption, helping your ability to break down food and have regular bowel movements.\*
+Step by step guide
 
-“The impact on my gut health is amazing. That alone is worth using the product.”
+## How Does it Work?
 
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F0c696c400259baebb58c39e1a0e579d31ef3a82f-4212x2808.jpg%3Fauto%3Dformat&w=1920&q=75)
+### Order + Activate Your Kit
 
-Adaptogens and minerals help you feel sharp and help support energy without the afternoon crash\*
+Once you order your test from our website, the collection kit will be shipped directly to your home with everything to begin testing included.
 
-B vitamins, like methylfolate, support energy without the caffeine crash you get from coffee.\*
+### Return Your Sample
 
-“AG1 is nutrient packed and very easy to incorporate into your daily routine!”
+Follow the instructions in your test kit, use our pain-free lancet to prick your finger for a few drops of blood. Then, ship your specimen using the prepaid FedEx materials provided.
 
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fab6b23f9d7eba50bb215111832a946eb8a07460c-4212x2808.jpg%3Fauto%3Dformat&w=1920&q=75)
+### Unlock Personal Nutrition + Systems Health Insights
 
-Adaptogens provide support for stress, while vitamins and minerals promote relaxation and help balance the nervous system for a healthy mood.\*
+Results are available online within 3-4 weeks of lab receipt, revealing your nutritional health at the molecular level.
 
-Vitamins and minerals help build the key neurotransmitters known to support mood and brain function.\*
+## The Ultimate Collection for Health & Longevity
 
-“AG1s have been a dramatic help to my everyday. I struggle with taking time to consume enough for my daily needs and this helps me keep my energy and mood up throughout my long days and busy schedule.”
+Our TruHealth™ test ensures your nutritional, metabolic, immune, and cognitive health are functioning at their peak to support longevity goals. Our TruAge™ test helps you track those goals and stay ahead of the aging curve by measuring your biological age, speed of aging, and key longevity metrics. By understanding both, you can make targeted changes to slow down aging, improve vitality, and optimize your long-term health.
 
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fb4405c8c4527f9a531feff3f68a2809add503534-4212x2808.jpg%3Fauto%3Dformat&w=1920&q=75)
+* [Sample TruAge™ Report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/Sample_TruAge.pdf?v=1769012567)
+* [Sample TruHealth™ report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/Sample_TruHealth.pdf?v=1769008125)
 
-You feel strong and nourished thanks to AG1’s essential nutrients that support a healthy immune system.\*
+Biological Age
 
-Vitamin C, zinc, functional mushrooms, and more work together to increase antioxidant stores in the body, which help combat environmental stress.\*
+How old your body is compared to your real age
 
-“Love the support to my immune system. Awesome!”
+Pace of Aging
 
-## AG1 is a more-in-one solution
+How quickly you're aging each year
 
-|  |  | Multivitamins | Probiotics | Greens |
-| --- | --- | --- | --- | --- |
-| Vitamins |  |  |  |  |
-| Minerals |  |  |  |  |
-| Prebiotics |  |  |  |  |
-| Probiotics |  |  |  |  |
-| Greens & Superfoods |  |  |  |  |
-| Antioxidants |  |  |  |  |
-| Digestive Enzymes |  |  |  |  |
+Organ System Ages
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/f15661c6ffcde6ccd324737c9c673c4370ebaa6b-96x38.png)
+The age of key organs (heart, brain, liver, etc.)
 
-Multivitamins
+Nutrient Levels
 
-Probiotics
+Optimize your vitamin levels for better health.
 
-Greens
+Metabolic Health
 
-Vitamins
+Understand your metabolism for improved energy and weight control.
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
+Inflammation & Immunity
 
-Minerals
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sa …[truncated]
+Identify hidden inflammation affecting …[truncated]
 
 [Result 2]
-Title: AG1®
-URL: https://drinkag1.com/suppfacts-ag1?view=print
+Title: [Skip to content](MainContent)
+URL: https://shop.trudiagnostic.com/products/truhealth
 Content:
-# AG1®
+[Skip to content](#MainContent)
 
-[Enable accessibility](https://drinkag1.com/suppfacts-ag1?view=print#)
+* + [Shop All](/collections/shopfront)
+  + [About TruAge](https://www.trudiagnostic.com/truage)
+  + [About TruHealth](https://www.trudiagnostic.com/truhealth)
 
-[![Image 1](https://drinkag1.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)](https://drinkag1.com/)
-*   [AG1 for Daily Health](https://drinkag1.com/learn/ag1)
+  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
 
-Explore 
-    *   [What is AG1?](https://drinkag1.com/learn/ag1) [Research](https://drinkag1.com/learn/research/scientific-research) [Quality & Testing](https://drinkag1.com/about-ag1/quality-standards/ctr) [Ingredients](https://drinkag1.com/about-ag1/ingredients/ctr) [Benefits](https://drinkag1.com/about-ag1/benefits) 
+  [**TruHealth™ Test**](/products/truhealth)
 
-Shop Daily Health
+  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
+* + [Our Science](https://www.trudiagnostic.com/science)
+  + [Our Research](https://www.trudiagnostic.com/research)
+* + [Healthcare Providers](https://www.trudiagnostic.com/providers)
+  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
+  + [Lab Processing](https://www.trudiagnostic.com/lab)
+* [Login](https://portal.trudiagnostic.com/sign-in)
 
-    *   [![Image 2](https://drinkag1.com/suppfacts-ag1?view=print) Shop AG1](https://drinkag1.com/products/greens-powder-pouch)
-    *   [![Image 3](https://drinkag1.com/suppfacts-ag1?view=print) Shop Bundles](https://drinkag1.com/shop/bundles)
-    *   [![Image 4](https://drinkag1.com/suppfacts-ag1?view=print) Shop All](https://drinkag1.com/shop)
+* Our Tests 
 
-*   [AGZ for Sleep New](https://drinkag1.com/learn/agz)
+  [Shop Tests](/collections/shopfront)
 
-Explore 
-    *   [What is AGZ?](https://drinkag1.com/learn/agz) [Quality & Testing](https://drinkag1.com/quality-standards/agz) [Ingredients](https://drinkag1.com/sleep/agz-ingredients) 
+  [About TruAge™](https://www.trudiagnostic.com/truage)
 
-Shop Sleep Support
+  [About TruHealth™](https://www.trudiagnostic.com/truhealth)
 
-    *   [![Image 5](https://drinkag1.com/suppfacts-ag1?view=print) AGZ Chocolate](https://drinkag1.com/products/sleep-supplement?flavor=chocolate)
-    *   [![Image 6](https://drinkag1.com/suppfacts-ag1?view=print) AGZ Chocolate Mint](https://drinkag1.com/products/sleep-supplement?flavor=chocolate+mint)
-    *   [![Image 7](https://drinkag1.com/suppfacts-ag1?view=print) AGZ Mixed Berry](https://drinkag1.com/products/sleep-supplement?flavor=mixed+berry)
+  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
 
-*   Learn More
+  [**TruHealth™ Test**](/products/truhealth)
 
-Explore 
-    *   [Blog](https://drinkag1.com/blog) [AG1 Membership](https://drinkag1.com/ag1-membership) [Impact Report](https://drinkag1.com/impact-report) 
+  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
+* How It Works 
+  + [Our Science](https://www.trudiagnostic.com/science)
+  + [Our Research](https://www.trudiagnostic.com/research)
+* Partner with Us 
+  + [Healthcare Providers](https://www.trudiagnostic.com/providers)
+  + [Researchers](https://www.trudiagnostic.com/research-services)
+  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
+  + [Lab Processing](https://www.trudiagnostic.com/lab)
 
-    *   [![Image 8](https://drinkag1.com/suppfacts-ag1?view=print) Hugh Jackman x AG1](https://drinkag1.com/hugh-jackman)
-    *   [![Image 9](https://drinkag1.com/suppfacts-ag1?view=print) Reviews](https://drinkag1.com/about-ag1/reviews/ctr)
-    *   [![Image 10](https://drinkag1.com/suppfacts-ag1?view=print) Foundational Nutrition](https://drinkag1.com/foundational-nutrition-education)
+[Login](https://portal.trudiagnostic.com/sign-in)   [Cart](/cart)
 
-[Get AG1](https://drinkag1.com/build-a-bundle-shop)
+# TruHealth™
 
-[](https://drinkag1.com/members)
+34 reviews
 
-[Sign In](https://drinkag1.com/members)
+TruHealth™ gives you deep insight into your unique nutrition and biological systems health by testing +110 biomarkers for vitamins, antioxidants, healthy fats, amino acids, and toxins, as well as inflammation rates, oxidative stress, and neurocognitive factors. No prescription or lab bloodwork needed. Delivered to your door.
 
-*   Explore AG1 for Daily Health AGZ for Sleep New[Shop All](https://drinkag1.com/shop)    
-*   More about AG1 [Hugh Jackman x AG1](https://drinkag1.com/hugh-jackman)[Reviews](https://drinkag1.com/about-ag1/reviews/ctr)[Blog](https://drinkag1.com/blog)[Foundational Nutrition](https://drinkag1.com/foundational-nutrition-education)[AG1 Membership](https://drinkag1.com/ag1-membership)[Our Impact](https://drinkag1.com/impact-report)    
+The TruHealth test includes the following reports:
 
-![Image 11](https://drinkag1.com/suppfacts-ag1?view=print)
+* 105+ Biomarker Levels Tracked
+* Nutrient & Vitamin Levels
+* Antioxidant Levels
+* Amino Acid Levels
+* Metabolic Health
+* Energy Levels
+* Inflammation Levels
+* Stress Markers
+* Neurocognitive Markers
+* Immune Function Health
+* Cardiovascular Health
+* Toxin Exposure Levels
+* [View Sample Report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/ExampleTruHealth.pdf?v=1749717681)
 
-![Image 12](https://drinkag1.com/suppfacts-ag1?view=print)
+HSA / FSA Accepted
 
-50,000+ verified 5-star reviews for AG1 products
+Comprehensive Testing
 
-All About AG1
+Cutting-Edge Science
 
-AG1 is the Daily Health Drink that combines a multivitamin, pre- and probiotics, and a blend of superfoods into one powerful serving. This makes your health routine easier by delivering what your body needs most–daily nutrients and gut health support.*
+Easy and Convenient
 
-See Supplement Facts
+\* Subscriptions are US only
 
-![Image 13](https://cdn.sanity.io/images/jf30o7wb/production/7e2b33aba84eac112b6769b29c04de6aae68468c-139x52.svg)
+HSA / FSA Accepted
 
-## Less supplements. More benefits.
+---
 
-You’d need multiple supplements to nourish whole body health.[*](https://drinkag1.com/suppfacts-ag1?view=print#fdaDisclaimer) One serving of AG1 replaces:
+* 105+ Biomarkers Levels Tracked
+* Nutrient & Vitamin Levels
+* Antioxidant Levels
+* Amino Acid Levels
+* Metabolic Health
+* Energy Levels
+* Inflammation Levels
+* Stress Markers
+* Neurocognitive Markers
+* Immune Function Health
+* Cardiovascular Health
+* Toxin Exposure Levels
 
-![Image 14](https://drinkag1.com/suppfacts-ag1?view=print)
+* Easy, at-home testing (no lab visits)
+* Measures over 105+ biomarkers to deliver an in-depth assessment of your brain, gut, immune, metabolic, and nutritional systems.
+* Helps you make smarter lifestyle choices to feel younger and live healthier with personalized recommendations.
 
-*    MULTIVITAMIN 
-*    VITAMIN C TABLETS 
-*    SUPERGREENS 
-*    PROBIOTIC 
-*    VITAMIN B COMPLEX 
+* Built on cutting-edge epigenetic research
+* Measures over 100,000 DNA markers for unmatched accuracy
+* Developed with world-leading scientists and validated algorithms
+* Backed by peer-reviewed studies and proven in published research
 
-## Less supplements. More benefits.
+Step by step guide
 
-You’d need multiple supplements to nourish whole body health.[*](https://drinkag1.com/suppfacts-ag1?view=print#fdaDisclaimer) One serving of AG1 replaces:
+## How Does it Work?
 
-![Image 15](https://drinkag1.com/suppfacts-ag1?view=print)
+### Order + Activate Your Kit
 
-*    MULTIVITAMIN 
-*    VITAMIN C TABLETS 
-*    SUPERGREENS 
-*    PROBIOTIC 
-*    VITAMIN B COMPLEX 
+Once you order your test from our website, the collection kit will be shipped directly to your home with everything to begin testing included.
 
-## What AG1 is not
+### Monitor Your Health
 
-![Image 16](https://cdn.sanity.io/images/jf30o7wb/production/16154d7ccc1e764065e558d4af32832b8ed8cf7e-42x42.svg)
+Follow the instructions in your test kit, use our pain-free lancet to prick your finger for a few drops of blood. Then, ship your specimen using the prepaid FedEx materials provided.
 
-### Protein Supplement
+### Unlock Personal Nutrition + Systems Health Insights
 
-While AG1 contains pea protein to optimize digestive comfort, it does not replace a protein supplement.
+Results are available online within 3-4 weeks of lab receipt, revealing your nutritional health at the molecular level.
 
-![Image 17](https://cdn.sanity.io/images/jf30o7wb/production/16154d7ccc1e764065e558d4af32832b8ed8cf7e-42x42.svg)
+## Discover TruHealth
 
-### Meal Replacement
+TruHealth™ measures your cellular health across key biological systems related to longevity—including metabolic, immune, and neurocognitive health. Whether you’re looking to boost your nutrition, reduce toxins, improve sleep, or enhance metabolic function TruHealth™ gives you a personalized roadmap to target deficiencies and take actions to improve.
 
-AG1 does not provide enough calories to skip a meal. It is designed to complement a healthy diet, not replace one.
+* [Sample TruHealth™ report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/Sample_TruHealth.pdf?v=1769008125)
 
-![Image 18](https://cdn.sanity.io/images/jf30o7wb/production/16154d7ccc1e764065e558d4af32832b8ed8cf7e-42x42.svg)
+Nutrient Levels
 
-### Green Juice
+Optimize your vitamin levels for better health.
 
-AG1 provides nutrients from fruits and vegetables but removes excess sugar by using high quality extracts.
+Metabolic Health
 
-## Better ingredients are just the start of the journey
+Understand your metabolism for improved energy and weight control.
 
-AG1 is made from 75 s …[truncated]
+Inflammation & Immunity
+
+Identify hidden inflammation affecting your immune and overall health.
+
+Gut Health
+
+Assess digestion and nutrient absorption for better overall wellness.
+
+Brain Health
+
+Uncover biomarkers for memory, focus, and long-term brain health.
+
+Oxidative Defense
+
+Measure your body’s ability to combat free radical damage.
+
+Toxin Exposure
+
+Detect exposure to heavy metals and environmental chemicals.
+
+Healthy Fats
+
+Optimize  …[truncated]

@@ -290,6 +290,8 @@ async def run_kg_ingestion(
         + counts["persons_written"]
         + counts["products_written"]
         + counts["compounds_written"]
+        + counts["lab_tests_written"]
+        + counts["panels_written"]
     )
 
     logger.info(

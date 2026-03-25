@@ -22,8 +22,13 @@ from src.infrastructure.temporal.activities.openai_research import (
 from src.infrastructure.temporal.activities.deep_research import (
     run_deep_research_mission,
 )
+from src.infrastructure.temporal.activities.research_mission import (
+    execute_research_stage,
+    ingest_kg_from_report,
+)
 from src.infrastructure.temporal.workflows.openai_research import OpenAIResearchWorkflow
 from src.infrastructure.temporal.workflows.deep_research import DeepResearchMissionWorkflow
+from src.infrastructure.temporal.workflows.research_mission import ResearchMissionWorkflow
 
 logger = logging.getLogger(__name__)
 
@@ -67,9 +72,11 @@ async def main() -> None:
     deep_research_worker = Worker(
         client,
         task_queue=DEEP_RESEARCH_TASK_QUEUE,
-        workflows=[DeepResearchMissionWorkflow],
+        workflows=[DeepResearchMissionWorkflow, ResearchMissionWorkflow],
         activities=[
             run_deep_research_mission,
+            execute_research_stage,
+            ingest_kg_from_report,
         ],
     )
 

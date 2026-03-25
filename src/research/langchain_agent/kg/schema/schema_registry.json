@@ -213,6 +213,8 @@
     "LabTest": {
       "mergeKey": "labTestId",
       "extractable": false,
+      "stateLabel": "LabTestState",
+      "identityProperties": ["labTestId", "name", "synonyms"],
       "searchFields": ["name", "synonyms", "loincCodes", "whatItMeasures"],
       "properties": {
         "labTestId":         { "type": "string",  "format": "uuid", "system": true },
@@ -229,6 +231,8 @@
     "PanelDefinition": {
       "mergeKey": "panelDefinitionId",
       "extractable": false,
+      "stateLabel": "PanelDefinitionState",
+      "identityProperties": ["panelDefinitionId", "canonicalName", "aliases"],
       "searchFields": ["canonicalName", "aliases", "description"],
       "properties": {
         "panelDefinitionId": { "type": "string",  "format": "uuid", "system": true },
@@ -803,6 +807,43 @@
         "sourceReport":       { "type": "string",  "system": true },
         "createdAt":          { "type": "datetime", "system": true },
         "formType":           { "type": "string" },
+        "searchText":         { "type": "string",  "system": true },
+        "searchFields":       { "type": "array",   "items": "string", "system": true },
+        "embedding":          { "type": "array",   "items": "float", "system": true },
+        "embeddingModel":     { "type": "string",  "system": true },
+        "embeddingDimensions": { "type": "int",    "system": true }
+      }
+    },
+    "LabTestState": {
+      "mergeKey": "stateId",
+      "parentLabel": "LabTest",
+      "note": "Immutable snapshot of LabTest descriptive properties.",
+      "properties": {
+        "stateId":            { "type": "string",  "format": "uuid", "system": true },
+        "stateHash":          { "type": "string",  "system": true },
+        "sourceReport":       { "type": "string",  "system": true },
+        "createdAt":          { "type": "datetime", "system": true },
+        "loincCodes":         { "type": "array",   "items": "string" },
+        "cptCodes":           { "type": "array",   "items": "string" },
+        "whatItMeasures":     { "type": "string" },
+        "prepRequirements":   { "type": "string" },
+        "searchText":         { "type": "string",  "system": true },
+        "searchFields":       { "type": "array",   "items": "string", "system": true },
+        "embedding":          { "type": "array",   "items": "float", "system": true },
+        "embeddingModel":     { "type": "string",  "system": true },
+        "embeddingDimensions": { "type": "int",    "system": true }
+      }
+    },
+    "PanelDefinitionState": {
+      "mergeKey": "stateId",
+      "parentLabel": "PanelDefinition",
+      "note": "Immutable snapshot of PanelDefinition descriptive properties.",
+      "properties": {
+        "stateId":            { "type": "string",  "format": "uuid", "system": true },
+        "stateHash":          { "type": "string",  "system": true },
+        "sourceReport":       { "type": "string",  "system": true },
+        "createdAt":          { "type": "datetime", "system": true },
+        "description":        { "type": "string" },
         "searchText":         { "type": "string",  "system": true },
         "searchFields":       { "type": "array",   "items": "string", "system": true },
         "embedding":          { "type": "array",   "items": "float", "system": true },

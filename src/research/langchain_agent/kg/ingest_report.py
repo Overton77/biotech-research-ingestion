@@ -208,7 +208,9 @@ async def _run(args: argparse.Namespace) -> None:
             f"orgs={counts.get('orgs_written', 0)}, "
             f"persons={counts.get('persons_written', 0)}, "
             f"products={counts.get('products_written', 0)}, "
-            f"compounds={counts.get('compounds_written', 0)}"
+            f"compounds={counts.get('compounds_written', 0)}, "
+            f"lab_tests={counts.get('lab_tests_written', 0)}, "
+            f"panels={counts.get('panels_written', 0)}"
         )
 
     if args.output_json and result.get("extraction"):

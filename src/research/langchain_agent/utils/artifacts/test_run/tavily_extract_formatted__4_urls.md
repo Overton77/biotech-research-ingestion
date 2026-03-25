@@ -1,461 +1,261 @@
-Meta: request_id=74619dda-ee04-4c0e-9e07-f50bd2b61837, response_time_s=17.97
+Meta: request_id=d8b85493-7d28-4fb2-b9f8-a9c5d98d998e, response_time_s=0.01
 
 === Extracted Web Content ===
 [Result 1]
-Title: Basic Nutrients 2/Day - 30 Servings & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc
+Title: TruDiagnostic Awarded NIH SBIR Grant to Advance Breakthrough Epigenetic Diagnostic Technology
+URL: https://www.biospace.com/press-releases/trudiagnostic-awarded-nih-sbir-grant-to-advance-breakthrough-epigenetic-diagnostic-technology
 Content:
-# Basic Nutrients 2/Day - 30 Servings & Reviews | Thorne
+![BioSpace logo](https://static.biospace.com/dims4/default/193f35f/2147483647/strip/true/crop/496x132+0+0/resize/250x67!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2Fe4%2Fed%2F07b192644c508cbc301bc9ae721c%2Flogo.png)
 
-[Skip to main content](https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc#main)
+# TruDiagnostic Awarded NIH SBIR Grant to Advance Breakthrough Epigenetic Diagnostic Technology
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+LEXINGTON, Ky., Oct. 7, 2025 /PRNewswire/ -- TruDiagnostic, a leader in epigenetic testing and health analytics, announced today it has received a competitive Small Business Innovation Research (SBIR) grant from the National Institutes of Health (NIH). The funding supports development of the company's W-Function Epigenomic Roadmap, a next-generation model for understanding how DNA methylation changes over time to predict and prevent chronic disease.
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+[![TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)](https://mma.prnewswire.com/media/2542501/TruDiagnostic_Logo.jpg "TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)")](https://mma.prnewswire.com/media/2542501/TruDiagnostic_Logo.html)
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+![TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)](https://mma.prnewswire.com/media/2542501/TruDiagnostic_Logo.jpg "TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)")
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+**A New Framework for Dynamic Health Measurement**
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+Most current diagnostic tools rely on static or random data points that miss how biology evolves. The W-Function model introduces a systems-based approach that maps how DNA methylation shifts dynamically, providing new insight into disease onset, progression, and response to treatment.
 
-[](https://www.thorne.com/cart)
+By leveraging the world's largest longitudinal methylation dataset, TruDiagnostic will identify causal epigenetic changes and filter out random noise that has long limited predictive accuracy. The result: more reliable health forecasts, earlier intervention points, and new therapeutic targets for drug discovery.
 
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
+TruDiagnostic's platform is uniquely positioned for this research, with thousands of patients who have tested and re-tested longitudinally through its network of providers and researchers.
 
-[](https://www.thorne.com/cart)
+**Transformative Potential Across Medicine**
 
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+The initial work will target cardiovascular disease, type 2 diabetes, and mortality risk, with future applications across multiple chronic conditions. Once validated, the W-Function Epigenomic Roadmap could:
 
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+"This award highlights the importance of TruDiagnostic's mission to push the boundaries of precision health," said Ryan Smith, Founder and Director of Research. "The W-Function Epigenomic Roadmap could change how we think about disease risk, moving from reactive care to proactive, personalized health strategies."
 
-* * *
+**About TruDiagnostic**
 
-[Sign In](https://www.thorne.com/login)
+TruDiagnostic is a leading health data company and CLIA-certified laboratory specializing in epigenetic testing and research. Home to the largest private DNA methylation database globally, TruDiagnostic partners with notable biotech developers, researchers, and academic institutions to transform the healthcare potential of epigenetic data into actionable applications. The company's TruAge biological aging tests offer the most in-depth results, helping individuals and healthcare providers make informed lifestyle and medical decisions based on insights found in the fluid epigenome.
 
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU VM2NC](https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc "SKU VM2NC")
+For more information about TruDiagnostic, please visit[www.trudiagnostic.com](https://edge.prnewswire.com/c/link/?t=0&l=en&o=4527612-1&h=981763822&u=http%3A%2F%2Fwww.trudiagnostic.com%2F&a=www.trudiagnostic.com).
 
-# Basic Nutrients 2/Day - 30 Servings
+For media inquiries, please contact: [press@trudiagnostic.com](mailto:press@trudiagnostic.com)
 
- 493 Reviews 
+![Cision](https://edge.prnewswire.com/c/img/favicon.png?sn=CL92427&sd=2025-10-07 "Cision") View original content to download multimedia:<https://www.prnewswire.com/news-releases/trudiagnostic-awarded-nih-sbir-grant-to-advance-breakthrough-epigenetic-diagnostic-technology-302577536.html>
 
- See reviews summary 
+![Cision](https://edge.prnewswire.com/c/img/favicon.png?sn=CL92427&sd=2025-10-07 "Cision")
 
-* * *
+SOURCE TruDiagnostic
 
-*   [Why Ours](https://www.thorne.com/explore/multi-vitamins "Why Ours")
-*   Buy Now
-
-![Image 6: Large image of Basic Nutrients 2/Day - 30 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v22fab5aec14f3a11312849c9781a5ef32c69c8d4.png)
-
-![Image 7: Basic Nutrients 2/Day - 30 Servings thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__vef3f9ab94676575f5fbc7674d9e8be5e7a981985.jpg)
-
-![Image 8: Basic Nutrients 2/Day - 30 Servings thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v378a6caad21d78e8c1e1704614bce1f089448902.jpg)
-
-![Image 9: Basic Nutrients 2/Day - 30 Servings thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v4db733be0524b4371d9175d9322219161fdb289d.jpg)
-
-![Image 10: Basic Nutrients 2/Day - 30 Servings thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
-
-![Image 11: Basic Nutrients 2/Day - 30 Servings thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v83d0c66970bdda774da4eede80633bba5a43b53f.png)
-
-![Image 12: Basic Nutrients 2/Day - 30 Servings thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__vcd1ea6af1fc5b2b6d7334d24f78ef4cf40a77a19.png)
-
-![Image 13: Basic Nutrients 2/Day - 30 Servings thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v8d5de41df9ce332cd3ebe6c79ce53bd97550424a.png)
-
-![Image 14: Large image of Basic Nutrients 2/Day - 30 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v22fab5aec14f3a11312849c9781a5ef32c69c8d4.png)
-
-Current image for thumbnail 1
-
-* * *
-
-#### A daily multi with key nutrients that keep your body healthy and thriving*
-
-Basic Nutrients 2/Day is a comprehensive daily supplement formulated for individuals looking for nutritional support with fewer capsules.
-
-$36 /60 Capsules
-
-[Basic Nutrients 2/Day - NSF Certified for Sport 60 Capsules](https://www.thorne.com/products/dp/basic-nutrients-2-day "Select Basic Nutrients 2/Day - NSF Certified for Sport")[Basic Nutrients 2/Day - 30 Servings 60 Capsules](https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc "Select Basic Nutrients 2/Day - 30 Servings")[Basic Nutrients 2/Day - 60 Servings 120 Capsules](https://www.thorne.com/products/dp/basic-nutrients-2-day-120 "Select Basic Nutrients 2/Day - 60 Servings")
-
- Subscribe: **SAVE UP TO 20%**
-
- Quantity  
-
- Quantity: 1
-
-Add to Cart
-
- Quantity  
-
-Add to Cart
-
- Quantity: 1
-
- HSA/FSA eligible Save an average of 30%
-
- Learn more 
-
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
-
-## Taia Summary
-
-Have questions? Taia can help you decide.
-
-Product Overview Compare Products
-
-*   **What it does:** Provides comprehensive daily nutritional support with a full spectrum of essential vitamins and minerals to help maintain heart, brain, nerve, immune, bone, and skin health.* Formulated with highly absorbable forms of nutrients, including zinc bisglycinate for immune and skin support*, vitamin D3 for bone and immune health*, and B vitamins for cardiovascular and nerve function.*
-
-*   **How to take:** Take 2 capsules daily.
-
-*   **What you should know:** Designed for convenience, this multi-vitamin/mineral formula delivers foundational nutrition in just two capsules per day, using pure ingredients without unnecessary additives or preservatives. It is third-party tested for  …[truncated]
+![](https://rt.prnewswire.com/rt.gif?NewsItemId=CL92427&Transmission_Id=202510071604PR_NEWS_USPR_____CL92427&DateId=20251007)
+![Illustration of a business person giving a presentation in front of a board of directors, vector illustration](https://static.biospace.com/dims4/default/56ef12b/2147483647/strip/true/crop/861x861+178+0/resize/100x100!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2F5f%2F60%2F724162914ed583e24116be0846a1%2Fistock-1499149608.jpg)
+![Checklist collage banner with halftone hands. Hand holding marker and putting a check mark or cross in checkbox. Collage design with halftone elements. Concept of check list. Vector illustration.](https://static.biospace.com/dims4/default/fdb80a3/2147483647/strip/true/crop/724x724+362+0/resize/100x100!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2Fed%2Fd5%2F3251e85c4255aa794d68f75f8515%2Fistock-2218272171.jpg)
+![Illustration showing a handshake, signaling cooperation, goodwill](https://static.biospace …[truncated]
 
 [Result 2]
-Title: Creatine - 90 Servings & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/creatine
+Title: ![American Academy of Anti-Aging Medicine](/assets/images/logo-a4m-2023--white.png)
+URL: https://www.a4m.com/ryan-smith.html
 Content:
-# Creatine - 90 Servings & Reviews | Thorne
+![American Academy of Anti-Aging Medicine](/assets/images/logo-a4m-2023--white.png)
 
-[Skip to main content](https://www.thorne.com/products/dp/creatine#main)
+MENU
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+# Ryan Smith
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+![Ryan Smith](/assets/images/a4m-2017/staff/ryan-smith-202511.webp)
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+**Ryan Smith** is founder of TruDiagnsotic. TruDiagnostic is a CLIA certified lab and health data company which specializes in understanding and reporting insights found through Epigenetic methylation data. Since starting in 2020, TruDiagnostic has created the largest private epigenetic database in the world with over 200,000 patients tested. From this dataset, they have created many new algorithms to interpret methylation data including algorithms to predict inflammatory markers, disease diagnosis, telomere length, aging pace, immune cell subsets, cellular replication, and more. TruDiagnostics has also led research in the field with over 70+ clinical trials investigating the best ways to reverse these markers through diet, lifestyle, and prescription interventions. Currently, TruDiagnostic is working with collaborators from Duke, Harvard, Yale, Stanford, and more to uncover new insights from the methylome.
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+Prior to founding TruDiagnostic, Ryan founded Tailor Made Compounding and the International Peptide Society which focused on bringing peptides to market in the US.
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+![American Academy of Anti-Aging Medicine](/assets/images/logo-a4m-2023--white.png)
+![MMI](/assets/images/logos/mmi-logo--white.png)
 
-[](https://www.thorne.com/cart)
+The **American Academy of Anti-Aging Medicine (A4M)** is dedicated to the advancement of healthcare technologies and transformations that can combat chronic diseases associated with aging. A4M offers continuing medical education, activities, and training.
 
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
+![Informa Connect Logo](/assets/images/a4m-2017/informa-connect-logo__white.png)
 
-[](https://www.thorne.com/cart)
+Copyright © 2026, A4M.
+  
+All trademarks, registered or unregistered,   
+are the property of their respective owners.
 
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+About Us
 
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+Advanced Education
 
-* * *
+Events
 
-[Sign In](https://www.thorne.com/login)
+Exhibitors
 
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU SF903](https://www.thorne.com/products/dp/creatine "SKU SF903")
+![Facebook](/custom/templates/a4m-2017/dist/assets/images/soci_facebook_button.svg)
+![Twitter](/custom/templates/a4m-2017/dist/assets/images/soci_twitter_button.svg)
+![LinkedIn](/custom/templates/a4m-2017/dist/assets/images/soci_linkedin_button.svg)
+![YouTube](/custom/templates/a4m-2017/dist/assets/images/soci_youtube_button.svg)
+![Blog](/custom/templates/a4m-2017/dist/assets/images/soci_blog_button.svg)
 
-# Creatine - 90 Servings
-
- 1359 Reviews 
-
- See reviews summary 
-
-* * *
-
-![Image 6: Large image of Creatine - 90 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png)
-
-![Image 7: Creatine - 90 Servings thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb5ca0e34dbdc8dc4000b29c8ba0bb48387eb2496.jpg)
-
-![Image 8: Creatine - 90 Servings thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v67f933512454449d24c5c855f503305e97e11c01.jpg)
-
-![Image 9: Creatine - 90 Servings thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v8af6fc58732ad1ec22fae03d073c971f5c7799f4.jpg)
-
-![Image 10: Creatine - 90 Servings thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
-
-![Image 11: Creatine - 90 Servings thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vcfe753c8912038b0bff400c34332d69f5ad847d5.png)
-
-![Image 12: Creatine - 90 Servings thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vc0c761efbdf9349d57f97cc20ec9746866e84475.png)
-
-![Image 13: Creatine - 90 Servings thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb1af62988bd4bcd45d00a5018307954837c0fe25.png)
-
-![Image 14: Large image of Creatine - 90 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png)
-
-Current image for thumbnail 1
-
-* * *
-
-#### High-quality creatine for lean muscle mass, endurance, cellular energy, and brain function*
-
-Promote enhanced muscle performance and strength with creatine monohydrate. Great for more than just athletes – it also supports cellular energy production and cognitive function to help you perform at your best.* NSF Certified for Sport®
-
-$44 /90 Scoops
-
-[Creatine - 180 Servings 180 Scoops](https://www.thorne.com/products/dp/creatine-sf904 "Select Creatine - 180 Servings")[Creatine - 90 Servings 90 Scoops](https://www.thorne.com/products/dp/creatine "Select Creatine - 90 Servings")
-
- Subscribe: **SAVE UP TO 20%**
-
- Quantity  
-
- Quantity: 1
-
-Add to Cart
-
- Quantity  
-
-Add to Cart
-
- Quantity: 1
-
- HSA/FSA eligible Save an average of 30%
-
- Learn more 
-
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
-
-## Taia Summary
-
-Have questions? Taia can help you decide.
-
-Product Overview Compare Products
-
-*   **What it does:** Promotes enhanced muscle performance, strength, and physical endurance, while supporting cellular energy production and cognitive function to help you perform at your best.* Also helps maintain healthy cellular hydration and reduces the frequency of exercise-induced muscle cramps.*
-
-*   **How to take:** Mix 1 scoop with at least 8 ounces of water, juice, or preferred beverage daily. Can be used 30-90 minutes before or after exercise.
-
-*   **What you should know:** Features a highly researched, micronized form of creatine monohydrate that is easy to mix, colorless, odorless, and has enhanced solubility. NSF Certified for Sport®, ensuring rigorous testing for quality and the absence of nearly 300 substances banned by major athletic organizations. Suitable for athletes and individuals with increased dietary needs or those not consuming enough creatine-rich foods.
-
-Show me similar products What does this product do?How do I use this product?More info on ingredients
-
-Read more![Image 16: Ask Taia](https://d1vo8zfysxy97v.cloudfront.net/_nuxt/ask-taia-icon.BYR1GHZ1.svg)
-
-#### Ingre …[truncated]
+Medical Website Design &
+  
+Medical Marketing by [WebToMed](https://www.a4m.com/medical-website-design-webtomed.html)
 
 [Result 3]
-Title: Daily Electrolytes - Variety Pack & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack
+Title: [![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/670877e4e1405042afd01548_Rupa%20University.svg)](/)
+URL: https://www.rupauniversity.com/instructors/ryan-smith
 Content:
-# Daily Electrolytes - Variety Pack & Reviews | Thorne
+[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/670877e4e1405042afd01548_Rupa%20University.svg)](/)
 
-[Skip to main content](https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack#main)
+[Free Classes](/free-classes)
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+[On-Demand Courses](/on-demand-courses)
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+[Order Labs](https://www.rupahealth.com/)
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+[Practice Resources](#)
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+[Instructors](/instructors)[Sign in](https://app.rupauniversity.com)
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+Sign in
 
-[](https://www.thorne.com/cart)
+![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/667380bf8a4349ccff2a4091_select-icon.svg)
 
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
+Education
 
-[](https://www.thorne.com/cart)
+[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc442e1f3dfaf7_%F4%80%AB%94.svg)
 
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+Bootcamps](/bootcamps)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f13c0967e041d353c9b6_%F4%80%BE%AD.svg)
 
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+Free Classes](/free-classes)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/66dac077fc54df73af00bb12_instructor.svg)
 
-* * *
+Instructors](/instructors)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/62746abcca88b74484babfa5_enterprise.svg)
 
-[Sign In](https://www.thorne.com/login)
+Enterprise](/enterprise)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f13c0967e0f03153c9b9_%F4%80%B7%89.svg)
 
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU SF911P](https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack "SKU SF911P")
+Podcast](https://www.rupahealth.com/the-root-cause-medicine-podcast)
 
-# Daily Electrolytes - Variety Pack
+![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc442b973dfaf6_%F4%81%82%BF.svg)
 
-* * *
+[Practice Resources](#)
 
-![Image 6: Large image of Daily Electrolytes - Variety Pack](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vbdbfcaba0a56d3ed0c2423336807bbf5ee98765d.png)
+[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc442b973dfaf6_%F4%81%82%BF.svg)
 
-![Image 7: Daily Electrolytes - Variety Pack thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v14117e4bef0105567b48347a2c594dff29e16196.png)
+FAQ](/faq)
 
-![Image 8: Daily Electrolytes - Variety Pack thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v454de5d9e54fca889757ebb00aeee7dc986967e4.jpg)
+Order Labs
 
-![Image 9: Daily Electrolytes - Variety Pack thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vc36c97b6f5db056a267fa470a273e93c76b0a358.jpg)
+[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f13c0967e039c753c9af_%F4%80%89%9F.svg)
 
-![Image 10: Daily Electrolytes - Variety Pack thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v9d1d270203f9574e309ee65a2be8482fe9c63507.jpg)
+Rupa Labs](https://www.rupahealth.com/)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f10ca572deba6c7e4275_%F4%80%8F%A4.svg)
 
-![Image 11: Daily Electrolytes - Variety Pack thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
+Rupa Lab Test Catalog](https://labs.rupahealth.com/discover-labs)
 
-![Image 12: Daily Electrolytes - Variety Pack thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__ve4d209098d68c9cb4740eb043097b5d647f39461.png)
+Company
 
-![Image 13: Daily Electrolytes - Variety Pack thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vcb50c6c42e4f1e9c067fd02b260714e119ed869f.png)
+[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc441e663dfaef_%F4%80%9F%B1.svg)
 
-![Image 14: Large image of Daily Electrolytes - Variety Pack](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vbdbfcaba0a56d3ed0c2423336807bbf5ee98765d.png)
+Contact Us](/contact)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f10ca572de65547e427a_%F4%80%95%BB.svg)
 
-Current image for thumbnail 1
+Updates](https://www.rupahealth.com/updates)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f10ca572de43957e427d_%F4%80%8D%96.svg)
 
-* * *
+Careers](https://www.rupahealth.com/careers)
 
-#### Replenish electrolytes to optimize cellular rehydration and recovery*
+[Sign in](https://app.rupauniversity.com)
 
-On-the-go hydration, designed to restore fluid balance, enhance cellular energy, and maximize athletic performance.* NSF Certified for Sport®
+Sign in
 
-$40 /30 Packets
+![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/667380bf8a4349ccff2a4091_select-icon.svg)
 
-[Daily Electrolytes - Watermelon 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-watermelon-flavored-drink-mix "Select Daily Electrolytes - Watermelon")[Daily Electrolytes - Blood Orange 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-blood-orange-flavored-drink-mix "Select Daily Electrolytes - Blood Orange")[Daily Electrolytes - Mango Limeade 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-mangolimeade-flavored-drink-mix "Select Daily Electrolytes - Mango Limeade")[Daily Electrolytes - Variety Pack 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack "Select Daily Electrolytes - Variety Pack")
+![](https://cdn.prod.website-files.com/624a2a730e8726163074c542/6401132df1e04ffd2657f076_63f7cad84ec9f2a8f8184594_63b4969ae5e5ea672a09a0d1_Ryan%252520Smith.avif)
 
- Subscribe: **SAVE UP TO 20%**
+# Ryan Smith
 
- Quantity  
+Founder of TruDiagnostic
 
- Quantity: 1
+Ryan received a BA in biochemistry from Transylvania University before heading to medical school in 2013. After passing USMLE Step 1, he decided to leave and open up a pharmacy in the United States that focused on peptide synthesis and formulations for pharmaceutical preparations. That pharmacy, Tailor Made Compounding, became the 4th fastest growing company in healthcare in the US and grew to 80 million in revenue within 3 years.  Through this pharmacy work, Ryan saw the value of preventative medicine.  Many of the physicians Tailor Made served were treating age as a disease and a primary outcome but needed better tools to measure this process. As a result, Ryan exited Tailor Made in 2020 to create TruDiagnostic.
 
-Add to Cart
+TruDiagnostic is a CLIA certified lab and health data company which specializes in understanding and reporting insights found through Epigenetic methylation data. Since starting in 2020, TruDiagnostic has created the largest private epigenetic database in the world with over 15,000 patients tested on the EPIC850k array.  From this dataset, they have created many new algorithms to interpret methylation data including algorithms to predict inflammatory markers, disease diagnosis, telomere length, aging pace, immune cell subsets, cellular replication, and more.
 
- Quantity  
+## Live Classes
 
-Add to Cart
+How To Clinically Use The most Predictive DNAm Clock To Date
 
- Quantity: 1
+October 5, 2023
 
- HSA/FSA eligible Save an average of 30%
+[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6277254e3da70c06d40b4874_ccal.svg)
 
- Learn more 
+Register to Watch](https://lu.ma/omicmage)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/624a31cbec629e72a6b1ec0b_play-white.svg)
 
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
+Watch the Class](/live-classes/how-to-clinically-use-the-most-predictive-dnam-clock-to-date)
 
-## Taia Summary
+![](https://cdn.prod.website-files.com/624a2a730e8726163074c542/6503607c071aed83b1385137_65033db7c2631ae361e6c4a2_cropped-TruDiagnostic_Logo-Color-1.avif)
 
-Have questions? Taia can help you decide.
+How to Use TruAgePACE in Your Anti-Aging Practice
 
-Product Overview Compare Products
+January 25, 2023
 
-*   **What it does:** Replenishes essential electrolytes lost through sweat to restore optimal fluid balance, support cellular hydration, and enhance recovery after exercise, while also promoting cellular energy production and athletic performance.*
+[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6277254e3da70c06d40b4874_ccal.svg)
 
-*   **How to take:** Mix 1 stick pack with at least 12 ounces of water daily.
+Register to Watch](https://lu.ma/TruAgePace)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/624a31cbec629e72a6b1ec0b_play-white.svg)
 
-*   **What you should know:** This low-calorie, no-sugar formula features convenient single-serve packaging and three flavor options, making it easy to use on the go. It is NSF Certified for Sport®, ensuring rigorous testing for quality and the absence of banned substances, and is sui …[truncated]
+Watch the Class](/live-classes/how-to-use-truagepace-in-your-anti-aging-practice)
+
+![](https://cdn.prod.website-files.com/624a2a730e8726163074c542/68a6e402f5ba95f704d173ac_6656545d71bb43504af3fa13_63f7cbce1d31cc27e307c2ef_63b49 …[truncated]
 
 [Result 4]
-Title: **Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
-URL: https://www.thorne.com/products/dp/advanced-pre-workout
+Title: ![Peak Health Unlocked](/assets/artwork/1x1.gif)
+URL: https://podcasts.apple.com/us/podcast/ryan-smith-co-founder-of-trudiagnostic/id1529308112?i=1000522201993
 Content:
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+![Peak Health Unlocked](/assets/artwork/1x1.gif)
 
-[![Image 1: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+# Ryan Smith - Co-founder of TruDiagnostic
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+Ryan Smith, 2x guest of the show, and co-founder of TruDiagnostic—the team behind the world's most advanced epigenetic test—TruAge™. Testing up to 425x more spots on the DNA than any other age predictor.
 
-[](https://www.thorne.com/cart)
+\*
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
+About The Immunity Docuseries:
 
-[](https://www.thorne.com/cart)
+Never has it been so critical and obvious that our health and immunity have to be a top priority. It's now up to us to make a choice: continue down a path of disease or do everything possible be to be at our peak health. Some of the questions explored in this series include:
 
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+How can we be resilient to diseases and viruses to come? What actions can we take today to achieve peak immunity? What are the non-negotiables to building immunity?
 
-* * *
+\*
 
-[Sign In](https://www.thorne.com/login)
+This podcast wouldn’t be possible without the support of Thrive Performance & Regenerative Medicine. A team prepared to go all-in with you to craft a personalized health plan to achieve your peak health. Book a free consult to start your health transformation at - https://thrivemedicineclinic.com/
 
- Uh oh! 
+\*
 
-We can't seem to find the page you're looking for.
+Thrive Medicine - @thrivemedicine
 
-[Head Home](https://www.thorne.com/ "Home")
+Dr. Rhet Langley - @rhetmd
 
-![Image 3: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/t.svg)![Image 4](https://d1vo8zfysxy97v.cloudfront.net/images/layout/flags/us.png) United States
+Dr. Phillip Gallegos - @phillipgallegos\_md
 
-### About
+Marc Champagne - @mchampagne
 
-*   [Who We Are](https://www.thorne.com/who-we-are)
-*   [Our Team](https://www.thorne.com/company/leadership)
-*   [Newsroom](https://www.thorne.com/company/press)
-*   [Awards](https://www.thorne.com/company/awards)
-*   [Collaborations](https://www.thorne.com/company/strategic-collaborations)
-*   [Clinical Research](https://www.thorne.com/company/clinical-research)
-*   [Careers](https://www.thorne.com/company/careers)
-*   [Taia Wellness Advisor](https://www.thorne.com/featured/taia)
+## Information
 
-### Learn
+## Africa, Middle East, and India
 
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Health Concerns](https://www.thorne.com/health-concerns)
-*   [Our Ingredients](https://www.thorne.com/ingredients)
-*   [Our Manufacturing Process](https://www.thorne.com/quality)
-*   [Wellness Guides](https://www.thorne.com/wellness-guides)
-*   [NSF Certified Supplements](https://www.thorne.com/nsf-certified-for-sport)
+## Asia Pacific
 
-### Community
+## Europe
 
-*   [Find a Professional](https://www.thorne.com/find-a-health-professional)
-*   [Professional Tools](https://www.thorne.com/affiliate)
-*   [Thorne Partners](https://www.thorne.com/partners)
-*   [Thorne Ambassadors](https://www.thorne.com/ambassador)
-*   [Sports Performance](https://www.thorne.com/sports-performance)
-*   [Military/First Responder](https://www.thorne.com/govx)
+## Latin America and the Caribbean
 
-### Support
+## The United States and Canada
 
-*   [Contact Us](https://www.thorne.com/contacts)
-*   [Order Tracking](https://www.thorne.com/orders/tracking)
-*   [FAQs](https://www.thorne.com/faqs)
-*   [Returns](https://www.thorne.com/faqs/returns-and-exchanges)
-*   [Rewards](https://www.thorne.com/rewards)
-*   [Quick Order](https://www.thorne.com/quick-order)
-*   [Subscriptions](https://www.thorne.com/login)
-*   [Pay with HSA/FSA](https://www.thorne.com/partners/truemed)
+Copyright © 2026 [Apple Inc.](https://www.apple.com) All rights reserved.
 
-### Need help
+To listen to explicit episodes, sign in.
 
-*   [Visit Help Center](https://www.thorne.com/contacts)
-*   [support@thorne.com](mailto:support@thorne.com)
-*   [1 800 228 1966](tel:18002281966)
+![Apple Podcasts](/assets/app-icons/podcasts-icon_512.png)
 
-[Download our iOS app](https://itunes.apple.com/us/app/thorne-research/id1101310862)
+Stay up to date with this show
 
-*   [](https://www.instagram.com/thornehealth)
-*   [](https://www.facebook.com/thornehealth)
-*   [](https://twitter.com/thornehealth)
-*   [](https://www.youtube.com/channel/UCaDgqa4VU8TECqIPq6C3LtA)
-*   [](https://www.tiktok.com/@thornehealth)
-*   [](https://www.linkedin.com/company/thorne-health)
+Sign in or sign up to follow shows, save episodes, and get the latest updates.
 
-### Wellness delivered to your inbox
+## Africa, Middle East, and India
 
-Sign up for Thorne emails
+## Asia Pacific
 
-Email Address 
+## Europe
 
-### © Thorne. All rights reserved.
+## Latin America and the Caribbean
 
-*   [Terms](https://www.thorne.com/terms-of-use)
-*   [Privacy](https://privacy.thorne.com/privacy-policy)
-*   [Consumer Health Data Privacy](https://www.thorne.com/terms/consumer-health-data-privacy-policy)
-*   [Proposition 65](https://www.thorne.com/prop-65)
-*   [Accessibility](https://www.thorne.com/accessibility)
-*   [California Privacy Notice](https://privacy.thorne.com/privacy-policy#california-privacy-notice)
-*   [Sensitive Personal Information](https://privacy.thorne.com/limit)
-*   [![Image 5: California Consumer Privacy Act (CCPA) Opt-Out Icon](https://polaris.truevaultcdn.com/static/assets/icons/optout-icon-black.svg) Your Privacy Choices](https://privacy.thorne.com/opt-out)
-
- * These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. 
-
-![Image 6](https://trkn.us/pixel/conv/ppt=26415;g=general;gid=68377;ord=[uniqueid])![Image 7](https://cnv.event.prod.bidr.io/log/cnv?tag_id=2943&buzz_key=ua&value=&segment_key=ua-1187&account_id=333&ord=8926925994)![Image 9](https://www.ojrq.net/p/?return=&cid=26953&tpsync=no&auth=)
-
-![Image 10](https://bat.bing.com/action/0?ti=17203695&tm=gtm002&Ver=2&mid=ce643513-fa70-4ee2-a991-9940c1b99eb8&bo=1&sid=1e7567f0256311f18ed7397ff5d7fd36&vid=1e754f10256311f1b666434901e9510d&vids=1&msclkid=N&pi=918639831&lg=en-US&sw=800&sh=600&sc …[truncated]
+## The United States and Canada

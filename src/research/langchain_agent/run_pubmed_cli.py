@@ -1,13 +1,13 @@
 """Command-line exercises for PubMed / PMC helpers and the summary agent.
 
-All paths stay under ``research/test_runs`` (imports from ``tools_for_test.funcs.pubmed``).
+All paths stay under ``research/langchain_agent`` (imports from ``tools_for_test.funcs.pubmed``).
 
 Examples (repo root)::
 
-    uv run python -m src.research.test_runs.run_pubmed_cli esearch --term "spermidine autophagy" --retmax 5
-    uv run python -m src.research.test_runs.run_pubmed_cli pubmed-chunk --term "NRF2 activator trial" --max-results 3 --artifacts
-    uv run python -m src.research.test_runs.run_pubmed_cli summarize-pubmed --term "case reports[pt] AND vitamin d" --max-results 3 --artifacts
-    uv run python -m src.research.test_runs.run_pubmed_cli case-study-flow --max-results 4 --artifacts
+    uv run python -m src.research.langchain_agent.run_pubmed_cli esearch --term "spermidine autophagy" --retmax 5
+    uv run python -m src.research.langchain_agent.run_pubmed_cli pubmed-chunk --term "NRF2 activator trial" --max-results 3 --artifacts
+    uv run python -m src.research.langchain_agent.run_pubmed_cli summarize-pubmed --term "case reports[pt] AND vitamin d" --max-results 3 --artifacts
+    uv run python -m src.research.langchain_agent.run_pubmed_cli case-study-flow --max-results 4 --artifacts
 
 Environment (optional but recommended for NCBI): ``NCBI_API_KEY``, ``NCBI_EMAIL``.
 OpenAI credentials are required for ``summarize-pubmed``, ``summarize-pmc``, and ``case-study-flow``.

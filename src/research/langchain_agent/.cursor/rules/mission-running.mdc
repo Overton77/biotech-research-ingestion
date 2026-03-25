@@ -1,0 +1,124 @@
+---
+description: Running and creating research missions — CLI usage, mission JSON format, output inspection, and Temporal vs local execution
+globs: "**/langchain_agent/run_mission.py,**/langchain_agent/models/mission.py,**/langchain_agent/test_runs/missions/*.json,**/langchain_agent/workflow/**"
+alwaysApply: false
+---
+
+# Research Mission Running
+
+## Mission Sources
+
+Missions are defined as **JSON files** in `test_runs/missions/` and loaded via `--mission-file`. See `models/mission.py` for the full `ResearchMission` Pydantic model.
+
+## Mission JSON Structure
+
+Every JSON mission file must match the `ResearchMission` Pydantic model:
+
+```json
+{
+  "mission_id": "mission-<company>-001",
+  "mission_name": "Human-readable name",
+  "base_domain": "https://domain.com",
+  "run_kg": false,
+  "stages": [
+    {
+      "slice_input": {
+        "task_id": "<company>-<focus>-001",
+        "mission_id": "mission-<company>-001",
+        "task_slug": "<company>-<focus-slug>",
+        "user_objective": "Detailed research instructions...",
+        "targets": ["Company Name", "domain.com"],
+        "selected_tool_names": ["search_web", "map_website", "extract_from_urls"],
+        "stage_type": "entity_validation | targeted_extraction",
+        "max_step_budget": 10
+      },
+      "prompt_spec": {
+        "agent_identity": "...",
+        "domain_scope": [],
+        "workflow": [],
+        "tool_guidance": [],
+        "subagent_guidance": [],
+        "practical_limits": [],
+        "filesystem_rules": [],
+        "intermediate_files": []
+      },
+      "execution_reminders": [],
+      "dependencies": [],
+      "iterative_config": null
+    }
+  ]
+}
+```
+
+Key fields:
+- `dependencies`: list of `task_slug` strings — stage waits and receives those reports
+- `iterative_config`: set `{"max_iterations": N}` for multi-pass stages
+- `report_required_sections`: optional list of `## Heading` names the report must contain
+- `stage_type`: drives KG schema selection — use `entity_validation` for fundamentals, `targeted_extraction` for products/deep-dives
+
+## CLI Commands
+
+```bash
+# From repo root — always use uv run
+
+# Run from JSON file (local, sequential)
+uv run python -m src.research.langchain_agent.run_mission \
+  --mission-file src/research/langchain_agent/test_runs/missions/<file>.json \
+  --output-dir   src/research/langchain_agent/test_runs/run_outputs/<name> \
+  --local
+
+# Run with KG ingestion after completion
+uv run python -m src.research.langchain_agent.run_mission \
+  --mission-file <path> --output-dir <dir> --local --run-kg
+
+# Run a single stage by slug
+uv run python -m src.research.langchain_agent.run_mission \
+  --mission-file <path> --stage <task_slug> --local
+
+# Run via Temporal (default when --local is omitted)
+uv run python -m src.research.langchain_agent.run_mission \
+  --mission-file <path> --output-dir <dir>
+```
+
+## Temporal Worker (required for non-local runs)
+
+When running missions **without** `--local`, a Temporal worker must be running to process the `deep-research-mission` task queue. Start it in a separate terminal before submitting:
+
+```bash
+uv run python -m src.infrastructure.temporal.research_worker
+```
+
+The worker registers `ResearchMissionWorkflow` + activities (`execute_research_stage`, `ingest_kg_from_report`) and listens on the `deep-research-mission` queue. It initializes Beanie for MongoDB persistence (best-effort if MongoDB is unavailable). Monitor workflows at `http://localhost:8088`.
+
+## Output Layout
+
+When `--output-dir` is given:
+
+```
+<output-dir>/
+  mission_summary.json                     # final status + all stage summaries
+  stage_01_<slug>.json                     # per-stage metadata
+  stage_01_<slug>_report.md                # per-stage final report text
+  stage_<slug>_combined_report.md          # iterative: merged iterations
+  stage_<slug>_iteration_log.json          # iterative: iteration history
+  state_snapshots/
+    state_<slug>_01_input.json             # agent input state
+    state_<slug>_02_messages.json          # conversation messages
+    state_<slug>_03_tool_calls.json        # tool call log
+    state_<slug>_04_final_state.json       # final agent state
+```
+
+## Inspecting Results
+
+- **Filesystem**: check `agent_outputs/reports/` for markdown reports, `test_runs/run_outputs/<name>/` for full run data
+- **MongoDB**: `StageRunRecord` documents in MongoDB — use the MongoDB MCP server to query
+- **Neo4j**: if `--run-kg` was used, query the `neo4j-dev` MCP server (`read_neo4j_cypher`) to inspect ingested entities
+
+## Creating New Missions
+
+When asked to create a mission:
+1. Use an existing JSON in `test_runs/missions/` as a template (e.g. `truediagnostic_research.json`)
+2. Each stage needs a unique `task_slug` — use `<company>-<focus>` pattern
+3. Set `dependencies` to chain stages (later stages receive prior reports)
+4. Set `max_step_budget` proportional to complexity (10-18 typical range)
+5. Write the JSON to `test_runs/missions/<company_name>.json`

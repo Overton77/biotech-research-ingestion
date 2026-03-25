@@ -1,0 +1,172 @@
+---
+description: Codebase architecture — directory map, module dependencies, data flow, persistence stack, and key shared types for the langchain_agent research mission server
+globs: "**/langchain_agent/**"
+alwaysApply: false
+---
+
+# langchain_agent Architecture
+
+## Directory Map
+
+```
+langchain_agent/
+├── run_mission.py              # CLI entrypoint (--mission-file, --local, --run-kg, --stage)
+├── neo4j_aura.py               # Neo4j Aura client singleton (used by kg/)
+│
+├── agent/                      # Agent runtime: state schema, tool registry, factory, prompt assembly
+│   ├── config.py               # MissionSliceInput, BiotechResearchAgentState, TOOLS_MAP, ResearchPromptSpec, memory helpers
+│   └── factory.py              # build_research_agent, build_memory_report_agent, build_next_steps_agent, middleware stack
+│
+├── models/                     # Pydantic config + Beanie persistence models
+│   └── mission.py              # ResearchMission, MissionStage, IterativeStageConfig, MissionRunDocument, StageRunRecord, StageArtifacts
+│
+├── workflow/                   # Mission execution orchestration
+│   ├── run_mission.py          # Topological ordering, dependency injection, MissionRunDocument lifecycle
+│   ├── run_iterative_stage.py  # Iterative loop: slice → next-steps → stop condition → context carry-forward
+│   ├── run_slice.py            # Single slice: memory recall → agent → memory ingestion → S3 persist → StageRunRecord
+│   └── iteration_control.py    # Pure functions: stop conditions, context builder, report synthesis
+│
+├── tools_for_test/             # Stage-local research tools
+│   ├── tavily_tools.py         # search_web, extract_from_urls, map_website, crawl_website
+│   ├── playwright_agent.py     # Browser subagent (LangChain + Playwright MCP)
+│   ├── playwright_agent_tool.py# Browser subagent (LlamaIndex + Playwright MCP) — alternate stack
+│   ├── filesystem_middleware.py # Intercepts file ops → tracks paths in agent state
+│   ├── formatters.py           # Truncation + event formatting helpers
+│   └── funcs/pubmed.py         # PubMed/PMC E-utilities tools
+│
+├── memory/                     # LangMem integration
+│   ├── langmem_manager.py      # build_langmem_manager(), MEMORY_INSTRUCTIONS, mission-scoped namespace
+│   ├── langmem_schemas.py      # SemanticEntityFact, EpisodicResearchRun, ProceduralResearchPlaybook
+│   └── langmem_namespaces.py   # Fine-grained namespace helpers (unused — future design)
+│
+├── storage/                    # Persistence backends
+│   ├── async_mongo_client.py   # Module-level AsyncMongoClient singleton
+│   ├── langgraph_persistence.py# Lazy singleton: AsyncPostgresStore + AsyncPostgresSaver
+│   ├── s3_store.py             # Fire-and-forget S3 uploads, persist_slice_artifacts()
+│   └── models.py               # Re-export shim → models/mission.py (backward compat)
+│
+├── kg/                         # Knowledge graph ingestion pipeline (6-step)
+│   ├── run_kg_ingestion.py     # Pipeline orchestrator
+│   ├── ingest_report.py        # Standalone CLI entrypoint
+│   ├── schema_selector.py      # LLM picks relevant schema chunks
+│   ├── schema_loader.py        # Loads extraction contracts from registry
+│   ├── extractor.py            # Entity extraction → KGExtractionResult
+│   ├── extraction_models.py    # Pydantic: KGExtractionResult, TemporalScope, ExtractedOrg/Person/Product/...
+│   ├── searchtext.py           # searchText generation (LLM or field-concat)
+│   ├── embedder.py             # Batch OpenAI embeddings (text-embedding-3-small, 1536d)
+│   ├── neo4j_writer.py         # Identity/state nodes + HAS_STATE rels with bitemporal props
+│   ├── neo4j_resolver.py       # Entity dedup via exact name + fulltext search
+│   ├── temporal.py             # State hash, bitemporal defaults, identity/state key maps
+│   ├── setup_indexes.py        # One-time vector + fulltext index creation
+│   ├── codegen_extraction_models.py # Regenerates extraction_models.py from schema registry
+│   └── schema/                 # schema_index.json + schema_registry.json + docs
+│
+├── eval/                       # LangSmith evaluation pipeline
+│   ├── run_eval.py             # EVALUATOR_REGISTRY, static/live targets, run_evaluation()
+│   ├── build_datasets.py       # Mission JSON + reports → LangSmith datasets
+│   ├── evaluators.py           # LLM judges + code-based evaluators
+│   └── rubrics.py              # Scoring rubrics and thresholds
+│
+├── observability/              # LangSmith tracing
+│   └── tracing.py              # @traceable decorators, tracing context managers, inject_stage_metadata
+│
+├── agent_outputs/              # Runtime filesystem root (ROOT_FILESYSTEM)
+│   ├── reports/                # Final markdown reports: reports/<task_slug>.md
+│   ├── runs/                   # Intermediate working files: runs/<task_slug>/01_*.md, 02_*.md, ...
+│   └── scratch/                # Temporary workspace
+│
+└── tests/                      # pytest tests (no LLM calls)
+    ├── conftest.py             # Fixtures: mini_mission_from_file, memory_saver_pair, stub_memory_manager
+    ├── test_models.py          # MissionSliceInput validation, JSON loader, prompt spec fields
+    └── test_mission_flow.py    # Topological order, dependency injection, CLI output dir creation
+```
+
+## Data Flow
+
+```
+Mission JSON (test_runs/missions/*.json)
+  │
+  ▼  load_mission_from_file()
+ResearchMission
+  │
+  ▼  run_mission.py CLI → workflow/run_mission.py
+Topological stage ordering
+  │
+  ├──→ Single-pass stage → run_single_mission_slice()
+  │     │  1. Memory recall (LangMem search)
+  │     │  2. build_research_agent() → agent.ainvoke()
+  │     │     ├── Tools: search_web, extract_from_urls, map_website
+  │     │     ├── Filesystem: ls, read_file, write_file, edit_file (via FilesystemMiddleware)
+  │     │     └── SubAgent: browser_control (Playwright MCP)
+  │     │  3. Read final report from filesystem
+  │     │  4. Memory ingestion (structured report → LangMem)
+  │     │  5. S3 artifact upload (fire-and-forget)
+  │     │  6. StageRunRecord → MissionRunDocument (MongoDB)
+  │     ▼
+  │   report_by_slug[task_slug] = final_report_text
+  │
+  └──→ Iterative stage → run_iterative_stage()
+        │  Loop: run_single_mission_slice() → _extract_next_steps() → evaluate_stop_condition()
+        │  Stop when: max_iterations | stage_complete | high_confidence (≥0.9) | no_next_steps
+        ▼
+      combined_report → report_by_slug[task_slug]
+  │
+  ▼  (if --run-kg)
+KG ingestion: schema select → extract → searchText → embed → Neo4j write
+```
+
+## Dependency Graph (imports flow downward)
+
+```
+run_mission.py (CLI)
+  ├── workflow/run_mission        → workflow/run_slice, workflow/run_iterative_stage
+  │     ├── workflow/run_slice    → agent/factory, agent/config, storage/s3_store, storage/models
+  │     └── workflow/iteration_control (pure functions)
+  ├── models/mission              → agent/config (MissionSliceInput, ResearchPromptSpec)
+  ├── storage/langgraph_persistence
+  ├── memory/langmem_manager
+  └── observability/tracing
+
+agent/factory
+  ├── agent/config                → tools_for_test/tavily_tools, tools_for_test/formatters, kg/extraction_models (TemporalScope)
+  ├── tools_for_test/playwright_agent, playwright_agent_tool
+  ├── tools_for_test/filesystem_middleware
+  └── deepagents (external): FilesystemMiddleware, SubAgentMiddleware, FilesystemBackend
+
+kg/*                              → neo4j_aura.py, agent/config (ROOT_FILESYSTEM), kg/extraction_models
+eval/*                            → workflow/run_slice, storage/langgraph_persistence, memory/langmem_manager, observability/tracing
+storage/models.py                 → models/mission.py (re-export shim)
+models/mission.py                 → agent/config, storage/async_mongo_client
+```
+
+## Persistence Stack
+
+| Backend                           | Purpose                                                 | Env var                                     | Access pattern                                                            |
+| --------------------------------- | ------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------- |
+| **Filesystem** (`agent_outputs/`) | Primary agent output surface                            | —                                           | `ROOT_FILESYSTEM` in `agent/config.py`                                    |
+| **MongoDB** (Beanie)              | `MissionRunDocument` persistence                        | `MONGODB_URI` / `MONGO_URI`                 | `init_research_agent_beanie()` → `biotech_research.research_mission_runs` |
+| **PostgreSQL** (LangGraph)        | Store (LangMem memories) + Checkpointer (graph state)   | `POSTGRES_URI`                              | `get_persistence()` lazy singleton                                        |
+| **S3**                            | Artifact mirror (reports, intermediates, memory, state) | `BIOTECH_RESEARCH_RUNS_BUCKET`              | `persist_slice_artifacts()` — fire-and-forget                             |
+| **Neo4j**                         | Knowledge graph (entities + bitemporal state)           | `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` | `kg/neo4j_writer.py` via `neo4j_aura.py`                                  |
+| **LangSmith**                     | Tracing + evaluation experiments                        | `LANGSMITH_API_KEY`, `LANGSMITH_PROJECT`    | `observability/tracing.py` context managers                               |
+
+## Key Shared Types
+
+| Type                                    | Module                 | Used by                                                              |
+| --------------------------------------- | ---------------------- | -------------------------------------------------------------------- |
+| `MissionSliceInput`                     | `agent/config`         | workflow/_, eval/_, models/mission, storage/s3_store                 |
+| `ResearchPromptSpec`                    | `agent/config`         | agent/factory, models/mission, workflow/\*                           |
+| `BiotechResearchAgentState`             | `agent/config`         | agent/factory (state_schema)                                         |
+| `ResearchMission` / `MissionStage`      | `models/mission`       | workflow/run_mission, run_mission.py CLI                             |
+| `StageRunRecord` / `MissionRunDocument` | `models/mission`       | workflow/run_slice, workflow/run_mission, storage/models (re-export) |
+| `TemporalScope`                         | `kg/extraction_models` | agent/config (MissionSliceInput.temporal_scope)                      |
+| `NextStepsArtifact`                     | `agent/config`         | workflow/run_iterative_stage, agent/factory                          |
+| `ResearchTaskMemoryReport`              | `agent/config`         | workflow/run_slice, agent/factory, storage/s3_store                  |
+
+## Test Conventions
+
+- Tests live in `tests/` — plain pytest + `unittest.mock.patch` / `AsyncMock`
+- Test missions in `test_runs/missions/` (e.g. `elysium_mini.json`, `qualia_mini.json`)
+- Fixtures in `conftest.py`: `mini_mission_from_file`, `memory_saver_pair` (InMemoryStore + MemorySaver), `stub_memory_manager` (MagicMock)
+- No LLM calls in tests — `run_single_mission_slice` is patched
+- Run: `uv run pytest src/research/langchain_agent/tests/ -v`

@@ -1,0 +1,154 @@
+---
+description: Persistence layer (MongoDB, Postgres, S3) and LangMem memory system — clients, singletons, artifact structure, memory schemas, and namespace design
+globs: "**/langchain_agent/storage/**,**/langchain_agent/memory/**"
+alwaysApply: false
+---
+
+# Storage & Memory
+
+## Storage Layer Overview
+
+| Module | Backend | Pattern | Env var |
+|--------|---------|---------|---------|
+| `async_mongo_client.py` | MongoDB (pymongo async) | Module-level singleton | `MONGODB_URI` or `MONGO_URI` |
+| `langgraph_persistence.py` | PostgreSQL | Lazy async singleton (double-checked lock) | `POSTGRES_URI` |
+| `s3_store.py` | AWS S3 | Module-level `AsyncS3Client` singleton | `BIOTECH_RESEARCH_RUNS_BUCKET` |
+| `models.py` | — | Re-export shim → `models/mission.py` | — |
+
+## async_mongo_client.py
+
+- `create_mongo_client()` → `AsyncMongoClient(MONGO_URI)`
+- `mongo_client` = module-level singleton, imported by `models/mission.py`
+- Database: `biotech_research` (hardcoded in `init_research_agent_beanie()`)
+- Collection: `research_mission_runs` (from `MissionRunDocument.Settings.name`)
+- **Beanie init** is idempotent via `_beanie_initialized` flag
+
+## langgraph_persistence.py
+
+```python
+async def get_persistence() -> Tuple[AsyncPostgresStore, AsyncPostgresSaver]:
+```
+
+- Returns `(store, checkpointer)` — initialized once per process
+- `store` = `AsyncPostgresStore` (LangGraph long-term store for LangMem memories)
+- `checkpointer` = `AsyncPostgresSaver` (LangGraph graph state checkpoints)
+- Both call `.setup()` on first init (creates tables/migrations)
+- Uses `asyncio.Lock()` for thread-safe lazy init
+- `close_persistence()` for graceful shutdown (optional lifecycle hook)
+
+### Consumers
+
+- `run_mission.py` CLI: `store, checkpointer = await get_persistence()`
+- `eval/run_eval.py` live target: same pattern
+- `memory/langmem_manager.py`: imports `get_persistence` (import only — store passed by caller)
+
+## s3_store.py — Artifact Persistence
+
+### S3 Key Structure
+
+```
+{mission_id}/{task_slug}/reports/{task_slug}.md          ← final report
+{mission_id}/{task_slug}/runs/{filename}                  ← intermediate files
+{mission_id}/{task_slug}/memory/memory_report.json        ← LangMem report
+{mission_id}/{task_slug}/state/agent_state.json           ← provenance snapshot
+
+# Iterative stages insert cycle prefix:
+{mission_id}/{task_slug}/cycle-{N:02d}/reports/{task_slug}.md
+```
+
+### Upload Functions
+
+| Function | Artifact | Returns |
+|----------|----------|---------|
+| `upload_final_report()` | `reports/{slug}.md` | `ArtifactRef \| None` |
+| `upload_intermediate_files()` | All `runs/` files from `written_file_paths` | `list[ArtifactRef]` |
+| `upload_memory_report()` | `memory/memory_report.json` | `(ArtifactRef \| None, MemoryReportRecord)` |
+| `upload_agent_state()` | `state/agent_state.json` (sanitized, no messages) | `ArtifactRef \| None` |
+
+### persist_slice_artifacts()
+
+Orchestrator called by `workflow/run_slice.py` after each slice:
+- Runs all 4 uploads **concurrently** via `asyncio.gather`
+- Returns `(StageArtifacts, MemoryReportRecord)` for embedding in `StageRunRecord`
+- **All uploads are fire-and-forget** — exceptions caught + logged, never raised
+- Agent state snapshot excludes message history — only provenance fields (targets, visited_urls[-30:], file paths, step_count)
+
+### S3 Metadata
+
+Every upload attaches headers: `mission-id`, `task-slug`, `stage-type`, `artifact-type`, `uploaded-at`, optional `iteration`.
+
+## models.py (Re-export Shim)
+
+**All real models live in `models/mission.py`**. This file exists for backward compatibility:
+
+```python
+from src.research.langchain_agent.models.mission import (
+    ArtifactRef, IterativeStageRecord, MemoryReportRecord,
+    MissionRunDocument, StageArtifacts, StageRunRecord,
+    init_research_agent_beanie,
+)
+```
+
+When adding new persistence models, add them to `models/mission.py` and update both `models/__init__.py` and `storage/models.py` re-exports.
+
+---
+
+## Memory Layer
+
+### langmem_schemas.py — Memory Types
+
+All schemas extend `MemoryBase(kind, confidence, evidence, sources, observed_at, ttl_days, data)`:
+
+| Schema | kind | Key fields | Use case |
+|--------|------|-----------|----------|
+| `SemanticEntityFact` | "semantic" | `entity_name`, `org_id`, `person_id` | Durable entity facts: domains, aliases, founders, products, relationships |
+| `EpisodicResearchRun` | "episodic" | `mission_id`, `run_label` | Run outcomes: what worked, what failed, best sources, remaining gaps |
+| `ProceduralResearchPlaybook` | "procedural" | `agent_type` (default: "biotech_research_slice_agent") | Reusable tactics: query patterns, search strategies, extraction heuristics |
+
+### Common Fields (MemoryBase)
+
+| Field | Type | Default | Purpose |
+|-------|------|---------|---------|
+| `confidence` | float [0,1] | 0.7 | How reliable is this memory |
+| `evidence` | list[str] | [] | Supporting evidence snippets |
+| `sources` | list[str] | [] | Source URLs |
+| `observed_at` | str\|None | None | When the fact was observed (ISO) |
+| `ttl_days` | int\|None | None | Expiry hint for volatile facts |
+| `data` | dict | {} | Flexible payload per schema |
+
+### langmem_manager.py — Manager Construction
+
+```python
+async def build_langmem_manager(
+    model="openai:gpt-4.1",
+    query_model=None,
+    query_limit=5,
+    store=None,           # AsyncPostgresStore from get_persistence()
+) -> MemoryStoreManager
+```
+
+- Uses `langmem.create_memory_store_manager` with all 3 schemas
+- Namespace: `("memories", "{mission_id}")` — mission-scoped via runtime `config["configurable"]["mission_id"]`
+- `enable_inserts=True`, `enable_deletes=False`
+- `MEMORY_INSTRUCTIONS` prompt guides extraction (semantic/episodic/procedural categories, what to store vs skip)
+
+### Memory Flow in a Slice
+
+1. **Recall** (`workflow/run_slice._traced_memory_recall`):
+   - Searches LangMem store with 3 queries: entity names (semantic), mission+stage_type (procedural), mission+targets (episodic)
+   - Returns formatted strings → injected into agent state as `semantic_memories`, `episodic_memories`, `procedural_memories`
+   - Shown to agent via dynamic prompt middleware in `<Memories>` XML block
+
+2. **Ingestion** (`workflow/run_slice._traced_memory_ingestion`):
+   - After agent run, builds `ResearchTaskMemoryReport` via `build_memory_report_agent()`
+   - Then calls `memory_manager.ainvoke(memory_messages, config)` — LangMem extracts and stores new memories
+   - Memory messages include: objective, targets, task_slug, structured report (user); final response, report path, report text (assistant)
+
+### langmem_namespaces.py — Fine-Grained Namespaces (Unused)
+
+Defines `NS` dataclass with static methods for finer-grained namespaces:
+- `semantic_org(org_id)`, `semantic_person(person_id)`, `semantic_unscoped()`
+- `episodic_mission(mission_id)`, `episodic_unscoped()`
+- `procedural_agent(agent_type)`, `procedural_general()`
+
+**Currently unused** — the live manager uses the simpler `("memories", "{mission_id}")` namespace. This module represents a future design for cross-mission memory sharing.

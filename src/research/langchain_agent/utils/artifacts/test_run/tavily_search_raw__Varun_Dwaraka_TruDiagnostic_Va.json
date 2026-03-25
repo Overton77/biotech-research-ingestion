@@ -1,0 +1,83 @@
+{
+  "query": "Varun Dwaraka TruDiagnostic Varun B. Dwaraka publications TruDiagnostic bioinformatics \"Varun Dwaraka\"",
+  "results": {
+    "query": "Varun Dwaraka TruDiagnostic Varun B. Dwaraka publications TruDiagnostic bioinformatics Varun Dwaraka",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "url": "https://scholar.google.com/citations?user=4T1umKwAAAAJ&hl=en",
+        "title": "‪Varun B. Dwaraka‬ - ‪Google Scholar‬",
+        "content": "TruDiagnostic; University of Kentucky; UCSF, UCSC, Carnegie Institute DPB - ‪‪Cited by 786‬‬ - ‪Epigenomics‬ - ‪Transcriptomics‬ - ‪Genomics‬",
+        "score": 0.9999865,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Cc--4PlOCkI",
+        "title": "Tru Diagnostic - Varun B. Dwaraka - YouTube",
+        "content": "Dr. Varun B. Dwaraka, Chief Scientific Officer at TruDiagnostic, reveals how epigenetic biomarker proxies (IDPs) are transforming our",
+        "score": 0.9999844,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.trudiagnostic.com/post/middle-tech-podcast-highlights-the-science-behind-the-health-aging-revolution-with-trudiagnostics-dr-varun-b-dwaraka-70ca5",
+        "title": "aging revolution, with TruDiagnostic's Dr. Varun B. Dwaraka.",
+        "content": "TruDiagnostic's Head of Bioinformatics Dr. Varun B. Dwaraka sits down with Central Kentucky-based media company Middle Tech to discuss the science behind",
+        "score": 0.99998236,
+        "raw_content": null
+      },
+      {
+        "url": "https://posit.co/data-science-hangout/varun-dwaraka/",
+        "title": "Varun Dwaraka - Posit",
+        "content": "Varun is the Director of Bioinformatics and Principal Investigator at TruDiagnostic, specializing in computational biology, epigenetics, and machine learning",
+        "score": 0.9999777,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.rupauniversity.com/instructors/varun-dwaraka-phd",
+        "title": "Varun Dwaraka, PhD - Rupa University",
+        "content": "Dr. Dwaraka is the Head of Bioinformatics at TruDiagnostic, and an aging and longevity investigator specializing in epigenetics and bioinformatics.",
+        "score": 0.9999627,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.linkedin.com/in/varunbdwaraka",
+        "title": "Varun Dwaraka - TruDiagnostic - LinkedIn",
+        "content": "Varun Dwaraka\nTruDiagnostic\nSan Francisco Bay Area\n500 connections, 3791 followers\n\n\nAbout\nTLDR: Founding bioinformatician at TruDiagnostic; built the company’s first-generation…\n\n\nExperience\nN/A\n\n\nEducation\nUniversity of Kentucky\nN/A\n2015 - 2021\nNone",
+        "score": 0.99990463,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=6SFWYa258VU",
+        "title": "Can we Slow Aging? Biological Age & Epigenetics - Varun Dwaraka ...",
+        "content": "Can we slow the speed of aging? In this episode, Dr. Varun Dwaraka, Head of Bioinformatics at TruDiagnostic, walks us through through the",
+        "score": 0.9998568,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.a4m.com/varun-dwaraka.html",
+        "title": "Varun Dwaraka, PhD - A4M",
+        "content": "Varun Dwaraka, PhD serves as the Director of Research and Principal Investigator at TruDiagnostic, where he leads a team dedicated to studying and",
+        "score": 0.9998247,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.researchgate.net/publication/374894379_OMICmAge_An_integrative_multi-omics_approach_to_quantify_biological_age_with_electronic_medical_records",
+        "title": "(PDF) OMICmAge: An integrative multi-omics approach to quantify ...",
+        "content": "OMICmAge: An integrative multi-omics approach to quantify biological age with electronic medical rec... May 2024 · Physiology. Varun B. Dwaraka",
+        "score": 0.9914225,
+        "raw_content": null
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10614756/",
+        "title": "OMICmAge: An integrative multi-omics approach to quantify ... - PMC",
+        "content": "Using common clinical laboratory measures in ~30,000 individuals from the MGB-Biobank, we developed a robust, predictive biological aging phenotype, *EMRAge*, that balances clinical biomarkers with overall mortality risk and can be broadly recapitulated across EMRs. We then applied elastic-net regression to model *EMRAge* with DNA-methylation (DNAm) and multiple omics, generating *DNAmEMRAge* and *OMICmAge,* respectively. Using ~30,000 participants from the Massachusetts General Brigham (MGB) Biobank, we developed and validated three distinct and clinically relevant measures of biological age: 1) *EMRAge*, a clinically-based and versatile death mortality predictor that can be broadly recapitulated across EMRs; 2) *DNAmEMRAge*, a DNA methylation aging biomarker trained to predict *EMRAge*; and 3) *OMICmAge*, the first DNA methylation-based multi-omic aging biomarker trained to predict *EMRAge*, that integrates proteomic, metabolomic, and clinical data through the use of Epigenetic Biomarker Proxies (EBP) (i.e., methylation surrogates) 31–33.",
+        "score": 0.00021612163,
+        "raw_content": null
+      }
+    ],
+    "response_time": 0.92,
+    "request_id": "f31ebcf4-c253-44c2-ba83-18997ecfd6aa"
+  }
+}

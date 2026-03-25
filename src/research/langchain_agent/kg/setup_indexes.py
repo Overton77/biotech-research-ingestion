@@ -32,6 +32,8 @@ _NODE_INDEXES: list[tuple[str, str]] = [
     ("person_search_idx", "Person"),
     ("product_search_idx", "Product"),
     ("compound_form_search_idx", "CompoundForm"),
+    ("lab_test_search_idx", "LabTest"),
+    ("panel_definition_search_idx", "PanelDefinition"),
 ]
 
 # Fulltext indexes for non-vector keyword search
@@ -40,6 +42,8 @@ _FULLTEXT_INDEXES: list[tuple[str, str, list[str]]] = [
     ("person_fulltext_idx", "Person", ["canonicalName", "bio", "searchText"]),
     ("product_fulltext_idx", "Product", ["name", "synonyms", "description", "searchText"]),
     ("compound_form_fulltext_idx", "CompoundForm", ["canonicalName", "searchText"]),
+    ("lab_test_fulltext_idx", "LabTest", ["name", "synonyms", "whatItMeasures", "searchText"]),
+    ("panel_definition_fulltext_idx", "PanelDefinition", ["canonicalName", "aliases", "description", "searchText"]),
 ]
 
 

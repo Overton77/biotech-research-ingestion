@@ -46,6 +46,8 @@ IDENTITY_PROPERTIES: dict[str, set[str]] = {
     "Person": {"personId", "canonicalName", "createdAt"},
     "Product": {"productId", "name", "synonyms", "createdAt"},
     "CompoundForm": {"compoundFormId", "canonicalName", "createdAt"},
+    "LabTest": {"labTestId", "name", "synonyms", "createdAt"},
+    "PanelDefinition": {"panelDefinitionId", "canonicalName", "aliases", "createdAt"},
 }
 
 STATE_LABEL_MAP: dict[str, str] = {
@@ -53,6 +55,8 @@ STATE_LABEL_MAP: dict[str, str] = {
     "Person": "PersonState",
     "Product": "ProductState",
     "CompoundForm": "CompoundFormState",
+    "LabTest": "LabTestState",
+    "PanelDefinition": "PanelDefinitionState",
 }
 
 # The merge key on each identity node
@@ -61,6 +65,8 @@ IDENTITY_MERGE_KEY: dict[str, str] = {
     "Person": "personId",
     "Product": "productId",
     "CompoundForm": "compoundFormId",
+    "LabTest": "labTestId",
+    "PanelDefinition": "panelDefinitionId",
 }
 
 # The merge key on each state node

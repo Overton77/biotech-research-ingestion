@@ -71,6 +71,16 @@
       "sourceType": "github",
       "computedHash": "75b946c909c003e31f138307249c4a27a8becbd0be3b659d0acfd211781025be"
     },
+    "liteparse": {
+      "source": "run-llama/llamaparse-agent-skills",
+      "sourceType": "github",
+      "computedHash": "600e4bd26eaed83f4bc3b8293883ec54d1e37c1260f44d562bdae7810a8bb6f9"
+    },
+    "llamaparse": {
+      "source": "run-llama/llamaparse-agent-skills",
+      "sourceType": "github",
+      "computedHash": "9eda7038909aeea94506248865fad13d1836473d0a5119b125bdffd52796092e"
+    },
     "tavily-best-practices": {
       "source": "tavily-ai/skills",
       "sourceType": "github",

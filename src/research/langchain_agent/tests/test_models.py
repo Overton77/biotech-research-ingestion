@@ -5,15 +5,12 @@ and the mission JSON loader. No LLM calls, no network, no external services.
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 import pytest
 
 from src.research.langchain_agent.agent.config import MissionSliceInput
 from src.research.langchain_agent.models.mission import (
-    ELYSIUM_RESEARCH_MISSION,
-    QUALIA_RESEARCH_MISSION,
     MissionStage,
     ResearchMission,
 )
@@ -49,33 +46,6 @@ def test_mission_slice_input_rejects_unknown_tool():
             user_objective="x",
             selected_tool_names=["nonexistent_tool"],
         )
-
-
-# ---------------------------------------------------------------------------
-# ResearchMission structure
-# ---------------------------------------------------------------------------
-
-
-def test_qualia_mission_has_3_stages():
-    assert len(QUALIA_RESEARCH_MISSION.stages) == 3
-
-
-def test_elysium_mission_has_3_stages():
-    assert len(ELYSIUM_RESEARCH_MISSION.stages) == 3
-
-
-def test_elysium_leadership_depends_on_fundamentals():
-    leadership = next(
-        s for s in ELYSIUM_RESEARCH_MISSION.stages
-        if s.slice_input.task_slug == "elysium-leadership-and-advisors"
-    )
-    assert "elysium-company-fundamentals" in leadership.dependencies
-
-
-def test_mission_stage_slugs_unique():
-    for mission in (QUALIA_RESEARCH_MISSION, ELYSIUM_RESEARCH_MISSION):
-        slugs = [s.slice_input.task_slug for s in mission.stages]
-        assert len(slugs) == len(set(slugs)), f"Duplicate slugs in {mission.mission_name}"
 
 
 # ---------------------------------------------------------------------------
@@ -118,3 +88,11 @@ def test_prompt_spec_loaded_correctly():
 def test_load_mission_file_not_found():
     with pytest.raises(FileNotFoundError):
         load_mission_from_file(Path("nonexistent_mission.json"))
+
+
+def test_loaded_mission_stage_slugs_unique():
+    for filename in ("elysium_mini.json", "qualia_mini.json"):
+        path = MISSIONS_DIR / filename
+        mission = load_mission_from_file(path)
+        slugs = [s.slice_input.task_slug for s in mission.stages]
+        assert len(slugs) == len(set(slugs)), f"Duplicate slugs in {mission.mission_name}"

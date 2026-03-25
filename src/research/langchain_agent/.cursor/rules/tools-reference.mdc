@@ -1,0 +1,178 @@
+---
+description: Research tools — Tavily search/extract/map/crawl, Playwright browser agents, filesystem middleware, PubMed E-utilities, tool registration pattern, and Command+ToolMessage state mutation
+globs: "**/langchain_agent/tools_for_test/**"
+alwaysApply: false
+---
+
+# Tools Reference
+
+## Tool Registration & Selection
+
+Tools are registered in `agent/config.py` `TOOLS_MAP`:
+
+```python
+TOOLS_MAP = {
+    "search_web": search_web,
+    "extract_from_urls": extract_from_urls,
+    "map_website": map_website,
+}
+```
+
+- `MissionSliceInput.selected_tool_names` selects a subset (validated against TOOLS_MAP keys)
+- `build_research_agent()` resolves names → `BaseTool` instances
+- `crawl_website` exists in `tavily_tools.py` but is NOT in TOOLS_MAP — must be added to registry before use
+- Filesystem tools (`ls`, `read_file`, `write_file`, `edit_file`) injected by `FilesystemMiddleware`, not TOOLS_MAP
+- Browser access via `SubAgentMiddleware` → `browser_control` subagent, not TOOLS_MAP
+
+## State Mutation Pattern: Command + ToolMessage
+
+Most tools return `Command(update={...}, ...)` which merges state updates into `BiotechResearchAgentState`:
+
+```python
+@tool
+def my_tool(...) -> Command[Any]:
+    return Command(
+        update={
+            "visited_urls": [...],           # appended to state list
+            "tavily_search_events": [...],   # appended to state list
+            "messages": [ToolMessage(content="...", tool_call_id=...)],
+        }
+    )
+```
+
+**Exception:** PubMed tools in `funcs/pubmed.py` use a different pattern — they mutate `runtime.state` dict directly and return plain strings.
+
+## Tavily Tools (tavily_tools.py)
+
+All Tavily tools wrap `src.agents.tools` and `async_tavily_client`. They save JSON/Markdown artifacts via `save_json_artifact`/`save_text_artifact` under `test_run`.
+
+### search_web
+
+- Wraps Tavily search API
+- Updates state: `visited_urls`, `tavily_search_events`
+- Event includes: query, results count, URLs found, timestamps
+- Default tool in most missions
+
+### extract_from_urls
+
+- Wraps Tavily extract API — pulls structured content from specific URLs
+- Updates state: `visited_urls`, `tavily_extract_events`
+- Use on highest-value pages only (expensive per-URL)
+
+### map_website
+
+- Wraps Tavily map API — discovers internal page structure of a domain
+- Updates state: `visited_urls`, `tavily_map_events`
+- Use on official domains to find relevant subpages
+
+### crawl_website
+
+- Wraps Tavily crawl API — deeper site crawling
+- Updates state: `visited_urls` (via different event key)
+- **NOT in TOOLS_MAP** — not currently selectable via mission JSON
+- Available in `tavily_test_tools` list for direct use
+
+### Smoke Test
+
+`run_tavily_smoke_test()` — manual integration test: search → extract → map → crawl with printed previews and manifest file.
+
+## Playwright Browser Agents
+
+Two implementations exist — only one is active at a time.
+
+### playwright_agent.py (Active — LangChain stack)
+
+- Uses `MultiServerMCPClient` connecting to Playwright MCP over HTTP (`MCP_URL` env, default `http://localhost:3001/sse`)
+- Model: `BROWSER_AGENT_MODEL` env (default `gpt-5-mini`)
+- `run_playwright_mcp_agent(task, ...)` — fetches MCP tools, runs `create_agent` with `recursion_limit`
+- `browser_interaction_task` — `@tool` returning `Command` + `ToolMessage`
+  - Wraps `run_playwright_mcp_agent`
+  - Catches `ToolException` and generic `Exception`
+  - Formats structured RESULTS/SOURCES/NOTES-style error messages
+  - Includes error classification via `_classify_browser_error`
+
+### playwright_agent_tool.py (Alternate — LlamaIndex stack)
+
+- Uses `BasicMCPClient` + `McpToolSpec` + LlamaIndex `FunctionAgent` + `OpenAI` LLM
+- `run_playwright_mcp_agent(prompt)` — agent.run(prompt) pattern
+- `playwright_mcp_specs` — `@tool` for product-spec scraping with `_build_spec_prompt`
+- Returns `Command` with `ToolMessage`
+
+### Which is Used
+
+`agent/factory.py` imports:
+
+- `browser_interaction_task` from `playwright_agent.py` → used in active `browser_control_agent`
+
+The browser subagent wraps the tool in a coordinator agent with `BROWSER_CONTROL_SYSTEM_PROMPT` that allows up to 3 browser calls per delegated task.
+
+## Filesystem Middleware (filesystem_middleware.py)
+
+`monitor_filesystem_tools` — `@wrap_tool_call` middleware that intercepts filesystem tool calls:
+
+### Intercepted Tools
+
+| Tool name    | State fields updated                      |
+| ------------ | ----------------------------------------- |
+| `ls`         | `filesystem_events`                       |
+| `read_file`  | `filesystem_events`, `read_file_paths`    |
+| `write_file` | `filesystem_events`, `written_file_paths` |
+| `edit_file`  | `filesystem_events`, `edited_file_paths`  |
+| `glob`       | `filesystem_events`                       |
+| `grep`       | `filesystem_events`                       |
+
+### Special Behavior
+
+- Detects writes to `reports/*.md` → sets `final_report_ready = True` and `final_report_path`
+- Merges with any existing `Command(update={...})` from the underlying tool
+- Appends event dicts with: `tool`, `path`, `timestamp`, `summary`
+
+## PubMed Tools (funcs/pubmed.py)
+
+NCBI E-utilities integration over aiohttp. **Different state mutation pattern** — uses `runtime.state` dict directly instead of `Command`.
+
+### PubMed Tools
+
+| Function                                  | Purpose                                        |
+| ----------------------------------------- | ---------------------------------------------- |
+| `pubmed_esearch(query, max_results)`      | Search PubMed, return PMIDs                    |
+| `pubmed_esummary(pmids)`                  | Get citation summaries                         |
+| `pubmed_efetch_abstracts(pmids)`          | Fetch full abstracts                           |
+| `pubmed_search_summarizable_chunk(query)` | Combo: search + summary + abstracts            |
+| `summarize_pubmed_results(chunk)`         | LLM summary via `gpt-5-nano` structured output |
+
+### PMC Tools
+
+| Function                                 | Purpose                           |
+| ---------------------------------------- | --------------------------------- |
+| `pmc_esearch(query)`                     | Search PMC for full-text articles |
+| `pmc_efetch_fulltext_xml(pmcids)`        | Fetch full-text XML               |
+| `pmc_fulltext_summarizable_chunk(query)` | Combo: search + full-text fetch   |
+| `summarize_pmc_results(chunk)`           | LLM summary via `gpt-5-nano`      |
+
+### Exposed as @tool
+
+- `pubmed_literature_search_tool` — mutates `runtime.state["steps_taken"]`, `runtime.state["citations"]`, `runtime.state["research_notes"]`
+- `pmc_fulltext_literature_tool` — same pattern
+
+### Models
+
+- `PubMedCitation(pmid, title, authors, journal, pub_date, abstract_text, mesh_terms, doi)`
+- `PubMedResultsSummary(total_results, key_findings, relevant_citations, methodology_notes, gaps_identified)`
+
+## formatters.py — Debug/UX Helpers
+
+Pure string utilities (no LangChain imports):
+
+- `_truncate_text(text, max_chars)` — truncates with `... [truncated]` suffix
+- `_format_tavily_event_block(title, events, max_events)` — last N Tavily events formatted for prompt injection
+- `_format_file_state_block(written, edited, read, filesystem_events)` — file path lists + recent events
+
+Used by `agent/config.py` (memory ingestion prompt) and `agent/factory.py` (dynamic prompt middleware).
+
+## Adding New Tools
+
+1. Implement as `@tool` function returning `Command(update={...}, messages=[ToolMessage(...)])` for state tracking
+2. Add to `TOOLS_MAP` in `agent/config.py` if it should be selectable via mission JSON
+3. If it needs filesystem tracking, ensure `monitor_filesystem_tools` intercepts it (add tool name to the intercepted set)
+4. Update `MissionSliceInput.selected_tool_names` default if it should be included by default

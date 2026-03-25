@@ -10,14 +10,39 @@ from unittest.mock import AsyncMock, patch
 
 import pytest
 
-from src.research.langchain_agent.models.mission import (
-    ELYSIUM_RESEARCH_MISSION,
-    QUALIA_RESEARCH_MISSION,
-)
+from src.research.langchain_agent.agent.config import MissionSliceInput, ResearchPromptSpec
+from src.research.langchain_agent.models.mission import MissionStage, ResearchMission
 from src.research.langchain_agent.workflow.run_mission import _topological_stage_order
 from src.research.langchain_agent.run_mission import load_mission_from_file
 
 MISSIONS_DIR = Path(__file__).resolve().parent.parent / "test_runs" / "missions"
+
+_SPEC = ResearchPromptSpec(agent_identity="test agent")
+
+
+def _stage(task_slug: str, mission_id: str = "m1", dependencies: list[str] | None = None) -> MissionStage:
+    return MissionStage(
+        slice_input=MissionSliceInput(
+            task_id=task_slug,
+            mission_id=mission_id,
+            task_slug=task_slug,
+            user_objective="test objective",
+        ),
+        prompt_spec=_SPEC,
+        dependencies=dependencies or [],
+    )
+
+
+def _mission_with_deps() -> ResearchMission:
+    """Build a minimal mission: fundamentals → (products, leadership depends on fundamentals)."""
+    return ResearchMission(
+        mission_id="test-mission",
+        stages=[
+            _stage("fundamentals"),
+            _stage("products", dependencies=["fundamentals"]),
+            _stage("leadership", dependencies=["fundamentals"]),
+        ],
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -25,24 +50,15 @@ MISSIONS_DIR = Path(__file__).resolve().parent.parent / "test_runs" / "missions"
 # ---------------------------------------------------------------------------
 
 
-def test_elysium_topological_order_places_fundamentals_before_leadership():
-    mission = ELYSIUM_RESEARCH_MISSION
+def test_topological_order_places_dep_before_dependents():
+    mission = _mission_with_deps()
     ordered = _topological_stage_order(mission)
     slug_order = [mission.stages[i].slice_input.task_slug for i in ordered]
-    fundamentals_pos = slug_order.index("elysium-company-fundamentals")
-    leadership_pos = slug_order.index("elysium-leadership-and-advisors")
-    assert fundamentals_pos < leadership_pos, (
-        f"Expected fundamentals before leadership; got order: {slug_order}"
-    )
-
-
-def test_qualia_topological_order_places_fundamentals_before_products():
-    mission = QUALIA_RESEARCH_MISSION
-    ordered = _topological_stage_order(mission)
-    slug_order = [mission.stages[i].slice_input.task_slug for i in ordered]
-    fundamentals_pos = slug_order.index("qualia-company-fundamentals")
-    products_pos = slug_order.index("qualia-products-and-specs")
+    fundamentals_pos = slug_order.index("fundamentals")
+    products_pos = slug_order.index("products")
+    leadership_pos = slug_order.index("leadership")
     assert fundamentals_pos < products_pos
+    assert fundamentals_pos < leadership_pos
 
 
 def test_mini_mission_single_stage_order():
@@ -61,7 +77,7 @@ def test_dependency_reports_injected():
     The runner should inject prior stage reports into dependency_reports.
     Verify the shape by simulating what run_mission does inline.
     """
-    mission = ELYSIUM_RESEARCH_MISSION
+    mission = _mission_with_deps()
     ordered = _topological_stage_order(mission)
     report_by_slug: dict[str, str] = {}
 
@@ -73,17 +89,13 @@ def test_dependency_reports_injected():
                 slug: report_by_slug.get(slug, "")
                 for slug in stage.dependencies
             }
-        # Simulate stage completing and producing a report
         report_by_slug[run_input.task_slug] = f"Report for {run_input.task_slug}"
 
     leadership_stage = next(
-        s for s in mission.stages
-        if s.slice_input.task_slug == "elysium-leadership-and-advisors"
+        s for s in mission.stages if s.slice_input.task_slug == "leadership"
     )
-    # After simulation, leadership should have fundamentals injected
-    # (We verify the pattern, not actual injection — that happens at runtime)
-    assert "elysium-company-fundamentals" in leadership_stage.dependencies
-    assert "elysium-company-fundamentals" in report_by_slug
+    assert "fundamentals" in leadership_stage.dependencies
+    assert "fundamentals" in report_by_slug
 
 
 # ---------------------------------------------------------------------------

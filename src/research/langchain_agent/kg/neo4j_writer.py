@@ -325,6 +325,7 @@ async def upsert_temporal_relationship(
         "EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER",
         "HAS_SCIENTIFIC_ADVISOR", "HAS_EXECUTIVE_ROLE",
         "OFFERS_PRODUCT", "CONTAINS_COMPOUND_FORM",
+        "DELIVERS_LAB_TEST", "IMPLEMENTS_PANEL", "INCLUDES_LABTEST",
     }
     if rel_type not in allowed_rel_types:
         logger.warning("[neo4j_writer] Unknown rel_type %s — skipping.", rel_type)
@@ -445,12 +446,14 @@ async def write_extraction_to_neo4j(
 
     Returns:
         Dict with counts: orgs_written, persons_written, products_written,
-        compounds_written, rels_written, rels_skipped, states_created,
-        states_skipped.
+        compounds_written, lab_tests_written, panels_written,
+        rels_written, rels_skipped, states_created, states_skipped.
     """
     from src.research.langchain_agent.kg.neo4j_resolver import (
         resolve_compound_form_id,
+        resolve_lab_test_id,
         resolve_organization_id,
+        resolve_panel_definition_id,
         resolve_person_id,
         resolve_product_id,
     )
@@ -466,6 +469,8 @@ async def write_extraction_to_neo4j(
         "persons_written": 0,
         "products_written": 0,
         "compounds_written": 0,
+        "lab_tests_written": 0,
+        "panels_written": 0,
         "rels_written": 0,
         "rels_skipped": 0,
         "states_created": 0,
@@ -476,6 +481,8 @@ async def write_extraction_to_neo4j(
     person_name_to_id: dict[str, str] = {}
     product_name_to_id: dict[str, str] = {}
     compound_name_to_id: dict[str, str] = {}
+    lab_test_name_to_id: dict[str, str] = {}
+    panel_name_to_id: dict[str, str] = {}
 
     # --- Organizations -------------------------------------------------------
     for org in extraction.organizations:
@@ -623,7 +630,6 @@ async def write_extraction_to_neo4j(
             continue
         seen_compounds.add(cname)
 
-        from src.research.langchain_agent.kg.neo4j_resolver import resolve_compound_form_id
         existing_id = await resolve_compound_form_id(client, cname)
         cid = existing_id or str(uuid4())
         key = f"compound:{cname}"

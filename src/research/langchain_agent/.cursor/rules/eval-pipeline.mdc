@@ -1,0 +1,194 @@
+---
+description: Evaluation framework — LangSmith datasets, evaluator registry, LLM-as-judge and code evaluators, static vs live targets, scoring rubrics, and CLI usage
+globs: "**/langchain_agent/eval/**"
+alwaysApply: false
+---
+
+# Evaluation Pipeline
+
+## Architecture
+
+```
+build_datasets.py            run_eval.py                    evaluators.py
+┌──────────────────┐   ┌───────────────────────┐   ┌─────────────────────────┐
+│ Mission JSON +   │──▶│ EVALUATOR_REGISTRY    │──▶│ LLM judges:             │
+│ run outputs      │   │                       │   │   report_completeness   │
+│         ↓        │   │ static_target (pass-  │   │   report_accuracy       │
+│ build_stage_     │   │   through to ref)     │   │                         │
+│ dataset()        │   │ live_target (re-runs  │   │ Code checks:            │
+│         ↓        │   │   run_single_mission_ │   │   report_structure      │
+│ upload_dataset() │   │   slice)              │   │   source_quality        │
+│         ↓        │   │         ↓             │   │   tool_efficiency       │
+│ LangSmith        │   │ aevaluate(target,     │   │   iteration_convergence │
+│   Dataset        │◀──│   data, evaluators)   │   │                         │
+└──────────────────┘   └───────────────────────┘   └─────────────────────────┘
+                                                            ↓
+                                                    rubrics.py
+                                                    (prompts + thresholds)
+```
+
+## Evaluator Registry
+
+```python
+EVALUATOR_REGISTRY = {
+    "report_completeness": report_completeness,    # LLM judge
+    "report_accuracy": report_accuracy,            # LLM judge
+    "report_structure": report_structure,           # code check
+    "source_quality": source_quality,              # code check
+    "tool_efficiency": tool_efficiency,            # code check
+    "iteration_convergence": iteration_convergence, # code check
+}
+
+DEFAULT_EVALUATORS = ["report_completeness", "report_structure", "source_quality"]
+```
+
+All evaluators follow the LangSmith convention:
+
+```python
+def evaluator(inputs: dict, outputs: dict, reference_outputs: dict | None) -> dict:
+    return {"key": str, "score": float, "comment": str}
+```
+
+## Evaluator Details
+
+### LLM-as-Judge (use OpenAI via `wrappers.wrap_openai`)
+
+| Evaluator | Model | Rubric | Score range | Subscores |
+|-----------|-------|--------|-------------|-----------|
+| `report_completeness` | gpt-5-mini | `REPORT_COMPLETENESS_RUBRIC` | 0-1.0 (total_score/10) | section_coverage (0-3), depth (0-3), source_attribution (0-2), actionability (0-2) |
+| `report_accuracy` | gpt-5-mini | `REPORT_ACCURACY_RUBRIC` | 0-1.0 (total_score/10) | factual_consistency (0-4), source_alignment (0-3), claim_calibration (0-3) |
+
+Both return JSON with `total_score`, subscores, `reasoning`, and specific issue lists (`missing_sections` or `flagged_claims`).
+
+### Code-Based Evaluators
+
+| Evaluator | What it checks | Score logic |
+|-----------|---------------|-------------|
+| `report_structure` | Required section headings present as `## Heading` | `found / total_required` |
+| `source_quality` | URL count + domain diversity from report + visited_urls | 0→no sources, 0.3→<3 URLs, 0.5→1 domain, 0.7→adequate, 0.7+→good |
+| `tool_efficiency` | Tool calls vs `max_step_budget` | Penalizes over-budget and under-utilization (<30%). Sweet spot ~70% |
+| `iteration_convergence` | Confidence progression across `next_steps_history` | Checks total improvement, avg improvement, diminishing returns |
+
+### Convergence Thresholds (from rubrics.py)
+
+```python
+PASS_THRESHOLD = 0.7
+EXCELLENT_THRESHOLD = 0.9
+MIN_CONFIDENCE_IMPROVEMENT_PER_ITERATION = 0.05
+DIMINISHING_RETURNS_THRESHOLD = 0.02
+```
+
+## Static vs Live Targets
+
+| Mode | Target function | What happens | When to use |
+|------|----------------|-------------|-------------|
+| **Static** (default) | `static_target` | Returns `inputs` as-is; evaluators fall back to `reference_outputs` | Scoring existing reports without re-running agents |
+| **Live** | `live_target` | Runs `run_single_mission_slice` with full persistence stack | Regression testing, comparing agent versions |
+
+### Static/Live Fallback Pattern
+
+Evaluators use `_extract_report(outputs, reference_outputs)`:
+- Live mode: `outputs` contains `report` / `final_report_text` from fresh agent run
+- Static mode: `outputs` is just `inputs` (no report key) → falls back to `reference_outputs` which has the stored report
+
+Same pattern for `_extract_visited_urls()`.
+
+## Dataset Building (build_datasets.py)
+
+### Default Directories
+
+```python
+DEFAULT_MISSIONS_DIR = .../langchain_agent/test_runs/missions/
+DEFAULT_OUTPUTS_DIR  = .../langchain_agent/test_runs/run_outputs/
+DEFAULT_REPORTS_DIR  = .../langchain_agent/agent_outputs/reports/
+```
+
+### Report Resolution Order
+
+`_find_stage_report(task_slug, outputs_dir, reports_dir)`:
+1. `outputs_dir/*{task_slug}*_report.md` (and subdirs)
+2. `reports_dir/{task_slug}.md` (agent_outputs/reports/)
+
+### Dataset Example Shape
+
+```python
+{
+    "inputs": {
+        "mission_name": str,
+        "task_slug": str,
+        "user_objective": str,
+        "targets": list[str],
+        "selected_tool_names": list[str],
+        "report_required_sections": list[str],
+        "stage_type": str,
+        "max_step_budget": int,
+    },
+    "outputs": {
+        "report": str,              # full report markdown
+        "final_report_text": str,   # same as report (dual key for compat)
+        "task_slug": str,
+        "visited_urls": list[str],  # extracted from memory_report.summary
+    }
+}
+```
+
+### upload_dataset()
+
+- Uses `langsmith.Client` with `LANGSMITH_API_KEY`
+- **Deletes existing dataset** with same name before creating new one
+- Creates examples with `client.create_examples(inputs, outputs, dataset_id)`
+
+## CLI Commands
+
+```bash
+# Build dataset from all missions in default dir
+uv run python -m src.research.langchain_agent.eval.build_datasets
+
+# Build from specific mission file
+uv run python -m src.research.langchain_agent.eval.build_datasets \
+    --mission-file .../missions/analytical_resource_labs.json \
+    --outputs-dir .../run_outputs/analytical_resource_labs
+
+# Dry run (print without uploading)
+uv run python -m src.research.langchain_agent.eval.build_datasets \
+    --mission-file .../missions/elysium_mini.json --dry-run
+
+# Run static eval against pre-built dataset
+uv run python -m src.research.langchain_agent.eval.run_eval \
+    --dataset biotech-research-reports-v1 \
+    --experiment baseline-v1
+
+# Run with specific evaluators
+uv run python -m src.research.langchain_agent.eval.run_eval \
+    --dataset biotech-research-reports-v1 \
+    --experiment structure-only \
+    --evaluators report_structure source_quality
+
+# Inline dataset build + eval (no separate build step)
+uv run python -m src.research.langchain_agent.eval.run_eval \
+    --from-mission-file .../missions/analytical_resource_labs.json \
+    --from-run-outputs-dir .../run_outputs/analytical_resource_labs \
+    --experiment arl-eval-v1
+
+# Live re-execution eval
+uv run python -m src.research.langchain_agent.eval.run_eval \
+    --from-mission-file .../missions/elysium_mini.json \
+    --from-run-outputs-dir .../run_outputs/elysium_mini \
+    --experiment live-test --no-static
+```
+
+## Adding New Evaluators
+
+1. Define function in `evaluators.py` with signature `(inputs, outputs, reference_outputs) -> {"key", "score", "comment"}`
+2. Use `_extract_report()` / `_extract_visited_urls()` for static/live compat
+3. Add `@traceable(name="eval:your_name", run_type="chain")` for LangSmith visibility
+4. Register in `EVALUATOR_REGISTRY` in `run_eval.py`
+5. Add to `DEFAULT_EVALUATORS` if it should run by default
+6. If LLM-based, add rubric to `rubrics.py` and use `_get_judge_client()` for the wrapped OpenAI client
+
+## Dependencies
+
+- `langsmith` — `aevaluate`, `Client`, `traceable`, `wrappers.wrap_openai`
+- `observability/tracing.py` — `eval_tracing_context` scopes experiments to `biotech-research-evals` project
+- `workflow/run_slice.run_single_mission_slice` — used by `live_target`
+- `storage/langgraph_persistence.get_persistence` + `memory/langmem_manager.build_langmem_manager` — used by `live_target`

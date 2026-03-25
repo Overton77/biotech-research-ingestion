@@ -1,0 +1,205 @@
+---
+description: Workflow internals — mission orchestration, single-slice lifecycle, iterative stage loop, iteration control, state snapshots, and return value contracts
+globs: "**/langchain_agent/workflow/**"
+alwaysApply: false
+---
+
+# Workflow Orchestration
+
+Complements `mission-running.mdc` (which covers CLI, JSON format, output layout). This rule covers the **internal code patterns** of the workflow/ directory.
+
+## Module Responsibilities
+
+| Module | Role | Pure? |
+|--------|------|-------|
+| `run_mission.py` | Top-level orchestrator — topological order, dependency injection, MissionRunDocument lifecycle | No (async, Beanie) |
+| `run_slice.py` | Single execution unit — memory recall → agent → memory ingestion → S3 → StageRunRecord | No (async, agents, S3) |
+| `run_iterative_stage.py` | Loop wrapper around `run_single_mission_slice` + next-steps extraction | No (async, agents) |
+| `iteration_control.py` | Stop conditions, context builder, report synthesis | **Yes** (pure functions) |
+
+## Public API (`workflow/__init__.py`)
+
+Only two symbols are exported:
+- `run_mission` — from `run_mission.py`
+- `run_single_mission_slice` — from `run_slice.py`
+
+Internal modules (`run_iterative_stage`, `iteration_control`) are used by the workflow layer only.
+
+## run_mission.py — Mission Orchestration
+
+### Topological Ordering
+
+`_topological_stage_order(mission)` → `List[int]` of stage indices respecting `MissionStage.dependencies`.
+
+- Greedy algorithm: repeatedly append first stage whose dependency slugs are all in the ordered set
+- On deadlock (cycle or missing dep): appends remaining stages in definition order — **does not raise**
+
+### Execution Loop
+
+```
+for idx in ordered_indices:
+    stage = mission.stages[idx]
+    dep_reports = {slug: report_by_slug[slug] for slug in stage.dependencies if slug in report_by_slug}
+
+    if stage.iterative_config is not None:
+        iter_result = await run_iterative_stage(stage, dependency_reports=dep_reports, ...)
+        report_by_slug[slug] = iter_result.combined_report    # downstream sees combined report
+        outputs.extend(iter_result.iteration_outputs)          # flat list of all iteration dicts
+    else:
+        run_input = stage.slice_input.model_copy(deep=True)
+        run_input.dependency_reports = dep_reports
+        out = await run_single_mission_slice(run_input, ...)
+        report_by_slug[slug] = out["final_report_text"]
+        outputs.append(out)
+```
+
+### MissionRunDocument Lifecycle
+
+1. **Create** at mission start (non-blocking on failure)
+2. **Append** `StageRunRecord` or `IterativeStageRecord` after each stage + `await save()`
+3. **mark_completed()** / **mark_failed(error)** at end
+4. All MongoDB ops are wrapped in try/except — failures are logged, never raised
+
+### Return Value
+
+`List[Dict[str, Any]]` — one dict per slice run. Iterative stages extend (not append) the list with every iteration's dict.
+
+## run_slice.py — Single Slice Lifecycle
+
+### Execution Steps (in order)
+
+1. `inject_stage_metadata()` — enrich LangSmith trace
+2. `ensure_dirs()` — create agent_outputs subdirs
+3. **Memory recall** — `load_memories_for_prompt(manager, run_input, config)` → `{semantic_memories, episodic_memories, procedural_memories}`
+4. `input_to_agent_state(run_input)` + merge recalled memories
+5. **Build agent** — `build_research_agent(prompt_spec, execution_reminders, selected_tool_names, store, checkpointer)`
+6. **Build user message** — `_build_user_message(run_input)`:
+   - Temporal context header (current_date, research_date, scope)
+   - Dependency reports (if any) as "Reports from prior stages"
+   - `user_objective`
+   - Temporal reporting reminder
+   - Report template (required sections as `## Heading` skeleton) if `report_required_sections` is set
+   - Guidance notes (from iterative context)
+7. **Agent invoke** — `research_agent.ainvoke({messages: [user_msg], **agent_state}, config)`
+8. **State snapshots** — write 4 JSON files to `snapshot_output_dir/state_snapshots/` (if provided)
+9. **Read final report** from filesystem (`report_path`)
+10. **Memory report agent** — `build_memory_report_agent().ainvoke(memory_prompt)` → `ResearchTaskMemoryReport`
+11. **Memory ingestion** — `memory_manager.ainvoke(memory_messages, config)` → writes to LangGraph store
+12. **S3 persist** — `persist_slice_artifacts()` → `(StageArtifacts, MemoryReportRecord)`
+13. **Build StageRunRecord** — assembles all artifacts, timestamps, LangSmith trace ID
+
+### Return Dict Shape
+
+```python
+{
+    "result": Dict,                        # full LangGraph result (messages, state fields)
+    "final_agent_response": str,           # last message content
+    "final_report_text": str,              # read from filesystem
+    "structured_memory_report": ResearchTaskMemoryReport,
+    "memory_updates": List[Dict],          # LangMem write results
+    "agent_state": Dict,                   # alias for result
+    "file_results": List,                  # result.get("file_results", [])
+    "stage_run_record": StageRunRecord,    # persistence record
+    "langsmith_run_id": str | None,        # trace ID
+}
+```
+
+### State Snapshot Files
+
+Written to `snapshot_output_dir/state_snapshots/` when `--output-dir` is provided:
+
+| File | Contents |
+|------|----------|
+| `state_{slug}_01_input.json` | run_thread_id, user_message, recalled_memories, targets, budget |
+| `state_{slug}_02_messages.json` | Full serialized message history |
+| `state_{slug}_03_tool_calls.json` | Extracted tool call + response log |
+| `state_{slug}_04_final_state.json` | visited_urls, written_file_paths, step_count, findings, events, etc. |
+
+For iterative stages, filenames include `_iter{NN}` suffix.
+
+## run_iterative_stage.py — Iterative Loop
+
+### IterativeStageResult (dataclass)
+
+```python
+@dataclass
+class IterativeStageResult:
+    task_slug: str
+    iterations_completed: int = 0
+    stop_reason: str = ""                  # machine-readable label
+    combined_report: str = ""              # synthesized from all iteration reports
+    iteration_outputs: List[Dict] = []     # one per run_single_mission_slice call
+    next_steps_history: List[Dict] = []    # NextStepsArtifact.model_dump() per iteration
+    iteration_reports: List[str] = []      # raw report text per iteration
+```
+
+### Loop Structure
+
+```
+for iteration in range(1, config.max_iterations + 1):
+    1. run_single_mission_slice(current_input, ..., iteration=iteration)
+    2. _extract_next_steps(...) → NextStepsArtifact
+    3. evaluate_stop_condition(next_steps, iteration, config) → (should_stop, reason)
+    4. if should_stop: break
+    5. build_iteration_context(...) → updated MissionSliceInput for next iteration
+       (refines user_objective, appends prior reports to guidance_notes)
+else:
+    stop_reason = "max_iterations_reached"
+
+combined_report = synthesize_iteration_reports(reports, task_slug, user_objective)
+```
+
+### Next-Steps Extraction
+
+`_extract_next_steps()` builds a separate `build_next_steps_agent()` (no tools, structured output → `NextStepsArtifact`) and invokes it with:
+- Original objective
+- Completion criteria (from `IterativeStageConfig`)
+- Current iteration's report (truncated to 10k chars)
+- Agent's last response (truncated to 3k chars)
+
+## iteration_control.py — Pure Functions
+
+### Stop Conditions (`evaluate_stop_condition`)
+
+Evaluated in order — first match wins:
+
+| Condition | Reason label |
+|-----------|-------------|
+| `iteration >= config.max_iterations` | `max_iterations_reached` |
+| `next_steps.stage_complete == True` | `stage_signaled_complete` |
+| `config.stop_on_no_next_steps and not next_steps.open_questions` | `no_material_next_steps` |
+| `next_steps.confidence >= 0.9` | `high_confidence_threshold` |
+| None of the above | `continue` |
+
+### Context Builder (`build_iteration_context`)
+
+Produces a new `MissionSliceInput` for the next iteration:
+- **user_objective** refined: original objective + focus from `suggested_focus` + high/medium priority open questions + key findings
+- **guidance_notes** extended: prior iteration reports (last N per `carry_forward_reports`, truncated to 6k chars each)
+- All other fields (`targets`, `tools`, `stage_type`) copied from original input
+- `dependency_reports` re-applied by the caller (not carried in context)
+
+### Report Synthesis (`synthesize_iteration_reports`)
+
+Deterministic markdown concatenation (no LLM):
+```markdown
+# Combined Iterative Report: {task_slug}
+**Objective:** {user_objective}
+**Iterations completed:** {N}
+---
+## Iteration 1
+{report text}
+---
+## Iteration 2
+...
+```
+
+This combined report is what downstream dependent stages receive via `dependency_reports`.
+
+## Critical Patterns
+
+1. **Dependency reports flow between stages, not iterations** — `dependency_reports` connects stages via `report_by_slug`; within an iterative stage, context flows via `guidance_notes`
+2. **All persistence is fire-and-forget** — MongoDB saves, S3 uploads wrapped in try/except; research output always returned
+3. **Thread IDs** — each slice gets a unique `{task_id}-{uuid8}` thread ID for LangGraph checkpointing
+4. **deep copy before mutation** — `stage.slice_input.model_copy(deep=True)` before setting `dependency_reports`
+5. **Iteration number is 1-based** — passed to `run_single_mission_slice(iteration=N)` and used in snapshot filenames

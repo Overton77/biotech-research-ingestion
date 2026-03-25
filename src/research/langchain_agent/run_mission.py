@@ -3,10 +3,6 @@ Entrypoint: run a full ResearchMission with dependency ordering and report injec
 
 Usage examples
 --------------
-# Named mission (hardcoded definitions in models/mission.py)
-uv run python -m src.research.langchain_agent.run_mission --mission qualia
-uv run python -m src.research.langchain_agent.run_mission --mission elysium
-
 # Mission from a JSON file (written by agent or human)
 uv run python -m src.research.langchain_agent.run_mission \
   --mission-file src/research/langchain_agent/test_runs/missions/elysium_mini.json
@@ -52,8 +48,6 @@ from src.research.langchain_agent.agent.config import (
     dump_file,
 )
 from src.research.langchain_agent.models.mission import (
-    QUALIA_RESEARCH_MISSION,
-    ELYSIUM_RESEARCH_MISSION,
     IterativeStageConfig,
     MissionStage,
     ResearchMission,
@@ -62,12 +56,6 @@ from src.research.langchain_agent.observability.tracing import mission_tracing_c
 from src.research.langchain_agent.workflow.run_mission import run_mission as run_mission_workflow
 
 logger = logging.getLogger(__name__)
-
-# Named missions for --mission flag
-NAMED_MISSIONS: dict[str, ResearchMission] = {
-    "qualia": QUALIA_RESEARCH_MISSION,
-    "elysium": ELYSIUM_RESEARCH_MISSION,
-}
 
 
 # ---------------------------------------------------------------------------
@@ -124,6 +112,7 @@ def load_mission_from_file(path: Path | str) -> ResearchMission:
         mission_name=raw.get("mission_name", raw["mission_id"]),
         base_domain=raw.get("base_domain", ""),
         stages=stages,
+        run_kg=raw.get("run_kg", False),
     )
 
 
@@ -229,16 +218,15 @@ def _write_iterative_stage_summaries(
 
 def _get_mission(
     mission: Optional[ResearchMission],
-    mission_name: Optional[str],
     mission_file: Optional[str],
 ) -> ResearchMission:
     if mission is not None:
         return mission
     if mission_file:
         return load_mission_from_file(Path(mission_file))
-    if mission_name and mission_name in NAMED_MISSIONS:
-        return NAMED_MISSIONS[mission_name]
-    return QUALIA_RESEARCH_MISSION
+    raise ValueError(
+        "A mission must be provided: pass a ResearchMission object or --mission-file <path>."
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -246,33 +234,91 @@ def _get_mission(
 # ---------------------------------------------------------------------------
 
 
+async def _submit_to_temporal(
+    resolved_mission: ResearchMission,
+    *,
+    output_dir: Optional[str] = None,
+) -> None:
+    """Submit the mission to Temporal and wait for the result."""
+    from src.infrastructure.temporal.client import get_temporal_client
+    from src.infrastructure.temporal.models import MissionWorkflowInput
+    from src.infrastructure.temporal.workflows.research_mission import ResearchMissionWorkflow
+
+    client = await get_temporal_client()
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    workflow_id = f"research-mission-{resolved_mission.mission_id}-{timestamp}"
+
+    wf_input = MissionWorkflowInput(
+        mission_json=resolved_mission.model_dump(mode="json"),
+        run_kg=resolved_mission.run_kg,
+        output_dir=output_dir,
+    )
+
+    print(f"\n=== Submitting to Temporal ===")
+    print(f"Workflow ID : {workflow_id}")
+    print(f"Task queue  : deep-research-mission")
+    print(f"Mission     : {resolved_mission.mission_name}")
+    print(f"Stages      : {len(resolved_mission.stages)}")
+    print(f"Run KG      : {resolved_mission.run_kg}")
+    for s in resolved_mission.stages:
+        deps = f" (depends on: {', '.join(s.dependencies)})" if s.dependencies else ""
+        iterative = (
+            f" [iterative: max={s.iterative_config.max_iterations}]"
+            if s.iterative_config else ""
+        )
+        print(f"  - {s.slice_input.task_slug}{deps}{iterative}")
+
+    handle = await client.start_workflow(
+        ResearchMissionWorkflow.run,
+        wf_input,
+        id=workflow_id,
+        task_queue="deep-research-mission",
+    )
+    print(f"\nWorkflow started. Waiting for result...")
+    print(f"Monitor at: http://localhost:8088/namespaces/default/workflows/{workflow_id}")
+
+    result = await handle.result()
+
+    print(f"\n=== TEMPORAL MISSION COMPLETE ===")
+    print(f"Status             : {result.status}")
+    print(f"Stages completed   : {result.stages_completed}")
+    print(f"Stages failed      : {result.stages_failed}")
+    print(f"KG ingestions      : {result.kg_ingestions_completed}")
+    for sr in result.stage_results:
+        status_icon = "ok" if sr.status == "completed" else "FAIL"
+        report_len = len(sr.final_report_text) if sr.final_report_text else 0
+        print(f"  {sr.task_slug}: {status_icon}  ({report_len} chars)")
+    print()
+
+
 async def main(
     mission: Optional[ResearchMission] = None,
     *,
-    mission_name: Optional[str] = None,
     mission_file: Optional[str] = None,
     output_dir: Optional[str] = None,
     stage_filter: Optional[str] = None,
+    run_kg: bool = False,
+    local: bool = False,
 ) -> None:
     """
     Run a full ResearchMission.
 
+    By default, submits to Temporal for durable, DAG-parallel execution.
+    Use ``local=True`` (or ``--local`` CLI flag) for direct async execution.
+
     Args:
-        mission:       ResearchMission object. Takes precedence over other args.
-        mission_name:  Named key ('qualia', 'elysium') for CLI use.
-        mission_file:  Path to a JSON mission file.
-        output_dir:    Directory to write JSON summaries after each stage + final.
-        stage_filter:  If set, run only the stage whose task_slug matches this value.
+        mission:      ResearchMission object. Takes precedence over mission_file.
+        mission_file: Path to a JSON mission definition file.
+        output_dir:   Directory to write JSON summaries after each stage + final.
+        stage_filter: If set, run only the stage whose task_slug matches this value.
+        run_kg:       Run KG ingestion on completed stage reports.
+        local:        Run locally without Temporal (sequential, no parallelism).
     """
-    from src.research.langchain_agent.memory.langmem_manager import build_langmem_manager
-    from src.research.langchain_agent.storage.langgraph_persistence import get_persistence
-    from src.research.langchain_agent.storage.models import init_research_agent_beanie
+    resolved_mission = _get_mission(mission, mission_file)
 
-    store, checkpointer = await get_persistence()
-    await init_research_agent_beanie()
-    memory_manager = await build_langmem_manager(store=store)
+    if run_kg:
+        resolved_mission = resolved_mission.model_copy(update={"run_kg": True})
 
-    resolved_mission = _get_mission(mission, mission_name, mission_file)
     out_dir = Path(output_dir) if output_dir else None
 
     # Filter stages if --stage is given
@@ -290,9 +336,27 @@ async def main(
             update={"stages": filtered_stages}
         )
 
-    print(f"\n=== Running mission: {resolved_mission.mission_name} ===")
+    # ------------------------------------------------------------------
+    # Route: Temporal (default) or local
+    # ------------------------------------------------------------------
+    if not local:
+        await _submit_to_temporal(resolved_mission, output_dir=output_dir)
+        return
+
+    # ------------------------------------------------------------------
+    # Local execution path (sequential, no Temporal)
+    # ------------------------------------------------------------------
+    from src.research.langchain_agent.memory.langmem_manager import build_langmem_manager
+    from src.research.langchain_agent.storage.langgraph_persistence import get_persistence
+    from src.research.langchain_agent.storage.models import init_research_agent_beanie
+
+    store, checkpointer = await get_persistence()
+    await init_research_agent_beanie()
+    memory_manager = await build_langmem_manager(store=store)
+
+    print(f"\n=== Running mission (local): {resolved_mission.mission_name} ===")
     print(f"Mission ID : {resolved_mission.mission_id}")
-    print(f"Source     : {mission_file or mission_name or 'direct object'}")
+    print(f"Source     : {mission_file or 'direct object'}")
     print(f"Stages     : {len(resolved_mission.stages)}")
     if out_dir:
         print(f"Output dir : {out_dir}")
@@ -443,21 +507,15 @@ if __name__ == "__main__":
     )
 
     parser = argparse.ArgumentParser(
-        description="Run a ResearchMission. Supports named missions and JSON mission files.",
+        description="Run a ResearchMission from a JSON mission file.",
     )
 
-    mission_group = parser.add_mutually_exclusive_group()
-    mission_group.add_argument(
-        "--mission",
-        type=str,
-        choices=list(NAMED_MISSIONS),
-        help="Named mission to run (e.g. qualia, elysium).",
-    )
-    mission_group.add_argument(
+    parser.add_argument(
         "--mission-file",
         type=str,
         dest="mission_file",
         metavar="PATH",
+        required=True,
         help="Path to a JSON mission definition file.",
     )
 
@@ -475,14 +533,26 @@ if __name__ == "__main__":
         metavar="SLUG",
         help="Run only the stage with this task_slug.",
     )
+    parser.add_argument(
+        "--run-kg",
+        action="store_true",
+        dest="run_kg",
+        help="Run KG ingestion on completed stage reports after the mission.",
+    )
+    parser.add_argument(
+        "--local",
+        action="store_true",
+        help="Run locally without Temporal (sequential, no parallelism).",
+    )
 
     args = parser.parse_args()
 
     asyncio.run(
         main(
-            mission_name=args.mission,
             mission_file=args.mission_file,
             output_dir=args.output_dir,
             stage_filter=args.stage_filter,
+            run_kg=args.run_kg,
+            local=args.local,
         )
     )

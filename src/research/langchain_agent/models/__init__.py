@@ -1,25 +1,29 @@
 """
-Mission and stage models for multi-stage research runs.
+Research mission and persistence models.
 """
 
 from src.research.langchain_agent.models.mission import (
+    ArtifactRef,
+    IterativeStageConfig,
+    IterativeStageRecord,
+    MemoryReportRecord,
+    MissionRunDocument,
     MissionStage,
     ResearchMission,
-    QUALIA_RESEARCH_MISSION,
-    QUALIA_BASE_DOMAIN,
-    QUALIA_MISSION_ID,
-    ELYSIUM_RESEARCH_MISSION,
-    ELYSIUM_BASE_DOMAIN,
-    ELYSIUM_MISSION_ID,
+    StageArtifacts,
+    StageRunRecord,
+    init_research_agent_beanie,
 )
 
 __all__ = [
+    "ArtifactRef",
+    "IterativeStageConfig",
+    "IterativeStageRecord",
+    "MemoryReportRecord",
+    "MissionRunDocument",
     "MissionStage",
     "ResearchMission",
-    "QUALIA_RESEARCH_MISSION",
-    "QUALIA_BASE_DOMAIN",
-    "QUALIA_MISSION_ID",
-    "ELYSIUM_RESEARCH_MISSION",
-    "ELYSIUM_BASE_DOMAIN",
-    "ELYSIUM_MISSION_ID",
+    "StageArtifacts",
+    "StageRunRecord",
+    "init_research_agent_beanie",
 ]

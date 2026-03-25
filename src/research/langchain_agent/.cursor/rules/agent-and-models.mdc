@@ -1,0 +1,214 @@
+---
+description: Agent core runtime — state schema, tool registry, factory patterns, prompt assembly, mission config models, Beanie persistence models, and LangSmith tracing
+globs: "**/langchain_agent/agent/**,**/langchain_agent/models/**,**/langchain_agent/observability/**"
+alwaysApply: false
+---
+
+# Agent Core, Models & Observability
+
+## agent/config.py — Single Source of Truth
+
+### Tool Registry
+
+```python
+TOOLS_MAP: Dict[str, BaseTool] = {
+    "search_web": search_web,         # from tools_for_test/tavily_tools
+    "extract_from_urls": extract_from_urls,
+    "map_website": map_website,
+    "crawl_website": crawl_website,
+}
+```
+
+- `crawl_website` is imported in `factory.py` but NOT in `TOOLS_MAP` — not selectable via `MissionSliceInput`
+- `MissionSliceInput.selected_tool_names` validates against `TOOLS_MAP` keys — unknown names raise `ValueError`
+- Filesystem tools (`ls`, `read_file`, `write_file`, `edit_file`) come from `FilesystemMiddleware`, not `TOOLS_MAP`
+- Browser comes from `SubAgentMiddleware` (`browser_control` subagent), not `TOOLS_MAP`
+
+### Filesystem Paths
+
+```python
+ROOT_FILESYSTEM = .../langchain_agent/agent_outputs/   # resolved at import time
+RUNS_DIR        = ROOT_FILESYSTEM / "runs"
+REPORTS_DIR     = ROOT_FILESYSTEM / "reports"
+SCRATCH_DIR     = ROOT_FILESYSTEM / "scratch"
+```
+
+- `ensure_dirs()` creates all four dirs async (called at start of each slice)
+- Agent paths are always **relative** to `ROOT_FILESYSTEM`: `runs/<task_slug>/`, `reports/<task_slug>.md`
+- `build_run_paths(task_slug)` → `RunPathsInput(run_dir, report_path, scratch_dir)`
+
+### MissionSliceInput (Pydantic)
+
+One bounded agent run. Key fields and their roles:
+
+| Field                      | Type          | Default                                               | Purpose                                                                                             |
+| -------------------------- | ------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `task_id`                  | str           | required                                              | Unique run identifier                                                                               |
+| `mission_id`               | str           | required                                              | Groups stages into a mission                                                                        |
+| `task_slug`                | str           | required                                              | Human-readable stage key, used for paths and dependency refs                                        |
+| `user_objective`           | str           | required                                              | Main research instructions                                                                          |
+| `targets`                  | list[str]     | []                                                    | Entity names / domains to research                                                                  |
+| `dependency_reports`       | dict[str,str] | {}                                                    | `task_slug → markdown` from prior stages (set by runner, not JSON)                                  |
+| `selected_tool_names`      | list[str]     | [search_web, extract_from_urls, map_website]          | Validated against `TOOLS_MAP`                                                                       |
+| `report_required_sections` | list[str]     | [Exec Summary, Key Findings, Sources, Open Questions] | Enforced in prompt + eval                                                                           |
+| `guidance_notes`           | list[str]     | []                                                    | Extra context (iterative stages inject prior iteration summaries)                                   |
+| `stage_type`               | Literal       | "discovery"                                           | Options: discovery, entity_validation, official_site_mapping, targeted_extraction, report_synthesis |
+| `max_step_budget`          | int           | 12                                                    | Agent recursion limit hint                                                                          |
+| `temporal_scope`           | TemporalScope | current                                               | From `kg/extraction_models.py`                                                                      |
+| `research_date`            | str\|None     | None                                                  | ISO date for validFrom; defaults to today via `effective_research_date`                             |
+
+### BiotechResearchAgentState (extends AgentState)
+
+All fields on the agent's LangGraph state. Initialized by `input_to_agent_state(MissionSliceInput)`:
+
+**Identity:** `task_id`, `mission_id`, `task_slug`, `user_objective`, `targets`, `selected_tool_names`, `report_required_sections`, `stage_type`
+
+**Progress:** `search_stage` (init: "initialized"), `step_count` (init: 0), `max_step_budget`, `final_report_ready` (init: False)
+
+**Research state:** `official_domains` [], `visited_urls` [], `findings` [], `open_questions` [3 default questions]
+
+**Paths:** `run_dir` ("runs/{slug}"), `report_path` ("reports/{slug}.md")
+
+**Memories:** `semantic_memories`, `episodic_memories`, `procedural_memories` (formatted strings)
+
+**Tool event tracking:** `tavily_search_events` [], `tavily_extract_events` [], `tavily_map_events` [], `filesystem_events` [], `read_file_paths` [], `written_file_paths` [], `edited_file_paths` []
+
+**Temporal:** `current_date`, `research_date`, `temporal_scope_mode`, `temporal_scope_description`
+
+### ResearchPromptSpec (dataclass)
+
+Configurable per-stage prompt. Fields: `agent_identity`, `domain_scope`, `workflow`, `tool_guidance`, `subagent_guidance`, `practical_limits`, `filesystem_rules`, `intermediate_files`.
+
+- `render_base_prompt(current_date=...)` → full system prompt string
+- `PROMPT_SPEC` = default instance; `BASE_SYSTEM_PROMPT` = default rendered prompt
+- Missions override per-stage via JSON `prompt_spec` object
+
+### Structured Output Models
+
+- `ResearchTaskMemoryReport(mission_id, summary, file_paths)` — fed to LangMem after each slice
+- `NextStepsArtifact(stage_complete, confidence, open_questions: list[NextStepItem], suggested_focus, key_findings_this_iteration)` — iterative stage evaluation
+- `NextStepItem(question, priority: high|medium|low, rationale)`
+
+### Memory Helpers
+
+- `load_memories_for_prompt(manager, run_input, config)` → `{semantic_memories, episodic_memories, procedural_memories}` strings
+- `build_memory_ingestion_prompt(...)` → full prompt for the memory report agent (includes Tavily events, file state, report text)
+
+## agent/factory.py — Agent Construction
+
+### Middleware Stack Order (applied in this sequence)
+
+1. **`monitor_filesystem_tools`** — intercepts `ls`/`read_file`/`write_file`/`edit_file` → appends to `filesystem_events`, `read_file_paths`, `written_file_paths`, `edited_file_paths`; detects `reports/*.md` writes → sets `final_report_ready=True`
+2. **`FilesystemMiddleware`** (deepagents) — virtual sandbox over `ROOT_FILESYSTEM`, adds filesystem tools to agent
+3. **`_create_research_prompt_middleware(prompt_spec, execution_reminders)`** — `@dynamic_prompt` that reads full agent state each turn and builds the system prompt (base prompt + run context + temporal + memories + Tavily events + visited URLs + required sections)
+4. **`SubAgentMiddleware`** — exposes `browser_control` subagent via `task` tool
+
+### Agent Types
+
+| Builder                       | Model      | Tools                                               | Response format            | Purpose                    |
+| ----------------------------- | ---------- | --------------------------------------------------- | -------------------------- | -------------------------- |
+| `build_research_agent()`      | gpt-5-mini | TOOLS_MAP selection + filesystem + browser subagent | None (free text)           | Main research agent        |
+| `build_memory_report_agent()` | gpt-5-mini | None                                                | `ResearchTaskMemoryReport` | Post-run memory extraction |
+| `build_next_steps_agent()`    | gpt-5-mini | None                                                | `NextStepsArtifact`        | Iterative stage evaluation |
+
+### Browser Subagent
+
+- Built from `create_agent(model=gpt_5_mini, tools=[browser_interaction_task], system_prompt=BROWSER_CONTROL_SYSTEM_PROMPT)`
+- Wrapped as `CompiledSubAgent(name="browser_control", ...)` → registered in `SubAgentMiddleware`
+- Uses `browser_interaction_task` from `tools_for_test/playwright_agent.py` (LangChain + Playwright MCP over HTTP)
+- Commented-out alternative uses `playwright_mcp_specs` from `playwright_agent_tool.py` (LlamaIndex stack)
+
+## models/mission.py — Config + Persistence
+
+### Configuration Hierarchy (from mission JSON)
+
+```
+ResearchMission
+  ├── mission_id, mission_name, base_domain, run_kg
+  └── stages: list[MissionStage]
+        ├── slice_input: MissionSliceInput
+        ├── prompt_spec: ResearchPromptSpec
+        ├── execution_reminders: list[str]
+        ├── dependencies: list[str]          ← task_slugs this stage depends on
+        └── iterative_config: IterativeStageConfig | None
+              ├── max_iterations: int = 3
+              ├── completion_criteria: str
+              ├── carry_forward_reports: int = 2
+              └── stop_on_no_next_steps: bool = True
+```
+
+### Persistence Hierarchy (MongoDB via Beanie)
+
+```
+MissionRunDocument (collection: research_mission_runs)
+  ├── mission_id, mission_name, mission_type, status, langsmith_run_id
+  ├── stages: list[StageRunRecord]
+  │     ├── task_slug, stage_type, targets, dependencies, iteration, status
+  │     ├── final_report_text
+  │     ├── artifacts: StageArtifacts
+  │     │     ├── final_report: ArtifactRef | None
+  │     │     ├── intermediate_files: list[ArtifactRef]
+  │     │     ├── memory_report_json: ArtifactRef | None
+  │     │     └── agent_state_json: ArtifactRef | None
+  │     ├── memory_report: MemoryReportRecord | None
+  │     └── langsmith_run_id
+  └── iterative_stages: list[IterativeStageRecord]
+        ├── task_slug, max_iterations, iterations_completed, stop_reason
+        ├── iterations: list[StageRunRecord]
+        ├── combined_report_text
+        └── next_steps_history: list[dict]
+```
+
+- `ArtifactRef` = lightweight pointer (s3_uri, s3_key, local_path, artifact_type, filename, size_bytes)
+- `init_research_agent_beanie()` — idempotent, initializes Beanie with `mongo_client["biotech_research"]`
+- `storage/models.py` is a re-export shim: all real models live in `models/mission.py`
+
+### MissionRunDocument Methods
+
+- `append_stage(StageRunRecord)` / `append_iterative_stage(IterativeStageRecord)` — both update `updated_at`
+- `mark_completed()` / `mark_failed(error)` — set status + timestamps
+
+## observability/tracing.py — LangSmith Integration
+
+### Trace Hierarchy
+
+```
+Mission (traced_mission)
+  ├── Stage (traced_stage)
+  │   ├── memory_recall (traced_memory_recall, run_type="retriever")
+  │   ├── research_agent.ainvoke  ← auto-traced by LangChain
+  │   ├── memory_report_agent.ainvoke  ← auto-traced
+  │   └── memory_ingestion (traced_memory_ingestion)
+  └── Iterative Stage (traced_iterative_stage)
+      ├── Stage iteration 1 (traced_stage)
+      ├── next_steps_extraction (traced_next_steps_extraction)
+      └── Stage iteration 2 ...
+```
+
+### Projects
+
+| Constant          | Default value                                 | Used for               |
+| ----------------- | --------------------------------------------- | ---------------------- |
+| `MISSION_PROJECT` | `LANGSMITH_PROJECT` env or "biotech_research" | Mission runs           |
+| `EVAL_PROJECT`    | "biotech-research-evals"                      | Evaluation experiments |
+| `DEV_PROJECT`     | "biotech-research-dev"                        | Dev/debug              |
+
+### Key Functions
+
+- `mission_tracing_context(mission_id, mission_name, ...)` — context manager scoping nested traces to `MISSION_PROJECT`
+- `eval_tracing_context(dataset_name, experiment_name)` — scopes to `EVAL_PROJECT`
+- `get_current_trace_id()` → current LangSmith run ID or None
+- `inject_stage_metadata(mission_id, task_slug, stage_type, ...)` — enriches current trace span with searchable metadata + tags
+
+### Decorator Application
+
+Decorators are pre-built `traceable(...)` instances applied to workflow functions:
+
+| Decorator                       | Applied to                                           | run_type  |
+| ------------------------------- | ---------------------------------------------------- | --------- |
+| `@traced_mission`               | `workflow/run_mission.run_mission()`                 | chain     |
+| `@traced_stage`                 | `workflow/run_slice.run_single_mission_slice()`      | chain     |
+| `@traced_iterative_stage`       | `workflow/run_iterative_stage.run_iterative_stage()` | chain     |
+| `@traced_next_steps_extraction` | `workflow/run_iterative_stage._extract_next_steps()` | chain     |
+| `@traced_memory_recall`         | `workflow/run_slice._traced_memory_recall()`         | retriever |
+| `@traced_memory_ingestion`      | `workflow/run_slice._traced_memory_ingestion()`      | chain     |

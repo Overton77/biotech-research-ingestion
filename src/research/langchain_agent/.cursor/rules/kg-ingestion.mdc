@@ -1,0 +1,97 @@
+---
+description: Standalone KG ingestion — extracting entities from research reports into Neo4j knowledge graph via the kg/ pipeline
+globs: "**/langchain_agent/kg/**"
+alwaysApply: false
+---
+
+# Knowledge Graph Ingestion
+
+## Overview
+
+The `kg/` module extracts structured entities from completed research reports and writes them to Neo4j with bitemporal tracking. It runs as a 6-step pipeline orchestrated by `run_kg_ingestion.py`.
+
+## Pipeline Steps
+
+1. **Schema selection** — LLM picks relevant schema chunks from `kg/schema/schema_index.json` based on report content, stage_type, and targets
+2. **Schema loading** — selected chunks resolve to extraction contracts from `kg/schema/schema_registry.json`
+3. **Entity extraction** — extraction agent produces a `KGExtractionResult` (orgs, persons, products, compounds, lab tests, panels)
+4. **searchText generation** — LLM-generated for Org/Person/Product; field-concat for others
+5. **Batch embedding** — single OpenAI call embeds all searchTexts
+6. **Neo4j write** — identity nodes + state nodes + bitemporal `HAS_STATE` relationships
+
+## Standalone CLI
+
+```bash
+# Full ingestion (writes to Neo4j)
+uv run python -m src.research.langchain_agent.kg.ingest_report \
+  --report reports/<slug>.md \
+  --targets "Company Name" "domain.com" \
+  --stage_type targeted_extraction
+
+# Dry run (extraction + embedding, no Neo4j write)
+uv run python -m src.research.langchain_agent.kg.ingest_report \
+  --report reports/<slug>.md \
+  --targets "Company Name" \
+  --stage_type targeted_extraction \
+  --dry_run \
+  --output_json extraction_output.json
+
+# With temporal parameters
+uv run python -m src.research.langchain_agent.kg.ingest_report \
+  --report <path> --targets "X" \
+  --research_date 2025-06-01 \
+  --temporal_scope current
+```
+
+Report path resolution order: absolute → relative to `agent_outputs/` → relative to cwd.
+
+## Key CLI Flags
+
+| Flag | Default | Purpose |
+|------|---------|---------|
+| `--report` | required | Path to .md report |
+| `--targets` | required | Entity names / domains (1+) |
+| `--stage_type` | `targeted_extraction` | Drives schema selection |
+| `--dry_run` | false | Skip Neo4j write |
+| `--output_json` | — | Write extraction JSON to path |
+| `--research_date` | today | ISO date for validFrom |
+| `--temporal_scope` | — | `current`, `as_of_date`, `date_range`, `unknown` |
+
+## Schema Files
+
+- `kg/schema/schema_index.json` — chunk metadata (labels, keywords, node types) used by the selector LLM
+- `kg/schema/schema_registry.json` — full property definitions, merge keys, temporal model (`bitemporal_identity_state`)
+- Schema chunks: `organization`, `person`, `product`, `compound_form`, `lab_test`, `panel` (and relationships)
+
+## Key Modules
+
+| Module | Role |
+|--------|------|
+| `ingest_report.py` | Standalone CLI entrypoint |
+| `run_kg_ingestion.py` | Pipeline orchestrator (used by both CLI and mission runner) |
+| `schema_selector.py` | LLM-based schema chunk selection |
+| `extractor.py` | Entity extraction agent → `KGExtractionResult` |
+| `extraction_models.py` | Pydantic models: `KGExtractionResult`, `TemporalScope`, `IngestionTemporalContext` |
+| `searchtext.py` | searchText generation (LLM or field-concat) |
+| `embedder.py` | Batch embedding via OpenAI |
+| `neo4j_writer.py` | Writes identity/state nodes + rels to Neo4j |
+| `neo4j_resolver.py` | Entity deduplication and resolution |
+| `temporal.py` | Bitemporal validity helpers |
+
+## Inspecting Results
+
+```cypher
+-- Neo4j MCP (neo4j-dev read_neo4j_cypher):
+MATCH (o:Organization)-[r:HAS_STATE]->(s:OrganizationState)
+WHERE o.name CONTAINS 'Company'
+RETURN o.name, s.description, r.validFrom, r.validTo
+```
+
+- Use `neo4j-dev` MCP `get_neo4j_schema` to see full node/rel types
+- Extraction JSON can be saved with `--output_json` for offline review
+- Check `--dry_run` output to validate schema selection and extraction before committing to Neo4j
+
+## Common stage_type Values
+
+- `entity_validation` — company fundamentals, overview research
+- `targeted_extraction` — products, leadership, deep-dives, lab tests

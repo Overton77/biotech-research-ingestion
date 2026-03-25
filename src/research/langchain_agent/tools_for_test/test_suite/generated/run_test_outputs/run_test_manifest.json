@@ -1,0 +1,120 @@
+{
+  "direct_tool_invocations": {
+    "supported_formats": {
+      "docling_supported_formats": [
+        "ASCIIDOC",
+        "AUDIO",
+        "CSV",
+        "DOCX",
+        "HTML",
+        "IMAGE",
+        "JSON_DOCLING",
+        "LATEX",
+        "MD",
+        "METS_GBS",
+        "PDF",
+        "PPTX",
+        "VTT",
+        "XLSX",
+        "XML_JATS",
+        "XML_USPTO",
+        "XML_XBRL"
+      ]
+    },
+    "download_public_html": {
+      "url": "https://example.com/",
+      "file_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\downloads\\example_download.html",
+      "filename": "example_download.html",
+      "size_bytes": 528,
+      "downloaded_bytes": 528,
+      "sha256": "fb91d75a6bb430787a61b0aec5e374f580030f2878e1613eab5ca6310f7bbb9a",
+      "content_type": "text/html",
+      "status_code": 200,
+      "tls_verification": "disabled_after_cert_failure"
+    },
+    "convert_local_html_to_markdown": {
+      "source_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\combined_resumes_docling_pipeline.html",
+      "source_filename": "combined_resumes_docling_pipeline.html",
+      "output_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\conversions\\local_html_docling_markdown.md",
+      "output_format": "markdown",
+      "output_size_bytes": 12508,
+      "docling_status": "SUCCESS",
+      "docling_input_format": "HTML",
+      "docling_document_hash": "947879cdeb7a3917661eb509113de659d5d1fe37932d115a71c8b297620d47ad",
+      "page_count": 0,
+      "error_count": 0
+    },
+    "convert_local_pdf_to_docling_json": {
+      "source_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\Final_Current_Resume_Software_Dev_6-14-24.docx.pdf",
+      "source_filename": "Final_Current_Resume_Software_Dev_6-14-24.docx.pdf",
+      "output_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\conversions\\local_pdf_docling_document.json",
+      "output_format": "docling_json",
+      "output_size_bytes": 79520,
+      "docling_status": "SUCCESS",
+      "docling_input_format": "PDF",
+      "docling_document_hash": "fa332726bc3d2919ef7ce2e7938b08b7e1818f237a7f08ae3861d3284c593d01",
+      "page_count": 4,
+      "error_count": 0
+    },
+    "download_and_convert_public_pdf": {
+      "download": {
+        "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        "file_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\downloads\\public_dummy.pdf",
+        "filename": "public_dummy.pdf",
+        "size_bytes": 13264,
+        "downloaded_bytes": 13264,
+        "sha256": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4",
+        "content_type": "application/pdf; qs=0.001",
+        "status_code": 200,
+        "tls_verification": "verified"
+      },
+      "conversion": {
+        "source_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\downloads\\public_dummy.pdf",
+        "source_filename": "public_dummy.pdf",
+        "output_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\conversions\\public_dummy_docling_markdown.md",
+        "output_format": "markdown",
+        "output_size_bytes": 17,
+        "docling_status": "SUCCESS",
+        "docling_input_format": "PDF",
+        "docling_document_hash": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4",
+        "page_count": 1,
+        "error_count": 0
+      }
+    },
+    "batch_convert_local_files": {
+      "output_format": "markdown",
+      "converted_count": 2,
+      "conversions": [
+        {
+          "source_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\combined_resumes_docling_pipeline.html",
+          "source_filename": "combined_resumes_docling_pipeline.html",
+          "output_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\conversions\\batch_markdown\\combined_resumes_docling_pipeline.md",
+          "output_format": "markdown",
+          "output_size_bytes": 12508,
+          "docling_status": "SUCCESS",
+          "docling_input_format": "HTML",
+          "docling_document_hash": "947879cdeb7a3917661eb509113de659d5d1fe37932d115a71c8b297620d47ad",
+          "page_count": 0,
+          "error_count": 0
+        },
+        {
+          "source_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\Final_Current_Resume_Software_Dev_6-14-24.docx.pdf",
+          "source_filename": "Final_Current_Resume_Software_Dev_6-14-24.docx.pdf",
+          "output_path": "C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\src\\research\\langchain_agent\\tools_for_test\\test_suite\\generated\\run_test_outputs\\conversions\\batch_markdown\\Final_Current_Resume_Software_Dev_6-14-24.docx.md",
+          "output_format": "markdown",
+          "output_size_bytes": 4405,
+          "docling_status": "SUCCESS",
+          "docling_input_format": "PDF",
+          "docling_document_hash": "fa332726bc3d2919ef7ce2e7938b08b7e1818f237a7f08ae3861d3284c593d01",
+          "page_count": 4,
+          "error_count": 0
+        }
+      ]
+    }
+  },
+  "agent_invocation": {
+    "status": "completed",
+    "final_response": "Docling supported formats: ASCIIDOC, AUDIO, CSV, DOCX, HTML, IMAGE, JSON_DOCLING, LATEX, MD, METS_GBS, PDF, PPTX, VTT, XLSX, XML_JATS, XML_USPTO, XML_XBRL\n\nSaved outputs:\n- C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\test_suite\\generated\\conversions\\combined_resumes_docling_pipeline_converted.md (converted from local HTML; input format: HTML)\n- C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\test_suite\\generated\\downloads\\w3_dummy.pdf (downloaded)\n- C:\\Users\\Pinda\\Proyectos\\Biotech\\biotech-research-ingestion\\test_suite\\generated\\conversions\\w3_dummy_converted.md (converted from downloaded PDF; input format: PDF)",
+    "message_count": 8
+  }
+}
