@@ -35,7 +35,7 @@ def test_mission_slice_input_defaults():
     assert s.stage_type == "discovery"
     assert s.dependency_reports == {}
     assert "search_web" in s.selected_tool_names
-    assert "browser_control" in s.selected_subagent_names
+    assert "vercel_agent_browser" in s.selected_subagent_names
 
 
 def test_mission_slice_input_rejects_unknown_tool():

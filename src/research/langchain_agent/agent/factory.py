@@ -124,7 +124,11 @@ def _create_research_prompt_middleware(
             )
             if "browser_control" in selected_subagent_names:
                 lines.append(
-                    "- Use `browser_control` for JS-rendered pages, direct product/spec pages, or when search/extract/crawl did not expose critical evidence."
+                    "- Use `browser_control` for the existing Playwright-based browser loop when you want targeted interactive validation inside the current browser tool stack."
+                )
+            if "vercel_agent_browser" in selected_subagent_names:
+                lines.append(
+                    "- Use `vercel_agent_browser` for shell-driven Vercel agent-browser automation when JS-rendered pages, direct product pages, or interaction-heavy flows need a dedicated Deep Agent with skills and execute access."
                 )
             if "docling_document" in selected_subagent_names:
                 lines.append(

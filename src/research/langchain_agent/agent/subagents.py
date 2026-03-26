@@ -27,7 +27,11 @@ from src.research.langchain_agent.agent.subagent_types import (
     DOCLING_DOCUMENT_SUBAGENT,
     SUBAGENT_DESCRIPTIONS,
     TAVILY_RESEARCH_SUBAGENT,
+    VERCEL_AGENT_BROWSER_SUBAGENT,
     dedupe_subagent_names,
+)
+from src.research.langchain_agent.agent.vercel_agent_browser import (
+    build_vercel_agent_browser_subagent,
 )
 from src.research.langchain_agent.tools_for_test.filesystem_middleware import (
     monitor_filesystem_tools,
@@ -220,6 +224,19 @@ async def _build_browser_control_subagent(
     )
 
 
+async def _build_vercel_agent_browser_control_subagent(
+    *,
+    backend: FilesystemBackend,
+    store: BaseStore,
+    checkpointer: BaseCheckpointSaver,
+) -> CompiledSubAgent:
+    del backend
+    return build_vercel_agent_browser_subagent(
+        store=store,
+        checkpointer=checkpointer,
+    )
+
+
 async def _build_clinicaltrials_subagent(
     *,
     backend: FilesystemBackend,
@@ -285,6 +302,7 @@ _SUBAGENT_BUILDERS: dict[
     Callable[..., Awaitable[CompiledSubAgent]],
 ] = {
     BROWSER_CONTROL_SUBAGENT: _build_browser_control_subagent,
+    VERCEL_AGENT_BROWSER_SUBAGENT: _build_vercel_agent_browser_control_subagent,
     CLINICALTRIALS_RESEARCH_SUBAGENT: _build_clinicaltrials_subagent,
     TAVILY_RESEARCH_SUBAGENT: _build_tavily_subagent,
     DOCLING_DOCUMENT_SUBAGENT: _build_docling_subagent,
