@@ -150,6 +150,7 @@ def write_graph_state_snapshots(
             "recalled_memories": recalled_memories,
             "agent_input_keys": list(agent_input.keys()),
             "targets": agent_input.get("targets", []),
+            "selected_subagent_names": agent_input.get("selected_subagent_names", []),
             "report_required_sections": agent_input.get("report_required_sections", []),
             "report_path": agent_input.get("report_path", ""),
             "max_step_budget": agent_input.get("max_step_budget", 0),
@@ -183,6 +184,7 @@ def write_graph_state_snapshots(
         "edited_file_paths", "official_domains", "findings",
         "open_questions", "step_count", "final_report_ready",
         "tavily_search_events", "tavily_extract_events", "tavily_map_events",
+        "tavily_crawl_events",
         "filesystem_events",
     ]
     final_state = {k: result.get(k) for k in state_keys_to_capture if result.get(k) is not None}
@@ -311,6 +313,7 @@ async def run_single_mission_slice(
             "thread_id": run_thread_id,
             "mission_id": run_input.mission_id,
         },
+        "recursion_limit": max(40, run_input.max_step_budget * 8),
     }
 
     recalled = await _traced_memory_recall(
@@ -322,10 +325,11 @@ async def run_single_mission_slice(
     agent_state = input_to_agent_state(run_input)
     agent_state.update(recalled)
 
-    research_agent = build_research_agent(
+    research_agent = await build_research_agent(
         prompt_spec=prompt_spec,
         execution_reminders=reminders,
         selected_tool_names=run_input.selected_tool_names,
+        selected_subagent_names=run_input.selected_subagent_names,
         store=store,
         checkpointer=checkpointer,
     )
@@ -362,6 +366,7 @@ async def run_single_mission_slice(
         tavily_search_events=result.get("tavily_search_events", []),
         tavily_extract_events=result.get("tavily_extract_events", []),
         tavily_map_events=result.get("tavily_map_events", []),
+        tavily_crawl_events=result.get("tavily_crawl_events", []),
         filesystem_events=result.get("filesystem_events", []),
         read_file_paths=result.get("read_file_paths", []),
         written_file_paths=result.get("written_file_paths", []),

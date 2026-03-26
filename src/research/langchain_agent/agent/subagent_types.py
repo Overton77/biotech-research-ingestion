@@ -1,0 +1,49 @@
+from __future__ import annotations
+
+from typing import Final, Sequence
+
+
+BROWSER_CONTROL_SUBAGENT: Final[str] = "browser_control"
+CLINICALTRIALS_RESEARCH_SUBAGENT: Final[str] = "clinicaltrials_research"
+TAVILY_RESEARCH_SUBAGENT: Final[str] = "tavily_research"
+DOCLING_DOCUMENT_SUBAGENT: Final[str] = "docling_document"
+
+DEFAULT_STAGE_SUBAGENT_NAMES: Final[tuple[str, ...]] = (
+    BROWSER_CONTROL_SUBAGENT,
+)
+
+ALL_SUBAGENT_NAMES: Final[tuple[str, ...]] = (
+    BROWSER_CONTROL_SUBAGENT,
+    CLINICALTRIALS_RESEARCH_SUBAGENT,
+    TAVILY_RESEARCH_SUBAGENT,
+    DOCLING_DOCUMENT_SUBAGENT,
+)
+
+SUBAGENT_DESCRIPTIONS: Final[dict[str, str]] = {
+    BROWSER_CONTROL_SUBAGENT: (
+        "Use this subagent when a webpage requires interactive browsing such as "
+        "clicking, expanding, or scrolling before the needed evidence is visible."
+    ),
+    CLINICALTRIALS_RESEARCH_SUBAGENT: (
+        "Use this subagent for ClinicalTrials.gov sponsor searches, NCT record retrieval, "
+        "and protocol/result extraction for interventional studies."
+    ),
+    TAVILY_RESEARCH_SUBAGENT: (
+        "Use this subagent for focused web research with Tavily search, extract, map, "
+        "and crawl operations when the task needs its own retrieval loop."
+    ),
+    DOCLING_DOCUMENT_SUBAGENT: (
+        "Use this subagent to download files or webpages, convert them with Docling, "
+        "and produce markdown or JSON artifacts for downstream review."
+    ),
+}
+
+
+def dedupe_subagent_names(names: Sequence[str]) -> list[str]:
+    ordered: list[str] = []
+    seen: set[str] = set()
+    for name in names:
+        if name not in seen:
+            ordered.append(name)
+            seen.add(name)
+    return ordered

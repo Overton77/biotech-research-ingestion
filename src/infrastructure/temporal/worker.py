@@ -39,7 +39,7 @@ async def _init_beanie() -> None:
     """Initialise MongoDB + Beanie so activities can use Beanie documents."""
     from src.models import Message, Thread
     from src.models.plan import ResearchPlan
-    from src.research.models.mission import ResearchMission, ResearchRun
+    from src.research.deepagent.models.mission import ResearchMission, ResearchRun
 
     settings = get_settings()
     client = AsyncMongoClient(settings.MONGODB_URI)

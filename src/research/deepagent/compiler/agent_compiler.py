@@ -33,30 +33,30 @@ from langchain.agents import create_agent
 from langchain.agents.middleware import TodoListMiddleware
 from langchain.chat_models import BaseChatModel, init_chat_model
 
-from src.research.models.mission import (
+from src.research.deepagent.models.mission import (
     CompiledSubAgentConfig,
     TaskDef,
     TaskExecutionStructuredOutput,
 )
-from src.research.middleware.progress_middleware import (
+from src.research.deepagent.middleware.progress_middleware import (
     ProgressCallback,
     ResearchProgressMiddleware,
 )
-from src.research.middleware.source_tracking import (
+from src.research.deepagent.middleware.source_tracking import (
     SourceTrackingMiddleware,
     write_source_index,
 )
-from src.research.middleware.quality_validation import QualityValidationMiddleware
-from src.research.middleware.subagent_streaming import SubagentStreamingMiddleware
-from src.research.middleware.artifact_collection import ArtifactCollectionMiddleware
-from src.research.middleware.token_tracking import track_tokens
-from src.research.runtime.backends import (
+from src.research.deepagent.middleware.quality_validation import QualityValidationMiddleware
+from src.research.deepagent.middleware.subagent_streaming import SubagentStreamingMiddleware
+from src.research.deepagent.middleware.artifact_collection import ArtifactCollectionMiddleware
+from src.research.deepagent.middleware.token_tracking import track_tokens
+from src.research.deepagent.runtime.backends import (
     build_subagent_backend,
     build_task_backend,
     ensure_subagent_workspace,
     ensure_task_workspace,
 )
-from src.research.runtime.tools import resolve_tool_profile
+from src.research.deepagent.runtime.tools import resolve_tool_profile
 
 logger = logging.getLogger(__name__)
 

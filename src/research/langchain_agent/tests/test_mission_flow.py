@@ -126,21 +126,22 @@ async def test_run_mission_creates_output_dir(tmp_path: Path):
             new=AsyncMock(return_value=stub_out),
         ),
         patch(
-            "src.research.langchain_agent.run_mission.get_persistence",
-            new=AsyncMock(return_value=(AsyncMock(), AsyncMock())),
+            "src.research.langchain_agent.storage.langgraph_persistence.get_persistence",
+            new=AsyncMock(return_value=(object(), object())),
         ),
         patch(
-            "src.research.langchain_agent.run_mission.init_research_agent_beanie",
+            "src.research.langchain_agent.storage.models.init_research_agent_beanie",
             new=AsyncMock(),
         ),
         patch(
-            "src.research.langchain_agent.run_mission.build_langmem_manager",
-            new=AsyncMock(return_value=AsyncMock()),
+            "src.research.langchain_agent.memory.langmem_manager.build_langmem_manager",
+            new=AsyncMock(return_value=object()),
         ),
     ):
         await main(
             mission_file=str(mission_path),
             output_dir=str(output_dir),
+            local=True,
         )
 
     summary_file = output_dir / "mission_summary.json"

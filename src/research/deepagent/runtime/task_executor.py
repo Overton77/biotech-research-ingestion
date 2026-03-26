@@ -15,8 +15,8 @@ from typing import Any
 
 from langchain.chat_models import init_chat_model
 
-from src.research.compiler.agent_compiler import RuntimeContext, compile_main_task_agent
-from src.research.models.mission import (
+from src.research.deepagent.compiler.agent_compiler import RuntimeContext, compile_main_task_agent
+from src.research.deepagent.models.mission import (
     ArtifactRef,
     FileReference,
     InputBinding,
@@ -25,7 +25,7 @@ from src.research.models.mission import (
     TaskExecutionStructuredOutput,
     TaskResult,
 )
-from src.research.runtime.backends import subagent_root, task_root
+from src.research.deepagent.runtime.backends import subagent_root, task_root
 
 logger = logging.getLogger(__name__)
 

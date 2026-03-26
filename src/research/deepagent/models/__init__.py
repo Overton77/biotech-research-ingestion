@@ -1,4 +1,4 @@
-from src.research.models.mission import (
+from .mission import (
     InputBinding,
     MainDeepAgentConfig,
     CompiledSubAgentConfig,

@@ -1,143 +1,41 @@
-"""
-Agent factory: filesystem middleware, browser subagent, build_research_agent (parameterized by prompt_spec).
-"""
+"""Agent factory: prompt middleware, shared filesystem, and named subagent wiring."""
 
 from __future__ import annotations
 
 from typing import Any, List, Sequence
 
 from langchain.agents import create_agent
-from langchain.agents.middleware import dynamic_prompt, ModelRequest
+from langchain.agents.middleware import (
+    ModelRequest,
+    ToolCallLimitMiddleware,
+    dynamic_prompt,
+)
+from langchain.agents.middleware.types import AgentMiddleware
 from langchain.tools import BaseTool
 from langgraph.checkpoint.base import BaseCheckpointSaver
 from langgraph.graph.state import CompiledStateGraph
 from langgraph.store.base import BaseStore
 
-from deepagents.middleware.filesystem import FilesystemMiddleware
-from deepagents.middleware.subagents import CompiledSubAgent, SubAgentMiddleware
-from deepagents.backends.filesystem import FilesystemBackend 
-from src.research.langchain_agent.tools_for_test.tavily_tools import crawl_website
+from deepagents.middleware.subagents import SubAgentMiddleware
+
+from src.research.langchain_agent.agent.filesystem_support import (
+    build_shared_filesystem_middleware,
+    filesystem_backend,
+)
+from src.research.langchain_agent.agent.subagents import build_compiled_subagents
 from src.research.langchain_agent.tools_for_test.filesystem_middleware import monitor_filesystem_tools
-
-
-from src.research.langchain_agent.tools_for_test.playwright_agent_tool import playwright_mcp_specs
 
 from src.research.langchain_agent.agent.config import (
     BiotechResearchAgentState,
     NextStepsArtifact,
     ResearchPromptSpec,
     ResearchTaskMemoryReport,
-    ROOT_FILESYSTEM,
     TOOLS_MAP,
 )
 from src.research.langchain_agent.tools_for_test.formatters import _format_tavily_event_block 
-from src.research.langchain_agent.tools_for_test.playwright_agent import (
-    browser_interaction_task,
-)
 
 
-gpt_5_mini = "gpt-5-mini"
-# -----------------------------------------------------------------------------
-# Filesystem middleware
-# -----------------------------------------------------------------------------
-
-filesystem_backend = FilesystemBackend(
-    root_dir=str(ROOT_FILESYSTEM),
-    virtual_mode=True,
-)
-
-filesystem_middleware = FilesystemMiddleware(
-    backend=filesystem_backend,
-    system_prompt=(
-        "Use the filesystem aggressively for intermediate research state. "
-        "All paths must stay inside the sandbox root. "
-        "Use only relative sandbox paths such as runs/, reports/, and scratch/. "
-        "Never use absolute host paths."
-    ),
-    custom_tool_descriptions={
-        "ls": (
-            "List directories and files inside the sandbox. "
-            "Use relative paths like runs, reports, and scratch."
-        ),
-        "read_file": (
-            "Read saved notes, intermediate findings, and draft reports from sandbox-relative paths."
-        ),
-        "write_file": (
-            "Create structured intermediate files and final reports inside the sandbox only. "
-            "Prefer markdown or json."
-        ),
-        "edit_file": (
-            "Update an existing findings file or report incrementally inside the sandbox."
-        ),
-    },
-)
-
-
-# -----------------------------------------------------------------------------
-# Browser control subagent
-# -----------------------------------------------------------------------------
-
-# browser_control_agent = create_agent(
-#     model=gpt_5_mini,
-#     tools=[playwright_mcp_specs],
-# )
-
-# browser_control_subagent = CompiledSubAgent(
-#     name="browser_control",
-#     description=(
-#         "This subagent controls a real browser via Playwright. Use it when pages "
-#         "require scrolling, clicking, or interaction to reveal content. "
-#         "Provide the URL(s) and clear extraction instructions (what data to capture)."
-#     ),
-#     runnable=browser_control_agent,
-# ) 
-
-
-BROWSER_CONTROL_SYSTEM_PROMPT = """
-You are the browser-control coordinator.
-
-Your job is to decide when and how to use the browser_interaction_task tool in order to complete the delegated request.
-
-You may call browser_interaction_task up to 3 times for a single delegated task.
-
-How to work:
-- Use the first browser call for the most direct attempt.
-- If the result is incomplete, ambiguous, or lacks evidence, you may call the tool again with improved instructions.
-- Each retry must be materially better or more specific than the previous one.
-- Do not repeat the exact same browser call.
-- Prefer the minimum number of browser calls needed.
-
-When to use the browser tool:
-- The page requires clicking, scrolling, expansion, tab switching, or dynamic interaction.
-- The relevant content is likely hidden behind "show more", accordions, tabs, or technical details sections.
-- Static extraction is insufficient.
-
-When preparing a browser call, be explicit about:
-- the exact start URL
-- the task goal
-- the success criteria
-- likely useful hints
-- allowed domains when relevant
-
-Final answer requirements:
-- Synthesize the browser findings rather than simply dumping raw tool output.
-- If the task still cannot be completed after retries, clearly state what was attempted and what remains uncertain.
-""".strip()
-
-browser_control_agent = create_agent(
-    model=gpt_5_mini,
-    tools=[browser_interaction_task],
-    system_prompt=BROWSER_CONTROL_SYSTEM_PROMPT,
-)
-
-browser_control_subagent = CompiledSubAgent(
-    name="browser_control",
-    description=(
-        "Use this subagent when a webpage requires real browser interaction to reveal or verify information. "
-        "It can navigate pages, click, scroll, expand sections, and extract structured results from dynamic content."
-    ),
-    runnable=browser_control_agent,
-)
+gpt_5_4_mini = "gpt-5.4-mini"
 
 # -----------------------------------------------------------------------------
 # Dynamic prompt middleware (parameterized by prompt_spec + execution_reminders)
@@ -157,6 +55,7 @@ def _create_research_prompt_middleware(
         mission_id = state.get("mission_id", "unknown-mission")
         targets = state.get("targets", []) or []
         selected_tool_names = state.get("selected_tool_names", []) or []
+        selected_subagent_names = state.get("selected_subagent_names", []) or []
         stage_type = state.get("stage_type", "discovery")
         search_stage = state.get("search_stage", "initialized")
         official_domains = state.get("official_domains", []) or []
@@ -179,21 +78,22 @@ def _create_research_prompt_middleware(
         episodic_memories = state.get("episodic_memories", "") or "Episodic:\n- none"
         procedural_memories = state.get("procedural_memories", "") or "Procedural:\n- none"
 
-        lines = [
-            base_prompt,
-            "",
-            "Current run context:",
-            f"- mission_id: {mission_id}",
-            f"- task_slug: {task_slug}",
-            f"- stage_type: {stage_type}",
-            f"- search_stage: {search_stage}",
-            f"- step_count: {step_count}/{max_step_budget}",
-            f"- targets: {', '.join(targets) if targets else '(none specified)'}",
-            f"- enabled_tools: {', '.join(selected_tool_names) if selected_tool_names else '(none)'}",
-            f"- run_dir: {run_dir}",
-            f"- report_path: {report_path}",
-            f"- final_report_ready: {final_report_ready}",
-        ]
+        lines = [base_prompt, "", "Live run context:"]
+        lines.extend(
+            [
+                f"- mission_id: {mission_id}",
+                f"- task_slug: {task_slug}",
+                f"- stage_type: {stage_type}",
+                f"- search_stage: {search_stage}",
+                f"- progress: step {step_count} of {max_step_budget}",
+                f"- targets: {', '.join(targets) if targets else '(none specified)'}",
+                f"- enabled_tools: {', '.join(selected_tool_names) if selected_tool_names else '(none)'}",
+                f"- enabled_subagents: {', '.join(selected_subagent_names) if selected_subagent_names else '(none)'}",
+                f"- run_dir: {run_dir}",
+                f"- report_path: {report_path}",
+                f"- final_report_ready: {final_report_ready}",
+            ]
+        )
 
         if current_date or research_date or temporal_scope_mode != "current":
             lines.append("")
@@ -211,6 +111,34 @@ def _create_research_prompt_middleware(
         else:
             lines.append("- official_domains: (not confirmed yet)")
 
+        if selected_subagent_names:
+            lines.extend(
+                [
+                    "",
+                    "Delegation rules:",
+                    "- You remain the main research agent. Delegate only when a specialist loop is materially better than continuing yourself.",
+                    "- Give each subagent a precise objective, concrete success criteria, and expected artifact paths.",
+                    "- After every subagent run, read the handoff artifact, validate any returned file paths, then continue the stage yourself.",
+                    "- Do not stop after delegation unless the final report is already complete and sourced.",
+                ]
+            )
+            if "browser_control" in selected_subagent_names:
+                lines.append(
+                    "- Use `browser_control` for JS-rendered pages, direct product/spec pages, or when search/extract/crawl did not expose critical evidence."
+                )
+            if "docling_document" in selected_subagent_names:
+                lines.append(
+                    "- Use `docling_document` for important PDFs, DOCX files, or difficult documents that need conversion before you can inspect them."
+                )
+            if "tavily_research" in selected_subagent_names:
+                lines.append(
+                    "- Use `tavily_research` for a deeper focused retrieval loop with explicit seed URLs, domains, or follow-up questions."
+                )
+            if "clinicaltrials_research" in selected_subagent_names:
+                lines.append(
+                    "- Use `clinicaltrials_research` for sponsor, company, intervention, protocol, or NCT-driven trial discovery and verification."
+                )
+
         if report_required_sections:
             lines.append("")
             lines.append("REQUIRED REPORT SECTIONS (use these EXACT headings as ## level-2 markdown headers):")
@@ -221,12 +149,8 @@ def _create_research_prompt_middleware(
             lines.append("The ## Sources section MUST list every URL you consulted as markdown links.")
             lines.append("Missing sections will cause the report to FAIL evaluation.")
 
-        lines.append("")
-        lines.append("Open questions:")
-        if open_questions:
-            lines.extend([f"- {q}" for q in open_questions])
-        else:
-            lines.append("- (none)")
+        lines.extend(["", "Open questions:"])
+        lines.extend([f"- {q}" for q in open_questions] if open_questions else ["- (none)"])
 
         lines.extend(
             [
@@ -237,7 +161,7 @@ def _create_research_prompt_middleware(
                 f"<Semantic>\n{semantic_memories}\n</Semantic>",
                 "</Memories>",
                 "",
-                "Execution reminder for this run:",
+                "Execution reminders:",
                 *[f"- {r}" for r in execution_reminders],
             ]
         )
@@ -245,9 +169,10 @@ def _create_research_prompt_middleware(
         tavily_search_events = state.get("tavily_search_events", []) or []
         tavily_map_events = state.get("tavily_map_events", []) or []
         tavily_extract_events = state.get("tavily_extract_events", []) or []
+        tavily_crawl_events = state.get("tavily_crawl_events", []) or []
         visited_urls = state.get("visited_urls", []) or []
 
-        if tavily_search_events or tavily_map_events or tavily_extract_events:
+        if tavily_search_events or tavily_map_events or tavily_extract_events or tavily_crawl_events:
             lines.extend(
                 [
                     "",
@@ -255,6 +180,7 @@ def _create_research_prompt_middleware(
                     _format_tavily_event_block("Search", tavily_search_events, max_events=2),
                     _format_tavily_event_block("Map", tavily_map_events, max_events=2),
                     _format_tavily_event_block("Extract", tavily_extract_events, max_events=2),
+                    _format_tavily_event_block("Crawl", tavily_crawl_events, max_events=2),
                     f"Visited URL count: {len(visited_urls)}",
                 ]
             )
@@ -275,33 +201,53 @@ def _create_research_prompt_middleware(
 # -----------------------------------------------------------------------------
 
 
-def build_research_agent(
+async def build_research_agent(
     *,
     prompt_spec: ResearchPromptSpec,
     execution_reminders: Sequence[str],
     selected_tool_names: List[str],
+    selected_subagent_names: List[str],
     store: BaseStore,
     checkpointer: BaseCheckpointSaver[Any],
 ) -> CompiledStateGraph[Any, Any, Any, Any]:
     """Build a research agent with the given prompt spec and reminders."""
     selected_tools: List[BaseTool] = [TOOLS_MAP[n] for n in selected_tool_names]
+    selected_subagents = await build_compiled_subagents(
+        selected_subagent_names,
+        backend=filesystem_backend,
+        store=store,
+        checkpointer=checkpointer,
+    )
     prompt_middleware = _create_research_prompt_middleware(
         prompt_spec=prompt_spec,
         execution_reminders=execution_reminders,
     )
 
-    return create_agent(
-        model=gpt_5_mini,
-        tools=selected_tools,
-        middleware=[
-            monitor_filesystem_tools,  # intercepts write_file/read_file/edit_file → updates written/read/edited_file_paths in state
-            filesystem_middleware,
-            prompt_middleware,
+    middleware: list[AgentMiddleware] = [
+        monitor_filesystem_tools,  # intercepts write_file/read_file/edit_file → updates written/read/edited_file_paths in state
+        build_shared_filesystem_middleware(backend=filesystem_backend),
+        prompt_middleware,
+    ]
+    if selected_subagents:
+        middleware.append(
+            ToolCallLimitMiddleware(
+                tool_name="task",
+                run_limit=max(2, len(selected_subagents) + 1),
+                exit_behavior="continue",
+            )
+        )
+        middleware.append(
             SubAgentMiddleware(
-                subagents=[browser_control_subagent],
-                backend=filesystem_backend,
-            ),
-        ],
+                subagents=selected_subagents,
+                backend=filesystem_backend, 
+               
+            )
+        )
+
+    return create_agent(
+        model=gpt_5_4_mini,
+        tools=selected_tools,
+        middleware=middleware,
         store=store,
         checkpointer=checkpointer,
         state_schema=BiotechResearchAgentState,
@@ -312,7 +258,7 @@ def build_memory_report_agent(
     store: BaseStore, checkpointer: BaseCheckpointSaver[Any]
 ) -> CompiledStateGraph[Any, Any, Any, Any]:
     return create_agent(
-        model=gpt_5_mini,
+        model=gpt_5_4_mini,
         tools=[],
         middleware=[],
         response_format=ResearchTaskMemoryReport,
@@ -360,7 +306,7 @@ def build_next_steps_agent(
 ) -> CompiledStateGraph[Any, Any, Any, Any]:
     """Build a structured-output agent that evaluates an iteration and produces NextStepsArtifact."""
     return create_agent(
-        model=gpt_5_mini,
+        model=gpt_5_4_mini,
         tools=[],
         system_prompt=NEXT_STEPS_EXTRACTION_PROMPT,
         response_format=NextStepsArtifact,

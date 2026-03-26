@@ -35,6 +35,7 @@ def test_mission_slice_input_defaults():
     assert s.stage_type == "discovery"
     assert s.dependency_reports == {}
     assert "search_web" in s.selected_tool_names
+    assert "browser_control" in s.selected_subagent_names
 
 
 def test_mission_slice_input_rejects_unknown_tool():
@@ -45,6 +46,29 @@ def test_mission_slice_input_rejects_unknown_tool():
             task_slug="s",
             user_objective="x",
             selected_tool_names=["nonexistent_tool"],
+        )
+
+
+def test_mission_slice_input_rejects_unknown_subagent():
+    with pytest.raises(ValueError, match="Unknown subagent names"):
+        MissionSliceInput(
+            task_id="t1",
+            mission_id="m1",
+            task_slug="s",
+            user_objective="x",
+            selected_subagent_names=["nonexistent_subagent"],
+        )
+
+
+@pytest.mark.parametrize("removed_name", ["pubmed_research", "pubchem_research"])
+def test_mission_slice_input_rejects_removed_subagents(removed_name: str):
+    with pytest.raises(ValueError, match="Unknown subagent names"):
+        MissionSliceInput(
+            task_id="t1",
+            mission_id="m1",
+            task_slug="s",
+            user_objective="x",
+            selected_subagent_names=[removed_name],
         )
 
 
@@ -73,6 +97,18 @@ def test_load_qualia_mini_from_file():
     assert mission.stages[0].slice_input.stage_type == "entity_validation"
 
 
+def test_load_elysium_subagents_from_file():
+    path = MISSIONS_DIR / "elysium_subagents.json"
+    mission = load_mission_from_file(path)
+    assert mission.mission_id == "mission-elysium-subagents-001"
+    assert len(mission.stages) == 3
+    assert mission.stages[0].slice_input.selected_subagent_names == [
+        "clinicaltrials_research",
+        "docling_document",
+    ]
+    assert mission.stages[2].dependencies == ["elysium-products-compounds"]
+
+
 def test_prompt_spec_loaded_correctly():
     path = MISSIONS_DIR / "elysium_mini.json"
     mission = load_mission_from_file(path)
@@ -91,7 +127,7 @@ def test_load_mission_file_not_found():
 
 
 def test_loaded_mission_stage_slugs_unique():
-    for filename in ("elysium_mini.json", "qualia_mini.json"):
+    for filename in ("elysium_mini.json", "elysium_subagents.json", "qualia_mini.json"):
         path = MISSIONS_DIR / filename
         mission = load_mission_from_file(path)
         slugs = [s.slice_input.task_slug for s in mission.stages]

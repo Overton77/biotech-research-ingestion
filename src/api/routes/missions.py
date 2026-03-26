@@ -9,8 +9,8 @@ from beanie.odm.fields import PydanticObjectId
 from fastapi import APIRouter, HTTPException, Query, status
 
 from src.api.schemas.common import envelope
-from src.research.models.mission import ResearchMission, ResearchRun
-from src.research.persistence.runs_s3 import (
+from src.research.deepagent.models.mission import ResearchMission, ResearchRun
+from src.research.deepagent.persistence.runs_s3 import (
     ResearchRunS3Paths,
     get_research_runs_s3_store,
 )

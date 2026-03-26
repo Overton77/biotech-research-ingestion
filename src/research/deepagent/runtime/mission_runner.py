@@ -28,8 +28,8 @@ from typing_extensions import TypedDict
 
 from src.agents.persistence import get_deep_agents_persistence
 
-from src.research.compiler.agent_compiler import RuntimeContext
-from src.research.models.mission import (
+from src.research.deepagent.compiler.agent_compiler import RuntimeContext
+from src.research.deepagent.models.mission import (
     ArtifactRef,
     QualityAssessment,
     ResearchEvent,
@@ -38,9 +38,9 @@ from src.research.models.mission import (
     TaskDef,
     TaskResult,
 )
-from src.research.persistence.research_run_writer import ResearchRunWriter
-from src.research.persistence.runs_s3 import get_research_runs_s3_store
-from src.research.runtime.task_executor import execute_task as execute_task_def
+from src.research.deepagent.persistence.research_run_writer import ResearchRunWriter
+from src.research.deepagent.persistence.runs_s3 import get_research_runs_s3_store
+from src.research.deepagent.runtime.task_executor import execute_task as execute_task_def
 
 logger = logging.getLogger(__name__)
 
@@ -469,7 +469,7 @@ async def finalize_mission(
     state: MissionRunnerState, config: RunnableConfig, runtime: Runtime
 ) -> MissionRunnerState:
     """Update mission status in MongoDB and S3, build task-runs index and manifest."""
-    from src.research.models.mission import MissionSummary
+    from src.research.deepagent.models.mission import MissionSummary
 
     failed = state["failed_task_ids"]
     final_status = "failed" if failed else "completed"

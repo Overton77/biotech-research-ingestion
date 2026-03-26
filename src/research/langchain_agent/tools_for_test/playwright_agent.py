@@ -19,8 +19,7 @@ if OPENAI_API_KEY:
 
 MCP_URL = os.getenv("MCP_URL", "http://127.0.0.1:8932/mcp") 
 
-DEFAULT_MODEL = os.getenv("BROWSER_AGENT_MODEL", "gpt-5") 
-# Try gpt-5 . Mini is making many mistakes . It is still good for testing. 
+DEFAULT_MODEL = os.getenv("BROWSER_AGENT_MODEL", "gpt-5.4-mini")
 DEFAULT_BROWSER_MAX_TOOL_STEPS = int(os.getenv("BROWSER_AGENT_MAX_TOOL_STEPS", "20"))
 
 

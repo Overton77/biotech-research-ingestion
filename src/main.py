@@ -20,7 +20,7 @@ from src.config import get_settings
 from src.models import Message, Thread
 from src.models.plan import ResearchPlan 
 from src.models.openai_research import OpenAIResearchPlan, OpenAIResearchRun
-from src.research.models.mission import ResearchMission, ResearchRun
+from src.research.deepagent.models.mission import ResearchMission, ResearchRun
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

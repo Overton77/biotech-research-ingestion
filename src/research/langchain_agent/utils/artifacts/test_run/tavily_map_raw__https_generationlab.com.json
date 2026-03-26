@@ -1,0 +1,31 @@
+{
+  "url": "https://generationlab.com",
+  "instructions": "Find official pages related to biomarkers, science, SystemAge, product details, publications, provider pages, and any downloadable docs or interactive pages that mention tested biomarkers. Prioritize pages that may list exact biomarkers, biomarker categories, organ systems, or panels.",
+  "results": {
+    "base_url": "https://generationlab.com",
+    "results": [
+      "https://generationlab.com/biomarkers",
+      "https://generationlab.com/blog/immune-age-test",
+      "https://generationlab.com/find-a-doctor",
+      "https://generationlab.com/providers",
+      "https://generationlab.com/published-research",
+      "https://generationlab.com/science",
+      "https://generationlab.com/the-systemage-test",
+      "https://link.springer.com/article/10.1007/s11357-024-01460-1",
+      "https://pubmed.ncbi.nlm.nih.gov/37702598",
+      "https://pubmed.ncbi.nlm.nih.gov/39672207",
+      "https://scholar.google.com/citations?view_op=list_works&hl=en&user=g7DwHa4AAAAJ",
+      "https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(07)00223-8",
+      "https://www.generationlab.com/biomarkers",
+      "https://www.generationlab.com/find-a-doctor",
+      "https://www.generationlab.com/providers",
+      "https://www.generationlab.com/published-research",
+      "https://www.generationlab.com/science",
+      "https://www.generationlab.com/the-systemage-test",
+      "https://www.nature.com/articles/nature03260",
+      "https://www.tandfonline.com/doi/full/10.4161/cc.20437"
+    ],
+    "response_time": 14.11,
+    "request_id": "e2e55c25-6f7a-4a39-99a2-0d285c64baaf"
+  }
+}

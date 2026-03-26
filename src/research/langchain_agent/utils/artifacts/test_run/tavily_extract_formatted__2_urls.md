@@ -1,311 +1,206 @@
-Meta: request_id=e2f7cd65-5661-477a-aaab-825af4bb9efc, response_time_s=0.01
+Meta: request_id=5f3bd5ee-2f3b-42e7-bc0f-5fcadc5268e3, response_time_s=8.4
 
 === Extracted Web Content ===
 [Result 1]
-Title: [Skip to content](MainContent)
-URL: https://shop.trudiagnostic.com/products/truage-truhealth
+Title: Your cart is empty
+URL: https://www.elysiumhealth.com/
 Content:
-[Skip to content](#MainContent)
+## Your cart is empty
 
-* + [Shop All](/collections/shopfront)
-  + [About TruAge](https://www.trudiagnostic.com/truage)
-  + [About TruHealth](https://www.trudiagnostic.com/truhealth)
+Have an account?
 
-  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
+[Log in](/account/login) to check out faster.
 
-  [**TruHealth™ Test**](/products/truhealth)
+![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
 
-  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
-* + [Our Science](https://www.trudiagnostic.com/science)
-  + [Our Research](https://www.trudiagnostic.com/research)
-* + [Healthcare Providers](https://www.trudiagnostic.com/providers)
-  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
-  + [Lab Processing](https://www.trudiagnostic.com/lab)
-* [Login](https://portal.trudiagnostic.com/sign-in)
+### All Products
 
-* Our Tests 
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-  [Shop Tests](/collections/shopfront)
+## Your Cart
 
-  [About TruAge™](https://www.trudiagnostic.com/truage)
+Loading...
 
-  [About TruHealth™](https://www.trudiagnostic.com/truhealth)
+## Order Subtotal
 
-  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
+$0
 
-  [**TruHealth™ Test**](/products/truhealth)
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
 
-  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
-* How It Works 
-  + [Our Science](https://www.trudiagnostic.com/science)
-  + [Our Research](https://www.trudiagnostic.com/research)
-* Partner with Us 
-  + [Healthcare Providers](https://www.trudiagnostic.com/providers)
-  + [Researchers](https://www.trudiagnostic.com/research-services)
-  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
-  + [Lab Processing](https://www.trudiagnostic.com/lab)
+**Basis**NAD+ Supplement
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
 
-[Login](https://portal.trudiagnostic.com/sign-in)   [Cart](/cart)
+# [Elysium Health Home](/)
 
-# TruAge + TruHealth™
+![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
+![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
+![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
+![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
+![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
+![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
+![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
+![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
 
-48 reviews
+## Start your longevity routine
 
-Measures +180 biomarkers, this kit tells you how fast you’re aging and how your nutritional and biological systems are performing.
+Choose from science-backed supplements for youthful NAD+, radiant skin, and brain health.
 
-* 180+ Blood Biomarkers Analyzed
-* Biological Age Score (OMICmAge™)
-* 11 Organ Systems Age Scores
-* Pace of Aging (DunedinPACE™)
-* Nutrient & Vitamin Levels
-* Amino Acid & Antioxidant Levels
-* Metabolic & Energy Health
-* Inflammation & Immune Function
-* Toxin & Heavy Metal Exposure
-* Cardiovascular Health & Lipid Panel
-* Neurocognitive Health Markers
-* Stress & Oxidative Damage
-* Cellular Energy & NAD+
+![]()
+![](//www.elysiumhealth.com/cdn/shop/files/mens-journal.svg?v=1745861258&width=3200)
+![](//www.elysiumhealth.com/cdn/shop/files/time_53a0830e-696a-4356-87c2-907468076136.svg?v=1745861267&width=3200)
+![](//www.elysiumhealth.com/cdn/shop/files/vogue_4032e5e0-e57b-4dc9-b889-acbbe918af22.svg?v=1745861275&width=3200)
+![](//www.elysiumhealth.com/cdn/shop/files/fast-company.svg?v=1745861282&width=3200)
+![](//www.elysiumhealth.com/cdn/shop/files/wired.svg?v=1745861290&width=3200)
+![](//www.elysiumhealth.com/cdn/shop/files/new-york.svg?v=1745861296&width=3200)
+![](//www.elysiumhealth.com/cdn/shop/files/good-housekeeping.svg?v=1745861302&width=3200)
+![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=)
 
-HSA / FSA Accepted
 
-Comprehensive Testing
 
-Science from Harvard, Duke, & Yale
 
-Easy and Convenient
 
-\* Subscriptions are US only
 
-HSA / FSA Accepted
-
----
-
-* 180+ Blood Biomarkers Analyzed
-* Biological Age Score (OMICmAge™)
-* 11 Organ Systems Age Scores
-* Pace of Aging (DunedinPACE™)
-* Nutrient & Vitamin Levels
-* Amino Acid & Antioxidant Levels
-* Metabolic & Energy Health
-* Inflammation & Immune Function
-* Toxin & Heavy Metal Exposure
-* Cardiovascular Health & Lipid Panel
-* Neurocognitive Health Markers
-* Stress & Oxidative Damage
-* Cellular Energy & NAD+
-
-* Easy, at-home testing (no lab visits)
-* Measures over 180+ biomarkers to deliver an in-depth assessment of your brain, gut, immune, metabolic, and nutritional systems.
-* Tracks how quickly your body is aging each year.
-* Helps you make smarter lifestyle choices to feel younger and live healthier with personalized recommendations.
-
-* Built on cutting-edge epigenetic research
-* Measures over 100,000 DNA markers for unmatched accuracy
-* Developed with world-leading scientists and validated algorithms
-* Backed by peer-reviewed studies and proven in published research
-
-Step by step guide
-
-## How Does it Work?
-
-### Order + Activate Your Kit
-
-Once you order your test from our website, the collection kit will be shipped directly to your home with everything to begin testing included.
-
-### Return Your Sample
-
-Follow the instructions in your test kit, use our pain-free lancet to prick your finger for a few drops of blood. Then, ship your specimen using the prepaid FedEx materials provided.
-
-### Unlock Personal Nutrition + Systems Health Insights
-
-Results are available online within 3-4 weeks of lab receipt, revealing your nutritional health at the molecular level.
-
-## The Ultimate Collection for Health & Longevity
-
-Our TruHealth™ test ensures your nutritional, metabolic, immune, and cognitive health are functioning at their peak to support longevity goals. Our TruAge™ test helps you track those goals and stay ahead of the aging curve by measuring your biological age, speed of aging, and key longevity metrics. By understanding both, you can make targeted changes to slow down aging, improve vitality, and optimize your long-term health.
-
-* [Sample TruAge™ Report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/Sample_TruAge.pdf?v=1769012567)
-* [Sample TruHealth™ report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/Sample_TruHealth.pdf?v=1769008125)
-
-Biological Age
-
-How old your body is compared to your real age
-
-Pace of Aging
-
-How quickly you're aging each year
-
-Organ System Ages
-
-The age of key organs (heart, brain, liver, etc.)
-
-Nutrient Levels
-
-Optimize your vitamin levels for better health.
-
-Metabolic Health
-
-Understand your metabolism for improved energy and weight control.
-
-Inflammation & Immunity
-
-Identify hidden inflammation affecting …[truncated]
+## "Given the momentum in human studies targeting aging, we are optimistic that the course of human health could be …[truncated]
 
 [Result 2]
-Title: [Skip to content](MainContent)
-URL: https://shop.trudiagnostic.com/products/truhealth
+Title: Help Center
+URL: https://www.elysiumhealth.com/products/
 Content:
-[Skip to content](#MainContent)
+Help Center
 
-* + [Shop All](/collections/shopfront)
-  + [About TruAge](https://www.trudiagnostic.com/truage)
-  + [About TruHealth](https://www.trudiagnostic.com/truhealth)
+   
+ Shop All 
 
-  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
+ Shop All 
+       Shop All
+       Image 2BasisNAD+ Supplement
+       Image 3MatterLong-Term Brain Health
+       Image 4CofactorAdvanced Collagen System with NAD+ Boost
+       Image 5MosaicSkin Aging Support
+       Image 6VisionEye Longevity
+       Image 7SignalMitochondrial Support
+       Image 8FormatAdvanced Immune Support
+       Image 9Senolytic Complex
+       Image 10Longevity Starter Pack
+       Image 11IndexBiological Age Test
 
-  [**TruHealth™ Test**](/products/truhealth)
+   
+ Index 
 
-  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
-* + [Our Science](https://www.trudiagnostic.com/science)
-  + [Our Research](https://www.trudiagnostic.com/research)
-* + [Healthcare Providers](https://www.trudiagnostic.com/providers)
-  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
-  + [Lab Processing](https://www.trudiagnostic.com/lab)
-* [Login](https://portal.trudiagnostic.com/sign-in)
+ Index 
+       Image 12IndexBiological Age Test
+       Aging Research Center
 
-* Our Tests 
+   
+ The Science 
 
-  [Shop Tests](/collections/shopfront)
+ The Science 
+       Aging 101
+       Clinical Trials
+       Aging Research Center
 
-  [About TruAge™](https://www.trudiagnostic.com/truage)
+   
+ The Company 
 
-  [About TruHealth™](https://www.trudiagnostic.com/truhealth)
+ The Company 
+       Mission
+       Team
+       Scientific Advisory Board
+       News & Media [...] Log inCart
 
-  [**TruAge + TruHealth™ Test**](/products/truage-truhealth)
+   Image 34: Supplements  ### All Products
 
-  [**TruHealth™ Test**](/products/truhealth)
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-  [**TruAge™ Test**](/products/truage-complete-epigenetic-collection)
-* How It Works 
-  + [Our Science](https://www.trudiagnostic.com/science)
-  + [Our Research](https://www.trudiagnostic.com/research)
-* Partner with Us 
-  + [Healthcare Providers](https://www.trudiagnostic.com/providers)
-  + [Researchers](https://www.trudiagnostic.com/research-services)
-  + [TruDiscovery Grant](https://www.trudiagnostic.com/trudiscovery-grant)
-  + [Lab Processing](https://www.trudiagnostic.com/lab)
+Go to All Products collection page Shop All Products     
+   Image 35: Supplements  ### Anti-Aging
 
-[Login](https://portal.trudiagnostic.com/sign-in)   [Cart](/cart)
+Go to Anti-Aging collection page Shop Anti-Aging     
+   Image 36: Supplements  ### B & S
 
-# TruHealth™
+Did you know? Taking both Basis AND Signal is your best bet...
 
-34 reviews
+Go to B & S collection page Shop B & S     
+   Image 37: Supplements  ### Basis
 
-TruHealth™ gives you deep insight into your unique nutrition and biological systems health by testing +110 biomarkers for vitamins, antioxidants, healthy fats, amino acids, and toxins, as well as inflammation rates, oxidative stress, and neurocognitive factors. No prescription or lab bloodwork needed. Delivered to your door.
+Go to Basis collection page Shop Basis     
+   Image 38: Supplements  ### Basis & Signal
 
-The TruHealth test includes the following reports:
+Did you know? Taking both Basis AND Signal is your best bet...
 
-* 105+ Biomarker Levels Tracked
-* Nutrient & Vitamin Levels
-* Antioxidant Levels
-* Amino Acid Levels
-* Metabolic Health
-* Energy Levels
-* Inflammation Levels
-* Stress Markers
-* Neurocognitive Markers
-* Immune Function Health
-* Cardiovascular Health
-* Toxin Exposure Levels
-* [View Sample Report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/ExampleTruHealth.pdf?v=1749717681)
+Go to Basis & Signal collection page Shop Basis & Signal     
+   Image 39: Supplements  ### Brain Health [...] Login to Index
+   Earn a Free Month 
 
-HSA / FSA Accepted
+   Register an Index Kit
+   Help Center
 
-Comprehensive Testing
+   Log in
+   Help Center
+   Order history
+   Index dashboard
 
-Cutting-Edge Science
+Image 13: Elysium Health Home
+   
+Shop All
 
-Easy and Convenient
+       Image 14 Basis NAD+ Supplement for Cellular Aging
+       Image 15 Matter Tri-Vitamin Complex for Brain Aging
+       Image 16 Cofactor Advanced Collagen System with NAD+ Boost
+       Image 17 Signal Mitochondria Support for Metabolic Aging
+       Image 18 Format Immune Health + Inflammaging
+       Image 19 Mosaic Skin Aging + Collagen Support
+       Image 20 Vision Eye Longevity + Protection
+       Image 21 Senolytic Complex Clear senescent cells
+       Image 22 Longevity Starter Pack
+       Image 23 Index Biological Age Test
 
-\* Subscriptions are US only
+       Shop All
+       Aging 101 Blog
 
-HSA / FSA Accepted
+   
+Index [...] Go to Brain Health collection page Shop Brain Health     
+   Image 40: Format  ### Format
 
----
+Go to Format collection page Shop Format     
+    ### Free Senolytic
 
-* 105+ Biomarkers Levels Tracked
-* Nutrient & Vitamin Levels
-* Antioxidant Levels
-* Amino Acid Levels
-* Metabolic Health
-* Energy Levels
-* Inflammation Levels
-* Stress Markers
-* Neurocognitive Markers
-* Immune Function Health
-* Cardiovascular Health
-* Toxin Exposure Levels
+Go to Free Senolytic collection page Shop Free Senolytic     
+   Image 41: New Year, New You  ### Home page
 
-* Easy, at-home testing (no lab visits)
-* Measures over 105+ biomarkers to deliver an in-depth assessment of your brain, gut, immune, metabolic, and nutritional systems.
-* Helps you make smarter lifestyle choices to feel younger and live healthier with personalized recommendations.
+Go to Home page collection page Shop Home page     
+   Image 42: New Year, New You  ### Index
 
-* Built on cutting-edge epigenetic research
-* Measures over 100,000 DNA markers for unmatched accuracy
-* Developed with world-leading scientists and validated algorithms
-* Backed by peer-reviewed studies and proven in published research
+Go to Index collection page Shop Index     
+   Image 43: Matter  ### Matter
 
-Step by step guide
+Go to Matter collection page Shop Matter     
+   Image 44: Mosaic  ### Mosaic
 
-## How Does it Work?
+Go to Mosaic collection page Shop Mosaic     
+   Image 45: New Year, New You  ### New Year, New You
 
-### Order + Activate Your Kit
-
-Once you order your test from our website, the collection kit will be shipped directly to your home with everything to begin testing included.
-
-### Monitor Your Health
-
-Follow the instructions in your test kit, use our pain-free lancet to prick your finger for a few drops of blood. Then, ship your specimen using the prepaid FedEx materials provided.
-
-### Unlock Personal Nutrition + Systems Health Insights
-
-Results are available online within 3-4 weeks of lab receipt, revealing your nutritional health at the molecular level.
-
-## Discover TruHealth
-
-TruHealth™ measures your cellular health across key biological systems related to longevity—including metabolic, immune, and neurocognitive health. Whether you’re looking to boost your nutrition, reduce toxins, improve sleep, or enhance metabolic function TruHealth™ gives you a personalized roadmap to target deficiencies and take actions to improve.
-
-* [Sample TruHealth™ report](https://cdn.shopify.com/s/files/1/0269/3332/9974/files/Sample_TruHealth.pdf?v=1769008125)
-
-Nutrient Levels
-
-Optimize your vitamin levels for better health.
-
-Metabolic Health
-
-Understand your metabolism for improved energy and weight control.
-
-Inflammation & Immunity
-
-Identify hidden inflammation affecting your immune and overall health.
-
-Gut Health
-
-Assess digestion and nutrient absorption for better overall wellness.
-
-Brain Health
-
-Uncover biomarkers for memory, focus, and long-term brain health.
-
-Oxidative Defense
-
-Measure your body’s ability to combat free radical damage.
-
-Toxin Exposure
-
-Detect exposure to heavy metals and environmental chemicals.
-
-Healthy Fats
-
-Optimize  …[truncated]
+Go to New Year, New You collection page Shop New Year, New You     
+   Image 46: Supplements  ### Performance

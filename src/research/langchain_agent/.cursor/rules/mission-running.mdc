@@ -29,6 +29,7 @@ Every JSON mission file must match the `ResearchMission` Pydantic model:
         "user_objective": "Detailed research instructions...",
         "targets": ["Company Name", "domain.com"],
         "selected_tool_names": ["search_web", "map_website", "extract_from_urls"],
+        "selected_subagent_names": ["browser_control", "tavily_research"],
         "stage_type": "entity_validation | targeted_extraction",
         "max_step_budget": 10
       },
@@ -52,6 +53,7 @@ Every JSON mission file must match the `ResearchMission` Pydantic model:
 
 Key fields:
 - `dependencies`: list of `task_slug` strings — stage waits and receives those reports
+- `selected_subagent_names`: optional list of named subagents enabled for that stage (for example `clinicaltrials_research`, `tavily_research`, `docling_document`)
 - `iterative_config`: set `{"max_iterations": N}` for multi-pass stages
 - `report_required_sections`: optional list of `## Heading` names the report must contain
 - `stage_type`: drives KG schema selection — use `entity_validation` for fundamentals, `targeted_extraction` for products/deep-dives

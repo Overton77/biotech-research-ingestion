@@ -8,7 +8,7 @@ from beanie.odm.fields import PydanticObjectId
 from fastapi import APIRouter, HTTPException, Query, status
 
 from src.api.schemas.common import envelope
-from src.research.models.mission import ResearchRun
+from src.research.deepagent.models.mission import ResearchRun
 
 logger = logging.getLogger(__name__)
 

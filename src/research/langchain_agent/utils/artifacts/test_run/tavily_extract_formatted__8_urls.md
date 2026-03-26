@@ -1,957 +1,836 @@
-Meta: request_id=5236ab45-0b94-4c65-ac3c-2e6418184146, response_time_s=15.92
+Meta: request_id=92219f42-5bf9-41c0-893e-0319a3c7ec86, response_time_s=0.76
 
 === Extracted Web Content ===
 [Result 1]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/about-ag1/ingredients/ctr
+Title: Sign In →
+URL: https://www.generationlab.com/biomarkers
 Content:
-[Shop All](/shop)
+Sign In →
+Order Now 
+→
 
-# High-quality ingredients optimized for impact
+# 460+ Biomarkers 19 Organs & Systems 1 Comprehensive Test
 
-## We don’t think you should settle for questionable ingredients when it comes to your daily nutrition. AG1’s ingredients are [sourced from quality partners](#imageAndTextV3_63a212251556551e8f06adaa68b8f4e1) for absorption, potency, and nutrient density to deliver the Foundational Nutrition your body needs.\*
+Brain Health & Cognition
 
-## See what goes into every scoop of AG1
+Gene Symbol: 
+DLGAP2
 
-Free of
+Immune System
 
-GMOs  
-Artificial Sweeteners  
-Gluten  
-Dairy or Lactose  
-Egg or Peanuts
+Gene Symbol: 
+AIRE
 
-Diet Friendly
+Reproductive System
 
-Vegetarian  
-Vegan  
-Paleo  
-Keto  
-Low-carb
+Gene Symbol: 
+KCNQ1
 
-QUALITY SOURCING
+Cardiac System
 
-## Farm to Label
+Gene Symbol: 
+KCNQ1
 
-We’ve always been dedicated to rigorous testing, third-party certifications, and strict sourcing standards. Now, we’re taking it a step further by creating visibility between our direct ingredients and the partners and farmers that enable our high quality and purity standards.
+Inflammatory Regulation
 
-## Citrus Bioflavonoids
+Gene Symbol: 
+AIRE
 
-#### Central Valley, California
+Gene Symbol: 
+PRDM16
 
-Ingredient #51 of 75+: citrus bioflavonoids from citrus proudly grown in sunny Fresno, California. AG1 takes the concentrated and potent extract of citrus bioflavonoids isolated from the most powerful – but often under-appreciated – part of the fruit: the peel. Supporting immune defense, citrus bioflavonoids are just one of the many high quality ingredients packed into every serving of AG1.
+Tissue Regeneration
 
-## Pea Protein
+Gene Symbol: 
+NGF
 
-#### Manitoba, Canada
+Blood Sugar & Insulin Control
 
-Ingredient #50 of 75+: Pea protein contains essential amino acids and is used in AG1 to support digestion by helping transport nutrients across the gut barrier. In this episode, meet a family of growers behind some of the high quality pea protein that makes its way into AG1. Across multiple generations, these growers remain focused on maintaining high quality standards and a palpable sense of community pride.
+Gene Symbol: 
+KCNQ1
 
-## Vitamin E
+Hepatic System (Liver)
 
-#### La Pampa Region, Argentina
+Gene Symbol: 
+KCNQ1
 
-Ingredient #3 of 75+: In this episode, we follow Vitamin E from one of our suppliers, derived from the crushed seeds of hardy sunflowers grown in central Argentina. What many people might not realize is that vitamin E is considered an essential vitamin – meaning it needs to be consumed in the human diet, either from food or supplements because the body cannot produce it. Fortunately, sunflower seeds are an excellent natural source of vitamin E, primarily in the form of alpha-tocopherol, which is the most biologically active form for humans. This makes its antioxidant and immune-supporting properties more bioavailable.
+Muscular System
 
-## Get daily nutrition you can count on with ingredients that work with your body.
+Gene Symbol: 
+KY
 
-[Buy AG1 Now](https://drinkag1.com/shop/greens-powder-pouch)
+Skeletal System
 
-90-day money back guarantee
+Gene Symbol: 
+AIRE
 
-Update or cancel anytime
+Nervous System
 
-## AG1 Supplement Facts
+Gene Symbol: 
+GAK
 
-AG1 is a comprehensive daily health drink formulated to deliver what your body needs in one convenient serving. From high quality vitamins and minerals, to prebiotics and probiotics, digestive enzymes, adaptogens, superfoods and more — AG1 makes it powerfully simple for you to cover your foundational nutrients for optimal gut health, immune support, energy, healthy brain and mood.\*
+Respiratory System
 
-## 50,000+ verified 5-star reviews for AG1 products
+Gene Symbol: 
+KCNQ1
 
-### The new formula is really great
+Digestive System
 
-"The new formula with advanced pre-and probiotics has really hit the bull’s-eye for me. It has been a big difference in my digestion, and I am very happy with the product. I highly recommend it."
+Gene Symbol: 
+AIRE
 
-Louis C., 7/22/25 - AG1 Review
+Blood & Vascular System
 
-### A nice sweet experience
+Gene Symbol: 
+KCNB2
 
-"I have to say I have tried a lot of different types of greens and this is the best brand. I was excited to try the new flavor and it did not disappoint! I look forward to my greens daily and enjoy them!"
+Urinary System
 
-Ashley C., 7/16/2025 - AG1 Review
+Gene Symbol: 
+SOX2OT
 
-### I Love My AG1
+Oncogenesis (Cell Mutation)
 
-"I continue to love the taste and feel good while drinking AG1 daily. The customer service is outstanding and the company rewards loyal customers with occasional perks. That makes me feel good too!"
+Gene Symbol: 
+KCNQ1 [...] Gene Symbol: 
+MYBPC3
 
-Wendy O., 3/17/25 — AG1 RevIew
+Urinary System
 
-## FAQs
+Gene Symbol: 
+BBS9
 
-Vitamin D3+K2 complements AG1 with a single-drop formula in a bioavailable oil form.
+Oncogenesis (Cell Mutation)
 
-The product is formulated separately from AG1 to provide optimal quality and bioavailability.
+Gene Symbol: 
+NGF
 
-AG1 Omega 3 complements AG1 with high-quality EPA and DHA in a bioavailable oil form. Each serving provides over 2000mg, sourced from wild-caught small fish that are molecularly distilled for purity and quality.
+Fibrosis (Scar Tissue Formation)
 
-The product is formulated separately from AG1 to provide optimal bioavailability.
+Gene Symbol: 
+PRDM16
 
-Since 2010, we’ve earned the trust of millions worldwide through our uncompromising commitment to quality, efficacy, and safety.
+Auditory System
 
-This includes:
+Gene Symbol: 
+OTX1
 
-* Multiple gold-standard clinical trials that consistently show AG1 Next Gen helps fill nutrient gaps across a range of lifestyles and diets (1-4).
-* NSF Certified for Sport®, a rigorous third-party certification ensuring AG1 is free from over 280 banned substances, including stimulants, narcotics, diuretics, and masking agents.
+Brain Health & Cognition
 
-AG1 ingredients are sourced from quality partners for absorption, potency, and nutrient density.
+Gene Symbol: 
+CHD5
 
-You can read more about …[truncated]
+Immune System
+
+Gene Symbol: 
+S100A2
+
+Reproductive System
+
+Gene Symbol: 
+TNF
+
+Cardiac System
+
+Gene Symbol: 
+DMD
+
+Inflammatory Regulation
+
+Gene Symbol: 
+NOTCH4
+
+Metabolism
+
+Gene Symbol: 
+AHSG
+
+Tissue Regeneration
+
+Gene Symbol: 
+FGF1
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+PTPRN2
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+GAK
+
+Muscular System
+
+Gene Symbol: 
+CACNA2D4
+
+Skeletal System
+
+Gene Symbol: 
+FGF1
+
+Nervous System
+
+Gene Symbol: 
+CACNG3
+
+Respiratory System
+
+Gene Symbol: 
+IL1RN
+
+Digestive System
+
+Gene Symbol: 
+TREH
+
+Blood & Vascular System [...] Respiratory System
+
+Gene Symbol: 
+CDH23
+
+Digestive System
+
+Gene Symbol: 
+TNF
+
+Blood & Vascular System
+
+Gene Symbol: 
+PTPRS
+
+Urinary System
+
+Gene Symbol: 
+MEPE
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+TNF
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+TNF
+
+Auditory System
+
+Gene Symbol: 
+VIPR2
+
+Brain Health & Cognition
+
+Gene Symbol: 
+NKX2-8
+
+Immune System
+
+Gene Symbol: 
+IL1RN
+
+Reproductive System
+
+Gene Symbol: 
+CHRNA2
+
+Cardiac System
+
+Gene Symbol: 
+TNF
+
+Inflammatory Regulation
+
+Gene Symbol: 
+TOLLIP
+
+Metabolism
+
+Gene Symbol: 
+PRKAG2
+
+Tissue Regeneration
+
+Gene Symbol: 
+NOTCH4
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+TNF
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+CYP2D6
+
+Muscular System
+
+Gene Symbol: 
+GRM4
+
+Skeletal System
+
+Gene Symbol: 
+SLC51B
+
+Nervous System
+
+Gene Symbol: 
+SYTL2 [...] Gene Symbol: 
+SLC51B
+
+Nervous System
+
+Gene Symbol: 
+SYTL2
+
+Respiratory System
+
+Gene Symbol: 
+CHRNA2
+
+Digestive System
+
+Gene Symbol: 
+NOTCH4
+
+Blood & Vascular System
+
+Gene Symbol: 
+FGF1
+
+Urinary System
+
+Gene Symbol: 
+CYP2D6
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+NOTCH4
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+COL18A1
+
+Auditory System
+
+Gene Symbol: 
+KCNN1
+
+Brain Health & Cognition
+
+Gene Symbol: 
+ASH1L
+
+Immune System
+
+Gene Symbol: 
+TOLLIP
+
+Reproductive System
+
+Gene Symbol: 
+DDX4
+
+Cardiac System
+
+Gene Symbol: 
+SYTL2
+
+Inflammatory Regulation
+
+Gene Symbol: 
+LBP
+
+Metabolism
+
+Gene Symbol: 
+GLIS3
+
+Tissue Regeneration
+
+Gene Symbol: 
+GLIS3
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+GLIS3
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+PFKP
+
+Muscular System
+
+Gene Symbol: 
+PFKP
 
 [Result 2]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/products/greens-powder-pouch?plan=subscription
+Title: Get A Free Sample Report Right Away
+URL: https://www.generationlab.com/the-systemage-test
 Content:
-[Shop All](/shop)
+## Get A Free Sample Report Right Away
 
-# AG1: Next Gen Pouch
+View Sample Report →
+We’ll only send the good stuff. You can unsubscribe anytime.
 
-verified 5-star reviews for AG1 products
+Image 25: sample-report
 
-*A smooth, light flavor with hints of pineapple and vanilla*
+Generation Lab
 
-Free Member Gifts- $43value\*\*
+Slow your aging with the world's most accurate epigenetic test and personalized insights. 460 biomarkers, 19 organs and systems.
 
-Delivered once with your AG1 subscription
+Order Now →
 
-† Value of one-time purchase
+Ask AI for a summary of the Generation Lab
 
-Research suggests up to 90 days to notice most benefits.
+[](
 
-Your subscription includes:
+HomeFind a DoctorSystemAge™ TestOur ScienceOur BiomarkersCareersAbout UsFAQsFor ProvidersPublished ResearchGeneration Lab NewsLongevity Articles
 
-* Free shipping always
-* Exclusive Membership rewards
-* 90-day money-back guarantee
-* Pause or cancel anytime
+© 2025 Generation Lab, All rights reserved.
 
-AG1 Next Gen is a clinically-backed Daily Health Drink that combines a multivitamin, pre- and probiotics, superfoods, and antioxidants into one delicious green scoop.\*
+info@generationlab.com+1 415 326 3656
 
-Men, women, and people over 18-years-old who are not currently pregnant or breastfeeding. AG1 greens is suitable for a variety of different diets and lifestyles, including, paleo, keto and low-carb, vegan, vegetarian, and intermittent fasting.
+1701 Old Bayshore Highway
 
-Daily support for:\*  
-– Energy production  
-– Regular digestion & less bloating  
-– Immune defense  
-– Healthy brain & mood
+Burlingame, CA 94010
 
-1. Mix contents of one level 13g green powder scoop of AG1 with 8-10 oz of cold water  
-2. Shake until dissolved  
-3. Enjoy!
+Terms of ServicePrivacy Policy
 
-AG1 Next Gen helps fill nutrient gaps and promote gut health with 75+ ingredients sourced for absorption and nutrient density. Each batch of AG1 is rigorously tested and free from more than 280 banned substances. We’re proud to be part of a small number of products that have achieved - and maintained - NSF Certified® For Sport.
+Image 26: mask-video-placeholder
 
-Need your AG1 on the go? Try our Travel Packs
+Slow Aging. 
 
-HSA/FSA eligible with
+Prevent Disease.
 
-## AG1 is a more-in-one solution
+✕
 
-| Multivitamins | Probiotics | Greens |
-| --- | --- | --- |
-| Vitamins |
-| Minerals |
-| Prebiotics |
-| Probiotics |
-| Greens & Superfoods |
-| Antioxidants |
-| Digestive Enzymes |
+Hi! What can I help you with? [...] Co-Founder & CSO at Generation Lab
 
-*†Based on current available data for mass market dietary supplements.*
+In this video, Dr. Irina Conboy talks about the science behind epigenetic testing and the scientific development of the SystemAge Test™
 
-## In One Scoop of AG1 Next Gen
+Play video
 
-AG1 complements a healthy diet. It’s easy to incorporate into any lifestyle or health regimen without overdoing it. Eat your macros, then take AG1.
+Full-Body Aging Insights
+## 460 Biomarkers
 
-Calories
+19 Systems
 
-40
+1 Complete Profile
 
-Carbohydrates
+Image 6: bgImage 7: humanImage 8: humanImage 9: human
 
-6g
+The first test to Test, Track, and Intervene 
 
-FIBER
+the causes of aging at an individual level.
 
-2g
+Measuring Biological Noise
+## What our tests reveal
 
-Naturally occurring SUGAR
+Our test serves as a DNA methylation noise detector, uncovering and measuring biological noise within your body to accurately gauge your biological age.
 
-<1g
+Get a Sample Report →
 
-Protein
+Image 10: tests reveal doctor
 
-2g
+DNA Methylation Noise Detection
 
-Superfoods and Prebiotics
+1
+### Top Aging Factors [...] DNA Methylation Noise Detection
 
-7.5g
+1
+### Top Aging Factors
 
-Daily Phytonutrients
+Uncover aging factors across seven body systems and twelve organs, providing the foundation for precise intervention plans.
 
-1.5g
+2
+### Aging Stressors
 
-PROBIOTICS
+Cumulative molecular stressors contribute to accelerated aging. We measure this pressure to gain comprehensive insights into the pace of aging.
 
-10 BILLION CFU
+3
+### Aging Trajectory
 
-Free of
+Gain precise insights into aging progress, evaluate the efficacy of intervention plans, and proactively prevent disease for a healthier life.
 
-GMOs  
-Artificial Sweeteners  
-Gluten  
-Dairy or Lactose  
-Egg or Peanuts
+• Biological Noise •
 
-Diet Friendly
+Proven Accuracy
+## Outperforming Competitors
 
-Vegetarian  
-Vegan  
-Paleo  
-Keto  
-Low-carb  
-Halal
+### Accuracy
 
-## Formulated for your body. Clinically backed.
+Generation Lab
 
-### Our doctors, scientists, and researchers worked with third-party experts to study the AG1 Next Gen formula. Here is what they found:
+99.9% cellular-level precision
 
-IMPROVES KEY NUTRIENT LEVELS WITHIN 3 MONTHS†
+Traditional Labs
 
-CLINICALLY SHOWN TO ENRICH THE GUT MICROBIOME†
+Accurate, not at cellular level
 
-70%
+Bio Clocks
 
-of subjects had an increase in RBC folate level†
+∼ 58%
 
-73%
+### Actionable
 
-of subjects saw an increase in vitamin C levels1
+Generation Lab
 
-10x
+Personalized Action Plan based on results [...] Test delivery frequency:
 
-increase in healthy bacteria in the gut†
+Every 2 months Every 3 months Every 6 months 
 
-[See Our Studies](/learn/research/scientific-research)
+Before & After Bundle
 
-*†Based on clinical studies in healthy adults ages 18–59, evaluating nutrient biomarkers, microbiome shifts, and bioavailability. Study designs and durations varied. Please see drinkag1.com/science for additional information.*
+from$958
 
-## High-quality ingredients
+One-time Purchase
 
-Every scoop of AG1 works to deliver comprehensive daily nutrition with ingredients that are carefully sourced for absorption, potency, and nutrient density.
+$499
 
-Vitamins & minerals
+Total: $447 billed every 2 months
 
-Vitamins and minerals are micronutrients that support energy production for daily function, like B complex and vitamin B12.
+Join Now →
 
-Pre & probiotics
+## What’s included 
 
-Probiotics and prebiotics, like apple and inulin, work together to promote growth of healthy bacteria and gut microbiome function.
+in every kit
 
-Stress adaptogens
+### The SystemAge™ Test
 
-Stress adaptogens, like rhodiola, are not normally consumed in a regular diet and are known to help the body manage stress to support energy and vitality.
+The at-home test to reveal the exact biological age and aging speed of 19 of your organs and systems, based on DNA analysis
 
-Antioxidants
+### Personalized Action Plan
 
-Help combat environmental and oxidative stress.\*
+A personalized Action Plan based on your results to slow and reverse your aging
 
-Superfoods & mushrooms
+### Clinician Consultation
 
-Antioxidants, like citrus bioflavonoids, help combat against environmental and oxidative stress.
+Speak with a longevity clinician about your results
 
-Digestion support
+BETA
 
-Digestive enzymes, like bromelain, help breakdown nutrients from whole foods, while soothing ingredients, like ginger, help make AG1 easy on the stomach.\*
+### Ongoing Support
 
-## 50,000+ verified 5-star reviews for AG1 products
+Support you throughout your anti-aging journey, answering questions and updating your Action Plan as needed
 
-### The new formula is really great
+### From Dr. Irina Conboy
 
-"The new formula with advanced pre-and probiotics has really hit the bull’s-eye for me. It has been a big difference in my digestion, and I am very happy with the product. I highly recommend it."
-
-Louis C., 7/22/25 - AG1 Review
-
-### A nice sweet experience
-
-"I have to say I have tried a lot of different types of greens and this is the best brand. I was excited to try the new flavor and it did not disappoint! I look forward to my greens daily and enjoy them!"
-
-Ashley C., 7/16/2025 - AG1 Review
-
-### I Love My AG1
-
-"I continue to love the taste and feel good while drinking AG1 daily. The customer service is outstanding and the company rewards loyal customers with occasional perks. That makes me feel good too!"
-
-Wendy O., 3/17/25 — AG1 RevIew
-
-## FAQs
-
-AG1 Next Gen was designed as a foundational nutrition supplement for a wide range of peop …[truncated]
+Co-Founder & CSO at Generation Lab
 
 [Result 3]
-Title: ![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-URL: https://drinkag1.com/products/greens-powder-travel-pack
+Title: Sign In →Order Now →
+URL: https://www.generationlab.com/science
 Content:
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F154db68c31610138ca270974049d8c55950032af-3600x2400.jpg%3Fauto%3Dformat&w=1920&q=75)
-![Replacement Value](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F24f282e160b85725e10b403590b8ba1517189f73-1125x751.png%3Fauto%3Dformat&w=1920&q=75)
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F2b1bac01d6477a1cb58986fdcab11a2f59ed7b7b-1125x750.png%3Fauto%3Dformat&w=1920&q=75)
-![AG1 benefits](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fd18177fe94dc7c0b1eb6149870cc3604453abde3-1125x751.png%3Fauto%3Dformat&w=1920&q=75)
-![AG1 ingredients](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F5a7d856cdce8eb94ddab301eaebec68c76677bed-1125x751.png%3Fauto%3Dformat&w=1920&q=75)
-![Flavor profile](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F0b65f7dc2a128b6560f7c2fdd98a4fdba7b47fe9-1125x750.png%3Fauto%3Dformat&w=1920&q=75)
-![Testimonial](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F1ec219d758418c0dca0daa8b86de897a999275bd-1125x751.png%3Fauto%3Dformat&w=1920&q=75)
-![Lifestyle](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F30ecb7853c38b79b228dad1218c05e4f303bb9b7-1125x750.png%3Fauto%3Dformat&w=1920&q=75)
+Sign In →Order Now →
 
-# AG1: Travel Packs
+# The Cutting-Edge Science Behind SystemAge™
 
-verified 5-star reviews for AG1 products
+SystemAge uses 20 years of research by Dr. Irina Conboy to measure aging with organ-level precision with AI-powered Epigenetics.
 
-![Included freebies](https://cdn.sanity.io/images/jf30o7wb/production/115fa08a891f74479c10abf5a5459e07ca738217-2400x1600.png)
+Test Now →Test Your Biological Age Now →
 
-Free Member Gifts - $29 value\*\*
+Entropy Curve
 
-Delivered once with your AG1 subscription
+Biological Age
 
-### What is AG1?
+Where science meets longevity
 
-AG1 Next Gen is a clinically-backed Daily Health Drink that combines a multivitamin, pre- and probiotics, superfoods, and antioxidants into one simple habit.\* Individual, lightweight Travel Packs offer a convenient way to take your daily routine wherever you go.
+## The Gold Standard in Biological Age Testing
 
-### Who's it for
+Your full-body aging profile, decoded
 
-Men, women, and people over 18-years-old who are not currently pregnant or breastfeeding. AG1 is suitable for a variety of different diets and lifestyles, including, paleo, keto and low-carb, vegan, vegetarian, and intermittent fasting.
+## 19 Organ Systems, 1 Simple Test
 
-### Benefits
+Our proprietary 460-biomarker panel delivers the most comprehensive aging profile available today. We don't just measure aging. We show you how to reverse it.
 
-Daily support for:\*  
-– Energy production  
-– Regular digestion & less bloating  
-– Immune defense  
-– Healthy brain & mood
+1. Auditory System
 
-### How to use
+2. Cardiac System
 
-1. Mix contents of one pack of AG1 with 8-10 oz of cold water  
-2. Shake until dissolved  
-3. Enjoy!
+3. Blood & Vascular System
 
-### Quality & Certifications
+4. Hepatic System (Liver)
 
-AG1 Next Gen helps fill nutrient gaps and promote gut health with 75+ ingredients sourced for absorption and nutrient density. Each batch of AG1 is rigorously tested and free from more than 280 banned substances. We’re proud to be part of a small number of products that have achieved - and maintained - NSF Certified® For Sport.
+5. Muscular System
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/e4f277d23d6f68bb019db0068b301fecca2cab10-792x540.png?auto=format)
+6. Skeletal System
 
-Switch to AG1 Next Gen Pouch and save $10!
+7. Nervous System
 
-HSA/FSA eligible with
+8. Brain Health & Cognition
 
-![Truemed](/_next/image?url=%2Ftrumed_logo.png&w=256&q=75&dpl=dpl_98L9Pv5aKLomqc9HqBZFtBsapLTj)
+9. Respiratory System [...] GeroScience
 
-## AG1 is a more-in-one solution
+### GeroScience - Jan 18, 2025
 
-|  |  | Multivitamins | Probiotics | Greens |
-| --- | --- | --- | --- | --- |
-| Vitamins |  |  |  |  |
-| Minerals |  |  |  |  |
-| Prebiotics |  |  |  |  |
-| Probiotics |  |  |  |  |
-| Greens & Superfoods |  |  |  |  |
-| Antioxidants |  |  |  |  |
-| Digestive Enzymes |  |  |  |  |
+DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/f15661c6ffcde6ccd324737c9c673c4370ebaa6b-96x38.png)
+Read Paper
 
-Multivitamins
+PubMed
 
-Probiotics
+### PubMed - Dec 11, 2024
 
-Greens
+The dominance of old blood, and age-related increase in protein production and noise
 
-Vitamins
+Read Paper
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
+Aging
 
-Minerals
+### Aging - Sep 12, 2023
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
+Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
 
-Prebiotics
+Read Paper
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/19120a2435a9bad2a655b4f40a1364c10a506861-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/0bf9922d2632501213c60455b67402b5e92d0920-32x32.svg)
-![](https://cdn.sanity.io/ …[truncated]
+Cell Cycle
+
+### Cell Cycle - Jun 15, 2012
+
+Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches
+
+Read Paper
+
+Cell Stem Cell
+
+### Cell Stem Cell - Jan 10, 2008 [...] Cell Stem Cell
+
+### Cell Stem Cell - Jan 10, 2008
+
+A Temporal Switch from Notch to Wnt Signaling in Muscle Stem Cells Is Necessary for Normal Adult Myogenesis
+
+Read Paper00223-8)
+
+Nature
+
+### Nature - Feb 17, 2005
+
+Rejuvenation of aged progenitor cells by exposure to a young systemic environment
+
+Read Paper
+
+Trusted by authorities in longevity science
+
+## Backed by World-Leading Scientists with Cutting-Edge Research
+
+Dr. Adeel Khan, MD
+
+Regenerative Medicine Doctor, CEO & Founder of Eterna Health
+
+We are now ready for healthcare 3.0 focusing on prevention. Generation Lab is the tool that I trust.
+
+Dr. Adeel Khan, MD
+
+Regenerative Medicine Doctor, CEO & Founder of Eterna Health
+
+Dr. George Church, PhD
+
+The Robert Winthrop Professor of Genetics at Harvard Medical School [...] Dr. George Church, PhD
+
+The Robert Winthrop Professor of Genetics at Harvard Medical School
+
+Generation Lab's organ-level biological age test could define preventative medicine - helping us to catch aging before it leads to disease.
+
+Dr. George Church, PhD
+
+The Robert Winthrop Professor of Genetics at Harvard Medical School
+
+Dr. Robert Langer, PhD
+
+Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
+
+Irina has made significant contributions to Aging Science. her peer reviewed paper on Nature and Science have been cited for 4000 times.
+
+Dr. Robert Langer, PhD
+
+Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
+
+Dr. David Sinclair, AO, PhD
+
+Professor of Genetics, Harvard Medical School
 
 [Result 4]
-Title: ![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-URL: https://drinkag1.com/bundles/day-and-night-bundle
+Title: [Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
+URL: https://www.generationlab.com/published-research
 Content:
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fd1ba0cbdb5221a59429d0db893b952bb916533de-1800x1200.jpg%3Fauto%3Dformat&w=1920&q=75)
-![#1 Dr recommended brand](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F684094decd93674c221bf7436f0982b069a7c449-1800x1200.png%3Fauto%3Dformat&w=1920&q=75)
-![AG1 AGZ Experience](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F1cfc9b25f58545de861daa0ae8a109cb9bf4e382-1146x764.jpg%3Fauto%3Dformat&w=1920&q=75)
-![AG1 Ingredients](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F2eac00d6f8b2447317e5939b0f2f12ae5a64bce3-1146x764.jpg%3Fauto%3Dformat&w=1920&q=75)
-![AGZ Ingredients](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F9f4d33717200ad305c4bec8b3fd3fa3973dd8ba7-1146x764.jpg%3Fauto%3Dformat&w=1920&q=75)
-![AG1 Lifestyle](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fb3bd93cefacc59e3a4c2a3f4e2f274ece379c693-1146x764.jpg%3Fauto%3Dformat&w=1920&q=75)
-![AGZ Lifestyle](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F9b90adde10ea1662d3d98d79b238b87b5500ec29-1146x764.jpg%3Fauto%3Dformat&w=1920&q=75)
+[Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
 
-# Day and Night Bundle
 
-verified 5-star reviews for AG1 products
 
-## What's Included
+## Published Research
 
-![AG1: Pouch](https://cdn.shopify.com/s/files/1/1523/4600/files/pouch_original_cd79719d-8dce-4dee-aed2-7e4949a89056.png?v=1765399074&width=1563&height=1563&crop=center)
-![AGZ](https://cdn.shopify.com/s/files/1/1523/4600/files/travelpacks_chocolate.png?v=1764619148&width=1563&height=1563&crop=center)
-![Free Welcome Kit**](https://cdn.shopify.com/s/files/1/1523/4600/files/Welcome_kit_-_Single_a9e801e7-b732-4112-8652-121eabd0acbd.png?v=1744747683&width=1600&height=1600&crop=center)
-![Free 3ct Travel Packs](https://cdn.shopify.com/s/files/1/1523/4600/files/image_35_2.png?v=1759767917&width=2000&height=2000&crop=center)
-![Free Frother**](https://cdn.shopify.com/s/files/1/1523/4600/files/frother.png?v=1744747886&width=1600&height=1600&crop=center)
+Dive into the scientific foundation of our tests through decades of rigorous research and peer-reviewed studies published in leading journals.
 
-### What is the Day and Night Bundle
+GeroScience
 
-The Day and Night Bundle pairs AG1 and AGZ to support two foundational health pillars: Nutrition & Sleep. From clinically studied key ingredients to rigorous third-party testing, both AG1 and AGZ are grounded in quality. Together, they create a balanced cycle of energy and restoration, supporting whole body health around the clock.\*
+### GeroScience - Jan 18, 2025
 
-### Who’s it for
+DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
 
-For those looking to support daily micronutrient, microbiome, relaxation, and sleep quality needs.\*  
-  
-Suitable for men, women, and people over 18 years old who are not currently pregnant or breastfeeding. These products are suitable for a variety of different diets and lifestyles, including, paleo, vegan, and vegetarian.
+[Read Paper](https://link.springer.com/article/10.1007/s11357-024-01460-1)
 
-### Benefits
+PubMed
 
-AG1 - Daily support for:\*  
-— Energy production  
-— Regular digestion & less bloating  
-— Immune defense  
-— Healthy brain & mood    
-  
-AGZ   
-— Nightly support for\*:  
-— Relaxation  
-— Sleep quality  
-— Feeling refreshed
+### PubMed - Dec 11, 2024
 
-### How to use
+The dominance of old blood, and age-related increase in protein production and noise
 
-AG1 - Morning   
-1. Mix contents of one level 13g scoop of AG1 with 8-10 oz of cold water  
-2. Shake until dissolved  
-3. Enjoy!  
-  
-AGZ- Evening   
-1.  Combine 1 packet of AGZ with 4 ounces of water or milk of choice. Enjoy cold, room temperature, or warm. Customizing temperature and liquid choices creates a variety of taste profiles.   
-2. Blend well with AGZ frother for a smooth, fully dissolved drink.  
-3. Drink AGZ before bed to cue your body and mind to start winding down.\*
+[Read Paper](https://pubmed.ncbi.nlm.nih.gov/39672207/)
 
-### Quality & Certifications
+Aging
 
-AG1 and AGZ are proudly NSF Certified For Sport®, one of the most rigorous independent quality and safety certification programs in the supplement industry. NSF conducts annual audits of our manufacturing facilities, reviews ingredients for toxicology, and ensures label claims are accurate.
+### Aging - Sep 12, 2023
 
-HSA/FSA eligible with
+Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
 
-![Truemed](/_next/image?url=%2Ftrumed_logo.png&w=256&q=75&dpl=dpl_H7wU4xjon4eYqnuwrDQbytHhsn8V)
-![]()
+[Read Paper](https://pubmed.ncbi.nlm.nih.gov/37702598/)
 
-# AG1 + AGZ Experience
+Cell Cycle
 
-AG1 and AGZ provide support for two foundational health pillars: Nutrition & Sleep. Backed by science, they feature thoughtfully selected ingredients designed to support your body’s natural rhythm. Together, they help create a balanced cycle of energy and restoration, supporting whole body health around the clock.\*
+### Cell Cycle - Jun 15, 2012
 
-![AG1 Pouch and AGZ]()
+Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches
 
-## Support whole body health around the clock.
+[Read Paper](https://www.tandfonline.com/doi/full/10.4161/cc.20437)
 
-![]()
-![](https://cdn.sanity.io/images/jf30o7wb/production/12c2798391f878f21799c6fbde47cf60afe4c3cb-40x40.svg)
+Cell Stem Cell
 
-Daily support for\*:
+### Cell Stem Cell - Jan 10, 2008
 
-Nutrient Gaps  
-Energy production  
-Regular digestion & less bloating  
-Immune defense  
-Healthy brain & mood
+A Temporal Switch from Notch to Wnt Signaling in Muscle Stem Cells Is Necessary for Normal Adult Myogenesis
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/7521c3f6b74d18a85e4b45b74ef780f5a6f4974b-40x40.svg)
+[Read Paper](https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(07)00223-8)
 
-13g per se …[truncated]
+Nature
+
+### Nature - Feb 17, 2005
+
+Rejuvenation of aged progenitor cells by exposure to a young systemic environment
+
+[Read Paper](https://www.nature.com/articles/nature03260)
+
+## Experience the science
+
+Discover your true biological age with our revolutionary testing technology.
+
+[Test Your Biological Age Now →](/the-systemage-test)
 
 [Result 5]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/learn/research/scientific-research
+Title: Measuring 19 Organ Systems with SystemAge
+URL: https://www.generationlab.com/blog/aging-biomarkers
 Content:
-[Shop All](/shop)
+## Measuring 19 Organ Systems with SystemAge
 
-RESEARCH STUDIES
+Generation Lab is pioneering the next evolution in preventive health testing by bringing longevity science from UC Berkeley and Harvard to your home. The company, co-founded by Dr. Irina Conboy, known as the "mother of longevity" for her aging and regeneration research, builds on over 20 years of research to offer insight into your biological age.
 
-# The next generation of AG1 is clinically backed.
+The SystemAge test is the first and only at-home epigenetic age testing solution analyzing over 460,000 DNA methylation biomarkers across your genome. SystemAge delivers 19 biological ages for your core organ systems, acting as a "GPS for your health" by showing your current status and goals, instead of one biological age number.
 
-Our innovation is driven by our ongoing investments in research and clinical discovery. We ensure the benefits of our products are thoroughly researched and any claims are substantiated by multiple bodies of research on ingredients and the finished formula. The impact of AG1 Next Gen is not just experienced, it's measurable.\*1-4
+The SystemAge Advantage: [...] The breakthrough solution lies in DNA methylation analysis. Your epigenome continuously responds to your lifestyle, diet, environment, and aging, acting as a biological record-keeper. DNA methylation patterns reflect the accumulated impact of all nine aging hallmarks. This makes epigenetic analysis the foundation of the most accurate biological age test available today. [...] ### 3. Epigenetic Profile
 
-## One product, four gold-standard clinical trials.
+Epigenetics is the layer of instructions on top of your DNA, determining when and how your genes are activated. It is like a conductor leading an orchestra. DNA is the sheet music, but epigenetics is the conductor deciding which instruments play when and how loudly. A key type of epigenetic modification is DNA methylation.
 
-AG1 Next Gen has been put to the test in multiple gold-standard clinical trials, consistently showing its efficacy in closing nutrient gaps and supporting gut health across diverse populations and study designs.\*1-4
+As we age, this molecular "conductor" becomes erratic. This epigenetic "drift" or "noise" causes cells to forget their identity and function, a root cause of aging. This makes epigenetic patterns the most important and measurable biomarker because they reflect the impact of all other aging factors. Tracking these methylation patterns is the gold standard for the most accurate biological age test.
 
-## One product, four gold-standard clinical trials.
-
-AG1 Next Gen has been put to the test in multiple gold-standard clinical trials, consistently showing its efficacy in closing nutrient gaps and supporting gut health across diverse populations and study designs.\*1-4
-
-# Our research findings
-
-NUTRITIONAL GAPS
-
-### AG1 Next Gen is clinically shown to fill common nutrient gaps even in healthy eaters.¹⁻⁴
-
-WHY THIS MATTERS
-
-In four randomized, placebo-controlled trials—meeting strict and widely accepted standards for clinical research—AG1 Next Gen demonstrated a statistically significant and positive impact on closing common nutrient gaps. These studies included participants with diverse diets, backgrounds, ages, and activity levels.¹⁻⁴
-
-NUTRIENT LEVELS
-
-### AG1 Next Gen improves key nutrient levels within 3 months.¹
-
-0
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-in
-
-0
-
-1
-
-0
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-0
-
-subjects drinking AG1 Next Gen had an increase in RBC folate.1
-
-WHY THIS MATTERS
-
-Adequate micronutrients are needed to support the body in the production of energy, building proteins, and metabolizing food. They act as co-factors and individual building blocks. Maintaining consistent intake is key for overall health.\*
-
-0
-
-1
-
-2
-
-3
-
-0
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-0
-
-1
-
-2
-
-3
-
-%
-
-increase in Vitamin C levels1
-
-WHY THIS MATTERS
-
-Vitamin C supports the body's ability to combat oxidative stress and support immune defenses. It is a super antioxidant that plays a fundamental role in various physical and cellular processes.\*
-
-GUT HEALTH
-
-### AG1 Next Gen is clinically shown to enrich the gut microbiome.¹⁻³
-
-Over
-
-0
-
-1
-
-0
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-0
-
-x
-
-Average increase in healthy bacteria in the gut1-3
-
-WHY THIS MATTERS
-
-Beneficial bacteria—such as the probiotic strains in AG1 Next Gen—are important for maintaining a healthy microbiome and play a key role in supporting overall gut health.\*
-
-BIOAVILABILITY
-
-### Key nutrients in AG1 Next Gen were shown to be quickly and easily absorbed into the body.⁴
-
-Folate levels were significantly increased within 30 minutes of drinking AG1 Next Gen.4
-
-WHY THIS MATTERS
-
-AG1 Next Gen delivers key nutrients like folate, vitamin C, and zinc—in bioavailable forms the body can easily and readily utilize, maximizing their potential benefits.\*
-
-1 Triple-blind, randomized, placebo-controlled parallel-designed clinical trial evaluating nutrient biomarkers and microbiome shifts in 105 healthy adults ages 20-59 over the course of 12 weeks.  
-2 Double-blind, randomized, placebo-controlled 2-week crossover clinical trial assessing nutrient gaps and microbiome shifts in 20 active adults ages 19-37.  
-3 Double-blind, randomized, placebo-controlled 2-week crossover clinical trial assessing nutrient gaps and microbiome assessments of 24 healthy adults with occasional GI distress ages 26-59.  
-4 Double-blind, randomized, placebo-controlled crossover clinical trial assessing nutrient gaps and bioavailability in 16 healthy adults ages 18-42 over the course of 8 hours.
-
-## What powers our research
-
-There are many ways to study how nutrition impacts the body. In our clinical research, we use advanced tools and technologies—alongside our academic and clinical partners—to explore the connection between nutrient intake and microbiome composition.
-
-Our Team
-
-## Our research team
-
-Our in-house team of clinicians and scientists bring diverse expertise across nutrition, metabolism, microbiome, and related fields. We also collaborate with independent experts, academic institutions, and clinical partners to advance research and expand our understanding with cutting-edge technology.
-
-OUR ADVISORS
-
-## Science and Innovation Advisors
-
-Our independent Science and Innovation Advisors bring deep expertise across nutrition science, health, and research. They work alongside our in-house team to provide guidance on research and product development, helping to ensure our work remains rigorous, forward-looking, and grounded in evidence.
-
-## The clinical research lifecycle
-
-We’re proud to share that four clinical studies – rigorously designed, randomized, placebo-controlled trials – on the AG1 Next Gen formula have been completed. This is a major milestone in our scientific journey and one that underscores our long-standing commitment to evidence-based innovati …[truncated]
+### 4. Cellular Housekeeping [...] Unmatched Precision: Receive detailed biological ages for your Cardiac System, Brain Health, Immune System, Liver Function, Kidney Health, and 14 other critical systems. This organ-specific aging analysis provides actionable insights you can't get elsewhere.
+ Clinical-Grade Accuracy: SystemAge is the gold standard in biological age measurement, with clinical-grade accuracy in detecting biological age changes, validated across 2,000+ clinical cases.
+ Early Detection Power: The test functions as a "DNA methylation noise detector," identifying risk signals and aging acceleration years before clinical symptoms.
+ Unquestionable Scientific Credibility: Backed by 20+ peer-reviewed publications and ongoing research from leading longevity scientists.
 
 [Result 6]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/blog/post/ag1-approach-to-clinical-research
+Title: Step 2: Laboratory Analysis - Detecting "Biomolecular Noise"
+URL: https://www.generationlab.com/blog/biological-age-algorithm
 Content:
-[Shop All](/shop)
+### Step 2: Laboratory Analysis - Detecting "Biomolecular Noise"
 
-[Back](/blog)
+Once your sample reaches Generation Lab's certified laboratory, advanced sequencing technology analyzes methylation patterns across over 460 specific DNA biomarkers. Each biomarker is scientifically validated as a critical indicator of aging in specific biological systems, and they are not randomly selected.
 
-# AG1’s Approach to Clinical Research
+The lab analysis focuses on detecting "biomolecular noise" or "DNA methylation noise," which refers to subtle, irregular epigenetic changes that signal aging acceleration and disease risk. These patterns reveal biological changes at the cellular level long before they manifest as symptoms or show up in medical tests.
 
-Understanding how we raise the bar when it comes to research and why clinical outcomes really matter
+### Step 3: The Algorithm in Action - From Data to Clinical-Grade Accuracy [...] The cutting-edge science behind the biological age algorithm is revolutionizing our understanding of aging. Through advancements in epigenetic age testing, scientists can decode your body's health at the molecular level, providing insights into your personal aging process. This technology doesn't just tell you your cells' age, it empowers you to control your biological destiny.
 
-7 MIN READ — 05/16/2025
+Generation Lab's SystemAge™ test leads the revolution in biological age measurement technology. This algorithm delivers clinical-grade accuracy in detecting age-related changes by analyzing over 460 biomarkers across 19 organ systems, transforming scientific data into a personalized roadmap for optimized health and longevity.
 
-## As Science Evolves, So Do We
+## What Biological Age Measures [...] ### DNA Methylation
 
-Since we launched AG1 in 2010, we’ve consistently upgraded our formula, guided by the latest scientific research. Now, we’re building on our history of continuous improvement and helping to raise the standard for the supplement category. Clinical research is a pivotal part of where we’ve been and where we’re going, particularly as we release our upgraded formula, AG1 Next Gen.
+DNA methylation is the most studied and accurate biomarker for tracking biological aging. This process involves tiny chemical tags called methyl groups attaching to specific locations on your DNA. As we age, the patterns of these methylation tags change across different tissues and organ systems.
 
-## Our Approach to Clinical and Pre-Clinical Research
+Scientists discovered that some methylation changes represent normal aging, while others create "epigenetic noise," which are irregular patterns that can signal increased disease risk years or decades before symptoms. The biological age algorithm can detect subtle shifts in cellular function impossible to identify through traditional medical testing by analyzing these patterns. [...] DNA methylation tests are the gold standard for biological age assessment. Unlike other biomarkers that fluctuate based on recent activities or temporary health changes, methylation patterns provide a stable, long-term view of your body's aging trajectory. This stability makes them ideal for accurate biological age calculation.
 
-Over the past 15 years, we’ve heard from millions of customers about how AG1 has impacted their health and lives—but we are setting new standards in supplement research and working to explore \*how\* the formula works and to ensure the benefits people experience are measurable.
+## How the SystemAge™ Biological Age Algorithm Works
 
-## Our Team
-
-At the heart of AG1 is our Research, Nutrition, and Innovation team—a world-class group of clinicians, scientists, and researchers with expertise in academic and clinical nutrition, physiology, metabolism, microbiology, food science, and more. This team as a whole plays a central role in shaping the scientific foundation of our product. This includes ingredient scoping and validation, formulation feasibility, identifying evidence gaps to be explored through preclinical and clinical research to deepen our understanding of health outcomes, education, and product development to deliver meaningful innovation.
-
-Being part of the scientific community is an important part of our mission, and the team contributes by publishing reviews, thought leadership pieces, and original research in collaboration with academic partners. As part of our broader mission, we are committed to scientific rigor, sharing the results of AG1’s studies in peer-reviewed journals to ensure our methodologies and findings can benefit the wider health and nutrition field.
-
-## Our Research
-
-Over the past few years, we’ve invested millions of dollars in research and development and will continue to do so. In addition to preclinical and observational studies, we have conducted a series of Randomized Placebo-Controlled Trials (RCTs) with third party research organizations and academic collaborators to both validate our product and drive science forward.
-
-**Widely accepted as the gold-standard in clinical trials, RCTs provide the strongest evidence for a causal link between intervention (the product) and outcome while minimizing bias. RCT methods include:**
-
-* **Randomization**, whichensures that participants are assigned to intervention or control groups purely by chance, balancing known and unknown confounders
-* **Control groups** (the placebo or standard treatment group), which provide a basis for comparison
-* **Blinding** (i.e. preventing participants and/or researchers from knowing who receives the intervention or placebo), which reduces bias from participants and investigators
-* **Predefined outcomes and protocols**, which ensure consistency and replicability
-* **Statistical rigor**, which helps confirm that outcomes are not due to chance
-
-RCTs on finished products are rare in the industry, as they’re expensive and time consuming. With our newest formulation, AG1 Next Gen, we invested further and doubled down on our investment in research**: AG1 Next Gen is rooted in clinical evidence with four gold-standard clinical trials.**
-
-## Why do Clinical Outcomes Matter?
-
-The supplement aisle is more crowded than ever. But how can you tell which products were actually studied in humans? Clinical outcomes. Clinical outcomes measure the impact of consuming a product or ingredients in the human body. They tell us how something actually performs *in real people*, *not just in theory.*
-
-## The Trials
-
-AG1 Next Gen was studied across multiple gold-standard clinical trials. The replication of results in multiple studies highlights its effectiveness across different lifestyles and diets. **Among other results, AG1 Next Gen is clinically shown to close common nutrient gaps and support gut health. (1-4)** Here, some details on the trials themselves.
-
-1. **A 12-week parallel designed Randomized Controlled Trial (RCT) in 105 adults who consumed a Standard American Diet.** (Parallel designed studies, which can be better for longer duration studies, feature different groups, each of whom receives different treatments throughout the study.) This study primarily assessed how supplementation of AG1 Next Gen over 12 weeks influenced nutrient gaps and nutrient status compared to a placebo. The secondary objectives of this study were to analyze the gut microbiome along with assessments of safety and tolerability.
-2. **A 2-week crossover designed RCT in 20 highly active adults.** (In crossover studies, the same participants receive different treatments (Placebo and active) at different points in the study. Within-subject compar …[truncated]
+Transforming complex DNA methylation patterns into actionable health insights requires sophisticated computational analysis. The biological age algorithm functions as an advanced pattern recognition system that decodes the intricate methylation signatures across your genome and translates them into precise biological age measurements for different organ systems.
 
 [Result 7]
-Title: Mikaela Shiffrin: On Staying One Scoop Ahead This Season
-URL: https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season
+Title: Clinical-Grade Accuracy, Validated by Science
+URL: https://www.generationlab.com/blog/immune-age-test
 Content:
-# Mikaela Shiffrin: On Staying One Scoop Ahead This Season
+### Clinical-Grade Accuracy, Validated by Science
 
-[Enable accessibility](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season#)
+SystemAge delivers unprecedented precision through the analysis of 460+ DNA methylation biomarkers, achieving clinical-grade accuracy in detecting biological age changes. This has been validated across 2,000+ clinical test cases. The founding team's research includes 20+ peer-reviewed publications in top-tier journals like Nature, Aging, and GeroScience, earning over 14,000 scientific citations.
 
-[![Image 1](https://drinkag1.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)](https://drinkag1.com/)
-*   [AG1 for Daily Health](https://drinkag1.com/learn/ag1)
+This precision and credibility is why SystemAge has earned the trust of over 150 longevity clinics worldwide and endorsements from leaders, including Harvard geneticist George Church. Choosing SystemAge gives you access to the same testing used in cutting-edge research institutions and premier longevity clinics. [...] The most accurate method for measuring biological age involves analyzing DNA methylation patterns throughout your genome. DNA methylation acts as a system of molecular switches that turn genes "on" or "off." In a young, healthy body, these switches operate in organized, predictable patterns. As we age, these patterns become disorganized or "noisy." This phenomenon, which is called biomolecular noise, is a hallmark of aging. Epigenetic age testing via DNA methylation analysis represents the gold standard for biological age measurement, pioneered by researchers at Harvard and UC Berkeley. [...] Advanced DNA methylation tests can analyze hundreds of thousands of methylation sites across your genome, creating a high-resolution picture of your molecular aging process. This technology enables us to move beyond simple biological age calculations to provide detailed, organ-specific aging analysis that gives you precise insight into how each system in your body is aging biologically.
 
-Explore 
-    *   [What is AG1?](https://drinkag1.com/learn/ag1) [Research](https://drinkag1.com/learn/research/scientific-research) [Quality & Testing](https://drinkag1.com/about-ag1/quality-standards/ctr) [Ingredients](https://drinkag1.com/about-ag1/ingredients/ctr) [Benefits](https://drinkag1.com/about-ag1/benefits) 
+## The Best Immune Age Testing: SystemAge
 
-Shop Daily Health
+Generation Lab is a cutting-edge longevity science company co-founded by UC Berkeley professor Dr. Irina Conboy, known as the "mother of longevity" for her groundbreaking aging biology research. The SystemAge test represents over 20 years of Harvard and UC Berkeley research, bringing clinical-grade diagnostics with unprecedented precision to your home. [...] SystemAge vs. Function Health:
 
-    *   [![Image 2](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) Shop AG1](https://drinkag1.com/products/greens-powder-pouch)
-    *   [![Image 3](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) Shop Bundles](https://drinkag1.com/shop/bundles)
-    *   [![Image 4](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) Shop All](https://drinkag1.com/shop)
+ SystemAge uses deep epigenetic analysis to detect "biomolecular noise" and predict health risks years before symptoms.
+ Function Health: Relies on 100+ standard blood biomarkers that reveal current health status but miss subtle epigenetic changes that predict future disease risk.
 
-*   [AGZ for Sleep New](https://drinkag1.com/learn/agz)
+SystemAge vs. Tally Health:
 
-Explore 
-    *   [What is AGZ?](https://drinkag1.com/learn/agz) [Quality & Testing](https://drinkag1.com/quality-standards/agz) [Ingredients](https://drinkag1.com/sleep/agz-ingredients) 
-
-Shop Sleep Support
-
-    *   [![Image 5](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) AGZ Chocolate](https://drinkag1.com/products/sleep-supplement?flavor=chocolate)
-    *   [![Image 6](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) AGZ Chocolate Mint](https://drinkag1.com/products/sleep-supplement?flavor=chocolate+mint)
-    *   [![Image 7](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) AGZ Mixed Berry](https://drinkag1.com/products/sleep-supplement?flavor=mixed+berry)
-
-*   Learn More
-
-Explore 
-    *   [Blog](https://drinkag1.com/blog) [AG1 Membership](https://drinkag1.com/ag1-membership) [Impact Report](https://drinkag1.com/impact-report) 
-
-    *   [![Image 8](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) Hugh Jackman x AG1](https://drinkag1.com/hugh-jackman)
-    *   [![Image 9](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) Reviews](https://drinkag1.com/about-ag1/reviews/ctr)
-    *   [![Image 10](https://drinkag1.com/blog/post/mikaela-shiffrin-on-staying-one-scoop-ahead-this-season) Foundational Nutrition](https://drinkag1.com/foundational-nutrition-education)
-
-[Shop All](https://drinkag1.com/shop)
-
-[](https://drinkag1.com/members)
-
-[Sign In](https://drinkag1.com/members)
-
-*   Explore AG1 for Daily Health AGZ for Sleep New[Shop All](https://drinkag1.com/shop)    
-*   More about AG1 [Hugh Jackman x AG1](https://drinkag1.com/hugh-jackman)[Reviews](https://drinkag1.com/about-ag1/reviews/ctr)[Blog](https://drinkag1.com/blog)[Foundational Nutrition](https://drinkag1.com/foundational-nutrition-education)[AG1 Membership](https://drinkag1.com/ag1-membership)[Our Impact](https://drinkag1.com/impact-report)    
-
-[Back](https://drinkag1.com/blog)
-
-![Image 11](https://drinkag1.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Ffd4d7fd5782af12b35ef8c31cc7e4efae86fc26d-960x1200.jpg%3Fauto%3Dformat&w=1920&q=75)
-
-# Mikaela Shiffrin: On Staying One Scoop Ahead This Season
-
-4 MIN READ — 12/03/2025
-
-![Image 12](https://drinkag1.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Ffd4d7fd5782af12b35ef8c31cc7e4efae86fc26d-960x1200.jpg%3Fauto%3Dformat&w=1920&q=75)
-
-This winter, AG1 is proud to partner with the world-renowned Ikon Pass as the Official Foundational Nutrition Partner to [Deer Valley](https://drinkag1.com/deervalley), [Palisades Tahoe](https://drinkag1.com/palisadestahoe), [Steamboat](https://drinkag1.com/steamboat), and [Mammoth Mountain](https://drinkag1.com/mammoth). We’ll be powering early mornings with First Tracks at the four resorts, giving Ikon Pass holders and guests exclusive access to an extra hour of untouched powder and freshly groomed corduroy on select days throughout the season.
-
-We’re also [thrilled to welcome Alpine Ski Champion Mikaela Shiffrin](https://www.instagram.com/p/DQvoaxnjswM/?hl=en&img_index=1) to our community of global ambassadors. Fresh off another remarkable victory—securing her 104th Alpine World Cup race win…and counting —Mikaela sat down with AG1 to talk about the importance of consistent routines, recovery, and how she _stays one scoop ahead_ each day.
-
-Raised on mountains across the country, Mikaela grew up training at Ikon Pass destinations like Palisades Tahoe and, today, continues to redefine excellence on and off the snow – inspiring both the AG1  …[truncated]
+ SystemAge: Uses blood samples (the gold standard for DNA methylation analysis) backed by Dr. Conboy's 20+ years of pioneering aging research.
+ Tally Health: Uses cheek swab collection, which can be less reliable for systemic aging analysis despite notable scientific backing.
 
 [Result 8]
-Title: Hugh Jackman x AG1
-URL: https://drinkag1.com/hugh-jackman
+Title: Proven Clinical Impact [...]  How to Check Your Biological Age: 4 Top Methods
+URL: https://www.generationlab.com/blog/generation-lab-raises-11m-seed-round-as-systemage-tm-becomes-worlds-fastest-growing-longevity-diagnostic
 Content:
-# Hugh Jackman x AG1
+Less than ten months post-launch, Generation Lab has achieved remarkable commercial traction with its SystemAge™ quantification of biological age—health of 19 organ systems/functions from intact primary blood results—that is based on discovery of the physiologic non-linear curve of DNA methylation aging. SystemAge greatly improves on alternatives that make predictions from man-made graphs after transforming data in a biologically arbitrary way. In less than a year of operation, the company has signed over 275 clinics worldwide, amassed more than 300 million human-aging data points, and achieved 99.9% diagnostic accuracy, providing for the first time a clinically relevant capacity for meaningful, well-controlled healthspan optimization—the next frontier in global and personalized medicine. [...] "What sets SystemAge™ apart is our systems-based approach to aging measurement using what we're calling 'biological noise,'" explained Dr. Irina Conboy, Co-founder of Generation Lab and renowned aging researcher at UC Berkeley. "While other platforms offer disease biomarkers, we've developed the first preventive health test detecting signals before symptoms appear. This is the most comprehensive aging diagnostic, analyzing how multiple organ systems age in concert. Our proprietary algorithms, trained on hundreds of millions of data points, don't just tell you how old you are—they reveal which specific systems are aging fastest and provide precise interventions to reverse the process."
 
-[Enable accessibility](https://drinkag1.com/hugh-jackman#)
+Proven Clinical Impact [...] ### How to Check Your Biological Age: 4 Top Methods
 
-[![Image 1](https://drinkag1.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)](https://drinkag1.com/)
-*   [AG1 for Daily Health](https://drinkag1.com/learn/ag1)
+Curious about your body's true age? Discover the top 4 methods to check your biological age, from telomere testing to epigenetic clocks. Find out how old you really are.
 
-Explore 
-    *   [What is AG1?](https://drinkag1.com/learn/ag1) [Research](https://drinkag1.com/learn/research/scientific-research) [Quality & Testing](https://drinkag1.com/about-ag1/quality-standards/ctr) [Ingredients](https://drinkag1.com/about-ag1/ingredients/ctr) [Benefits](https://drinkag1.com/about-ag1/benefits) 
+Read More
 
-Shop Daily Health
+Alina Su
 
-    *   [![Image 2](https://drinkag1.com/hugh-jackman) Shop AG1](https://drinkag1.com/products/greens-powder-pouch)
-    *   [![Image 3](https://drinkag1.com/hugh-jackman) Shop Bundles](https://drinkag1.com/shop/bundles)
-    *   [![Image 4](https://drinkag1.com/hugh-jackman) Shop All](https://drinkag1.com/shop)
+### Thorne vs. Viome: Which Gut Health Test is Best?
 
-*   [AGZ for Sleep New](https://drinkag1.com/learn/agz)
+Compare Thorne and Viome's at-home gut health tests side-by-side. Our review covers accuracy, methodology, and cost to help you choose the best test for your needs.
 
-Explore 
-    *   [What is AGZ?](https://drinkag1.com/learn/agz) [Quality & Testing](https://drinkag1.com/quality-standards/agz) [Ingredients](https://drinkag1.com/sleep/agz-ingredients) 
+Read More
 
-Shop Sleep Support
+## Experience the science
 
-    *   [![Image 5](https://drinkag1.com/hugh-jackman) AGZ Chocolate](https://drinkag1.com/products/sleep-supplement?flavor=chocolate)
-    *   [![Image 6](https://drinkag1.com/hugh-jackman) AGZ Chocolate Mint](https://drinkag1.com/products/sleep-supplement?flavor=chocolate+mint)
-    *   [![Image 7](https://drinkag1.com/hugh-jackman) AGZ Mixed Berry](https://drinkag1.com/products/sleep-supplement?flavor=mixed+berry)
+Discover your true biological age with our revolutionary testing technology.
 
-*   Learn More
+Test Your Biological Age Now → [...] About Generation Lab
 
-Explore 
-    *   [Blog](https://drinkag1.com/blog) [AG1 Membership](https://drinkag1.com/ag1-membership) [Impact Report](https://drinkag1.com/impact-report) 
+Founded by renowned aging researcher Dr. Irina Conboy, Generation Lab is pioneering the future of longevity diagnostics through its flagship SystemAge™ platform. The company's mission is to create the Ageless Generation by providing the most comprehensive, accurate, and actionable aging diagnostics available. Based in San Francisco, Generation Lab serves over 275 clinic partners worldwide. For more information, visit www.generationlab.com.
 
-    *   [![Image 8](https://drinkag1.com/hugh-jackman) Hugh Jackman x AG1](https://drinkag1.com/hugh-jackman)
-    *   [![Image 9](https://drinkag1.com/hugh-jackman) Reviews](https://drinkag1.com/about-ag1/reviews/ctr)
-    *   [![Image 10](https://drinkag1.com/hugh-jackman) Foundational Nutrition](https://drinkag1.com/foundational-nutrition-education)
+‍
 
-[Shop All](https://drinkag1.com/shop)
+Media Contact:  
+Alex Plant  
+Generation Lab  
+alex@generationlab.com
 
-[](https://drinkag1.com/members)
+‍
 
-[Sign In](https://drinkag1.com/members)
+Find Your Biological Age →
 
-*   Explore AG1 for Daily Health AGZ for Sleep New[Shop All](https://drinkag1.com/shop)    
-*   More about AG1 [Hugh Jackman x AG1](https://drinkag1.com/hugh-jackman)[Reviews](https://drinkag1.com/about-ag1/reviews/ctr)[Blog](https://drinkag1.com/blog)[Foundational Nutrition](https://drinkag1.com/foundational-nutrition-education)[AG1 Membership](https://drinkag1.com/ag1-membership)[Our Impact](https://drinkag1.com/impact-report)    
+## Related Articles
 
-Consistency Looks Good on Hugh
+Alina Su
 
-Since 2021, AG1 has supported Hugh Jackman's energy and whole-body health every morning.
-
-[Shop AG1](https://drinkag1.com/products/greens-powder-pouch)
-
-![Image 11](https://drinkag1.com/hugh-jackman)
-
-![Image 12](https://drinkag1.com/hugh-jackman)
-
-![Image 13](https://drinkag1.com/hugh-jackman)
-
-Why Hugh chose AG1
-
-###### “AG1 fits into my life wherever I am, and it’s become part of my morning that I don’t really have to think about—which is exactly why it works."
-
-One scoop of AG1 Next Gen delivers 75+ ingredients, covering your multivitamin, pre- and probiotics, superfoods and greens, and more in one clinically-studied Daily Health Drink.*
-
-![Image 14](https://drinkag1.com/hugh-jackman)
-
-# The Hugh-Approved Daily Health Drink
-
-Don’t just drink AG1 because Hugh Jackman does. Although, that’s not a terrible reason.
-
-One daily scoop to support[*](https://drinkag1.com/hugh-jackman#fdaDisclaimer):
-
-— Steady energy
-
-— Regular digestion & less bloating
-
-— Immune defense
-
-— Healthy brain & mood
-
-— Fill nutrient gaps
-
-[Shop AG1](https://drinkag1.com/products/greens-powder-pouch)[Learn More](https://drinkag1.com/about-ag1/benefits)
-
-![Image 15](https://drinkag1.com/hugh-jackman)
-
-75+ quality ingredients optimized for impact
-
-[View All Ingredients](https://drinkag1.com/about-ag1/ingredients/ctr)
-
-Supplement Facts
-
-![Image 16](https://drinkag1.com/hugh-jackman)
-
-MAGNESIUM
-
-Vitamins & minerals
-
-Vitamins and minerals are micronutrients that support energy production for daily function, like B complex and vitamin B12.*
-
-![Image 17](https://drinkag1.com/hugh-jackman)
-
-APPLE
-
-Pre & probiotics
-
-Probiotics and prebiotics, like apple and inulin, work together to promote growth of healthy bacteria and gut microbiome function.*
-
-![Image 18](https://drinkag1.com/hugh-jackman)
-
-LICORICE ROOT
-
-Stress adaptogens
-
-Stress adaptogens, like rhodiola, are not normally consumed in a regular diet and are known to help the body manage stress to support energy and vitality. *
-
-![Image 19](https://drinkag1.com/hugh-jackman)
-
-CITRUS BIOFLAVONOIDS
-
-Antioxidants
-
-Antioxidants, like citrus bioflavonoids, help combat against environmental and oxidative stress.*
-
-![Image 20](https://drinkag1.com/hugh-jackma …[truncated]
+### Biological Age Tests: Choosing the Right Kit

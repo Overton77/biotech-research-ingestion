@@ -1,0 +1,27 @@
+{
+  "query": "site:generationlab.com (pdf OR docs OR filetype:pdf OR filetype:doc OR filetype:csv OR filetype:xls) generationlab portal support provider biomarkers",
+  "results": {
+    "query": "(pdf OR docs OR filetype:pdf OR filetype:doc OR filetype:csv OR filetype:xls) generationlab portal support provider biomarkers",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "url": "https://www.generationlab.com/terms-of-service?type=provider",
+        "title": "systemage terms of service agreement - Generation Lab",
+        "content": "13.8 Support and Resources:\n\n Educational Resource: Available in the provider portal.\n Support: Please contactsupport@generationlab.com any time - we're pretty good at replying.\n Feedback: All feedback is greatly appreciated! Please help us improve by sending an email to your dedicated point of contact, or book a feedback session and talk to our team ().\n\nIN WITNESS WHEREOF, the Parties execute this Agreement by clicking agree on these TERMS OF SERVICE as of the Effective Date.\n\nEXHIBIT A\n\nTest Means: DNA methylation bisulfite sequencing, or other methods used by Generation Lab via proprietary bioinformatics software, producing a Health Report on the Platform or as a PDF.\n\nTest & Services Fees: [...] 1.15 \"Platform\" means Generation Lab's software portal for accessing reports and services.\n\n1.16 \"Patients\" means the Company's patients/customers.\n\n1.17 \"Privacy Policy\" means the document posted on Generation Lab's website detailing its privacy standards.\n\n## 2. OVERVIEW\n\nCompany will purchase, market, promote, and sell Tests and Services to Patients on a non-exclusive basis. Generation Lab may also market and sell independently.\n\n## 3. GENERATION LAB RESPONSIBILITIES\n\n3.1 Tests and Services. Generation Lab will perform Tests and Services per SOPs and Applicable Laws. [...] 3.2 Materials. Generation Lab may provide training and promotional materials (\"Generation Lab Promotional Materials\") for Company's use, subject to approval for modifications and co-branding. Company must comply with branding guidelines and discontinue use upon request.\n\n3.3 Collection Kits. Generation Lab will supply Collection Kits for Test orders, reserving the right to withhold if misused.\n\n## 4. COMPANY RESPONSIBILITIES\n\n4.1 Training. Company will complete Generation Lab's required training programs.\n\n4.2 Marketing and Logistics. Company will educate Providers and Patients, promote Tests per Applicable Laws, and integrate Tests into its systems. Costs are Company's responsibility. Claims about Tests require Generation Lab's consent.",
+        "score": 0.9896718,
+        "raw_content": null
+      },
+      {
+        "url": "https://www.generationlab.com/blog/chronological-vs-physiological-age",
+        "title": "Chronological vs. Physiological Age - Generation Lab",
+        "content": "Actionable & Proven: Many health tests provide interesting data without clear action steps. Others focus on basic blood biomarkers or wearable device metrics that offer limited insight into biological aging. SystemAge provides targeted epigenetic insights with a proven track record of measuring and guiding biological age reversal, making it the most actionable epigenetic age testing platform. [...] In 3-4 weeks, you’ll receive your detailed digital report through a secure, user-friendly portal. The report breaks down your biological age for each of the 19 organ systems, compares them to your chronological age, and provides personalized intervention recommendations based on the latest longevity research.\n\n## The Science Behind the Accuracy\n\nSystemAge’s clinical-grade accuracy comes from analyzing DNA methylation patterns across hundreds of genomic locations rather than relying on a handful of biomarkers. While traditional blood tests measure daily-fluctuating proteins and molecules, DNA methylation patterns represent stable, long-term aging signatures that accurately reflect cellular age. [...] ## How the At-Home Test Works\n\nThe SystemAge testing process reflects the same precision as the science. How the at-home test works begins with a simple kit delivered to your door. The needle-free blood collection takes minutes and requires no special preparation or fasting.\n\nYour sample travels to Generation Lab's clinical lab where 460+ DNA methylation biomarkers undergo analysis using the same advanced sequencing technology as leading research institutions. Proprietary algorithms developed through decades of research translate these molecular patterns into your biological age profile.",
+        "score": 0.9730365,
+        "raw_content": null
+      }
+    ],
+    "response_time": 1.16,
+    "request_id": "98b85fbc-1b28-47c6-be3c-b56a63abdf0e"
+  }
+}

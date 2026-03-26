@@ -19,8 +19,8 @@ async def run_deep_research_mission(mission_id: str) -> dict:
     around it (retry, timeout, visibility).  We can decompose into finer
     activities later.
     """
-    from src.research.middleware.progress_callback import create_progress_callback
-    from src.research.runtime.mission_runner import run_mission
+    from src.research.deepagent.middleware.progress_callback import create_progress_callback
+    from src.research.deepagent.runtime.mission_runner import run_mission
 
     activity.logger.info("Starting deep-research mission %s", mission_id)
 

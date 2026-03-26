@@ -1,261 +1,882 @@
-Meta: request_id=d8b85493-7d28-4fb2-b9f8-a9c5d98d998e, response_time_s=0.01
+Meta: request_id=bbbb209e-957d-4553-9872-51c8e2507a24, response_time_s=0.33
 
 === Extracted Web Content ===
 [Result 1]
-Title: TruDiagnostic Awarded NIH SBIR Grant to Advance Breakthrough Epigenetic Diagnostic Technology
-URL: https://www.biospace.com/press-releases/trudiagnostic-awarded-nih-sbir-grant-to-advance-breakthrough-epigenetic-diagnostic-technology
+Title: Sign In →
+URL: https://www.generationlab.com/biomarkers
 Content:
-![BioSpace logo](https://static.biospace.com/dims4/default/193f35f/2147483647/strip/true/crop/496x132+0+0/resize/250x67!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2Fe4%2Fed%2F07b192644c508cbc301bc9ae721c%2Flogo.png)
+Sign In →
+Order Now 
+→
 
-# TruDiagnostic Awarded NIH SBIR Grant to Advance Breakthrough Epigenetic Diagnostic Technology
+# 460+ Biomarkers 19 Organs & Systems 1 Comprehensive Test
 
-LEXINGTON, Ky., Oct. 7, 2025 /PRNewswire/ -- TruDiagnostic, a leader in epigenetic testing and health analytics, announced today it has received a competitive Small Business Innovation Research (SBIR) grant from the National Institutes of Health (NIH). The funding supports development of the company's W-Function Epigenomic Roadmap, a next-generation model for understanding how DNA methylation changes over time to predict and prevent chronic disease.
+Brain Health & Cognition
 
-[![TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)](https://mma.prnewswire.com/media/2542501/TruDiagnostic_Logo.jpg "TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)")](https://mma.prnewswire.com/media/2542501/TruDiagnostic_Logo.html)
+Gene Symbol: 
+DLGAP2
 
-![TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)](https://mma.prnewswire.com/media/2542501/TruDiagnostic_Logo.jpg "TruDiagnostic Logo (PRNewsfoto/TruDiagnostic)")
+Immune System
 
-**A New Framework for Dynamic Health Measurement**
+Gene Symbol: 
+AIRE
 
-Most current diagnostic tools rely on static or random data points that miss how biology evolves. The W-Function model introduces a systems-based approach that maps how DNA methylation shifts dynamically, providing new insight into disease onset, progression, and response to treatment.
+Reproductive System
 
-By leveraging the world's largest longitudinal methylation dataset, TruDiagnostic will identify causal epigenetic changes and filter out random noise that has long limited predictive accuracy. The result: more reliable health forecasts, earlier intervention points, and new therapeutic targets for drug discovery.
+Gene Symbol: 
+KCNQ1
 
-TruDiagnostic's platform is uniquely positioned for this research, with thousands of patients who have tested and re-tested longitudinally through its network of providers and researchers.
+Cardiac System
 
-**Transformative Potential Across Medicine**
+Gene Symbol: 
+KCNQ1
 
-The initial work will target cardiovascular disease, type 2 diabetes, and mortality risk, with future applications across multiple chronic conditions. Once validated, the W-Function Epigenomic Roadmap could:
+Inflammatory Regulation
 
-"This award highlights the importance of TruDiagnostic's mission to push the boundaries of precision health," said Ryan Smith, Founder and Director of Research. "The W-Function Epigenomic Roadmap could change how we think about disease risk, moving from reactive care to proactive, personalized health strategies."
+Gene Symbol: 
+AIRE
 
-**About TruDiagnostic**
+Gene Symbol: 
+PRDM16
 
-TruDiagnostic is a leading health data company and CLIA-certified laboratory specializing in epigenetic testing and research. Home to the largest private DNA methylation database globally, TruDiagnostic partners with notable biotech developers, researchers, and academic institutions to transform the healthcare potential of epigenetic data into actionable applications. The company's TruAge biological aging tests offer the most in-depth results, helping individuals and healthcare providers make informed lifestyle and medical decisions based on insights found in the fluid epigenome.
+Tissue Regeneration
 
-For more information about TruDiagnostic, please visit[www.trudiagnostic.com](https://edge.prnewswire.com/c/link/?t=0&l=en&o=4527612-1&h=981763822&u=http%3A%2F%2Fwww.trudiagnostic.com%2F&a=www.trudiagnostic.com).
+Gene Symbol: 
+NGF
 
-For media inquiries, please contact: [press@trudiagnostic.com](mailto:press@trudiagnostic.com)
+Blood Sugar & Insulin Control
 
-![Cision](https://edge.prnewswire.com/c/img/favicon.png?sn=CL92427&sd=2025-10-07 "Cision") View original content to download multimedia:<https://www.prnewswire.com/news-releases/trudiagnostic-awarded-nih-sbir-grant-to-advance-breakthrough-epigenetic-diagnostic-technology-302577536.html>
+Gene Symbol: 
+KCNQ1
 
-![Cision](https://edge.prnewswire.com/c/img/favicon.png?sn=CL92427&sd=2025-10-07 "Cision")
+Hepatic System (Liver)
 
-SOURCE TruDiagnostic
+Gene Symbol: 
+KCNQ1
 
-![](https://rt.prnewswire.com/rt.gif?NewsItemId=CL92427&Transmission_Id=202510071604PR_NEWS_USPR_____CL92427&DateId=20251007)
-![Illustration of a business person giving a presentation in front of a board of directors, vector illustration](https://static.biospace.com/dims4/default/56ef12b/2147483647/strip/true/crop/861x861+178+0/resize/100x100!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2F5f%2F60%2F724162914ed583e24116be0846a1%2Fistock-1499149608.jpg)
-![Checklist collage banner with halftone hands. Hand holding marker and putting a check mark or cross in checkbox. Collage design with halftone elements. Concept of check list. Vector illustration.](https://static.biospace.com/dims4/default/fdb80a3/2147483647/strip/true/crop/724x724+362+0/resize/100x100!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2Fed%2Fd5%2F3251e85c4255aa794d68f75f8515%2Fistock-2218272171.jpg)
-![Illustration showing a handshake, signaling cooperation, goodwill](https://static.biospace …[truncated]
+Muscular System
+
+Gene Symbol: 
+KY
+
+Skeletal System
+
+Gene Symbol: 
+AIRE
+
+Nervous System
+
+Gene Symbol: 
+GAK
+
+Respiratory System
+
+Gene Symbol: 
+KCNQ1
+
+Digestive System
+
+Gene Symbol: 
+AIRE
+
+Blood & Vascular System
+
+Gene Symbol: 
+KCNB2
+
+Urinary System
+
+Gene Symbol: 
+SOX2OT
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+KCNQ1 [...] Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+KCNQ1
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+NGF
+
+Auditory System
+
+Gene Symbol: 
+AIRE
+
+Brain Health & Cognition
+
+Gene Symbol: 
+OTX1
+
+Immune System
+
+Gene Symbol: 
+AHSG
+
+Reproductive System
+
+Gene Symbol: 
+FGF1
+
+Cardiac System
+
+Gene Symbol: 
+CHD5
+
+Inflammatory Regulation
+
+Gene Symbol: 
+TNF
+
+Metabolism
+
+Gene Symbol: 
+KCNQ1
+
+Tissue Regeneration
+
+Gene Symbol: 
+SEMA6A
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+AHSG
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+AHSG
+
+Muscular System
+
+Gene Symbol: 
+DMD
+
+Skeletal System
+
+Gene Symbol: 
+GH2
+
+Nervous System
+
+Gene Symbol: 
+CHD5
+
+Respiratory System
+
+Gene Symbol: 
+TNF
+
+Digestive System
+
+Gene Symbol: 
+NGF
+
+Blood & Vascular System
+
+Gene Symbol: 
+MYBPC3
+
+Urinary System
+
+Gene Symbol: 
+BBS9 [...] Gene Symbol: 
+MYBPC3
+
+Urinary System
+
+Gene Symbol: 
+BBS9
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+NGF
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+PRDM16
+
+Auditory System
+
+Gene Symbol: 
+OTX1
+
+Brain Health & Cognition
+
+Gene Symbol: 
+CHD5
+
+Immune System
+
+Gene Symbol: 
+S100A2
+
+Reproductive System
+
+Gene Symbol: 
+TNF
+
+Cardiac System
+
+Gene Symbol: 
+DMD
+
+Inflammatory Regulation
+
+Gene Symbol: 
+NOTCH4
+
+Metabolism
+
+Gene Symbol: 
+AHSG
+
+Tissue Regeneration
+
+Gene Symbol: 
+FGF1
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+PTPRN2
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+GAK
+
+Muscular System
+
+Gene Symbol: 
+CACNA2D4
+
+Skeletal System
+
+Gene Symbol: 
+FGF1
+
+Nervous System
+
+Gene Symbol: 
+CACNG3
+
+Respiratory System
+
+Gene Symbol: 
+IL1RN
+
+Digestive System
+
+Gene Symbol: 
+TREH
+
+Blood & Vascular System [...] Respiratory System
+
+Gene Symbol: 
+CDH23
+
+Digestive System
+
+Gene Symbol: 
+TNF
+
+Blood & Vascular System
+
+Gene Symbol: 
+PTPRS
+
+Urinary System
+
+Gene Symbol: 
+MEPE
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+TNF
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+TNF
+
+Auditory System
+
+Gene Symbol: 
+VIPR2
+
+Brain Health & Cognition
+
+Gene Symbol: 
+NKX2-8
+
+Immune System
+
+Gene Symbol: 
+IL1RN
+
+Reproductive System
+
+Gene Symbol: 
+CHRNA2
+
+Cardiac System
+
+Gene Symbol: 
+TNF
+
+Inflammatory Regulation
+
+Gene Symbol: 
+TOLLIP
+
+Metabolism
+
+Gene Symbol: 
+PRKAG2
+
+Tissue Regeneration
+
+Gene Symbol: 
+NOTCH4
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+TNF
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+CYP2D6
+
+Muscular System
+
+Gene Symbol: 
+GRM4
+
+Skeletal System
+
+Gene Symbol: 
+SLC51B
+
+Nervous System
+
+Gene Symbol: 
+SYTL2 [...] Gene Symbol: 
+TREH
+
+Blood & Vascular System
+
+Gene Symbol: 
+PRDM16
+
+Urinary System
+
+Gene Symbol: 
+KCNT1
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+FGF1
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+LOXL3
+
+Auditory System
+
+Gene Symbol: 
+KCNQ1
+
+Brain Health & Cognition
+
+Gene Symbol: 
+CPLX2
+
+Immune System
+
+Gene Symbol: 
+TNF
+
+Reproductive System
+
+Gene Symbol: 
+ADAM18
+
+Cardiac System
+
+Gene Symbol: 
+FGF1
+
+Inflammatory Regulation
+
+Gene Symbol: 
+IL1RN
+
+Metabolism
+
+Gene Symbol: 
+TREH
+
+Tissue Regeneration
+
+Gene Symbol: 
+TNF
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+TREH
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+NOTCH4
+
+Muscular System
+
+Gene Symbol: 
+IL1RN
+
+Skeletal System
+
+Gene Symbol: 
+NOTCH4
+
+Nervous System
+
+Gene Symbol: 
+CPLX2
+
+Respiratory System
+
+Gene Symbol: 
+CDH23
+
+Digestive System
 
 [Result 2]
-Title: ![American Academy of Anti-Aging Medicine](/assets/images/logo-a4m-2023--white.png)
-URL: https://www.a4m.com/ryan-smith.html
+Title: Sign In →Order Now →
+URL: https://www.generationlab.com/science
 Content:
-![American Academy of Anti-Aging Medicine](/assets/images/logo-a4m-2023--white.png)
+Sign In →Order Now →
 
-MENU
+# The Cutting-Edge Science Behind SystemAge™
 
-# Ryan Smith
+SystemAge uses 20 years of research by Dr. Irina Conboy to measure aging with organ-level precision with AI-powered Epigenetics.
 
-![Ryan Smith](/assets/images/a4m-2017/staff/ryan-smith-202511.webp)
+Test Now →Test Your Biological Age Now →
 
-**Ryan Smith** is founder of TruDiagnsotic. TruDiagnostic is a CLIA certified lab and health data company which specializes in understanding and reporting insights found through Epigenetic methylation data. Since starting in 2020, TruDiagnostic has created the largest private epigenetic database in the world with over 200,000 patients tested. From this dataset, they have created many new algorithms to interpret methylation data including algorithms to predict inflammatory markers, disease diagnosis, telomere length, aging pace, immune cell subsets, cellular replication, and more. TruDiagnostics has also led research in the field with over 70+ clinical trials investigating the best ways to reverse these markers through diet, lifestyle, and prescription interventions. Currently, TruDiagnostic is working with collaborators from Duke, Harvard, Yale, Stanford, and more to uncover new insights from the methylome.
+Entropy Curve
 
-Prior to founding TruDiagnostic, Ryan founded Tailor Made Compounding and the International Peptide Society which focused on bringing peptides to market in the US.
+Biological Age
 
-![American Academy of Anti-Aging Medicine](/assets/images/logo-a4m-2023--white.png)
-![MMI](/assets/images/logos/mmi-logo--white.png)
+Where science meets longevity
 
-The **American Academy of Anti-Aging Medicine (A4M)** is dedicated to the advancement of healthcare technologies and transformations that can combat chronic diseases associated with aging. A4M offers continuing medical education, activities, and training.
+## The Gold Standard in Biological Age Testing
 
-![Informa Connect Logo](/assets/images/a4m-2017/informa-connect-logo__white.png)
+Your full-body aging profile, decoded
 
-Copyright © 2026, A4M.
-  
-All trademarks, registered or unregistered,   
-are the property of their respective owners.
+## 19 Organ Systems, 1 Simple Test
 
-About Us
+Our proprietary 460-biomarker panel delivers the most comprehensive aging profile available today. We don't just measure aging. We show you how to reverse it.
 
-Advanced Education
+1. Auditory System
 
-Events
+2. Cardiac System
 
-Exhibitors
+3. Blood & Vascular System
 
-![Facebook](/custom/templates/a4m-2017/dist/assets/images/soci_facebook_button.svg)
-![Twitter](/custom/templates/a4m-2017/dist/assets/images/soci_twitter_button.svg)
-![LinkedIn](/custom/templates/a4m-2017/dist/assets/images/soci_linkedin_button.svg)
-![YouTube](/custom/templates/a4m-2017/dist/assets/images/soci_youtube_button.svg)
-![Blog](/custom/templates/a4m-2017/dist/assets/images/soci_blog_button.svg)
+4. Hepatic System (Liver)
 
-Medical Website Design &
-  
-Medical Marketing by [WebToMed](https://www.a4m.com/medical-website-design-webtomed.html)
+5. Muscular System
+
+6. Skeletal System
+
+7. Nervous System
+
+8. Brain Health & Cognition
+
+9. Respiratory System [...] 8. Brain Health & Cognition
+
+9. Respiratory System
+
+10. Blood Sugar & Insulin Control
+
+11. Immune System
+
+12. Oncogenesis (Cell Mutation)
+
+13. Metabolism
+
+14. Inflammatory Regulation
+
+15. Tissue Regeneration
+
+16. Fibrosis (Scar Tissue Formation)
+
+17. Digestive System
+
+18. Urinary System
+
+19. Reproductive System
+
+Stop waiting for symptoms to start
+
+## Detect Disease Early, Before it Manifests
+
+Aging is the root cause of most chronic illness. SystemAge is the first and only clinically validated test that detects early biological risks—before you feel a thing.
+
+Your body speaks before disease strikes. We help you listen.
+
+Entropy Curve
+
+Turning health data into real decisions
+
+## Personalization Powered by Our Recommender Engine™ [...] GeroScience
+
+### GeroScience - Jan 18, 2025
+
+DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
+
+Read Paper
+
+PubMed
+
+### PubMed - Dec 11, 2024
+
+The dominance of old blood, and age-related increase in protein production and noise
+
+Read Paper
+
+Aging
+
+### Aging - Sep 12, 2023
+
+Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
+
+Read Paper
+
+Cell Cycle
+
+### Cell Cycle - Jun 15, 2012
+
+Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches
+
+Read Paper
+
+Cell Stem Cell
+
+### Cell Stem Cell - Jan 10, 2008 [...] Dr. George Church, PhD
+
+The Robert Winthrop Professor of Genetics at Harvard Medical School
+
+Generation Lab's organ-level biological age test could define preventative medicine - helping us to catch aging before it leads to disease.
+
+Dr. George Church, PhD
+
+The Robert Winthrop Professor of Genetics at Harvard Medical School
+
+Dr. Robert Langer, PhD
+
+Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
+
+Irina has made significant contributions to Aging Science. her peer reviewed paper on Nature and Science have been cited for 4000 times.
+
+Dr. Robert Langer, PhD
+
+Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
+
+Dr. David Sinclair, AO, PhD
+
+Professor of Genetics, Harvard Medical School [...] Generation Lab's organ-level biological age test could define preventative medicine - helping us to catch aging before it leads to disease.
+
+Dr. George Church, PhD
+
+The Robert Winthrop Professor of Genetics at Harvard Medical School
+
+Dr. Robert Langer, PhD
+
+Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
+
+Irina has made significant contributions to Aging Science. her peer reviewed paper on Nature and Science have been cited for 4000 times.
+
+Dr. Robert Langer, PhD
+
+Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
+
+Dr. David Sinclair, AO, PhD
+
+Professor of Genetics, Harvard Medical School
+
+Dr. Conboy’s work proved that factors in blood control and reverse lifespan — not just in mice, but in humans.
 
 [Result 3]
-Title: [![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/670877e4e1405042afd01548_Rupa%20University.svg)](/)
-URL: https://www.rupauniversity.com/instructors/ryan-smith
+Title: BETA
+URL: https://www.generationlab.com/the-systemage-test
 Content:
-[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/670877e4e1405042afd01548_Rupa%20University.svg)](/)
+BETA
 
-[Free Classes](/free-classes)
+### Ongoing Support
 
-[On-Demand Courses](/on-demand-courses)
+Support you throughout your anti-aging journey, answering questions and updating your Action Plan as needed
 
-[Order Labs](https://www.rupahealth.com/)
+### From Dr. Irina Conboy
 
-[Practice Resources](#)
+Co-Founder & CSO at Generation Lab
 
-[Instructors](/instructors)[Sign in](https://app.rupauniversity.com)
+In this video, Dr. Irina Conboy talks about the science behind epigenetic testing and the scientific development of the SystemAge Test™
 
-Sign in
+Full-Body Aging Insights
 
-![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/667380bf8a4349ccff2a4091_select-icon.svg)
+## 460 Biomarkers 19 Systems 1 Complete Profile
 
-Education
+The first test to Test, Track, and Intervene   
+the causes of aging at an individual level.
 
-[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc442e1f3dfaf7_%F4%80%AB%94.svg)
+Measuring Biological Noise
 
-Bootcamps](/bootcamps)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f13c0967e041d353c9b6_%F4%80%BE%AD.svg)
+## What our tests reveal
 
-Free Classes](/free-classes)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/66dac077fc54df73af00bb12_instructor.svg)
+Our test serves as a DNA methylation noise detector, uncovering and measuring biological noise within your body to accurately gauge your biological age.
 
-Instructors](/instructors)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/62746abcca88b74484babfa5_enterprise.svg)
+DNA Methylation Noise Detection
 
-Enterprise](/enterprise)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f13c0967e0f03153c9b9_%F4%80%B7%89.svg)
+1
 
-Podcast](https://www.rupahealth.com/the-root-cause-medicine-podcast)
+### Top Aging Factors [...] Sign In →
+Order Now 
+→
 
-![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc442b973dfaf6_%F4%81%82%BF.svg)
+At-Home Blood Collection Kit
 
-[Practice Resources](#)
+# The SystemAge™ Test + Action Plan
 
-[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc442b973dfaf6_%F4%81%82%BF.svg)
+Subscribe & Save
 
-FAQ](/faq)
+10% off
 
-Order Labs
+$447
 
-[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f13c0967e039c753c9af_%F4%80%89%9F.svg)
+Stay in sync with your cellular rhythm. Get recurring tests to fine-tune habits, track progress, and adapt with precision—no guesswork anymore.
 
-Rupa Labs](https://www.rupahealth.com/)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f10ca572deba6c7e4275_%F4%80%8F%A4.svg)
+Test delivery frequency:
 
-Rupa Lab Test Catalog](https://labs.rupahealth.com/discover-labs)
+Before & After Bundle
 
-Company
+from
 
-[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f1026fbc441e663dfaef_%F4%80%9F%B1.svg)
+$958
 
-Contact Us](/contact)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f10ca572de65547e427a_%F4%80%95%BB.svg)
+One-time Purchase
 
-Updates](https://www.rupahealth.com/updates)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6249f10ca572de43957e427d_%F4%80%8D%96.svg)
+Total: 
+$447
+billed every 2 months
 
-Careers](https://www.rupahealth.com/careers)
+## What’s included in every kit
 
-[Sign in](https://app.rupauniversity.com)
+### The SystemAge™ Test
 
-Sign in
+The at-home test to reveal the exact biological age and aging speed of 19 of your organs and systems, based on DNA analysis
 
-![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/667380bf8a4349ccff2a4091_select-icon.svg)
+### Personalized Action Plan
 
-![](https://cdn.prod.website-files.com/624a2a730e8726163074c542/6401132df1e04ffd2657f076_63f7cad84ec9f2a8f8184594_63b4969ae5e5ea672a09a0d1_Ryan%252520Smith.avif)
+A personalized Action Plan based on your results to slow and reverse your aging
 
-# Ryan Smith
+### Clinician Consultation
 
-Founder of TruDiagnostic
+Speak with a longevity clinician about your results
 
-Ryan received a BA in biochemistry from Transylvania University before heading to medical school in 2013. After passing USMLE Step 1, he decided to leave and open up a pharmacy in the United States that focused on peptide synthesis and formulations for pharmaceutical preparations. That pharmacy, Tailor Made Compounding, became the 4th fastest growing company in healthcare in the US and grew to 80 million in revenue within 3 years.  Through this pharmacy work, Ryan saw the value of preventative medicine.  Many of the physicians Tailor Made served were treating age as a disease and a primary outcome but needed better tools to measure this process. As a result, Ryan exited Tailor Made in 2020 to create TruDiagnostic.
+BETA
 
-TruDiagnostic is a CLIA certified lab and health data company which specializes in understanding and reporting insights found through Epigenetic methylation data. Since starting in 2020, TruDiagnostic has created the largest private epigenetic database in the world with over 15,000 patients tested on the EPIC850k array.  From this dataset, they have created many new algorithms to interpret methylation data including algorithms to predict inflammatory markers, disease diagnosis, telomere length, aging pace, immune cell subsets, cellular replication, and more.
+### Ongoing Support [...] DNA Methylation Noise Detection
 
-## Live Classes
+1
 
-How To Clinically Use The most Predictive DNAm Clock To Date
+### Top Aging Factors
 
-October 5, 2023
+Uncover aging factors across seven body systems and twelve organs, providing the foundation for precise intervention plans.
 
-[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6277254e3da70c06d40b4874_ccal.svg)
+2
 
-Register to Watch](https://lu.ma/omicmage)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/624a31cbec629e72a6b1ec0b_play-white.svg)
+### Aging Stressors
 
-Watch the Class](/live-classes/how-to-clinically-use-the-most-predictive-dnam-clock-to-date)
+Cumulative molecular stressors contribute to accelerated aging. We measure this pressure to gain comprehensive insights into the pace of aging.
 
-![](https://cdn.prod.website-files.com/624a2a730e8726163074c542/6503607c071aed83b1385137_65033db7c2631ae361e6c4a2_cropped-TruDiagnostic_Logo-Color-1.avif)
+3
 
-How to Use TruAgePACE in Your Anti-Aging Practice
+### Aging Trajectory
 
-January 25, 2023
+Gain precise insights into aging progress, evaluate the efficacy of intervention plans, and proactively prevent disease for a healthier life.
 
-[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/6277254e3da70c06d40b4874_ccal.svg)
+• Biological Noise •
 
-Register to Watch](https://lu.ma/TruAgePace)[![](https://cdn.prod.website-files.com/6249efc70169753b039025d4/624a31cbec629e72a6b1ec0b_play-white.svg)
+Proven Accuracy
 
-Watch the Class](/live-classes/how-to-use-truagepace-in-your-anti-aging-practice)
+## Outperforming Competitors
 
-![](https://cdn.prod.website-files.com/624a2a730e8726163074c542/68a6e402f5ba95f704d173ac_6656545d71bb43504af3fa13_63f7cbce1d31cc27e307c2ef_63b49 …[truncated]
+### Accuracy
+
+Generation Lab
+
+99.9% cellular-level precision
+
+Traditional Labs
+
+Accurate, not at cellular level
+
+Bio Clocks
+
+∼ 58%
+
+### Actionable
+
+Generation Lab
+
+Personalized Action Plan based on results [...] Personalized Action Plan based on results
+
+Identifies risks before diseases develop
+
+Access to our trusted clinician network
+BETA
+
+Easy-to-use app with 24/7 AI Health Coach
+
+Traditional Labs
+
+Accurate, not at cellular level
+
+No actionable items
+
+Only detects formed diseases
+
+No integrated platform
+
+Paper report with limited information
+
+Bio Clocks
+
+∼ 58%
+
+Generic recommendations
+
+Limited predictive capability
+
+—
+
+—
+
+## How does the SystemAge™ Test work?
+
+### 01 Easy At-Home Test
+
+### 02 Get Your SystemAge Report + Action Plan
+
+### 03 Consult with Professionals + Retest
+
+How does the
+SystemAge™ Test
+work?
+
+01
+Easy At-Home Test
+
+02
+Get Your SystemAge Report + Action Plan
+
+03
+Consult with Professionals + Retest
+
+## A personalized Action Plan based on test results [...] Generation Lab showed my lungs were aging fast. I followed up with my doctor and found a small nodule early, catching it before it got serious.
+
+Mike
+
+Tech | 45 year-old
+
+Generation Lab’s organ-level biological age test could define preventative medicine—helping us to catch aging before it leads to disease.
+
+Dr. George Church, PhD
+
+The Robert Winthrop Professor of Genetics at Harvard Medical School
+
+As a busy mom at 35, staying healthy is crucial for both me and my family. Finding the right diet has been a challenge. But Generation Lab is a game changer! It's given me clear insights and control over my health. Thrilled to have found it!
+
+Designer | 35 year-old
 
 [Result 4]
-Title: ![Peak Health Unlocked](/assets/artwork/1x1.gif)
-URL: https://podcasts.apple.com/us/podcast/ryan-smith-co-founder-of-trudiagnostic/id1529308112?i=1000522201993
+Title: [Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
+URL: https://www.generationlab.com/published-research
 Content:
-![Peak Health Unlocked](/assets/artwork/1x1.gif)
+[Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
 
-# Ryan Smith - Co-founder of TruDiagnostic
 
-Ryan Smith, 2x guest of the show, and co-founder of TruDiagnostic—the team behind the world's most advanced epigenetic test—TruAge™. Testing up to 425x more spots on the DNA than any other age predictor.
 
-\*
+## Published Research
 
-About The Immunity Docuseries:
+Dive into the scientific foundation of our tests through decades of rigorous research and peer-reviewed studies published in leading journals.
 
-Never has it been so critical and obvious that our health and immunity have to be a top priority. It's now up to us to make a choice: continue down a path of disease or do everything possible be to be at our peak health. Some of the questions explored in this series include:
+GeroScience
 
-How can we be resilient to diseases and viruses to come? What actions can we take today to achieve peak immunity? What are the non-negotiables to building immunity?
+### GeroScience - Jan 18, 2025
 
-\*
+DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
 
-This podcast wouldn’t be possible without the support of Thrive Performance & Regenerative Medicine. A team prepared to go all-in with you to craft a personalized health plan to achieve your peak health. Book a free consult to start your health transformation at - https://thrivemedicineclinic.com/
+[Read Paper](https://link.springer.com/article/10.1007/s11357-024-01460-1)
 
-\*
+PubMed
 
-Thrive Medicine - @thrivemedicine
+### PubMed - Dec 11, 2024
 
-Dr. Rhet Langley - @rhetmd
+The dominance of old blood, and age-related increase in protein production and noise
 
-Dr. Phillip Gallegos - @phillipgallegos\_md
+[Read Paper](https://pubmed.ncbi.nlm.nih.gov/39672207/)
 
-Marc Champagne - @mchampagne
+Aging
 
-## Information
+### Aging - Sep 12, 2023
 
-## Africa, Middle East, and India
+Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
 
-## Asia Pacific
+[Read Paper](https://pubmed.ncbi.nlm.nih.gov/37702598/)
 
-## Europe
+Cell Cycle
 
-## Latin America and the Caribbean
+### Cell Cycle - Jun 15, 2012
 
-## The United States and Canada
+Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches
 
-Copyright © 2026 [Apple Inc.](https://www.apple.com) All rights reserved.
+[Read Paper](https://www.tandfonline.com/doi/full/10.4161/cc.20437)
 
-To listen to explicit episodes, sign in.
+Cell Stem Cell
 
-![Apple Podcasts](/assets/app-icons/podcasts-icon_512.png)
+### Cell Stem Cell - Jan 10, 2008
 
-Stay up to date with this show
+A Temporal Switch from Notch to Wnt Signaling in Muscle Stem Cells Is Necessary for Normal Adult Myogenesis
 
-Sign in or sign up to follow shows, save episodes, and get the latest updates.
+[Read Paper](https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(07)00223-8)
 
-## Africa, Middle East, and India
+Nature
 
-## Asia Pacific
+### Nature - Feb 17, 2005
 
-## Europe
+Rejuvenation of aged progenitor cells by exposure to a young systemic environment
 
-## Latin America and the Caribbean
+[Read Paper](https://www.nature.com/articles/nature03260)
 
-## The United States and Canada
+## Experience the science
+
+Discover your true biological age with our revolutionary testing technology.
+
+[Test Your Biological Age Now →](/the-systemage-test)

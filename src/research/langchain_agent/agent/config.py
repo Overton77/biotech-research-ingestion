@@ -10,7 +10,7 @@ import json
 from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional, Sequence
+from typing import Annotated, Any, Dict, List, Literal, Optional, Sequence
 
 import aiofiles
 from pydantic import BaseModel, Field, field_validator
@@ -18,12 +18,16 @@ from pydantic import BaseModel, Field, field_validator
 from langchain.agents import AgentState
 from langchain.tools import BaseTool
 
+from src.research.langchain_agent.agent.subagent_types import (
+    ALL_SUBAGENT_NAMES,
+    DEFAULT_STAGE_SUBAGENT_NAMES,
+)
 from src.research.langchain_agent.kg.extraction_models import TemporalScope
 from src.research.langchain_agent.tools_for_test.tavily_tools import (
+    crawl_website,
     search_web,
     extract_from_urls,
     map_website, 
-    crawl_website, 
 )
 from src.research.langchain_agent.tools_for_test.formatters import (
     _truncate_text,
@@ -39,6 +43,7 @@ TOOLS_MAP: Dict[str, BaseTool] = {
     "search_web": search_web,
     "extract_from_urls": extract_from_urls,
     "map_website": map_website,
+    "crawl_website": crawl_website,
 }
 
 # -----------------------------------------------------------------------------
@@ -81,6 +86,9 @@ class MissionSliceInput(BaseModel):
     selected_tool_names: List[str] = Field(
         default_factory=lambda: ["search_web", "extract_from_urls", "map_website"]
     )
+    selected_subagent_names: List[str] = Field(
+        default_factory=lambda: list(DEFAULT_STAGE_SUBAGENT_NAMES)
+    )
 
     report_required_sections: List[str] = Field(
         default_factory=lambda: [
@@ -122,6 +130,14 @@ class MissionSliceInput(BaseModel):
         unknown = [name for name in value if name not in TOOLS_MAP]
         if unknown:
             raise ValueError(f"Unknown tool names: {unknown}")
+        return value
+
+    @field_validator("selected_subagent_names")
+    @classmethod
+    def validate_subagent_names(cls, value: List[str]) -> List[str]:
+        unknown = [name for name in value if name not in ALL_SUBAGENT_NAMES]
+        if unknown:
+            raise ValueError(f"Unknown subagent names: {unknown}")
         return value
 
     @property
@@ -201,26 +217,28 @@ class ResearchPromptSpec:
     )
     workflow: Sequence[str] = field(
         default_factory=lambda: [
-            "Start broad with search_web to identify the main entity, official sites, related brands, and major claims.",
-            "Then get progressively more specific with tighter search queries and domain filters.",
-            "Use map_website on official domains to discover relevant internal pages.",
-            "Use extract_from_urls only on the highest-value pages.",
-            "Save intermediate findings to the filesystem after each meaningful step.",
-            "Before writing the final report, read back your saved notes and synthesize from them.",
+            "Start with the cheapest path that can answer the stage, then narrow quickly toward official evidence.",
+            "Use search_web to frame the problem, map_website to locate high-value official pages, and extract_from_urls only on the pages that matter.",
+            "Escalate to subagents only when a specialist loop will materially outperform continuing in the main context.",
+            "Save meaningful intermediate findings before changing search direction.",
+            "Before finalizing, read your own artifacts back and synthesize from evidence rather than memory.",
         ]
     )
     tool_guidance: Sequence[str] = field(
         default_factory=lambda: [
-            "Use search_web broadly first, then narrowly.",
-            "Use include_domains when official-source confirmation is needed.",
-            "Use exclude_domains to reduce noise.",
-            "Keep max_results, max_depth, max_breadth, and limit economical.",
+            "Use search_web broadly first, then narrow with precise entity, domain, sponsor, compound, or product terms.",
+            "Use include_domains when official-source confirmation is needed and exclude_domains when noisy aggregators dominate.",
+            "Keep max_results, max_depth, max_breadth, and crawl limits economical.",
+            "Do not pull large batches of low-value pages when a smaller targeted extraction can answer the question.",
         ]
     )
     subagent_guidance: Sequence[str] = field(
         default_factory=lambda: [
-            "You have access to a browser_control subagent via the task tool when needed for dynamic pages.",
-            "Provide clear instructions: URL(s) and what to extract.",
+            "Use the task tool for specialized work that benefits from its own tool loop and isolated context window.",
+            "You are still the main research agent. Delegate, inspect the result, then continue orchestrating the stage yourself.",
+            "Delegate with precise instructions, success criteria, seed URLs or identifiers, and expected output files.",
+            "Ask subagents to write handoff artifacts under runs/<task_slug>/subagents/<subagent_name>/ and return the file paths they created.",
+            "When a subagent returns file paths, validate them before relying on the contents in the final report.",
         ]
     )
     practical_limits: Sequence[str] = field(
@@ -258,9 +276,9 @@ class ResearchPromptSpec:
             f"Today's date: {effective_date}",
             "",
             "Your job is to complete one bounded biotech research stage or sub-stage.",
-            "You MUST produce a well-structured markdown report with specific section headers.",
+            "Produce a sourced markdown report and keep the work bounded to this stage.",
             "Always be explicit about temporal context: when citing facts, note the date or",
-            "time frame they apply to (e.g. 'as of March 2026', 'since 2023', 'formerly').",
+            "time frame they apply to (for example 'as of March 2026', 'since 2023', or 'formerly').",
             "",
             "Domain scope:",
         ]
@@ -274,7 +292,7 @@ class ResearchPromptSpec:
                 "Tool usage guidance:",
                 *[f"- {item}" for item in self.tool_guidance],
                 "",
-                "Subagent (task tool + browser_control) guidance:",
+                "Subagent (task tool) guidance:",
                 *[f"- {item}" for item in self.subagent_guidance],
                 "",
                 "Practical limits:",
@@ -290,6 +308,7 @@ class ResearchPromptSpec:
                 "- Use the filesystem as your primary scratchpad and checkpoint surface.",
                 "- Save intermediate outputs before continuing to the next search step.",
                 "- Read your saved files before writing the final report.",
+                "- Stay concise in your internal notes and final synthesis; prefer precise facts over padded prose.",
                 "- Mention the final report path when finished.",
                 "",
                 "CRITICAL — Final report formatting rules:",
@@ -314,6 +333,41 @@ BASE_SYSTEM_PROMPT = PROMPT_SPEC.render_base_prompt()
 # -----------------------------------------------------------------------------
 
 
+def _merge_unique_str_list(
+    current: List[str] | None,
+    incoming: List[str] | None,
+    *,
+    max_items: int = 2000,
+) -> List[str]:
+    merged: List[str] = []
+    seen: set[str] = set()
+    for value in (current or []) + (incoming or []):
+        if not value or value in seen:
+            continue
+        seen.add(value)
+        merged.append(value)
+    return merged[-max_items:]
+
+
+def _merge_event_list(
+    current: List[Dict[str, Any]] | None,
+    incoming: List[Dict[str, Any]] | None,
+    *,
+    max_items: int = 200,
+) -> List[Dict[str, Any]]:
+    merged: List[Dict[str, Any]] = []
+    seen: set[str] = set()
+    for value in (current or []) + (incoming or []):
+        if not value:
+            continue
+        signature = json.dumps(value, sort_keys=True, default=str, ensure_ascii=False)
+        if signature in seen:
+            continue
+        seen.add(signature)
+        merged.append(value)
+    return merged[-max_items:]
+
+
 class BiotechResearchAgentState(AgentState):
     task_id: str
     mission_id: str
@@ -322,13 +376,14 @@ class BiotechResearchAgentState(AgentState):
 
     targets: List[str]
     selected_tool_names: List[str]
+    selected_subagent_names: List[str]
     report_required_sections: List[str]
 
     stage_type: str
     search_stage: str
 
     official_domains: List[str]
-    visited_urls: List[str]
+    visited_urls: Annotated[List[str], _merge_unique_str_list]
     findings: List[Dict[str, Any]]
     open_questions: List[str]
 
@@ -343,14 +398,15 @@ class BiotechResearchAgentState(AgentState):
     episodic_memories: str
     procedural_memories: str
 
-    tavily_search_events: List[Dict[str, Any]]
-    tavily_extract_events: List[Dict[str, Any]]
-    tavily_map_events: List[Dict[str, Any]]
+    tavily_search_events: Annotated[List[Dict[str, Any]], _merge_event_list]
+    tavily_extract_events: Annotated[List[Dict[str, Any]], _merge_event_list]
+    tavily_map_events: Annotated[List[Dict[str, Any]], _merge_event_list]
+    tavily_crawl_events: Annotated[List[Dict[str, Any]], _merge_event_list]
 
-    filesystem_events: List[Dict[str, Any]]
-    read_file_paths: List[str]
-    written_file_paths: List[str]
-    edited_file_paths: List[str]
+    filesystem_events: Annotated[List[Dict[str, Any]], _merge_event_list]
+    read_file_paths: Annotated[List[str], _merge_unique_str_list]
+    written_file_paths: Annotated[List[str], _merge_unique_str_list]
+    edited_file_paths: Annotated[List[str], _merge_unique_str_list]
 
     # Temporal context
     current_date: str
@@ -377,6 +433,7 @@ def input_to_agent_state(run_input: MissionSliceInput) -> Dict[str, Any]:
         "user_objective": run_input.user_objective,
         "targets": run_input.targets,
         "selected_tool_names": run_input.selected_tool_names,
+        "selected_subagent_names": run_input.selected_subagent_names,
         "report_required_sections": run_input.report_required_sections,
         "stage_type": run_input.stage_type,
         "search_stage": "initialized",
@@ -399,6 +456,7 @@ def input_to_agent_state(run_input: MissionSliceInput) -> Dict[str, Any]:
         "tavily_search_events": [],
         "tavily_extract_events": [],
         "tavily_map_events": [],
+        "tavily_crawl_events": [],
         "filesystem_events": [],
         "read_file_paths": [],
         "written_file_paths": [],
@@ -487,6 +545,7 @@ def build_memory_ingestion_prompt(
     tavily_search_events: List[Dict[str, Any]],
     tavily_extract_events: List[Dict[str, Any]],
     tavily_map_events: List[Dict[str, Any]],
+    tavily_crawl_events: List[Dict[str, Any]],
     filesystem_events: List[Dict[str, Any]],
     read_file_paths: List[str],
     written_file_paths: List[str],
@@ -505,6 +564,11 @@ def build_memory_ingestion_prompt(
     map_block = _format_tavily_event_block(
         "Tavily map provenance",
         tavily_map_events,
+        max_events=4,
+    )
+    crawl_block = _format_tavily_event_block(
+        "Tavily crawl provenance",
+        tavily_crawl_events,
         max_events=4,
     )
     file_block = _format_file_state_block(
@@ -549,6 +613,8 @@ Visited URLs:
 {search_block}
 
 {map_block}
+
+{crawl_block}
 
 {extract_block}
 

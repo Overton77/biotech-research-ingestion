@@ -1,471 +1,614 @@
-Meta: request_id=9535db69-24e9-4f3b-952c-f71e25e9fc6f, response_time_s=0.01
+Meta: request_id=f59ceea9-b74e-4011-a9f8-74e3b5fe3b26, response_time_s=0.54
 
 === Extracted Web Content ===
 [Result 1]
-Title: 20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
-URL: https://trudiagnostic.com/science
+Title: Sign In →
+URL: https://www.generationlab.com/biomarkers
 Content:
-20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
+Sign In →
+Order Now 
+→
 
-[SHOP NOW](https://shop.trudiagnostic.com/collections/shopfront)
+# 460+ Biomarkers 19 Organs & Systems 1 Comprehensive Test
 
-###### Epigenetic Biomarkers™
+Brain Health & Cognition
 
-## The future of diagnostics that outperforms traditional lab results
+Gene Symbol: 
+DLGAP2
 
-We have developed a new revolutionary tool for precision medicine: Epigenetic Biomarkers™. This transformative way of measuring biological function uses just a single drop of blood to unlock critical data about your personal health. This is the future of diagnostics.
+Immune System
 
-###### Epigenetics & Innovation
+Gene Symbol: 
+AIRE
 
-Explore cutting-edge epigenetic insights that decode your health beyond traditional genetics, driving personalized healthcare solutions.
+Reproductive System
 
-###### What is Biological Aging?
+Gene Symbol: 
+KCNQ1
 
-Understand how your body's age differs from your chronological age, influencing your long-term health and wellness strategies.
+Cardiac System
 
-###### DNA-Based Nutrition
+Gene Symbol: 
+KCNQ1
 
-Discover personalized dietary recommendations tailored to your DNA, optimizing your health through precision nutrition.
+Inflammatory Regulation
 
-###### Research & Collaborations
+Gene Symbol: 
+AIRE
 
-Learn about our partnerships with leading institutions, driving scientific breakthroughs and trusted, validated results.
+Gene Symbol: 
+PRDM16
 
-## Understanding your biomarkers means understanding your body better – empowering you to make informed choices for a longer, healthier life.
+Tissue Regeneration
 
-Epigenetic Biomarkers™ are measured by analyzing your genes’ expression to deliver the most precise and actionable data about your health.
+Gene Symbol: 
+NGF
 
-In partnership with Harvard, TruDiagnostic™ has developed over 1,670 Epigenetic Biomarkers™ that improve testing of clinical lab results, metabolomic, and proteomic measurements.   
-  
-This transformative approach to personal health uses just a few drops of blood to unlock deep data about cellular function – everything from vitamins, antioxidants, healthy fats, amino acids, and toxins to inflammation rates, oxidative stress, and neurocognitive factors.   
-  
-Traditional blood tests only give a snapshot of what a biomarker’s level was at the very moment your blood was drawn. Epigenetic Biomarkers™, on the other hand, can measure what that biomarker’s level had been for weeks or months leading up to the test. This measurement of your health over time allows for a more actionable and accurate assessment of disease risk associated with each Epigenetic Biomarker™.
+Blood Sugar & Insulin Control
 
-###### a revolutionary tool for precision medicine
+Gene Symbol: 
+KCNQ1
 
-## The vast range of Epigenetic Biomarkers™ allows us to measure 20x more data about your health than an annual physical exam for a fraction of the cost.
+Hepatic System (Liver)
 
-⠀
+Gene Symbol: 
+KCNQ1
 
-General Health Markers
+Muscular System
 
-Nutrition
+Gene Symbol: 
+KY
 
-Toxins
+Skeletal System
+
+Gene Symbol: 
+AIRE
+
+Nervous System
+
+Gene Symbol: 
+GAK
+
+Respiratory System
+
+Gene Symbol: 
+KCNQ1
+
+Digestive System
+
+Gene Symbol: 
+AIRE
+
+Blood & Vascular System
+
+Gene Symbol: 
+KCNB2
+
+Urinary System
+
+Gene Symbol: 
+SOX2OT
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+KCNQ1 [...] Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+KCNQ1
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+NGF
+
+Auditory System
+
+Gene Symbol: 
+AIRE
+
+Brain Health & Cognition
+
+Gene Symbol: 
+OTX1
+
+Immune System
+
+Gene Symbol: 
+AHSG
+
+Reproductive System
+
+Gene Symbol: 
+FGF1
+
+Cardiac System
+
+Gene Symbol: 
+CHD5
+
+Inflammatory Regulation
+
+Gene Symbol: 
+TNF
 
 Metabolism
 
-Immunity
+Gene Symbol: 
+KCNQ1
 
-Stress + Oxidative Defense
+Tissue Regeneration
 
-Inflammation
+Gene Symbol: 
+SEMA6A
 
-Fats & Cellular Membranes
+Blood Sugar & Insulin Control
 
-Neurocognitive
+Gene Symbol: 
+AHSG
 
-**Total Cost**
+Hepatic System (Liver)
+
+Gene Symbol: 
+AHSG
+
+Muscular System
+
+Gene Symbol: 
+DMD
+
+Skeletal System
+
+Gene Symbol: 
+GH2
+
+Nervous System
+
+Gene Symbol: 
+CHD5
+
+Respiratory System
+
+Gene Symbol: 
+TNF
+
+Digestive System
+
+Gene Symbol: 
+NGF
+
+Blood & Vascular System
+
+Gene Symbol: 
+MYBPC3
+
+Urinary System
+
+Gene Symbol: 
+BBS9 [...] Respiratory System
+
+Gene Symbol: 
+CDH23
+
+Digestive System
+
+Gene Symbol: 
+TNF
+
+Blood & Vascular System
+
+Gene Symbol: 
+PTPRS
+
+Urinary System
+
+Gene Symbol: 
+MEPE
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+TNF
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+TNF
+
+Auditory System
+
+Gene Symbol: 
+VIPR2
+
+Brain Health & Cognition
+
+Gene Symbol: 
+NKX2-8
+
+Immune System
+
+Gene Symbol: 
+IL1RN
+
+Reproductive System
+
+Gene Symbol: 
+CHRNA2
+
+Cardiac System
+
+Gene Symbol: 
+TNF
+
+Inflammatory Regulation
+
+Gene Symbol: 
+TOLLIP
+
+Metabolism
+
+Gene Symbol: 
+PRKAG2
+
+Tissue Regeneration
+
+Gene Symbol: 
+NOTCH4
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+TNF
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+CYP2D6
+
+Muscular System
+
+Gene Symbol: 
+GRM4
+
+Skeletal System
+
+Gene Symbol: 
+SLC51B
+
+Nervous System
+
+Gene Symbol: 
+SYTL2 [...] Gene Symbol: 
+MYBPC3
+
+Urinary System
+
+Gene Symbol: 
+BBS9
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+NGF
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+PRDM16
+
+Auditory System
+
+Gene Symbol: 
+OTX1
+
+Brain Health & Cognition
+
+Gene Symbol: 
+CHD5
+
+Immune System
+
+Gene Symbol: 
+S100A2
+
+Reproductive System
+
+Gene Symbol: 
+TNF
+
+Cardiac System
+
+Gene Symbol: 
+DMD
+
+Inflammatory Regulation
+
+Gene Symbol: 
+NOTCH4
+
+Metabolism
+
+Gene Symbol: 
+AHSG
+
+Tissue Regeneration
+
+Gene Symbol: 
+FGF1
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+PTPRN2
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+GAK
+
+Muscular System
+
+Gene Symbol: 
+CACNA2D4
+
+Skeletal System
+
+Gene Symbol: 
+FGF1
+
+Nervous System
+
+Gene Symbol: 
+CACNG3
+
+Respiratory System
+
+Gene Symbol: 
+IL1RN
+
+Digestive System
+
+Gene Symbol: 
+TREH
+
+Blood & Vascular System
+
+[Result 2]
+Title: Co-Founder & CSO at Generation Lab
+URL: https://www.generationlab.com/the-systemage-test
+Content:
+Co-Founder & CSO at Generation Lab
+
+In this video, Dr. Irina Conboy talks about the science behind epigenetic testing and the scientific development of the SystemAge Test™
+
+Play video
+
+Full-Body Aging Insights
+## 460 Biomarkers
+
+19 Systems
+
+1 Complete Profile
+
+Image 6: bgImage 7: humanImage 8: humanImage 9: human
+
+The first test to Test, Track, and Intervene 
+
+the causes of aging at an individual level.
+
+Measuring Biological Noise
+## What our tests reveal
+
+Our test serves as a DNA methylation noise detector, uncovering and measuring biological noise within your body to accurately gauge your biological age.
+
+Get a Sample Report →
+
+Image 10: tests reveal doctor
+
+DNA Methylation Noise Detection
+
+1
+### Top Aging Factors [...] ## Get A Free Sample Report Right Away
+
+View Sample Report →
+We’ll only send the good stuff. You can unsubscribe anytime.
+
+Image 25: sample-report
+
+Generation Lab
+
+Slow your aging with the world's most accurate epigenetic test and personalized insights. 460 biomarkers, 19 organs and systems.
+
+Order Now →
+
+Ask AI for a summary of the Generation Lab
+
+[](
+
+HomeFind a DoctorSystemAge™ TestOur ScienceOur BiomarkersCareersAbout UsFAQsFor ProvidersPublished ResearchGeneration Lab NewsLongevity Articles
+
+© 2025 Generation Lab, All rights reserved.
+
+info@generationlab.com+1 415 326 3656
+
+1701 Old Bayshore Highway
+
+Burlingame, CA 94010
+
+Terms of ServicePrivacy Policy
+
+Image 26: mask-video-placeholder
+
+Slow Aging. 
+
+Prevent Disease.
+
+✕
+
+Hi! What can I help you with? [...] DNA Methylation Noise Detection
+
+1
+### Top Aging Factors
+
+Uncover aging factors across seven body systems and twelve organs, providing the foundation for precise intervention plans.
+
+2
+### Aging Stressors
+
+Cumulative molecular stressors contribute to accelerated aging. We measure this pressure to gain comprehensive insights into the pace of aging.
+
+3
+### Aging Trajectory
+
+Gain precise insights into aging progress, evaluate the efficacy of intervention plans, and proactively prevent disease for a healthier life.
+
+• Biological Noise •
+
+Proven Accuracy
+## Outperforming Competitors
+
+### Accuracy
+
+Generation Lab
+
+99.9% cellular-level precision
+
+Traditional Labs
+
+Accurate, not at cellular level
+
+Bio Clocks
+
+∼ 58%
+
+### Actionable
+
+Generation Lab
+
+Personalized Action Plan based on results [...] Test delivery frequency:
+
+Every 2 months Every 3 months Every 6 months 
+
+Before & After Bundle
+
+from$958
+
+One-time Purchase
 
 $499
 
-**Out of Pocket Cost**
+Total: $447 billed every 2 months
 
-$4,745
+Join Now →
 
-$4,390
+## What’s included 
 
-$1,815
+in every kit
 
-$1,147
+### The SystemAge™ Test
 
-$574
+The at-home test to reveal the exact biological age and aging speed of 19 of your organs and systems, based on DNA analysis
 
-$892
+### Personalized Action Plan
 
-$850
+A personalized Action Plan based on your results to slow and reverse your aging
 
-$1,360
+### Clinician Consultation
 
-$836
+Speak with a longevity clinician about your results
 
-**$16,609**
+BETA
 
-#### GENETICS
+### Ongoing Support
 
-**•** Appearance
+Support you throughout your anti-aging journey, answering questions and updating your Action Plan as needed
 
-**•** Personality
+### From Dr. Irina Conboy
 
-**•** Health
-
-Genetics is the study of the genes you were born with.
-
-Everyone has a unique genetic code that works as the blueprint on how to “build” your body. This information affects our health, appearance, and even our personality.
-
-#### EPIGENETICS
-
-**•** Sleep
-
-**•** Exercise
-
-**•** Stress
-
-**•** Diet
-
-**•** Disease
-
-Epigenetics is the study of how you express those genes
-
-And why you have the specific health outcomes you have. It is the sum of your diet, exercise, disease status, sleep, stress, and every decision you make.
-
-#### BIOMARKERS
-
-**•** Insulin
-
-**•** Cholesterol
-
-**•** Vitamin C
-
-**•** Glucose
-
-A biomarker is a measurable substance found in the blood that provides information about biological processes and diseases.
-
-TruDiagnostic measures biomarkers by analyzing your genes’ expression to deliver the most precise and actionable data about your health. These epigenetic biomarkers are more accurate than similar blood biomarkers because they measure the direct effect on your DNA.
-
-Why CHoose Trudiagnostic™
-
-### Easy. Reliable. Precise
-
-###### Predictive Power
-
-Epigenetic biomarkers™ measure your body’s biological function, such as your aging, nutrition, and disease risk, by testing more than 1 million CpG sites on your DNA.
-
-###### Reliability & Precision
-
-Our Epigenetic Biomarkers™ are shown to be more accurate at predicting disease than traditional biomarkers measured by clinical labs for a fraction of the cost.
-
-###### Ease of Collection
-
-Measuring your Epigenetic Biomarkers™ is simple. We deliver the test directly to your door for you to take when convenient. No Appointments. No Lab Fees. No Vials of Blood.
-
-###### Science You Can Trust
-
-## We’re Leaders in Epigenetics
-
-Led by a team of world-class doctors and epigenetic scientists with a focus on clinical research.
-
-Committed to using only the most advanced DNA methylation algorithms and Epigenetic Biomarker™ advancements.
-
-Developed in partnership with top medical institutions like Harvard, Yale, Duke, and Columbia, leveraging the largest private DNA methylation database in the world.
-
-Resolute about having all algorithms be peer-reviewed and published for full transparenc …[truncated]
-
-[Result 2]
-Title: 20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
-URL: https://trudiagnostic.com/research
-Content:
-20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
-
-[SHOP NOW](https://shop.trudiagnostic.com/collections/shopfront)
-
-# Research Publications  and Clinical Trials
-
-Research PublicationsClinical Trials
-
-[A genome-wide association study of mass spectrometry proteomics using the Seer Proteograph platform](https://www.biorxiv.org/content/10.1101/2024.05.27.596028v1)
-
-Karsten Suhre, Qingwen Chen, Anna Halama, Kevin Mendez, Amber Dahlin, Nisha Stephan, Gaurav Thareja, Hina Sarwath, Harendra Guturu, Varun B. Dwaraka, Serafim Batzoglou, Frank Schmidt, Jessica A. Lasky-Su
-
-Abstract
-
-This genome-wide association study using mass spectrometry-based proteomics identifies and replicates novel protein quantitative trait loci (pQTLs), highlights biases from affinity-based methods, and demonstrates the broader potential of MS platforms to uncover new drug discovery targets.
-
-[Systems Age: A single blood methylation test to quantify aging heterogeneity across 11 physiological systems](https://www.biorxiv.org/content/10.1101/2023.07.13.548904v1.full.pdf)
-
-Raghav Sehgal, Margarita Meer, Aladdin H. Shadyab, Ramon Casanova, JoAnn E. Manson, Parveen Bhatti, Eileen M. Crimmins, Themistocles L. Assimes, Eric A. Whitsel, Albert T. Higgins-Chen, Morgan Levine
-
-Abstract
-
-Using blood DNA methylation with machine learning, we built 11 system-specific epigenetic clocks (Heart, Lung, Kidney, etc.) plus a unified Systems Age. These scores predict system-level aging, mortality and disease, revealing distinct aging subtypes for personalized care.
-
-[Quantifying the stochastic component of epigenetic aging](https://www.nature.com/articles/s43587-024-00600-8)
-
-Huige Tong, Varun B. Dwaraka, Qingwen Chen, Qi Luo, Jessica A. Lasky-Su, Ryan Smith & Andrew E. Teschendorff
-
-Abstract
-
-Simulating DNAm drift in >22k blood samples shows stochastic change explains 66–75 % of Horvath clock accuracy, 90 % for Zhang, but 63 % for PhenoAge, implying true aging reflects non-stochastic biology. Male, severe COVID-19 and smoker accelerations stem from these non-random effects.
-
-[Unveiling the Epigenetic Impact of Vegan vs. Omnivorous Diets on Aging: Insights from the Twins Nutrition Study (TwiNS)](https://www.medrxiv.org/content/10.1101/2023.12.26.23300543v1)
-
-Varun B. Dwaraka, Lucia Aronica, Natalia Carreras-Gallo, Jennifer L Robinson, Tayler Hennings, Aaron Lin, Logan Turner, Ryan Smith, Tavis L. Mendez, Hannah Went, Emily R. Ebel, Matthew M. Carter, Erica D. Sonnenburg, Justin L. Sonnenburg, Christopher D. Gardner
-
-Abstract
-
-In an 8-week twin study, only the vegan diet cut epigenetic age: lower PC GrimAge, PC PhenoAge, DunedinPACE™ and reduced aging in inflammation, heart, hormone, liver and metabolic systems. Omnivores didn’t shift, underscoring plant-based diets’ anti-aging edge.
-
-[Genomic map of candidate human imprint control regions: the imprintome](https://www.tandfonline.com/doi/full/10.1080/15592294.2022.2091815)
-
-Dereje D. Jima, David A. Skaar, Antonio Planchart, Alison Motsinger-Reif, Sebnem E. Cevik, Sarah S. Park, Michael Cowley, Fred Wright, John House, Andy Liu, Randy L. Jirtle, & Cathrine Hoyo
-
-Abstract
-
-WGBS of germ-layer tissues and gametes mapped 1,488 hemi-methylated candidate imprint control regions, including 19/25 known. 332 showed near-complete parent-specific methylation and 65 % overlapped CTCF/DNase sites. This draft imprintome opens paths to study imprinting errors in disease.
-
-[Retroelement-Age Clocks: Epigenetic Age Captured by Human Endogenous Retrovirus and LINE-1 DNA methylation states](https://www.biorxiv.org/content/10.1101/2023.12.06.570422v1)
-
-Lishomwa C. Ndhlovu, Matthew L. Bendall, Varun Dwaraka, Alina PS Pang, Nicholas Dopkins, Natalia Carreras, Ryan Smith, Douglas F. Nixon, Michael J. Corley
-
-Abstract
-
-Methylation of specific HERV and LINE-1 loci forms potent epigenetic clocks across tissues and species. These clocks reset with reprogramming, accelerate in HIV-1, respond to therapy, and track brain organoid age, tying retroelement control to aging.
-
-[Epigenetic clocks and risk assessment in adult spinal deformity: A novel association between pace of aging with frailty, disability, and postoperative complications](https://www.medrxiv.org/content/10.1101/2023.04.23.23289001v1)
-
-Michael M. Safaee, Varun B. Dwaraka, Justin M. Lee, Marissa Fury, Tavis L Mendez, Ryan Smith, Jue Lin, Dana L. Smith, John F. Burke, Justin K. Scheer, Hannah Went, Christopher P. Ames
-
-Abstract
-
-In 86 adult spinal-deformity patients, blood epigenetic clocks—especially DunedinPACE™—tied faster biological aging to greater frailty (EFS, ASD-FI), worse disability (ODI, SRS-22) and more 90-day complications, suggesting biological age can refine surgical risk prediction.
-
-[Creation and Validation of the First Infinium DNA Methylation Array for the Human Imprintome](https://www.biorxiv.org/content/10.1101/2024.01.15.575646v1)
-
-Natalia Carreras-Gallo, Varun B. Dwaraka, Dereje D. Jima, David A. Skaar, Tavis L. Mendez, Antonio Planchart, Wanding Zhou, Randy …[truncated]
+Co-Founder & CSO at Generation Lab
 
 [Result 3]
-Title: 20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
-URL: https://trudiagnostic.com/our-array-platforms
+Title: Measuring 19 Organ Systems with SystemAge
+URL: https://www.generationlab.com/blog/aging-biomarkers
 Content:
-20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
+## Measuring 19 Organ Systems with SystemAge
 
-[SHOP NOW](https://shop.trudiagnostic.com/collections/shopfront)
+Generation Lab is pioneering the next evolution in preventive health testing by bringing longevity science from UC Berkeley and Harvard to your home. The company, co-founded by Dr. Irina Conboy, known as the "mother of longevity" for her aging and regeneration research, builds on over 20 years of research to offer insight into your biological age.
 
-[Login](https://portal.trudiagnostic.com/sign-in)
+The SystemAge test is the first and only at-home epigenetic age testing solution analyzing over 460,000 DNA methylation biomarkers across your genome. SystemAge delivers 19 biological ages for your core organ systems, acting as a "GPS for your health" by showing your current status and goals, instead of one biological age number.
 
-# Our Array Platforms
+The SystemAge Advantage: [...] The breakthrough solution lies in DNA methylation analysis. Your epigenome continuously responds to your lifestyle, diet, environment, and aging, acting as a biological record-keeper. DNA methylation patterns reflect the accumulated impact of all nine aging hallmarks. This makes epigenetic analysis the foundation of the most accurate biological age test available today. [...] ### 3. Epigenetic Profile
 
-We offer advanced DNA methylation arrays to support a wide range of study types, from targeted interventions to multi-omic population health initiatives.
+Epigenetics is the layer of instructions on top of your DNA, determining when and how your genes are activated. It is like a conductor leading an orchestra. DNA is the sheet music, but epigenetics is the conductor deciding which instruments play when and how loudly. A key type of epigenetic modification is DNA methylation.
 
-[Let’s Collaborate](/research-interest)
+As we age, this molecular "conductor" becomes erratic. This epigenetic "drift" or "noise" causes cells to forget their identity and function, a root cause of aging. This makes epigenetic patterns the most important and measurable biomarker because they reflect the impact of all other aging factors. Tracking these methylation patterns is the gold standard for the most accurate biological age test.
 
-## Methylation Screening Array (MSA)
+### 4. Cellular Housekeeping [...] Not all epigenetic tests are equal. A single, whole-body biological age number is a good start because it's like receiving an overall health grade. But just as a single grade doesn't tell you whether you're failing history while acing mathematics, a single biological age number can't show which organ systems are aging fastest and need the most attention. To create an effective, personalized action plan, you need to understand which systems require intervention. This is the challenge that modern longevity science has solved through organ-specific aging analysis.
 
-The Infinium Methylation Screening Array (MSA) is a high-throughput, cost-effective solution tailored for large-scale epigenetic studies. With approximately 270,000 probes, it is optimized for measuring aging, environmental exposures, and metabolic traits. The platform supports up to 48 samples per chip, includes both CpG methylation and SNP probes, and is an excellent choice for large-scale or multi-omic studies where throughput and affordability matter.
-
-‍
-
-**Key Features:**
-
-* **High-Throughput Capability:** Supports up to 48 samples per BeadChip, facilitating large-scale studies.
-* **Focused Content:** Includes probes associated with traits such as aging, environmental exposures, and metabolic diseases.
-* **Cost-Effective:** Designed to provide comprehensive data at a reduced cost compared to broader arrays.
-* **Multi-Omic Integration:** Incorporates content for CpH methylation and single nucleotide polymorphisms (SNPs), enriching the dataset for integrative analyses.
-
-###### **Biological Age Clocks**
-
-Many existing DNA methylation algorithms were developed on EPIC array data and don’t always work on the MSA platform. To address this, we developed a suite of custom algorithms trained directly on MSA data to maximize its research utility. In collaboration with research partners at Harvard, Duke, and Yale, we created novel biological age measures specifically validated for the MSA array – several of which are now considered industry-leading standards for longevity, including:
-
-* **DunedinPACE™:** Measures the pace of aging
-* **SymphonyAge™**: Estimates organ-level age
-* **OMICmAge™**: Measures biological age
-
-‍
-
-[Learn More](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488e914b076bbbbd1593a6_Biological%20Age.pdf)
-
-###### **Cellular Deconvolution**
-
-Beyond aging, we have also engineered cellular deconvolution models tailored to MSA data:
-
-* **Cellular deconvolution:** The process of identifying and quantifying the different cell types present in a biological sample based solely on DNA methylation data.
-* We’ve engineered advanced 19-cell immune deconvolution models that allow us to track even subtle shifts in immune cell populations– insight that is essential for aging, inflammation, autoimmunity, and therapeutic response analysis.
-
-‍
-
-[Learn More](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5d2a3cd42808ef59fc_Cellular%20Deconvolution.pdf)
-
-###### **Epigenetic Biomarker Proxies (EBPs)™**
-
-In collaboration with Harvard, we have also developed 1,700 Epigenetic Biomarker Proxies (EBPs)™ trained on MSA data. These biomarkers predict metabolites, proteins, and clinical values, and have been shown to outperform traditional lab tests in precision and reliability from an at-home dried blood spot sample. Unlike traditional biomarkers that provide momentary snapshots, EBPs™ reflect biomarker levels averaged over weeks or months, offering a dynamic and comprehensive assessment of health.
-
-‍
-
-[Learn More](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5cd892e52132c31194_EBP.pdf)
-
-###### Cross-Array Reference Set
-
-With over 2,000 paired EPICv1 and MSA samples, TruDiagnostic™ has created a robust reference resource to improve cross-array probe reliability and algorithm corrections. In addition, we maintain large replication and validation datasets across multiple array platforms.
-
-‍  
-Together, these datasets make the MSA a powerful choice for population health studies, disease prediction research, and multi-omic integration projects, delivering both scale and scientific depth.
-
-‍
-
-[Learn More](/lab-research)
-
-###### Biological Age Clocks
-
-###### **Biological Age Clocks**
-
-Many existing DNA methylation algorithms were developed on EPIC array data and don’t always work on the MSA platform. To address this, we developed a suite of custom algorithms trained directly on MSA data to maximize its research utility. In collaboration with research partners at Harvard, Duke, and Yale, we created novel biological age measures specifically validated for the MSA array – several of which are now considered industry-leading standards for longevity, including:
-
-* **DunedinPACE:** Measures the pace of aging
-* **SymphonyAge**: Estimates organ-level age
-* **OMICmAge**: Measures biological age
-
-‍
-
-[Learn More](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488e914b076bbbbd1593a6_Biological%20Age.pdf)
-
-###### Cellular Deconvolution
-
-###### **Cellular Deconvolution**
-
-Beyond aging, we have also engineered cellular deconvolution models tailored to MSA d …[truncated]
+## Measuring 19 Organ Systems with SystemAge
 
 [Result 4]
-Title: OMICmAge
-URL: https://trudiagnostic.com/omicmage
+Title: What Biological Age Measures [...]  DNA Methylation
+URL: https://www.generationlab.com/blog/biological-age-algorithm
 Content:
-# OMICmAge
+The cutting-edge science behind the biological age algorithm is revolutionizing our understanding of aging. Through advancements in epigenetic age testing, scientists can decode your body's health at the molecular level, providing insights into your personal aging process. This technology doesn't just tell you your cells' age, it empowers you to control your biological destiny.
 
-20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
+Generation Lab's SystemAge™ test leads the revolution in biological age measurement technology. This algorithm delivers clinical-grade accuracy in detecting age-related changes by analyzing over 460 biomarkers across 19 organ systems, transforming scientific data into a personalized roadmap for optimized health and longevity.
 
-[SHOP NOW](https://shop.trudiagnostic.com/collections/shopfront)
+## What Biological Age Measures [...] ### DNA Methylation
 
-[![Image 1](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6690f45366e88ea5cb4bfca6_logo.svg)](https://trudiagnostic.com/)
+DNA methylation is the most studied and accurate biomarker for tracking biological aging. This process involves tiny chemical tags called methyl groups attaching to specific locations on your DNA. As we age, the patterns of these methylation tags change across different tissues and organ systems.
 
-Shop Tests
+Scientists discovered that some methylation changes represent normal aging, while others create "epigenetic noise," which are irregular patterns that can signal increased disease risk years or decades before symptoms. The biological age algorithm can detect subtle shifts in cellular function impossible to identify through traditional medical testing by analyzing these patterns. [...] ### Step 2: Laboratory Analysis - Detecting "Biomolecular Noise"
 
-[About Our Tests](https://trudiagnostic.com/about-tests)[Shop All](https://shop.trudiagnostic.com/collections/shopfront)
+Once your sample reaches Generation Lab's certified laboratory, advanced sequencing technology analyzes methylation patterns across over 460 specific DNA biomarkers. Each biomarker is scientifically validated as a critical indicator of aging in specific biological systems, and they are not randomly selected.
 
-[![Image 2](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d5844e23a6b4d65e6b40_image.png) TruAge + TruHealth™](https://shop.trudiagnostic.com/products/truage-truhealth)[![Image 3](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584f2198f4a7c2c26aa_image.png) TruHealth™](https://shop.trudiagnostic.com/products/truhealth)[![Image 4](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584fbf1a3ddc3789cb0_TruageTest.jpg) TruAge™](https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection)[![Image 5: TruDiagnostic Kit Collection](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728bc660ace8e22e7a47465_1547c34e151881eea9e6a82bbfdb278e.png) Shop All](https://shop.trudiagnostic.com/collections/shopfront)
+The lab analysis focuses on detecting "biomolecular noise" or "DNA methylation noise," which refers to subtle, irregular epigenetic changes that signal aging acceleration and disease risk. These patterns reveal biological changes at the cellular level long before they manifest as symptoms or show up in medical tests.
 
-[Shop All](https://shop.trudiagnostic.com/collections/shopfront)[![Image 6](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d5844e23a6b4d65e6b40_image.png) TruAge + TruHealth](https://shop.trudiagnostic.com/products/truage-truhealth)[![Image 7](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584f2198f4a7c2c26aa_image.png) TruHealth](https://shop.trudiagnostic.com/products/truhealth)[![Image 8](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584fbf1a3ddc3789cb0_TruageTest.jpg) TruAge](https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection)
+### Step 3: The Algorithm in Action - From Data to Clinical-Grade Accuracy [...] This is like having a GPS for your health. You know you're off course and can take targeted action. The 19 analyzed organ systems include:
 
-How It Works
+ Brain Health & Cognition
+ Immune System
+ Reproductive System
+ Cardiac System
+ Inflammatory Regulation
+ Metabolism
+ Tissue Regeneration
+ Blood Sugar & Insulin Control
+ Hepatic System (Liver)
+ Muscular System
+ Skeletal System
+ Nervous System
+ Respiratory System
+ Digestive System
+ Blood & Vascular System
+ Urinary System
+ Oncogenesis (Cell Mutation)
+ Fibrosis (Scar Tissue Formation)
+ Auditory System
 
-[Our Science](https://trudiagnostic.com/science)[About TruAge™](https://trudiagnostic.com/truage)[About TruHealth™](https://trudiagnostic.com/truhealth)
+This analysis reveals you have the heart of a 30-year-old and a liver functioning like a 50-year-old. This information enables precisely targeted interventions instead of generic anti-aging approaches.
 
-For Researchers
-
-[Lab Processing](https://trudiagnostic.com/lab)[Our Services](https://trudiagnostic.com/our-services)[Our Services](https://trudiagnostic.com/our-services)[Our Arrays](https://trudiagnostic.com/our-array-platforms)[Algorithms](https://trudiagnostic.com/omicmage#)[Epigenetic Biomarkers](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5cd892e52132c31194_EBP.pdf)[Biological Age](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488e914b076bbbbd1593a6_Biological%20Age.pdf)[Cellular Deconvolution](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5d2a3cd42808ef59fc_Cellular%20Deconvolution.pdf)
-
-Algorithms
-
-[Epigenetic Biomarkers](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5cd892e52132c31194_EBP.pdf)[Biological Age](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488e914b076bbbbd1593a6_Biological%20Age.pdf)[Cellular Deconvolution](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5d2a3cd42808ef59fc_Cellular%20Deconvolution.pdf)
-
-[Publications](https://trudiagnostic.com/research)[TruDiscovery Grant](https://trudiagnostic.com/trudiscovery-grant)
-
-Partner with Us
-
-[Healthcare Providers](https://trudiagnostic.com/providers)[Researchers](https://trudiagnostic.com/research-services)[Commercial Partners](https://trudiagnostic.com/commercial-partners)
-
-[For Providers](https://trudiagnostic.com/providers)[Login](https://portal.trudiagnostic.com/trudiagnostic/login.aspx)
-
-[](https://shop.trudiagnostic.com/cart)
-
-[](https://shop.trudiagnostic.com/cart)[Login](https://portal.trudiagnostic.com/sign-in)
-
-Developed with Harvard
-
-# OMICmAge™
-
-Unlock the answers to why you’re aging slower or faster than the calendar
-
-[Order New Test](https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection)[Upgrade Digital Data](https://shop.trudiagnostic.com/collections/non-bundles/products/upgrade-previous-truage-complete-results-to-symphonyage)
-
-![Image 9: 3D illustration of a stylized purple DNA double helix on a dark background.](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/669a7228d4e6d9af61b545f4_helix.webp)
-
-Weight Loss
-
-Cancer Risk
-
-Fit Age
-
-Death Risk
-
-![Image 10](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6690f3bde5ea6ba52091f764_Video%20Image%20Overlay%20(Color%20Blend%20Mode).webp)
-
-![Image 11](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/672e4107cb374680a1fb29db_Younger.png)
-
-# 46
-
-![Image 12: OMICm Age](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/669e85803e48b2e119e2b13f_Omicm%20Age%20logo.png)
-
-# 41
-
-![Image 13](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/672e41079ec3023da40e5263_Older.png)
-
-#### OMICmAge™ Algorithm
-
-This number is a calculation of the toll that life has taken on your body, and is a number that can fluctuate based on lifestyle, environmental, and/or medical influences.
-
-The difference in each of our biological “mileage” is the reason why we may look and feel signifi …[truncated]
+### Personalized, Measurable Intervention Plans
 
 [Result 5]
-Title: Dundein PACE
-URL: https://trudiagnostic.com/dunedin-pace
+Title: Epigenetics: How DNA Methylation Works [...] Function Health operates in a different category from epigenetic testing. While traditional blood work shows your current status, it lacks the predictive power of a DNA methylation test like SystemAge, which detects the subtle "biomolecular noise" signaling disease risk and aging acceleration years or decades before symptoms appear. Function Health tells you where you are today; SystemAge reveals where you're heading tomorrow.
+URL: https://www.generationlab.com/blog/phenotypic-age-blood-tests-best-kits
 Content:
-# Dundein PACE
+However, more data isn't always better if it isn't clinically actionable. TruDiagnostic's clock relies on linear regression to correlate methylation patterns with chronological age — a straightforward statistical method that presumes each CpG site contributes independently and proportionally. This oversimplifies the nonlinear, systems-level biology that actually drives aging. Critically, there is no prospective evidence that TruDiagnostic's output predicts disease onset, cognitive decline, or mortality in clinical settings. SystemAge's analysis of 460+ targeted biomarkers delivers a more precise picture across 19 organ systems, compared to TruDiagnostic's 11, with a clinical-grade accuracy in tracking age changes — translating complexity into clear, personalized action plans that drive [...] ### Phenotypic Age Explanation
 
-20% OFF ALL PRODUCTS + SUBSCRIPTIONS. CODE VDAY26.
+Phenotypic Age represents the next evolution in biological age testing. Unlike chronological age or basic biological age calculations, phenotypic age is derived from an analysis of multiple blood biomarkers that reflect your body's systems. It serves as a predictor of health outcomes, disease risk, and mortality, answering the question: "How well is my body aging?"
 
-[SHOP NOW](https://shop.trudiagnostic.com/collections/shopfront)
+This approach focuses on healthspan rather than lifespan. While living longer is desirable, maintaining optimal function, energy, and cognitive sharpness is more important. A phenotypic age blood test provides the intelligence needed to maximize the quality and quantity of your remaining years by identifying concerns before symptoms appear.
 
-[![Image 1](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6690f45366e88ea5cb4bfca6_logo.svg)](https://trudiagnostic.com/)
+### Epigenetics: How DNA Methylation Works [...] Function Health operates in a different category from epigenetic testing. While traditional blood work shows your current status, it lacks the predictive power of a DNA methylation test like SystemAge, which detects the subtle "biomolecular noise" signaling disease risk and aging acceleration years or decades before symptoms appear. Function Health tells you where you are today; SystemAge reveals where you're heading tomorrow.
 
-Shop Tests
+### GlycanAge vs SystemAge
 
-[About Our Tests](https://trudiagnostic.com/about-tests)[Shop All](https://shop.trudiagnostic.com/collections/shopfront)
+GlycanAge provides a specialized analysis of immune system aging and inflammatory status through glycan analysis. It offers targeted insights into these health markers for individuals with concerns about chronic inflammation or immune function. [...] ## 1. Generation Lab SystemAge
 
-[![Image 2](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d5844e23a6b4d65e6b40_image.png) TruAge + TruHealth™](https://shop.trudiagnostic.com/products/truage-truhealth)[![Image 3](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584f2198f4a7c2c26aa_image.png) TruHealth™](https://shop.trudiagnostic.com/products/truhealth)[![Image 4](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584fbf1a3ddc3789cb0_TruageTest.jpg) TruAge™](https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection)[![Image 5: TruDiagnostic Kit Collection](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728bc660ace8e22e7a47465_1547c34e151881eea9e6a82bbfdb278e.png) Shop All](https://shop.trudiagnostic.com/collections/shopfront)
+After evaluating the current market based on our criteria, one test stands out as the leader: Generation Lab's SystemAge. This isn't just another biological age test; it represents a breakthrough in preventive health testing that transforms our understanding of the aging process.
 
-[Shop All](https://shop.trudiagnostic.com/collections/shopfront)[![Image 6](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d5844e23a6b4d65e6b40_image.png) TruAge + TruHealth](https://shop.trudiagnostic.com/products/truage-truhealth)[![Image 7](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584f2198f4a7c2c26aa_image.png) TruHealth](https://shop.trudiagnostic.com/products/truhealth)[![Image 8](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/6728d584fbf1a3ddc3789cb0_TruageTest.jpg) TruAge](https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection)
+SystemAge stands out for its unique combination of scientific rigor, comprehensive analysis, and proven results. It's the only clinical-grade, at-home test that provides organ-specific biological ages across 19 systems, backed by over 20 years of research from UC Berkeley and Harvard, with documented evidence of measurable age reversal in real-world users.
 
-How It Works
-
-[Our Science](https://trudiagnostic.com/science)[About TruAge™](https://trudiagnostic.com/truage)[About TruHealth™](https://trudiagnostic.com/truhealth)
-
-For Researchers
-
-[Lab Processing](https://trudiagnostic.com/lab)[Our Services](https://trudiagnostic.com/our-services)[Our Services](https://trudiagnostic.com/our-services)[Our Arrays](https://trudiagnostic.com/our-array-platforms)[Algorithms](https://trudiagnostic.com/dunedin-pace#)[Epigenetic Biomarkers](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5cd892e52132c31194_EBP.pdf)[Biological Age](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488e914b076bbbbd1593a6_Biological%20Age.pdf)[Cellular Deconvolution](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5d2a3cd42808ef59fc_Cellular%20Deconvolution.pdf)
-
-Algorithms
-
-[Epigenetic Biomarkers](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5cd892e52132c31194_EBP.pdf)[Biological Age](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488e914b076bbbbd1593a6_Biological%20Age.pdf)[Cellular Deconvolution](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5d2a3cd42808ef59fc_Cellular%20Deconvolution.pdf)
-
-[Publications](https://trudiagnostic.com/research)[TruDiscovery Grant](https://trudiagnostic.com/trudiscovery-grant)
-
-Partner with Us
-
-[Healthcare Providers](https://trudiagnostic.com/providers)[Researchers](https://trudiagnostic.com/research-services)[Commercial Partners](https://trudiagnostic.com/commercial-partners)
-
-[For Providers](https://trudiagnostic.com/providers)[Login](https://portal.trudiagnostic.com/trudiagnostic/login.aspx)
-
-[](https://shop.trudiagnostic.com/cart)
-
-[](https://shop.trudiagnostic.com/cart)[Login](https://portal.trudiagnostic.com/sign-in)
-
-# DunedinPACE™ Report
-
-# DunedinPACE Report
-
-Learn how fast you’re aging. Unlock insights into your rate of aging and how you can slow it down.
-
-[Purchase Test Kit](https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection)
-
-![Image 9: Mobile screen showing 'Your Pace Score' with a value of 0.8 and a label indicating 'Your score ↑ 1' under the Intervention tab.](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68e52460f0c52fc733310b4c_dunedinpace.webp)
-
-![Image 10: Mobile screen showing 'Your Pace Score' with a value of 0.8 and a label indicating 'Your score ↑ 1' under the Intervention tab.](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68e52460f0c52fc733310b4c_dunedinpace.webp)
-
-![Image 11: Person wearing a white sweatshirt holding a smartphone with both hands.](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/66ba23a19620f2da3b5885be_Image.jpg)
-
-![Image 12: UI tags labeled 'Weight Lifting', 'Paleo Diet', and 'Intervention' with a plus icon.](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/66ba24107813e4e872e47ea9_Tags.svg)
-
-![Image 13: Notification message stating 'Your PACE Score improved! Your lifestyle interventions are working!'](https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/66ba23c9852a7295b77794fb_Title.svg)
-
-#### Understand Your Rate of Aging
-
-Your rate of aging measures how quic …[truncated]
+### The Power of 19 Organ Systems

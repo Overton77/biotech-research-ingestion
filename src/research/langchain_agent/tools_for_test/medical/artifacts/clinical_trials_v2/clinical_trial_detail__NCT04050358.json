@@ -1,0 +1,243 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT04050358",
+      "orgStudyIdInfo": {
+        "id": "Basis-HIIT"
+      },
+      "organization": {
+        "fullName": "Elysium Health",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "Effect of Basis™ and High Intensity Interval Training (HIIT) on Muscle Metabolism and Exercise Performance",
+      "officialTitle": "The Effect of Basis™ and High Intensity Interval Training (HIIT) on Muscle Metabolism and Exercise Performance in Healthy 18 - 35 Year Olds"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2023-02",
+      "overallStatus": "WITHDRAWN",
+      "whyStopped": "Lack of Funds",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2023-02",
+        "type": "ESTIMATED"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2023-04",
+        "type": "ESTIMATED"
+      },
+      "completionDateStruct": {
+        "date": "2023-05",
+        "type": "ESTIMATED"
+      },
+      "studyFirstSubmitDate": "2019-08-06",
+      "studyFirstSubmitQcDate": "2019-08-06",
+      "studyFirstPostDateStruct": {
+        "date": "2019-08-08",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2023-02-13",
+      "lastUpdatePostDateStruct": {
+        "date": "2023-02-15",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Elysium Health",
+        "class": "INDUSTRY"
+      },
+      "collaborators": [
+        {
+          "name": "University of Exeter",
+          "class": "OTHER"
+        }
+      ]
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false,
+      "isUsExport": true
+    },
+    "descriptionModule": {
+      "briefSummary": "This is a single-center, randomized, placebo-controlled pilot study to evaluate the effects of high intensity interval training (HIIT) and daily administration of BasisTM for 3 weeks, in 18-35 year old males.\n\nThe study will consist of a screening visit, baseline visit, followed by treatment and HIIT phase (3 weeks) and a post-supplementation, follow-up visit (this will occur 48 h (or more) after the final HIIT session). Following the screening phase, subjects who meet entry criteria will be randomly assigned to 1 of 2 treatment groups: recommended dose of BasisTM (250 mg Nicotinamide Riboside and 50 mg Pterostilbene) per day or matching-placebo in a 1:1 ratio."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Healthy"
+      ]
+    },
+    "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1"
+      ],
+      "designInfo": {
+        "allocation": "RANDOMIZED",
+        "interventionModel": "PARALLEL",
+        "primaryPurpose": "OTHER",
+        "maskingInfo": {
+          "masking": "DOUBLE",
+          "whoMasked": [
+            "PARTICIPANT",
+            "INVESTIGATOR"
+          ]
+        }
+      },
+      "enrollmentInfo": {
+        "count": 0,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "1X dose of NRPT",
+          "type": "ACTIVE_COMPARATOR",
+          "interventionNames": [
+            "Dietary Supplement: NRPT"
+          ]
+        },
+        {
+          "label": "Placebo",
+          "type": "PLACEBO_COMPARATOR",
+          "interventionNames": [
+            "Dietary Supplement: Placebo oral capsule"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DIETARY_SUPPLEMENT",
+          "name": "NRPT",
+          "description": "Subjects randomly assigned to the active group will receive Nicotinamide Riboside and Pterostilbene (each capsule contains 125 mg NR and 25 mg PT, total daily dose is 2 capsules) for 3 weeks",
+          "armGroupLabels": [
+            "1X dose of NRPT"
+          ],
+          "otherNames": [
+            "BasisTM"
+          ]
+        },
+        {
+          "type": "DIETARY_SUPPLEMENT",
+          "name": "Placebo oral capsule",
+          "description": "Subjects randomly assigned to the Placebo group will receive placebo oral capsules for 3 weeks",
+          "armGroupLabels": [
+            "Placebo"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Mitochondrial function",
+          "description": "Measured via high-resolution respirometry using the Oroboros Oxygraph",
+          "timeFrame": "3 weeks"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Exercise Capacity",
+          "description": "To measure maximal endurance capacity measured via VO2max",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Muscle strength",
+          "description": "To measure maximal voluntary contraction using a force transducer strength chair",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Muscle power",
+          "description": "Determine the effects of HIIT with and without NRPT supplementation on muscle power producing capabilities measured by the 30 second Wingate test",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Mitochondrial proteins",
+          "description": "To determine whether HIIT with NRPT supplementation improves mitochondrial function more so than HIIT alone, using Western blotting",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Body Mass",
+          "description": "To determine the effects of HIIT with and without NRPT supplementation on body composition by measuring body mass using a bioelectrical impedance analysis scale",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Percent Body Fat",
+          "description": "To determine the effects of HIIT with and without NRPT supplementation on body composition by measuring percent body fat using a bioelectrical impedance analysis scale",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Recovery via POMS",
+          "description": "To determine the effects of HIIT with and without NRPT supplementation on recovery via profile of mood states (POMS)",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Recovery via RESTQ",
+          "description": "To determine the effects of HIIT with and without NRPT supplementation on recovery via recovery stress (RESTQ) questionnaire",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Physical activity levels using FitBit",
+          "description": "To characterize volunteer's habitual physical activity levels.",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Height",
+          "description": "Measure height using a stadiometer, to characterize demographics of recruited volunteers the recruited volunteers",
+          "timeFrame": "3 weeks"
+        },
+        {
+          "measure": "Blood pressure",
+          "description": "Measure blood pressure using Dinamap Pro monitor to characterize demographics of recruited volunteers the recruited volunteers",
+          "timeFrame": "3 weeks"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 18 to 35 year old males\n* Body mass index between 18.5-30 kg.m-2\n* Ability to give informed consent\n* Recreationally active (defined in the present study as exercising once a week or more).\n\nExclusion Criteria:\n\n* Those regularly conducting HIIT or highly trained in endurance events (e.g. triathlete)\n* Currently taking supplements known to affect metabolism (e.g. ibuprofen, stimulants, vitamins, NR)\n* Taking prescribed medication\n* Consuming a vegan diet\n* Consuming a high fat, low carbohydrate diet\n* Habitual consumption of protein and/or dairy supplements (e.g. whey protein)\n* Smokers",
+      "healthyVolunteers": true,
+      "sex": "MALE",
+      "minimumAge": "18 Years",
+      "maximumAge": "35 Years",
+      "stdAges": [
+        "ADULT"
+      ]
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Timothy Etheridge, PhD",
+          "affiliation": "University of Exeter",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "University of Exeter",
+          "city": "Exeter",
+          "zip": "EX1 2LU",
+          "country": "United Kingdom",
+          "geoPoint": {
+            "lat": 50.7236,
+            "lon": -3.52751
+          }
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "NO"
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-03-25"
+    }
+  },
+  "hasResults": false
+}

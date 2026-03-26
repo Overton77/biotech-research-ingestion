@@ -99,6 +99,8 @@ _STAGE_RETRY = RetryPolicy(
     maximum_attempts=2,
 )
 
+_STAGE_HEARTBEAT_TIMEOUT = timedelta(hours=1)
+
 _KG_RETRY = RetryPolicy(
     initial_interval=timedelta(seconds=10),
     backoff_coefficient=2.0,
@@ -168,7 +170,7 @@ class ResearchMissionWorkflow:
                             root_filesystem=input.output_dir,
                         ),
                         start_to_close_timeout=timedelta(hours=3),
-                        heartbeat_timeout=timedelta(minutes=15),
+                        heartbeat_timeout=_STAGE_HEARTBEAT_TIMEOUT,
                         retry_policy=_STAGE_RETRY,
                     )
                 )

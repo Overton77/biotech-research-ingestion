@@ -1,0 +1,170 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT04220658",
+      "orgStudyIdInfo": {
+        "id": "Baseline Study"
+      },
+      "organization": {
+        "fullName": "Elysium Health",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "Biomarker Study to Evaluate Correlations Between Epigenetic Aging and NAD+ Levels in Healthy Volunteers",
+      "officialTitle": "The NAD+ Baseline Study: a Biomarker-based Study to Evaluate Correlations Between Epigenetic Aging and NAD+ Levels in Healthy Volunteers"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2023-02",
+      "overallStatus": "SUSPENDED",
+      "whyStopped": "COVID-19",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2019-12-19",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2023-12-01",
+        "type": "ESTIMATED"
+      },
+      "completionDateStruct": {
+        "date": "2023-12-03",
+        "type": "ESTIMATED"
+      },
+      "studyFirstSubmitDate": "2020-01-03",
+      "studyFirstSubmitQcDate": "2020-01-06",
+      "studyFirstPostDateStruct": {
+        "date": "2020-01-07",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2023-02-13",
+      "lastUpdatePostDateStruct": {
+        "date": "2023-02-15",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Elysium Health",
+        "class": "INDUSTRY"
+      },
+      "collaborators": [
+        {
+          "name": "Duke Clinical Research Institute",
+          "class": "OTHER"
+        }
+      ]
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "This is a single center, prospective study to evaluate correlations between epigenetic aging (as measured via DNA methylation) and NAD+ levels in healthy volunteers.",
+      "detailedDescription": "This biomarker study consists of a single outpatient visit to the research unit. At this visit, eligibility will be assessed and biomarker samples (blood, saliva and urine) will be collected from subjects meeting eligibility criteria. Consenting subjects with clinically significant screening lab values may be excluded from the study after biomarker sample collection (i.e., clinical lab test results will become available after the biomarker sample collection). The prescribing of drugs to humans will not be part of this protocol."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Epigenetics"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "CASE_ONLY",
+        "timePerspective": "PROSPECTIVE"
+      },
+      "bioSpec": {
+        "retention": "SAMPLES_WITH_DNA",
+        "description": "Samples retained for 3 months, with potential for extraction of DNA from whole blood and/or saliva"
+      },
+      "enrollmentInfo": {
+        "count": 170,
+        "type": "ESTIMATED"
+      }
+    },
+    "armsInterventionsModule": {
+      "interventions": [
+        {
+          "type": "OTHER",
+          "name": "Biomarker study",
+          "description": "Biomarkers of aging including NAD+ levels in whole blood, interleukins, inflammatory cytokines, growth factors, omega-3 polyunsaturated fatty acids, and patterns in DNA methylation"
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Correlation between biological age, calculated using DNA isolated from blood, and circulating NAD+ levels",
+          "timeFrame": "At baseline"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Correlations between biological age, calculated using DNA isolated from saliva, and circulating NAD+ levels",
+          "timeFrame": "At baseline"
+        },
+        {
+          "measure": "Correlations between biological age, calculated using DNA isolated from blood and saliva, and Omega-3 levels in blood",
+          "timeFrame": "At baseline"
+        }
+      ],
+      "otherOutcomes": [
+        {
+          "measure": "Age related markers in blood and urine",
+          "description": "Correlations between biological age, calculated from DNA isolated from blood and saliva, and the following age-related markers observed in blood and urine:\n\n* Cellular senescence, proliferation and inflammation: CD3+ and p16INK4a+ T lymphocytes, TNF-α R1, IL-6, IL-8, IL-10, C-reactive protein, eotaxin, activin A, myostatin.\n* NAD-related biomarkers: CD38\n* Cellular health and bioenergetics: mitochondrial DNA and nuclear DNA",
+          "timeFrame": "At baseline"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Males or females between 25 - 80 (inclusive) years of age\n2. Able and willing to provide written consent, follow instructions to complete study questionnaire(s) and assessments\n3. Peripheral venous access sufficient for blood draw\n\nExclusion Criteria:\n\n1. History of any significant chronic disease including renal, liver, endocrine, inflammatory, cardiovascular, gastro-intestinal, neurological, psychiatric, neoplastic, or metabolic disease, unless well controlled (defined as stable medication regimen) for at least 90 days prior to screening. Clinical significance of active disease will be assessed by the Qualified Investigator to determine eligibility.\n2. Clinically significant, unstable or untreated medical disorders including recent myocardial ischemia or infarction, unstable angina, uncontrolled hypertension, AIDS, malignancy, epilepsy, and recent cerebrovascular disease that required a change in management or hospitalization within the last 90 days.\n3. Subjects with or who have recently experienced a traumatic injury, infections or undergone major surgery at the discretion of the Qualified Investigator\n4. Donation or receipt of blood products within 90 days.\n5. Clinically significant vital sign or physical examination abnormality at the discretion of the Qualified Investigator.\n6. Subjects with history of pellagra or niacin deficiency\n7. Alcohol use \\>2 standard alcoholic drinks per day within the past month\n8. History of alcoholism or drug abuse within 1 year prior to screening\n9. Use of medical marijuana or products containing cannabinoids in the 14 days prior to screening.\n10. Use of lipid lowering agents (including fish oil) unless the dose has been stable for greater than 90 days prior to screening.\n11. Use of natural health products containing nicotinamide riboside or niacin exceeding the RDA (16mg/day for males and 14mg/day for females) within 14 days prior to Screening. Potential participants will be asked to bring all supplements for evaluation at time of screening.\n12. History of or current diagnosis of any cancer (except for successfully treated basal or squamous cell carcinoma of the skin) diagnosed less than 5 years prior to screening. Volunteers with cancer in full remission and more than 5 years after diagnosis are acceptable.\n13. Has participated in any clinical trial with an investigational medicinal product within the past two months prior to the first dose in the current study\n14. Clinically significant abnormal laboratory results at screening\n15. Any other condition which in the Investigator's opinion may adversely affect the participant's ability to complete the study or its measures or which may pose significant risk to the participant\n16. Consumption of non-water beverage or food within approximately 8 hours of sample collection",
+      "healthyVolunteers": true,
+      "sex": "ALL",
+      "minimumAge": "25 Years",
+      "maximumAge": "80 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ],
+      "studyPopulation": "Healthy individuals between 25-80 years of age",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Jeffrey Guptill, MD",
+          "affiliation": "Duke Early Phase Clinical Research/DCRI",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Duke Early Phase Clinical Research",
+          "city": "Durham",
+          "state": "North Carolina",
+          "zip": "27710",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.99403,
+            "lon": -78.89862
+          }
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "NO"
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-03-25"
+    }
+  },
+  "hasResults": false
+}

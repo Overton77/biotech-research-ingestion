@@ -17,7 +17,7 @@ from langchain.chat_models import init_chat_model
 from langchain_core.runnables import RunnableConfig
 
 from src.agents.persistence import get_deep_agents_persistence
-from src.research.models.mission import ResearchMissionDraft
+from src.research.deepagent.models.mission import ResearchMissionDraft
 
 if TYPE_CHECKING:
     from src.models.plan import ResearchPlan

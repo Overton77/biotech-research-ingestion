@@ -1,0 +1,258 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT03489200",
+      "orgStudyIdInfo": {
+        "id": "H1479983999044"
+      },
+      "organization": {
+        "fullName": "Elysium Health",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "EH301 for the Treatment of ALS",
+      "officialTitle": "EH301 for the Treatment of Amyotrophic Lateral Sclerosis: a Placebo-Controlled Study"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2018-05",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2017-01",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2017-06",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2017-06",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2018-03-27",
+      "studyFirstSubmitQcDate": "2018-04-03",
+      "studyFirstPostDateStruct": {
+        "date": "2018-04-05",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2018-05-16",
+      "lastUpdatePostDateStruct": {
+        "date": "2018-05-18",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Elysium Health",
+        "class": "INDUSTRY"
+      },
+      "collaborators": [
+        {
+          "name": "Fundación Universidad Católica de Valencia San Vicente Mártir",
+          "class": "OTHER"
+        },
+        {
+          "name": "University of Valencia",
+          "class": "OTHER"
+        }
+      ]
+    },
+    "oversightModule": {
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "The objective of this trial is to evaluate the efficacy and tolerability of EH301 in patients with amyotrophic lateral sclerosis. Patients with ALS are randomized to receive either EH301 or placebo daily and undergo active evaluation for 6 months."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ],
+      "designInfo": {
+        "allocation": "RANDOMIZED",
+        "interventionModel": "PARALLEL",
+        "primaryPurpose": "TREATMENT",
+        "maskingInfo": {
+          "masking": "TRIPLE",
+          "whoMasked": [
+            "PARTICIPANT",
+            "CARE_PROVIDER",
+            "OUTCOMES_ASSESSOR"
+          ]
+        }
+      },
+      "enrollmentInfo": {
+        "count": 32,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "EH301",
+          "type": "EXPERIMENTAL",
+          "interventionNames": [
+            "Other: EH301"
+          ]
+        },
+        {
+          "label": "Placebo",
+          "type": "PLACEBO_COMPARATOR",
+          "interventionNames": [
+            "Other: Placebo"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "OTHER",
+          "name": "EH301",
+          "description": "1-(beta-D-Ribofuranosyl)nicotinamide chloride and 3,5-Dimethoxy-4'-hydroxy-trans-stilbene",
+          "armGroupLabels": [
+            "EH301"
+          ]
+        },
+        {
+          "type": "OTHER",
+          "name": "Placebo",
+          "description": "No intervention- placebo",
+          "armGroupLabels": [
+            "Placebo"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "ALSFRS-r",
+          "description": "ALS Functional Rating Scale - revised score is a summation of ratings across across fine and gross motor, bulbar and respiratory functional domains. The scale ranges from 0-48, with higher total score representing better outcomes. The twelve subscales are rated on a five-point scale from 0 (can't do) to 4 (normal ability) and combined to compute the total score. This outcome measures change observed from baseline to 6 months.",
+          "timeFrame": "6 months"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "MRC",
+          "description": "Medical Research Council Scale measures the strength of muscles in ALS patients. This 11-step grading scale is a summation of scores for 8 different muscles, each with a subscale of 0 (no muscle contraction) to 5 (normal power). To calculate the total MRC Index a progressively increasing number from 0 (0 in the scale) to 10 (5 in the scale) is given to each step and each muscle. The total MRC index per patient corresponds to the sum of the numbers given to all 8 muscles. This outcome measures change observed in MRC Index from baseline to 6 months.",
+          "timeFrame": "6 months"
+        },
+        {
+          "measure": "FVC",
+          "description": "Forced Vital Capacity is a predictor of survival and disease progression in ALS patients and is measured using a touch spirometer and expressed as the % of standard value depending on sex, weight, and age parameters. This outcome measures change observed from baseline to 6 months.",
+          "timeFrame": "6 months"
+        },
+        {
+          "measure": "Electromyogram",
+          "description": "A surface electromyogram (EMG) measuring device is used to measure muscle activity in the same muscles as the MRC Index. Muscle activity is expressed as the EMG amplitude (uV).\n\nThis outcome measures change in EMG amplitude observed from baseline to 6 months.",
+          "timeFrame": "6 months"
+        },
+        {
+          "measure": "Anthropometry",
+          "description": "Fat and skeletal muscle weights (kg) are calculated following standard anthropometric procedures. Fat and skeletal weight outcomes refer to change observed comparing baseline vs 6 months.",
+          "timeFrame": "6 months"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* 18 years or older\n* Diagnosis of probable or definite (sporadic or familial) ALS by El Escorial criteria\n* Onset of symptomatology for more than 6 months\n* If female: not lactating; negative pregnancy test; agree to use an effective method of birth control throughout study\n\nExclusion Criteria:\n\n* Tracheostomy, invasive ventilation, or non-invasive positive pressure ventilation\n* Gastrostomy\n* Evidence of major psychiatric disorder or clinically evident dementia\n* Diagnosis of a neurodegenerative disease in addition to ALS\n* Current medication apart from riluzole that in the opinion of the investigator would make the patient unsuitable for study participation\n* Recent history (within the previous 6 months) or current evidence of alcohol or drug abuse\n* Concurrent unstable disease involving any system (e.g. carcinoma other than basal cell carcinoma), any cardiac dysrhythmia, myocardial infarction, clinical or ECG signs of myocardial ischemia, cardiac insufficiency, angina symptoms, current symptoms of coronary artery disease, or any other condition that in the opinion of the investigator would make the patient unsuitable for study participation\n* Baseline QTc (Bazett) \\> 450 msec for males and \\> 470 msec for females\n* Known hepatitis B/C or HIV positive serology\n* Renal impairment defined as blood creatinine \\> 2x ULN\n* Hepatic impairment and/or liver enzymes (ALT or AST) \\> 3x ULN\n* Hemostasis disorders or current treatment with oral anticoagulants\n* Participated in any other investigational drug or therapy study with a non-approved medication, within the previous 3 months\n* No medical insurance",
+      "healthyVolunteers": false,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ]
+    },
+    "contactsLocationsModule": {
+      "locations": [
+        {
+          "facility": "Universidad Católica de Valencia San Vicente Màrtir",
+          "city": "Valencia",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 39.47391,
+            "lon": -0.37966
+          }
+        }
+      ]
+    },
+    "referencesModule": {
+      "references": [
+        {
+          "pmid": "37810917",
+          "type": "DERIVED",
+          "citation": "Carrera-Julia S, Estrela JM, Zacares M, Navarro MA, Vega-Bello MJ, de la Rubia Orti JE, Moreno ML, Drehmer E. Effect of the Mediterranean diet supplemented with nicotinamide riboside and pterostilbene and/or coconut oil on anthropometric variables in amyotrophic lateral sclerosis. A pilot study. Front Nutr. 2023 Sep 22;10:1232184. doi: 10.3389/fnut.2023.1232184. eCollection 2023."
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "NO"
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-03-25"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D000690",
+          "term": "Amyotrophic Lateral Sclerosis"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D013118",
+          "term": "Spinal Cord Diseases"
+        },
+        {
+          "id": "D002493",
+          "term": "Central Nervous System Diseases"
+        },
+        {
+          "id": "D009422",
+          "term": "Nervous System Diseases"
+        },
+        {
+          "id": "D016472",
+          "term": "Motor Neuron Disease"
+        },
+        {
+          "id": "D019636",
+          "term": "Neurodegenerative Diseases"
+        },
+        {
+          "id": "D057177",
+          "term": "TDP-43 Proteinopathies"
+        },
+        {
+          "id": "D009468",
+          "term": "Neuromuscular Diseases"
+        },
+        {
+          "id": "D057165",
+          "term": "Proteostasis Deficiencies"
+        },
+        {
+          "id": "D008659",
+          "term": "Metabolic Diseases"
+        },
+        {
+          "id": "D009750",
+          "term": "Nutritional and Metabolic Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

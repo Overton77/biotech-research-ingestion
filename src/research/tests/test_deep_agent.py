@@ -33,16 +33,16 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.store.memory import InMemoryStore 
 from dotenv import load_dotenv 
 
-from src.research.compiler.agent_compiler import RuntimeContext, compile_main_task_agent
-from src.research.models.mission import (
+from src.research.deepagent.compiler.agent_compiler import RuntimeContext, compile_main_task_agent
+from src.research.deepagent.models.mission import (
     CompiledSubAgentConfig,
     MainDeepAgentConfig,
     TaskDef,
     TaskExecutionPolicy,
-) 
-import os 
-from src.research.runtime.backends import task_root
-from src.research.runtime.task_executor import _build_invocation_message
+)
+import os
+from src.research.deepagent.runtime.backends import task_root
+from src.research.deepagent.runtime.task_executor import _build_invocation_message
 
 load_dotenv()
 

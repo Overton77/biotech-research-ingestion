@@ -1,11 +1,14 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Awaitable, Callable, Dict, List
 
 from langchain.agents.middleware import wrap_tool_call
 from langchain.messages import ToolMessage
 from langchain.tools.tool_node import ToolCallRequest
 from langgraph.types import Command
+
+from src.research.langchain_agent.agent.config import ROOT_FILESYSTEM
 
 
 FILESYSTEM_TOOL_NAMES = {
@@ -44,6 +47,33 @@ def _extract_file_event(request: ToolCallRequest) -> Dict[str, Any]:
     }
 
 
+def _normalize_sandbox_path(raw_path: str) -> str:
+    if not raw_path:
+        return raw_path
+
+    cleaned = raw_path.replace("\\\\?\\", "")
+    candidate = Path(cleaned)
+    if not candidate.is_absolute():
+        return raw_path
+
+    try:
+        relative = candidate.resolve().relative_to(ROOT_FILESYSTEM.resolve())
+    except ValueError:
+        return raw_path
+
+    return relative.as_posix()
+
+
+def _normalize_tool_call_paths(request: ToolCallRequest) -> None:
+    args = request.tool_call.get("args") or {}
+    for key in ("path", "file_path", "filepath", "target_path"):
+        value = args.get(key)
+        if isinstance(value, str):
+            normalized = _normalize_sandbox_path(value)
+            if normalized != value:
+                args[key] = normalized
+
+
 def _tool_result_to_content(result: ToolMessage | Command) -> str:
     """
     Best-effort extraction for logging / state metadata.
@@ -73,6 +103,7 @@ async def monitor_filesystem_tools(
     if tool_name not in FILESYSTEM_TOOL_NAMES:
         return await handler(request)
 
+    _normalize_tool_call_paths(request)
     event = _extract_file_event(request)
 
     result = await handler(request)

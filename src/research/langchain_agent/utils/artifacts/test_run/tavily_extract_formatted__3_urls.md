@@ -1,71 +1,449 @@
-Meta: request_id=0019faee-9100-46bb-8aec-fd855bf2c595, response_time_s=0.02
+Meta: request_id=670fa7d0-3583-45f8-b23a-9e28733ae618, response_time_s=0.47
 
 === Extracted Web Content ===
 [Result 1]
-Title: Biomarker Identification Precisely identify and quantify specific biomarkers, such as Serotonin. EBPs offer consistent detection, significantly improving neurobiological assessments.
-URL: https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5cd892e52132c31194_EBP.pdf
+Title: 13.8 Support and Resources:
+URL: https://www.generationlab.com/terms-of-service?type=provider
 Content:
-What are EBPS? Epigenetic Biomarker Proxies (EBPs) represent a revolutionary advancement in precision medicine, allowing the measurement of biological function through DNA methylation patterns. Developed through rigorous collaboration with Harvard University, TruDiagnostic has created over 1,670 EBPs, offering unparalleled precision in assessing clinical, proteomic, and metabolomic biomarkers from just a single drop of blood. Unlike traditional biomarkers that provide momentary snapshots, EBPs reflect biomarker levels averaged over weeks or months, offering a dynamic and comprehensive assessment of health.
-Application of EBPs EBPs transform how researchers and clinicians can evaluate health: Cross-Sectional Analysis Identify immediate biological states and conditions, such as PTSD and stress biomarkers. EBPs reveal stress-induced biomarker changes more accurately than traditional methods.
-Interventional Trial Analysis Monitor biological responses to interventions dynamically, such as ketamine treatments. EBPs track neurobiological changes post-treatment, offering deep insights into therapeutic efficacy.
-Omic Research Discovery Tool Uncover previously hidden biological pathways, such as Latent Class Analysis (LCA). EBPs enhance discovery by providing data on metabolomic and proteomic responses Replacing Traditional Labs Surpass traditional biomarker measurements with superior predictive accuracy, such as for C-Reactive Proteins (CRP). EBPs demonstrated higher sensitivity and specificity for inflammatory conditions compared to traditional CRP measurements.
-Disease Subtyping Differentiate disease subtypes through detailed epigenetic profiles, such as for Post-Acute Sequelae of COVID-19 (PASC). EBPs facilitate detailed classification of PASC phenotypes, improving targeted therapies.
-Biomarker Identification Precisely identify and quantify specific biomarkers, such as Serotonin. EBPs offer consistent detection, significantly improving neurobiological assessments.
-Why EBPs Could Replace Traditional Blood Tests Improved Outcomes Studies consistently demonstrate higher disease association accuracy with EBPs compared to conventional biomarkers.
-Stability and Consistency EBPs are less influenced by transient biological variability, providing stable and reliable health assessments.
-Robust Validation Research such as Dr. Marioni’s Episign scores show EBPs significantly outperform traditional biomarkers in predictive capability.
-More Accurate and Predictive Than Traditional Blood Testing EBPs represent distinct biomarkers and should not be interpreted using assumptions based on classical biomarkers. Variations between predicted EBP values and traditional clinical lab results are expected. Nevertheless, EBPs consistently demonstrate associations with diseases similar to their classical surrogates, and in the majority of times, outperform traditional lab results j 62% greater accuracy in disease prediction than traditional lab work j 64% improved effectiveness in disease diagnosis than traditional lab work j Comprehensive longitudinal insights, reflecting broader biological signals akin to HbA1c in chronic disease management. Traditional diagnostics often require invasive procedures, complex processing, and costly infrastructure. In contrast, EBPs are collected from a single finger-prick for a fraction of the price.
-64% Greater accuracy in disease prediction than traditional lab work.
-62% Improved effectiveness in disease diagnosis than traditional lab work.
-The Winning Framework of EBPs Non-invasive sample collection via finger-prick blood samples.
-Cost-effective testing that democratizes access to advanced health insights.
-Simultaneously analyze risk factors for multiple conditions, paving the way for personalized disease prevention strategies.
-Broad Applications in Healthcare and Research Broad Applications in Healthcare and Research Broad Applications in Healthcare and Research EBPs are not only diagnostic tools, but also a goldmine for researchers. They empower scientists to discover novel biomarkers, identify disease subtypes, and develop targeted therapies from unique insights.
-For example, EBPs can distinguish between cardiovascular risks related to high blood sugar and risks linked to high cholesterol, enabling more tailored interventions.
-Promising Results for Disease Diagnostics 12 Major Diseases Validation of EBPs across 12 major diseases and all-cause mortality, showcasing robust clinical relevance.
-90% Accuracy High overall accuracy in detecting deviations from clinical normative ranges. 94% Specificity in detecting deviations from clinical normative ranges.
-76% Sensitivity in detecting deviations from clinical normative ranges.
-Redefining the Future of Healthcare TruDiagnostic envisions a world where healthcare is proactive, not reactive. By integrating EBPs into routine clinical practice, the potential exists to revolutionize population health, reduce healthcare costs, and improve outcomes for underserv …[truncated]
+13.8 Support and Resources:
+
+ Educational Resource: Available in the provider portal.
+ Support: Please contactsupport@generationlab.com any time - we're pretty good at replying.
+ Feedback: All feedback is greatly appreciated! Please help us improve by sending an email to your dedicated point of contact, or book a feedback session and talk to our team ().
+
+IN WITNESS WHEREOF, the Parties execute this Agreement by clicking agree on these TERMS OF SERVICE as of the Effective Date.
+
+EXHIBIT A
+
+Test Means: DNA methylation bisulfite sequencing, or other methods used by Generation Lab via proprietary bioinformatics software, producing a Health Report on the Platform or as a PDF.
+
+Test & Services Fees: [...] ## 1. DEFINITIONS
+
+1.1 "Applicable Law(s)" means all U.S. federal, state, and local laws, including those related to marketing, billing, privacy, and sample handling.
+
+1.2 "Billing Procedure" means the mutually agreed process for collecting and providing Required Information and billing patients.
+
+1.3 "Collection Kit" means supplies provided or authorized by Generation Lab for collecting Samples.
+
+1.4 "Product & Services Fee" is defined in Exhibit A.
+
+1.5 "Documentation" means Generation Lab's test requisition, consent forms, terms of service, and privacy policy.
+
+1.6 "Provider" means a healthcare provider authorized to order Tests under Applicable Laws.
+
+1.7 "Required Information" is defined in Section 4.3. [...] 1.7 "Required Information" is defined in Section 4.3.
+
+1.8 "Health Plan Information" means patient interventions, protocols, and adherence data.
+
+1.9 "Samples" are biological specimens collected via Collection Kits per Generation Lab's instructions.
+
+1.10 "Services" means testing, software, and related products offered by Generation Lab to produce Health Reports.
+
+1.11 "Standard Operating Procedures" or "SOPs" means Generation Lab's instructions for sample handling, patient accounts, and Test performance.
+
+1.12 "Test" means the test described in Exhibit A.
+
+1.13 "Health Report" means the Test results report provided by Generation Lab.
+
+1.14 "Third Party" means any entity other than the Parties or their affiliates.
 
 [Result 2]
-Title: Is Age a Disease?
-URL: https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488e914b076bbbbd1593a6_Biological%20Age.pdf
+Title: Read Paper
+URL: https://www.generationlab.com/providers
 Content:
-Is Age a Disease?
-At TruDiagnostic, we recognize the potential regulatory significance of classifying aging as a disease. For example, Loyal, a company developing aging interventions for dogs, recently achieved the first-ever FDA acceptance for a drug aimed explicitly at extending canine lifespan. This milestone indicates the potential for a defined regulatory pathway to similarly address human aging.
-Regardless of whether aging is officially classified as a disease, it unquestionably serves as a major risk factor for many recognized health conditions.
-Aging is the strongest predictor of mortality, as reflected in mortality statistics from major health organizations such as the CDC, NIH, and WHO. Therefore, quantifying age, especially through precise molecular methods, remains critically important in advancing public health and preventive medicine.
-Heart Disease Hypertension Smoking Obesity Aging 40 20 0 Relative Risk of Death Heart Disease Hypertension Smoking Obesity Aging 40 20 0 Relative Risk of Death COVID Sex (Male) Smoking Obesity Aging 40 20 0 Relative Risk of Death Understanding Biological Age Your Chronological Age, or calendar age, is the number of years that have passed since your birth. This number is fixed and does not change to reflect improvements or declines in health and physical capabilities.
-Your Biological Age, or cellular age, is a calculation of the toll that life has taken on your body, and is a number that can fluctuate based on various lifestyle, environmental, and/or medical influences.
-Chronological Age Chronological age is fixed and based on your birthdate, whereas biological age fluctuates according to various lifestyle, environmental, and medical factors. This makes biological age a powerful tool in preventive medicine and personalized healthcare.
-Biological Age Biological age represents a measure of how well your body functions relative to your chronological age. Unlike chronological age—which simply counts years lived— biological age integrates multiple health biomarkers to reveal your body's functional and physiological state, providing deeper insight into overall health, disease risk, and longevity potential.
-Why Measure Biological Age?
-Assessing biological age is essential for precision medicine because: It provides an accurate snapshot of an individual's current health and functional capacity.
-It predicts the risk of age-related diseases more effectively than chronological age alone.
-It enables the evaluation of interventions aimed at improving healthspan and lifespan.
-Why is Epigenetics the Best Method for Measuring Biological Age?
-If it is important to determine biological age to preventatively treat age-related diseases, then it is important that one's biological age calculation is accurately predicting those risks. ​ All epigenetic algorithms (clocks) used by TruDiagnostic have the strongest predictive values linked to outcomes of aging and disease, compared to other clocks that are currently in use across the research and diagnostic fields. ​ Results generated by our biological age clocks reflect the impacts of validated aging interventions such as lifestyle, medical, and environmental changes.
-DNA Methylation Explained DNA Methylation Explained DNA Methylation Explained DNA methylation involves attaching methyl groups to DNA, which can modify gene activity without altering the genetic code itself. This regulatory process serves as a critical biomarker for assessing biological aging.
-What is an Age Clock? An age clock estimates your biological age without relying on your date of birth. Developed in the early 2010s, these mathematical algorithms quantify various aging processes by analyzing DNA methylation patterns. Not all clocks offer equal accuracy; precise biological age and disease risk predictions depend on the quality and design of the specific clock.
-Biological Age Disease Predictions What is a First, Second, and Third Generation Clock?
-First Generation First-generation clocks are trained to predict chronological age. The regions in the DNA sequence that can be turned on and off by methylation are known as CpGs. These CpG sites change consistently over time, making the first-generation clocks that measure them particularly useful for forensic purposes, such as determining an individual's age in investigative contexts. For instance, TruDiagnostic successfully applied first-generation clocks in determining the age of Natalia Grace in the HBO documentary series. Notable first-generation clocks include the Hannum and Horvath clocks from 2013, the more recent cAge clock developed by Dr. Ricardo Marioni, and TruDiagnostic's own chronological age clock, which boasts a highly accurate Mean Absolute Error (MAE) of 1.3 years.
-Second Generation Second-generation clocks are trained to predict biological features rather than chronological age.
-The CpGs used by these clocks correlate specifically with biological markers that change during the aging process. These clocks ar …[truncated]
+Read Paper
+
+Cell Stem Cell
+
+### Cell Stem Cell - Jan 10, 2008
+
+A Temporal Switch from Notch to Wnt Signaling in Muscle Stem Cells Is Necessary for Normal Adult Myogenesis
+
+Read Paper00223-8)
+
+Nature
+
+### Nature - Feb 17, 2005
+
+Rejuvenation of aged progenitor cells by exposure to a young systemic environment
+
+Read Paper
+
+Evaluating Biological Noise
+
+## What Our Tests Reveal
+
+Our test serves as a DNA methylation noise detector, uncovering and evaluating biological noise within your body to accurately gauge your biological age.
+
+### Flexible Plan Editing
+
+Easily add or remove interventions with dynamic adjustments to dosage, frequency, and duration.
+
+Flexible Plan Editing
+
+Easily add or remove interventions with dynamic adjustments to dosage, frequency, and duration. [...] ## Peer-Reviewed Science Papers
+
+Our technology published and grounded in decades of peer-reviewed research and leading journals.
+
+GeroScience
+
+### GeroScience - Jan 18, 2025
+
+DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
+
+Read Paper
+
+PubMed
+
+### PubMed - Dec 11, 2024
+
+The dominance of old blood, and age-related increase in protein production and noise
+
+Read Paper
+
+Aging
+
+### Aging - Sep 12, 2023
+
+Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
+
+Read Paper
+
+Cell Cycle
+
+### Cell Cycle - Jun 15, 2012
+
+Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches [...] Sign In →Order Now →
+
+# Unlock theScience of Aging
+
+Deliver the most advanced epigenetic healthspan testing to your clients, members, or patients — with actionable insights to optimize longevity.
+
+Become a Provider →Talk to Our Team →
+
+Science Developed by Dr. Irina Conboy After 20+ Years of Research
+
+## Trusted by 275+ Clinics
+
+We’re honored to be the choice of the medical pioneers who use our insights to transform lives, every day.
+
+Become a Provider →
+
+## Going Beyond
+
+Reverse
+
+5.2%
+
+Brain Health & CognitionSystemAge: 41.6
+
+Good
+
+5.6%
+
+Tissue regenerationSystemAge: 42.1
+
+Average
+
+8.7%
+
+Immune systemSystemAge: 44.5
+
+Attention
+
+10.2%
+
+Blood Sugar & Insulin ControlSystemAge: 46.2
+
+Attention
+
+16.8%
+
+Inflammatory RegulationSystemAge : 48.5
+
+## Peer-Reviewed Science Papers
 
 [Result 3]
-Title: At trudiagnostic We’ve developed cutting-edge deconvolution models tailored to the types of samples our partners and researchers actually use: Blood The gold standard for clinical epigenetic testing.
-URL: https://cdn.prod.website-files.com/6690e254f4f07d1a469bb330/68488d5d2a3cd42808ef59fc_Cellular%20Deconvolution.pdf
+Title: Gene Symbol:
+URL: https://www.generationlab.com/biomarkers
 Content:
-Cellular Deconvolution The Key to Unlocking Methylation’s Full Potential Cellular deconvolution is the process of identifying and quantifying the different cell types present in a biological sample based solely on DNA methylation data.
-When you look at a DNA methylation readout, you're not just seeing one cell type whispering secrets about health and aging—you're hearing a chorus. Blood, saliva, skin, buccal swabs—all these samples are complex mixtures of different cell types, each contributing its own unique methylation signature. If you don’t separate the signals, you risk mistaking noise for insight. That’s where cellular deconvolution comes in—and it’s one of TruDiagnostic’s core superpowers. Cellular deconvolution is the process of identifying and quantifying the different cell types present in a biological sample based solely on DNA methylation data. It’s like performing a molecular census—crucial for understanding what's actually going on beneath the surface of your data. Without it, even the most advanced epigenetic algorithms risk being misled by cellular composition differences rather than true biological changes.
-At trudiagnostic We’ve developed cutting-edge deconvolution models tailored to the types of samples our partners and researchers actually use: Blood The gold standard for clinical epigenetic testing.
-Saliva + Buccal Swabs Ideal for non-invasive sampling. Skin Where epigenetic aging often tells a very different story.
-And we didn’t stop at just bulk estimates. We’ve engineered advanced 19-cell immune deconvolution models that allow us to track even subtle shifts in immune cell populations—insight that’s essential for aging, inflammation, autoimmunity, and therapeutic response analysis.
-Reference vs. Reference-Free Why Our Deconvolution is Smarter Most deconvolution tools rely on either reference-based or reference-free methods—but at TruDiagnostic, we use both, depending on what the data demands. Our blood and immune cell models are backed by rich reference libraries of purified cell types, giving us unparalleled resolution. But when a reference doesn’t exist—say, for rare tissues or novel epigenetic targets—we can still extract meaningful structure using adaptive, reference-free techniques. It's precision, without compromise.
-Why It Matters Noise Reduction = Better Algorithms Methylation clocks and diagnostic models are only as good as the signal they’re built on. Deconvolution ensures we’re not confusing a spike in neutrophils for accelerated aging or a shift in B cells for disease.
-Noise Reduction = Better Algorithms Methylation clocks and diagnostic models are only as good as the signal they’re built on. Deconvolution ensures we’re not confusing a spike in neutrophils for accelerated aging or a shift in B cells for disease.
-Biological Resolution Want to know how your T-cell methylation is changing over time? Without deconvolution, you’re flying blind.
-Biological Resolution Want to know how your T-cell methylation is changing over time? Without deconvolution, you’re flying blind.
-Cross-Tissue Comparability By adjusting for cellular heterogeneity, we enable accurate comparisons across sample types—even when those samples look wildly different on the surface.
-Cross-Tissue Comparability By adjusting for cellular heterogeneity, we enable accurate comparisons across sample types—even when those samples look wildly different on the surface.
-Cellular deconvolution is the bedrock for precision in methylation-based research and diagnostics. And at TruDiagnostic, we’re not just using these tools—we’re building them, refining them, and scaling them for the future of personalized health.
+Gene Symbol: 
+MYBPC3
+
+Urinary System
+
+Gene Symbol: 
+BBS9
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+NGF
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+PRDM16
+
+Auditory System
+
+Gene Symbol: 
+OTX1
+
+Brain Health & Cognition
+
+Gene Symbol: 
+CHD5
+
+Immune System
+
+Gene Symbol: 
+S100A2
+
+Reproductive System
+
+Gene Symbol: 
+TNF
+
+Cardiac System
+
+Gene Symbol: 
+DMD
+
+Inflammatory Regulation
+
+Gene Symbol: 
+NOTCH4
+
+Metabolism
+
+Gene Symbol: 
+AHSG
+
+Tissue Regeneration
+
+Gene Symbol: 
+FGF1
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+PTPRN2
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+GAK
+
+Muscular System
+
+Gene Symbol: 
+CACNA2D4
+
+Skeletal System
+
+Gene Symbol: 
+FGF1
+
+Nervous System
+
+Gene Symbol: 
+CACNG3
+
+Respiratory System
+
+Gene Symbol: 
+IL1RN
+
+Digestive System
+
+Gene Symbol: 
+TREH
+
+Blood & Vascular System [...] Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+KCNQ1
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+NGF
+
+Auditory System
+
+Gene Symbol: 
+AIRE
+
+Brain Health & Cognition
+
+Gene Symbol: 
+OTX1
+
+Immune System
+
+Gene Symbol: 
+AHSG
+
+Reproductive System
+
+Gene Symbol: 
+FGF1
+
+Cardiac System
+
+Gene Symbol: 
+CHD5
+
+Inflammatory Regulation
+
+Gene Symbol: 
+TNF
+
+Metabolism
+
+Gene Symbol: 
+KCNQ1
+
+Tissue Regeneration
+
+Gene Symbol: 
+SEMA6A
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+AHSG
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+AHSG
+
+Muscular System
+
+Gene Symbol: 
+DMD
+
+Skeletal System
+
+Gene Symbol: 
+GH2
+
+Nervous System
+
+Gene Symbol: 
+CHD5
+
+Respiratory System
+
+Gene Symbol: 
+TNF
+
+Digestive System
+
+Gene Symbol: 
+NGF
+
+Blood & Vascular System
+
+Gene Symbol: 
+MYBPC3
+
+Urinary System
+
+Gene Symbol: 
+BBS9 [...] Gene Symbol: 
+TREH
+
+Blood & Vascular System
+
+Gene Symbol: 
+PRDM16
+
+Urinary System
+
+Gene Symbol: 
+KCNT1
+
+Oncogenesis (Cell Mutation)
+
+Gene Symbol: 
+FGF1
+
+Fibrosis (Scar Tissue Formation)
+
+Gene Symbol: 
+LOXL3
+
+Auditory System
+
+Gene Symbol: 
+KCNQ1
+
+Brain Health & Cognition
+
+Gene Symbol: 
+CPLX2
+
+Immune System
+
+Gene Symbol: 
+TNF
+
+Reproductive System
+
+Gene Symbol: 
+ADAM18
+
+Cardiac System
+
+Gene Symbol: 
+FGF1
+
+Inflammatory Regulation
+
+Gene Symbol: 
+IL1RN
+
+Metabolism
+
+Gene Symbol: 
+TREH
+
+Tissue Regeneration
+
+Gene Symbol: 
+TNF
+
+Blood Sugar & Insulin Control
+
+Gene Symbol: 
+TREH
+
+Hepatic System (Liver)
+
+Gene Symbol: 
+NOTCH4
+
+Muscular System
+
+Gene Symbol: 
+IL1RN
+
+Skeletal System
+
+Gene Symbol: 
+NOTCH4
+
+Nervous System
+
+Gene Symbol: 
+CPLX2
+
+Respiratory System
+
+Gene Symbol: 
+CDH23
+
+Digestive System

@@ -1,0 +1,18 @@
+{
+  "url": "https://blog.generationlab.com",
+  "instructions": "Find blog posts that mention biomarkers, 19 organ/system categories, 460 biomarkers, DNA methylation biomarkers, downloadable docs, or any page that appears to expose biomarker names or lists.",
+  "results": {
+    "base_url": "https://blog.generationlab.com",
+    "results": [
+      "https://blog.generationlab.com/posts/biological-age-tests",
+      "https://blog.generationlab.com/posts/dunedinpace-aging-test",
+      "https://www.generationlab.com/biomarkers",
+      "https://www.generationlab.com/published-research",
+      "https://www.generationlab.com/science",
+      "https://www.generationlab.com/the-systemage-test",
+      "https://www.insideprecisionmedicine.com/topics/precision-medicine/generation-lab-bets-big-on-personalized-epigenetic-testing-for-reversing-aging"
+    ],
+    "response_time": 11.9,
+    "request_id": "1bd1e5fd-dd76-4b04-949a-8831b2f397fe"
+  }
+}

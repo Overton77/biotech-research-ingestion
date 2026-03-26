@@ -11,7 +11,7 @@ from typing import Any
 
 from beanie.odm.fields import PydanticObjectId
 
-from src.research.models.mission import ResearchRun, TaskResult
+from src.research.deepagent.models.mission import ResearchRun, TaskResult
 
 logger = logging.getLogger(__name__)
 

@@ -11,11 +11,11 @@ from typing import TYPE_CHECKING
 
 from beanie.odm.fields import PydanticObjectId
 
-from src.research.compiler.mission_compiler_agent import (
+from src.research.deepagent.compiler.mission_compiler_agent import (
     MissionDraftValidationError,
     compile_mission_draft,
 )
-from src.research.models.mission import ResearchMission, ResearchMissionDraft
+from src.research.deepagent.models.mission import ResearchMission, ResearchMissionDraft
 
 if TYPE_CHECKING:
     from src.models.plan import ResearchPlan

@@ -1,0 +1,2565 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT00926263",
+      "orgStudyIdInfo": {
+        "id": "A4021037"
+      },
+      "organization": {
+        "fullName": "Pfizer",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "A Pharmacokinetic And QT Study Of CP-751,871 In Healthy Subjects",
+      "officialTitle": "A Phase 1, Open Label Study To Evaluate The Pharmacokinetics, Pharmacodynamics, And Effect On QT/QTc Interval For CP-751,871 Following Single Intravenous Administration To Healthy Adult Subjects"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2013-03",
+      "overallStatus": "TERMINATED",
+      "whyStopped": "See termination reason in detailed description.",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2009-07"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2010-05",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2010-05",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2009-06-21",
+      "studyFirstSubmitQcDate": "2009-06-21",
+      "studyFirstPostDateStruct": {
+        "date": "2009-06-23",
+        "type": "ESTIMATED"
+      },
+      "resultsFirstSubmitDate": "2013-01-18",
+      "resultsFirstSubmitQcDate": "2013-03-27",
+      "resultsFirstPostDateStruct": {
+        "date": "2013-05-07",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2013-03-27",
+      "lastUpdatePostDateStruct": {
+        "date": "2013-05-07",
+        "type": "ESTIMATED"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Pfizer",
+        "class": "INDUSTRY"
+      }
+    },
+    "oversightModule": {
+      "oversightHasDmc": false
+    },
+    "descriptionModule": {
+      "briefSummary": "This study is primarily to evaluate the single dose pharmacokinetics of CP-751,871 and its effect on QT interval prolongation.",
+      "detailedDescription": "This study was terminated on October 30th, 2009. While the study was terminated due to adverse events and altered benefit/risk ratio in healthy subjects, the findings in healthy volunteers are not considered to alter the benefit/risk evaluation of figitumumab in cancer patients. No changes due to the termination of this study are anticipated in the conduct of the ongoing cancer patient studies with figitumumab at this time."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Healthy Volunteers"
+      ],
+      "keywords": [
+        "Pharmacokinetics",
+        "Pharmacodynamics",
+        "QTc interval prolongation"
+      ]
+    },
+    "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1"
+      ],
+      "designInfo": {
+        "allocation": "NON_RANDOMIZED",
+        "interventionModel": "PARALLEL",
+        "primaryPurpose": "BASIC_SCIENCE",
+        "maskingInfo": {
+          "masking": "NONE"
+        }
+      },
+      "enrollmentInfo": {
+        "count": 28,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "10 mg/kg cohort",
+          "type": "EXPERIMENTAL",
+          "interventionNames": [
+            "Biological: CP-751,871"
+          ]
+        },
+        {
+          "label": "20 mg/kg cohort",
+          "type": "EXPERIMENTAL",
+          "interventionNames": [
+            "Biological: CP-751,871"
+          ]
+        },
+        {
+          "label": "20/20 mg/kg cohort",
+          "type": "EXPERIMENTAL",
+          "interventionNames": [
+            "Biological: CP-751,871, moxifloxacin, saline"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "BIOLOGICAL",
+          "name": "CP-751,871",
+          "description": "single dose, 1-hr IV infusion",
+          "armGroupLabels": [
+            "10 mg/kg cohort"
+          ]
+        },
+        {
+          "type": "BIOLOGICAL",
+          "name": "CP-751,871",
+          "description": "single dose, 1-hr IV infusion",
+          "armGroupLabels": [
+            "20 mg/kg cohort"
+          ]
+        },
+        {
+          "type": "BIOLOGICAL",
+          "name": "CP-751,871, moxifloxacin, saline",
+          "description": "Two doses at 20 mg/kg each on two consecutive days, each administered via 1-hr IV infusion",
+          "armGroupLabels": [
+            "20/20 mg/kg cohort"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Maximum Observed Plasma Concentration (Cmax)",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85"
+        },
+        {
+          "measure": "Area Under the Curve From Time Zero to the Last Time Point With Quantifiable Concentration (AUClast)",
+          "description": "Area under the plasma concentration time-curve from zero to the last measured concentration (AUClast)",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85"
+        },
+        {
+          "measure": "Plasma Clearance (CL)",
+          "description": "Clearance of a drug is a measure of the rate at which a drug is metabolized or eliminated by normal biological processes.",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85"
+        },
+        {
+          "measure": "Apparent Volume of Distribution (Vz)",
+          "description": "Volume of distribution is defined as the theoretical volume in which the total amount of drug would need to be uniformly distributed to produce the desired plasma concentration of a drug.",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85"
+        },
+        {
+          "measure": "Plasma Decay Half-Life (t1/2)",
+          "description": "Plasma decay half-life is the time measured for the plasma concentration to decrease by one half.",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85"
+        },
+        {
+          "measure": "QTc Using Fridericia's Correction Method (QTcF) After Receiving CP-751,871 at the 20/20 mg/kg Dose Level",
+          "description": "QTcF is the time from electrocardiogram Q wave to the end of the T wave corresponding to electrical systole, corrected for heart rate using Fridericia's correction",
+          "timeFrame": "Day 1 at 1 and 24 hours post-dose, Day 7, 28"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "QTcF After Receiving Moxifloxacin at the Historical Moxifloxacin Median Tmax of 3 Hours",
+          "timeFrame": "baseline, 3 hours postdose"
+        },
+        {
+          "measure": "Serum Concentration of Insulin-like Growth Factor 1 (IGF-1)",
+          "description": "IGF-1 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "timeFrame": "Day 1 pre-dose (Baseline), 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85"
+        },
+        {
+          "measure": "Serum Concentration of Free Insulin-like Growth Factor 1 (IGF-1)",
+          "description": "IGF-1 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85"
+        },
+        {
+          "measure": "Serum Concentration of Insulin-like Growth Factor 2 (IGF-2)",
+          "description": "IGF-2 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85"
+        },
+        {
+          "measure": "Serum Concentration of Insulin-like Growth Factor Binding Protein 3 (IGFBP-3)",
+          "description": "IGFBP-3 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85"
+        },
+        {
+          "measure": "Serum Concentration of Insulin",
+          "description": "Insulin is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85"
+        },
+        {
+          "measure": "Serum Concentration of Fasting Glucose",
+          "description": "Glucose is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85"
+        },
+        {
+          "measure": "Anti-drug Antibodies (ADA) Against CP-751,871 in Serum Samples",
+          "description": "Number of participants who tested positive for ADA",
+          "timeFrame": "Day 1 pre-dose, Day 15, 29, 57, 85"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Healthy male subjects and/or healthy female subjects of non-childbearing potential between the ages of 18 and 55 years, inclusive\n* Body Mass Index (BMI) of 17.5 to 30.5 kg/m2; and a total body weight \\>50 kg (110 lbs).\n\nExclusion Criteria:\n\n* Evidence or history of clinically significant hematological, renal, endocrine, pulmonary, gastrointestinal, cardiovascular, hepatic, psychiatric, neurologic, or allergic disease (including drug allergies, but excluding untreated, asymptomatic, seasonal allergies at time of dosing).\n* 12-lead ECG demonstrating QTc \\>450 msec at screening or other clinically significant abnormalities at screening.\n* History or family history of risk factors for QTc interval prolongation or torsades de pointes (eg, organic heart disease, congestive heart failure, hypokalemia, hypomagnesemia, congenital long QT syndrome, myocardial ischemia or infarction); family history of sudden death.",
+      "healthyVolunteers": true,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "maximumAge": "55 Years",
+      "stdAges": [
+        "ADULT"
+      ]
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Pfizer CT.gov Call Center",
+          "affiliation": "Pfizer",
+          "role": "STUDY_DIRECTOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Pfizer Investigational Site",
+          "city": "New Haven",
+          "state": "Connecticut",
+          "zip": "06511-5473",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.30815,
+            "lon": -72.92816
+          }
+        }
+      ]
+    },
+    "referencesModule": {
+      "seeAlsoLinks": [
+        {
+          "label": "To obtain contact information for a study center near you, click here.",
+          "url": "https://trialinfoemail.pfizer.com/pages/landing.aspx?StudyID=A4021037&StudyName=A%20Pharmacokinetic%20And%20QT%20Study%20Of%20CP-751%2C871%20In%20Healthy%20Subjects%20"
+        }
+      ]
+    }
+  },
+  "resultsSection": {
+    "participantFlowModule": {
+      "preAssignmentDetails": "Study participants were planned to be assigned to 1 of 3 sequential dosing cohorts: CP-751,871 at 10 mg/kg; at 20 mg/kg; 2 doses of 20 mg/kg on consecutive days. Dosing was via intravenous (IV) administration. The third dosing cohort (2 doses of 20 mg/kg on consecutive days) did not enroll participants due to early termination of the study.",
+      "groups": [
+        {
+          "id": "FG000",
+          "title": "CP-751,871 10 mg/kg",
+          "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+        },
+        {
+          "id": "FG001",
+          "title": "CP-751,871 20 mg/kg",
+          "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+        }
+      ],
+      "periods": [
+        {
+          "title": "Overall Study",
+          "milestones": [
+            {
+              "type": "STARTED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "16"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "12"
+                }
+              ]
+            },
+            {
+              "type": "COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "16"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "12"
+                }
+              ]
+            },
+            {
+              "type": "NOT COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "baselineCharacteristicsModule": {
+      "groups": [
+        {
+          "id": "BG000",
+          "title": "CP-751,871 10 mg/kg",
+          "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+        },
+        {
+          "id": "BG001",
+          "title": "CP-751,871 20 mg/kg",
+          "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+        },
+        {
+          "id": "BG002",
+          "title": "Total",
+          "description": "Total of all reporting groups"
+        }
+      ],
+      "denoms": [
+        {
+          "units": "Participants",
+          "counts": [
+            {
+              "groupId": "BG000",
+              "value": "16"
+            },
+            {
+              "groupId": "BG001",
+              "value": "12"
+            },
+            {
+              "groupId": "BG002",
+              "value": "28"
+            }
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "title": "Age Continuous",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "years",
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "30.9",
+                      "spread": "6.3"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "30.3",
+                      "spread": "7.7"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "30.6",
+                      "spread": "6.8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sex: Female, Male",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "16"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "12"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "28"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Race/Ethnicity, Customized",
+          "paramType": "NUMBER",
+          "unitOfMeasure": "participants",
+          "classes": [
+            {
+              "title": "White",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "4"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "3"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "7"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Black",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "10"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "8"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "18"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Asian",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "1"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Other",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "outcomeMeasuresModule": {
+      "outcomeMeasures": [
+        {
+          "type": "PRIMARY",
+          "title": "Maximum Observed Plasma Concentration (Cmax)",
+          "populationDescription": "All treated participants.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "mg/L",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "225.1",
+                      "spread": "54.175"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "420.6",
+                      "spread": "62.175"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "Area Under the Curve From Time Zero to the Last Time Point With Quantifiable Concentration (AUClast)",
+          "description": "Area under the plasma concentration time-curve from zero to the last measured concentration (AUClast)",
+          "populationDescription": "All treated participants.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "mg*h/L",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "80740",
+                      "spread": "14184"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "184000",
+                      "spread": "27811"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "Plasma Clearance (CL)",
+          "description": "Clearance of a drug is a measure of the rate at which a drug is metabolized or eliminated by normal biological processes.",
+          "populationDescription": "All treated and evaluable participants (had measurements related to the PK parameter stated above).",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "mL/day/kg",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "13"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "2.808",
+                      "spread": "0.3804"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "2.353",
+                      "spread": "0.4346"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "Apparent Volume of Distribution (Vz)",
+          "description": "Volume of distribution is defined as the theoretical volume in which the total amount of drug would need to be uniformly distributed to produce the desired plasma concentration of a drug.",
+          "populationDescription": "All treated and evaluable participants (had measurements related to the PK parameter stated above).",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "mL/kg",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "13"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "84.89",
+                      "spread": "13.731"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "92.17",
+                      "spread": "14.978"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "Plasma Decay Half-Life (t1/2)",
+          "description": "Plasma decay half-life is the time measured for the plasma concentration to decrease by one half.",
+          "populationDescription": "All treated and evaluable participants (had measurements related to the PK parameter stated above).",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "days",
+          "timeFrame": "Day 1 pre-dose and 1 hour post-dose, Day 2 (24 hours post-dose), 8, 15, 22, 29, 43, 57, 71 and 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "13"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "21.08",
+                      "spread": "2.9950"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "27.75",
+                      "spread": "5.7969"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "QTc Using Fridericia's Correction Method (QTcF) After Receiving CP-751,871 at the 20/20 mg/kg Dose Level",
+          "description": "QTcF is the time from electrocardiogram Q wave to the end of the T wave corresponding to electrical systole, corrected for heart rate using Fridericia's correction",
+          "populationDescription": "Data not obtained due to early termination of the study.",
+          "reportingStatus": "POSTED",
+          "timeFrame": "Day 1 at 1 and 24 hours post-dose, Day 7, 28",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 20/20 mg/kg",
+              "description": "Participants not enrolled due to early termination of the study."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "QTcF After Receiving Moxifloxacin at the Historical Moxifloxacin Median Tmax of 3 Hours",
+          "populationDescription": "Data not obtained due to early termination of the study.",
+          "reportingStatus": "POSTED",
+          "timeFrame": "baseline, 3 hours postdose",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "0"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Serum Concentration of Insulin-like Growth Factor 1 (IGF-1)",
+          "description": "IGF-1 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "populationDescription": "All treated participants who had at least 1 postdose concentration measurement.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "ng/mL",
+          "timeFrame": "Day 1 pre-dose (Baseline), 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "Baseline",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "138",
+                      "spread": "33"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "128",
+                      "spread": "23"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "at Cmax",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "566",
+                      "spread": "142"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "610",
+                      "spread": "143"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Serum Concentration of Free Insulin-like Growth Factor 1 (IGF-1)",
+          "description": "IGF-1 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "populationDescription": "All treated participants who had at least 1 postdose concentration measurement.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "ng/mL",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "Baseline",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "17.2",
+                      "spread": "6.6"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "13.9",
+                      "spread": "5.6"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "at Cmax",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "143",
+                      "spread": "45"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "168",
+                      "spread": "43"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Serum Concentration of Insulin-like Growth Factor 2 (IGF-2)",
+          "description": "IGF-2 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "populationDescription": "All treated participants who had at least 1 postdose concentration measurement.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "ng/mL",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "Baseline",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "1550",
+                      "spread": "440"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "1476",
+                      "spread": "229"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "at Cmax",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "2039",
+                      "spread": "582"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "1909",
+                      "spread": "275"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Serum Concentration of Insulin-like Growth Factor Binding Protein 3 (IGFBP-3)",
+          "description": "IGFBP-3 is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "populationDescription": "All treated participants who had at least 1 postdose concentration measurement.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "ng/mL",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "Baseline",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "2041",
+                      "spread": "546"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "1978",
+                      "spread": "496"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "at Cmax",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "4945",
+                      "spread": "1035"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "5819",
+                      "spread": "1310"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Serum Concentration of Insulin",
+          "description": "Insulin is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "populationDescription": "All treated participants who had at least 1 postdose concentration measurement.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "mIU/mL",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "Baseline",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "5.13",
+                      "spread": "3.17"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "4.07",
+                      "spread": "3.30"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "at Cmax",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "37.6",
+                      "spread": "23.8"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "40.0",
+                      "spread": "34.5"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Serum Concentration of Fasting Glucose",
+          "description": "Glucose is one of the IGF-axis related biomarkers. Part of the secondary objectives of the study was to explore the relationships of plasma CP-751,871 concentrations to such biomarkers. Cmax is the mean ± standard deviation (SD) concentration observed at the time of maximal change from baseline.",
+          "populationDescription": "All treated participants who had at least 1 postdose concentration measurement.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "mg/dL",
+          "timeFrame": "Day 1 pre-dose, 1 hour post dose, Day 2 (24 hours post-dose), Day 8, 15, 22, 29, 43, 57, 71, 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "Baseline",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "87.7",
+                      "spread": "6.4"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "87.3",
+                      "spread": "5.1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "at Cmax",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "104",
+                      "spread": "21"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "101",
+                      "spread": "16"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Anti-drug Antibodies (ADA) Against CP-751,871 in Serum Samples",
+          "description": "Number of participants who tested positive for ADA",
+          "populationDescription": "All treated participants.",
+          "reportingStatus": "POSTED",
+          "paramType": "NUMBER",
+          "unitOfMeasure": "number of participants",
+          "timeFrame": "Day 1 pre-dose, Day 15, 29, 57, 85",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "CP-751,871 10 mg/kg",
+              "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            },
+            {
+              "id": "OG001",
+              "title": "CP-751,871 20 mg/kg",
+              "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "16"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "12"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "Nominal Day 1",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nominal Day 15",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nominal Day 29",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nominal Day 57",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nominal Day 85",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "adverseEventsModule": {
+      "frequencyThreshold": "0",
+      "eventGroups": [
+        {
+          "id": "EG000",
+          "title": "CP-751,871 10 mg/kg",
+          "description": "A single dose of CP-751,871 at 10 mg/kg following an 8 hour fast, administered via 1-hour IV infusion.",
+          "seriousNumAffected": 0,
+          "seriousNumAtRisk": 16,
+          "otherNumAffected": 9,
+          "otherNumAtRisk": 16
+        },
+        {
+          "id": "EG001",
+          "title": "CP-751,871 20 mg/kg",
+          "description": "A single dose of CP-751,871 at 20 mg/kg following an 8 hour fast, administered via 1-hour IV infusion.",
+          "seriousNumAffected": 0,
+          "seriousNumAtRisk": 12,
+          "otherNumAffected": 12,
+          "otherNumAtRisk": 12
+        }
+      ],
+      "otherEvents": [
+        {
+          "term": "Lymphadenitis",
+          "organSystem": "Blood and lymphatic system disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Cerumen impaction",
+          "organSystem": "Ear and labyrinth disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Ear discomfort",
+          "organSystem": "Ear and labyrinth disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Hypoacusis",
+          "organSystem": "Ear and labyrinth disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Tinnitus",
+          "organSystem": "Ear and labyrinth disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 3,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Conjunctivitis allergic",
+          "organSystem": "Eye disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Dry eye",
+          "organSystem": "Eye disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 9,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Keratoconjunctivitis sicca",
+          "organSystem": "Eye disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Ocular hyperaemia",
+          "organSystem": "Eye disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 9,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Vision blurred",
+          "organSystem": "Eye disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Abdominal discomfort",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Abdominal pain",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Diarrhoea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 2,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Dyspepsia",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Gingival pain",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Hyperchlorhydria",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Nausea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 2,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Vomiting",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 2,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Asthenia",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Chest discomfort",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Chest pain",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Fatigue",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 3,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Pyrexia",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Bronchitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Chlamydial infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Gastroenteritis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 2,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Nasopharyngitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Periorbital cellulitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Respiratory tract infection viral",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Viral upper respiratory tract infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Head injury",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Multiple injuries",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Road traffic accident",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Thermal burn",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Audiogram abnormal",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 2,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Echocardiogram abnormal",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Heart rate irregular",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Schirmer's test abnormal",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Arthralgia",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Muscle twitching",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 2,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Musculoskeletal chest pain",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 2,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Myalgia",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Neck pain",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Dizziness",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 2,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Headache",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 3,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 3,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Paraesthesia",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Somnolence",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 2,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Cough",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Dry throat",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 2,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Dysphonia",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Rhinitis allergic",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Rhinorrhoea",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 0,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 1,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Hair growth abnormal",
+          "organSystem": "Skin and subcutaneous tissue disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        },
+        {
+          "term": "Nail discolouration",
+          "organSystem": "Skin and subcutaneous tissue disorders",
+          "sourceVocabulary": "MedDRA v13.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numAffected": 1,
+              "numAtRisk": 16
+            },
+            {
+              "groupId": "EG001",
+              "numAffected": 0,
+              "numAtRisk": 12
+            }
+          ]
+        }
+      ]
+    },
+    "moreInfoModule": {
+      "limitationsAndCaveats": {
+        "description": "This study was terminated prior to enrollment of participants into Cohort 3 (2 doses of 20 mg/kg on consecutive days). Therefore, endpoints relating to that cohort were not assessed."
+      },
+      "certainAgreement": {
+        "piSponsorEmployee": true,
+        "restrictionType": "OTHER",
+        "restrictiveAgreement": true,
+        "otherDetails": "Pfizer has the right to review disclosures, requesting a delay of less than 60 days. Investigator will postpone single center publications until after disclosure of pooled data (all sites), less than 12 months from study completion/termination at all participating sites. Investigator may not disclose previously undisclosed confidential information other than study results."
+      },
+      "pointOfContact": {
+        "title": "Pfizer ClinicalTrials.gov Call Center",
+        "organization": "Pfizer, Inc.",
+        "email": "ClinicalTrials.gov_Inquiries@pfizer.com",
+        "phone": "1-800-718-1021"
+      }
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-03-25",
+      "removedCountries": [
+        "Belgium"
+      ]
+    },
+    "interventionBrowseModule": {
+      "meshes": [
+        {
+          "id": "C525021",
+          "term": "figitumumab"
+        },
+        {
+          "id": "D000077266",
+          "term": "Moxifloxacin"
+        },
+        {
+          "id": "D012965",
+          "term": "Sodium Chloride"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D024841",
+          "term": "Fluoroquinolones"
+        },
+        {
+          "id": "D042462",
+          "term": "4-Quinolones"
+        },
+        {
+          "id": "D015363",
+          "term": "Quinolones"
+        },
+        {
+          "id": "D011804",
+          "term": "Quinolines"
+        },
+        {
+          "id": "D006574",
+          "term": "Heterocyclic Compounds, 2-Ring"
+        },
+        {
+          "id": "D000072471",
+          "term": "Heterocyclic Compounds, Fused-Ring"
+        },
+        {
+          "id": "D006571",
+          "term": "Heterocyclic Compounds"
+        },
+        {
+          "id": "D002712",
+          "term": "Chlorides"
+        },
+        {
+          "id": "D006851",
+          "term": "Hydrochloric Acid"
+        },
+        {
+          "id": "D017606",
+          "term": "Chlorine Compounds"
+        },
+        {
+          "id": "D007287",
+          "term": "Inorganic Chemicals"
+        },
+        {
+          "id": "D017670",
+          "term": "Sodium Compounds"
+        }
+      ]
+    }
+  },
+  "hasResults": true
+}

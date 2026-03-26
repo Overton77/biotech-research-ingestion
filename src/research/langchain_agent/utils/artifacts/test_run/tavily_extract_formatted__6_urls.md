@@ -1,718 +1,224 @@
-Meta: request_id=5a2a09b9-fee6-479f-8b0d-9f1bbd4ebe4b, response_time_s=17.18
+Meta: request_id=bf0281a3-54a3-4a22-95f7-98f7e7ccd40e, response_time_s=0.74
 
 === Extracted Web Content ===
 [Result 1]
-Title: Creatine - 90 Servings & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/creatine
+Title: Measuring 19 Organ Systems with SystemAge
+URL: https://www.generationlab.com/blog/aging-biomarkers
 Content:
-# Creatine - 90 Servings & Reviews | Thorne
+## Measuring 19 Organ Systems with SystemAge
 
-[Skip to main content](https://www.thorne.com/products/dp/creatine#main)
+Generation Lab is pioneering the next evolution in preventive health testing by bringing longevity science from UC Berkeley and Harvard to your home. The company, co-founded by Dr. Irina Conboy, known as the "mother of longevity" for her aging and regeneration research, builds on over 20 years of research to offer insight into your biological age.
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+The SystemAge test is the first and only at-home epigenetic age testing solution analyzing over 460,000 DNA methylation biomarkers across your genome. SystemAge delivers 19 biological ages for your core organ systems, acting as a "GPS for your health" by showing your current status and goals, instead of one biological age number.
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+The SystemAge Advantage: [...] Unmatched Precision: Receive detailed biological ages for your Cardiac System, Brain Health, Immune System, Liver Function, Kidney Health, and 14 other critical systems. This organ-specific aging analysis provides actionable insights you can't get elsewhere.
+ Clinical-Grade Accuracy: SystemAge is the gold standard in biological age measurement, with clinical-grade accuracy in detecting biological age changes, validated across 2,000+ clinical cases.
+ Early Detection Power: The test functions as a "DNA methylation noise detector," identifying risk signals and aging acceleration years before clinical symptoms.
+ Unquestionable Scientific Credibility: Backed by 20+ peer-reviewed publications and ongoing research from leading longevity scientists. [...] Not all epigenetic tests are equal. A single, whole-body biological age number is a good start because it's like receiving an overall health grade. But just as a single grade doesn't tell you whether you're failing history while acing mathematics, a single biological age number can't show which organ systems are aging fastest and need the most attention. To create an effective, personalized action plan, you need to understand which systems require intervention. This is the challenge that modern longevity science has solved through organ-specific aging analysis.
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+## Measuring 19 Organ Systems with SystemAge [...] ## Conclusion
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+Your chronological age is the number of years since you were born. But your biological age is a choice. Understanding the biomarkers of aging gives you the knowledge. Measuring them precisely across all your organ systems provides the data. Taking targeted action based on those insights delivers results. SystemAge is the only platform that combines all three elements, empowering you to control your biology.
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+The science is clear, the technology is proven, and the results are measurable. Your biological age is not fixed; it is a dynamic number you can influence and improve with the right knowledge and tools.
 
-[](https://www.thorne.com/cart)
+Find Your Biological Age →
 
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
+## Related Articles
 
-[](https://www.thorne.com/cart)
+Generation Lab [...] ### 5. Metabolic Health
 
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+Your body's ability to sense and process nutrients, particularly glucose, changes dramatically with age. The network of signals that tells your cells when to take up nutrients, store energy, and burn fat becomes dysfunctional.
 
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+This breakdown in nutrient sensing is linked to metabolic syndrome, type 2 diabetes, and chronic inflammation. When your cellular "fuel efficiency" declines, it accelerates aging across organ systems and increases your risk for age-related diseases.
 
-* * *
+### 6. Mitochondrial Fitness
 
-[Sign In](https://www.thorne.com/login)
-
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU SF903](https://www.thorne.com/products/dp/creatine "SKU SF903")
-
-# Creatine - 90 Servings
-
- 1359 Reviews 
-
- See reviews summary 
-
-* * *
-
-![Image 6: Large image of Creatine - 90 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png)
-
-![Image 7: Creatine - 90 Servings thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb5ca0e34dbdc8dc4000b29c8ba0bb48387eb2496.jpg)
-
-![Image 8: Creatine - 90 Servings thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v67f933512454449d24c5c855f503305e97e11c01.jpg)
-
-![Image 9: Creatine - 90 Servings thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v8af6fc58732ad1ec22fae03d073c971f5c7799f4.jpg)
-
-![Image 10: Creatine - 90 Servings thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
-
-![Image 11: Creatine - 90 Servings thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vcfe753c8912038b0bff400c34332d69f5ad847d5.png)
-
-![Image 12: Creatine - 90 Servings thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vc0c761efbdf9349d57f97cc20ec9746866e84475.png)
-
-![Image 13: Creatine - 90 Servings thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb1af62988bd4bcd45d00a5018307954837c0fe25.png)
-
-![Image 14: Large image of Creatine - 90 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png)
-
-Current image for thumbnail 1
-
-* * *
-
-#### High-quality creatine for lean muscle mass, endurance, cellular energy, and brain function*
-
-Promote enhanced muscle performance and strength with creatine monohydrate. Great for more than just athletes – it also supports cellular energy production and cognitive function to help you perform at your best.* NSF Certified for Sport®
-
-$44 /90 Scoops
-
-[Creatine - 180 Servings 180 Scoops](https://www.thorne.com/products/dp/creatine-sf904 "Select Creatine - 180 Servings")[Creatine - 90 Servings 90 Scoops](https://www.thorne.com/products/dp/creatine "Select Creatine - 90 Servings")
-
- Subscribe: **SAVE UP TO 20%**
-
- Quantity  
-
- Quantity: 1
-
-Add to Cart
-
- Quantity  
-
-Add to Cart
-
- Quantity: 1
-
- HSA/FSA eligible Save an average of 30%
-
- Learn more 
-
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
-
-## Taia Summary
-
-Have questions? Taia can help you decide.
-
-Product Overview Compare Products
-
-*   **What it does:** Promotes enhanced muscle performance, strength, and physical endurance, while supporting cellular energy production and cognitive function to help you perform at your best.* Also helps maintain healthy cellular hydration and reduces the frequency of exercise-induced muscle cramps.*
-
-*   **How to take:** Mix 1 scoop with at least 8 ounces of water, juice, or preferred beverage daily. Can be used 30-90 minutes before or after exercise.
-
-*   **What you should know:** Features a highly researched, micronized form of creatine monohydrate that is easy to mix, colorless, odorless, and has enhanced solubility. NSF Certified for Sport®, ensuring rigorous testing for quality and the absence of nearly 300 substances banned by major athletic organizations. Suitable for athletes and individuals with increased dietary needs or those not consuming enough creatine-rich foods.
-
-Show me similar products What does this product do?How do I use this product?More info on ingredients
-
-Read more![Image 16: Ask Taia](https://d1vo8zfysxy97v.cloudfront.net/_nuxt/ask-taia-icon.BYR1GHZ1.svg)
-
-#### Ingre …[truncated]
+Mitochondria are the "power plants" inside your cells that convert nutrients into energy. As you age, the efficiency and number of these powerhouses decline significantly. This mitochondrial dysfunction affects cellular performance.
 
 [Result 2]
-Title: [Skip to main content](main)
-URL: https://www.thorne.com/products/dp/advanced-pre-workout-rainbow-sherbet-flavor
+Title: The Generation Lab Difference: Credibility, Proof, and Empowerment
+URL: https://www.generationlab.com/blog/how-is-biological-age-determined
 Content:
-[Skip to main content](#main)
+The Most Comprehensive Analysis: SystemAge goes beyond single-number tests. We analyze 460+ DNA methylation biomarkers to measure your biological age across 19 organ systems: Adrenal, Arterial, Brain, Cardiac, Cerebrovascular, Endocrine, Gastrointestinal, Hematologic, Hepatic, Immune, Inflammatory, Metabolic, Muscular, Nervous, Pulmonary, Renal, Reproductive, Skeletal, and Skin systems.
+ Unmatched, Clinical-Grade Accuracy: SystemAge delivers clinical-grade accuracy in detecting biological age changes, backed by research in Nature, Aging, and GeroScience. This precision has been validated across 2,000+ test cases, ensuring reliability for important health decisions. [...] SystemAge vs. GlycanAge: GlycanAge focuses on inflammation markers through glycan analysis. While inflammation is important, it represents one aspect of aging. SystemAge offers a comprehensive solution, analyzing inflammatory aging plus 18 other organ systems for a complete picture of your biological health.
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](/partners/truemed)**!**
+## The Generation Lab Difference: Credibility, Proof, and Empowerment
 
-# Advanced Pre-Workout
+SystemAge isn't a wellness trend or lifestyle product. It's a clinical-grade diagnostic tool from 20+ years of pioneering research in aging and regenerative medicine by UC Berkeley and Harvard scientists. Our founding team's work has garnered over 14,000 scientific citations, establishing them as leaders in longevity science. This foundation ensures SystemAge is grounded in rigorous, peer-reviewed science. [...] The ultimate measure of any biological age test is whether you can change your results through targeted interventions. With SystemAge, the answer is yes. Our documented cases show biological age reductions of 5.5 to 13.6 years across different organ systems and intervention types. For example, we recorded a 13.6-year reduction in brain biological age following specific cognitive and metabolic interventions, and an average 5.5-year reduction in patients receiving targeted stem cell therapies. These results demonstrate the complete "Measure, Intervene, Verify" cycle that makes SystemAge a true optimization tool. [...] SystemAge vs. Function Health: Function Health uses 100+ traditional blood biomarkers to assess health. While comprehensive, these markers are reactive because they change after problems have developed. SystemAge's epigenetic age testing is proactive, detecting "biomolecular noise" at the cellular level before it manifests in bloodwork or symptoms.
 
----
+SystemAge vs. Tally Health: Despite backing from longevity researcher Dr. David Sinclair, Tally Health uses a less accurate cheek swab methodology compared to SystemAge's gold-standard blood-based analysis. More importantly, Tally provides only a single biological age number, while SystemAge delivers unique 19 organ-level details for targeted interventions impossible with aggregate measurements. [...] Why organ-specific aging matters:
 
-![Advanced Pre-Workout thumbnail 1](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__va361afb63494fb2188cd5896f1ff5231bc75e2ac.png "Advanced Pre-Workout thumbnail image 1")
+ Precision: Pinpoint where your body needs support, allowing for targeted interventions instead of generic anti-aging approaches.
+ Early Detection: Identify at-risk organ systems long before symptoms or standard clinical tests detect problems.
+ Actionable Insights: Receive tailored recommendations for each system, maximizing your health optimization efforts.
 
-![Advanced Pre-Workout thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__v8b5fa35fa34e802f43459f90049444e60dbeba6b.jpg "Advanced Pre-Workout thumbnail image 2")
-
-![Advanced Pre-Workout thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__v8c4f53954434f612c6fec348bf32d7b8b4c26d6b.jpg "Advanced Pre-Workout thumbnail image 3")
-
-![Advanced Pre-Workout thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__v7198198ad8079499d22fc21e0f33cb17029d87c1.jpg "Advanced Pre-Workout thumbnail image 4")
-
-![Advanced Pre-Workout thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__v0476f8ce82d045d362b90d82cefeeecdf2027150.png "Advanced Pre-Workout thumbnail image 5")
-
-![Advanced Pre-Workout thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__v2a6c0df7fcc051e6b63a35b97e08d659ce796d54.png "Advanced Pre-Workout thumbnail image 6")
-
-![Advanced Pre-Workout thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__v537373bce8d44dd956682ff9ee177741af3def81.png "Advanced Pre-Workout thumbnail image 7")
-
-![Large image of Advanced Pre-Workout](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp689__va361afb63494fb2188cd5896f1ff5231bc75e2ac.png "Large image of Advanced Pre-Workout")
-
-Current image for thumbnail 1
-
----
-
-#### High-performance amino acids, alpha-GPC, and naturally derived caffeine for clean, sustained energy\*
-
-Optimize your performance with enhanced pump, focus, blood flow, and delayed time-to-fatigue, designed to maximize the work you put in.\* NSF Certified for Sport®
-
-$55 /40 Scoops
-
-Subscribe: **SAVE UP TO 20%**
-
-Quantity: 1
-
-Quantity: 1
-
-#### Ingredient Information
-
-##### Ingredient Amounts
-
-Serving Size: 2 Scoops
-
-Servings Per Container: 20
-
----
-
-Ingredient list
-
-| Name | Amount |
-| Alpha GPC (L-alpha-Glycerylphosphorylcholine) | 600mg |
-| Beta-Alanine | 3.2g |
-| Caffeine (from Coffee Bean) | 200mg |
-| L-Citrulline | 5g |
-| L-Theanine | 200mg |
-| Sodium | 15mg |
-| Vitamin B12 (as Methylcobalamin) | 100mcg |
-| Vitamin B6 (as Pyridoxal 5'-Phosphate) | 5mg |
-| **Other Ingredients:** Calcium Silicate, Citric Acid, Malic Acid, Maltodextrin, Monk Fruit extract, Natural Flavors, Rebaudioside M, Silicon Dioxide, Vegetable Juice and Turmeric Powder (color) | |
-
----
-
-#### Advanced Pre-Workout Details
-
----
-
-Thorne’s Advanced Pre-Workout is designed to help you get the most out of each workout with science-backed doses of alpha-GPC, beta-alanine, L-citrulline, L-theanine, and caffeine to help you see noticeable benefits in your performance.\*
-
-**Benefits of Thorne Advanced Pre-Workout**
-
-* Optimizes energy, endurance, power output, and pump\*
-* Promotes focus and concentration for your intense workouts, easy days, and everything in between\*
-* Supports perceived time to exhaustion\*
-* Enhances nitric oxide production and blood flow to working muscles\*
-* Provides clean, sustained energy without a harsh crash\*
-* Combats muscular fatigue\*
-
-**Features of Thorne Advanced Pre-Workout**
-
-* Great-tasting rainbow sherbet flavor
-* Easy to mix in water or preferred beverage
-* Natural caffeine derived from coffee bean
-* Science-backed ingredients to enhance energy and endurance\*
-* 0 g added sugars and no artificial sweeteners
-* Flavors and colors derived from natural sources
-* NSF Certified for Sport®
-
-**Who can benefit from Advanced Pre-Workout**
-
-* Athletes and active individuals looking to upgrade their workout with noticeable performance benefits\*
-* Those looking to enhance the mind-muscle connection, focus, and mental clarity behind their workouts\*
-* Individuals wanting a pre-workout formula with science-backed ingredients to boost their energy levels\*
-* Those looking to promote a competitive edge and optimize their training outcomes\*
-
-**A deeper look at the ingredients in Advanced Pre-Workout**
-
-**Alpha-GPC**
-
-Alpha-GPC is a choline compound found in the brain and supports the body’s production of the neurotransmitter acetylcholine, helping to maximize the mental aspects of your performance.\*
-
-* Promotes focus and memory\*
-* Enhances power output during explosive exercise\*
-* Promotes physical endurance so you can train and compete at your best\*
-* Helps maintain the body’s natural production of human growth hormone, essential for recovery\*
-
-**CarnoSyn® Beta-Alanine**
-
-Beta-alanine is an amino acid that plays a crucial role in supporting carnosine levels, which efficiently buffers the pH of muscle tissues without excessive lactic acid buildup.\*
-
-* Supports muscle pH to resist fatigue and delayed onset muscle soreness\*
-* Increases perceived time to exhaustion\*
-* Promotes VO2 max, enhancing ca …[truncated]
+## SystemAge: The Only Test with 19 Organ-Specific Ages
 
 [Result 3]
-Title: Daily Electrolytes - Variety Pack & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack
+Title: Advanced Epigenetic Analysis: Analyzes over 460 DNA methylation biomarkers to detect aging and disease risk signs years before symptoms.
+URL: https://www.generationlab.com/blog/systemage-test-review
 Content:
-# Daily Electrolytes - Variety Pack & Reviews | Thorne
+Advanced Epigenetic Analysis: Analyzes over 460 DNA methylation biomarkers to detect aging and disease risk signs years before symptoms.
+ 19 Organ-Specific Biological Ages: The only test providing detailed aging insights across 19 organ systems, including Cardiac, Brain, Immune, Liver, and Kidney.
+ Needle-Free Collection: Simple, convenient at-home blood collection using an innovative, painless device with no needles required.
+ Comprehensive Digital Report: Delivers personalized, actionable intervention plans tailored to each organ system's needs.
+ Preventive Focus: Acts as your biological "GPS," detecting early aging signals to empower proactive health decisions. [...] Brain Health & Cognition
+ Immune System
+ Reproductive System
+ Cardiac System
+ Inflammatory Regulation
+ Metabolism
+ Tissue Regeneration
+ Blood Sugar & Insulin Control
+ Hepatic System (Liver)
+ Muscular System
+ Skeletal System
+ Nervous System
+ Respiratory System
+ Digestive System
+ Blood & Vascular System
+ Urinary System
+ Oncogenesis (Cell Mutation)
+ Fibrosis (Scar Tissue Formation)
+ Auditory System
 
-[Skip to main content](https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack#main)
+This analysis means you're not just getting data. You're getting a precise roadmap of where your body needs attention, allowing you to prioritize interventions for maximum impact.
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+## Using the SystemAge Test: A Step-by-Step Review
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+### Step 1: At-Home Sample Collection [...] The documented results are remarkable:
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+ Up to a 13.6-year reduction in brain biological age following specific neurological interventions.
+ A 10.4-year reduction in immune system biological age with therapeutic plasma exchange (TPE) treatment.
+ A 5.5-year average reduction in biological age with stem cell therapies
+ Targeted lifestyle interventions led to consistent improvements across multiple organ systems.
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+These are actual outcomes from SystemAge users in longevity clinics. Dr. Adeel Khan, a leading longevity physician, notes: "SystemAge is the only test sensitive enough to track the biological improvements in our patients. It has revolutionized how we measure success in age reversal protocols." [...] ## What is the SystemAge Test?
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+The SystemAge test represents a breakthrough in preventive healthcare. It's the first and only at-home, clinical-grade epigenetic testing solution that measures your biological age across 19 organ systems. While other tests give a single biological age number, SystemAge recognizes that your body doesn't age uniformly. Your heart might be aging like you're 35 while your brain could be aging like you're 50. This insight makes SystemAge revolutionary in democratizing advanced preventive healthcare.
 
-[](https://www.thorne.com/cart)
-
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-
-[](https://www.thorne.com/cart)
-
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
-
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
-
-* * *
-
-[Sign In](https://www.thorne.com/login)
-
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU SF911P](https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack "SKU SF911P")
-
-# Daily Electrolytes - Variety Pack
-
-* * *
-
-![Image 6: Large image of Daily Electrolytes - Variety Pack](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vbdbfcaba0a56d3ed0c2423336807bbf5ee98765d.png)
-
-![Image 7: Daily Electrolytes - Variety Pack thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v14117e4bef0105567b48347a2c594dff29e16196.png)
-
-![Image 8: Daily Electrolytes - Variety Pack thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v454de5d9e54fca889757ebb00aeee7dc986967e4.jpg)
-
-![Image 9: Daily Electrolytes - Variety Pack thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vc36c97b6f5db056a267fa470a273e93c76b0a358.jpg)
-
-![Image 10: Daily Electrolytes - Variety Pack thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v9d1d270203f9574e309ee65a2be8482fe9c63507.jpg)
-
-![Image 11: Daily Electrolytes - Variety Pack thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
-
-![Image 12: Daily Electrolytes - Variety Pack thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__ve4d209098d68c9cb4740eb043097b5d647f39461.png)
-
-![Image 13: Daily Electrolytes - Variety Pack thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vcb50c6c42e4f1e9c067fd02b260714e119ed869f.png)
-
-![Image 14: Large image of Daily Electrolytes - Variety Pack](https://d1vo8zfysxy97v.cloudfront.net/media/product/sf911p__vbdbfcaba0a56d3ed0c2423336807bbf5ee98765d.png)
-
-Current image for thumbnail 1
-
-* * *
-
-#### Replenish electrolytes to optimize cellular rehydration and recovery*
-
-On-the-go hydration, designed to restore fluid balance, enhance cellular energy, and maximize athletic performance.* NSF Certified for Sport®
-
-$40 /30 Packets
-
-[Daily Electrolytes - Watermelon 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-watermelon-flavored-drink-mix "Select Daily Electrolytes - Watermelon")[Daily Electrolytes - Blood Orange 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-blood-orange-flavored-drink-mix "Select Daily Electrolytes - Blood Orange")[Daily Electrolytes - Mango Limeade 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-mangolimeade-flavored-drink-mix "Select Daily Electrolytes - Mango Limeade")[Daily Electrolytes - Variety Pack 30 Packets](https://www.thorne.com/products/dp/daily-electrolytes-30-stick-variety-pack "Select Daily Electrolytes - Variety Pack")
-
- Subscribe: **SAVE UP TO 20%**
-
- Quantity  
-
- Quantity: 1
-
-Add to Cart
-
- Quantity  
-
-Add to Cart
-
- Quantity: 1
-
- HSA/FSA eligible Save an average of 30%
-
- Learn more 
-
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
-
-## Taia Summary
-
-Have questions? Taia can help you decide.
-
-Product Overview Compare Products
-
-*   **What it does:** Replenishes essential electrolytes lost through sweat to restore optimal fluid balance, support cellular hydration, and enhance recovery after exercise, while also promoting cellular energy production and athletic performance.*
-
-*   **How to take:** Mix 1 stick pack with at least 12 ounces of water daily.
-
-*   **What you should know:** This low-calorie, no-sugar formula features convenient single-serve packaging and three flavor options, making it easy to use on the go. It is NSF Certified for Sport®, ensuring rigorous testing for quality and the absence of banned substances, and is sui …[truncated]
+Key features that set SystemAge apart: [...] Comprehensiveness: SystemAge analyzes 19 organ systems compared to TruDiagnostic's 11, providing insights into 8 additional organ systems including sensory system aging and neural development.
+ Accuracy: SystemAge's clinical-grade accuracy for detecting biological age changes far exceeds TruDiagnostic's, making it significantly more reliable for tracking intervention effectiveness.
 
 [Result 4]
-Title: Basic Nutrients 2/Day - 30 Servings & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc
+Title: 1. Depth of Analysis
+URL: https://www.generationlab.com/blog/dna-methylation-test-cost
 Content:
-# Basic Nutrients 2/Day - 30 Servings & Reviews | Thorne
+### 1. Depth of Analysis
 
-[Skip to main content](https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc#main)
+Basic tests provide one aggregate biological age, which is a single number representing your body's aging status. While this satisfies curiosity, it misses a crucial reality: your organs age at different rates.
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+SystemAge analyzes 19 organ systems, including:
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+ Cardiac and cardiovascular health
+ Brain health and cognitive function
+ Immune system strength
+ Liver detoxification capacity
+ Kidney filtration efficiency
+ Reproductive health
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+This organ-specific aging analysis reveals you have the heart of a 30-year-old but the immune system of a 50-year-old. This insight enables targeted interventions instead of generic lifestyle advice.
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+### 2. Biomarkers & Scientific Method [...] ### 2. Biomarkers & Scientific Method
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+Analyzing a few hundred methylation sites versus a comprehensive panel impacts both cost and accuracy. SystemAge analyzes 460+ DNA methylation biomarkers chosen for their relevance to aging across organ systems.
 
-[](https://www.thorne.com/cart)
+The collection method matters. Some competitors use saliva or cheek swabs (like Tally Health), but SystemAge uses blood-based analysis, which is the gold standard for clinical accuracy. Blood contains more comprehensive cellular information than saliva, enabling the detection of subtle but critical aging patterns.
 
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
+### 3. Clinical-Grade Accuracy and Validation [...] ### 4. Report Actionability
 
-[](https://www.thorne.com/cart)
+Receiving raw data is vastly different from receiving a personalized, actionable health strategy. Many tests provide generic recommendations. SystemAge provides tailored intervention plans for the 19 organ systems, transforming complex data into a roadmap for health optimization. It acts as your health; it not only shows where you are, but guides you where to go.
 
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+### 5. The Collection Method & Lab Process
 
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+Clinical-grade testing requires sophisticated laboratory processing and quality control. SystemAge's at-home, needle-free blood collection device provides clinical-quality samples without the pain of finger pricks or lab visits. This convenience and the complex analysis of 460+ biomarkers contribute to the investment.
 
-* * *
+## Conclusion [...] This guide explains the price differences, helping you make an informed decision about your future health investment. The lowest price might seem appealing, but the true value lies in accuracy, comprehensiveness, and actionability. Generation Lab's SystemAge test represents the new clinical-grade standard, offering insights into your body's aging process across 19 organ systems.
 
-[Sign In](https://www.thorne.com/login)
+## What Is DNA Methylation?
 
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU VM2NC](https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc "SKU VM2NC")
+Think of DNA methylation as your body's software update system. If your DNA is the hardware and your unchanging genetic blueprint, then epigenetics is the software that tells your genes when to turn on and off. DNA methylation is one of the most important epigenetic mechanisms, acting like molecular switches that control gene expression throughout your life. [...] This premium category is defined by SystemAge and similar clinical-grade platforms. These health intelligence systems offer maximum accuracy , detailed organ-level analysis (19 systems), extensive scientific validation from top research institutions, and personalized, actionable intervention strategies. This is not just a test; it is a health optimization platform. And it’s only $500.
 
-# Basic Nutrients 2/Day - 30 Servings
+## 5 Key Factors Determining DNA Methylation Test Cost
 
- 493 Reviews 
+Not all biological age tests are equal. The cost of the DNA methylation test is tied to the technology, analysis depth, and scientific rigor. Understanding these factors will help you evaluate the value.
 
- See reviews summary 
-
-* * *
-
-*   [Why Ours](https://www.thorne.com/explore/multi-vitamins "Why Ours")
-*   Buy Now
-
-![Image 6: Large image of Basic Nutrients 2/Day - 30 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v22fab5aec14f3a11312849c9781a5ef32c69c8d4.png)
-
-![Image 7: Basic Nutrients 2/Day - 30 Servings thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__vef3f9ab94676575f5fbc7674d9e8be5e7a981985.jpg)
-
-![Image 8: Basic Nutrients 2/Day - 30 Servings thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v378a6caad21d78e8c1e1704614bce1f089448902.jpg)
-
-![Image 9: Basic Nutrients 2/Day - 30 Servings thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v4db733be0524b4371d9175d9322219161fdb289d.jpg)
-
-![Image 10: Basic Nutrients 2/Day - 30 Servings thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
-
-![Image 11: Basic Nutrients 2/Day - 30 Servings thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v83d0c66970bdda774da4eede80633bba5a43b53f.png)
-
-![Image 12: Basic Nutrients 2/Day - 30 Servings thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__vcd1ea6af1fc5b2b6d7334d24f78ef4cf40a77a19.png)
-
-![Image 13: Basic Nutrients 2/Day - 30 Servings thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v8d5de41df9ce332cd3ebe6c79ce53bd97550424a.png)
-
-![Image 14: Large image of Basic Nutrients 2/Day - 30 Servings](https://d1vo8zfysxy97v.cloudfront.net/media/product/vm2nc__v22fab5aec14f3a11312849c9781a5ef32c69c8d4.png)
-
-Current image for thumbnail 1
-
-* * *
-
-#### A daily multi with key nutrients that keep your body healthy and thriving*
-
-Basic Nutrients 2/Day is a comprehensive daily supplement formulated for individuals looking for nutritional support with fewer capsules.
-
-$36 /60 Capsules
-
-[Basic Nutrients 2/Day - NSF Certified for Sport 60 Capsules](https://www.thorne.com/products/dp/basic-nutrients-2-day "Select Basic Nutrients 2/Day - NSF Certified for Sport")[Basic Nutrients 2/Day - 30 Servings 60 Capsules](https://www.thorne.com/products/dp/basic-nutrients-2-day-vm2nc "Select Basic Nutrients 2/Day - 30 Servings")[Basic Nutrients 2/Day - 60 Servings 120 Capsules](https://www.thorne.com/products/dp/basic-nutrients-2-day-120 "Select Basic Nutrients 2/Day - 60 Servings")
-
- Subscribe: **SAVE UP TO 20%**
-
- Quantity  
-
- Quantity: 1
-
-Add to Cart
-
- Quantity  
-
-Add to Cart
-
- Quantity: 1
-
- HSA/FSA eligible Save an average of 30%
-
- Learn more 
-
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
-
-## Taia Summary
-
-Have questions? Taia can help you decide.
-
-Product Overview Compare Products
-
-*   **What it does:** Provides comprehensive daily nutritional support with a full spectrum of essential vitamins and minerals to help maintain heart, brain, nerve, immune, bone, and skin health.* Formulated with highly absorbable forms of nutrients, including zinc bisglycinate for immune and skin support*, vitamin D3 for bone and immune health*, and B vitamins for cardiovascular and nerve function.*
-
-*   **How to take:** Take 2 capsules daily.
-
-*   **What you should know:** Designed for convenience, this multi-vitamin/mineral formula delivers foundational nutrition in just two capsules per day, using pure ingredients without unnecessary additives or preservatives. It is third-party tested for  …[truncated]
+### 1. Depth of Analysis
 
 [Result 5]
-Title: Whey Protein Isolate - Chocolate & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/whey-protein-isolate-chocolate
+Title: Unmatched Scientific Credibility: Backed by 20+ peer-reviewed publications and a scientific team with 14,000+ research citations. Trusted by 150+ longevity clinics worldwide for patient care.
+URL: https://www.generationlab.com/blog/best-dna-methylation-tests
 Content:
-# Whey Protein Isolate - Chocolate & Reviews | Thorne
+Comprehensive Analysis: SystemAge is the first and only test to measure biological age across 19 organ systems, including Cardiovascular, Neurodegeneration, Immune, Metabolic Health, and 15 other physiological functions.
+ Clinical-Grade Accuracy: It boasts clinical-grade accuracy in detecting biological age changes, validated across 2,000+ real-world test cases. This makes it the most accurate biological age test available to consumers.
+ Unmatched Scientific Credibility: Backed by 20+ peer-reviewed publications and a scientific team with 14,000+ research citations. Trusted by 150+ longevity clinics worldwide for patient care.
+ Actionable Intelligence: Provides personalized intervention plans tailored to your 19 organ system ages, moving beyond generic anti-aging advice. [...] #### Considerations
 
-[Skip to main content](https://www.thorne.com/products/dp/whey-protein-isolate-chocolate#main)
+SystemAge, as a clinical-grade diagnostic tool, represents a premium investment in your long-term health, priced to reflect its depth and scientific accuracy.
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+Best For: Individuals seeking accurate, comprehensive, and actionable data to control their biological aging process.
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+### 2. TruDiagnostic
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+TruDiagnostic, a well-known name in epigenetic testing, analyzes over 900,000 methylation sites to calculate biological age and offers scores for about 11 organ systems. [...] ## Conclusion
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+After analyzing the DNA methylation tests, evidence points to Generation Lab's SystemAge as the superior choice for longevity optimization. Other options provide insights, but the best DNA methylation test must deliver the highest accuracy, detailed organ-specific analysis, and actionable intervention strategies.
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+SystemAge meets all criteria with its 19 organ system analysis, clinical-grade accuracy, and proven results in reversing biological age. The research of Dr. Irina Conboy, two decades of scientific validation, and the trust of over 150 longevity clinics worldwide create an unmatched foundation for understanding and optimizing your biological aging process. [...] TruDiagnostic can be a starting point for exploring methylation data, but it lacks both the precision and the comprehensive 19-system organ-specific analysis that sets SystemAge apart as the clinical gold standard.
 
-[](https://www.thorne.com/cart)
+### 3. Tally Health
 
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
+Tally Health has gained recognition through its association with renowned longevity researcher Dr. David Sinclair, lending the platform significant brand credibility. The test's primary differentiator is its convenient cheek swab collection method, making it one of the most accessible options for consumers new to epigenetic testing. [...] ### 1. Generation Lab SystemAge
 
-[](https://www.thorne.com/cart)
+SystemAge represents the pinnacle of at-home epigenetic age testing. It was developed by Generation Lab under Dr. Irina Conboy of UC Berkeley, the "mother of longevity research." This clinical-grade testing solution is the culmination of 20+ years of research from UC Berkeley and Harvard scientists. It is the first and only consumer test that provides a complete, high-resolution picture of your biological aging across organ systems. SystemAge is your health, providing precise coordinates for your current state and directions for your goals.
 
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
-
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
-
-* * *
-
-[Sign In](https://www.thorne.com/login)
-
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU SP110](https://www.thorne.com/products/dp/whey-protein-isolate-chocolate "SKU SP110")
-
-# Whey Protein Isolate - Chocolate
-
- 0 Reviews 
-
-* * *
-
-*   [Why Ours](https://www.thorne.com/explore/protein-powders "Why Ours")
-*   Buy Now
-
-![Image 6: Large image of Whey Protein Isolate - Chocolate](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__v35c3c267ac114961f9477e01def12173af2f5767.png)
-
-![Image 7: Whey Protein Isolate - Chocolate thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__vd82633ada4f67c931e888053dee8036aabc801f6.jpg)
-
-![Image 8: Whey Protein Isolate - Chocolate thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__v7583bad18bef72094fa64af52a30940d1e5cf75f.jpg)
-
-![Image 9: Whey Protein Isolate - Chocolate thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__vb2258890c3b838539ef699583534f8ddf2518e4c.jpg)
-
-![Image 10: Whey Protein Isolate - Chocolate thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
-
-![Image 11: Whey Protein Isolate - Chocolate thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__v1c63d3eeec6cff52f03421171d0ff0dac2d2340f.png)
-
-![Image 12: Whey Protein Isolate - Chocolate thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__v21e2302bc2014577a6d8fbb83189a111aebfa579.png)
-
-![Image 13: Whey Protein Isolate - Chocolate thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__vbe61f6958bdfc507f905f5c7f42c20158024cc21.png)
-
-![Image 14: Large image of Whey Protein Isolate - Chocolate](https://d1vo8zfysxy97v.cloudfront.net/media/product/sp110__v35c3c267ac114961f9477e01def12173af2f5767.png)
-
-Current image for thumbnail 1
-
-* * *
-
-#### 21 grams of bioavailable protein with flavors and sweeteners derived from natural sources
-
-Great tasting, high-quality whey protein designed for athletes, aging individuals, and anyone requiring additional support for maintaining healthy muscle mass.* NSF Certified for Sport®
-
-$65 /30 Scoops
-
-[Whey Protein Isolate - Chocolate 30 Scoops](https://www.thorne.com/products/dp/whey-protein-isolate-chocolate "Select Whey Protein Isolate - Chocolate")[Whey Protein Isolate - Vanilla 30 Scoops](https://www.thorne.com/products/dp/whey-protein-isolate-vanilla "Select Whey Protein Isolate - Vanilla")
-
- Subscribe: **SAVE UP TO 20%**
-
- Quantity  
-
- Quantity: 1
-
-Add to Cart
-
- Quantity  
-
-Add to Cart
-
- Quantity: 1
-
- HSA/FSA eligible Save an average of 30%
-
- Learn more 
-
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
-
-## Taia Summary
-
-Have questions? Taia can help you decide.
-
-Product Overview Compare Products
-
-*   **What it does:** Delivers 21 grams of high-quality, bioavailable whey protein isolate per serving to help maintain healthy muscle mass, support muscle repair after training, and benefit a healthy weight.* Includes a balanced amino acid profile with 2.2 grams of leucine per serving and added digestive enzymes (bromelain and papain) to aid protein digestion and assimilation.*
-
-*   **How to take:** Mix 1 scoop with at least 8 ounces of water, juice, or your preferred beverage daily.
-
-*   **What you should know:** Features flavors and sweeteners derived from natural sources, is easy to digest, and is NSF Certified for Sport®, ensuring rigorous testing for quality and the absence of banned substances. This product is suitable for athletes, aging individuals, teens, and anyone seeking convenient support for healthy muscle maintenance and recovery.
-
-Show me similar products …[truncated]
+#### How It Works
 
 [Result 6]
-Title: Magnesium Bisglycinate & Reviews | Thorne
-URL: https://www.thorne.com/products/dp/magnesium-bisglycinate
+Title: 19 Individual Organ Ages
+URL: https://www.generationlab.com/blog/best-biological-age-test-kits
 Content:
-# Magnesium Bisglycinate & Reviews | Thorne
+#### 19 Individual Organ Ages
 
-[Skip to main content](https://www.thorne.com/products/dp/magnesium-bisglycinate#main)
+SystemAge moves beyond a single biological age number. It acts as a "DNA methylation noise detector," analyzing 460+ biomarkers to calculate biological ages for 19 organ systems. This organ-specific aging approach is revolutionary because it recognizes that your body doesn't age uniformly. Your heart might age faster than your brain, or your immune system might be in better shape than your metabolism.
 
-**Thorne now accepts FSA/HSA funds via**[**Truemed**](https://www.thorne.com/partners/truemed)**!**
+The 19 analyzed organ systems include: [...] #### Your Personalized Health GPS
 
-![Image 1: icon](https://www.thorne.com/taia/image/ai-minimised.svg)
+SystemAge delivers more than data. It provides personalized, actionable intervention plans for the 19 organ systems. Instead of generic advice like "eat better and exercise more," you receive specific recommendations based on the fastest aging systems and effective interventions.
 
-[![Image 2: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
+The system shows your health journey location and gives directions to your destination. If your cardiovascular system shows accelerated aging, you'll receive heart-healthy recommendations. If your neurodegeneration score is concerning, you'll get brain-specific protocols for cognitive protection.
 
-![Image 3: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
+#### Track Your Age Reversal [...] The 19 analyzed organ systems include:
 
-##### Do you want to know more about this product?
+ Brain Health & Cognition
+ Immune System
+ Reproductive System
+ Cardiac System
+ Inflammatory Regulation
+ Metabolism
+ Tissue Regeneration
+ Blood Sugar & Insulin Control
+ Hepatic System (Liver)
+ Muscular System
+ Skeletal System
+ Nervous System
+ Respiratory System
+ Digestive System
+ Blood & Vascular System
+ Urinary System
+ Oncogenesis (Cell Mutation)
+ Fibrosis (Scar Tissue Formation)
+ Auditory System
 
-Is this product right for me?
+#### Validated Clinical-Grade Precision [...] #### Track Your Age Reversal
 
-What does this product do?
+SystemAge shines for biohackers and results-oriented individuals. The test measures aging and tracks age reversal interventions precisely. Documented cases show 5.5-13.6 year reductions in biological age through targeted interventions guided by SystemAge results.
 
-How do I use this product?
+Examples include a 13.6-year reduction in brain aging through targeted cognitive interventions and a 10.4-year improvement in immune system age through personalized supplementation and lifestyle changes. These are measurable, documented outcomes demonstrating the power of precision longevity medicine.
 
-More info on ingredients
+#### Superior User Experience: Simple, Needle-Free Collection [...] SystemAge is trusted by 150+ longevity clinics worldwide and endorsed by leading physicians like Dr. Adeel Khan and George Church. When the world's leading longevity experts choose SystemAge for their patients, it speaks volumes about the test's scientific credibility and clinical utility.
 
-[Activate Test](https://www.thorne.com/activate)[Sign In](https://www.thorne.com/login)
+## Conclusion
 
-[](https://www.thorne.com/cart)
-
-[![Image 4: Thorne logo](https://d1vo8zfysxy97v.cloudfront.net/images/layout/thorne-logo.svg)](https://www.thorne.com/)
-
-[](https://www.thorne.com/cart)
-
-![Image 5: icon](https://www.thorne.com/taia/image/ShopwithTaia.png)
-
-##### Do you want to know more about this product?
-
-Is this product right for me?
-
-What does this product do?
-
-How do I use this product?
-
-More info on ingredients
-
-*   [Shop](https://www.thorne.com/products)
-*   [Get Started](https://www.thorne.com/get-started)
-*   [Take 5 Daily](https://www.thorne.com/take-5-daily)
-*   [Help](https://www.thorne.com/faqs)
-
-* * *
-
-[Sign In](https://www.thorne.com/login)
-
-*   [Home](https://www.thorne.com/ "Home")/
-*   [Products](https://www.thorne.com/products "Products")/
-*   [SKU M204](https://www.thorne.com/products/dp/magnesium-bisglycinate "SKU M204")
-
-# Magnesium Bisglycinate
-
- 683 Reviews 
-
- See reviews summary 
-
-* * *
-
-*   [Why Ours](https://www.thorne.com/explore/magnesium "Why Ours")
-*   Buy Now
-
-![Image 6: Large image of Magnesium Bisglycinate](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__v4276839dcfb0dd565beb88920a98df340c4ecb91.png)
-
-![Image 7: Magnesium Bisglycinate thumbnail 2](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__v9f2e2cf0ad61f20db8d33f6c4391d85c7a3f012d.jpg)
-
-![Image 8: Magnesium Bisglycinate thumbnail 3](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__v931111faf09b512eb7d3d2cfbf594fa38993df8e.jpg)
-
-![Image 9: Magnesium Bisglycinate thumbnail 4](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__vc94109ac38e8ea1641bcaa8403bb0a2f6798fae4.jpg)
-
-![Image 10: Magnesium Bisglycinate thumbnail 5](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__v88c512c41d23f57d01043dc31d299afc4fc6b3dd.jpg)
-
-![Image 11: Magnesium Bisglycinate thumbnail 6](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__v6396291502a923ff818dd4b07bdc1087b9ed0999.png)
-
-![Image 12: Magnesium Bisglycinate thumbnail 7](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__vec817f77fd7af5d7c5d7a2afb9542f61c0a59e74.png)
-
-![Image 13: Magnesium Bisglycinate thumbnail 8](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__va6e0e58adb34c5c65c7c533b89c2a2456b0b9eb1.png)
-
-![Image 14: Large image of Magnesium Bisglycinate](https://d1vo8zfysxy97v.cloudfront.net/media/product/m204__v4276839dcfb0dd565beb88920a98df340c4ecb91.png)
-
-Current image for thumbnail 1
-
-* * *
-
-#### Powdered formula that promotes restful sleep and muscle relaxation*
-
-An ideal formula for active individuals wanting to unwind. Magnesium Bisglycinate is a lightly sweetened powder that is well-tolerated and well-absorbed. NSF Certified for Sport®
-
-$52 /60 Scoops
-
- Subscribe: **SAVE UP TO 20%**
-
- Quantity  
-
- Quantity: 1
-
-Add to Cart
-
- Quantity  
-
-Add to Cart
-
- Quantity: 1
-
- HSA/FSA eligible Save an average of 30%
-
- Learn more 
-
-![Image 15: Smart search Logo](blob:http://localhost/4642c600c1c55ab6b7a7e6b2e49d046f)
-
-## Taia Summary
-
-Have questions? Taia can help you decide.
-
-Product Overview Compare Products
-
-*   **What it does:** Provides an optimally absorbable form of magnesium that promotes restful sleep and muscle relaxation.* This formula supports a healthy heart, blood vessels, brain, bones, muscles, and lungs, and helps maintain healthy sugar metabolism, normal blood pressure, and muscle comfort.* The bisglycinate form is bound to glycine, a calming neurotransmitter, making it particularly well-suited for supporting relaxation and pre-bedtime supplementation.*
-
-*   **How to take:** Mix 1 scoop with at least 8 ounces of water daily.
-
-*   **What you should know:** This form is gentle on the stomach and less likely to cause laxative effects compared to other magnesium types. It's well-suited for supporting muscle comfort, promoting healthy sleep patterns, and for anyone looking to unwind.* The powder is lightly sweetened, easy to mix, and NSF Certified for Sport®, ensuring quality and purity for athletes and active individuals.
-
-Show me similar products What does this product do?How do I  …[truncated]
+After months of research and testing, the verdict is clear. While several tests indicate your biological age, only SystemAge provides a high-definition, 19-system blueprint for optimal health. It excels in clinical-grade accuracy, comprehensive organ-level analysis, scientific validation, and actionable recommendations. SystemAge is the best biological age test of 2025 and it is in a category of its own.

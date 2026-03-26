@@ -22,6 +22,8 @@ Full registry is at:
 biotech-research-ingestion/src/research/langchain_agent/.cursor/ECOSYSTEM_SKILLS.md
 ```
 
+Langchain MCP ADAPTERS: https://docs.langchain.com/oss/python/langchain/mcp
+
 ## Skill Directory Map
 
 | Task                                                                   | Skill path                                            |

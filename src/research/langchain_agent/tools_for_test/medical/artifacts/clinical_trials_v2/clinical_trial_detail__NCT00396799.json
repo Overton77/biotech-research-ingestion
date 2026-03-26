@@ -1,0 +1,145 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT00396799",
+      "orgStudyIdInfo": {
+        "id": "3115A1-114"
+      },
+      "organization": {
+        "fullName": "Wyeth is now a wholly owned subsidiary of Pfizer",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "Bioequivalence Study Of Bazedoxifene/Conjugated Estrogen Tablets In Postmenopausal Women",
+      "officialTitle": "An Open-Label, Single-Dose, Randomized-to-Sequence, 2-Period, Crossover, Pivotal Bioequivalence Study Between Bazedoxifene Acetate/Conjugated Estrogens (Premarin Current Process) and Bazedoxifene Acetate/Conjugated Estrogens (Premarin New Process) Tablets Administered to Healthy Postmenopausal Women"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2007-03",
+      "overallStatus": "COMPLETED",
+      "startDateStruct": {
+        "date": "2006-11"
+      },
+      "completionDateStruct": {
+        "date": "2006-11"
+      },
+      "studyFirstSubmitDate": "2006-11-07",
+      "studyFirstSubmitQcDate": "2006-11-07",
+      "studyFirstPostDateStruct": {
+        "date": "2006-11-08",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2007-03-12",
+      "lastUpdatePostDateStruct": {
+        "date": "2007-03-13",
+        "type": "ESTIMATED"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "leadSponsor": {
+        "name": "Wyeth is now a wholly owned subsidiary of Pfizer",
+        "class": "INDUSTRY"
+      }
+    },
+    "descriptionModule": {
+      "briefSummary": "The primary objective is to evaluate the bioequivalence between bazedoxifene/conjugated estrogens tablets produced using the current manufacturing process to bazedoxifene/conjugated estrogens tablets produced using a new manufacturing process"
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Menopause"
+      ]
+    },
+    "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1"
+      ],
+      "designInfo": {
+        "allocation": "RANDOMIZED",
+        "interventionModel": "CROSSOVER",
+        "primaryPurpose": "TREATMENT",
+        "maskingInfo": {
+          "masking": "NONE"
+        }
+      }
+    },
+    "armsInterventionsModule": {
+      "interventions": [
+        {
+          "type": "DRUG",
+          "name": "bazedoxifene/conjugated estrogens"
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Pharmacokinetic measures of blood levels of endogenous estrogen hormones, conjugated estrogens and bazedoxifene."
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Safety will be evaluated from reported signs and symptoms, scheduled physical examinations, gynecologic examinations, vital sign measurements, 12-lead ECG and clinical laboratory test results."
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria\n\n* Healthy, postmenopausal women aged 35 to 70 years and weighing at least 50 kg (approx. 110 lbs).\n* At least 6 months of spontaneous amenorrhea (with follicle-stimulating hormone levels of 39 mIU/mL or greater).\n* Nonsmoker or smoker of fewer than 10 cigarettes per day, with ability to abstain for 5 days.\n\nExclusion Criteria\n\n* Women with amenorrhea starting after 54 years of age.\n* A history or active presence of clinically important medical diseases.\n* Use of oral estrogen-, progestin, androgen-, or SERM-containing drug products within 30 days before receiving study drug.",
+      "healthyVolunteers": true,
+      "sex": "FEMALE",
+      "minimumAge": "35 Years",
+      "maximumAge": "70 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ]
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Medical Monitor",
+          "affiliation": "Wyeth is now a wholly owned subsidiary of Pfizer",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ]
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-03-25"
+    },
+    "interventionBrowseModule": {
+      "meshes": [
+        {
+          "id": "C447119",
+          "term": "bazedoxifene"
+        },
+        {
+          "id": "D004966",
+          "term": "Estrogens, Conjugated (USP)"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D045166",
+          "term": "Estradiol Congeners"
+        },
+        {
+          "id": "D012739",
+          "term": "Gonadal Steroid Hormones"
+        },
+        {
+          "id": "D042341",
+          "term": "Gonadal Hormones"
+        },
+        {
+          "id": "D006728",
+          "term": "Hormones"
+        },
+        {
+          "id": "D006730",
+          "term": "Hormones, Hormone Substitutes, and Hormone Antagonists"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

@@ -1,0 +1,109 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00396799",
+          "briefTitle": "Bioequivalence Study Of Bazedoxifene/Conjugated Estrogen Tablets In Postmenopausal Women"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Wyeth is now a wholly owned subsidiary of Pfizer",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Menopause"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "bazedoxifene/conjugated estrogens"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00580632",
+          "briefTitle": "Study Evaluating Workload, Clinical and Therapeutic Management of Psoriatic Arthritis"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Wyeth is now a wholly owned subsidiary of Pfizer",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Psoriatic Arthritis"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00926263",
+          "briefTitle": "A Pharmacokinetic And QT Study Of CP-751,871 In Healthy Subjects"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Pfizer",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Healthy Volunteers"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BIOLOGICAL",
+              "name": "CP-751,871",
+              "description": "single dose, 1-hr IV infusion",
+              "armGroupLabels": [
+                "10 mg/kg cohort"
+              ]
+            },
+            {
+              "type": "BIOLOGICAL",
+              "name": "CP-751,871",
+              "description": "single dose, 1-hr IV infusion",
+              "armGroupLabels": [
+                "20 mg/kg cohort"
+              ]
+            },
+            {
+              "type": "BIOLOGICAL",
+              "name": "CP-751,871, moxifloxacin, saline",
+              "description": "Two doses at 20 mg/kg each on two consecutive days, each administered via 1-hr IV infusion",
+              "armGroupLabels": [
+                "20/20 mg/kg cohort"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pagesFetched": 1,
+  "nextPageToken": "ZVJj7o2Elu8o3lprCc2o4unumpOQJJxsY_aj0A",
+  "totalCount": 3819
+}

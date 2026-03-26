@@ -1,778 +1,427 @@
-Meta: request_id=66737c93-8e07-4876-b000-5737fbe48a3e, response_time_s=0.02
+Meta: request_id=1951d275-4862-4e87-979f-a994dacb50c6, response_time_s=0.37
 
 === Extracted Web Content ===
 [Result 1]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/about-us
+Title: [Skip to content](MainContent)
+URL: https://www.elysiumhealth.com/blogs/leadership-team/eric-marcotulli
 Content:
-[Shop All](/shop)
+[Skip to content](#MainContent)
 
-# Our mission is to empower people to take ownership of their health.
 
-## Own your health, own your day
+## Your cart is empty
 
-Built around our mission, we started AG1 more than a decade ago as a way to bring comprehensive and convenient daily nutrition to just about everybody. Taking a bunch of pills and capsules is hard on the stomach and hard to keep up with. To help each of us be at our best, we developed a better approach to providing your body with a nutritional foundation for optimal performance.
+[Continue shopping](/)
 
-## Building the Foundation Nutrition Movement
+### All Products
 
-75+ vitamins, minerals, whole-food sourced superfoods, probiotics, and adaptogens in one convenient daily health drink. That’s it.
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-Our philosophy is to focus on a very small number of products based on what the latest science indicates is essential to human health. Occasionally we create new products, but we never make anything new just to sell you on more.
+[Go to All Products collection page
+Shop All Products](/collections/all)
 
-## We’re committed to the highest quality ingredients and manufacturing processes
 
-AG1 is NSF Certified for Sport®, the gold standard for professional athletes who have to adhere to strict rules regarding supplements and nutritional products.
 
-## We aspire to build a healthier world.
+* [Register Index](https://my.elysiumhealth.com/index/start)
+* [Help Center](/pages/support)
 
-We believe that when people take ownership of their health, the effect extends far beyond each individual. It's why we've have continuously improved AG1 since launch, and why we're constantly working to to make a positive impact on our community and environment.
+[Log in](https://auth.elysiumhealth.com/authorize?response_type=code&client_id=UsPPT7nPkUv1IM3t2NBI3YMgWZr9TVGx&return_to=/account&auto_login=false?redirect=https://www.elysiumhealth.com)[Cart](/cart)
+
+
+
+# Eric Marcotulli
+
+CEO
+
+Eric Marcotulli, Elysium Health co-founder and chief executive officer, graduated from Harvard Business School and joined Sequoia Capital as an investment partner. While in Silicon Valley, Marcotulli realized that despite the significant, positive impact of new technologies on our understanding of health and disease, there remained a lack of innovation in the consumer-facing portion of the healthcare market.
+
+With a keen interest in aging research and its potential to have a profound impact on the most important areas of health, he created a company focused on developing compelling compounds found in nature that support long-term health.
+
+
+
+* Choosing a selection results in a full page refresh.
+* Opens in a new window.
 
 [Result 2]
-Title: ![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-URL: https://drinkag1.com/what-is-ag1
+Title: Your cart is empty
+URL: https://www.elysiumhealth.com/blogs/leadership-team/dan-alminana
 Content:
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+## Your cart is empty
 
-# What is AG1?
+Have an account?
 
-AG1 is so much more than greens. It's your Daily Health Drink of vitamins, minerals, probiotics, and whole food sourced ingredients in one. Validated by research and formulated for you, AG1 helps your whole body, brain, and gut health thrive.\*
+[Log in](/account/login) to check out faster.
 
-## Less supplements. More benefits.
+![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
 
-To nourish your whole body health, you’d need multiple supplements.\*  
-One scoop of AG1 replaces the following:
+### All Products
 
-![]()
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-## Less supplements. More benefits.
+## Your Cart
 
-To nourish your whole body health, you’d need multiple supplements.\*  
-One scoop of AG1 replaces the following:
+Loading...
 
-![]()
+## Order Subtotal
 
-## What's in a scoop of AG1 Next Gen?
+$0
 
-You’d be hard-pressed to find this much nutrient density, at this high of quality — all in one scoop.
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
 
-![]()
+**Basis**NAD+ Supplement
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
+![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
+![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
+![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
+![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
+![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
+![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
+![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
+![Dan Alminana - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c5cbe258c21d15152fc80d733ad54afb.png?v=1629253851&width=384)
+![Dan Alminana - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c5cbe258c21d15152fc80d733ad54afb_800x.png?v=1629253851)
 
-View All Ingredients
+# Dan Alminana
 
-![]()
+COO
 
-## What AG1 is not
+Dan Alminana, chief operating officer, began his finance career as a consultant at Deloitte and an associate in Citi Smith Barney’s venture capital coverage group. From there, he served as vice president at JP Morgan Securities, where he launched and led its Silicon Valley venture capital coverage unit.
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/b6f7b2d2797c81f22cd1d40385aae99feeb5c9fb-42x42.svg)
+Dan worked closely with the international healthcare and technology communities, including leading investors and the most advanced, forward-thinking startups in the U.S., Asia, and Europe. His leadership through complex acquisitions, divestitures, and IPOs made him a sought-after specialist for startups transitioning from private to public companies.
 
-### Protein Supplement
+## Products
 
-While AG1 contains pea protein to optimize digestive comfort, it does not replace a protein supplement.
+## Company
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/b6f7b2d2797c81f22cd1d40385aae99feeb5c9fb-42x42.svg)
+![iHerb logo](https://assets-manager.abtasty.com/f4b5045cf2a942d4103dc320b12f0003/iherb_logo_white.png)
 
-### Meal Replacement
+## Support
 
-AG1 does not provide enough calories to skip a meal. It is designed to complement a healthy diet, not replace one.
+## Follow
 
-![](https://cdn.sanity.io/images/jf30o7wb/production/b6f7b2d2797c81f22cd1d40385aae99feeb5c9fb-42x42.svg)
+Enter your email for exclusive offers, company news, more about our science, and more.
 
-### Green Juice
+These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age.
 
-AG1 provides nutrients from fruits and vegetables but removes excess sugar by using high quality extracts.
-
-![Woman holding AG1 shaker bottle]()
-
-## Still unsure if AG1 is for you?
-
-## How do we compare?
-
-|  |  | Multivitamins | Probiotics | Greens |
-| --- | --- | --- | --- | --- |
-| Vitamins |  |  |  |  |
-| Minerals |  |  |  |  |
-| Prebiotics |  |  |  |  |
-| Probiotics |  |  |  |  |
-| Greens & Superfoods |  |  |  |  |
-| Antioxidants |  |  |  |  |
-| Stress Adaptogens |  |  |  |  |
-| Digestive Enzymes |  |  |  |  |
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/f15661c6ffcde6ccd324737c9c673c4370ebaa6b-96x38.png)
-
-Multivitamins
-
-Probiotics
-
-Greens
-
-Vitamins
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-
-Minerals
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-
-Prebiotics
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-
-Probiotics
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-
-Greens & Superfoods
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-
-Antioxidants
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/a8a02bac18a7ab60e856538af23fb876bee1c1fe-32x33.svg)
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-
-Stress Adaptogens
-
-![](https://cdn.sanity.io/images/jf30o7wb/production/4e10dd407a9e633a65a2edc4d4f7f2fe0857b228-32x32.svg)
-![](https://cdn.sanity.io/im …[truncated]
+\*Individual results may vary. This timeline may differ from the typical user’s experience and is not intended to represent or guarantee that every user will achieve the same or similar results.
 
 [Result 3]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/about-ag1/ingredients/ctr
+Title: Dr. Guarente holds a B.S. from MIT and a Ph.D. from Harvard.
+URL: https://www.elysiumhealth.com/blogs/leadership-team/leonard-guarente-phd
 Content:
-[Shop All](/shop)
+Dr. Guarente is best known for his research on the role of sirtuins, a class of proteins that play a key role in regulating metabolic systems. In particular, Dr. Guarente was the first to identify SIR2 as the gene that controls aging in yeast cells, and to show that SIR2 and related proteins function as NAD+ dependent enzymes—the first link between NAD+ and aging. The mammalian version of SIR2, SIRT1 (and its associated proteins), has since been shown by Dr. Guarente and others to play a key role in longevity and metabolic function in mammals. Human studies have begun to show that dietary supplements that raise NAD+ levels exert similar effects in aging humans. [...] Dr. Guarente’s lab is currently focused on a protein involved in muscle repair termed dysferlin, which is defective in a category of muscular dystrophies. Chemical chaperones have been identified that can rescue missense mutations in dysferlin. These molecules will be tested for prolongation of muscle health in normal aging. 
 
-# High-quality ingredients optimized for impact
+Dr. Guarente holds a B.S. from MIT and a Ph.D. from Harvard.
 
-## We don’t think you should settle for questionable ingredients when it comes to your daily nutrition. AG1’s ingredients are [sourced from quality partners](#imageAndTextV3_63a212251556551e8f06adaa68b8f4e1) for absorption, potency, and nutrient density to deliver the Foundational Nutrition your body needs.\*
+## Products
 
-## See what goes into every scoop of AG1
+## Company
 
-Free of
+iHerb logo
 
-GMOs  
-Artificial Sweeteners  
-Gluten  
-Dairy or Lactose  
-Egg or Peanuts
+## Support
 
-Diet Friendly
+## Follow
 
-Vegetarian  
-Vegan  
-Paleo  
-Keto  
-Low-carb
+Enter your email for exclusive offers, company news, more about our science, and more. [...] ## Your cart is empty
 
-QUALITY SOURCING
+Have an account?
 
-## Farm to Label
+Log in to check out faster.
 
-We’ve always been dedicated to rigorous testing, third-party certifications, and strict sourcing standards. Now, we’re taking it a step further by creating visibility between our direct ingredients and the partners and farmers that enable our high quality and purity standards.
+All Products
 
-## Citrus Bioflavonoids
+### All Products
 
-#### Central Valley, California
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-Ingredient #51 of 75+: citrus bioflavonoids from citrus proudly grown in sunny Fresno, California. AG1 takes the concentrated and potent extract of citrus bioflavonoids isolated from the most powerful – but often under-appreciated – part of the fruit: the peel. Supporting immune defense, citrus bioflavonoids are just one of the many high quality ingredients packed into every serving of AG1.
+## Your Cart
 
-## Pea Protein
+Loading...
 
-#### Manitoba, Canada
+## Order Subtotal
 
-Ingredient #50 of 75+: Pea protein contains essential amino acids and is used in AG1 to support digestion by helping transport nutrients across the gut barrier. In this episode, meet a family of growers behind some of the high quality pea protein that makes its way into AG1. Across multiple generations, these growers remain focused on maintaining high quality standards and a palpable sense of community pride.
+$0
 
-## Vitamin E
+BasisNAD+ Supplement
 
-#### La Pampa Region, Argentina
+Elysium Health Home
 
-Ingredient #3 of 75+: In this episode, we follow Vitamin E from one of our suppliers, derived from the crushed seeds of hardy sunflowers grown in central Argentina. What many people might not realize is that vitamin E is considered an essential vitamin – meaning it needs to be consumed in the human diet, either from food or supplements because the body cannot produce it. Fortunately, sunflower seeds are an excellent natural source of vitamin E, primarily in the form of alpha-tocopherol, which is the most biologically active form for humans. This makes its antioxidant and immune-supporting properties more bioavailable.
+Leonard Guarente, PhD - Elysium Health
+Leonard Guarente, PhD - Elysium Health
 
-## Get daily nutrition you can count on with ingredients that work with your body.
+# Leonard Guarente, PhD
 
-[Buy AG1 Now](https://drinkag1.com/shop/greens-powder-pouch)
+Chief Scientist
 
-90-day money back guarantee
-
-Update or cancel anytime
-
-## AG1 Supplement Facts
-
-AG1 is a comprehensive daily health drink formulated to deliver what your body needs in one convenient serving. From high quality vitamins and minerals, to prebiotics and probiotics, digestive enzymes, adaptogens, superfoods and more — AG1 makes it powerfully simple for you to cover your foundational nutrients for optimal gut health, immune support, energy, healthy brain and mood.\*
-
-## 50,000+ verified 5-star reviews for AG1 products
-
-### The new formula is really great
-
-"The new formula with advanced pre-and probiotics has really hit the bull’s-eye for me. It has been a big difference in my digestion, and I am very happy with the product. I highly recommend it."
-
-Louis C., 7/22/25 - AG1 Review
-
-### A nice sweet experience
-
-"I have to say I have tried a lot of different types of greens and this is the best brand. I was excited to try the new flavor and it did not disappoint! I look forward to my greens daily and enjoy them!"
-
-Ashley C., 7/16/2025 - AG1 Review
-
-### I Love My AG1
-
-"I continue to love the taste and feel good while drinking AG1 daily. The customer service is outstanding and the company rewards loyal customers with occasional perks. That makes me feel good too!"
-
-Wendy O., 3/17/25 — AG1 RevIew
-
-## FAQs
-
-Vitamin D3+K2 complements AG1 with a single-drop formula in a bioavailable oil form.
-
-The product is formulated separately from AG1 to provide optimal quality and bioavailability.
-
-AG1 Omega 3 complements AG1 with high-quality EPA and DHA in a bioavailable oil form. Each serving provides over 2000mg, sourced from wild-caught small fish that are molecularly distilled for purity and quality.
-
-The product is formulated separately from AG1 to provide optimal bioavailability.
-
-Since 2010, we’ve earned the trust of millions worldwide through our uncompromising commitment to quality, efficacy, and safety.
-
-This includes:
-
-* Multiple gold-standard clinical trials that consistently show AG1 Next Gen helps fill nutrient gaps across a range of lifestyles and diets (1-4).
-* NSF Certified for Sport®, a rigorous third-party certification ensuring AG1 is free from over 280 banned substances, including stimulants, narcotics, diuretics, and masking agents.
-
-AG1 ingredients are sourced from quality partners for absorption, potency, and nutrient density.
-
-You can read more about …[truncated]
+Dr. Guarente is the Novartis Professor of Biology at MIT, where he has taught and run his lab for more than 40 years. His research has focused on the genetic and molecular basis of aging—first in model organisms and now in humans.
 
 [Result 4]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/about-ag1/quality-standards/ctr
+Title: Your cart is empty
+URL: https://www.elysiumhealth.com/blogs/leadership-team/mark-morris
 Content:
-[Shop All](/shop)
+## Your cart is empty
 
-AG1 - QUALITY & TESTING
+Have an account?
 
-# Tested for those that test themselves.
+[Log in](/account/login) to check out faster.
 
-We rigorously test our formula for hundreds of contaminants and impurities to guarantee we’re delivering the highest quality nutrients available. And AG1 is NSF Certified for Sport®, the gold standard in independent quality and safety certifications.
+![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
 
-## Third-party certifications
+### All Products
 
-AG1 is proudly NSF Certified for Sport®, one of the most rigorous independent quality and safety certification programs in the supplement industry.
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-NSF conducts annual audits of our manufacturing facilities, reviews ingredients for toxicology, and ensures AG1 label claims are accurate. Additionally, the organization third-party tests AG1 for over 280 banned substances.
+## Your Cart
 
-## Certificate of analysis
+Loading...
 
-Each batch of AG1 is tested for a panel of quality and purity analytes, including microbial contaminants, heavy metals, allergens, and banned substances. As part of routine testing, we also test for chemical compounds like caffeine and oxalates.
+## Order Subtotal
 
-The Certificate of Analysis (COA), is a document that contains our testing report and the results based on safe limits and specifications.
+$0
 
-SEE THE RESULTS:
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
 
-* [Routine Test Report](https://cdn.sanity.io/files/jf30o7wb/v53-staging/7a48212827d202cbb4e5466fd191c687c818724d.pdf)
-* [Annual Test Report](https://cdn.sanity.io/files/jf30o7wb/v53-staging/b017852216b99b4bf0f1e668a35f03b3c1435c60.pdf)
+**Basis**NAD+ Supplement
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
+![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
+![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
+![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
+![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
+![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
+![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
+![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
+![Mark Morris - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c6f5d0f1d893662ba8da680d0e9bd027.jpg?v=1629253876&width=604)
+![Mark Morris - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c6f5d0f1d893662ba8da680d0e9bd027_800x.jpg?v=1629253876)
 
-## Heavy metals
+# Mark Morris
 
-Anything that comes from the ground, including fruits, vegetables, and even drinking water, is likely to contain some heavy metals.
+Chief Product Officer
 
-AG1 is tested to ensure levels of heavy metals are below the guidelines set by US Pharmacopeia (USP) and NSF International, two independent, third-party organizations that set rigorous standards for safety, quality, and compliance. USP guidelines are widely used as a regulatory standard for pharmaceuticals, dietary supplements and food ingredients.
+Mark Morris is the chief product officer at Elysium Health, where he leads all research and product development functions, including new technology evaluation, supply chain development and clinical research. At Elysium, he is also living his passion to further open access research and unlock technologies that can significantly impact human health.
 
-THIS INCLUDES:
+Mark previously held several executive leadership roles in the nutraceutical space and was intimately involved in developing new technologies to various industries including consumer health, animal health, and cosmetics. He also worked as a research scientist at Yazaki Technical Center North America, an R&D center for Yazaki Corporation, headquartered in Japan.
 
-* Lead
-* Mercury
-* Cadmium
-* Arsenic
+Mark holds a B.S. in chemical engineering from the University of Akron.
 
-## Allergens
+## Products
 
-AG1 is not formulated with wheat, dairy, egg, or peanut-containing ingredients and is tested for key allergens identified by the FDA, including gluten (<20ppm), milk, egg, and peanut. If you have any other allergies, please consult the full ingredient list on our packaging or product pages on <https://drinkag1.com/about-ag1/ingredients/ctr>
+## Company
 
-## Pesticides & herbicides
+![iHerb logo](https://assets-manager.abtasty.com/f4b5045cf2a942d4103dc320b12f0003/iherb_logo_white.png)
 
-Chemicals used in agriculture can disrupt the gut and immune system, decreasing or blocking nutrient absorption. Rather than relying on supplier testing, we third party test AG1 for over 500 pesticides and herbicides.
+## Support
 
-INCLUDING:
+## Follow
 
-* Glyphosate: an herbicide and commonly used weed killer in conventional farming
-* Atrazine: The second-most commonly used pesticide after glyphosate.
-* AMPA: a byproduct of glyphosate
+Enter your email for exclusive offers, company news, more about our science, and more.
 
-## Microbes & toxins
+These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age.
 
-Microbial testing is crucial for ensuring AG1 is safe to drink on a long-term daily basis.
-
-WE TEST FOR:
-
-* Harmful bacteria, including Salmonella, E. coli, and Staphylococcus.
-* Molds and yeasts that have been linked to immune disruption.
-* Microbes that can produce toxic substances like mycotoxins and aflatoxins.
-
-## Banned substances
-
-Professional and Olympic athletes have relied on AG1 for their nutrition and performance for over a decade. As a product NSF Certified for Sport®, AG1 is tested for over 280 substances banned by major sporting organizations to mitigate risks of consuming contaminated, adulterated supplements.
-
-BANNED SUBSTANCES INCLUDE:
-
-* Anabolic agents & beta blockers
-* Beta-agonists & diuretics
-* Hormone antagonists
-* Masking agents
-* Narcotics/cannabinoids
-* Stimulants
-* Selective androgen receptor modulators
-* Metabolic modulators
-* Growth hormone secretagogues
-
-## Residual solvents
-
-Residual solvents are volatile chemicals that can result from processing procedures such as extraction of plant parts and purification of ingredients. While testing for residual solvents was initially developed for pharmaceuticals, as part of our quality, AG1 is tested for all 3 classes of solvents, including acetone and ethanol.
-
-## Nutritional testing
-
-AG1 tests for nutritional content to ensure that the amounts stated on the label are what you get in the product. Nutritional testing is vital to ensuring the efficacy of the formula, and that you receive what you are paying for.
-
-## Sensory experience
-
-Taste is an obsession of ours. Every batch of AG1 undergoes a systematic evaluation of sensory characteristics like aroma, taste, mouthfeel, and aftertaste. We conduct a science-based sensory testing program with a third-party to ensure the consistency of the AG1 flavor.
-
-AG1’S NATURAL FLAVORS ARE DERIVED FROM PLANTS AND DO NOT INCLUDE:
-
-* Artificial sweeteners
-* Erythritol
-* Monk fruit
-* MSG
-
-## Botanical identification & testing
-
-We partner with Alkemist Labs—a leader in botanical and nutraceutical testing—to confirm the identity and potency of raw botanical ingredients that go into our products. Through advanced analytical methods, Alkemist Labs independently val …[truncated]
+\*Individual results may vary. This timeline may differ from the typical user’s experience and i …[truncated]
 
 [Result 5]
-Title: ![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-URL: https://drinkag1.com/blog/post/ag1-nsf-certified-for-sport
+Title: Tom received a S.B. from MIT and a Ph.D. from Caltech, both in chemistry, and a J.D. from Rutgers School of Law.
+URL: https://www.elysiumhealth.com/blogs/leadership-team/thomas-e-wilhelm-phd
 Content:
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fba5dbe439a5543dc209866c1a12d2c4bc789f20e-11491x8618.tif%3Fauto%3Dformat&w=1920&q=75)
+Tom received a S.B. from MIT and a Ph.D. from Caltech, both in chemistry, and a J.D. from Rutgers School of Law.
 
-# How AG1 Is Made: Understanding NSF Certified for Sport®
+## Products
 
-The certification is a rigorous, ongoing process—one AG1 has upheld since 2019—which aligns with global anti-doping regulations, including the World Anti-Doping Agency (WADA).
+## Company
 
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Fba5dbe439a5543dc209866c1a12d2c4bc789f20e-11491x8618.tif%3Fauto%3Dformat&w=1920&q=75)
+iHerb logo
 
-## How AG1 Is Made: Understanding NSF Certified for Sport®
+## Support
 
-You may have heard us mention that our formula is NSF Certified for Sport®. In fact, the NSF seal is proudly displayed on every single AG1 pouch. But what does NSF Certified for Sport® mean and why is third-party certification important?
+## Follow
 
-In short, NSF Certified for Sport® is considered the gold standard in independent dietary supplement testing.
+Enter your email for exclusive offers, company news, more about our science, and more.
 
-## Why is third-party certification important?
+These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age. [...] Chief Legal Officer and General Counsel
 
-Third-party testing is critical because it provides **independent verification** that a product meets the highest safety, quality, and transparency standards—rather than relying solely on a company’s own claims.
+Thomas Wilhelm is general counsel at Elysium Health. Before joining Elysium, Tom was general counsel and sole lawyer for Tom Ford International, where he was responsible for all legal matters from the corporate level to retail operations. Prior to that, he was associate counsel at Pearson Education and an associate at Cleary, Gottlieb, Steen & Hamilton LLP, an international law firm headquartered in New York City.
 
-## What is the NSF?
-
-Founded in 1944, the National Sanitation Foundation (NSF) is an independent international organization that develops public health standards to ensure the safety and quality of food, water, the environment, and consumer products. NSF’s standards serve as guidelines for ingredient purity, safe manufacturing, honest labeling, and more.
-
-NSF translates these standards into different levels with associated certifications. In order to certify a product, NSF conducts extensive audits of productions and production facilities. The final and most rigorously audited round is the NSF Certified for Sport® certification.
-
-## What is the background of NSF Certified for Sport®?
-
-NSF created their Certified for Sport® program because of an influx of contaminated and mislabeled dietary supplements in the early 2000s. For competitive athletes who were concerned about inadvertently consuming banned substances and thus facing penalties and disqualifications, having a supplement-testing program they could trust was hugely important. NSF International introduced their Certified for Sport certification so that products could be independently tested and verified.
-
-## AG1 + NSF Certified for Sport®
-
-NSF Certified for Sport® tests dietary supplements for over 280 banned substances, covering a wide range of stimulants, steroids, diuretics, masking agents, and other substances prohibited in sports. NSF Certified for Sport® also guarantees that products are manufactured in GMP (Good Manufacturing Practice)-compliant facilities, where every batch is tested for contaminants and banned substances.
-
-The certification is a rigorous, ongoing process—one AG1 has upheld since 2019. These align with global anti-doping regulations, including the World Anti-Doping Agency (WADA).
-
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F6a7f34d505c02437f6ee94982560c6ba1dbe9811-11335x8501.tif%3Fauto%3Dformat&w=1920&q=75)
-
-Banned substances tested by NSF Certified for Sport® include:
-
-Anabolic Agents  
-Beta-agonists  
-Diuretics  
-Hormone Antagonists  
-Masking Agents  
-Narcotics/Cannabinoids  
-Stimulants  
-Beta Blockers  
-Selective Androgen Receptor Modulators  
-Metabolic Modulators  
-Growth Hormone Secretagogues
-
-Third-party testing is vital for ensuring the quality and safety of dietary supplements. This assurance is important for athletes and non-athletes alike and lots tested and certified are listed online at nsfsport.com and in the Certified for Sport® app for visibility. The certification ensures that AG1 delivers on its promises, with a standard of purity that’s Certified for Sport®—and for all the bodies we fuel.
-
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2Ff04bec738fc7a22eb22ea844dd72a33a1b8aa605-8643x11524.tif%3Fauto%3Dformat&w=1920&q=75)
-
-### Sources
-
-https://www.nsfsport.com/
-
-Get the scoop on wellbeing science  delivered to your inbox.
-
-Sign up
-
-### SHOP
-
-### DAILY HEALTH
-
-### SLEEP SUPPORT
-
-### LEARN MORE
-
-### CONTACT & SUPPORT
-
-## Connect
-
-Join Our Newsletter
-
-\* These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.
-
-Information on this site is provided for informational purposes only. It is not meant to substitute for medical advice from your physician or other medical professional. You should not use the information contained herein for diagnosing or treating a health problem or disease, or prescribing any medication. Careful …[truncated]
+Tom began his professional career as a chemist, working in the laboratories of Richard Schrock and Bob Grubbs, who later shared the 2005 Nobel Prize in Chemistry, and as a patent and chemical information specialist at ExxonMobil. He has numerous patents and papers published in scientific journals from his time as a chemist. [...] \Individual results may vary. This timeline may differ from the typical user’s experience and is not intended to represent or guarantee that every user will achieve the same or similar results.
 
 [Result 6]
-Title: ![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-URL: https://drinkag1.com/leadership
+Title: Your cart is empty
+URL: https://www.elysiumhealth.com/blogs/leadership-team/whitney-christopher
 Content:
-![](/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fjf30o7wb%2Fproduction%2F10b0e7fd4f18f3c835d3f6c81d44e2d0d7e184a6-123x55.svg&w=256&q=75)
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+## Your cart is empty
 
-# AG1 Leadership
+Have an account?
 
-Each member of our global leadership team brings deep expertise from diverse industries. United by a mission to empower health, they are dedicated to raising the bar for dietary supplements and delivering an incredible experience to our customers on a daily basis.
+[Log in](/account/login) to check out faster.
 
-![]()
+![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
 
-### Kat Cole
+### All Products
 
-Chief Executive Officer
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-![]()
+## Your Cart
 
-### Rosalind Chevreuil
+Loading...
 
-Chief People Officer
+## Order Subtotal
 
-![]()
+$0
 
-### Paulie Dery
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
 
-Chief Marketing Officer
+**Basis**NAD+ Supplement
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
+![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
+![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
+![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
+![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
+![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
+![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
+![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
+![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
+![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
+![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
+![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
+![Whitney Christopher - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/9f3949f2590f8e81b2fa712893e154aa.png?v=1629253857&width=384)
+![Whitney Christopher - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/9f3949f2590f8e81b2fa712893e154aa_800x.png?v=1629253857)
 
-![]()
+# Whitney Christopher
 
-### Sam Diacos
+VP, Communications & Brand Marketing
 
-Chief Financial Officer
+Whitney Christopher is vice president of communications and brand marketing at Elysium Health. Prior to joining Elysium, Whitney led communications and product marketing at the design and technology brand Dwell, garnering coverage for its top executives, the launch of its digital platform, and leading the rollout of the Modern by Dwell Magazine collection for Target.
 
-![]()
+Whitney has also worked with IDG, Volvo, Live Nation, Monogram, LG, Thompson Hotels, and Four Seasons Hotels and Resorts, among others, to grow their brands through meaningful press coverage, events, and partnerships. Throughout her career, she has focused on cultivating relationships and anticipating the needs of others.
 
-### Dr. Ralph Esposito, ND, LAc, IFMCP
+Whitney holds a B.S. in biological sciences from the University of California, Irvine.
 
-Chief Science & Nutrition Officer
+## Products
 
-![]()
+## Company
 
-### Leala Francis
+![iHerb logo](https://assets-manager.abtasty.com/f4b5045cf2a942d4103dc320b12f0003/iherb_logo_white.png)
 
-Senior Vice President of Customer Insights and Membership Experience
+## Support
 
-![]()
+## Follow
 
-### Matt Francis
+Enter your email for exclusive offers, company news, more about our science, and more.
 
-Chief Technology Officer
+These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age.
 
-![]()
-
-### Stacey Hallerman
-
-Chief Legal Officer
-
-![]()
-
-### Tim Harrington
-
-President International & CEO APAC
-
-![]()
-
-### Jason Marshall
-
-Chief Growth Officer
-
-![]()
-
-### Tony Milikin
-
-Chief Supply Chain Officer
-
-![]()
-
-## One scoop. Every morning. For life.
-
-### SHOP
-
-### DAILY HEALTH
-
-### SLEEP SUPPORT
-
-### LEARN MORE
-
-### CONTACT & SUPPORT
-
-## Connect
-
-Join Our Newsletter
-
-\* These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.
-
-Information on this site is provided for informational purposes only. It is not meant to substitute for medical advice from your physician or other medical professional. You should not use the information contained herein for diagnosing or treating a health problem or disease, or prescribing any medication. Carefully read all product documentation. If you have or suspect that you have a medical problem, promptly contact your regular health care provider.
-
-\*\*Offer valid for new subscribers only. Valid on the first shipment only of one new AG1 and/or one new AGZ subscription. Renewals bill automatically at the then current rate until canceled. Cannot be combined with other offers or discounts and cannot be applied to prior purchases. One per customer. Non-transferable. Limited time only.
-
-\*\*AG1 Welcome Kit Offer valid for new AG1 subscribers only. AGZ frother Offer valid for first AGZ order only.
-
-◊According to IQVIA Pro Voice Survey of 248 primary care physicians in December 2025.
-
-††Free shipping on subscription purchases for new U.S. customers only.
-
-ΔTruemed eligibility and approval required. This link will take you to a third party website hosted by Truemed (the "Site"). Linking to this Site does not constitute an endorsement or approval by AG1 or any of its employees of the content, products, services or opinions on the Site. This is being provided as a convenience and AG1 bears no responsibility for the accuracy, legality or content of the Site or for that of any subsequent links on the Site. Contact the owners of the Site for answers to questions regarding its content.
-
-Actual Packaging May Vary
-
-Your privacy is our priority. Learn more:
+\*Individual results may vary. This timeline may differ from t …[truncated]
 
 [Result 7]
-Title: [Shop All](/shop)
-URL: https://drinkag1.com/products/greens-powder-pouch
+Title: Ryan Dellinger, PhD
+URL: https://www.elysiumhealth.com/blogs/leadership-team/ryan-dellinger-phd
 Content:
-[Shop All](/shop)
+# Ryan Dellinger, PhD
 
-# AG1: Next Gen Pouch
+VP, Scientific Affairs
 
-verified 5-star reviews for AG1 products
+Ryan Dellinger is vice president of scientific affairs at Elysium Health, where he works on product development, intellectual property, scientific collaborations, and clinical trials. Previously, Ryan was director of scientific affairs at another dietary supplement and ingredient company. Prior to that, he was an assistant project scientist at the University of California, Irvine, where he was involved in several pre-clinical and clinical studies investigating skin cancer prevention. [...] Ryan also served as a postdoctoral researcher in the pharmacology department at Penn State University Medical Center, where he spent four years investigating the mechanism of activity of Phase II metabolic enzymes and their role in cancer risk, treatment, and prevention. Ryan holds a B.S. in biochemistry from the University of the Pacific and a Ph.D. in biochemistry and molecular biology from the University of California, San Diego.
 
-*A smooth, light flavor with hints of pineapple and vanilla*
+## Products
 
-Free Member Gifts- $43value\*\*
+## Company
 
-Delivered once with your AG1 subscription
+iHerb logo
 
-† Value of one-time purchase
+## Support
 
-Research suggests up to 90 days to notice most benefits.
+## Follow
 
-Your subscription includes:
+Enter your email for exclusive offers, company news, more about our science, and more. [...] ## Your cart is empty
 
-* Free shipping always
-* Exclusive Membership rewards
-* 90-day money-back guarantee
-* Pause or cancel anytime
+Have an account?
 
-AG1 Next Gen is a clinically-backed Daily Health Drink that combines a multivitamin, pre- and probiotics, superfoods, and antioxidants into one delicious green scoop.\*
+Log in to check out faster.
 
-Men, women, and people over 18-years-old who are not currently pregnant or breastfeeding. AG1 greens is suitable for a variety of different diets and lifestyles, including, paleo, keto and low-carb, vegan, vegetarian, and intermittent fasting.
+All Products
 
-Daily support for:\*  
-– Energy production  
-– Regular digestion & less bloating  
-– Immune defense  
-– Healthy brain & mood
+### All Products
 
-1. Mix contents of one level 13g green powder scoop of AG1 with 8-10 oz of cold water  
-2. Shake until dissolved  
-3. Enjoy!
+From the Lab to Your Door Promote optimal aging with Basis, support...
 
-AG1 Next Gen helps fill nutrient gaps and promote gut health with 75+ ingredients sourced for absorption and nutrient density. Each batch of AG1 is rigorously tested and free from more than 280 banned substances. We’re proud to be part of a small number of products that have achieved - and maintained - NSF Certified® For Sport.
+## Your Cart
 
-Need your AG1 on the go? Try our Travel Packs
+Loading...
 
-HSA/FSA eligible with
+## Order Subtotal
 
-## AG1 is a more-in-one solution
+$0
 
-| Multivitamins | Probiotics | Greens |
-| --- | --- | --- |
-| Vitamins |
-| Minerals |
-| Prebiotics |
-| Probiotics |
-| Greens & Superfoods |
-| Antioxidants |
-| Digestive Enzymes |
+BasisNAD+ Supplement
 
-*†Based on current available data for mass market dietary supplements.*
+Elysium Health Home
 
-## In One Scoop of AG1 Next Gen
+Ryan Dellinger, PhD - Elysium Health
+Ryan Dellinger, PhD - Elysium Health
 
-AG1 complements a healthy diet. It’s easy to incorporate into any lifestyle or health regimen without overdoing it. Eat your macros, then take AG1.
+# Ryan Dellinger, PhD
 
-Calories
-
-40
-
-Carbohydrates
-
-6g
-
-FIBER
-
-2g
-
-Naturally occurring SUGAR
-
-<1g
-
-Protein
-
-2g
-
-Superfoods and Prebiotics
-
-7.5g
-
-Daily Phytonutrients
-
-1.5g
-
-PROBIOTICS
-
-10 BILLION CFU
-
-Free of
-
-GMOs  
-Artificial Sweeteners  
-Gluten  
-Dairy or Lactose  
-Egg or Peanuts
-
-Diet Friendly
-
-Vegetarian  
-Vegan  
-Paleo  
-Keto  
-Low-carb  
-Halal
-
-## Formulated for your body. Clinically backed.
-
-### Our doctors, scientists, and researchers worked with third-party experts to study the AG1 Next Gen formula. Here is what they found:
-
-IMPROVES KEY NUTRIENT LEVELS WITHIN 3 MONTHS†
-
-CLINICALLY SHOWN TO ENRICH THE GUT MICROBIOME†
-
-70%
-
-of subjects had an increase in RBC folate level†
-
-73%
-
-of subjects saw an increase in vitamin C levels1
-
-10x
-
-increase in healthy bacteria in the gut†
-
-[See Our Studies](/learn/research/scientific-research)
-
-*†Based on clinical studies in healthy adults ages 18–59, evaluating nutrient biomarkers, microbiome shifts, and bioavailability. Study designs and durations varied. Please see drinkag1.com/science for additional information.*
-
-## High-quality ingredients
-
-Every scoop of AG1 works to deliver comprehensive daily nutrition with ingredients that are carefully sourced for absorption, potency, and nutrient density.
-
-Vitamins & minerals
-
-Vitamins and minerals are micronutrients that support energy production for daily function, like B complex and vitamin B12.
-
-Pre & probiotics
-
-Probiotics and prebiotics, like apple and inulin, work together to promote growth of healthy bacteria and gut microbiome function.
-
-Stress adaptogens
-
-Stress adaptogens, like rhodiola, are not normally consumed in a regular diet and are known to help the body manage stress to support energy and vitality.
-
-Antioxidants
-
-Help combat environmental and oxidative stress.\*
-
-Superfoods & mushrooms
-
-Antioxidants, like citrus bioflavonoids, help combat against environmental and oxidative stress.
-
-Digestion support
-
-Digestive enzymes, like bromelain, help breakdown nutrients from whole foods, while soothing ingredients, like ginger, help make AG1 easy on the stomach.\*
-
-## 50,000+ verified 5-star reviews for AG1 products
-
-### The new formula is really great
-
-"The new formula with advanced pre-and probiotics has really hit the bull’s-eye for me. It has been a big difference in my digestion, and I am very happy with the product. I highly recommend it."
-
-Louis C., 7/22/25 - AG1 Review
-
-### A nice sweet experience
-
-"I have to say I have tried a lot of different types of greens and this is the best brand. I was excited to try the new flavor and it did not disappoint! I look forward to my greens daily and enjoy them!"
-
-Ashley C., 7/16/2025 - AG1 Review
-
-### I Love My AG1
-
-"I continue to love the taste and feel good while drinking AG1 daily. The customer service is outstanding and the company rewards loyal customers with occasional perks. That makes me feel good too!"
-
-Wendy O., 3/17/25 — AG1 RevIew
-
-## FAQs
-
-AG1 Next Gen was designed as a foundational nutrition supplement for a wide range of peop …[truncated]
+VP, Scientific Affairs

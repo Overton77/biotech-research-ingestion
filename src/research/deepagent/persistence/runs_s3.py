@@ -10,7 +10,7 @@ from typing import Any
 from pydantic import BaseModel
 
 from src.infrastructure.aws.async_s3 import AsyncS3Client
-from src.research.models.mission import (
+from src.research.deepagent.models.mission import (
     ArtifactRef,
     ResearchMission,
     ResearchMissionDraft,

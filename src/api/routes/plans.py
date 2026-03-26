@@ -171,7 +171,7 @@ async def launch_plan(plan_id: str) -> dict:
     from src.infrastructure.temporal.client import get_temporal_client
     from src.infrastructure.temporal.worker import DEEP_RESEARCH_TASK_QUEUE
     from src.infrastructure.temporal.workflows.deep_research import DeepResearchMissionWorkflow
-    from src.research.compiler.mission_creator import (
+    from src.research.deepagent.compiler.mission_creator import (
         MissionCompilationError,
         UnapprovedPlanError,
         create_mission_from_plan,
