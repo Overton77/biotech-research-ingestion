@@ -1,0 +1,3 @@
+line one
+hello GREP_MARKER_XYZZY world
+line three
