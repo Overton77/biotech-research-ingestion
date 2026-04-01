@@ -19,7 +19,9 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from src.research.langchain_agent.models.mission import MissionStage, ResearchMission
-from src.research.langchain_agent.workflow.run_slice import run_single_mission_slice
+from src.research.langchain_agent.workflow.run_slice import run_single_mission_slice 
+from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient, Neo4jAuraSettings 
+import json 
 from src.research.langchain_agent.workflow.run_iterative_stage import run_iterative_stage
 from src.research.langchain_agent.agent.config import ROOT_FILESYSTEM
 from src.research.langchain_agent.observability.tracing import (
@@ -29,9 +31,79 @@ from src.research.langchain_agent.observability.tracing import (
 from src.research.langchain_agent.storage.models import (
     IterativeStageRecord,
     MissionRunDocument,
+) 
+from src.research.langchain_agent.unstructured.candidate_collection import (
+    gather_mission_candidates,
+)
+from src.research.langchain_agent.unstructured.paths import mission_unstructured_dir
+from src.research.langchain_agent.unstructured.models import CandidateDocument
+from src.research.langchain_agent.unstructured.run_unstructured_ingestion import (
+    run_unstructured_ingestion,
 )
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__) 
+
+async def _run_staged_unstructured_ingestion(
+    *,
+    mission: ResearchMission,
+    mission_candidate_manifest_path: str,
+    root: Path,
+) -> dict[str, Any]:
+    manifest_abs = root / mission_candidate_manifest_path
+    payload = json.loads(manifest_abs.read_text(encoding="utf-8"))
+    final_candidates = payload.get("candidates", [])
+    if not final_candidates:
+        return {"status": "skipped", "reason": "no_candidates"}
+
+    output_dir = mission_unstructured_dir(mission.mission_id, root=root) / "executions"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    settings = Neo4jAuraSettings.from_env()
+    results: list[dict[str, Any]] = []
+    async with Neo4jAuraClient(settings) as client:
+        for candidate_payload in final_candidates:
+            if not candidate_payload.get("local_path"):
+                results.append(
+                    {
+                        "candidate_id": candidate_payload.get("candidate_id", ""),
+                        "status": "skipped",
+                        "reason": "candidate_missing_local_path",
+                    }
+                )
+                continue
+
+            candidate_dir = output_dir / candidate_payload["candidate_id"]
+            try:
+                candidate = CandidateDocument.model_validate(candidate_payload)
+                ingestion_result = await run_unstructured_ingestion(
+                    candidate=candidate,
+                    output_dir=candidate_dir,
+                    neo4j_client=client,
+                    config=mission.unstructured_ingestion,
+                )
+                results.append(
+                    {
+                        "candidate_id": candidate.candidate_id,
+                        "status": "completed",
+                        "document_id": ingestion_result.document.document_id,
+                        "chunk_count": len(ingestion_result.chunks),
+                        "relationship_count": len(ingestion_result.relationship_decisions),
+                    }
+                )
+            except Exception as exc:
+                logger.exception(
+                    "Unstructured ingestion failed for candidate %s",
+                    candidate_payload.get("candidate_id", ""),
+                )
+                results.append(
+                    {
+                        "candidate_id": candidate_payload.get("candidate_id", ""),
+                        "status": "failed",
+                        "error": str(exc),
+                    }
+                )
+
+    return {"status": "completed", "results": results}
 
 
 def _topological_stage_order(mission: ResearchMission) -> List[int]:
@@ -220,7 +292,48 @@ async def run_mission(
                 await mission_doc.save()
             except Exception:
                 logger.exception("Failed to mark MissionRunDocument as failed")
-        raise
+        raise  
+    stage_manifest_paths = [
+        out.get("stage_candidate_manifest_path", "")
+        for out in outputs
+        if out.get("stage_candidate_manifest_path")
+    ]
+    if stage_manifest_paths:
+        try:
+            mission_manifest, mission_manifest_path = gather_mission_candidates(
+                mission_id=mission.mission_id,
+                stage_manifest_paths=stage_manifest_paths,
+                root=root,
+            )
+            logger.info(
+                "Mission candidate manifest written: %s (%d candidates)",
+                mission_manifest_path,
+                mission_manifest.final_candidate_count,
+            )
+            for out in outputs:
+                out["mission_candidate_manifest_path"] = mission_manifest_path
+
+            if mission.unstructured_ingestion.enabled:
+                unstructured_summary = await _run_staged_unstructured_ingestion(
+                    mission=mission,
+                    mission_candidate_manifest_path=mission_manifest_path,
+                    root=root,
+                )
+                summary_path = mission_unstructured_dir(mission.mission_id, root=root) / "mission_unstructured_summary.json"
+                summary_path.write_text(
+                    json.dumps(unstructured_summary, indent=2, default=str),
+                    encoding="utf-8",
+                )
+                for out in outputs:
+                    out["mission_unstructured_summary_path"] = str(
+                        summary_path.relative_to(root).as_posix()
+                    )
+        except Exception:
+            logger.exception(
+                "Failed to gather or execute staged unstructured ingestion for mission %s",
+                mission.mission_id,
+            )
+
 
     # ------------------------------------------------------------------
     # Mark mission complete

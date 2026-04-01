@@ -86,7 +86,7 @@ async def vet_stage_candidates(
     }
 
     agent = create_agent(
-        model=ChatOpenAI(model="gpt-4o-mini", use_responses_api=True),
+        model=ChatOpenAI(model="gpt-5-mini", use_responses_api=True),
         tools=[{"type": "web_search"}],
         system_prompt=VETTING_SYSTEM_PROMPT,
         response_format=CandidateReviewResult,

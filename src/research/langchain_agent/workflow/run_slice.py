@@ -45,7 +45,10 @@ from src.research.langchain_agent.observability.tracing import (
     traced_stage,
 )
 from src.research.langchain_agent.storage.models import StageRunRecord
-from src.research.langchain_agent.storage.s3_store import persist_slice_artifacts
+from src.research.langchain_agent.storage.s3_store import persist_slice_artifacts 
+from src.research.langchain_agent.unstructured.candidate_collection import (
+    build_stage_candidate_manifest,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -341,7 +344,23 @@ async def run_single_mission_slice(
             **agent_state,
         },
         config=runtime_config,
+    )  
+
+    
+    stage_candidate_manifest, stage_candidate_manifest_path = await build_stage_candidate_manifest(
+        run_input=run_input,
+        result=result,
+        root=root,
     )
+    written_file_paths = list(result.get("written_file_paths", []) or [])
+    if stage_candidate_manifest_path not in written_file_paths:
+        written_file_paths.append(stage_candidate_manifest_path)
+    result["written_file_paths"] = written_file_paths
+    result["stage_candidate_manifest"] = stage_candidate_manifest.model_dump(mode="json")
+    result["stage_candidate_manifest_path"] = stage_candidate_manifest_path
+
+
+
 
     write_graph_state_snapshots(
         output_dir=snapshot_output_dir,
