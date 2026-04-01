@@ -144,4 +144,5 @@ node_modules/
 **/.pytest_cache/
 
 
-**/.deepagents/** 
+**/.deepagents/**  
+**/hidden_docs/** 
