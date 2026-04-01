@@ -25,6 +25,7 @@ from src.research.langchain_agent.agent.subagent_types import (
     BROWSER_CONTROL_SUBAGENT,
     CLINICALTRIALS_RESEARCH_SUBAGENT,
     DOCLING_DOCUMENT_SUBAGENT,
+    EDGAR_RESEARCH_SUBAGENT,
     SUBAGENT_DESCRIPTIONS,
     TAVILY_RESEARCH_SUBAGENT,
     VERCEL_AGENT_BROWSER_SUBAGENT,
@@ -50,6 +51,12 @@ from src.research.langchain_agent.tools_for_test.tavily_tools import (
 )
 from src.research.langchain_agent.tools_for_test.test_suite.docling_test_tools import (
     DOCLING_TEST_TOOLS,
+)
+from src.research.langchain_agent.unstructured.edgar_subagent import (
+    EDGAR_SPECIALTY_PROMPT,
+)
+from src.research.langchain_agent.unstructured.edgar_tools import (
+    EDGAR_RESEARCH_TOOLS,
 )
 
 
@@ -297,6 +304,26 @@ async def _build_docling_subagent(
     )
 
 
+async def _build_edgar_subagent(
+    *,
+    backend: FilesystemBackend,
+    store: BaseStore,
+    checkpointer: BaseCheckpointSaver,
+) -> CompiledSubAgent:
+    return _build_compiled_subagent(
+        name=EDGAR_RESEARCH_SUBAGENT,
+        description=SUBAGENT_DESCRIPTIONS[EDGAR_RESEARCH_SUBAGENT],
+        system_prompt=_build_subagent_prompt(
+            subagent_name=EDGAR_RESEARCH_SUBAGENT,
+            specialty_prompt=EDGAR_SPECIALTY_PROMPT,
+        ),
+        tools=EDGAR_RESEARCH_TOOLS,
+        backend=backend,
+        store=store,
+        checkpointer=checkpointer,
+    )
+
+
 _SUBAGENT_BUILDERS: dict[
     str,
     Callable[..., Awaitable[CompiledSubAgent]],
@@ -306,6 +333,7 @@ _SUBAGENT_BUILDERS: dict[
     CLINICALTRIALS_RESEARCH_SUBAGENT: _build_clinicaltrials_subagent,
     TAVILY_RESEARCH_SUBAGENT: _build_tavily_subagent,
     DOCLING_DOCUMENT_SUBAGENT: _build_docling_subagent,
+    EDGAR_RESEARCH_SUBAGENT: _build_edgar_subagent,
 }
 
 
