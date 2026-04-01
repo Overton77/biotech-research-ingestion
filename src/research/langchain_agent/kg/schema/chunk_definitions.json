@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "organization",
+    "label": "Organization",
+    "description": "Company, nonprofit, manufacturer, clinic, or any organizational entity. Use when the report mentions a company, brand, or institution.",
+    "keywords": ["company", "organization", "brand", "manufacturer", "founded", "hq", "employees", "revenue", "startup", "corporation"],
+    "node_labels": ["Organization", "PhysicalLocation", "TechnologyPlatform"],
+    "relationship_types": ["EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER", "HAS_CEO", "ADVISES", "HOLDS_ROLE_AT", "AFFILIATED_WITH", "HAS_LOCATION", "DEVELOPS_PLATFORM", "USES_PLATFORM", "OFFERS", "MANUFACTURES"]
+  },
+  {
+    "chunk_id": "person",
+    "label": "Person",
+    "description": "Named individual — executive, founder, scientist, advisor, researcher. Use when the report names specific people with roles or credentials.",
+    "keywords": ["founder", "CEO", "scientist", "advisor", "team", "leadership", "person", "doctor", "PhD", "MD", "researcher", "professor"],
+    "node_labels": ["Person"],
+    "relationship_types": ["EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER", "HAS_CEO", "ADVISES", "HOLDS_ROLE_AT", "AFFILIATED_WITH", "INVESTIGATED_BY"]
+  },
+  {
+    "chunk_id": "product",
+    "label": "Product",
+    "description": "Supplement, device, diagnostic, or service product. Use when the report lists products with names, ingredients, prices, or specs.",
+    "keywords": ["supplement", "product", "capsule", "dose", "ingredient", "price", "SKU", "catalog", "formulation", "device", "diagnostic"],
+    "node_labels": ["Product", "CompoundForm"],
+    "relationship_types": ["OFFERS", "MANUFACTURES", "CONTAINS_COMPOUND_FORM", "DELIVERS_LABTEST", "IMPLEMENTS_PANEL"]
+  },
+  {
+    "chunk_id": "compound",
+    "label": "Compound",
+    "description": "Chemical compound, molecule, or active ingredient. Use when the report discusses specific compounds, molecules, or chemical substances.",
+    "keywords": ["compound", "molecule", "NAD+", "NMN", "NR", "nicotinamide", "chemical", "active ingredient", "CAS number", "molecular"],
+    "node_labels": ["Compound", "CompoundForm"],
+    "relationship_types": ["CONTAINS_COMPOUND_FORM", "IS_FORM_OF", "AFFECTS_MECHANISM"]
+  },
+  {
+    "chunk_id": "study",
+    "label": "Study",
+    "description": "Clinical trial, research study, or scientific investigation. Use when the report references studies with NCT IDs, trial phases, or research outcomes.",
+    "keywords": ["clinical trial", "study", "NCT", "phase", "placebo", "randomized", "endpoint", "enrollment", "ClinicalTrials.gov", "trial"],
+    "node_labels": ["Study", "Condition"],
+    "relationship_types": ["SPONSORED_BY", "OPERATED_BY", "INVESTIGATES", "INVESTIGATED_BY", "EVALUATES"]
+  },
+  {
+    "chunk_id": "biology",
+    "label": "Biology",
+    "description": "Biomarkers, conditions, mechanisms, pathways, and biological entities. Use when the report discusses biological processes, disease conditions, or biomarker measurements.",
+    "keywords": ["biomarker", "condition", "mechanism", "pathway", "aging", "disease", "epigenetic", "sirtuin", "NAD+", "inflammation", "metabolic"],
+    "node_labels": ["Biomarker", "Condition", "Mechanism", "Pathway"],
+    "relationship_types": ["INDICATES", "REFLECTS_MECHANISM", "IN_PATHWAY", "HAS_MECHANISM", "INVESTIGATES"]
+  },
+  {
+    "chunk_id": "diagnostics",
+    "label": "Diagnostics",
+    "description": "Lab tests, diagnostic panels, biomarker panels, and measurement methods. Use when the report covers diagnostic products, test panels, or lab testing.",
+    "keywords": ["lab test", "biomarker panel", "diagnostic", "LOINC", "CPT", "specimen", "blood draw", "epigenetic test", "panel"],
+    "node_labels": ["LabTest", "PanelDefinition", "Biomarker"],
+    "relationship_types": ["DELIVERS_LABTEST", "IMPLEMENTS_PANEL", "MEASURES", "INCLUDES_LABTEST", "INCLUDES_BIOMARKER"]
+  }
+]

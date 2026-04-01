@@ -11,35 +11,34 @@
       "founded",
       "hq",
       "employees",
-      "revenue"
+      "revenue",
+      "startup",
+      "corporation"
     ],
     "node_labels": [
       "Organization",
-      "OrganizationState",
       "PhysicalLocation",
-      "Listing",
-      "ManufacturingProcess",
       "TechnologyPlatform"
     ],
     "relationship_types": [
-      "HAS_STATE",
-      "HAS_LOCATION",
-      "OWNS_OR_CONTROLS",
-      "LISTS",
-      "OFFERS_PRODUCT",
-      "SUPPLIES_COMPOUND_FORM",
-      "MANUFACTURES",
       "EMPLOYS",
       "FOUNDED_BY",
       "HAS_BOARD_MEMBER",
-      "HAS_SCIENTIFIC_ADVISOR",
-      "HAS_EXECUTIVE_ROLE"
+      "HAS_CEO",
+      "ADVISES",
+      "HOLDS_ROLE_AT",
+      "AFFILIATED_WITH",
+      "HAS_LOCATION",
+      "DEVELOPS_PLATFORM",
+      "USES_PLATFORM",
+      "OFFERS",
+      "MANUFACTURES"
     ]
   },
   {
     "chunk_id": "person",
     "label": "Person",
-    "description": "Named individual — executive, founder, scientist, advisor. Use when the report names specific people with roles or credentials.",
+    "description": "Named individual — executive, founder, scientist, advisor, researcher. Use when the report names specific people with roles or credentials.",
     "keywords": [
       "founder",
       "CEO",
@@ -50,16 +49,22 @@
       "person",
       "doctor",
       "PhD",
-      "MD"
+      "MD",
+      "researcher",
+      "professor"
     ],
-    "node_labels": ["Person", "PersonState"],
+    "node_labels": [
+      "Person"
+    ],
     "relationship_types": [
-      "HAS_STATE",
       "EMPLOYS",
       "FOUNDED_BY",
       "HAS_BOARD_MEMBER",
-      "HAS_SCIENTIFIC_ADVISOR",
-      "HAS_EXECUTIVE_ROLE"
+      "HAS_CEO",
+      "ADVISES",
+      "HOLDS_ROLE_AT",
+      "AFFILIATED_WITH",
+      "INVESTIGATED_BY"
     ]
   },
   {
@@ -75,42 +80,133 @@
       "price",
       "SKU",
       "catalog",
-      "formulation"
+      "formulation",
+      "device",
+      "diagnostic"
     ],
     "node_labels": [
       "Product",
-      "ProductState",
-      "CompoundForm",
-      "CompoundFormState",
-      "ProductCategory",
-      "RegulatoryStatus",
-      "RegulatoryPathway"
+      "CompoundForm"
     ],
     "relationship_types": [
-      "HAS_STATE",
-      "OFFERS_PRODUCT",
+      "OFFERS",
+      "MANUFACTURES",
       "CONTAINS_COMPOUND_FORM",
-      "CONTAINS_COMPOUND",
-      "IN_CATEGORY",
-      "FOLLOWS_PATHWAY",
-      "HAS_REGULATORY_STATUS"
+      "DELIVERS_LABTEST",
+      "IMPLEMENTS_PANEL"
     ]
   },
   {
-    "chunk_id": "labtest",
-    "label": "LabTest / PanelDefinition",
-    "description": "Diagnostic lab test, biomarker panel, or specimen. Use when the report covers diagnostic products or test panels.",
+    "chunk_id": "compound",
+    "label": "Compound",
+    "description": "Chemical compound, molecule, or active ingredient. Use when the report discusses specific compounds, molecules, or chemical substances.",
+    "keywords": [
+      "compound",
+      "molecule",
+      "NAD+",
+      "NMN",
+      "NR",
+      "nicotinamide",
+      "chemical",
+      "active ingredient",
+      "CAS number",
+      "molecular"
+    ],
+    "node_labels": [
+      "Compound",
+      "CompoundForm"
+    ],
+    "relationship_types": [
+      "CONTAINS_COMPOUND_FORM",
+      "IS_FORM_OF",
+      "AFFECTS_MECHANISM"
+    ]
+  },
+  {
+    "chunk_id": "study",
+    "label": "Study",
+    "description": "Clinical trial, research study, or scientific investigation. Use when the report references studies with NCT IDs, trial phases, or research outcomes.",
+    "keywords": [
+      "clinical trial",
+      "study",
+      "NCT",
+      "phase",
+      "placebo",
+      "randomized",
+      "endpoint",
+      "enrollment",
+      "ClinicalTrials.gov",
+      "trial"
+    ],
+    "node_labels": [
+      "Study",
+      "Condition"
+    ],
+    "relationship_types": [
+      "SPONSORED_BY",
+      "OPERATED_BY",
+      "INVESTIGATES",
+      "INVESTIGATED_BY",
+      "EVALUATES"
+    ]
+  },
+  {
+    "chunk_id": "biology",
+    "label": "Biology",
+    "description": "Biomarkers, conditions, mechanisms, pathways, and biological entities. Use when the report discusses biological processes, disease conditions, or biomarker measurements.",
+    "keywords": [
+      "biomarker",
+      "condition",
+      "mechanism",
+      "pathway",
+      "aging",
+      "disease",
+      "epigenetic",
+      "sirtuin",
+      "NAD+",
+      "inflammation",
+      "metabolic"
+    ],
+    "node_labels": [
+      "Biomarker",
+      "Condition",
+      "Mechanism",
+      "Pathway"
+    ],
+    "relationship_types": [
+      "INDICATES",
+      "REFLECTS_MECHANISM",
+      "IN_PATHWAY",
+      "HAS_MECHANISM",
+      "INVESTIGATES"
+    ]
+  },
+  {
+    "chunk_id": "diagnostics",
+    "label": "Diagnostics",
+    "description": "Lab tests, diagnostic panels, biomarker panels, and measurement methods. Use when the report covers diagnostic products, test panels, or lab testing.",
     "keywords": [
       "lab test",
-      "biomarker",
-      "panel",
+      "biomarker panel",
       "diagnostic",
       "LOINC",
       "CPT",
       "specimen",
-      "blood draw"
+      "blood draw",
+      "epigenetic test",
+      "panel"
     ],
-    "node_labels": ["LabTest", "PanelDefinition", "Biomarker", "Specimen"],
-    "relationship_types": ["DELIVERS_LAB_TEST", "IMPLEMENTS_PANEL", "INCLUDES_LABTEST", "INCLUDES_BIOMARKER"]
+    "node_labels": [
+      "LabTest",
+      "PanelDefinition",
+      "Biomarker"
+    ],
+    "relationship_types": [
+      "DELIVERS_LABTEST",
+      "IMPLEMENTS_PANEL",
+      "MEASURES",
+      "INCLUDES_LABTEST",
+      "INCLUDES_BIOMARKER"
+    ]
   }
 ]

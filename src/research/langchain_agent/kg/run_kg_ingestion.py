@@ -55,7 +55,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 _SELECTOR_MODEL = "gpt-5-mini"
-_EXTRACTION_MODEL = "gpt-5-mini"
+_EXTRACTION_MODEL = "gpt-5" # use GPT-5 ! for extraction ! 
 _SEARCHTEXT_MODEL = "gpt-5-mini"
 
 
@@ -76,6 +76,25 @@ def build_default_embedder() -> OpenAIEmbeddings:
 
 
 # ---------------------------------------------------------------------------
+# Entity type → node key prefix mapping (registry-driven)
+# ---------------------------------------------------------------------------
+
+# Maps KGExtractionResult field names to (key_prefix, entity_label, name_field)
+# for building the node_key used in embeddings and searchtext.
+_ENTITY_FIELD_CONFIG: dict[str, tuple[str, str, str]] = {
+    "organizations":      ("org",       "Organization",    "name"),
+    "persons":            ("person",    "Person",          "name"),
+    "products":           ("product",   "Product",         "name"),
+    "compounds":          ("compound",  "Compound",        "name"),
+    "biomarkers":         ("biomarker", "Biomarker",       "name"),
+    "conditions":         ("condition", "Condition",       "name"),
+    "studies":            ("study",     "Study",           "name"),
+    "labTests":           ("labtest",   "LabTest",         "name"),
+    "panelDefinitions":   ("panel",     "PanelDefinition", "name"),
+}
+
+
+# ---------------------------------------------------------------------------
 # searchText + embedding helpers
 # ---------------------------------------------------------------------------
 
@@ -86,27 +105,30 @@ def _entity_pairs_from_extraction(
     """
     Return a flat list of (node_key, entity_type, entity_dict) tuples.
 
-    node_key is the key used in the embeddings map: e.g. "org:Elysium Health".
+    Registry-driven: iterates over all entity list fields on KGExtractionResult
+    using _ENTITY_FIELD_CONFIG to derive keys.
     """
     pairs: list[tuple[str, str, dict]] = []
 
-    for org in extraction.organizations:
-        pairs.append((f"org:{org.name}", "Organization", org.model_dump()))
+    for field_name, (prefix, label, name_attr) in _ENTITY_FIELD_CONFIG.items():
+        entities = getattr(extraction, field_name, [])
+        seen: set[str] = set()
+        for entity in entities:
+            d = entity.model_dump()
+            entity_name = d.get(name_attr, "")
+            if not entity_name or entity_name in seen:
+                continue
+            seen.add(entity_name)
+            pairs.append((f"{prefix}:{entity_name}", label, d))
 
-    for person in extraction.persons:
-        pairs.append((f"person:{person.canonicalName}", "Person", person.model_dump()))
-
-    for product in extraction.products:
-        pairs.append((f"product:{product.name}", "Product", product.model_dump()))
-
-    # Deduplicate compound forms (same compound may appear in multiple ingredients)
-    seen: set[str] = set()
+    # Deduplicated compound forms from compound_ingredients
+    seen_compounds: set[str] = set()
     for ingredient in extraction.compound_ingredients:
         cname = ingredient.compoundName
-        if cname not in seen:
-            seen.add(cname)
+        if cname and cname not in seen_compounds:
+            seen_compounds.add(cname)
             pairs.append(
-                (f"compound:{cname}", "CompoundForm", ingredient.model_dump())
+                (f"compoundform:{cname}", "CompoundForm", ingredient.model_dump())
             )
 
     return pairs
@@ -118,7 +140,7 @@ async def _build_search_texts(
     searchtext_agent,
 ) -> dict[str, str]:
     """
-    Generate searchText for every node.  LLM nodes run concurrently.
+    Generate searchText for every node. LLM nodes run concurrently.
     Returns a map: node_key -> searchText string.
     """
     llm_tasks: dict[str, asyncio.Task] = {}
@@ -171,7 +193,6 @@ async def run_kg_ingestion(
     schema_index: list[dict] | None = None,
     schema_root: Path | None = None,
     context: str = "",
-    # Temporal parameters
     research_date: datetime | None = None,
     temporal_scope: TemporalScope | None = None,
 ) -> dict[str, Any]:
@@ -185,26 +206,6 @@ async def run_kg_ingestion(
         4. searchText gen    -- LLM for Org/Person/Product; field-concat for rest.
         5. Batch embed       -- one OpenAI embedding call for all searchTexts.
         6. Neo4j write       -- identity/state nodes + temporal relationships.
-
-    Args:
-        report_text:     Full text of the final research report.
-        source_report:   Identifier (task_slug or file path) for the report.
-        targets:         Entity/domain targets (e.g. ["Elysium Health"]).
-        stage_type:      Stage type string (e.g. "targeted_extraction").
-        neo4j_client:    Connected Neo4jAuraClient.
-        selector_llm:    Override the schema-selector LLM.
-        extraction_llm:  Override the extraction LLM.
-        searchtext_llm:  Override the searchText LLM.
-        embedder:        Override the OpenAIEmbeddings instance.
-        schema_index:    Pre-loaded schema index (default: loads from disk).
-        schema_root:     Base path for resolving schema .md files.
-        context:         Optional mission context string for searchText grounding.
-        research_date:   When the research is considered current (validFrom default).
-        temporal_scope:  Temporal scope configuration for this research.
-
-    Returns:
-        Dict with keys: extraction, chunks_used, node_counts, total_nodes,
-        total_rels_written, total_rels_skipped, states_created, states_skipped.
     """
     ingestion_time = datetime.now(timezone.utc)
     scope = temporal_scope or TemporalScope()
@@ -216,7 +217,6 @@ async def run_kg_ingestion(
         source_report=source_report,
     )
 
-    # Build agents once -------------------------------------------------------
     sel_llm = selector_llm or build_selector_llm()
     ext_llm = extraction_llm or build_extraction_llm()
     st_llm = searchtext_llm or build_searchtext_llm()
@@ -228,7 +228,7 @@ async def run_kg_ingestion(
 
     index = schema_index or load_schema_index()
 
-    # Step 1: Schema selection ------------------------------------------------
+    # Step 1: Schema selection
     logger.info("[kg_ingestion] Step 1: schema selection")
     selected_chunks = await select_schema_chunks(
         report_text=report_text,
@@ -242,11 +242,11 @@ async def run_kg_ingestion(
         logger.warning("[kg_ingestion] No schema chunks selected — aborting.")
         return {"extraction": None, "chunks_used": [], "node_counts": {}}
 
-    # Step 2: Build extraction contract from registry (synchronous) ----------
+    # Step 2: Build extraction contract from registry
     logger.info("[kg_ingestion] Step 2: building extraction contract")
     selected_schema_text = load_schema_chunks(selected_chunks)
 
-    # Step 3: Entity extraction -----------------------------------------------
+    # Step 3: Entity extraction
     logger.info("[kg_ingestion] Step 3: entity extraction")
     current_date_str = (research_date or ingestion_time).strftime("%Y-%m-%d")
     extraction: KGExtractionResult = await extract_kg_entities(
@@ -258,13 +258,13 @@ async def run_kg_ingestion(
         temporal_scope_description=scope.description,
     )
 
-    # Step 4: searchText generation -------------------------------------------
+    # Step 4: searchText generation
     logger.info("[kg_ingestion] Step 4: searchText generation")
     pairs = _entity_pairs_from_extraction(extraction)
     effective_context = context or f"Research targets: {', '.join(targets)}"
     search_texts = await _build_search_texts(pairs, effective_context, searchtext_agent)
 
-    # Step 5: Batch embed -----------------------------------------------------
+    # Step 5: Batch embed
     logger.info("[kg_ingestion] Step 5: batch embedding (%d texts)", len(pairs))
     node_keys = [node_key for node_key, _, _ in pairs]
     texts_to_embed = [search_texts[k] for k in node_keys]
@@ -276,7 +276,7 @@ async def run_kg_ingestion(
         node_embeddings[node_key] = embedding
         node_embeddings[f"searchtext:{node_key}"] = search_texts[node_key]
 
-    # Step 6: Neo4j write -----------------------------------------------------
+    # Step 6: Neo4j write
     logger.info("[kg_ingestion] Step 6: writing to Neo4j (bitemporal mode)")
     counts = await write_extraction_to_neo4j(
         client=neo4j_client,
@@ -285,23 +285,18 @@ async def run_kg_ingestion(
         temporal_ctx=temporal_ctx,
     )
 
-    total_nodes = (
-        counts["orgs_written"]
-        + counts["persons_written"]
-        + counts["products_written"]
-        + counts["compounds_written"]
-        + counts["lab_tests_written"]
-        + counts["panels_written"]
+    total_nodes = sum(
+        counts.get(k, 0) for k in counts if k.endswith("_written") and k != "rels_written"
     )
 
     logger.info(
         "[kg_ingestion] Done. nodes=%d, rels_written=%d, rels_skipped=%d, "
         "states_created=%d, states_skipped=%d",
         total_nodes,
-        counts["rels_written"],
-        counts["rels_skipped"],
-        counts["states_created"],
-        counts["states_skipped"],
+        counts.get("rels_written", 0),
+        counts.get("rels_skipped", 0),
+        counts.get("states_created", 0),
+        counts.get("states_skipped", 0),
     )
 
     return {
@@ -309,8 +304,8 @@ async def run_kg_ingestion(
         "chunks_used": [c["chunk_id"] for c in selected_chunks],
         "node_counts": counts,
         "total_nodes": total_nodes,
-        "total_rels_written": counts["rels_written"],
-        "total_rels_skipped": counts["rels_skipped"],
-        "states_created": counts["states_created"],
-        "states_skipped": counts["states_skipped"],
+        "total_rels_written": counts.get("rels_written", 0),
+        "total_rels_skipped": counts.get("rels_skipped", 0),
+        "states_created": counts.get("states_created", 0),
+        "states_skipped": counts.get("states_skipped", 0),
     }

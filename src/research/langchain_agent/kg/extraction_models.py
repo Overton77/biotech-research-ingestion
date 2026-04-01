@@ -101,66 +101,165 @@ class TemporalQualifier(BaseModel):
 # ---------------------------------------------------------------------------
 
 
-class ExtractedOrganization(BaseModel):
+class ExtractedBiomarker(BaseModel):
     name: str
-    aliases: list[str] = []
-    orgType: str = "COMPANY"
-    businessModel: str = "B2C"
     description: str = ""
-    legalName: str = ""
-    websiteUrl: str = ""
-    primaryIndustryTags: list[str] = []
-    regionsServed: list[str] = []
-    headquartersCity: str = ""
-    headquartersCountry: str = ""
+    biomarkerType: str = ""
+    specimenMatrix: str = ""
+    moleculeClass: str = ""
+    clinicalSignificance: str = ""
+    commonUnits: list[str] = []
+    agingHallmark: str = ""
     temporal: Optional[TemporalQualifier] = Field(
         default=None,
-        description="Temporal evidence for this entity's state, if available in the report.",
+        description="Temporal evidence for this entity, if available in the report.",
     )
     searchFields: list[str] = Field(
-        default=['name', 'aliases', 'description', 'businessModel', 'primaryIndustryTags'],
+        default=['name', 'description'],
+        description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedCompound(BaseModel):
+    name: str
+    description: str = ""
+    commonName: str = ""
+    casNumber: str = ""
+    molecularFormula: str = ""
+    molecularWeight: float | None = None
+    compoundClass: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this entity, if available in the report.",
+    )
+    searchFields: list[str] = Field(
+        default=['name', 'description', 'commonName'],
+        description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedCondition(BaseModel):
+    name: str
+    description: str = ""
+    conditionClass: str = ""
+    mondoId: str = ""
+    icd11Code: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this entity, if available in the report.",
+    )
+    searchFields: list[str] = Field(
+        default=['name', 'description'],
+        description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedLabTest(BaseModel):
+    name: str
+    description: str = ""
+    testType: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this entity, if available in the report.",
+    )
+    searchFields: list[str] = Field(
+        default=['name', 'description'],
+        description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedOrganization(BaseModel):
+    name: str
+    description: str = ""
+    canonicalTicker: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this entity, if available in the report.",
+    )
+    searchFields: list[str] = Field(
+        default=['name', 'description'],
+        description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedPanelDefinition(BaseModel):
+    name: str
+    description: str = ""
+    panelType: str = ""
+    versionLabel: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this entity, if available in the report.",
+    )
+    searchFields: list[str] = Field(
+        default=['name', 'description'],
         description="Fields used for searchText generation — do not alter.",
     )
 
 
 class ExtractedPerson(BaseModel):
-    canonicalName: str
-    givenName: str = ""
-    familyName: str = ""
-    honorific: str = ""
+    name: str
+    description: str = ""
+    title: str = ""
     bio: str = ""
-    primaryDomain: str = ""
-    specialties: list[str] = []
-    expertiseTags: list[str] = []
-    degrees: list[str] = []
-    linkedinUrl: str = ""
+    linkedInUrl: str = ""
     temporal: Optional[TemporalQualifier] = Field(
         default=None,
-        description="Temporal evidence for this entity's state, if available in the report.",
+        description="Temporal evidence for this entity, if available in the report.",
     )
     searchFields: list[str] = Field(
-        default=['canonicalName', 'bio', 'primaryDomain', 'specialties', 'expertiseTags'],
+        default=['name', 'description', 'bio', 'title'],
         description="Fields used for searchText generation — do not alter.",
     )
 
 
 class ExtractedProduct(BaseModel):
     name: str
-    synonyms: list[str] = []
-    productDomain: str = "SUPPLEMENT"
-    productType: str = ""
-    brandName: str = ""
-    priceAmount: float | None = None
-    currency: str = "USD"
-    intendedUse: str = ""
     description: str = ""
     temporal: Optional[TemporalQualifier] = Field(
         default=None,
-        description="Temporal evidence for this entity's state, if available in the report.",
+        description="Temporal evidence for this entity, if available in the report.",
     )
     searchFields: list[str] = Field(
-        default=['name', 'synonyms', 'brandName', 'intendedUse', 'description'],
+        default=['name', 'description'],
         description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedStudy(BaseModel):
+    name: str
+    description: str = ""
+    registryNamespace: str = ""
+    registryId: str = ""
+    canonicalUrl: str = ""
+    pmid: str = ""
+    doi: str = ""
+    overallStatus: str = ""
+    startDate: str = ""
+    enrollmentCount: int | None = None
+    studyType: str = ""
+    countries: list[str] = []
+    hasResults: bool | None = None
+    studyPhase: str = ""
+    sampleSizeText: str = ""
+    evidenceLevel: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this entity, if available in the report.",
+    )
+    searchFields: list[str] = Field(
+        default=['name', 'description'],
+        description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedLabTestBiomarkerRelationship(BaseModel):
+    lab_test_name: str
+    biomarker_name: str
+    role: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this relationship, if available.",
     )
 
 
@@ -171,14 +270,20 @@ class ExtractedOrgPersonRelationship(BaseModel):
     roleTitle: str = ""
     department: str = ""
     seniority: str = ""
-    isCurrent: bool = True
+    isCurrent: bool | None = True
     temporal: Optional[TemporalQualifier] = Field(
         default=None,
-        description="Temporal evidence for this relationship, if available (e.g. 'joined 2020', 'left Q1 2024').",
+        description="Temporal evidence for this relationship, if available.",
     )
-    searchFields: list[str] = Field(
-        default=['roleTitle', 'department', 'seniority'],
-        description="Fields used for searchText generation — do not alter.",
+
+
+class ExtractedOrgProductRelationship(BaseModel):
+    org_name: str
+    product_name: str
+    relationship_type: str
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this relationship, if available.",
     )
 
 
@@ -192,11 +297,59 @@ class ExtractedCompoundIngredient(BaseModel):
     bioavailabilityNotes: str = ""
     temporal: Optional[TemporalQualifier] = Field(
         default=None,
-        description="Temporal evidence for this ingredient relationship, if available.",
+        description="Temporal evidence for this relationship, if available.",
     )
     searchFields: list[str] = Field(
-        default=['compoundName', 'formType', 'bioavailabilityNotes'],
+        default=['compoundName', 'formType'],
         description="Fields used for searchText generation — do not alter.",
+    )
+
+
+class ExtractedProductLabTestRelationship(BaseModel):
+    product_name: str
+    lab_test_name: str
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this relationship, if available.",
+    )
+
+
+class ExtractedProductPanelRelationship(BaseModel):
+    product_name: str
+    panel_name: str
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this relationship, if available.",
+    )
+
+
+class ExtractedStudyConditionRelationship(BaseModel):
+    study_name: str
+    condition_name: str
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this relationship, if available.",
+    )
+
+
+class ExtractedStudyOrgRelationship(BaseModel):
+    study_name: str
+    org_name: str
+    relationship_type: str
+    role: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this relationship, if available.",
+    )
+
+
+class ExtractedStudyPersonRelationship(BaseModel):
+    study_name: str
+    person_name: str
+    role: str = ""
+    temporal: Optional[TemporalQualifier] = Field(
+        default=None,
+        description="Temporal evidence for this relationship, if available.",
     )
 
 
@@ -204,8 +357,21 @@ class KGExtractionResult(BaseModel):
     """Top-level extraction output returned by the extraction agent."""
 
     source_report: str = ""
+    biomarkers: list[ExtractedBiomarker] = []
+    compounds: list[ExtractedCompound] = []
+    conditions: list[ExtractedCondition] = []
+    labTests: list[ExtractedLabTest] = []
     organizations: list[ExtractedOrganization] = []
+    panelDefinitions: list[ExtractedPanelDefinition] = []
     persons: list[ExtractedPerson] = []
     products: list[ExtractedProduct] = []
+    studies: list[ExtractedStudy] = []
     compound_ingredients: list[ExtractedCompoundIngredient] = []
+    lab_test_biomarker_relationships: list[ExtractedLabTestBiomarkerRelationship] = []
     org_person_relationships: list[ExtractedOrgPersonRelationship] = []
+    org_product_relationships: list[ExtractedOrgProductRelationship] = []
+    product_lab_test_relationships: list[ExtractedProductLabTestRelationship] = []
+    product_panel_relationships: list[ExtractedProductPanelRelationship] = []
+    study_condition_relationships: list[ExtractedStudyConditionRelationship] = []
+    study_org_relationships: list[ExtractedStudyOrgRelationship] = []
+    study_person_relationships: list[ExtractedStudyPersonRelationship] = []

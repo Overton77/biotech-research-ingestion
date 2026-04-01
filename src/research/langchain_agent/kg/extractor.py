@@ -34,11 +34,20 @@ Your job:
 4. For "float" properties: only set a value when a specific number is stated.
 5. For Organization→Person relationships: use org_person_relationships and set
    relationship_type to one of: EMPLOYS, FOUNDED_BY, HAS_BOARD_MEMBER,
-   HAS_SCIENTIFIC_ADVISOR, HAS_EXECUTIVE_ROLE.
+   HAS_CEO, ADVISES, HOLDS_ROLE_AT, AFFILIATED_WITH.
 6. For Product ingredients: use compound_ingredients — each entry combines the
    CompoundForm node data (compoundName, formType) with the relationship data
    (dose, doseUnit, role, bioavailabilityNotes).
-7. When finished, produce a final KGExtractionResult with everything you found.
+7. For Organization→Product relationships: use org_product_relationships and set
+   relationship_type to one of: OFFERS, MANUFACTURES.
+8. For Study→Organization relationships: use study_org_relationships and set
+   relationship_type to one of: SPONSORED_BY, OPERATED_BY.
+9. For Study→Condition relationships: use study_condition_relationships.
+10. For Study→Person relationships: use study_person_relationships.
+11. For Product→LabTest relationships: use product_lab_test_relationships.
+12. For Product→PanelDefinition relationships: use product_panel_relationships.
+13. For LabTest→Biomarker relationships: use lab_test_biomarker_relationships.
+14. When finished, produce a final KGExtractionResult with everything you found.
 
 Temporal extraction rules:
 - Each entity and relationship has an optional "temporal" field (TemporalQualifier).
@@ -90,17 +99,6 @@ async def extract_kg_entities(
 ) -> KGExtractionResult:
     """
     Run the extraction agent on a single report.
-
-    Args:
-        report_text:          Full text of the final research report.
-        selected_schema_text: Concatenated schema .md files for selected chunks.
-        agent:                Built with build_extraction_agent().
-        source_report:        Identifier for the report (task_slug or file path).
-        current_date:         ISO date string for temporal grounding.
-        temporal_scope_description: Human-readable temporal scope context.
-
-    Returns:
-        KGExtractionResult with all extracted nodes and relationships.
     """
     temporal_block = ""
     if current_date or temporal_scope_description:
@@ -126,11 +124,14 @@ async def extract_kg_entities(
     )
 
     extraction: KGExtractionResult = result["structured_response"]
-    print(
-        f"[extractor] Extracted {len(extraction.organizations)} org(s), "
-        f"{len(extraction.persons)} person(s), "
-        f"{len(extraction.products)} product(s), "
-        f"{len(extraction.compound_ingredients)} compound ingredient(s), "
-        f"{len(extraction.org_person_relationships)} org-person rel(s)."
-    )
+
+    entity_counts = []
+    for field_name, field_info in KGExtractionResult.model_fields.items():
+        if field_name == "source_report":
+            continue
+        entities = getattr(extraction, field_name, [])
+        if entities:
+            entity_counts.append(f"{len(entities)} {field_name}")
+
+    print(f"[extractor] Extracted: {', '.join(entity_counts) or 'nothing'}")
     return extraction

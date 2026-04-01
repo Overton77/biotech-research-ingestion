@@ -1,854 +1,5187 @@
 {
-  "version": "2.0",
-  "temporalModel": "bitemporal_identity_state",
-  "notes": "v2.0: identity/state separation with bitemporal HAS_STATE relationships. Identity nodes hold stable anchor properties. State nodes hold immutable descriptive snapshots.",
+  "$schema": "biotech-kg-schema-registry",
+  "version": "3.0.0",
+  "generatedAt": "2026-04-01T16:04:35.929573+00:00",
+  "sourceSchemaMap": "schema-map.json",
+  "sourceSchemaMapVersion": "2.0.0",
+  "notes": "Auto-generated from schema-map.json + sidecar annotations. All nodes use id as mergeKey and name as the universal name property.",
   "nodes": {
-    "Organization": {
-      "mergeKey": "organizationId",
-      "extractable": true,
-      "extractionClass": "ExtractedOrganization",
-      "stateLabel": "OrganizationState",
-      "identityProperties": ["organizationId", "name", "aliases"],
-      "searchFields": ["name", "aliases", "description", "businessModel", "primaryIndustryTags"],
+    "AnatomicalContext": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "organizationId":                  { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":                       { "type": "datetime", "system": true },
-        "name":                            { "type": "string",  "required": true },
-        "aliases":                         { "type": "array",   "items": "string" },
-        "orgType":                         { "type": "string",  "default": "COMPANY" },
-        "businessModel":                   { "type": "string",  "default": "B2C" },
-        "description":                     { "type": "string" },
-        "legalName":                       { "type": "string" },
-        "websiteUrl":                      { "type": "string" },
-        "primaryIndustryTags":             { "type": "array",   "items": "string" },
-        "regionsServed":                   { "type": "array",   "items": "string" },
-        "headquartersCity":                { "type": "string" },
-        "headquartersCountry":             { "type": "string" },
-        "legalStructure":                  { "type": "string",  "extract": false },
-        "ownershipType":                   { "type": "string",  "extract": false },
-        "jurisdictionsOfIncorporation":    { "type": "array",   "items": "string", "extract": false },
-        "publicTicker":                    { "type": "string",  "extract": false },
-        "fundingStage":                    { "type": "string",  "extract": false },
-        "defaultCollectionModes":          { "type": "array",   "items": "string", "extract": false },
-        "defaultRegionsAvailable":         { "type": "array",   "items": "string", "extract": false },
-        "employeeCountMin":                { "type": "int",     "extract": false },
-        "employeeCountMax":                { "type": "int",     "extract": false },
-        "employeeCountAsOf":               { "type": "datetime","extract": false },
-        "revenueAnnualMin":                { "type": "float",   "extract": false },
-        "revenueAnnualMax":                { "type": "float",   "extract": false },
-        "revenueAnnualCurrency":           { "type": "string",  "extract": false },
-        "revenueAnnualAsOf":               { "type": "datetime","extract": false },
-        "valuationMin":                    { "type": "float",   "extract": false },
-        "valuationMax":                    { "type": "float",   "extract": false },
-        "valuationCurrency":               { "type": "string",  "extract": false },
-        "valuationAsOf":                   { "type": "datetime","extract": false }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "contextKind": {
+          "type": "string"
+        }
       }
     },
-
-    "Person": {
-      "mergeKey": "personId",
-      "extractable": true,
-      "extractionClass": "ExtractedPerson",
-      "stateLabel": "PersonState",
-      "identityProperties": ["personId", "canonicalName"],
-      "searchFields": ["canonicalName", "bio", "primaryDomain", "specialties", "expertiseTags"],
+    "AnonymousActor": {
+      "domain": "person",
+      "implements": [
+        "Entity",
+        "ActorIdentity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "personId":           { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":          { "type": "datetime", "system": true },
-        "canonicalName":      { "type": "string",  "required": true },
-        "givenName":          { "type": "string" },
-        "familyName":         { "type": "string" },
-        "middleName":         { "type": "string",  "extract": false },
-        "suffix":             { "type": "string",  "extract": false },
-        "honorific":          { "type": "string" },
-        "aliases":            { "type": "array",   "items": "string", "extract": false },
-        "bio":                { "type": "string" },
-        "primaryDomain":      { "type": "string" },
-        "specialties":        { "type": "array",   "items": "string" },
-        "expertiseTags":      { "type": "array",   "items": "string" },
-        "affiliationSummary": { "type": "string",  "extract": false },
-        "degrees":            { "type": "array",   "items": "string" },
-        "credentialIds":      { "type": "array",   "items": "string", "extract": false },
-        "orcid":              { "type": "string",  "extract": false },
-        "npi":                { "type": "string",  "extract": false },
-        "licenseIds":         { "type": "array",   "items": "string", "extract": false },
-        "websiteUrl":         { "type": "string",  "extract": false },
-        "email":              { "type": "string",  "extract": false },
-        "linkedinUrl":        { "type": "string" },
-        "twitterUrl":         { "type": "string",  "extract": false },
-        "githubUrl":          { "type": "string",  "extract": false },
-        "scholarUrl":         { "type": "string",  "extract": false },
-        "headshotUrl":        { "type": "string",  "extract": false },
-        "publicFigure":       { "type": "bool",    "extract": false },
-        "notabilityNotes":    { "type": "string",  "extract": false }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "anonymityClass": {
+          "type": "string"
+        }
       }
     },
-
-    "Product": {
-      "mergeKey": "productId",
-      "extractable": true,
-      "extractionClass": "ExtractedProduct",
-      "stateLabel": "ProductState",
-      "identityProperties": ["productId", "name", "synonyms"],
-      "searchFields": ["name", "synonyms", "brandName", "intendedUse", "description"],
+    "Association": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "productId":          { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":          { "type": "datetime", "system": true },
-        "name":               { "type": "string",  "required": true },
-        "synonyms":           { "type": "array",   "items": "string" },
-        "productDomain":      { "type": "string",  "default": "SUPPLEMENT" },
-        "productType":        { "type": "string" },
-        "brandName":          { "type": "string" },
-        "priceAmount":        { "type": "float" },
-        "currency":           { "type": "string",  "default": "USD" },
-        "intendedUse":        { "type": "string" },
-        "description":        { "type": "string" },
-        "modelNumber":        { "type": "string",  "extract": false },
-        "ndcCode":            { "type": "string",  "extract": false },
-        "upc":                { "type": "string",  "extract": false },
-        "gtin":               { "type": "string",  "extract": false },
-        "riskClass":          { "type": "string",  "extract": false }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "associationSummary": {
+          "type": "string"
+        },
+        "associationType": {
+          "type": "string"
+        },
+        "associationCategory": {
+          "type": "string"
+        }
       }
     },
-
+    "Biomarker": {
+      "domain": "biology",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": true,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [
+        "BiomarkerSearch"
+      ],
+      "vector": [],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "biomarkerType": {
+          "type": "string",
+          "extract": true
+        },
+        "specimenMatrix": {
+          "type": "string",
+          "extract": true
+        },
+        "moleculeClass": {
+          "type": "string",
+          "extract": true
+        },
+        "measurementDirectness": {
+          "type": "string",
+          "extract": false
+        },
+        "clinicalSignificance": {
+          "type": "string",
+          "extract": true
+        },
+        "commonUnits": {
+          "type": "array",
+          "items": "string",
+          "extract": true
+        },
+        "agingHallmark": {
+          "type": "string",
+          "extract": true
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "Channel": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "channelType": {
+          "type": "string"
+        }
+      }
+    },
+    "Chunk": {
+      "domain": "evidence",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "ChunkSearch"
+      ],
+      "vector": [
+        "ChunkSearchEmbedding"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "chunkIndex": {
+          "type": "int",
+          "required": true
+        },
+        "text": {
+          "type": "string",
+          "required": true
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        },
+        "segmentationHash": {
+          "type": "string"
+        }
+      }
+    },
+    "Claim": {
+      "domain": "evidence",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "ClaimSearch"
+      ],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "claimText": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "ClaimOccurrence": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "utteranceText": {
+          "type": "string"
+        }
+      }
+    },
+    "CohortParticipant": {
+      "domain": "person",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "participantToken": {
+          "type": "string"
+        }
+      }
+    },
+    "Community": {
+      "domain": "narrativeArcs",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "communityType": {
+          "type": "string"
+        }
+      }
+    },
+    "Compound": {
+      "domain": "compound",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": true,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description",
+        "commonName"
+      ],
+      "fulltext": [
+        "CompoundSearch"
+      ],
+      "vector": [
+        "CompoundSearchEmbedding"
+      ],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "commonName": {
+          "type": "string",
+          "extract": true
+        },
+        "casNumber": {
+          "type": "string",
+          "extract": true
+        },
+        "molecularFormula": {
+          "type": "string",
+          "extract": true
+        },
+        "molecularWeight": {
+          "type": "float",
+          "extract": true
+        },
+        "compoundClass": {
+          "type": "string",
+          "extract": true
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
     "CompoundForm": {
-      "mergeKey": "compoundFormId",
+      "domain": "compound",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "extractionNote": "Extracted via denormalized ExtractedCompoundIngredient (CompoundForm properties + CONTAINS_COMPOUND_FORM relationship).",
-      "stateLabel": "CompoundFormState",
-      "identityProperties": ["compoundFormId", "canonicalName"],
-      "searchFields": ["canonicalName", "formType", "chemicalDifferences", "bioavailabilityNotes"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "extractionNote": "Extracted via denormalized ExtractedCompoundIngredient.",
       "properties": {
-        "compoundFormId":          { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":               { "type": "datetime", "system": true },
-        "canonicalName":           { "type": "string",  "required": true },
-        "formType":                { "type": "string" },
-        "chemicalDifferences":     { "type": "string" },
-        "stabilityProfile":        { "type": "string" },
-        "solubilityProfile":       { "type": "string" },
-        "bioavailabilityNotes":    { "type": "string" },
-        "regulatoryStatusSummary": { "type": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "dosageForm": {
+          "type": "string"
+        },
+        "concentrationText": {
+          "type": "string"
+        }
       }
     },
-
-    "PhysicalLocation": {
-      "mergeKey": "locationId",
-      "extractable": false,
-      "searchFields": ["canonicalName", "locationType", "city", "region", "countryCode", "placeTags"],
+    "Condition": {
+      "domain": "biology",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": true,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [
+        "ConditionSearch"
+      ],
+      "vector": [],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
       "properties": {
-        "locationId":       { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":        { "type": "datetime", "system": true },
-        "canonicalName":    { "type": "string" },
-        "locationType":     { "type": "string" },
-        "addressLine1":     { "type": "string" },
-        "addressLine2":     { "type": "string" },
-        "city":             { "type": "string" },
-        "region":           { "type": "string" },
-        "postalCode":       { "type": "string" },
-        "countryCode":      { "type": "string" },
-        "geoLat":           { "type": "float" },
-        "geoLon":           { "type": "float" },
-        "timezone":         { "type": "string" },
-        "jurisdiction":     { "type": "string" },
-        "placeTags":        { "type": "array",  "items": "string" },
-        "contactPhone":     { "type": "string" },
-        "contactEmail":     { "type": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "conditionClass": {
+          "type": "string"
+        },
+        "mondoId": {
+          "type": "string"
+        },
+        "icd11Code": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
       }
     },
-
-    "Listing": {
-      "mergeKey": "listingId",
+    "Conference": {
+      "domain": "narrativeArcs",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "searchFields": ["title", "description", "listingDomain", "brandName", "pricingNotes"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "listingId":             { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":             { "type": "datetime", "system": true },
-        "listingDomain":         { "type": "string" },
-        "title":                 { "type": "string" },
-        "description":           { "type": "string" },
-        "sku":                   { "type": "string" },
-        "url":                   { "type": "string" },
-        "brandName":             { "type": "string" },
-        "currency":              { "type": "string" },
-        "priceAmount":           { "type": "float" },
-        "priceType":             { "type": "string" },
-        "pricingNotes":          { "type": "string" },
-        "regionsAvailable":      { "type": "array",  "items": "string" },
-        "requiresAppointment":   { "type": "bool" },
-        "collectionMode":        { "type": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "conferenceType": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "datetime"
+        },
+        "endDate": {
+          "type": "datetime"
+        },
+        "websiteUrl": {
+          "type": "string"
+        }
       }
     },
-
-    "ManufacturingProcess": {
-      "mergeKey": "manufacturingProcessId",
+    "Constraint": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "searchFields": ["canonicalName", "processType", "description", "inputs", "outputs", "qualityRisks"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "manufacturingProcessId": { "type": "string", "format": "uuid", "system": true },
-        "createdAt":              { "type": "datetime", "system": true },
-        "canonicalName":          { "type": "string" },
-        "processType":            { "type": "string" },
-        "description":            { "type": "string" },
-        "inputs":                 { "type": "array", "items": "string" },
-        "outputs":                { "type": "array", "items": "string" },
-        "qualityRisks":           { "type": "array", "items": "string" },
-        "scalabilityLevel":       { "type": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "constraintType": {
+          "type": "string"
+        }
       }
     },
-
-    "TechnologyPlatform": {
-      "mergeKey": "platformId",
+    "Dataset": {
+      "domain": "studies",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "searchFields": ["canonicalName", "aliases", "platformType", "description"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "platformId":    { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":     { "type": "datetime", "system": true },
-        "canonicalName": { "type": "string" },
-        "aliases":       { "type": "array",  "items": "string" },
-        "platformType":  { "type": "string" },
-        "description":   { "type": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "datasetKind": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
+        "registrationId": {
+          "type": "string"
+        },
+        "accessLevel": {
+          "type": "string"
+        },
+        "dataFormat": {
+          "type": "string"
+        },
+        "isPrimaryResults": {
+          "type": "bool"
+        }
       }
     },
-
+    "Device": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "deviceClass": {
+          "type": "string"
+        },
+        "deviceFamily": {
+          "type": "string"
+        }
+      }
+    },
+    "Document": {
+      "domain": "evidence",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "DocumentSearch"
+      ],
+      "vector": [
+        "DocumentSearchEmbedding"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "documentKey": {
+          "type": "string",
+          "required": true
+        },
+        "documentType": {
+          "type": "string",
+          "required": true
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "DocumentTextVersion": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "versionLabel": {
+          "type": "string"
+        },
+        "textVersionHash": {
+          "type": "string",
+          "required": true
+        },
+        "source": {
+          "type": "string",
+          "required": true
+        },
+        "text": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "Episode": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "episodeType": {
+          "type": "string"
+        }
+      }
+    },
+    "EpisodeSegment": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "segmentType": {
+          "type": "string"
+        }
+      }
+    },
+    "Event": {
+      "domain": "narrativeArcs",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "EventSearch"
+      ],
+      "vector": [
+        "EventSearchEmbedding"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "eventCategory": {
+          "type": "string"
+        },
+        "impactLevel": {
+          "type": "string"
+        },
+        "happenedAt": {
+          "type": "datetime"
+        },
+        "happenedAtEnd": {
+          "type": "datetime"
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
+        "summaryText": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "ExperienceReport": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "reportText": {
+          "type": "string"
+        }
+      }
+    },
+    "Exposure": {
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "exposureType": {
+          "type": "string"
+        },
+        "exposureContext": {
+          "type": "string"
+        }
+      }
+    },
+    "FoodItem": {
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "foodGroup": {
+          "type": "string"
+        },
+        "variantKind": {
+          "type": "string"
+        },
+        "productionType": {
+          "type": "string"
+        },
+        "processingMethods": {
+          "type": "array",
+          "items": "string"
+        },
+        "preparationNotes": {
+          "type": "string"
+        }
+      }
+    },
+    "FoodProduct": {
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "brandName": {
+          "type": "string"
+        },
+        "processingMethods": {
+          "type": "array",
+          "items": "string"
+        },
+        "preparationNotes": {
+          "type": "string"
+        }
+      }
+    },
+    "FunctionalGoal": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "goalType": {
+          "type": "string"
+        }
+      }
+    },
+    "Ingredient": {
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "ingredientRole": {
+          "type": "string"
+        }
+      }
+    },
     "LabTest": {
-      "mergeKey": "labTestId",
-      "extractable": false,
-      "stateLabel": "LabTestState",
-      "identityProperties": ["labTestId", "name", "synonyms"],
-      "searchFields": ["name", "synonyms", "loincCodes", "whatItMeasures"],
-      "properties": {
-        "labTestId":         { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":         { "type": "datetime", "system": true },
-        "name":              { "type": "string",  "required": true },
-        "synonyms":          { "type": "array",   "items": "string" },
-        "loincCodes":        { "type": "array",   "items": "string" },
-        "cptCodes":          { "type": "array",   "items": "string" },
-        "whatItMeasures":    { "type": "string" },
-        "prepRequirements":  { "type": "string" }
-      }
-    },
-
-    "PanelDefinition": {
-      "mergeKey": "panelDefinitionId",
-      "extractable": false,
-      "stateLabel": "PanelDefinitionState",
-      "identityProperties": ["panelDefinitionId", "canonicalName", "aliases"],
-      "searchFields": ["canonicalName", "aliases", "description"],
-      "properties": {
-        "panelDefinitionId": { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":         { "type": "datetime", "system": true },
-        "canonicalName":     { "type": "string",  "required": true },
-        "aliases":           { "type": "array",   "items": "string" },
-        "description":       { "type": "string" }
-      }
-    },
-
-    "RegulatoryPathway": {
-      "mergeKey": "pathwayId",
-      "extractable": false,
-      "searchFields": ["pathwayName", "authority", "pathwayType", "requirementsSummary"],
-      "properties": {
-        "pathwayId":              { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":              { "type": "datetime", "system": true },
-        "authority":              { "type": "string" },
-        "pathwayType":            { "type": "string" },
-        "pathwayName":            { "type": "string" },
-        "requirementsSummary":    { "type": "string" }
-      }
-    },
-
-    "RegulatoryStatus": {
-      "mergeKey": "regulatoryStatusId",
-      "extractable": false,
-      "searchFields": ["status", "statusDetails"],
-      "properties": {
-        "regulatoryStatusId": { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":          { "type": "datetime", "system": true },
-        "status":             { "type": "string" },
-        "effectiveDate":      { "type": "datetime" },
-        "statusDetails":      { "type": "string" }
-      }
-    },
-
-    "ProductCategory": {
-      "mergeKey": "categoryId",
-      "extractable": false,
-      "searchFields": ["name", "description", "aliases"],
-      "properties": {
-        "categoryId":  { "type": "string",  "format": "uuid", "system": true },
-        "createdAt":   { "type": "datetime", "system": true },
-        "name":        { "type": "string" },
-        "description": { "type": "string" },
-        "aliases":     { "type": "array",  "items": "string" }
-      }
-    }
-  },
-
-  "relationships": {
-    "_OrgPersonRelationship": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
       "extractable": true,
-      "extractionClass": "ExtractedOrgPersonRelationship",
-      "from": "Organization",
-      "to": "Person",
-      "note": "Virtual grouping. Set relationship_type to one of the coveredTypes.",
-      "coveredTypes": ["EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER", "HAS_SCIENTIFIC_ADVISOR", "HAS_EXECUTIVE_ROLE"],
-      "searchFields": ["roleTitle", "department", "seniority"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [
+        "LabTestSearch"
+      ],
+      "vector": [],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
       "properties": {
-        "org_name":          { "type": "string",  "required": true },
-        "person_name":       { "type": "string",  "required": true },
-        "relationship_type": { "type": "string",  "required": true },
-        "roleTitle":         { "type": "string" },
-        "department":        { "type": "string" },
-        "seniority":         { "type": "string" },
-        "isCurrent":         { "type": "bool",   "default": true }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "testType": {
+          "type": "string",
+          "extract": true
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
       }
     },
-
-    "EMPLOYS": {
+    "Listing": {
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=EMPLOYS",
-      "from": "Organization",
-      "to": "Person",
-      "searchFields": ["roleTitle", "department", "roleFunction", "seniority", "employmentType"],
-      "properties": {
-        "createdAt":      { "type": "datetime", "system": true },
-        "validFrom":      { "type": "datetime", "system": true },
-        "validTo":        { "type": "datetime", "system": true },
-        "recordedFrom":   { "type": "datetime", "system": true },
-        "recordedTo":     { "type": "datetime", "system": true },
-        "roleTitle":      { "type": "string" },
-        "department":     { "type": "string" },
-        "roleFunction":   { "type": "string" },
-        "seniority":      { "type": "string" },
-        "employmentType": { "type": "string" },
-        "startDate":      { "type": "datetime" },
-        "endDate":        { "type": "datetime" },
-        "isCurrent":      { "type": "bool" },
-        "claimIds":       { "type": "array", "items": "string" }
-      }
-    },
-
-    "FOUNDED_BY": {
-      "extractable": false,
-      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=FOUNDED_BY",
-      "from": "Organization",
-      "to": "Person",
-      "searchFields": ["founderRole"],
-      "properties": {
-        "createdAt":     { "type": "datetime", "system": true },
-        "validAt":       { "type": "datetime", "system": true },
-        "founderRole":   { "type": "string" },
-        "foundingDate":  { "type": "datetime" },
-        "isCurrent":     { "type": "bool" },
-        "claimIds":      { "type": "array", "items": "string" }
-      }
-    },
-
-    "HAS_BOARD_MEMBER": {
-      "extractable": false,
-      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=HAS_BOARD_MEMBER",
-      "from": "Organization",
-      "to": "Person",
-      "searchFields": ["boardRole", "committee"],
-      "properties": {
-        "createdAt":  { "type": "datetime", "system": true },
-        "validAt":    { "type": "datetime", "system": true },
-        "boardRole":  { "type": "string" },
-        "committee":  { "type": "string" },
-        "startDate":  { "type": "datetime" },
-        "endDate":    { "type": "datetime" },
-        "isCurrent":  { "type": "bool" },
-        "claimIds":   { "type": "array", "items": "string" }
-      }
-    },
-
-    "HAS_SCIENTIFIC_ADVISOR": {
-      "extractable": false,
-      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=HAS_SCIENTIFIC_ADVISOR",
-      "from": "Organization",
-      "to": "Person",
-      "searchFields": ["advisorType", "focusAreas"],
-      "properties": {
-        "createdAt":   { "type": "datetime", "system": true },
-        "validAt":     { "type": "datetime", "system": true },
-        "advisorType": { "type": "string" },
-        "focusAreas":  { "type": "array", "items": "string" },
-        "startDate":   { "type": "datetime" },
-        "endDate":     { "type": "datetime" },
-        "isCurrent":   { "type": "bool" },
-        "claimIds":    { "type": "array", "items": "string" }
-      }
-    },
-
-    "HAS_EXECUTIVE_ROLE": {
-      "extractable": false,
-      "extractionNote": "Extracted via _OrgPersonRelationship with relationship_type=HAS_EXECUTIVE_ROLE",
-      "from": "Organization",
-      "to": "Person",
-      "searchFields": ["executiveRole"],
-      "properties": {
-        "createdAt":      { "type": "datetime", "system": true },
-        "validAt":        { "type": "datetime", "system": true },
-        "executiveRole":  { "type": "string" },
-        "startDate":      { "type": "datetime" },
-        "endDate":        { "type": "datetime" },
-        "isCurrent":      { "type": "bool" },
-        "claimIds":       { "type": "array", "items": "string" }
-      }
-    },
-
-    "HAS_LOCATION": {
-      "extractable": false,
-      "from": "Organization",
-      "to": "PhysicalLocation",
-      "searchFields": ["locationRole"],
-      "properties": {
-        "createdAt":    { "type": "datetime", "system": true },
-        "validAt":      { "type": "datetime", "system": true },
-        "locationRole": { "type": "string" },
-        "isPrimary":    { "type": "bool" },
-        "startDate":    { "type": "datetime" },
-        "endDate":      { "type": "datetime" },
-        "claimIds":     { "type": "array", "items": "string" }
-      }
-    },
-
-    "OWNS_OR_CONTROLS": {
-      "extractable": false,
-      "from": "Organization",
-      "to": "Organization",
-      "searchFields": ["relationshipType", "controlType", "ownershipPercent"],
-      "properties": {
-        "createdAt":        { "type": "datetime", "system": true },
-        "validAt":          { "type": "datetime", "system": true },
-        "relationshipType": { "type": "string" },
-        "ownershipPercent": { "type": "float" },
-        "controlType":      { "type": "string" },
-        "effectiveFrom":    { "type": "datetime" },
-        "effectiveTo":      { "type": "datetime" },
-        "isCurrent":        { "type": "bool" },
-        "claimIds":         { "type": "array", "items": "string" }
-      }
-    },
-
-    "LISTS": {
-      "extractable": false,
-      "from": "Organization",
-      "to": "Listing",
-      "searchFields": ["listRole", "channel", "availabilityNotes"],
-      "properties": {
-        "createdAt":               { "type": "datetime", "system": true },
-        "validAt":                 { "type": "datetime", "system": true },
-        "listRole":                { "type": "string" },
-        "channel":                 { "type": "string" },
-        "regionsOverrides":        { "type": "array", "items": "string" },
-        "collectionModesOverrides":{ "type": "array", "items": "string" },
-        "availabilityNotes":       { "type": "string" },
-        "claimIds":                { "type": "array", "items": "string" }
-      }
-    },
-
-    "OFFERS_PRODUCT": {
-      "extractable": false,
-      "extractionNote": "Inferred in neo4j_writer from product.brandName matching org.name — not directly extracted by LLM.",
-      "from": "Organization",
-      "to": "Product",
+      "mergeKey": "id",
+      "nameProperty": "name",
       "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "channel":   { "type": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        }
       }
     },
-
-    "SUPPLIES_COMPOUND_FORM": {
+    "ListingSnapshot": {
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity",
+        "TemporalSnapshot"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "CompoundForm",
+      "mergeKey": "id",
+      "nameProperty": "name",
       "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "validFrom": {
+          "type": "datetime"
+        },
+        "validTo": {
+          "type": "datetime"
+        },
+        "recordedFrom": {
+          "type": "datetime"
+        },
+        "recordedTo": {
+          "type": "datetime"
+        },
+        "listingType": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "priceAmount": {
+          "type": "float"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "availabilityStatus": {
+          "type": "string"
+        },
+        "capturedAt": {
+          "type": "datetime"
+        },
+        "commercialTermsSummary": {
+          "type": "string"
+        }
       }
     },
-
-    "MANUFACTURES": {
+    "ManufacturingProcess": {
+      "domain": "manufacturing",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "CompoundForm",
-      "searchFields": ["claimIds"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "processClass": {
+          "type": "string"
+        },
+        "qualitySystemKind": {
+          "type": "string"
+        },
+        "productionScale": {
+          "type": "string"
+        },
+        "processTechnologySummary": {
+          "type": "string"
+        }
       }
     },
-
-    "MANUFACTURES_PRODUCT": {
+    "ManufacturingStep": {
+      "domain": "manufacturing",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "Product",
-      "searchFields": ["claimIds"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "stepClass": {
+          "type": "string"
+        },
+        "environmentGrade": {
+          "type": "string"
+        },
+        "operationKind": {
+          "type": "string"
+        }
       }
     },
-
-    "CONTRACT_MANUFACTURER_FOR_ORGANIZATION": {
+    "Material": {
+      "domain": "manufacturing",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "Organization",
-      "searchFields": ["claimIds"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "materialType": {
+          "type": "string"
+        },
+        "materialGrade": {
+          "type": "string"
+        },
+        "regulatoryCategoryHint": {
+          "type": "string"
+        },
+        "traceabilityCode": {
+          "type": "string"
+        }
       }
     },
-
-    "CONTRACT_MANUFACTURER_FOR_PRODUCT": {
+    "MeasurementMethod": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "Product",
-      "searchFields": ["claimIds"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "methodClass": {
+          "type": "string"
+        }
       }
     },
-
-    "CONTRACT_MANUFACTURER_FOR_COMPOUND_FORM": {
+    "MeasurementPlan": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "CompoundForm",
-      "searchFields": ["claimIds"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "planType": {
+          "type": "string"
+        }
       }
     },
-
-    "PERFORMS_MANUFACTURING_PROCESS": {
+    "Mechanism": {
+      "domain": "biology",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "ManufacturingProcess",
-      "searchFields": ["role"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "MechanismSearch"
+      ],
+      "vector": [],
       "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "role":      { "type": "string" },
-        "claimIds":  { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "mechanismClass": {
+          "type": "string"
+        },
+        "regulatoryMode": {
+          "type": "string"
+        },
+        "biologicalLayer": {
+          "type": "string"
+        },
+        "keyEntitiesSummary": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
       }
     },
-
-    "DEVELOPS_PLATFORM": {
+    "Metric": {
+      "domain": "biology",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "TechnologyPlatform",
-      "searchFields": ["relationshipRole", "notes", "source"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "MetricSearch"
+      ],
+      "vector": [],
       "properties": {
-        "createdAt":        { "type": "datetime", "system": true },
-        "validAt":          { "type": "datetime", "system": true },
-        "relationshipRole": { "type": "string" },
-        "notes":            { "type": "string" },
-        "source":           { "type": "string" },
-        "claimIds":         { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "metricType": {
+          "type": "string"
+        },
+        "canonicalUnit": {
+          "type": "string"
+        },
+        "loincCode": {
+          "type": "string"
+        },
+        "ucumUnit": {
+          "type": "string"
+        },
+        "formulaExpression": {
+          "type": "string"
+        },
+        "formulaVariables": {
+          "type": "string"
+        },
+        "mediaUrl": {
+          "type": "string"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
       }
     },
-
-    "USES_PLATFORM": {
+    "Modality": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity"
+      ],
       "extractable": false,
-      "from": "Organization",
-      "to": "TechnologyPlatform",
-      "searchFields": ["usageContext", "notes", "source"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "createdAt":    { "type": "datetime", "system": true },
-        "validAt":      { "type": "datetime", "system": true },
-        "usageContext": { "type": "string" },
-        "isPrimary":    { "type": "bool" },
-        "notes":        { "type": "string" },
-        "source":       { "type": "string" },
-        "claimIds":     { "type": "array", "items": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "modalityClass": {
+          "type": "string"
+        },
+        "modalityFamily": {
+          "type": "string"
+        },
+        "parameterNames": {
+          "type": "array",
+          "items": "string"
+        },
+        "parameterUnits": {
+          "type": "array",
+          "items": "string"
+        }
       }
     },
-
-    "CONTAINS_COMPOUND_FORM": {
+    "MolecularEntity": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "entityKind": {
+          "type": "string"
+        },
+        "geneSymbol": {
+          "type": "string"
+        },
+        "hgncId": {
+          "type": "string"
+        },
+        "uniprotId": {
+          "type": "string"
+        },
+        "ensemblId": {
+          "type": "string"
+        }
+      }
+    },
+    "NarrativeArc": {
+      "domain": "narrativeArcs",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "NarrativeArcSearch"
+      ],
+      "vector": [
+        "NarrativeArcSearchEmbedding"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "arcType": {
+          "type": "string"
+        },
+        "arcStatus": {
+          "type": "string"
+        },
+        "startedAt": {
+          "type": "datetime"
+        },
+        "endedAt": {
+          "type": "datetime"
+        },
+        "impactDomain": {
+          "type": "string"
+        },
+        "themeSummary": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "Observation": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "observedAt": {
+          "type": "datetime"
+        },
+        "observationType": {
+          "type": "string"
+        },
+        "observedPopulation": {
+          "type": "string"
+        }
+      }
+    },
+    "Organ": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "organSystem": {
+          "type": "string"
+        }
+      }
+    },
+    "Organization": {
+      "domain": "organization",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
       "extractable": true,
-      "extractionClass": "ExtractedCompoundIngredient",
-      "from": "Product",
-      "to": "CompoundForm",
-      "note": "Denormalized model: includes CompoundForm node properties (compoundName=canonicalName, formType) plus relationship properties.",
-      "searchFields": ["compoundName", "formType", "bioavailabilityNotes"],
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [
+        "OrganizationName"
+      ],
+      "vector": [
+        "OrganizationSearchEmbedding"
+      ],
+      "stateLabel": "OrganizationState",
+      "identityProperties": [
+        "id",
+        "name"
+      ],
       "properties": {
-        "product_name":        { "type": "string", "required": true, "note": "Reference to parent Product.name" },
-        "compoundName":        { "type": "string", "required": true, "note": "Maps to CompoundForm.canonicalName" },
-        "formType":            { "type": "string" },
-        "dose":                { "type": "float" },
-        "doseUnit":            { "type": "string" },
-        "role":                { "type": "string", "default": "active" },
-        "bioavailabilityNotes":{ "type": "string" }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "canonicalTicker": {
+          "type": "string",
+          "extract": true
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
       }
     },
-
-    "CONTAINS_COMPOUND": {
-      "extractable": false,
-      "from": "Product",
-      "to": "CompoundForm",
-      "searchFields": ["dose", "doseUnit", "role"],
-      "properties": {
-        "createdAt":        { "type": "datetime", "system": true },
-        "validAt":          { "type": "datetime", "system": true },
-        "dose":             { "type": "float" },
-        "doseUnit":         { "type": "string" },
-        "role":             { "type": "string" },
-        "standardizedTo":   { "type": "string" },
-        "claimIds":         { "type": "array", "items": "string" }
-      }
-    },
-
-    "DELIVERS_LAB_TEST": {
-      "extractable": false,
-      "from": "Product",
-      "to": "LabTest",
-      "searchFields": ["role", "componentName", "quantity"],
-      "properties": {
-        "createdAt":     { "type": "datetime", "system": true },
-        "validAt":       { "type": "datetime", "system": true },
-        "role":          { "type": "string" },
-        "quantity":      { "type": "int" },
-        "componentName": { "type": "string" },
-        "claimIds":      { "type": "array", "items": "string" }
-      }
-    },
-
-    "IMPLEMENTS_PANEL": {
-      "extractable": false,
-      "from": "Product",
-      "to": "PanelDefinition",
-      "searchFields": ["panelRole", "versionLabel"],
-      "properties": {
-        "createdAt":     { "type": "datetime", "system": true },
-        "validAt":       { "type": "datetime", "system": true },
-        "panelRole":     { "type": "string" },
-        "versionLabel":  { "type": "string" },
-        "claimIds":      { "type": "array", "items": "string" }
-      }
-    },
-
-    "FOLLOWS_PATHWAY": {
-      "extractable": false,
-      "from": "Product",
-      "to": "RegulatoryPathway",
-      "searchFields": ["jurisdictionId"],
-      "properties": {
-        "createdAt":      { "type": "datetime", "system": true },
-        "validAt":        { "type": "datetime", "system": true },
-        "jurisdictionId": { "type": "string" },
-        "claimIds":       { "type": "array", "items": "string" }
-      }
-    },
-
-    "IN_CATEGORY": {
-      "extractable": false,
-      "from": "Product",
-      "to": "ProductCategory",
-      "searchFields": [],
-      "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
-      }
-    },
-
-    "HAS_REGULATORY_STATUS": {
-      "extractable": false,
-      "from": "Product",
-      "to": "RegulatoryStatus",
-      "searchFields": ["status", "effectiveDate", "statusDetails"],
-      "properties": {
-        "createdAt":     { "type": "datetime", "system": true },
-        "validAt":       { "type": "datetime", "system": true },
-        "status":        { "type": "string" },
-        "effectiveDate": { "type": "datetime" },
-        "statusDetails": { "type": "string" },
-        "claimIds":      { "type": "array", "items": "string" }
-      }
-    },
-
-    "INCLUDES_LABTEST": {
-      "extractable": false,
-      "from": "PanelDefinition",
-      "to": "LabTest",
-      "searchFields": ["notes"],
-      "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "required":  { "type": "bool" },
-        "quantity":  { "type": "int" },
-        "notes":     { "type": "string" },
-        "claimIds":  { "type": "array", "items": "string" }
-      }
-    },
-
-    "INCLUDES_BIOMARKER": {
-      "extractable": false,
-      "from": "PanelDefinition",
-      "to": "Biomarker",
-      "searchFields": [],
-      "properties": {
-        "createdAt": { "type": "datetime", "system": true },
-        "validAt":   { "type": "datetime", "system": true },
-        "claimIds":  { "type": "array", "items": "string" }
-      }
-    },
-
-    "HAS_STATE": {
-      "extractable": false,
-      "note": "Bitemporal attachment between identity and state nodes. System-managed — not directly extracted by LLM.",
-      "from": "_IdentityNode",
-      "to": "_StateNode",
-      "searchFields": [],
-      "properties": {
-        "createdAt":    { "type": "datetime", "system": true },
-        "validFrom":    { "type": "datetime", "system": true, "note": "When the state became true in the domain." },
-        "validTo":      { "type": "datetime", "system": true, "note": "When the state ceased being true. Null = active." },
-        "recordedFrom": { "type": "datetime", "system": true, "note": "When the system learned/stored this state." },
-        "recordedTo":   { "type": "datetime", "system": true, "note": "When the system stopped believing this. Null = current belief." }
-      }
-    }
-  },
-
-  "stateNodes": {
     "OrganizationState": {
-      "mergeKey": "stateId",
-      "parentLabel": "Organization",
-      "note": "Immutable snapshot of Organization descriptive properties.",
+      "domain": "organization",
+      "implements": [
+        "Entity",
+        "SearchIndexable",
+        "TemporalSnapshot"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "OrganizationStateSearch"
+      ],
+      "vector": [
+        "OrganizationStateSearchEmbedding"
+      ],
       "properties": {
-        "stateId":              { "type": "string",  "format": "uuid", "system": true },
-        "stateHash":            { "type": "string",  "system": true, "note": "SHA-256 of normalized state properties for change detection." },
-        "sourceReport":         { "type": "string",  "system": true },
-        "createdAt":            { "type": "datetime", "system": true },
-        "orgType":              { "type": "string" },
-        "businessModel":        { "type": "string" },
-        "description":          { "type": "string" },
-        "legalName":            { "type": "string" },
-        "websiteUrl":           { "type": "string" },
-        "primaryIndustryTags":  { "type": "array",   "items": "string" },
-        "regionsServed":        { "type": "array",   "items": "string" },
-        "headquartersCity":     { "type": "string" },
-        "headquartersCountry":  { "type": "string" },
-        "searchText":           { "type": "string",  "system": true },
-        "searchFields":         { "type": "array",   "items": "string", "system": true },
-        "embedding":            { "type": "array",   "items": "float", "system": true },
-        "embeddingModel":       { "type": "string",  "system": true },
-        "embeddingDimensions":  { "type": "int",     "system": true }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "validFrom": {
+          "type": "datetime"
+        },
+        "validTo": {
+          "type": "datetime"
+        },
+        "recordedFrom": {
+          "type": "datetime"
+        },
+        "recordedTo": {
+          "type": "datetime"
+        },
+        "legalName": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "organizationType": {
+          "type": "string"
+        },
+        "foundedYear": {
+          "type": "int"
+        },
+        "fundingStage": {
+          "type": "string"
+        },
+        "totalFundingUsd": {
+          "type": "float"
+        },
+        "employeeRange": {
+          "type": "string"
+        },
+        "revenueModel": {
+          "type": "string"
+        },
+        "valueChainStages": {
+          "type": "array",
+          "items": "string"
+        },
+        "sector": {
+          "type": "string"
+        },
+        "websiteUrl": {
+          "type": "string"
+        },
+        "headquarters": {
+          "type": "string"
+        },
+        "headquartersSummary": {
+          "type": "string"
+        },
+        "operatingSummary": {
+          "type": "string"
+        },
+        "marketCapUsd": {
+          "type": "float"
+        },
+        "pipelineSummary": {
+          "type": "string"
+        },
+        "competitivePositionSummary": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
       }
     },
-    "PersonState": {
-      "mergeKey": "stateId",
-      "parentLabel": "Person",
-      "note": "Immutable snapshot of Person descriptive properties.",
+    "Outcome": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
       "properties": {
-        "stateId":           { "type": "string",  "format": "uuid", "system": true },
-        "stateHash":         { "type": "string",  "system": true },
-        "sourceReport":      { "type": "string",  "system": true },
-        "createdAt":         { "type": "datetime", "system": true },
-        "givenName":         { "type": "string" },
-        "familyName":        { "type": "string" },
-        "honorific":         { "type": "string" },
-        "degrees":           { "type": "array",   "items": "string" },
-        "bio":               { "type": "string" },
-        "primaryDomain":     { "type": "string" },
-        "specialties":       { "type": "array",   "items": "string" },
-        "expertiseTags":     { "type": "array",   "items": "string" },
-        "linkedinUrl":       { "type": "string" },
-        "searchText":        { "type": "string",  "system": true },
-        "searchFields":      { "type": "array",   "items": "string", "system": true },
-        "embedding":         { "type": "array",   "items": "float", "system": true },
-        "embeddingModel":    { "type": "string",  "system": true },
-        "embeddingDimensions": { "type": "int",   "system": true }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "outcomeClass": {
+          "type": "string"
+        },
+        "outcomeDomain": {
+          "type": "string"
+        },
+        "timeframeText": {
+          "type": "string"
+        }
+      }
+    },
+    "PanelDefinition": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": true,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [],
+      "vector": [],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "panelType": {
+          "type": "string"
+        },
+        "versionLabel": {
+          "type": "string"
+        }
+      }
+    },
+    "Pathway": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "pathwayClass": {
+          "type": "string"
+        },
+        "sourceDatabase": {
+          "type": "string"
+        },
+        "externalId": {
+          "type": "string"
+        },
+        "pathwayRevision": {
+          "type": "string"
+        }
+      }
+    },
+    "Person": {
+      "domain": "person",
+      "implements": [
+        "Entity",
+        "SearchIndexable",
+        "ActorIdentity"
+      ],
+      "extractable": true,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description",
+        "bio",
+        "title"
+      ],
+      "fulltext": [
+        "PersonSearch"
+      ],
+      "vector": [
+        "PersonSearchEmbedding"
+      ],
+      "stateLabel": "PersonState",
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "title": {
+          "type": "string",
+          "extract": true
+        },
+        "bio": {
+          "type": "string",
+          "extract": true
+        },
+        "linkedInUrl": {
+          "type": "string",
+          "extract": true
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "PhysicalLocation": {
+      "domain": "organization",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "locationType": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "addressText": {
+          "type": "string"
+        },
+        "establishmentIdentifier": {
+          "type": "string"
+        }
+      }
+    },
+    "Platform": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "platformType": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "Population": {
+      "domain": "studies",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "populationType": {
+          "type": "string"
+        },
+        "sampleSize": {
+          "type": "int"
+        },
+        "sexEligibility": {
+          "type": "string"
+        },
+        "minAge": {
+          "type": "string"
+        },
+        "maxAge": {
+          "type": "string"
+        },
+        "healthyVolunteers": {
+          "type": "bool"
+        }
+      }
+    },
+    "Product": {
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": true,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [
+        "ProductSearch"
+      ],
+      "vector": [
+        "ProductSearchEmbedding"
+      ],
+      "stateLabel": "ProductState",
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "primaryRegulatoryIdentifier": {
+          "type": "string",
+          "extract": false
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
       }
     },
     "ProductState": {
-      "mergeKey": "stateId",
+      "domain": "productsAndListings",
+      "implements": [
+        "Entity",
+        "SearchIndexable",
+        "TemporalSnapshot"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "ProductStateSearch"
+      ],
+      "vector": [
+        "ProductStateSearchEmbedding"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "validFrom": {
+          "type": "datetime"
+        },
+        "validTo": {
+          "type": "datetime"
+        },
+        "recordedFrom": {
+          "type": "datetime"
+        },
+        "recordedTo": {
+          "type": "datetime"
+        },
+        "productType": {
+          "type": "string"
+        },
+        "applicationContext": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": "string"
+        },
+        "launchYear": {
+          "type": "int"
+        },
+        "targetCustomer": {
+          "type": "string"
+        },
+        "deliveryModel": {
+          "type": "string"
+        },
+        "approvedYear": {
+          "type": "int"
+        },
+        "productClass": {
+          "type": "string"
+        },
+        "formulationSummary": {
+          "type": "string"
+        },
+        "indicationSummary": {
+          "type": "string"
+        },
+        "modalitySummary": {
+          "type": "string"
+        },
+        "regulatoryAuthorizationId": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "Protocol": {
+      "domain": "protocols",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [
+        "ProtocolSearch"
+      ],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "protocolType": {
+          "type": "string"
+        },
+        "versionLabel": {
+          "type": "string"
+        },
+        "lastUpdatedAt": {
+          "type": "datetime"
+        },
+        "authorName": {
+          "type": "string"
+        },
+        "publicUrl": {
+          "type": "string"
+        },
+        "scheduleText": {
+          "type": "string"
+        },
+        "cadence": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "ProtocolAdjustmentRule": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "ruleType": {
+          "type": "string"
+        }
+      }
+    },
+    "ProtocolResult": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "resultSummary": {
+          "type": "string"
+        }
+      }
+    },
+    "ProtocolStep": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "stepKind": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "timing": {
+          "type": "string"
+        },
+        "durationText": {
+          "type": "string"
+        },
+        "scheduleText": {
+          "type": "string"
+        },
+        "activityDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "PseudonymousActor": {
+      "domain": "person",
+      "implements": [
+        "Entity",
+        "ActorIdentity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "handle": {
+          "type": "string"
+        }
+      }
+    },
+    "ReferenceRange": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "lowerBound": {
+          "type": "float"
+        },
+        "upperBound": {
+          "type": "float"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "populationNotes": {
+          "type": "string"
+        },
+        "stratifiersText": {
+          "type": "string"
+        },
+        "sex": {
+          "type": "string"
+        },
+        "ageMinYears": {
+          "type": "float"
+        },
+        "ageMaxYears": {
+          "type": "float"
+        },
+        "fastingStatus": {
+          "type": "string"
+        },
+        "pregnancyStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "RegulatoryAgency": {
+      "domain": "manufacturing",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "agencyCode": {
+          "type": "string"
+        }
+      }
+    },
+    "RegulatoryPathway": {
+      "domain": "manufacturing",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "pathwayKind": {
+          "type": "string"
+        },
+        "submissionCategory": {
+          "type": "string"
+        },
+        "jurisdictionCode": {
+          "type": "string"
+        }
+      }
+    },
+    "RegulatoryStatus": {
+      "domain": "manufacturing",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "statusCode": {
+          "type": "string"
+        },
+        "effectiveDate": {
+          "type": "datetime"
+        },
+        "applicationNumber": {
+          "type": "string"
+        },
+        "decisionDate": {
+          "type": "datetime"
+        },
+        "expirationOrRenewalDate": {
+          "type": "datetime"
+        },
+        "jurisdictionCode": {
+          "type": "string"
+        }
+      }
+    },
+    "RegulatoryStep": {
+      "domain": "manufacturing",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "stepKind": {
+          "type": "string"
+        },
+        "milestoneCode": {
+          "type": "string"
+        }
+      }
+    },
+    "RiskFactor": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "riskClass": {
+          "type": "string"
+        },
+        "modifiable": {
+          "type": "bool"
+        },
+        "exposureCategory": {
+          "type": "string"
+        }
+      }
+    },
+    "Segmentation": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "segmentationHash": {
+          "type": "string",
+          "required": true
+        },
+        "chunkSize": {
+          "type": "int",
+          "required": true
+        },
+        "overlap": {
+          "type": "int",
+          "required": true
+        },
+        "segmentationStrategy": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "Sensor": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "sensorType": {
+          "type": "string"
+        }
+      }
+    },
+    "Series": {
+      "domain": "evidence",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "seriesType": {
+          "type": "string"
+        }
+      }
+    },
+    "Species": {
+      "domain": "biology",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "ncbiTaxonomyId": {
+          "type": "string"
+        },
+        "scientificName": {
+          "type": "string"
+        }
+      }
+    },
+    "Specimen": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "specimenType": {
+          "type": "string"
+        },
+        "collectionSetting": {
+          "type": "string"
+        }
+      }
+    },
+    "Study": {
+      "domain": "studies",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": true,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [
+        "StudySearch"
+      ],
+      "vector": [
+        "StudySearchEmbedding"
+      ],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "registryNamespace": {
+          "type": "string",
+          "extract": true
+        },
+        "registryId": {
+          "type": "string",
+          "extract": true
+        },
+        "canonicalUrl": {
+          "type": "string",
+          "extract": true
+        },
+        "pmid": {
+          "type": "string",
+          "extract": true
+        },
+        "doi": {
+          "type": "string",
+          "extract": true
+        },
+        "overallStatus": {
+          "type": "string",
+          "extract": true
+        },
+        "registrySyncedAt": {
+          "type": "datetime",
+          "extract": false
+        },
+        "startDate": {
+          "type": "datetime",
+          "extract": true
+        },
+        "primaryCompletionDate": {
+          "type": "datetime",
+          "extract": false
+        },
+        "completionDate": {
+          "type": "datetime",
+          "extract": false
+        },
+        "enrollmentCount": {
+          "type": "int",
+          "extract": true
+        },
+        "studyType": {
+          "type": "string",
+          "extract": true
+        },
+        "allocation": {
+          "type": "string",
+          "extract": false
+        },
+        "interventionModel": {
+          "type": "string",
+          "extract": false
+        },
+        "masking": {
+          "type": "string",
+          "extract": false
+        },
+        "primaryPurpose": {
+          "type": "string",
+          "extract": false
+        },
+        "countries": {
+          "type": "array",
+          "items": "string",
+          "extract": true
+        },
+        "fdaRegulatedDrug": {
+          "type": "bool",
+          "extract": false
+        },
+        "fdaRegulatedDevice": {
+          "type": "bool",
+          "extract": false
+        },
+        "hasResults": {
+          "type": "bool",
+          "extract": true
+        },
+        "studyPhase": {
+          "type": "string",
+          "enum": "StudyPhase",
+          "extract": true
+        },
+        "sampleSizeText": {
+          "type": "string",
+          "extract": true
+        },
+        "evidenceLevel": {
+          "type": "string",
+          "extract": true
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "StudyOutcome": {
+      "domain": "studies",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "outcomeSummary": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "Target": {
+      "domain": "protocols",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "targetType": {
+          "type": "string"
+        }
+      }
+    },
+    "TechnologyPlatform": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity",
+        "SearchIndexable"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [
+        "name",
+        "description"
+      ],
+      "fulltext": [
+        "TechnologyPlatformSearch"
+      ],
+      "vector": [],
+      "identityProperties": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "platformClass": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        }
+      }
+    },
+    "ToolOrInstrument": {
+      "domain": "diagnostics",
+      "implements": [
+        "Entity"
+      ],
+      "extractable": false,
+      "mergeKey": "id",
+      "nameProperty": "name",
+      "searchFields": [],
+      "fulltext": [],
+      "vector": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "toolClass": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "relationships": {
+    "_LabTestBiomarkerRelationship": {
+      "extractable": true,
+      "from": "LabTest",
+      "to": "Biomarker",
+      "extractionClass": "ExtractedLabTestBiomarkerRelationship",
+      "coveredTypes": [
+        "MEASURES"
+      ],
+      "note": "Virtual grouping for LabTest-Biomarker edges.",
+      "properties": {
+        "lab_test_name": {
+          "type": "string",
+          "required": true
+        },
+        "biomarker_name": {
+          "type": "string",
+          "required": true
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "_OrgPersonRelationship": {
+      "extractable": true,
+      "from": "Organization",
+      "to": "Person",
+      "extractionClass": "ExtractedOrgPersonRelationship",
+      "coveredTypes": [
+        "EMPLOYS",
+        "FOUNDED_BY",
+        "HAS_BOARD_MEMBER",
+        "HAS_CEO",
+        "ADVISES",
+        "HOLDS_ROLE_AT",
+        "AFFILIATED_WITH"
+      ],
+      "note": "Virtual grouping. LLM sets relationship_type to one of the coveredTypes.",
+      "properties": {
+        "org_name": {
+          "type": "string",
+          "required": true
+        },
+        "person_name": {
+          "type": "string",
+          "required": true
+        },
+        "relationship_type": {
+          "type": "string",
+          "required": true
+        },
+        "roleTitle": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "seniority": {
+          "type": "string"
+        },
+        "isCurrent": {
+          "type": "bool",
+          "default": true
+        }
+      }
+    },
+    "_OrgProductRelationship": {
+      "extractable": true,
+      "from": "Organization",
+      "to": "Product",
+      "extractionClass": "ExtractedOrgProductRelationship",
+      "coveredTypes": [
+        "OFFERS",
+        "MANUFACTURES"
+      ],
+      "note": "Virtual grouping for Organization-Product edges.",
+      "properties": {
+        "org_name": {
+          "type": "string",
+          "required": true
+        },
+        "product_name": {
+          "type": "string",
+          "required": true
+        },
+        "relationship_type": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "_ProductCompoundIngredient": {
+      "extractable": true,
+      "from": "Product",
+      "to": "CompoundForm",
+      "extractionClass": "ExtractedCompoundIngredient",
+      "coveredTypes": [
+        "CONTAINS_COMPOUND_FORM"
+      ],
+      "note": "Denormalized: includes CompoundForm node properties plus CONTAINS_COMPOUND_FORM relationship data.",
+      "searchFields": [
+        "compoundName",
+        "formType"
+      ],
+      "properties": {
+        "product_name": {
+          "type": "string",
+          "required": true
+        },
+        "compoundName": {
+          "type": "string",
+          "required": true,
+          "note": "Maps to CompoundForm.name"
+        },
+        "formType": {
+          "type": "string"
+        },
+        "dose": {
+          "type": "float"
+        },
+        "doseUnit": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "default": "active"
+        },
+        "bioavailabilityNotes": {
+          "type": "string"
+        }
+      }
+    },
+    "_ProductLabTestRelationship": {
+      "extractable": true,
+      "from": "Product",
+      "to": "LabTest",
+      "extractionClass": "ExtractedProductLabTestRelationship",
+      "coveredTypes": [
+        "DELIVERS_LABTEST"
+      ],
+      "note": "Virtual grouping for Product-LabTest edges.",
+      "properties": {
+        "product_name": {
+          "type": "string",
+          "required": true
+        },
+        "lab_test_name": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "_ProductPanelRelationship": {
+      "extractable": true,
+      "from": "Product",
+      "to": "PanelDefinition",
+      "extractionClass": "ExtractedProductPanelRelationship",
+      "coveredTypes": [
+        "IMPLEMENTS_PANEL"
+      ],
+      "note": "Virtual grouping for Product-PanelDefinition edges.",
+      "properties": {
+        "product_name": {
+          "type": "string",
+          "required": true
+        },
+        "panel_name": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "_StudyConditionRelationship": {
+      "extractable": true,
+      "from": "Study",
+      "to": "Condition",
+      "extractionClass": "ExtractedStudyConditionRelationship",
+      "coveredTypes": [
+        "INVESTIGATES"
+      ],
+      "note": "Virtual grouping for Study-Condition edges.",
+      "properties": {
+        "study_name": {
+          "type": "string",
+          "required": true
+        },
+        "condition_name": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "_StudyOrgRelationship": {
+      "extractable": true,
+      "from": "Study",
+      "to": "Organization",
+      "extractionClass": "ExtractedStudyOrgRelationship",
+      "coveredTypes": [
+        "SPONSORED_BY",
+        "OPERATED_BY"
+      ],
+      "note": "Virtual grouping for Study-Organization edges.",
+      "properties": {
+        "study_name": {
+          "type": "string",
+          "required": true
+        },
+        "org_name": {
+          "type": "string",
+          "required": true
+        },
+        "relationship_type": {
+          "type": "string",
+          "required": true
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "_StudyPersonRelationship": {
+      "extractable": true,
+      "from": "Study",
+      "to": "Person",
+      "extractionClass": "ExtractedStudyPersonRelationship",
+      "coveredTypes": [
+        "INVESTIGATED_BY"
+      ],
+      "note": "Virtual grouping for Study-Person edges.",
+      "properties": {
+        "study_name": {
+          "type": "string",
+          "required": true
+        },
+        "person_name": {
+          "type": "string",
+          "required": true
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "stateNodes": {
+    "OrganizationState": {
+      "mergeKey": "id",
+      "parentLabel": "Organization",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "validFrom": {
+          "type": "datetime"
+        },
+        "validTo": {
+          "type": "datetime"
+        },
+        "recordedFrom": {
+          "type": "datetime"
+        },
+        "recordedTo": {
+          "type": "datetime"
+        },
+        "legalName": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "organizationType": {
+          "type": "string"
+        },
+        "foundedYear": {
+          "type": "int"
+        },
+        "fundingStage": {
+          "type": "string"
+        },
+        "totalFundingUsd": {
+          "type": "float"
+        },
+        "employeeRange": {
+          "type": "string"
+        },
+        "revenueModel": {
+          "type": "string"
+        },
+        "valueChainStages": {
+          "type": "array",
+          "items": "string"
+        },
+        "sector": {
+          "type": "string"
+        },
+        "websiteUrl": {
+          "type": "string"
+        },
+        "headquarters": {
+          "type": "string"
+        },
+        "headquartersSummary": {
+          "type": "string"
+        },
+        "operatingSummary": {
+          "type": "string"
+        },
+        "marketCapUsd": {
+          "type": "float"
+        },
+        "pipelineSummary": {
+          "type": "string"
+        },
+        "competitivePositionSummary": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        },
+        "stateHash": {
+          "type": "string",
+          "system": true
+        },
+        "sourceReport": {
+          "type": "string",
+          "system": true
+        }
+      }
+    },
+    "PersonState": {
+      "mergeKey": "id",
+      "parentLabel": "Person",
+      "properties": {
+        "stateHash": {
+          "type": "string",
+          "system": true
+        },
+        "sourceReport": {
+          "type": "string",
+          "system": true
+        }
+      }
+    },
+    "ProductState": {
+      "mergeKey": "id",
       "parentLabel": "Product",
-      "note": "Immutable snapshot of Product descriptive properties.",
       "properties": {
-        "stateId":            { "type": "string",  "format": "uuid", "system": true },
-        "stateHash":          { "type": "string",  "system": true },
-        "sourceReport":       { "type": "string",  "system": true },
-        "createdAt":          { "type": "datetime", "system": true },
-        "brandName":          { "type": "string" },
-        "productDomain":      { "type": "string" },
-        "productType":        { "type": "string" },
-        "description":        { "type": "string" },
-        "intendedUse":        { "type": "string" },
-        "priceAmount":        { "type": "float" },
-        "currency":           { "type": "string" },
-        "searchText":         { "type": "string",  "system": true },
-        "searchFields":       { "type": "array",   "items": "string", "system": true },
-        "embedding":          { "type": "array",   "items": "float", "system": true },
-        "embeddingModel":     { "type": "string",  "system": true },
-        "embeddingDimensions": { "type": "int",    "system": true }
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "system": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "mongoResearchRunId": {
+          "type": "string",
+          "system": true
+        },
+        "createdAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "updatedAt": {
+          "type": "datetime",
+          "system": true
+        },
+        "searchText": {
+          "type": "string",
+          "system": true
+        },
+        "searchFields": {
+          "type": "array",
+          "items": "string",
+          "system": true
+        },
+        "embeddingModel": {
+          "type": "string",
+          "system": true
+        },
+        "embeddingDimensions": {
+          "type": "int",
+          "system": true
+        },
+        "validFrom": {
+          "type": "datetime"
+        },
+        "validTo": {
+          "type": "datetime"
+        },
+        "recordedFrom": {
+          "type": "datetime"
+        },
+        "recordedTo": {
+          "type": "datetime"
+        },
+        "productType": {
+          "type": "string"
+        },
+        "applicationContext": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": "string"
+        },
+        "launchYear": {
+          "type": "int"
+        },
+        "targetCustomer": {
+          "type": "string"
+        },
+        "deliveryModel": {
+          "type": "string"
+        },
+        "approvedYear": {
+          "type": "int"
+        },
+        "productClass": {
+          "type": "string"
+        },
+        "formulationSummary": {
+          "type": "string"
+        },
+        "indicationSummary": {
+          "type": "string"
+        },
+        "modalitySummary": {
+          "type": "string"
+        },
+        "regulatoryAuthorizationId": {
+          "type": "string"
+        },
+        "searchEmbedding": {
+          "type": "array",
+          "items": "float",
+          "system": true
+        },
+        "stateHash": {
+          "type": "string",
+          "system": true
+        },
+        "sourceReport": {
+          "type": "string",
+          "system": true
+        }
+      }
+    }
+  },
+  "relationshipPropertyTypes": {
+    "AssociationMetadata": {
+      "direction": {
+        "type": "string"
+      },
+      "polarity": {
+        "type": "string",
+        "enum": "AssociationPolarity"
+      },
+      "associationShape": {
+        "type": "string"
+      },
+      "evidenceStrength": {
+        "type": "string",
+        "enum": "EvidenceStrength"
+      },
+      "specificity": {
+        "type": "string"
+      },
+      "latency": {
+        "type": "string"
+      },
+      "timeHorizon": {
+        "type": "string"
+      },
+      "citation": {
+        "type": "string"
+      },
+      "causalStatus": {
+        "type": "string"
+      },
+      "effectSummary": {
+        "type": "string"
+      },
+      "comparator": {
+        "type": "string"
+      },
+      "populationSubset": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
       }
     },
-    "CompoundFormState": {
-      "mergeKey": "stateId",
-      "parentLabel": "CompoundForm",
-      "note": "Immutable snapshot of CompoundForm descriptive properties.",
-      "properties": {
-        "stateId":            { "type": "string",  "format": "uuid", "system": true },
-        "stateHash":          { "type": "string",  "system": true },
-        "sourceReport":       { "type": "string",  "system": true },
-        "createdAt":          { "type": "datetime", "system": true },
-        "formType":           { "type": "string" },
-        "searchText":         { "type": "string",  "system": true },
-        "searchFields":       { "type": "array",   "items": "string", "system": true },
-        "embedding":          { "type": "array",   "items": "float", "system": true },
-        "embeddingModel":     { "type": "string",  "system": true },
-        "embeddingDimensions": { "type": "int",    "system": true }
+    "DoseMetadata": {
+      "dose": {
+        "type": "float"
+      },
+      "doseUnit": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "standardizedTo": {
+        "type": "string"
+      },
+      "quantity": {
+        "type": "int"
+      },
+      "componentName": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
       }
     },
-    "LabTestState": {
-      "mergeKey": "stateId",
-      "parentLabel": "LabTest",
-      "note": "Immutable snapshot of LabTest descriptive properties.",
-      "properties": {
-        "stateId":            { "type": "string",  "format": "uuid", "system": true },
-        "stateHash":          { "type": "string",  "system": true },
-        "sourceReport":       { "type": "string",  "system": true },
-        "createdAt":          { "type": "datetime", "system": true },
-        "loincCodes":         { "type": "array",   "items": "string" },
-        "cptCodes":           { "type": "array",   "items": "string" },
-        "whatItMeasures":     { "type": "string" },
-        "prepRequirements":   { "type": "string" },
-        "searchText":         { "type": "string",  "system": true },
-        "searchFields":       { "type": "array",   "items": "string", "system": true },
-        "embedding":          { "type": "array",   "items": "float", "system": true },
-        "embeddingModel":     { "type": "string",  "system": true },
-        "embeddingDimensions": { "type": "int",    "system": true }
+    "ExtractionMetadata": {
+      "salience": {
+        "type": "float"
+      },
+      "aboutness": {
+        "type": "float"
+      },
+      "supportType": {
+        "type": "string"
+      },
+      "quoteSpan": {
+        "type": "string"
+      },
+      "extractionMethod": {
+        "type": "string"
+      },
+      "extractedAt": {
+        "type": "datetime"
+      },
+      "extractorVersion": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
       }
     },
-    "PanelDefinitionState": {
-      "mergeKey": "stateId",
-      "parentLabel": "PanelDefinition",
-      "note": "Immutable snapshot of PanelDefinition descriptive properties.",
-      "properties": {
-        "stateId":            { "type": "string",  "format": "uuid", "system": true },
-        "stateHash":          { "type": "string",  "system": true },
-        "sourceReport":       { "type": "string",  "system": true },
-        "createdAt":          { "type": "datetime", "system": true },
-        "description":        { "type": "string" },
-        "searchText":         { "type": "string",  "system": true },
-        "searchFields":       { "type": "array",   "items": "string", "system": true },
-        "embedding":          { "type": "array",   "items": "float", "system": true },
-        "embeddingModel":     { "type": "string",  "system": true },
-        "embeddingDimensions": { "type": "int",    "system": true }
+    "InterventionArmMetadata": {
+      "armLabel": {
+        "type": "string"
+      },
+      "interventionRole": {
+        "type": "string"
+      },
+      "doseText": {
+        "type": "string"
+      },
+      "doseAmount": {
+        "type": "float"
+      },
+      "doseUnit": {
+        "type": "string"
+      },
+      "route": {
+        "type": "string"
+      },
+      "frequency": {
+        "type": "string"
+      },
+      "confidence": {
+        "type": "float"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "ListingMetadata": {
+      "listRole": {
+        "type": "string"
+      },
+      "localPriceAmount": {
+        "type": "float"
+      },
+      "localCurrency": {
+        "type": "string"
+      },
+      "appointmentRequiredOverride": {
+        "type": "bool"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "MeasurementMetadata": {
+      "role": {
+        "type": "string"
+      },
+      "method": {
+        "type": "string"
+      },
+      "methodRole": {
+        "type": "string"
+      },
+      "unit": {
+        "type": "string"
+      },
+      "sampleType": {
+        "type": "string"
+      },
+      "signalType": {
+        "type": "string"
+      },
+      "samplingRateHz": {
+        "type": "float"
+      },
+      "rangeMin": {
+        "type": "float"
+      },
+      "rangeMax": {
+        "type": "float"
+      },
+      "accuracy": {
+        "type": "float"
+      },
+      "referenceRangeText": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "MechanismLinkMetadata": {
+      "enzymeRole": {
+        "type": "string"
+      },
+      "regulatorySign": {
+        "type": "string"
+      },
+      "stoichiometryNote": {
+        "type": "string"
+      },
+      "upstreamDownstream": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "OrderingMetadata": {
+      "orderIndex": {
+        "type": "int"
+      },
+      "sequenceIndex": {
+        "type": "int"
+      },
+      "seasonNumber": {
+        "type": "int"
+      },
+      "episodeNumber": {
+        "type": "int"
+      },
+      "startTime": {
+        "type": "string"
+      },
+      "endTime": {
+        "type": "string"
+      },
+      "publishedAt": {
+        "type": "datetime"
+      },
+      "rhetoricalRole": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "OwnershipMetadata": {
+      "validFrom": {
+        "type": "datetime"
+      },
+      "validTo": {
+        "type": "datetime"
+      },
+      "recordedFrom": {
+        "type": "datetime"
+      },
+      "recordedTo": {
+        "type": "datetime"
+      },
+      "stakePercent": {
+        "type": "float"
+      },
+      "confidence": {
+        "type": "float"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "RecommendationMetadata": {
+      "strength": {
+        "type": "float"
+      },
+      "context": {
+        "type": "string"
+      },
+      "confidence": {
+        "type": "float"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "RoleMetadata": {
+      "role": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "validFrom": {
+        "type": "datetime"
+      },
+      "validTo": {
+        "type": "datetime"
+      },
+      "recordedFrom": {
+        "type": "datetime"
+      },
+      "recordedTo": {
+        "type": "datetime"
+      },
+      "confidence": {
+        "type": "float"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "TemporalMetadata": {
+      "validFrom": {
+        "type": "datetime"
+      },
+      "validTo": {
+        "type": "datetime"
+      },
+      "recordedFrom": {
+        "type": "datetime"
+      },
+      "recordedTo": {
+        "type": "datetime"
+      },
+      "confidence": {
+        "type": "float"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
+      }
+    },
+    "UsageMetadata": {
+      "usageContext": {
+        "type": "string"
+      },
+      "isPrimary": {
+        "type": "bool"
+      },
+      "confidence": {
+        "type": "float"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "mongoResearchRunId": {
+        "type": "string"
       }
     }
   }

@@ -7,16 +7,8 @@ Architecture:
   - Identity → State is attached via HAS_STATE with bitemporal bounds.
   - Structural relationships carry bitemporal bounds.
 
-State change detection:
-  - Before creating a new state, the current active state's hash is compared.
-  - If the hash matches, no new state is created (idempotent).
-  - If different, the old HAS_STATE interval is closed and a new one opened.
-
-Bitemporal properties on HAS_STATE and structural relationships:
-  - validFrom:    when the fact is true in the domain
-  - validTo:      when the fact stopped being true (null = active)
-  - recordedFrom: when the system learned the fact
-  - recordedTo:   when the system stopped believing (null = current belief)
+All nodes use `id` as the merge key and `name` as the universal name property.
+State change detection uses SHA-256 hashing of normalized state properties.
 """
 
 from __future__ import annotations
@@ -31,6 +23,7 @@ from src.research.langchain_agent.kg.extraction_models import (
     TemporalQualifier,
 )
 from src.research.langchain_agent.kg.temporal import (
+    MERGE_KEY,
     OPEN_ENDED,
     compute_state_hash,
     default_bitemporal_props,
@@ -43,6 +36,26 @@ logger = logging.getLogger(__name__)
 EMBEDDING_MODEL = "text-embedding-3-small"
 EMBEDDING_DIMENSIONS = 1536
 
+# State label mapping for nodes that have identity/state separation
+STATE_LABELS: dict[str, str] = {
+    "Organization": "OrganizationState",
+    "Person": "PersonState",
+    "Product": "ProductState",
+}
+
+# Allowed relationship types for upsert_temporal_relationship
+ALLOWED_REL_TYPES = {
+    "EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER", "HAS_CEO",
+    "ADVISES", "HOLDS_ROLE_AT", "AFFILIATED_WITH",
+    "OFFERS", "MANUFACTURES",
+    "CONTAINS_COMPOUND_FORM",
+    "DELIVERS_LABTEST", "IMPLEMENTS_PANEL",
+    "INCLUDES_LABTEST", "INCLUDES_BIOMARKER",
+    "SPONSORED_BY", "OPERATED_BY",
+    "INVESTIGATES", "INVESTIGATED_BY",
+    "MEASURES", "EVALUATES",
+}
+
 
 # ---------------------------------------------------------------------------
 # Bitemporal helpers
@@ -53,10 +66,6 @@ def _temporal_props_from_qualifier(
     qualifier: TemporalQualifier | None,
     temporal_ctx: IngestionTemporalContext,
 ) -> dict[str, Any]:
-    """
-    Build bitemporal relationship properties from an extracted temporal
-    qualifier and the system-level ingestion context.
-    """
     base = default_bitemporal_props(
         research_date=temporal_ctx.research_date,
         ingestion_time=temporal_ctx.ingestion_time,
@@ -81,18 +90,18 @@ def _temporal_props_from_qualifier(
 async def upsert_identity_node(
     client: Neo4jAuraClient,
     label: str,
-    merge_key: str,
     node_id: str,
     identity_props: dict[str, Any],
 ) -> None:
-    """MERGE a durable identity node with minimal stable properties."""
+    """MERGE a durable identity node using `id` as the merge key."""
     set_clauses = ", ".join(
-        f"n.{k} = ${k}" for k in identity_props if k != merge_key
+        f"n.{k} = ${k}" for k in identity_props if k != MERGE_KEY
     )
+    set_part = f"SET {set_clauses}" if set_clauses else ""
     cypher = f"""
-        MERGE (n:{label} {{ {merge_key}: $nodeId }})
+        MERGE (n:{label} {{ {MERGE_KEY}: $nodeId }})
         ON CREATE SET n.createdAt = datetime()
-        SET {set_clauses}
+        {set_part}
     """
     params = {"nodeId": node_id, **identity_props}
     await client.execute_write(cypher, parameters=params)
@@ -101,16 +110,11 @@ async def upsert_identity_node(
 async def _get_active_state_hash(
     client: Neo4jAuraClient,
     identity_label: str,
-    identity_merge_key: str,
     node_id: str,
     state_label: str,
 ) -> str | None:
-    """
-    Return the stateHash of the current active state for a given identity node,
-    or None if no active state exists.
-    """
     cypher = f"""
-        MATCH (n:{identity_label} {{ {identity_merge_key}: $nodeId }})
+        MATCH (n:{identity_label} {{ {MERGE_KEY}: $nodeId }})
               -[r:HAS_STATE]->
               (s:{state_label})
         WHERE r.validTo IS NULL AND r.recordedTo IS NULL
@@ -126,14 +130,12 @@ async def _get_active_state_hash(
 async def _close_active_state(
     client: Neo4jAuraClient,
     identity_label: str,
-    identity_merge_key: str,
     node_id: str,
     state_label: str,
     close_time: str,
 ) -> None:
-    """Close the validity and recorded windows on the current active HAS_STATE."""
     cypher = f"""
-        MATCH (n:{identity_label} {{ {identity_merge_key}: $nodeId }})
+        MATCH (n:{identity_label} {{ {MERGE_KEY}: $nodeId }})
               -[r:HAS_STATE]->
               (s:{state_label})
         WHERE r.validTo IS NULL AND r.recordedTo IS NULL
@@ -157,23 +159,23 @@ async def create_state_node(
     embedding: list[float],
     source_report: str,
 ) -> None:
-    """Create an immutable state snapshot node."""
     set_clauses = ", ".join(
         f"s.{k} = ${k}" for k in state_props
     )
+    extra_set = f"SET {set_clauses}" if set_clauses else ""
     cypher = f"""
         CREATE (s:{state_label} {{
-            stateId: $stateId,
+            id: $stateId,
             stateHash: $stateHash,
             sourceReport: $sourceReport,
             searchText: $searchText,
             searchFields: $searchFields,
-            embedding: $embedding,
+            searchEmbedding: $embedding,
             embeddingModel: $embeddingModel,
             embeddingDimensions: $embeddingDimensions,
             createdAt: datetime()
         }})
-        SET {set_clauses}
+        {extra_set}
     """
     params = {
         "stateId": state_id,
@@ -192,16 +194,14 @@ async def create_state_node(
 async def create_has_state_rel(
     client: Neo4jAuraClient,
     identity_label: str,
-    identity_merge_key: str,
     node_id: str,
     state_label: str,
     state_id: str,
     temporal_props: dict[str, Any],
 ) -> None:
-    """Create a HAS_STATE relationship with bitemporal bounds."""
     cypher = f"""
-        MATCH (n:{identity_label} {{ {identity_merge_key}: $nodeId }})
-        MATCH (s:{state_label} {{ stateId: $stateId }})
+        MATCH (n:{identity_label} {{ {MERGE_KEY}: $nodeId }})
+        MATCH (s:{state_label} {{ id: $stateId }})
         CREATE (n)-[r:HAS_STATE {{
             validFrom: $validFrom,
             validTo: $validTo,
@@ -223,7 +223,6 @@ async def upsert_entity_with_state(
     client: Neo4jAuraClient,
     *,
     identity_label: str,
-    identity_merge_key: str,
     node_id: str,
     identity_props: dict[str, Any],
     state_label: str,
@@ -237,60 +236,83 @@ async def upsert_entity_with_state(
 ) -> bool:
     """
     Upsert an identity node and conditionally create a new state snapshot.
-
     Returns True if a new state was created, False if hash matched (no-op).
     """
-    # 1. Upsert identity
-    await upsert_identity_node(
-        client, identity_label, identity_merge_key, node_id, identity_props,
-    )
+    await upsert_identity_node(client, identity_label, node_id, identity_props)
 
-    # 2. Compute hash of incoming state
     incoming_hash = compute_state_hash(state_props)
 
-    # 3. Compare with current active state
     active_hash = await _get_active_state_hash(
-        client, identity_label, identity_merge_key, node_id, state_label,
+        client, identity_label, node_id, state_label,
     )
 
     if active_hash == incoming_hash:
         logger.debug(
-            "[neo4j_writer] State unchanged for %s:%s — skipping state creation.",
+            "[neo4j_writer] State unchanged for %s:%s — skipping.",
             identity_label, node_id,
         )
         return False
 
-    # 4. Close old active state if one exists
     if active_hash is not None:
         close_time = (temporal_ctx.ingestion_time or now_utc()).isoformat()
         await _close_active_state(
-            client, identity_label, identity_merge_key, node_id,
-            state_label, close_time,
-        )
-        logger.info(
-            "[neo4j_writer] Closed previous state for %s:%s (old hash=%s)",
-            identity_label, node_id, active_hash[:12],
+            client, identity_label, node_id, state_label, close_time,
         )
 
-    # 5. Create new state node
     state_id = str(uuid4())
     await create_state_node(
         client, state_label, state_id, state_props,
         incoming_hash, search_text, search_fields, embedding, source_report,
     )
 
-    # 6. Create HAS_STATE relationship with temporal bounds
     temporal_props = _temporal_props_from_qualifier(temporal_qualifier, temporal_ctx)
     await create_has_state_rel(
-        client, identity_label, identity_merge_key, node_id,
-        state_label, state_id, temporal_props,
+        client, identity_label, node_id, state_label, state_id, temporal_props,
     )
 
     logger.info(
-        "[neo4j_writer] Created new state for %s:%s (hash=%s, state_id=%s)",
-        identity_label, node_id, incoming_hash[:12], state_id,
+        "[neo4j_writer] Created new state for %s:%s (hash=%s)",
+        identity_label, node_id, incoming_hash[:12],
     )
     return True
+
+
+async def upsert_simple_node(
+    client: Neo4jAuraClient,
+    *,
+    label: str,
+    node_id: str,
+    props: dict[str, Any],
+    search_text: str,
+    search_fields: list[str],
+    embedding: list[float],
+    source_report: str,
+) -> None:
+    """Upsert a node without identity/state separation (e.g. Compound, Condition)."""
+    set_clauses = ", ".join(f"n.{k} = ${k}" for k in props if k != MERGE_KEY)
+    extra_set = f", {set_clauses}" if set_clauses else ""
+    cypher = f"""
+        MERGE (n:{label} {{ {MERGE_KEY}: $nodeId }})
+        ON CREATE SET n.createdAt = datetime()
+        SET n.updatedAt = datetime(),
+            n.searchText = $searchText,
+            n.searchFields = $searchFields,
+            n.searchEmbedding = $embedding,
+            n.embeddingModel = $embeddingModel,
+            n.embeddingDimensions = $embeddingDimensions,
+            n.mongoResearchRunId = $sourceReport{extra_set}
+    """
+    params = {
+        "nodeId": node_id,
+        "searchText": search_text,
+        "searchFields": search_fields,
+        "embedding": embedding,
+        "embeddingModel": EMBEDDING_MODEL,
+        "embeddingDimensions": EMBEDDING_DIMENSIONS,
+        "sourceReport": source_report,
+        **props,
+    }
+    await client.execute_write(cypher, parameters=params)
 
 
 # ---------------------------------------------------------------------------
@@ -302,42 +324,24 @@ async def upsert_temporal_relationship(
     client: Neo4jAuraClient,
     *,
     from_label: str,
-    from_merge_key: str,
     from_id: str,
     to_label: str,
-    to_merge_key: str,
     to_id: str,
     rel_type: str,
     rel_props: dict[str, Any],
     temporal_ctx: IngestionTemporalContext,
     temporal_qualifier: TemporalQualifier | None = None,
 ) -> bool:
-    """
-    MERGE a structural relationship with bitemporal properties.
-
-    Checks for an existing active relationship first. If one exists with
-    matching properties, it is left unchanged (idempotent). If the properties
-    differ, the old relationship's interval is closed and a new one created.
-
-    Returns True if a relationship was created/updated, False if unchanged.
-    """
-    allowed_rel_types = {
-        "EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER",
-        "HAS_SCIENTIFIC_ADVISOR", "HAS_EXECUTIVE_ROLE",
-        "OFFERS_PRODUCT", "CONTAINS_COMPOUND_FORM",
-        "DELIVERS_LAB_TEST", "IMPLEMENTS_PANEL", "INCLUDES_LABTEST",
-    }
-    if rel_type not in allowed_rel_types:
+    if rel_type not in ALLOWED_REL_TYPES:
         logger.warning("[neo4j_writer] Unknown rel_type %s — skipping.", rel_type)
         return False
 
     temporal_props = _temporal_props_from_qualifier(temporal_qualifier, temporal_ctx)
 
-    # Check for existing active relationship
     check_cypher = f"""
-        MATCH (a:{from_label} {{ {from_merge_key}: $fromId }})
+        MATCH (a:{from_label} {{ {MERGE_KEY}: $fromId }})
               -[r:{rel_type}]->
-              (b:{to_label} {{ {to_merge_key}: $toId }})
+              (b:{to_label} {{ {MERGE_KEY}: $toId }})
         WHERE r.validTo IS NULL AND r.recordedTo IS NULL
         RETURN r
         LIMIT 1
@@ -348,12 +352,11 @@ async def upsert_temporal_relationship(
     )
 
     if existing:
-        # Active relationship exists — close it before creating new one
         close_time = (temporal_ctx.ingestion_time or now_utc()).isoformat()
         close_cypher = f"""
-            MATCH (a:{from_label} {{ {from_merge_key}: $fromId }})
+            MATCH (a:{from_label} {{ {MERGE_KEY}: $fromId }})
                   -[r:{rel_type}]->
-                  (b:{to_label} {{ {to_merge_key}: $toId }})
+                  (b:{to_label} {{ {MERGE_KEY}: $toId }})
             WHERE r.validTo IS NULL AND r.recordedTo IS NULL
             SET r.validTo = $closeTime,
                 r.recordedTo = $closeTime
@@ -363,7 +366,6 @@ async def upsert_temporal_relationship(
             parameters={"fromId": from_id, "toId": to_id, "closeTime": close_time},
         )
 
-    # Build SET clauses for non-temporal relationship properties
     prop_set_parts = []
     prop_params: dict[str, Any] = {
         "fromId": from_id,
@@ -379,8 +381,8 @@ async def upsert_temporal_relationship(
     extra_set = f", {prop_set_clause}" if prop_set_clause else ""
 
     create_cypher = f"""
-        MATCH (a:{from_label} {{ {from_merge_key}: $fromId }})
-        MATCH (b:{to_label} {{ {to_merge_key}: $toId }})
+        MATCH (a:{from_label} {{ {MERGE_KEY}: $fromId }})
+        MATCH (b:{to_label} {{ {MERGE_KEY}: $toId }})
         CREATE (a)-[r:{rel_type} {{
             validFrom: $validFrom,
             validTo: $validTo,
@@ -395,7 +397,7 @@ async def upsert_temporal_relationship(
 
 
 # ---------------------------------------------------------------------------
-# Name resolution helper (unchanged)
+# Name resolution helper
 # ---------------------------------------------------------------------------
 
 
@@ -410,8 +412,7 @@ def resolve_name(
             return v
     logger.warning(
         "[neo4j_writer] Could not resolve %s '%s' — skipping relationship.",
-        entity_type,
-        name,
+        entity_type, name,
     )
     return None
 
@@ -431,32 +432,9 @@ async def write_extraction_to_neo4j(
     Write all nodes and relationships from a KGExtractionResult to Neo4j
     using the identity/state separation pattern with bitemporal semantics.
 
-    Before creating any node the resolver checks for an existing match:
-      1. Exact toLower name match in the graph.
-      2. Fulltext phrase search (fallback).
-    If a match is found the existing ID is reused.
-
-    State snapshots are compared by hash — duplicate states are not created.
-
-    Args:
-        client:           Connected Neo4jAuraClient.
-        extraction:       KGExtractionResult from the extraction agent.
-        node_embeddings:  Mapping node_key → embedding / searchText.
-        temporal_ctx:     Bitemporal context for this ingestion run.
-
-    Returns:
-        Dict with counts: orgs_written, persons_written, products_written,
-        compounds_written, lab_tests_written, panels_written,
-        rels_written, rels_skipped, states_created, states_skipped.
+    All nodes use `id` as the merge key and `name` as the canonical name.
     """
-    from src.research.langchain_agent.kg.neo4j_resolver import (
-        resolve_compound_form_id,
-        resolve_lab_test_id,
-        resolve_organization_id,
-        resolve_panel_definition_id,
-        resolve_person_id,
-        resolve_product_id,
-    )
+    from src.research.langchain_agent.kg.neo4j_resolver import resolve_node_id
 
     if temporal_ctx is None:
         temporal_ctx = IngestionTemporalContext(
@@ -469,6 +447,9 @@ async def write_extraction_to_neo4j(
         "persons_written": 0,
         "products_written": 0,
         "compounds_written": 0,
+        "studies_written": 0,
+        "conditions_written": 0,
+        "biomarkers_written": 0,
         "lab_tests_written": 0,
         "panels_written": 0,
         "rels_written": 0,
@@ -477,274 +458,374 @@ async def write_extraction_to_neo4j(
         "states_skipped": 0,
     }
 
-    org_name_to_id: dict[str, str] = {}
-    person_name_to_id: dict[str, str] = {}
-    product_name_to_id: dict[str, str] = {}
-    compound_name_to_id: dict[str, str] = {}
-    lab_test_name_to_id: dict[str, str] = {}
-    panel_name_to_id: dict[str, str] = {}
+    # Name → id maps for relationship resolution
+    org_ids: dict[str, str] = {}
+    person_ids: dict[str, str] = {}
+    product_ids: dict[str, str] = {}
+    compound_ids: dict[str, str] = {}
+    study_ids: dict[str, str] = {}
+    condition_ids: dict[str, str] = {}
+    biomarker_ids: dict[str, str] = {}
+    lab_test_ids: dict[str, str] = {}
+    panel_ids: dict[str, str] = {}
+    compound_form_ids: dict[str, str] = {}
 
-    # --- Organizations -------------------------------------------------------
+    def _emb(prefix: str, name: str) -> tuple[list[float], str]:
+        key = f"{prefix}:{name}"
+        return (
+            node_embeddings.get(key, []),
+            node_embeddings.get(f"searchtext:{key}", ""),
+        )
+
+    # --- Organizations (with state) -----------------------------------------
     for org in extraction.organizations:
-        existing_id = await resolve_organization_id(client, org.name)
+        existing_id = await resolve_node_id(client, "Organization", org.name)
         oid = existing_id or str(uuid4())
-        key = f"org:{org.name}"
-        emb = node_embeddings.get(key, [])
-        search_text = node_embeddings.get(f"searchtext:{key}", "")
+        emb, st = _emb("org", org.name)
 
-        identity_props = {
-            "organizationId": oid,
-            "name": org.name,
-            "aliases": org.aliases,
-        }
+        identity_props = {"id": oid, "name": org.name}
         state_props = {
-            "orgType": org.orgType,
-            "businessModel": org.businessModel,
+            "name": org.name,
             "description": org.description,
-            "websiteUrl": org.websiteUrl,
-            "legalName": org.legalName,
-            "primaryIndustryTags": org.primaryIndustryTags,
-            "regionsServed": org.regionsServed,
-            "headquartersCity": org.headquartersCity,
-            "headquartersCountry": org.headquartersCountry,
+            "canonicalTicker": getattr(org, "canonicalTicker", ""),
         }
 
         new_state = await upsert_entity_with_state(
             client,
             identity_label="Organization",
-            identity_merge_key="organizationId",
             node_id=oid,
             identity_props=identity_props,
             state_label="OrganizationState",
             state_props=state_props,
-            search_text=search_text or "",
+            search_text=st or "",
             search_fields=org.searchFields,
             embedding=emb or [],
             source_report=extraction.source_report,
             temporal_ctx=temporal_ctx,
             temporal_qualifier=org.temporal,
         )
-        org_name_to_id[org.name] = oid
+        org_ids[org.name] = oid
         counts["orgs_written"] += 1
-        if new_state:
-            counts["states_created"] += 1
-        else:
-            counts["states_skipped"] += 1
+        counts["states_created" if new_state else "states_skipped"] += 1
 
-    # --- Persons -------------------------------------------------------------
+    # --- Persons (with state) -----------------------------------------------
     for person in extraction.persons:
-        existing_id = await resolve_person_id(client, person.canonicalName)
+        existing_id = await resolve_node_id(client, "Person", person.name)
         pid = existing_id or str(uuid4())
-        key = f"person:{person.canonicalName}"
-        emb = node_embeddings.get(key, [])
-        search_text = node_embeddings.get(f"searchtext:{key}", "")
+        emb, st = _emb("person", person.name)
 
-        identity_props = {
-            "personId": pid,
-            "canonicalName": person.canonicalName,
-        }
+        identity_props = {"id": pid, "name": person.name}
         state_props = {
-            "givenName": person.givenName,
-            "familyName": person.familyName,
-            "honorific": person.honorific,
-            "degrees": person.degrees,
-            "bio": person.bio,
-            "primaryDomain": person.primaryDomain,
-            "specialties": person.specialties,
-            "expertiseTags": person.expertiseTags,
-            "linkedinUrl": person.linkedinUrl,
+            "name": person.name,
+            "description": person.description,
+            "title": getattr(person, "title", ""),
+            "bio": getattr(person, "bio", ""),
+            "linkedInUrl": getattr(person, "linkedInUrl", ""),
         }
 
         new_state = await upsert_entity_with_state(
             client,
             identity_label="Person",
-            identity_merge_key="personId",
             node_id=pid,
             identity_props=identity_props,
             state_label="PersonState",
             state_props=state_props,
-            search_text=search_text or "",
+            search_text=st or "",
             search_fields=person.searchFields,
             embedding=emb or [],
             source_report=extraction.source_report,
             temporal_ctx=temporal_ctx,
             temporal_qualifier=person.temporal,
         )
-        person_name_to_id[person.canonicalName] = pid
+        person_ids[person.name] = pid
         counts["persons_written"] += 1
-        if new_state:
-            counts["states_created"] += 1
-        else:
-            counts["states_skipped"] += 1
+        counts["states_created" if new_state else "states_skipped"] += 1
 
-    # --- Products ------------------------------------------------------------
+    # --- Products (with state) ----------------------------------------------
     for product in extraction.products:
-        existing_id = await resolve_product_id(client, product.name)
+        existing_id = await resolve_node_id(client, "Product", product.name)
         pid = existing_id or str(uuid4())
-        key = f"product:{product.name}"
-        emb = node_embeddings.get(key, [])
-        search_text = node_embeddings.get(f"searchtext:{key}", "")
+        emb, st = _emb("product", product.name)
 
-        identity_props = {
-            "productId": pid,
-            "name": product.name,
-            "synonyms": product.synonyms,
-        }
+        identity_props = {"id": pid, "name": product.name}
         state_props = {
-            "brandName": product.brandName,
-            "productDomain": product.productDomain,
-            "productType": product.productType,
+            "name": product.name,
             "description": product.description,
-            "intendedUse": product.intendedUse,
-            "priceAmount": product.priceAmount,
-            "currency": product.currency,
         }
 
         new_state = await upsert_entity_with_state(
             client,
             identity_label="Product",
-            identity_merge_key="productId",
             node_id=pid,
             identity_props=identity_props,
             state_label="ProductState",
             state_props=state_props,
-            search_text=search_text or "",
+            search_text=st or "",
             search_fields=product.searchFields,
             embedding=emb or [],
             source_report=extraction.source_report,
             temporal_ctx=temporal_ctx,
             temporal_qualifier=product.temporal,
         )
-        product_name_to_id[product.name] = pid
+        product_ids[product.name] = pid
         counts["products_written"] += 1
-        if new_state:
-            counts["states_created"] += 1
-        else:
-            counts["states_skipped"] += 1
+        counts["states_created" if new_state else "states_skipped"] += 1
 
-    # --- CompoundForms -------------------------------------------------------
-    seen_compounds: set[str] = set()
+    # --- Simple nodes (no state separation) ---------------------------------
+
+    for compound in extraction.compounds:
+        existing_id = await resolve_node_id(client, "Compound", compound.name)
+        cid = existing_id or str(uuid4())
+        emb, st = _emb("compound", compound.name)
+        props = {k: v for k, v in compound.model_dump().items()
+                 if k not in ("temporal", "searchFields") and v not in (None, "", [])}
+        props["id"] = cid
+        await upsert_simple_node(
+            client, label="Compound", node_id=cid, props=props,
+            search_text=st or "", search_fields=compound.searchFields,
+            embedding=emb or [], source_report=extraction.source_report,
+        )
+        compound_ids[compound.name] = cid
+        counts["compounds_written"] += 1
+
+    for study in extraction.studies:
+        existing_id = await resolve_node_id(client, "Study", study.name)
+        sid = existing_id or str(uuid4())
+        emb, st = _emb("study", study.name)
+        props = {k: v for k, v in study.model_dump().items()
+                 if k not in ("temporal", "searchFields") and v not in (None, "", [], False)}
+        props["id"] = sid
+        await upsert_simple_node(
+            client, label="Study", node_id=sid, props=props,
+            search_text=st or "", search_fields=study.searchFields,
+            embedding=emb or [], source_report=extraction.source_report,
+        )
+        study_ids[study.name] = sid
+        counts["studies_written"] += 1
+
+    for condition in extraction.conditions:
+        existing_id = await resolve_node_id(client, "Condition", condition.name)
+        cid = existing_id or str(uuid4())
+        emb, st = _emb("condition", condition.name)
+        props = {k: v for k, v in condition.model_dump().items()
+                 if k not in ("temporal", "searchFields") and v not in (None, "", [])}
+        props["id"] = cid
+        await upsert_simple_node(
+            client, label="Condition", node_id=cid, props=props,
+            search_text=st or "", search_fields=condition.searchFields,
+            embedding=emb or [], source_report=extraction.source_report,
+        )
+        condition_ids[condition.name] = cid
+        counts["conditions_written"] += 1
+
+    for biomarker in extraction.biomarkers:
+        existing_id = await resolve_node_id(client, "Biomarker", biomarker.name)
+        bid = existing_id or str(uuid4())
+        emb, st = _emb("biomarker", biomarker.name)
+        props = {k: v for k, v in biomarker.model_dump().items()
+                 if k not in ("temporal", "searchFields") and v not in (None, "", [])}
+        props["id"] = bid
+        await upsert_simple_node(
+            client, label="Biomarker", node_id=bid, props=props,
+            search_text=st or "", search_fields=biomarker.searchFields,
+            embedding=emb or [], source_report=extraction.source_report,
+        )
+        biomarker_ids[biomarker.name] = bid
+        counts["biomarkers_written"] += 1
+
+    for lt in extraction.labTests:
+        existing_id = await resolve_node_id(client, "LabTest", lt.name)
+        lid = existing_id or str(uuid4())
+        emb, st = _emb("labtest", lt.name)
+        props = {k: v for k, v in lt.model_dump().items()
+                 if k not in ("temporal", "searchFields") and v not in (None, "", [])}
+        props["id"] = lid
+        await upsert_simple_node(
+            client, label="LabTest", node_id=lid, props=props,
+            search_text=st or "", search_fields=lt.searchFields,
+            embedding=emb or [], source_report=extraction.source_report,
+        )
+        lab_test_ids[lt.name] = lid
+        counts["lab_tests_written"] += 1
+
+    for panel in extraction.panelDefinitions:
+        existing_id = await resolve_node_id(client, "PanelDefinition", panel.name)
+        pid = existing_id or str(uuid4())
+        emb, st = _emb("panel", panel.name)
+        props = {k: v for k, v in panel.model_dump().items()
+                 if k not in ("temporal", "searchFields") and v not in (None, "", [])}
+        props["id"] = pid
+        await upsert_simple_node(
+            client, label="PanelDefinition", node_id=pid, props=props,
+            search_text=st or "", search_fields=panel.searchFields,
+            embedding=emb or [], source_report=extraction.source_report,
+        )
+        panel_ids[panel.name] = pid
+        counts["panels_written"] += 1
+
+    # CompoundForms from compound_ingredients
+    seen_cf: set[str] = set()
     for ingredient in extraction.compound_ingredients:
         cname = ingredient.compoundName
-        if cname in seen_compounds:
+        if cname in seen_cf:
             continue
-        seen_compounds.add(cname)
-
-        existing_id = await resolve_compound_form_id(client, cname)
-        cid = existing_id or str(uuid4())
-        key = f"compound:{cname}"
-        emb = node_embeddings.get(key, [])
-        search_text = node_embeddings.get(f"searchtext:{key}", "")
-
-        identity_props = {
-            "compoundFormId": cid,
-            "canonicalName": cname,
-        }
-        state_props = {
-            "formType": ingredient.formType,
-        }
-
-        new_state = await upsert_entity_with_state(
-            client,
-            identity_label="CompoundForm",
-            identity_merge_key="compoundFormId",
-            node_id=cid,
-            identity_props=identity_props,
-            state_label="CompoundFormState",
-            state_props=state_props,
-            search_text=search_text or "",
-            search_fields=ingredient.searchFields,
-            embedding=emb or [],
-            source_report=extraction.source_report,
-            temporal_ctx=temporal_ctx,
-            temporal_qualifier=ingredient.temporal,
+        seen_cf.add(cname)
+        existing_id = await resolve_node_id(client, "CompoundForm", cname)
+        cfid = existing_id or str(uuid4())
+        emb, st = _emb("compoundform", cname)
+        props = {"id": cfid, "name": cname, "description": getattr(ingredient, "formType", "")}
+        await upsert_simple_node(
+            client, label="CompoundForm", node_id=cfid, props=props,
+            search_text=st or "", search_fields=["name"],
+            embedding=emb or [], source_report=extraction.source_report,
         )
-        compound_name_to_id[cname] = cid
-        counts["compounds_written"] += 1
-        if new_state:
-            counts["states_created"] += 1
-        else:
-            counts["states_skipped"] += 1
+        compound_form_ids[cname] = cfid
 
-    # --- Relationships -------------------------------------------------------
+    # --- Relationships ------------------------------------------------------
 
     # Org → Person
     for rel in extraction.org_person_relationships:
-        oid = resolve_name(rel.org_name, org_name_to_id, "Organization")
-        pid = resolve_name(rel.person_name, person_name_to_id, "Person")
+        oid = resolve_name(rel.org_name, org_ids, "Organization")
+        pid = resolve_name(rel.person_name, person_ids, "Person")
         if oid and pid:
             rel_props = {
-                "roleTitle": rel.roleTitle,
-                "department": rel.department,
-                "seniority": rel.seniority,
-                "isCurrent": rel.isCurrent,
+                "role": getattr(rel, "roleTitle", ""),
+                "title": getattr(rel, "roleTitle", ""),
+                "notes": getattr(rel, "department", ""),
             }
             await upsert_temporal_relationship(
-                client,
-                from_label="Organization",
-                from_merge_key="organizationId",
-                from_id=oid,
-                to_label="Person",
-                to_merge_key="personId",
-                to_id=pid,
-                rel_type=rel.relationship_type,
-                rel_props=rel_props,
-                temporal_ctx=temporal_ctx,
-                temporal_qualifier=rel.temporal,
+                client, from_label="Organization", from_id=oid,
+                to_label="Person", to_id=pid,
+                rel_type=rel.relationship_type, rel_props=rel_props,
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
             )
             counts["rels_written"] += 1
         else:
             counts["rels_skipped"] += 1
 
-    # Org → Product (OFFERS_PRODUCT)
-    for product in extraction.products:
-        brand = product.brandName or ""
-        oid = resolve_name(brand, org_name_to_id, "Organization") if brand else None
-        if not oid and extraction.organizations:
-            if len(extraction.organizations) == 1:
-                oid = org_name_to_id.get(extraction.organizations[0].name)
-        pid = product_name_to_id.get(product.name)
+    # Org → Product
+    for rel in extraction.org_product_relationships:
+        oid = resolve_name(rel.org_name, org_ids, "Organization")
+        pid = resolve_name(rel.product_name, product_ids, "Product")
         if oid and pid:
             await upsert_temporal_relationship(
-                client,
-                from_label="Organization",
-                from_merge_key="organizationId",
-                from_id=oid,
-                to_label="Product",
-                to_merge_key="productId",
-                to_id=pid,
-                rel_type="OFFERS_PRODUCT",
-                rel_props={"channel": "ONLINE"},
-                temporal_ctx=temporal_ctx,
-                temporal_qualifier=product.temporal,
+                client, from_label="Organization", from_id=oid,
+                to_label="Product", to_id=pid,
+                rel_type=rel.relationship_type, rel_props={},
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
             )
             counts["rels_written"] += 1
         else:
             counts["rels_skipped"] += 1
 
-    # Product → CompoundForm (CONTAINS_COMPOUND_FORM)
+    # Product → CompoundForm
     for ingredient in extraction.compound_ingredients:
-        pid = resolve_name(ingredient.product_name, product_name_to_id, "Product")
-        cid = compound_name_to_id.get(ingredient.compoundName)
+        pid = resolve_name(ingredient.product_name, product_ids, "Product")
+        cid = compound_form_ids.get(ingredient.compoundName)
         if pid and cid:
             rel_props = {
                 "dose": ingredient.dose,
                 "doseUnit": ingredient.doseUnit,
                 "role": ingredient.role,
-                "bioavailabilityNotes": ingredient.bioavailabilityNotes,
             }
             await upsert_temporal_relationship(
-                client,
-                from_label="Product",
-                from_merge_key="productId",
-                from_id=pid,
-                to_label="CompoundForm",
-                to_merge_key="compoundFormId",
-                to_id=cid,
-                rel_type="CONTAINS_COMPOUND_FORM",
-                rel_props=rel_props,
-                temporal_ctx=temporal_ctx,
-                temporal_qualifier=ingredient.temporal,
+                client, from_label="Product", from_id=pid,
+                to_label="CompoundForm", to_id=cid,
+                rel_type="CONTAINS_COMPOUND_FORM", rel_props=rel_props,
+                temporal_ctx=temporal_ctx, temporal_qualifier=ingredient.temporal,
+            )
+            counts["rels_written"] += 1
+        else:
+            counts["rels_skipped"] += 1
+
+    # Study → Organization
+    for rel in extraction.study_org_relationships:
+        sid = resolve_name(rel.study_name, study_ids, "Study")
+        oid = resolve_name(rel.org_name, org_ids, "Organization")
+        if sid and oid:
+            await upsert_temporal_relationship(
+                client, from_label="Study", from_id=sid,
+                to_label="Organization", to_id=oid,
+                rel_type=rel.relationship_type,
+                rel_props={"role": getattr(rel, "role", "")},
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
+            )
+            counts["rels_written"] += 1
+        else:
+            counts["rels_skipped"] += 1
+
+    # Study → Condition
+    for rel in extraction.study_condition_relationships:
+        sid = resolve_name(rel.study_name, study_ids, "Study")
+        cid = resolve_name(rel.condition_name, condition_ids, "Condition")
+        if sid and cid:
+            await upsert_temporal_relationship(
+                client, from_label="Study", from_id=sid,
+                to_label="Condition", to_id=cid,
+                rel_type="INVESTIGATES", rel_props={},
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
+            )
+            counts["rels_written"] += 1
+        else:
+            counts["rels_skipped"] += 1
+
+    # Study → Person
+    for rel in extraction.study_person_relationships:
+        sid = resolve_name(rel.study_name, study_ids, "Study")
+        pid = resolve_name(rel.person_name, person_ids, "Person")
+        if sid and pid:
+            await upsert_temporal_relationship(
+                client, from_label="Study", from_id=sid,
+                to_label="Person", to_id=pid,
+                rel_type="INVESTIGATED_BY",
+                rel_props={"role": getattr(rel, "role", "")},
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
+            )
+            counts["rels_written"] += 1
+        else:
+            counts["rels_skipped"] += 1
+
+    # Product → LabTest
+    for rel in extraction.product_lab_test_relationships:
+        pid = resolve_name(rel.product_name, product_ids, "Product")
+        lid = resolve_name(rel.lab_test_name, lab_test_ids, "LabTest")
+        if pid and lid:
+            await upsert_temporal_relationship(
+                client, from_label="Product", from_id=pid,
+                to_label="LabTest", to_id=lid,
+                rel_type="DELIVERS_LABTEST", rel_props={},
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
+            )
+            counts["rels_written"] += 1
+        else:
+            counts["rels_skipped"] += 1
+
+    # Product → PanelDefinition
+    for rel in extraction.product_panel_relationships:
+        pid = resolve_name(rel.product_name, product_ids, "Product")
+        panid = resolve_name(rel.panel_name, panel_ids, "PanelDefinition")
+        if pid and panid:
+            await upsert_temporal_relationship(
+                client, from_label="Product", from_id=pid,
+                to_label="PanelDefinition", to_id=panid,
+                rel_type="IMPLEMENTS_PANEL", rel_props={},
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
+            )
+            counts["rels_written"] += 1
+        else:
+            counts["rels_skipped"] += 1
+
+    # LabTest → Biomarker
+    for rel in extraction.lab_test_biomarker_relationships:
+        lid = resolve_name(rel.lab_test_name, lab_test_ids, "LabTest")
+        bid = resolve_name(rel.biomarker_name, biomarker_ids, "Biomarker")
+        if lid and bid:
+            await upsert_temporal_relationship(
+                client, from_label="LabTest", from_id=lid,
+                to_label="Biomarker", to_id=bid,
+                rel_type="MEASURES",
+                rel_props={"role": getattr(rel, "role", "")},
+                temporal_ctx=temporal_ctx, temporal_qualifier=rel.temporal,
             )
             counts["rels_written"] += 1
         else:

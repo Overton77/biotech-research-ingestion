@@ -1,0 +1,140 @@
+{
+  "$schema": "biotech-kg-relationship-annotations",
+  "version": "1.0.0",
+  "description": "Ingestion-specific annotations for relationships. Virtual groupings use underscore-prefixed keys. Unlisted relationships default to extractable=false.",
+
+  "relationships": {
+    "_OrgPersonRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedOrgPersonRelationship",
+      "from": "Organization",
+      "to": "Person",
+      "note": "Virtual grouping. LLM sets relationship_type to one of the coveredTypes.",
+      "coveredTypes": ["EMPLOYS", "FOUNDED_BY", "HAS_BOARD_MEMBER", "HAS_CEO", "ADVISES", "HOLDS_ROLE_AT", "AFFILIATED_WITH"],
+      "properties": {
+        "org_name":          { "type": "string",  "required": true },
+        "person_name":       { "type": "string",  "required": true },
+        "relationship_type": { "type": "string",  "required": true },
+        "roleTitle":         { "type": "string" },
+        "department":        { "type": "string" },
+        "seniority":         { "type": "string" },
+        "isCurrent":         { "type": "bool",   "default": true }
+      }
+    },
+
+    "_ProductCompoundIngredient": {
+      "extractable": true,
+      "extractionClass": "ExtractedCompoundIngredient",
+      "from": "Product",
+      "to": "CompoundForm",
+      "note": "Denormalized: includes CompoundForm node properties plus CONTAINS_COMPOUND_FORM relationship data.",
+      "coveredTypes": ["CONTAINS_COMPOUND_FORM"],
+      "searchFields": ["compoundName", "formType"],
+      "properties": {
+        "product_name":         { "type": "string", "required": true },
+        "compoundName":         { "type": "string", "required": true, "note": "Maps to CompoundForm.name" },
+        "formType":             { "type": "string" },
+        "dose":                 { "type": "float" },
+        "doseUnit":             { "type": "string" },
+        "role":                 { "type": "string", "default": "active" },
+        "bioavailabilityNotes": { "type": "string" }
+      }
+    },
+
+    "_StudyOrgRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedStudyOrgRelationship",
+      "from": "Study",
+      "to": "Organization",
+      "note": "Virtual grouping for Study-Organization edges.",
+      "coveredTypes": ["SPONSORED_BY", "OPERATED_BY"],
+      "properties": {
+        "study_name":        { "type": "string", "required": true },
+        "org_name":          { "type": "string", "required": true },
+        "relationship_type": { "type": "string", "required": true },
+        "role":              { "type": "string" }
+      }
+    },
+
+    "_StudyConditionRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedStudyConditionRelationship",
+      "from": "Study",
+      "to": "Condition",
+      "note": "Virtual grouping for Study-Condition edges.",
+      "coveredTypes": ["INVESTIGATES"],
+      "properties": {
+        "study_name":     { "type": "string", "required": true },
+        "condition_name": { "type": "string", "required": true }
+      }
+    },
+
+    "_StudyPersonRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedStudyPersonRelationship",
+      "from": "Study",
+      "to": "Person",
+      "note": "Virtual grouping for Study-Person edges.",
+      "coveredTypes": ["INVESTIGATED_BY"],
+      "properties": {
+        "study_name":  { "type": "string", "required": true },
+        "person_name": { "type": "string", "required": true },
+        "role":        { "type": "string" }
+      }
+    },
+
+    "_ProductLabTestRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedProductLabTestRelationship",
+      "from": "Product",
+      "to": "LabTest",
+      "note": "Virtual grouping for Product-LabTest edges.",
+      "coveredTypes": ["DELIVERS_LABTEST"],
+      "properties": {
+        "product_name":  { "type": "string", "required": true },
+        "lab_test_name": { "type": "string", "required": true }
+      }
+    },
+
+    "_ProductPanelRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedProductPanelRelationship",
+      "from": "Product",
+      "to": "PanelDefinition",
+      "note": "Virtual grouping for Product-PanelDefinition edges.",
+      "coveredTypes": ["IMPLEMENTS_PANEL"],
+      "properties": {
+        "product_name": { "type": "string", "required": true },
+        "panel_name":   { "type": "string", "required": true }
+      }
+    },
+
+    "_OrgProductRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedOrgProductRelationship",
+      "from": "Organization",
+      "to": "Product",
+      "note": "Virtual grouping for Organization-Product edges.",
+      "coveredTypes": ["OFFERS", "MANUFACTURES"],
+      "properties": {
+        "org_name":          { "type": "string", "required": true },
+        "product_name":      { "type": "string", "required": true },
+        "relationship_type": { "type": "string", "required": true }
+      }
+    },
+
+    "_LabTestBiomarkerRelationship": {
+      "extractable": true,
+      "extractionClass": "ExtractedLabTestBiomarkerRelationship",
+      "from": "LabTest",
+      "to": "Biomarker",
+      "note": "Virtual grouping for LabTest-Biomarker edges.",
+      "coveredTypes": ["MEASURES"],
+      "properties": {
+        "lab_test_name":  { "type": "string", "required": true },
+        "biomarker_name": { "type": "string", "required": true },
+        "role":           { "type": "string" }
+      }
+    }
+  }
+}

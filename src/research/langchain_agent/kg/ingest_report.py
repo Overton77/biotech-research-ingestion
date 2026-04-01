@@ -147,11 +147,13 @@ async def _run(args: argparse.Namespace) -> None:
 
         print("\n[ingest_report] Dry-run extraction summary:")
         print(f"  Chunks selected:  {[c['chunk_id'] for c in selected_chunks]}")
-        print(f"  Organizations:    {len(extraction.organizations)}")
-        print(f"  Persons:          {len(extraction.persons)}")
-        print(f"  Products:         {len(extraction.products)}")
-        print(f"  Compound ingr.:   {len(extraction.compound_ingredients)}")
-        print(f"  Org-person rels:  {len(extraction.org_person_relationships)}")
+        from src.research.langchain_agent.kg.extraction_models import KGExtractionResult as _KGR
+        for field_name in _KGR.model_fields:
+            if field_name == "source_report":
+                continue
+            entities = getattr(extraction, field_name, [])
+            if entities:
+                print(f"  {field_name}: {len(entities)}")
         print(f"  Nodes embedded:   {len(embeddings_list)}")
         print("\n[ingest_report] searchTexts (first 3):")
         for key in node_keys[:3]:
@@ -203,15 +205,8 @@ async def _run(args: argparse.Namespace) -> None:
     print(f"  States skipped:   {result.get('states_skipped', 0)}")
     counts = result.get("node_counts", {})
     if counts:
-        print(
-            f"  Breakdown:        "
-            f"orgs={counts.get('orgs_written', 0)}, "
-            f"persons={counts.get('persons_written', 0)}, "
-            f"products={counts.get('products_written', 0)}, "
-            f"compounds={counts.get('compounds_written', 0)}, "
-            f"lab_tests={counts.get('lab_tests_written', 0)}, "
-            f"panels={counts.get('panels_written', 0)}"
-        )
+        written = {k: v for k, v in counts.items() if k.endswith("_written") and v > 0}
+        print(f"  Breakdown:        {written}")
 
     if args.output_json and result.get("extraction"):
         out = Path(args.output_json)

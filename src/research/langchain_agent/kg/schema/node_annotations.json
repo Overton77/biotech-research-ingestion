@@ -1,0 +1,131 @@
+{
+  "$schema": "biotech-kg-node-annotations",
+  "version": "1.0.0",
+  "description": "Ingestion-specific annotations overlaid on schema-map.json nodes. Unlisted nodes default to extractable=false.",
+
+  "defaults": {
+    "systemProperties": ["id", "createdAt", "updatedAt", "mongoResearchRunId", "searchText", "searchFields", "embeddingModel", "embeddingDimensions", "searchEmbedding"],
+    "mergeKey": "id",
+    "nameProperty": "name"
+  },
+
+  "nodes": {
+    "Organization": {
+      "extractable": true,
+      "searchFields": ["name", "description"],
+      "stateLabel": "OrganizationState",
+      "identityProperties": ["id", "name"],
+      "domainProperties": {
+        "canonicalTicker": { "extract": true }
+      }
+    },
+    "Person": {
+      "extractable": true,
+      "searchFields": ["name", "description", "bio", "title"],
+      "stateLabel": "PersonState",
+      "identityProperties": ["id", "name"],
+      "domainProperties": {
+        "title": { "extract": true },
+        "bio": { "extract": true },
+        "linkedInUrl": { "extract": true }
+      }
+    },
+    "Product": {
+      "extractable": true,
+      "searchFields": ["name", "description"],
+      "stateLabel": "ProductState",
+      "identityProperties": ["id", "name"],
+      "domainProperties": {
+        "primaryRegulatoryIdentifier": { "extract": false }
+      }
+    },
+    "Compound": {
+      "extractable": true,
+      "searchFields": ["name", "description", "commonName"],
+      "identityProperties": ["id", "name"],
+      "domainProperties": {
+        "commonName": { "extract": true },
+        "casNumber": { "extract": true },
+        "molecularFormula": { "extract": true },
+        "molecularWeight": { "extract": true },
+        "compoundClass": { "extract": true }
+      }
+    },
+    "CompoundForm": {
+      "extractable": false,
+      "identityProperties": ["id", "name"],
+      "extractionNote": "Extracted via denormalized ExtractedCompoundIngredient."
+    },
+    "Biomarker": {
+      "extractable": true,
+      "searchFields": ["name", "description"],
+      "identityProperties": ["id", "name"],
+      "domainProperties": {
+        "biomarkerType": { "extract": true },
+        "specimenMatrix": { "extract": true },
+        "moleculeClass": { "extract": true },
+        "measurementDirectness": { "extract": false },
+        "clinicalSignificance": { "extract": true },
+        "commonUnits": { "extract": true },
+        "agingHallmark": { "extract": true }
+      }
+    },
+    "Condition": {
+      "extractable": true,
+      "searchFields": ["name", "description"],
+      "identityProperties": ["id", "name"]
+    },
+    "Study": {
+      "extractable": true,
+      "searchFields": ["name", "description"],
+      "identityProperties": ["id", "name"],
+      "domainProperties": {
+        "registryNamespace": { "extract": true },
+        "registryId": { "extract": true },
+        "canonicalUrl": { "extract": true },
+        "pmid": { "extract": true },
+        "doi": { "extract": true },
+        "overallStatus": { "extract": true },
+        "registrySyncedAt": { "extract": false },
+        "startDate": { "extract": true },
+        "primaryCompletionDate": { "extract": false },
+        "completionDate": { "extract": false },
+        "enrollmentCount": { "extract": true },
+        "studyType": { "extract": true },
+        "allocation": { "extract": false },
+        "interventionModel": { "extract": false },
+        "masking": { "extract": false },
+        "primaryPurpose": { "extract": false },
+        "countries": { "extract": true },
+        "fdaRegulatedDrug": { "extract": false },
+        "fdaRegulatedDevice": { "extract": false },
+        "hasResults": { "extract": true },
+        "studyPhase": { "extract": true },
+        "sampleSizeText": { "extract": true },
+        "evidenceLevel": { "extract": true }
+      }
+    },
+    "LabTest": {
+      "extractable": true,
+      "searchFields": ["name", "description"],
+      "identityProperties": ["id", "name"],
+      "domainProperties": {
+        "testType": { "extract": true }
+      }
+    },
+    "PanelDefinition": {
+      "extractable": true,
+      "searchFields": ["name", "description"],
+      "identityProperties": ["id", "name"]
+    },
+    "TechnologyPlatform": {
+      "extractable": false,
+      "searchFields": ["name", "description"],
+      "identityProperties": ["id", "name"]
+    },
+    "PhysicalLocation": {
+      "extractable": false,
+      "identityProperties": ["id", "name"]
+    }
+  }
+}
