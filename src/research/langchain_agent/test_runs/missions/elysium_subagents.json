@@ -1,0 +1,89 @@
+{
+  "mission_id": "mission-elysium-subagents-001",
+  "mission_name": "Elysium multi-stage subagent mission (fixture)",
+  "base_domain": "elysiumhealth.com",
+  "run_kg": false,
+  "unstructured_ingestion": {
+    "enabled": false
+  },
+  "stages": [
+    {
+      "slice_input": {
+        "task_id": "task-elysium-clinical-docs",
+        "mission_id": "mission-elysium-subagents-001",
+        "task_slug": "elysium-clinical-docs",
+        "user_objective": "Gather clinical trial context and document artifacts for Elysium (fixture).",
+        "targets": ["Elysium Health"],
+        "selected_tool_names": ["search_web"],
+        "selected_subagent_names": [
+          "clinicaltrials_research",
+          "docling_document"
+        ],
+        "max_step_budget": 8,
+        "stage_type": "discovery"
+      },
+      "prompt_spec": {
+        "agent_identity": "You are a biotech research agent.",
+        "domain_scope": ["Elysium Health trials and filings"],
+        "workflow": ["Delegate to clinicaltrials_research and docling_document as needed."],
+        "tool_guidance": [],
+        "subagent_guidance": [],
+        "practical_limits": [],
+        "filesystem_rules": [],
+        "intermediate_files": ["runs/elysium-clinical-docs/scratch/handoff_notes.md"]
+      },
+      "execution_reminders": [],
+      "dependencies": []
+    },
+    {
+      "slice_input": {
+        "task_id": "task-elysium-products-compounds",
+        "mission_id": "mission-elysium-subagents-001",
+        "task_slug": "elysium-products-compounds",
+        "user_objective": "Catalog products and key compounds for Elysium (fixture).",
+        "targets": ["Elysium Health", "Basis", "Matter"],
+        "selected_tool_names": ["search_web", "extract_from_urls"],
+        "selected_subagent_names": ["vercel_agent_browser"],
+        "max_step_budget": 8,
+        "stage_type": "targeted_extraction"
+      },
+      "prompt_spec": {
+        "agent_identity": "You are a biotech research agent.",
+        "domain_scope": ["Elysium product lineup"],
+        "workflow": ["Map SKUs to ingredient claims using official sources."],
+        "tool_guidance": [],
+        "subagent_guidance": [],
+        "practical_limits": [],
+        "filesystem_rules": [],
+        "intermediate_files": ["runs/elysium-products-compounds/scratch/products_table.md"]
+      },
+      "execution_reminders": [],
+      "dependencies": ["elysium-clinical-docs"]
+    },
+    {
+      "slice_input": {
+        "task_id": "task-elysium-cross-check",
+        "mission_id": "mission-elysium-subagents-001",
+        "task_slug": "elysium-cross-check",
+        "user_objective": "Cross-check product narrative against trial evidence (fixture).",
+        "targets": ["Elysium Health"],
+        "selected_tool_names": ["search_web"],
+        "selected_subagent_names": ["vercel_agent_browser"],
+        "max_step_budget": 6,
+        "stage_type": "report_synthesis"
+      },
+      "prompt_spec": {
+        "agent_identity": "You are a biotech research agent.",
+        "domain_scope": ["Elysium narrative consistency"],
+        "workflow": ["Reconcile dependency_reports with your own verification."],
+        "tool_guidance": [],
+        "subagent_guidance": [],
+        "practical_limits": [],
+        "filesystem_rules": [],
+        "intermediate_files": ["runs/elysium-cross-check/scratch/synthesis_notes.md"]
+      },
+      "execution_reminders": [],
+      "dependencies": ["elysium-products-compounds"]
+    }
+  ]
+}

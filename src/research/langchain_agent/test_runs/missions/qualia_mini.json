@@ -1,0 +1,36 @@
+{
+  "mission_id": "mission-qualia-mini-001",
+  "mission_name": "Qualia mini entity validation",
+  "base_domain": "qualialife.com",
+  "run_kg": false,
+  "unstructured_ingestion": {
+    "enabled": false
+  },
+  "stages": [
+    {
+      "slice_input": {
+        "task_id": "task-qualia-entity-mini",
+        "mission_id": "mission-qualia-mini-001",
+        "task_slug": "qualia-entity-mini",
+        "user_objective": "Validate Qualia Life Sciences entity facts for test fixtures.",
+        "targets": ["Qualia Life Sciences"],
+        "selected_tool_names": ["search_web", "extract_from_urls"],
+        "selected_subagent_names": ["vercel_agent_browser"],
+        "max_step_budget": 6,
+        "stage_type": "entity_validation"
+      },
+      "prompt_spec": {
+        "agent_identity": "You are a biotech research agent.",
+        "domain_scope": ["Qualia supplements and longevity SKUs"],
+        "workflow": ["Confirm official site and product naming consistency."],
+        "tool_guidance": [],
+        "subagent_guidance": [],
+        "practical_limits": [],
+        "filesystem_rules": [],
+        "intermediate_files": ["runs/qualia-entity-mini/scratch/entity_checklist.md"]
+      },
+      "execution_reminders": [],
+      "dependencies": []
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "mission_id": "mission-elysium-mini-001",
+  "mission_name": "Elysium mini smoke mission",
+  "base_domain": "elysiumhealth.com",
+  "run_kg": false,
+  "unstructured_ingestion": {
+    "enabled": false
+  },
+  "stages": [
+    {
+      "slice_input": {
+        "task_id": "task-elysium-fundamentals-mini",
+        "mission_id": "mission-elysium-mini-001",
+        "task_slug": "elysium-fundamentals-mini",
+        "user_objective": "Summarize Elysium Health fundamentals for automated tests (no live run required).",
+        "targets": ["Elysium Health"],
+        "selected_tool_names": ["search_web"],
+        "selected_subagent_names": ["vercel_agent_browser"],
+        "max_step_budget": 4,
+        "stage_type": "discovery"
+      },
+      "prompt_spec": {
+        "agent_identity": "You are a biotech research agent focused on longevity supplement companies.",
+        "domain_scope": [
+          "Elysium Health — NAD+ / Basis and consumer longevity positioning"
+        ],
+        "workflow": [
+          "Use search_web sparingly; prefer citing official Elysium pages when referenced."
+        ],
+        "tool_guidance": [],
+        "subagent_guidance": [],
+        "practical_limits": [],
+        "filesystem_rules": [],
+        "intermediate_files": [
+          "runs/elysium-fundamentals-mini/scratch/elysium_notes.md"
+        ]
+      },
+      "execution_reminders": [],
+      "dependencies": []
+    }
+  ]
+}
