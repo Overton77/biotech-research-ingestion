@@ -1,0 +1,4 @@
+# Generated during agent runs (keep local only)
+agent_outputs/
+test_runs/run_outputs/
+utils/artifacts/

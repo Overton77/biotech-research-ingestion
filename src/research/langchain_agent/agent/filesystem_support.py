@@ -26,7 +26,7 @@ FILESYSTEM_TOOL_DESCRIPTIONS = {
 }
 
 FILESYSTEM_SYSTEM_PROMPT = (
-    "Use the filesystem aggressively for intermediate research state. "
+    "Use the filesystem intelligently for intermediate research state. "
     "All paths must stay inside the sandbox root. "
     "Use only relative sandbox paths such as runs/, reports/, and scratch/. "
     "Never use absolute host paths."

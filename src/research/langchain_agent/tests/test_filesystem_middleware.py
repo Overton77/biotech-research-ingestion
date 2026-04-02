@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from src.research.langchain_agent.agent.config import ROOT_FILESYSTEM
-from src.research.langchain_agent.tools_for_test.filesystem_middleware import (
+from src.research.langchain_agent.tools.middleware.filesystem import (
     _normalize_sandbox_path,
 )
 

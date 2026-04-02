@@ -256,7 +256,6 @@ async def ingest_unstructured_documents(input: UnstructuredIngestionInput) -> Un
     from src.research.langchain_agent.agent.config import ROOT_FILESYSTEM
     from src.research.langchain_agent.models.mission import ResearchMission
     from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient, Neo4jAuraSettings
-    from src.research.langchain_agent.run_mission import load_mission_from_file
     from src.research.langchain_agent.unstructured.candidate_collection import gather_mission_candidates
     from src.research.langchain_agent.unstructured.models import CandidateDocument, UnstructuredIngestionConfig
     from src.research.langchain_agent.unstructured.paths import mission_unstructured_dir

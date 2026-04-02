@@ -23,8 +23,6 @@ from src.research.langchain_agent.agent.filesystem_support import (
     filesystem_backend,
 )
 from src.research.langchain_agent.agent.subagents import build_compiled_subagents
-from src.research.langchain_agent.tools_for_test.filesystem_middleware import monitor_filesystem_tools
-
 from src.research.langchain_agent.agent.config import (
     BiotechResearchAgentState,
     NextStepsArtifact,
@@ -32,7 +30,8 @@ from src.research.langchain_agent.agent.config import (
     ResearchTaskMemoryReport,
     TOOLS_MAP,
 )
-from src.research.langchain_agent.tools_for_test.formatters import _format_tavily_event_block 
+from src.research.langchain_agent.tools.formatters import _format_tavily_event_block
+from src.research.langchain_agent.tools.middleware.filesystem import monitor_filesystem_tools
 
 
 gpt_5_4_mini = "gpt-5.4-mini"

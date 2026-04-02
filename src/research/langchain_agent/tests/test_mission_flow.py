@@ -13,7 +13,7 @@ import pytest
 from src.research.langchain_agent.agent.config import MissionSliceInput, ResearchPromptSpec
 from src.research.langchain_agent.models.mission import MissionStage, ResearchMission
 from src.research.langchain_agent.workflow.run_mission import _topological_stage_order
-from src.research.langchain_agent.run_mission import load_mission_from_file
+from src.research.langchain_agent.mission_loader import load_mission_from_file
 
 MISSIONS_DIR = Path(__file__).resolve().parent.parent / "test_runs" / "missions"
 
@@ -126,15 +126,15 @@ async def test_run_mission_creates_output_dir(tmp_path: Path):
             new=AsyncMock(return_value=stub_out),
         ),
         patch(
-            "src.research.langchain_agent.storage.langgraph_persistence.get_persistence",
+            "src.research.langchain_agent.runtime.bootstrap.get_persistence",
             new=AsyncMock(return_value=(object(), object())),
         ),
         patch(
-            "src.research.langchain_agent.storage.models.init_research_agent_beanie",
+            "src.research.langchain_agent.runtime.bootstrap.init_research_agent_beanie",
             new=AsyncMock(),
         ),
         patch(
-            "src.research.langchain_agent.memory.langmem_manager.build_langmem_manager",
+            "src.research.langchain_agent.runtime.bootstrap.build_langmem_manager",
             new=AsyncMock(return_value=object()),
         ),
     ):

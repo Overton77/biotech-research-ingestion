@@ -17,7 +17,7 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.store.memory import InMemoryStore
 
 from src.research.langchain_agent.models.mission import ResearchMission
-from src.research.langchain_agent.run_mission import load_mission_from_file
+from src.research.langchain_agent.mission_loader import load_mission_from_file
 
 MISSIONS_DIR = Path(__file__).resolve().parent.parent / "test_runs" / "missions"
 
