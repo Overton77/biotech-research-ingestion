@@ -62,6 +62,18 @@ class Settings(BaseSettings):
 
     # CORS
     WEB_ORIGIN: str = Field(default="http://localhost:3000", description="Allowed frontend origin for CORS")
+    CORS_EXTRA_ORIGINS: str = Field(
+        default="",
+        description="Comma-separated extra allowed origins (e.g. http://192.168.1.5:3000)",
+    )
+    CORS_ALLOW_LAN_REGEX: bool = Field(
+        default=True,
+        description="Allow FastAPI CORS for LAN IPs :3000 via allow_origin_regex (dev)",
+    )
+    SOCKETIO_CORS_STAR: bool = Field(
+        default=True,
+        description="If True, Socket.IO allows any origin (dev). Set False in production behind a known frontend URL.",
+    )
 
 
 @lru_cache

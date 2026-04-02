@@ -7,7 +7,7 @@ from pathlib import Path
 from src.research.langchain_agent.agent.config import ROOT_FILESYSTEM
 from src.research.langchain_agent.memory.langmem_manager import build_langmem_manager
 from src.research.langchain_agent.runtime.deps import ResearchMissionRuntime
-from src.research.langchain_agent.storage.langgraph_persistence import get_persistence
+from src.infrastructure.postgres.langgraph_persistence import get_persistence
 from src.research.langchain_agent.storage.models import init_research_agent_beanie
 
 

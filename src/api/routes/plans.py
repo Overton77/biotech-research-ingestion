@@ -169,9 +169,10 @@ async def launch_plan(plan_id: str) -> dict:
     Returns mission_id + workflow_id immediately.
     """
     from src.infrastructure.temporal.client import get_temporal_client
+    from src.infrastructure.temporal.models import MissionWorkflowInput
     from src.infrastructure.temporal.worker import DEEP_RESEARCH_TASK_QUEUE
-    from src.infrastructure.temporal.workflows.deep_research import DeepResearchMissionWorkflow
-    from src.research.deepagent.compiler.mission_creator import (
+    from src.infrastructure.temporal.workflows.research_mission import ResearchMissionWorkflow
+    from src.research.langchain_agent.compiler.mission_compiler import (
         MissionCompilationError,
         UnapprovedPlanError,
         create_mission_from_plan,
@@ -193,10 +194,14 @@ async def launch_plan(plan_id: str) -> dict:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e))
 
     temporal_client = await get_temporal_client()
-    workflow_id = f"deep-research-{mission.id}"
+    workflow_id = f"research-mission-{mission.mission_id}"
     await temporal_client.start_workflow(
-        DeepResearchMissionWorkflow.run,
-        str(mission.id),
+        ResearchMissionWorkflow.run,
+        MissionWorkflowInput(
+            mission_json=mission.model_dump(mode="json"),
+            run_kg=mission.run_kg,
+            output_dir=None,
+        ),
         id=workflow_id,
         task_queue=DEEP_RESEARCH_TASK_QUEUE,
     )
@@ -206,7 +211,7 @@ async def launch_plan(plan_id: str) -> dict:
     await plan.save()
 
     return envelope({
-        "mission_id": str(mission.id),
+        "mission_id": mission.mission_id,
         "workflow_id": workflow_id,
         "status": "accepted",
     })

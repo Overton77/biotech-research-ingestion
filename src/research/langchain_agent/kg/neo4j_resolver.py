@@ -17,7 +17,7 @@ from __future__ import annotations
 import logging
 import re
 
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient
 
 logger = logging.getLogger(__name__)
 

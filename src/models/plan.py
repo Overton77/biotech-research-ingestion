@@ -35,7 +35,7 @@ class TaskOutputSpec(BaseModel):
 
 
 class ResearchTask(BaseModel):
-    """A single task in a research plan. Agent configuration is produced by the Mission Compiler."""
+    """A single task in a research plan. Agent configuration is refined by the LangChain mission compiler."""
 
     id: str
     title: str
@@ -46,6 +46,19 @@ class ResearchTask(BaseModel):
     outputs: list[TaskOutputSpec] = Field(default_factory=list)
     dependencies: list[str] = Field(default_factory=list)
     estimated_duration_minutes: int | None = None
+    # Optional — set by the coordinator for LangChain ``MissionSliceInput`` compilation
+    selected_tool_names: list[str] | None = None
+    selected_subagent_names: list[str] | None = None
+    stage_type: (
+        Literal[
+            "discovery",
+            "entity_validation",
+            "official_site_mapping",
+            "targeted_extraction",
+            "report_synthesis",
+        ]
+        | None
+    ) = None
 
 
 class ResearchPlan(Document):

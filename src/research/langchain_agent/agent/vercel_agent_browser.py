@@ -23,8 +23,7 @@ from src.research.langchain_agent.agent.subagent_types import (
     SUBAGENT_DESCRIPTIONS,
     VERCEL_AGENT_BROWSER_SUBAGENT,
 )
-
-_WIN_LONG_PREFIX = "\\\\?\\"
+from src.research.langchain_agent.agent.constants import _WIN_LONG_PREFIX
 
 
 def project_root() -> Path:

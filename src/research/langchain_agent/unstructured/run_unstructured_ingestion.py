@@ -21,7 +21,7 @@ import logging
 from pathlib import Path
 
 from src.research.langchain_agent.kg.embedder import build_embedder, embed_batch
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient
 from src.research.langchain_agent.unstructured.docling_pipeline import (
     materialize_candidate_with_docling,
     materialize_candidate_with_llamaparse,

@@ -27,7 +27,9 @@ from beanie import Document, init_beanie
 from pydantic import BaseModel, Field
 
 from src.research.langchain_agent.agent.config import MissionSliceInput, ResearchPromptSpec
-from src.research.langchain_agent.storage.async_mongo_client import mongo_client
+from src.research.langchain_agent.agent.prompts.prompt_builders import PROMPT_SPEC
+from src.infrastructure.mongo.async_mongo_client import mongo_client
+from src.research.langchain_agent.models.plan import ResearchPlan as LangchainResearchPlan
 from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 
 logger = logging.getLogger(__name__)
@@ -38,6 +40,8 @@ _beanie_initialized = False
 # ---------------------------------------------------------------------------
 # Mission configuration models
 # ---------------------------------------------------------------------------
+# Research plans persisted for this pipeline live in
+# ``src.research.langchain_agent.models.plan.ResearchPlan`` (collection ``langchain_research_plans``).
 
 
 class IterativeStageConfig(BaseModel):
@@ -96,6 +100,103 @@ class ResearchMission(BaseModel):
     unstructured_ingestion: UnstructuredIngestionConfig = Field(
         default_factory=UnstructuredIngestionConfig,
         description="Staged unstructured document ingestion after mission candidate manifests are gathered.",
+    )
+
+
+# ---------------------------------------------------------------------------
+# Mission compiler — LLM draft (structured output) → ResearchMission
+# ---------------------------------------------------------------------------
+
+
+class ResearchPromptSpecModel(BaseModel):
+    """Pydantic twin of ``ResearchPromptSpec`` for LLM structured output."""
+
+    agent_identity: str = Field(default=PROMPT_SPEC.agent_identity, min_length=4)
+    domain_scope: list[str] = Field(default_factory=lambda: list(PROMPT_SPEC.domain_scope))
+    workflow: list[str] = Field(default_factory=lambda: list(PROMPT_SPEC.workflow))
+    tool_guidance: list[str] = Field(default_factory=lambda: list(PROMPT_SPEC.tool_guidance))
+    subagent_guidance: list[str] = Field(default_factory=lambda: list(PROMPT_SPEC.subagent_guidance))
+    practical_limits: list[str] = Field(default_factory=lambda: list(PROMPT_SPEC.practical_limits))
+    filesystem_rules: list[str] = Field(default_factory=lambda: list(PROMPT_SPEC.filesystem_rules))
+    intermediate_files: list[str] = Field(default_factory=lambda: list(PROMPT_SPEC.intermediate_files))
+
+
+def research_prompt_spec_model_to_dataclass(m: ResearchPromptSpecModel) -> ResearchPromptSpec:
+    return ResearchPromptSpec(
+        agent_identity=m.agent_identity,
+        domain_scope=m.domain_scope,
+        workflow=m.workflow,
+        tool_guidance=m.tool_guidance,
+        subagent_guidance=m.subagent_guidance,
+        practical_limits=m.practical_limits,
+        filesystem_rules=m.filesystem_rules,
+        intermediate_files=m.intermediate_files,
+    )
+
+
+class MissionStageDraft(BaseModel):
+    """One mission stage as produced by the compiler LLM (before ``mission_id`` is fixed)."""
+
+    slice_input: MissionSliceInput
+    prompt_spec: ResearchPromptSpecModel = Field(default_factory=ResearchPromptSpecModel)
+    execution_reminders: list[str] = Field(
+        default_factory=lambda: [
+            "Use runs/, reports/, and scratch/ as main folders.",
+            "Save intermediate data; write the final report to reports/.",
+            "Use recalled memories as hints, not unquestioned truth.",
+        ]
+    )
+    dependencies: list[str] = Field(
+        default_factory=list,
+        description="task_slug values that must complete before this stage.",
+    )
+    iterative_config: IterativeStageConfig | None = None
+
+
+class ResearchMissionDraft(BaseModel):
+    """
+    Structured LLM output for an executable LangChain research mission.
+
+    After validation, call :func:`draft_to_research_mission` with a new ``mission_id``.
+    Each ``slice_input`` should use ``mission_id=\"pending\"``; it is rewritten on finalize.
+    """
+
+    mission_name: str = ""
+    base_domain: str = ""
+    stages: list[MissionStageDraft] = Field(min_length=1)
+    run_kg: bool = False
+    unstructured_ingestion: UnstructuredIngestionConfig = Field(
+        default_factory=UnstructuredIngestionConfig,
+    )
+
+
+def draft_to_research_mission(draft: ResearchMissionDraft, mission_id: str) -> ResearchMission:
+    """Attach a real ``mission_id`` to the mission and every stage ``slice_input``."""
+    out_stages: list[MissionStage] = []
+    for sd in draft.stages:
+        si = sd.slice_input.model_copy(
+            update={
+                "mission_id": mission_id,
+                "task_id": sd.slice_input.task_id or sd.slice_input.task_slug,
+            }
+        )
+        ps = research_prompt_spec_model_to_dataclass(sd.prompt_spec)
+        out_stages.append(
+            MissionStage(
+                slice_input=si,
+                prompt_spec=ps,
+                execution_reminders=sd.execution_reminders,
+                dependencies=sd.dependencies,
+                iterative_config=sd.iterative_config,
+            )
+        )
+    return ResearchMission(
+        mission_id=mission_id,
+        mission_name=draft.mission_name,
+        base_domain=draft.base_domain,
+        stages=out_stages,
+        run_kg=draft.run_kg,
+        unstructured_ingestion=draft.unstructured_ingestion,
     )
 
 
@@ -272,7 +373,7 @@ async def init_research_agent_beanie() -> None:
     db = mongo_client["biotech_research"]
     await init_beanie(
         database=db,
-        document_models=[MissionRunDocument],
+        document_models=[MissionRunDocument, LangchainResearchPlan],
     )
     _beanie_initialized = True
     logger.info("Beanie initialized for langchain_agent (biotech_research)")

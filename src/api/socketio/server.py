@@ -6,6 +6,7 @@ from typing import Any
 import socketio
 
 from src.config import get_settings
+from src.config.cors import build_allowed_origins
 from src.api.socketio.handlers import (
     handle_send_message,
     handle_plan_approved,
@@ -21,7 +22,7 @@ def get_sio() -> socketio.AsyncServer:
     global _sio
     if _sio is None:
         settings = get_settings()
-        cors = [settings.WEB_ORIGIN, "http://localhost:3000"]
+        cors = "*" if settings.SOCKETIO_CORS_STAR else build_allowed_origins(settings)
         _sio = socketio.AsyncServer(
             async_mode="asgi",
             cors_allowed_origins=cors,

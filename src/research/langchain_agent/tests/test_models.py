@@ -14,7 +14,11 @@ from src.research.langchain_agent.models.mission import (
     MissionStage,
     ResearchMission,
 )
-from src.research.langchain_agent.mission_loader import load_mission_from_file
+from src.research.langchain_agent.cli.mission_loader import load_mission_from_file
+from src.research.langchain_agent.models.plan import (
+    ResearchPlanOutput,
+    ResearchPlanTask,
+)
 
 MISSIONS_DIR = Path(__file__).resolve().parent.parent / "test_runs" / "missions"
 
@@ -132,3 +136,100 @@ def test_loaded_mission_stage_slugs_unique():
         mission = load_mission_from_file(path)
         slugs = [s.slice_input.task_slug for s in mission.stages]
         assert len(slugs) == len(set(slugs)), f"Duplicate slugs in {mission.mission_name}"
+
+
+# ---------------------------------------------------------------------------
+# LangChain ResearchPlanOutput / ResearchPlanTask
+# ---------------------------------------------------------------------------
+
+
+def _sample_task(**overrides: object) -> dict:
+    base = {
+        "id": "task-1",
+        "title": "Scan landscape",
+        "description": "Review public sources",
+        "stage": "Discovery",
+        "dependencies": [],
+        "estimated_duration_minutes": 30,
+        "selected_tool_names": ["search_web", "extract_from_urls", "map_website"],
+        "selected_subagent_names": ["vercel_agent_browser"],
+    }
+    base.update(overrides)
+    return base
+
+
+def test_research_plan_output_accepts_valid_tasks():
+    out = ResearchPlanOutput(
+        title="T",
+        objective="O",
+        stages=["Discovery"],
+        tasks=[
+            ResearchPlanTask(
+                id="task-1",
+                title="A",
+                description="D",
+                stage="Discovery",
+                selected_tool_names=["search_web"],
+                selected_subagent_names=["tavily_research"],
+            )
+        ],
+    )
+    assert out.tasks[0].stage_type is None
+    assert "search_web" in out.tasks[0].selected_tool_names
+
+
+def test_research_plan_task_rejects_unknown_tool():
+    with pytest.raises(ValueError, match="Unknown tool names"):
+        ResearchPlanTask(
+            id="x",
+            title="t",
+            description="d",
+            stage="S",
+            selected_tool_names=["not_a_real_tool"],
+            selected_subagent_names=["vercel_agent_browser"],
+        )
+
+
+def test_research_plan_task_rejects_unknown_subagent():
+    with pytest.raises(ValueError, match="Unknown subagent names"):
+        ResearchPlanTask(
+            id="x",
+            title="t",
+            description="d",
+            stage="S",
+            selected_tool_names=["search_web"],
+            selected_subagent_names=["phantom_subagent"],
+        )
+
+
+def test_research_plan_output_stage_must_match_stages_list():
+    with pytest.raises(ValueError, match="not in stages"):
+        ResearchPlanOutput(
+            title="T",
+            objective="O",
+            stages=["A"],
+            tasks=[
+                ResearchPlanTask(
+                    id="task-1",
+                    title="t",
+                    description="d",
+                    stage="WrongStage",
+                    selected_tool_names=["search_web"],
+                    selected_subagent_names=["vercel_agent_browser"],
+                )
+            ],
+        )
+
+
+def test_research_plan_task_applies_defaults_for_empty_tool_lists():
+    raw = _sample_task(selected_tool_names=[], selected_subagent_names=[])
+    task = ResearchPlanTask.model_validate(raw)
+    assert task.selected_tool_names
+    assert task.selected_subagent_names
+
+
+def test_coordinator_prompt_lists_tools():
+    from src.prompts.coordinator_prompt_builders import RESEARCH_PLAN_SCHEMA_DESCRIPTION
+
+    assert "search_web" in RESEARCH_PLAN_SCHEMA_DESCRIPTION
+    assert "vercel_agent_browser" in RESEARCH_PLAN_SCHEMA_DESCRIPTION

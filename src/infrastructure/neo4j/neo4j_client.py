@@ -141,26 +141,4 @@ async def get_neo4j_aura_client() -> Neo4jAuraClient:
     return client 
 
 
-if __name__ == "__main__":  
-    import asyncio 
-
-    async def main() -> None: 
-        client = await get_neo4j_aura_client()   
-
-        try: 
-            companies = await client.execute_query( 
-                """ 
-                MATCH (o: Organization) 
-                RETURN properties(o) as company 
-                """, 
-                parameters={} 
-            ) 
-
-            print(f"Found {len(companies)} companies") 
-
-        except Exception as e: 
-            raise e   
-
-    asyncio.run(main()) 
-
 

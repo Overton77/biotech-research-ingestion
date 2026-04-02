@@ -17,6 +17,7 @@ from src.api.routes.missions import router as missions_router
 from src.api.routes.runs import router as runs_router
 from src.api.socketio.server import get_sio_mount_app
 from src.config import get_settings
+from src.config.cors import build_allowed_origins, lan_origin_regex
 from src.models import Message, Thread
 from src.models.plan import ResearchPlan 
 from src.models.openai_research import OpenAIResearchPlan, OpenAIResearchRun
@@ -77,9 +78,12 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
+    _cors_origins = build_allowed_origins(settings)
+    _cors_regex = lan_origin_regex(settings)
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=[settings.WEB_ORIGIN, "http://localhost:3000"],
+        allow_origins=_cors_origins,
+        allow_origin_regex=_cors_regex,
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],

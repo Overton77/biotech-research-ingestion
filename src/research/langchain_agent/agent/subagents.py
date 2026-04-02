@@ -50,23 +50,21 @@ from src.research.langchain_agent.tools.search.tavily import (
     search_web,
 )
 from src.research.langchain_agent.tools.document.docling import docling_document_tools
-from src.research.langchain_agent.unstructured.edgar_subagent import (
-    EDGAR_SPECIALTY_PROMPT,
-)
 from src.research.langchain_agent.tools.financials.edgar_tools import (
     EDGAR_RESEARCH_TOOLS,
-) 
-from src.research.langchain_agent.agent.subagent_system_prompts import (
+)
+from src.research.langchain_agent.agent.prompts.researchagent_system_prompts import (
+    SUBAGENT_HANDOFF_CONTRACT,
+)
+from src.research.langchain_agent.agent.prompts.subagent_system_prompts import (
     BROWSER_CONTROL_SPECIALTY_PROMPT,
     CLINICALTRIALS_SPECIALTY_PROMPT,
     DOCLING_SPECIALTY_PROMPT,
     EDGAR_SPECIALTY_PROMPT,
-    TAVILY_SPECIALTY_PROMPT, 
-    SUBAGENT_HANDOFF_CONTRACT,
+    TAVILY_SPECIALTY_PROMPT,
 )
+from src.research.langchain_agent.agent.constants import GPT_5_4_MINI
 
-
-gpt_5_4_mini = "gpt-5.4-mini"
 
 
 
@@ -81,15 +79,16 @@ def _build_subagent_prompt(*, subagent_name: str, specialty_prompt: str) -> str:
 def _build_compiled_subagent(
     *,
     name: str,
-    description: str,
+    description: str, 
     system_prompt: str,
     tools: Sequence[BaseTool],
     backend: FilesystemBackend,
     store: BaseStore,
-    checkpointer: BaseCheckpointSaver,
+    checkpointer: BaseCheckpointSaver,  
+    model_name: str = GPT_5_4_MINI,
 ) -> CompiledSubAgent:
     runnable_graph = create_agent(
-        model=gpt_5_4_mini,
+        model=model_name,
         tools=list(tools),
         system_prompt=system_prompt,
         middleware=[

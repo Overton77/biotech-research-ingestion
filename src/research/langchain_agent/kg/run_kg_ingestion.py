@@ -46,7 +46,8 @@ from src.research.langchain_agent.kg.searchtext import (
     build_searchtext_from_fields,
     get_searchtext_mode,
 )
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient 
+from src.research.langchain_agent.constants import GPT_5, GPT_5_MINI
 
 logger = logging.getLogger(__name__)
 
@@ -54,9 +55,9 @@ logger = logging.getLogger(__name__)
 # Default models
 # ---------------------------------------------------------------------------
 
-_SELECTOR_MODEL = "gpt-5-mini"
-_EXTRACTION_MODEL = "gpt-5" # use GPT-5 ! for extraction ! 
-_SEARCHTEXT_MODEL = "gpt-5-mini"
+_SELECTOR_MODEL = GPT_5_MINI
+_EXTRACTION_MODEL = GPT_5 # use GPT-5 ! for extraction ! 
+_SEARCHTEXT_MODEL = GPT_5_MINI
 
 
 def build_selector_llm() -> ChatOpenAI:

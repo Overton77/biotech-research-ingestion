@@ -87,6 +87,9 @@ def _coerce_tasks_to_models(raw_tasks: list[dict[str, Any]]) -> list[ResearchTas
                     estimated_duration_minutes=t.get("estimated_duration_minutes"),
                     inputs=[],
                     outputs=[],
+                    selected_tool_names=t.get("selected_tool_names"),
+                    selected_subagent_names=t.get("selected_subagent_names"),
+                    stage_type=t.get("stage_type"),
                 )
             )
         except Exception as exc:
@@ -210,11 +213,12 @@ async def _launch_mission_for_plan(
     plan_id: str,
     thread_id: str,
 ) -> None:
-    """Compile a ResearchMission from the approved plan and start a Temporal workflow."""
+    """Compile a LangChain ResearchMission from the approved plan and start ResearchMissionWorkflow."""
     from src.infrastructure.temporal.client import get_temporal_client
+    from src.infrastructure.temporal.models import MissionWorkflowInput
     from src.infrastructure.temporal.worker import DEEP_RESEARCH_TASK_QUEUE
-    from src.infrastructure.temporal.workflows.deep_research import DeepResearchMissionWorkflow
-    from src.research.deepagent.compiler.mission_creator import (
+    from src.infrastructure.temporal.workflows.research_mission import ResearchMissionWorkflow
+    from src.research.langchain_agent.compiler.mission_compiler import (
         MissionCompilationError,
         UnapprovedPlanError,
         create_mission_from_plan,
@@ -250,10 +254,14 @@ async def _launch_mission_for_plan(
         mission = await create_mission_from_plan(plan_doc)
 
         temporal_client = await get_temporal_client()
-        workflow_id = f"deep-research-{mission.id}"
+        workflow_id = f"research-mission-{mission.mission_id}"
         handle = await temporal_client.start_workflow(
-            DeepResearchMissionWorkflow.run,
-            str(mission.id),
+            ResearchMissionWorkflow.run,
+            MissionWorkflowInput(
+                mission_json=mission.model_dump(mode="json"),
+                run_kg=mission.run_kg,
+                output_dir=None,
+            ),
             id=workflow_id,
             task_queue=DEEP_RESEARCH_TASK_QUEUE,
         )
@@ -264,7 +272,7 @@ async def _launch_mission_for_plan(
 
         logger.info(
             "Mission %s launched via Temporal workflow %s for plan %s",
-            mission.id,
+            mission.mission_id,
             handle.id,
             plan_id,
         )
@@ -272,7 +280,7 @@ async def _launch_mission_for_plan(
         await emit_fn(
             "mission_launched",
             {
-                "mission_id": str(mission.id),
+                "mission_id": mission.mission_id,
                 "plan_id": plan_id,
                 "thread_id": thread_id,
                 "workflow_id": workflow_id,

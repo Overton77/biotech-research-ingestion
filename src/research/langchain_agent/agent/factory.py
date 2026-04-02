@@ -30,11 +30,12 @@ from src.research.langchain_agent.agent.config import (
     ResearchTaskMemoryReport,
     TOOLS_MAP,
 )
-from src.research.langchain_agent.tools.formatters import _format_tavily_event_block
+from src.research.langchain_agent.agent.formatting_helpers import _format_tavily_event_block
 from src.research.langchain_agent.tools.middleware.filesystem import monitor_filesystem_tools
 
-
-gpt_5_4_mini = "gpt-5.4-mini"
+from src.research.langchain_agent.agent.constants import GPT_5_4_MINI
+from src.research.langchain_agent.agent.memory_report_agent import build_memory_report_agent
+from src.research.langchain_agent.agent.next_steps_agent import build_next_steps_agent
 
 # -----------------------------------------------------------------------------
 # Dynamic prompt middleware (parameterized by prompt_spec + execution_reminders)
@@ -211,7 +212,8 @@ async def build_research_agent(
     selected_tool_names: List[str],
     selected_subagent_names: List[str],
     store: BaseStore,
-    checkpointer: BaseCheckpointSaver[Any],
+    checkpointer: BaseCheckpointSaver[Any], 
+    model_name: str = GPT_5_4_MINI,
 ) -> CompiledStateGraph[Any, Any, Any, Any]:
     """Build a research agent with the given prompt spec and reminders."""
     selected_tools: List[BaseTool] = [TOOLS_MAP[n] for n in selected_tool_names]
@@ -248,7 +250,7 @@ async def build_research_agent(
         )
 
     return create_agent(
-        model=gpt_5_4_mini,
+        model=model_name,
         tools=selected_tools,
         middleware=middleware,
         store=store,
@@ -256,63 +258,3 @@ async def build_research_agent(
         state_schema=BiotechResearchAgentState,
     )
 
-
-def build_memory_report_agent(
-    store: BaseStore, checkpointer: BaseCheckpointSaver[Any]
-) -> CompiledStateGraph[Any, Any, Any, Any]:
-    return create_agent(
-        model=gpt_5_4_mini,
-        tools=[],
-        middleware=[],
-        response_format=ResearchTaskMemoryReport,
-        store=store,
-        checkpointer=checkpointer,
-    )
-
-
-# -----------------------------------------------------------------------------
-# Next-steps extraction agent (iterative missions)
-# -----------------------------------------------------------------------------
-
-NEXT_STEPS_EXTRACTION_PROMPT = """
-You are an iteration evaluator for a multi-pass biotech research workflow.
-
-You will receive:
-1. The original research objective for this stage.
-2. The iteration number (which pass this is).
-3. The completion criteria (what "done" looks like).
-4. The final report produced by the research agent for this iteration.
-5. The agent's last response message.
-
-Your job is to produce a structured evaluation:
-
-- **stage_complete**: true only if the report fully satisfies the completion criteria
-  and no material open questions remain.
-- **confidence**: 0.0 to 1.0 — how complete is the research relative to the objective?
-  0.0 = nothing useful found. 0.5 = partial coverage with significant gaps.
-  0.9+ = comprehensive, only minor polish remaining.
-- **open_questions**: list the most important unanswered questions or unresolved
-  contradictions. Each item should have a question, priority (high/medium/low),
-  and brief rationale. Only include questions that are material — skip trivial ones.
-- **suggested_focus**: one sentence describing what the next iteration should
-  prioritize if the stage is not yet complete.
-- **key_findings_this_iteration**: 3-7 bullet points summarizing the most important
-  new information discovered in this iteration.
-
-Be honest and calibrated. Do not inflate confidence. Do not mark stage_complete
-unless the research genuinely covers the objective.
-""".strip()
-
-
-def build_next_steps_agent(
-    store: BaseStore, checkpointer: BaseCheckpointSaver[Any]
-) -> CompiledStateGraph[Any, Any, Any, Any]:
-    """Build a structured-output agent that evaluates an iteration and produces NextStepsArtifact."""
-    return create_agent(
-        model=gpt_5_4_mini,
-        tools=[],
-        system_prompt=NEXT_STEPS_EXTRACTION_PROMPT,
-        response_format=NextStepsArtifact,
-        store=store,
-        checkpointer=checkpointer,
-    )

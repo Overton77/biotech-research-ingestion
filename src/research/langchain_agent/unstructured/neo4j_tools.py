@@ -6,7 +6,7 @@ from langchain.tools import tool
 
 from src.research.langchain_agent.kg.embedder import build_embedder, embed_batch
 from src.research.langchain_agent.kg.neo4j_resolver import _escape_lucene
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient
 
 TARGET_CONFIG = [
     {

@@ -10,9 +10,7 @@ from __future__ import annotations
 
 from langchain_openai import OpenAIEmbeddings
 
-DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
-DEFAULT_EMBEDDING_DIMENSIONS = 1536
-
+from src.research.langchain_agent.kg.constants import DEFAULT_EMBEDDING_MODEL, DEFAULT_EMBEDDING_DIMENSIONS
 
 def build_embedder(model: str = DEFAULT_EMBEDDING_MODEL) -> OpenAIEmbeddings:
     """Return an OpenAIEmbeddings instance.  Build once; reuse across writes."""

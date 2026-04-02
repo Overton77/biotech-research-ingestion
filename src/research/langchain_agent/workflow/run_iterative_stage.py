@@ -33,7 +33,7 @@ from src.research.langchain_agent.observability.tracing import (
     traced_iterative_stage,
     traced_next_steps_extraction,
 )
-from src.research.langchain_agent.workflow.iteration_control import (
+from src.research.langchain_agent.workflow.utils.iteration_control import (
     build_iteration_context,
     evaluate_stop_condition,
     synthesize_iteration_reports,
