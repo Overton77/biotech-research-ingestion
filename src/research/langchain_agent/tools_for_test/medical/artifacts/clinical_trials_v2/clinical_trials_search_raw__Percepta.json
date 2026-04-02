@@ -1,0 +1,31 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06426628",
+          "briefTitle": "Clinical Utility of Management of Patients With Pulmonary Nodules Using the Percepta Nasal Swab Classifier"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Veracyte, Inc.",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Pulmonary Nodule, Solitary",
+            "Lung Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    }
+  ],
+  "pagesFetched": 1,
+  "nextPageToken": null,
+  "totalCount": 1
+}

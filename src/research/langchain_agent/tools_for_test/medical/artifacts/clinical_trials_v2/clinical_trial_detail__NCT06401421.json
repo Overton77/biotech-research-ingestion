@@ -1,0 +1,1281 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT06401421",
+      "orgStudyIdInfo": {
+        "id": "2023-05"
+      },
+      "organization": {
+        "fullName": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "EXActDNA-003 / NSABP B-64: Study of Molecular Residual Disease Detection in Breast Cancer (MRD)",
+      "officialTitle": "EXActDNA-003 / NSABP B-64: Breast Cancer Clinical Validation Study to Predict Recurrence of High-Risk Early Breast Cancer Treated With Neoadjuvant Therapy Using a Bespoke Circulating Tumor DNA Assay to Detect Molecular Residual Disease"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2026-01",
+      "overallStatus": "RECRUITING",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2024-06-07",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2030-04",
+        "type": "ESTIMATED"
+      },
+      "completionDateStruct": {
+        "date": "2030-04",
+        "type": "ESTIMATED"
+      },
+      "studyFirstSubmitDate": "2024-05-02",
+      "studyFirstSubmitQcDate": "2024-05-02",
+      "studyFirstPostDateStruct": {
+        "date": "2024-05-06",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2026-01-16",
+      "lastUpdatePostDateStruct": {
+        "date": "2026-01-20",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      },
+      "collaborators": [
+        {
+          "name": "NSABP Foundation Inc",
+          "class": "NETWORK"
+        }
+      ]
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": true,
+      "isUnapprovedDevice": true
+    },
+    "descriptionModule": {
+      "briefSummary": "The EXActDNA-003 study will prospectively enroll participants who are planning to undergo chemotherapy for high-risk, early breast cancer, who are willing to provide tissue and blood specimens for circulating tumor DNA (ctDNA) analysis.\n\nParticipants will be followed for up to 5.5 years."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "keywords": [
+        "Breast Cancer",
+        "ctDNA"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "COHORT",
+        "timePerspective": "PROSPECTIVE"
+      },
+      "enrollmentInfo": {
+        "count": 1800,
+        "type": "ESTIMATED"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "Participants with High Risk Early Breast Cancer",
+          "description": "Participants with High Risk Early Breast Cancer",
+          "interventionNames": [
+            "Diagnostic Test: ctDNA MRD test"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DIAGNOSTIC_TEST",
+          "name": "ctDNA MRD test",
+          "description": "Blood and tissue samples will be collected for the ctDNA MRD test",
+          "armGroupLabels": [
+            "Participants with High Risk Early Breast Cancer"
+          ],
+          "otherNames": [
+            "Oncodetect™"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Core biopsy tissue evaluability rate",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "Distant Recurrence Free Interval (dRFI)",
+          "timeFrame": "6 years"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Prevalence of tumor mutations and germline variants",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Sensitivity/Specificity",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Prevalence of test positivity",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Pathologic complete response (pCR) status",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Recurrence-free interval (RFI)",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Invasive breast cancer-free survival (IBCFS)",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Event-free survival (EFS)",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Overall survival (OS)",
+          "timeFrame": "6 years"
+        },
+        {
+          "measure": "Lead Time",
+          "timeFrame": "6 years"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. The participant or a legally authorized representative must provide study-specific informed consent prior to study entry.\n2. The participant must be ≥ 18 years of age.\n3. ECOG performance status 0 or 1.\n4. Histologically confirmed invasive carcinoma of the breast.\n5. Planned neoadjuvant therapy which includes cytotoxic chemotherapy.\n6. Tumor size ≥ 2.1 cm in greatest diameter.\n7. Unifocal or multifocal cancer documented to be the same histologic clinical subtype.\n8. Clinically node positive or if node negative, any one of the following:\n\n   1. TNBC or HER2+ subtype\n   2. HR+/HER2-negative with at least one of the following:\n\n   i. High tumor grade (G3) ii. Ki67 index of 20% or higher iii. High genomic risk (Oncotype DX® (ODX) Breast Recurrence Score of \\> 25, MammaPrint® High, etc.)\n9. Willing and able to comply with the study requirements, which includes the collection of a total of 34 cc (2.5 Tablespoons) of blood for each research blood draw.\n10. Available residual tissue from diagnostic biopsy from the breast or an involved ipsilateral lymph node for submission to create a bespoke ctDNA assay.\n\nExclusion Criteria:\n\n1. Definitive clinical or radiologic evidence of metastatic disease.\n2. Initiated neoadjuvant therapy for current breast cancer diagnosis.\n3. Synchronous diagnosis of another invasive cancer, other than this breast cancer, except for non-melanoma skin cancers.\n4. Completed all therapy (including endocrine therapy) \\<5 years ago for any previous invasive solid organ malignancy (with exception of non-melanoma skin cancers) including prior breast cancer. Individuals with a prior history of noninvasive (in situ) carcinomas may participate if they have received definitive treatment.\n5. Completed all therapy for any previous hematologic malignancy \\< 5 years ago.\n6. Multicentric or contralateral invasive breast cancers.\n7. Known pregnancy at time of enrollment.\n8. Prior solid organ transplant.\n9. Prior allogeneic hematopoietic stem cell transplant.",
+      "healthyVolunteers": false,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ],
+      "studyPopulation": "Patients over the age of 18 who will undergo neoadjuvant treatment for high-risk, early breast cancer",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "centralContacts": [
+        {
+          "name": "NSABP Department of Site and Study Management Department of Site and Study Management",
+          "role": "CONTACT",
+          "phone": "1-800-270-3165",
+          "email": "industry.trials@nsabp.org"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Katmai Oncology Group - Anchorage",
+          "status": "RECRUITING",
+          "city": "Anchorage",
+          "state": "Alaska",
+          "zip": "99508",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Theodore Kim",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 61.21806,
+            "lon": -149.90028
+          }
+        },
+        {
+          "facility": "Stanford Cancer Institute",
+          "status": "RECRUITING",
+          "city": "Palo Alto",
+          "state": "California",
+          "zip": "94304",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Irene Wapnir",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 37.44188,
+            "lon": -122.14302
+          }
+        },
+        {
+          "facility": "Harbor-UCLA Medical Center - Hematology / Oncology",
+          "status": "RECRUITING",
+          "city": "Torrance",
+          "state": "California",
+          "zip": "90502",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Jennifer Lee",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 33.83585,
+            "lon": -118.34063
+          }
+        },
+        {
+          "facility": "Kaiser Permanente Medical Center",
+          "status": "RECRUITING",
+          "city": "Vallejo",
+          "state": "California",
+          "zip": "94589",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Samantha Seaward",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 38.10409,
+            "lon": -122.25664
+          }
+        },
+        {
+          "facility": "UCHealth Cancer Care - Anschutz Medical Campus - University of Colorado Cancer Center",
+          "status": "RECRUITING",
+          "city": "Aurora",
+          "state": "Colorado",
+          "zip": "80045",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Marie Wood",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.72943,
+            "lon": -104.83192
+          }
+        },
+        {
+          "facility": "AdventHealth East Altamonte Oncology and Hematology",
+          "status": "RECRUITING",
+          "city": "Altamonte Springs",
+          "state": "Florida",
+          "zip": "32701",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Wassim Mchayleh",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 28.66111,
+            "lon": -81.36562
+          }
+        },
+        {
+          "facility": "Mount Sinai Medical - Comprehensive Cancer Center",
+          "status": "RECRUITING",
+          "city": "Miami Beach",
+          "state": "Florida",
+          "zip": "33140",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Oleg Gligich",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 25.79065,
+            "lon": -80.13005
+          }
+        },
+        {
+          "facility": "Baptist Cancer Care - Plantation",
+          "status": "RECRUITING",
+          "city": "Plantation",
+          "state": "Florida",
+          "zip": "33324",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Lauren Carcas",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 26.13421,
+            "lon": -80.23184
+          }
+        },
+        {
+          "facility": "St. Joseph's Women's Hospital",
+          "status": "RECRUITING",
+          "city": "Tampa",
+          "state": "Florida",
+          "zip": "33607",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Robert Gabordi",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 27.94752,
+            "lon": -82.45843
+          }
+        },
+        {
+          "facility": "Rush Cancer Center",
+          "status": "RECRUITING",
+          "city": "Chicago",
+          "state": "Illinois",
+          "zip": "60607",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Ruta Rao",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 41.85003,
+            "lon": -87.65005
+          }
+        },
+        {
+          "facility": "Deaconess Chancellor Center for Oncology",
+          "status": "RECRUITING",
+          "city": "Newburgh",
+          "state": "Indiana",
+          "zip": "47630",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Samer Schuman",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 37.94449,
+            "lon": -87.40529
+          }
+        },
+        {
+          "facility": "University of Kansas Cancer Center",
+          "status": "RECRUITING",
+          "city": "Westwood",
+          "state": "Kansas",
+          "zip": "66205",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Julia White",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.04056,
+            "lon": -94.6169
+          }
+        },
+        {
+          "facility": "St. Elizabeth Edgewood Hospital",
+          "status": "RECRUITING",
+          "city": "Edgewood",
+          "state": "Kentucky",
+          "zip": "41017",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Daniel Flora",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.01867,
+            "lon": -84.58189
+          }
+        },
+        {
+          "facility": "Norton Cancer Institute - Downtown",
+          "status": "RECRUITING",
+          "city": "Louisville",
+          "state": "Kentucky",
+          "zip": "40202",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "John Hamm",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 38.25424,
+            "lon": -85.75941
+          }
+        },
+        {
+          "facility": "Baptist Health Louisville",
+          "status": "RECRUITING",
+          "city": "Louisville",
+          "state": "Kentucky",
+          "zip": "40207",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Mounika Mandadi",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 38.25424,
+            "lon": -85.75941
+          }
+        },
+        {
+          "facility": "Weinberg Center at Mercy",
+          "status": "RECRUITING",
+          "city": "Baltimore",
+          "state": "Maryland",
+          "zip": "21202",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "David Riseberg",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.29038,
+            "lon": -76.61219
+          }
+        },
+        {
+          "facility": "Greater Baltimore Medical Center",
+          "status": "RECRUITING",
+          "city": "Baltimore",
+          "state": "Maryland",
+          "zip": "21204",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Robert Donegan",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.29038,
+            "lon": -76.61219
+          }
+        },
+        {
+          "facility": "Sinai Hospital of Baltimore",
+          "status": "RECRUITING",
+          "city": "Baltimore",
+          "state": "Maryland",
+          "zip": "21215",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Qiwei Gai",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.29038,
+            "lon": -76.61219
+          }
+        },
+        {
+          "facility": "MedStar Georgetown Cancer Institute",
+          "status": "RECRUITING",
+          "city": "Baltimore",
+          "state": "Maryland",
+          "zip": "21237",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Shweta Kurian",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.29038,
+            "lon": -76.61219
+          }
+        },
+        {
+          "facility": "The Center for Cancer and Blood Disorders - Bethesda",
+          "status": "RECRUITING",
+          "city": "Bethesda",
+          "state": "Maryland",
+          "zip": "20818",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Victor Priego",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 38.98067,
+            "lon": -77.10026
+          }
+        },
+        {
+          "facility": "James M Stockman Cancer Institute",
+          "status": "RECRUITING",
+          "city": "Frederick",
+          "state": "Maryland",
+          "zip": "21702",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Natalia Marina",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.41427,
+            "lon": -77.41054
+          }
+        },
+        {
+          "facility": "Tate Cancer Center at UM Baltimore Washington",
+          "status": "RECRUITING",
+          "city": "Glen Burnie",
+          "state": "Maryland",
+          "zip": "21061",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Aaron Iddings",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.16261,
+            "lon": -76.62469
+          }
+        },
+        {
+          "facility": "Meritus Center for Clinical Research",
+          "status": "RECRUITING",
+          "city": "Hagerstown",
+          "state": "Maryland",
+          "zip": "21742",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Victoria Giffi",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.64176,
+            "lon": -77.71999
+          }
+        },
+        {
+          "facility": "Holy Cross Hospital - Silver Spring",
+          "status": "RECRUITING",
+          "city": "Silver Spring",
+          "state": "Maryland",
+          "zip": "20910",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Cheryl Aylesworth",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 38.99067,
+            "lon": -77.02609
+          }
+        },
+        {
+          "facility": "University of Maryland St. Joseph Medical Center",
+          "status": "RECRUITING",
+          "city": "Towson",
+          "state": "Maryland",
+          "zip": "21204",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Ethan Rogers",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.4015,
+            "lon": -76.60191
+          }
+        },
+        {
+          "facility": "Lahey Hospital & Medical Center",
+          "status": "RECRUITING",
+          "city": "Burlington",
+          "state": "Massachusetts",
+          "zip": "01805",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Ragisha Gopalakrishnan",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 42.50482,
+            "lon": -71.19561
+          }
+        },
+        {
+          "facility": "Metro Minnesota Community Oncology Consortium (MMCORC)",
+          "status": "RECRUITING",
+          "city": "Saint Louis Park",
+          "state": "Minnesota",
+          "zip": "55426",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Yan Ji",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 44.9483,
+            "lon": -93.34801
+          }
+        },
+        {
+          "facility": "Saint Luke's Hospital of Kansas City",
+          "status": "RECRUITING",
+          "city": "Kansas City",
+          "state": "Missouri",
+          "zip": "64111",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Whitney Hensing",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.09973,
+            "lon": -94.57857
+          }
+        },
+        {
+          "facility": "John Theurer Cancer Center",
+          "status": "RECRUITING",
+          "city": "Hackensack",
+          "state": "New Jersey",
+          "zip": "07601",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Deena Graham",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 40.88593,
+            "lon": -74.04347
+          }
+        },
+        {
+          "facility": "Rutgers Cancer Institute of New Jersey",
+          "status": "RECRUITING",
+          "city": "New Brunswick",
+          "state": "New Jersey",
+          "zip": "08901",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Mridula George",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 40.48622,
+            "lon": -74.45182
+          }
+        },
+        {
+          "facility": "Stony Brook Medicine",
+          "status": "RECRUITING",
+          "city": "Stony Brook",
+          "state": "New York",
+          "zip": "11794",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Alison Stopeck",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 40.92565,
+            "lon": -73.14094
+          }
+        },
+        {
+          "facility": "Atrium Health Levine Cancer Institute",
+          "status": "RECRUITING",
+          "city": "Charlotte",
+          "state": "North Carolina",
+          "zip": "28204",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Arielle Heeke",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 35.22709,
+            "lon": -80.84313
+          }
+        },
+        {
+          "facility": "Novant Health Cancer Institute - Elizabeth",
+          "status": "RECRUITING",
+          "city": "Charlotte",
+          "state": "North Carolina",
+          "zip": "28204",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Kimberly Strickland",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 35.22709,
+            "lon": -80.84313
+          }
+        },
+        {
+          "facility": "FirstHealth Outpatient Cancer Center",
+          "status": "RECRUITING",
+          "city": "Pinehurst",
+          "state": "North Carolina",
+          "zip": "28374",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Charles Kuzma",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 35.19543,
+            "lon": -79.46948
+          }
+        },
+        {
+          "facility": "UNC Cancer Care at Nash",
+          "status": "RECRUITING",
+          "city": "Rocky Mount",
+          "state": "North Carolina",
+          "zip": "27804",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Elie Choufani",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 35.93821,
+            "lon": -77.79053
+          }
+        },
+        {
+          "facility": "Atrium Health Wake Forest Baptist Medical Center",
+          "status": "RECRUITING",
+          "city": "Winston-Salem",
+          "state": "North Carolina",
+          "zip": "27157",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Katherine Ansley",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 36.09986,
+            "lon": -80.24422
+          }
+        },
+        {
+          "facility": "Aultman Timken Family Cancer Center",
+          "status": "RECRUITING",
+          "city": "Canton",
+          "state": "Ohio",
+          "zip": "44710",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Sunitha Vemulapalli",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 40.79895,
+            "lon": -81.37845
+          }
+        },
+        {
+          "facility": "Cleveland Clinic Main Campus",
+          "status": "RECRUITING",
+          "city": "Cleveland",
+          "state": "Ohio",
+          "zip": "44195",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Shimoli Barot",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 41.4995,
+            "lon": -81.69541
+          }
+        },
+        {
+          "facility": "Penn State Health Medical Group - Andrews Patel",
+          "status": "RECRUITING",
+          "city": "Harrisburg",
+          "state": "Pennsylvania",
+          "zip": "17111",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Kumudini Rao",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 40.2737,
+            "lon": -76.88442
+          }
+        },
+        {
+          "facility": "Penn State Cancer Institute",
+          "status": "RECRUITING",
+          "city": "Hershey",
+          "state": "Pennsylvania",
+          "zip": "17033",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Cristina Truica",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 40.28592,
+            "lon": -76.65025
+          }
+        },
+        {
+          "facility": "UPMC Magee - Womens Hospital",
+          "status": "RECRUITING",
+          "city": "Pittsburgh",
+          "state": "Pennsylvania",
+          "zip": "15213",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Julia Foldi",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 40.44062,
+            "lon": -79.99589
+          }
+        },
+        {
+          "facility": "Guthrie Sayre",
+          "status": "RECRUITING",
+          "city": "Sayre",
+          "state": "Pennsylvania",
+          "zip": "18840",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Mohammed Ziauddin",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 41.97896,
+            "lon": -76.5155
+          }
+        },
+        {
+          "facility": "Women & Infants Hospital",
+          "status": "RECRUITING",
+          "city": "Providence",
+          "state": "Rhode Island",
+          "zip": "02905",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "William Sikov",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 41.82399,
+            "lon": -71.41283
+          }
+        },
+        {
+          "facility": "Spartanburg Medical Center",
+          "status": "RECRUITING",
+          "city": "Spartanburg",
+          "state": "South Carolina",
+          "zip": "29303",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Isaac Alwine",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 34.94957,
+            "lon": -81.93205
+          }
+        },
+        {
+          "facility": "Avera Cancer Institute",
+          "status": "RECRUITING",
+          "city": "Sioux Falls",
+          "state": "South Dakota",
+          "zip": "57105",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Jason Jones",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 43.54369,
+            "lon": -96.72796
+          }
+        },
+        {
+          "facility": "Ballad Health Cancer Center",
+          "status": "RECRUITING",
+          "city": "Kingsport",
+          "state": "Tennessee",
+          "zip": "37660",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Asheesh Shipstone",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 36.54843,
+            "lon": -82.56182
+          }
+        },
+        {
+          "facility": "The University of Texas MD Anderson Cancer Center",
+          "status": "RECRUITING",
+          "city": "Houston",
+          "state": "Texas",
+          "zip": "77030",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Vincente Valero",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 29.76328,
+            "lon": -95.36327
+          }
+        },
+        {
+          "facility": "Joe Arrington Cancer Research & Treatment Center",
+          "status": "RECRUITING",
+          "city": "Lubbock",
+          "state": "Texas",
+          "zip": "79410",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Ibrahim Shalaby",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 33.57786,
+            "lon": -101.85517
+          }
+        },
+        {
+          "facility": "Alan B. Pearson Regional Cancer Center",
+          "status": "RECRUITING",
+          "city": "Lynchburg",
+          "state": "Virginia",
+          "zip": "24501",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Michael O'Neill",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 37.41375,
+            "lon": -79.14225
+          }
+        },
+        {
+          "facility": "Bon Secours Cancer Institute at St. Francis",
+          "status": "RECRUITING",
+          "city": "Midlothian",
+          "state": "Virginia",
+          "zip": "23114",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "William Irvin",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 37.50598,
+            "lon": -77.64916
+          }
+        },
+        {
+          "facility": "VCU Massey Comprehensive Cancer Center",
+          "status": "RECRUITING",
+          "city": "Richmond",
+          "state": "Virginia",
+          "zip": "23298",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Elizabeth Barrows",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 37.55376,
+            "lon": -77.46026
+          }
+        },
+        {
+          "facility": "WVU Cancer Institute",
+          "status": "RECRUITING",
+          "city": "Morgantown",
+          "state": "West Virginia",
+          "zip": "26505",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Sobha Kurian",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 39.62953,
+            "lon": -79.9559
+          }
+        },
+        {
+          "facility": "Aurora Cancer Care - Wauwatosa",
+          "status": "RECRUITING",
+          "city": "Wauwatosa",
+          "state": "Wisconsin",
+          "zip": "53226",
+          "country": "United States",
+          "contacts": [
+            {
+              "name": "Peter Polewski",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 43.04946,
+            "lon": -88.00759
+          }
+        },
+        {
+          "facility": "Maisonneuve-Rosemont Hospital (HMR)",
+          "status": "RECRUITING",
+          "city": "Montreal",
+          "state": "Quebec",
+          "zip": "H1T 2M4",
+          "country": "Canada",
+          "contacts": [
+            {
+              "name": "Lucas Sideris",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 45.50884,
+            "lon": -73.58781
+          }
+        },
+        {
+          "facility": "Centre Hospitalier de l'Université de Montréal (CHUM)",
+          "status": "RECRUITING",
+          "city": "Montreal",
+          "state": "Quebec",
+          "zip": "H2X 3E4",
+          "country": "Canada",
+          "contacts": [
+            {
+              "name": "Erica Patocskai",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 45.50884,
+            "lon": -73.58781
+          }
+        },
+        {
+          "facility": "Jewish General Hospital",
+          "status": "RECRUITING",
+          "city": "Montreal",
+          "state": "Quebec",
+          "zip": "H3T1E2",
+          "country": "Canada",
+          "contacts": [
+            {
+              "name": "Mark Basik",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 45.50884,
+            "lon": -73.58781
+          }
+        },
+        {
+          "facility": "McGill University Health - Glen Site",
+          "status": "RECRUITING",
+          "city": "Montreal",
+          "state": "Quebec",
+          "country": "Canada",
+          "contacts": [
+            {
+              "name": "Nathaniel Bouganim",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 45.50884,
+            "lon": -73.58781
+          }
+        },
+        {
+          "facility": "Hôpital du Saint-Sacrement",
+          "status": "RECRUITING",
+          "city": "Québec",
+          "state": "Quebec",
+          "zip": "G1S 4L8",
+          "country": "Canada",
+          "contacts": [
+            {
+              "name": "Dominique Boudreau",
+              "role": "CONTACT"
+            }
+          ],
+          "geoPoint": {
+            "lat": 46.81228,
+            "lon": -71.21454
+          }
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "YES",
+      "description": "Individual participant data that underlie the results reported in publications of the study will be shared after deidentification. This may include test, tables, figured, and appendices. The study protocol, statistical analysis plan (when applicable), informed consent form (when applicable). May not be reproduced nor disseminated outside of Exact Sciences without permission and the clinical study report (when applicable) will also be shared",
+      "infoTypes": [
+        "STUDY_PROTOCOL",
+        "SAP",
+        "ICF",
+        "CSR",
+        "ANALYTIC_CODE"
+      ],
+      "timeFrame": "Data will be available from 2 years and ending 4 years after publication",
+      "accessCriteria": "Proposals for access to data should be directed to clinicaltrials@exactsciences.com. To gain access, data requestors will need to provide a methodologically sound proposal and sign a data access agreement. Researchers are required to obtain necessary Institutional Review Board (IRB)/Institutional Ethics Committee (IEC) approvals or waivers as applicable to conduct research."
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-04-01"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D001943",
+          "term": "Breast Neoplasms"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D009371",
+          "term": "Neoplasms by Site"
+        },
+        {
+          "id": "D009369",
+          "term": "Neoplasms"
+        },
+        {
+          "id": "D001941",
+          "term": "Breast Diseases"
+        },
+        {
+          "id": "D012871",
+          "term": "Skin Diseases"
+        },
+        {
+          "id": "D017437",
+          "term": "Skin and Connective Tissue Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

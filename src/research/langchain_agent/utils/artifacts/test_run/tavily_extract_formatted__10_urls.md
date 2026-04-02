@@ -1,568 +1,442 @@
-Meta: request_id=b5c953a1-f362-4b4a-a939-6a33a4535740, response_time_s=1.08
+Meta: request_id=f57828c8-8aae-47e6-a93b-b9c958d739d1, response_time_s=0.88
 
 === Extracted Web Content ===
 [Result 1]
-Title: 3 star rating
-URL: https://www.elysiumhealth.com/products/basis
+Title: Cologuard®
+URL: https://www.exactsciences.com/cancer-testing/cologuard-stool-test
 Content:
-3 star rating
+# Cologuard®
 
-2 star rating
+Backed by strong science and robust clinical research in collaboration with Mayo Clinic, Cologuard is a stool DNA-based colorectal cancer screening test for average-risk individuals who are 45 or older.
 
-1 star rating
+Cologuard uses a biomarker panel which analyzes a person’s stool sample for 10 DNA markers, as well as blood in the stool (hemoglobin). This multi-marker approach is a distinguishing feature of Exact Sciences’ scientific platform.
 
-William P.
+Cologuard finds colon cancer even in early stages when it is more treatable.1,2,3\ [...] ### Stool DNA isolation
 
-Verified Buyer
+This proprietary technology proved to be a breakthrough in the development of the multitarget stool DNA test. Our scientists needed to first solve the essential problem of effectively isolating DNA from stool before achieving the goal of developing a noninvasive colon cancer screening test.
 
-5 star rating
+### DNA stability technology
 
-Better living, longer life
+The development of an enhanced DNA stabilizing buffer was a critical step in the process of creating a reliable at-home screening kit. With this advance, the DNA in stool samples is protected through the transport process and remains amenable to analysis once it arrives at our processing center.
 
-Since taking Basis I have enjoyed a better quality of life, and feel better about the future
+### DNA biomarker detection [...] Cologuard is convenient. It’s a noninvasive screening option that can be used at home that requires no special prep, no need for time off, no changes to your diet or medication. People can collect their Cologuard sample in the privacy of their own home. Cologuard includes a built-in patient navigation program with patient support available daily from 6 AM to 10 PM CT for questions and reminder texts and calls to support completion of the test.
 
-read more about content Since taking Basis I have enjoyed
+Visit cologuard.com
 
-Published date
+## Innovation supports the Cologuard scientific platform
 
-03/05/26
-
-Was this review helpful?
-
-0
-
-0
-
-Stephani...
-
-Verified Buyer
-
-5 star rating
-
-The secret to longevity lies in the science
-
-As we age, we begin to notice our fragility. This silently creeps into our mind and bodies. Elysium has given me hope that there is nothing to fear and it all started with Basis. Many companies have piggybacked the idea but like all other generic products, none can compete with the founders of this longevity...
-
-Read moreread more about content As we age, we begin to notice our [...] Published date
-
-03/04/26
-
-Was this review helpful?
-
-0
-
-0
-
-Sam M.
-
-Verified Buyer
-
-5 star rating
-
-Don't buy
-
-Can't even tell im taking them. . feel no difference
-
-read more about content Can't even tell im taking them.
-
-Published date
-
-03/04/26
-
-Was this review helpful?
-
-0
-
-0
-
-Dr. T.
-
-Verified Buyer
-
-5 star rating
-
-A Good Basis for Doing Business
-
-I have been taking basis for over five years, and the professionalism of the Elysium staff is far above average. The product is first-rate and increases my energy and immune system. I highly recommend it.
-
-read more about content I have been taking basis for over
-
-Was this review helpful?
-
-0
-
-0
-
-Max T.
-
-Verified Buyer
-
-5 star rating
-
-I’m Happy I know about this now
+### Stool DNA isolation
 
 [Result 2]
-Title: Donna N.
-URL: https://www.elysiumhealth.com/products/matter
+Title: Cologuard Plus™ test
+URL: https://www.exactsciences.com/cancer-testing/cologuard-plus
 Content:
-Donna N.
+# Cologuard Plus™ test
 
-Verified Buyer
+The Cologuard Plus test is approved for average-risk patients 45 and older1 and is backed by pivotal data from the 20,000+-person BLUE-C study published in the *New England Journal of Medicine*.
 
-5 star rating
+Built on the proven performance of the Cologuard® test, the Cologuard Plus test detects 95% of colorectal cancer (CRC) at 94% specificity in the U.S. screening population.1\*  It also detects 74% of high-grade dysplasia, the type of pre-cancerous growths most likely to advance to cancer.† With its enhanced specificity, the Cologuard Plus test is expected to reduce unnecessary follow-up colonoscopies by up to 40% compared to the original Cologuard test. This performance makes the Cologuard Plus test the most accurate noninvasive CRC test reported in studies to date.†
 
-Life changing!
+Like the original Cologuard test, the Cologuard Plus test maintains the convenience of at-home collection with no prep, diet restrictions, or sedation. It is shipped directly to a patient’s home and integrates with Exact Sciences’ technology platform, ExactNexus™, which simplifies ordering, result delivery, and patient navigation.
 
-I started taking Signal and Matter at the same time. After 3 weeks, I noticed that my sleep was deeper. I wasn't waking up multiple times in the night. Then, I noticed that my memory had noticeably improved. Even my daughter commented that I was repeating myself a lot less. I am so sold that I immediately...
+Visit cologuardhcp.com
 
-Read moreread more about content I started taking Signal and Matter
+## Footnotes and references
 
-Published date
+1. 94% specificity was determined for adults with no colorectal neoplasia age-weighted to the U.S. population.
+2. Based on relative comparison to published reports; not direct evidence from head-to-head comparisons with all other screening tests.
 
-03/03/26
+  
 
-Was this review helpful?
-
-0
-
-0
-
-Mitch H.
-
-Verified Buyer
-
-5 star rating
-
-Anti-Aging and Brain Health [...] Verified Buyer
-
-5 star rating
-
-Anti-Aging and Brain Health
-
-I feel like this is one of the best investments I have made in myself in a long time. I chose Elysium because of their research and evidence based claims.
-I do not have a lot of disposable income right now… but I budget for Matter and Basis for my future self.
-
-read more about content I feel like this is one of the
-
-Published date
-
-01/26/26
-
-Was this review helpful?
-
-0
-
-0
-
-Kevin W.
-
-Verified Buyer
-
-5 star rating
-
-Honestly
-
-I’m not experiencing any changes. Not sure if I’m suppose to
-
-read more about content I’m not experiencing any changes.
-
-Published date
-
-01/15/26
-
-Was this review helpful?
-
-0
-
-0
-
-Maria C.
-
-Verified Buyer
-
-5 star rating
-
-Matter
+1. Cologuard Plus Clinician Brochure. Madison, WI; Exact Sciences Corporation.
 
 [Result 3]
-Title: 3 star rating
-URL: https://www.elysiumhealth.com/products/cofactor
+Title: 2. Centers for Medicare & Medicaid Services, Medicare Coverage Database. LCD—MolDX: Minimal Residual Disease Testing for Cancer. Accessed January 21, 2025.
+URL: https://www.exactsciences.com/cancer-testing/oncodetect-ctdna-test
 Content:
-3 star rating
+1. Diergaarde B, Young G, Hall DW, Mazloom A, Costa G, Subramaniam S, Palomares M, Garces J, Baehner FL, Schoen RE; and other members of the Exact Sciences MRD Group. Circulating tumor DNA as a marker of recurrence risk in Stage III colorectal cancer: The α‐CORRECT study. Journal of Surgical Oncology.
+2. Centers for Medicare & Medicaid Services, Medicare Coverage Database. LCD—MolDX: Minimal Residual Disease Testing for Cancer. Accessed January 21, 2025. 
+3. Cohen SA, et al. Nature. 2023;619(7969):259-268.
+4. Sanchez-Herrero E, et. al. Front Oncol. 2022.
+5. Santonja et al. EMBO. 2023. 
+6. The test has been validated in patients with stage II-IV colorectal cancer and Exact Sciences is currently pursuing applications in additional disease ontologies. [...] ## Innovation you can trust
 
-2 star rating
+At Exact Sciences, we’re dedicated to helping patients and providers make the most informed decisions in cancer prevention, treatment, and monitoring, by harnessing the latest innovations in screening and detection.
 
-1 star rating
+With more than 20 years of experience in genomic oncology, we’ve empowered over 1.8 million patients† living with cancer. We have invested in the latest MRD technologies and will continue to advance this field for the benefit of the patient and clinician.
 
-Wendy C.
+With the Oncodetect MRD test, you get highly sensitive ctDNA detection,1 meaningful insights to help make timely treatment decisions, and the exceptional customer support Exact Sciences is known for. [...] ## The Oncodetect MRD test can detect cancer recurrence more than 2 years earlier than imaging.1
 
-Verified Buyer
+The Oncodetect MRD test provides residual disease detection and monitoring, allowing you to make more informed treatment decisions.
 
-5 star rating
+## Highly personalized, highly sensitive1
 
-I have more energy
+By tracking up to 200 variants specific to a patient’s tumor, the Oncodetect MRD test grants more opportunities to detect ctDNA in the blood.1,5 A high level of sensitivity and specificity can help providers and patients assess whether cancer is remaining in the body, recurring, or is responding to specific treatment.
 
-This is a great product
+91%
 
-read more about content
+In the surveillance setting, the Oncodetect MRD test correctly identified 91% of patients with stage III colorectal cancer whose cancer would recur.1
 
-Published date
-
-03/05/26
-
-Was this review helpful?
-
-0
-
-0
-
-Monika S.
-
-Verified Buyer
-
-5 star rating
-
-I recommend Elysium supplements
-
-I'm 75 years old and in great health. For years, the only supplements I've used are from Elysium—for vision, memory, and longevity. I don’t always take them consistently since I travel and spend months abroad. Typically, I use smaller doses because the tablets are large and also quite pricey. To help...
-
-Read moreread more about content I'm 75 years old and in great health.
-
-Published date
-
-01/29/26
-
-Was this review helpful?
-
-1
-
-0
-
-Donna D.
-
-Verified Buyer
-
-5 star rating
-
-cofactor [...] Elysium’s skin aging and collagen support supplement, Mosaic, fights oxidative stress from sun exposure and aging—the main culprit in collagen loss. Combine Cofactor with Mosaic to supercharge your collagen system by protecting the collagen you’re replacing with Cofactor.
-
-## Bone and joint benefits for healthy mobility
-
-As the most abundant protein throughout our bodies, collagen is the primary building block for the body’s connective tissues, such as bones, tendons, ligaments, and cartilage, playing a key role in supporting our strength, flexibility, and movement. Human clinical studies show that oral supplementation with collagen peptides improves markers of bone health, including bone mineral density (in postmenopausal women), and supports joint mobility and comfort.
+94%
 
 [Result 4]
-Title: Clinically proven, visible results in as little as 3 weeks\
-URL: https://www.elysiumhealth.com/products/mosaic
+Title: Exact Sciences is now Abbott.
+URL: https://www.exactsciences.com/cancer-testing/oncotype-dx-breast-recurrence-score-patients
 Content:
-Clinically proven, visible results in as little as 3 weeks\
- First and only product with the clinically proven Phytonutrient Carotenoid Complex in combination with hyaluronic acid
- Increases moisture content, reduces fine lines and wrinkles, and improves texture—in a daily softgel
- Developed with the advisement of Dr. Richard Granstein, a world-renowned leader in the field of dermatology
+Exact Sciences is now Abbott.
+Exact Sciences is now Abbott.
+!(/-/media/project/headless/shared/images/flags/us.svg?h=200&iar=0&w=300&rev=37af7af9a7bc47028a5cdb2bfb4fd2fc&hash=625B2D05BF0789F11173E3C99301A18F)
 
-###### \Individual results may vary. This timeline may differ from the typical user’s experience and is not intended to represent or guarantee that every user will achieve the same or similar results. [...] Mosaic - Media Quote. "I love Elysium's NAD+ supplement, so I was excited to try the brand's newest offering for skin hydration and collagen support. When I tell you my skin has been glowing after just a few weeks! It really helps increase hydration levels within the skin, helping to plump fine lines and improving skin texture. I can't wait to see what kind of long-term results it offers because it's definitely now a new must-have for me." - Shawna Hudson, Associate Beauty Editor of Who What Wear
+# Gain insight to help make more informed decisions
+
+A woman smiling at the camera in front of a window.
+A mother and daughter smiling at each other.
+
+## How likely is my cancer to come back? Will chemotherapy help?
+
+A nurse preparing to take a blood sample from a patient.
+Three patients sitting in chairs receiving chemotherapy treatment.
+
+## Is this test right for me?
+
+## Will insurance cover my test?
+
+## Proven results help prevent over-treatment
+
+## 1.9 million
+
+A group of four women smiling and laughing.
+
+## 1.5 million
+
+A woman smiling and looking out a sunny window. [...] ## Have questions?
+
+## References
+
+The Oncotype DX Breast Recurrence Score test is performed at the Genomic Health Redwood City clinical laboratory. Exact Sciences clinical laboratories are accredited by CAP, certified under CLIA regulations, and qualified to perform high complexity clinical laboratory testing. This test has not been cleared or approved by the US Food and Drug Administration.
+
+Exact Sciences Logo [...] "All of this has allowed me to gain a unique perspective from being a breast cancer surgeon and breast cancer patient. Now I know what it's like to face cancer. I have walked in my patients' shoes.“
+
+## Her test results
+
+After her mastectomy, the pathology results showed that she had a 1.5cm tumor. Deepa immediately knew that she would request an Oncotype DX Breast Recurrence Score test.
+
+The results came back with a Recurrence Score result of 18 meaning her benefit from chemotherapy would be low, and she decided not to do chemotherapy.
+
+## Deepa’s path forward
+
+A doctor speaking with a patient who is sitting on an exam table.
+
+## What happens once your doctor orders your test?
+
+## Have questions?
+
+## References
 
 [Result 5]
-Title: Skip to content
-URL: https://www.elysiumhealth.com/products/vision
+Title: Oncotype DX Colon Recurrence Score®
+URL: https://www.exactsciences.com/cancer-testing/oncotype-dx-colon-recurrence-score-treatment
 Content:
-Skip to content  
+# Oncotype DX Colon Recurrence Score®
 
-## Your cart is empty
+Colon cancer is the third most prevalent cancer for both men and women in the United States. It’s also the second most common cause of cancer-related deaths1—yet no two colon cancer patients, or their treatment needs, are the same. Each patient has an individualized level of risk, making the choice of treatment different for everyone. Part of the treatment decision making process involves understanding the likelihood of the colon cancer returning and how a patient’s condition is managed after surgery.
 
- Continue shopping 
+The Oncotype DX Colon Recurrence Score test is clinically validated to quantify the risk of recurrence of patients with anatomic stage II, MMR-P and stage III A/B colon cancers. The 12-gene genomic test (seven cancer-related genes and five reference genes) looks at the underlying biology of a patient’s tumor so patients can choose a treatment that fits their unique situation.
 
-Have an account?
+Learn more
 
-Log in to check out faster.
+## References
 
-### All Products
-
-From the Lab to Your Door Promote optimal aging with Basis, support...
-
- Go to All Products collection page Shop All Products
-
-## Your Cart
-
-## Order Subtotal
-
-Taxes, Discounts and shipping calculated at checkout
-
- Register Index
- Help Center
-
-Log in  Cart
-
-### Vision
-
-by Elysium Health
-
-$60
-
-Use left and right arrow keys to navigate.
-
-  Skip to product information 
-
-1  /  of 5
-
-# Vision
-
-Eye Longevity + Protection
-
-$60
-
-per pouch
-
-## Purchase Options
-
-Couldn't load pickup availability
-
-## Description [...] Choosing a selection results in a full page refresh.
- Opens in a new window.
+1. American Cancer Society Colon Cancer Facts & Figure 2020-2022: <https://www.cancer.org/content/dam/cancer-org/research/cancer-facts-and-statistics/colorectal-cancer-facts-and-figures/colorectal-cancer-facts-and-figures-2020-2022.pdf>
 
 [Result 6]
-Title: Skip to content
-URL: https://www.elysiumhealth.com/products/signal
+Title: Oncotype DX Breast DCIS Score®
+URL: https://www.exactsciences.com/cancer-testing/oncotype-dx-dcis-score-breast-cancer
 Content:
-Skip to content
+# Oncotype DX Breast DCIS Score®
 
-## Your cart is empty
+Approximately 20% of all new breast cancers diagnosed in the United States are ductal carcinoma in situ (DCIS),1 and no two DCIS patients—or their tumors—are the same.
 
-Continue shopping
+A pre-invasive form of breast cancer in which tumor cells are confined within the milk ducts, DCIS is typically non-lethal but treatments—such as surgery, radiation therapy, and hormonal therapy—can cause both short term and long-term side effects.
 
-### All Products
+Exact Sciences’ Oncotype DX Breast DCIS Score test enables women and their doctors to personalize their treatment decisions and potentially forgo unnecessary treatment, such as radiation, when they have a low score and a low risk of local recurrence. For those with higher scores, the result confirms that they would indeed benefit from a more aggressive local approach to treatment, such as radiation therapy.
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+Learn more
 
-Go to All Products collection page
-Shop All Products
+## References
 
-### Signal
-
-by Elysium Health
-
-$60
-
-Use left and right arrow keys to navigate.
-
-Skip to product information
-
-1
- / 
-of
-5
-
-# Signal
-
-Mitochondria Support for Metabolic Aging
-
-$40
-
-per
-pouch
-
-BEST DEAL
-
-## Purchase Options
-
-Couldn't load pickup availability
-
-## Description [...] 5 star rating
-
-Best Customer Support & Bespoke Supplements
-
-I have been a customer of Elysium for many years. It is helping me age gracefully and retain the active lifestyle I wished to enjoy as I enter my 70's.
-I highly recommend these supplements and guideline tests to enjoy a more productive and satisfying future.
-
-read more about content I have been a customer of Elysium
-
-Published date
-
-03/01/26
-
-Was this review helpful?
-
-0
-
-0
-
-NULL N.
-
-Verified Buyer
-
-5 star rating
-
-Signal
-
-I take a variety of ELYSIUM Products, and they help me to maintain my intelligence and strength and resilience. I am 71 years old, working full time as a psychologist, which requires a facile ability to integrate and remember complex information. As well, I have the energy to keep up with three active...
+1. American Cancer Society. <https://www.cancer.org/cancer/breast-cancer/understanding-a-breast-cancer-diagnosis/types-of-breast-cancer/dcis.html>
 
 [Result 7]
-Title: Couldn't load pickup availability
-URL: https://www.elysiumhealth.com/products/format
+Title: Press releases
+URL: https://www.exactsciences.com/cancer-testing/cancerguard-mced-providers
 Content:
-Couldn't load pickup availability
+Press releases
+ For media
+ View news and events
 
-## Description
+ Privacy and trust center
+ Purchasing terms (PDF)
+ Exact Sciences for suppliers
+ Patents and trademarks
+ Coordinated vulnerability disclosure
+ FCOI policy (PDF)
+ California Compliance Program Declaration (PDF)
+ Do not sell or share my personal information
 
-There is growing evidence that an aging immune system plays a key role in the overall aging process—impacting organs and systems throughout the body. Format is the first and only immune product that combines foundational daily immunity ingredients, Elysium’s Inflammaging Complex, and Elysium’s Senolytic Complex to address both the root causes and the downstream effects of an aging immune system.
+© 2026 Exact Sciences Corporation. All rights reserved. [...] Products and services
 
- Supports a healthy immune system
- Protects healthy immune cells from free radicals and oxidative stress
- Targets age-related inflammation (“inflammaging”)
- Helps the body clear pro-inflammatory senescent cells
- Supports joint health and comfort
- Targets two related hallmarks of aging, inflammaging and cell senescence
+Products and services
 
-## Ingredients [...] Twice-Monthly Senolytic Complex
+ Cancerguard® test
+ Cologuard® test
+ Cologuard Plus™ test
+ Oncodetect® test
+ OncoExTra® test
+ Oncoguard® Liver test
+ Oncotype DX Breast DCIS Score® test
+ Oncotype DX Breast Recurrence Score® test
+ Oncotype DX Colon Recurrence Score® test
+ Riskguard® test
+ Explore our products
 
- Senolytic Complex: Contains proven senolytics, quercetin (Sophora japonica), fisetin (Rhus succedanea), extracts of Chinese ginseng (Panax notoginseng), and chestnut rose (Rosa roxburghii) to help the body clear senescent cells.
+Science
 
- Gluten-free, nut-free, lactose-free, and contains no artificial flavors or colors.
- NSF Certified for Sport, the only independent third-party certification program recognized by the United States Anti-Doping Agency (USADA). Please confirm the certification of each lot of both the daily immune supplement and the intermittent senolytic complex here.
- See nutrition label for more information.
- The quality and purity information of every lot is available here.
+Science
 
-## Recommended Use
+ Pipeline
+ Publications
+ Clinical studies
+ Grants
+ Exact Labs
+ Exact Academy
+ Explore our science
+
+About
+
+About
+
+ History
+ Corporate impact
+ Health equity
+ Collaborations
+ Contact
+ Learn more about us
+
+News and events
+
+News and events
+
+ Press releases
+ For media
+ View news and events [...] Cancerguard® Multi-Cancer Early Detection Test | Exact Sciences
+
+Skip to footer
+
+Exact Sciences is now Abbott.
+
+Main menu
+
+Exact Sciences is now Abbott.
+
+ Health systems
+ Investor Relations
+ Careers
+
+United States
+
+Choose your country
+
+Select to view the solutions available in your location.
+
+FranceDeutschlandItalia日本PolskaUnited KingdomUnited States
+
+!(/-/media/project/headless/shared/images/flags/us.svg?h=200&iar=0&w=300&rev=37af7af9a7bc47028a5cdb2bfb4fd2fc&hash=625B2D05BF0789F11173E3C99301A18F)
+
+United States
+
+Login
+
+ + Track orders, get results, manage your info, and more.
+  + Order tests, track orders, get results, and more.
+
+ Products and services
+ Science
+ About
+ News and events
+
+Cancerguard® Test
+
+How to order
+
+Resources
+
+View patient site
+
+More
+
+ Resources
+ View patient site
 
 [Result 8]
-Title: Description
-URL: https://www.elysiumhealth.com/products/senolytic-complex
+Title: Skip to main contentSkip to footer
+URL: https://www.exactsciences.com/cancer-testing/oncoextra-providers
 Content:
-## Description
+3.   This calculation includes patients with Medicare, Medicare Advantage, Medicaid, Managed Medicaid and commercial insurance for the Next Generation Sequencing (NGS) component only. Patient cost-sharing amounts, including deductibles and copays, will vary by plan and coverage type. Only your insurer can confirm if and how each component of the OncoExTra® test will be covered. The NGS numbers cited are based on historical patient billing data from 01/02/2024 to 12/31/2024. Rates of coverage vary by state and region. Exceptions for coverage may apply. Additional IHC orders will likely require patient cost-sharing. Exact Sciences strongly encourages you to contact your insurer with questions on OncoExTra coverage. Data on file as of (03/12/2025), Genomic Health, Inc. [...] # OncoExTra® Provider Overview | Exact Sciences
 
-Target one of the major hallmarks of aging with a breakthrough product that clears senescent cells. When cells age or experience excessive stress, they enter a "zombie-like" state called senescence. Senescent cells secrete pro-inflammatory molecules that can trigger neighboring healthy cells to age faster—like a moldy piece of fruit. As we age, our ability to clear senescent cells declines, and preclinical studies suggest that their accumulation contributes to accelerated aging. Elysium’s Senolytic Complex is based on leading institutional research in the field of cellular senescence and contains senolytic compounds proven to clear human senescent cells to: [...] Target one of the major hallmarks of aging with a breakthrough product that clears senescent cells. When cells age or experience excessive stress, they enter a "zombie-like" state called senescence. Senescent cells secrete pro-inflammatory molecules that can trigger neighboring healthy cells to age faster—like a moldy piece of fruit. As we age, our ability to clear senescent cells declines, and preclinical studies suggest that their accumulation contributes to accelerated aging. Elysium’s Senolytic Complex is based on leading institutional research in the field of cellular senescence and contains senolytic compounds proven to clear human senescent cells to:
+Skip to main contentSkip to footer
 
-## Ingredients
+Image 1: Exact Sciences is now Abbott.
 
-Designed to be taken intermittently to help the body manage senescent cell burden.
+Main menu
 
-## Recommended Use
+Image 2: Exact Sciences is now Abbott.
+
+   Health systems
+   Investor Relations
+   Careers
+
+[![Image 3: [object Object]]( States](
+
+Choose your country
+
+Select to view the solutions available in your location.
+
+![Image 4: [object Object]](
+
+United States
+
+Select
+
+Cancel
+
+Login
+
+   
+ 
+       Patient login    Track orders, get results, manage your info, and more. 
+       Provider login    Order tests, track orders, get results, and more. 
+
+   Products and services 
+   Science 
+   About 
+   News and events 
+
+OncoExTra® Tissue Genomic Profiling test
+
+How to order
+
+Interpreting results
+
+Clinical evidence
+
+Resources
+
+Pathologists
+
+More
+
+For providers [...] Play
+
+## Calculate what’s covered from the start
+
+The OncoExTra test is covered by Medicare Fee for Service (FFS) for patients meeting coverage criteria. Patients who meet clinical criteria for coverage have zero financial responsibility.
+
+Coverage options
+
+Financial assistance calculator
+
+96%
+
+of patients who receive the OncoExTra test have $0
+
+in out-of-pocket costs‡
+
+97%
+
+of patients who have a financial responsibility pay <$100‡
+
+## Simple ordering and result tracking. All in one hub.
+
+Quickly place and manage test orders, track results, and access easy-to-interpret reports on the Exact Sciences Provider Hub.
+
+Order now
+
+How to order
+
+Image 10: Provider sitting at her desk, working on a laptop.
+
+Image 11: oncoExtra and Oncodectect logos.
+
+## There’s power in pairing
 
 [Result 9]
-Title: Skip to content
-URL: https://www.elysiumhealth.com/products/longevity-starter-pack
+Title: Learn more
+URL: https://www.exactsciences.com/cancer-testing/oncoguard-liver-cancer-blood-test
 Content:
-Skip to content  
+The Oncoguard Liver solution includes a sophisticated, yet simple, single blood test that delivers advanced sensitivity and specificity to aid consistent and reliable HCC detection. The test is complemented by a Patient Engagement Program designed to help empower patients to proactively protect their health and follow through with routine testing. The Oncoguard Liver solution is designed with the hope of bringing better outcomes within reach for more patients at risk for HCC.
 
-## Your cart is empty
+Learn more
 
- Continue shopping 
+## Simplifying testing to improve outcomes
 
-Have an account?
+Developed in collaboration with the Mayo Clinic, the Oncoguard® Liver test offers a new way to approach and detect early–stage HCC.
 
-Log in to check out faster.
+### Advanced performance you can rely on [...] The Oncoguard Liver solution includes a Patient Engagement Program that supports the care providers deliver. The flexible program offers educational materials, patient outreach, and reminders about scheduling regular testing with the aim of empowering patients to play an active role in adhering to their recommended surveillance schedule.
 
-### All Products
+## References [...] # Oncoguard® Liver
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+A new approach for early-stage HCC detection
 
- Go to All Products collection page Shop All Products
+Liver cancer is the fastest-growing cause of cancer-related death in the United States.1 By 2035, it is expected to be a third leading cause of cancer-related death, surpassing breast and prostate cancer.2
 
-## Your Cart
-
-## Order Subtotal
-
-Taxes, Discounts and shipping calculated at checkout
-
- Register Index
- Help Center
-
-Log in  Cart
-
-### Longevity Starter Pack
-
-by Elysium Health
-
-$199
-
-Use left and right arrow keys to navigate.
-
-  Skip to product information 
-
-1  /  of 11
-
-# Longevity Starter Pack
-
-$199
-
-per per bundle
-
-Couldn't load pickup availability
-
-## Description
-
-This limited-edition set features a one-month supply of four of Elysium’s breakthrough supplements, designed to target multiple aspects of aging. [...] Basis for cellular health
-  + Boost NAD+ levels to combat aging at the deepest level—your cells.
- Signal for metabolic health
-  + Protect your mitochondria and support healthy muscle function.
- Matter for cognitive health
-  + Maintain memory with a clinically proven tri-vitamin complex.
- Format for immune health
-  + Promote a healthy immune system , target inflammaging, and clear problematic cells.
-
-## Ingredients
-
-Basis  
- Contains Nicotinamide Riboside Chloride (NR), a clinically proven NAD+ booster, and Pterostilbene (PT), a powerful polyphenol to protect against internal and external stress.
-
-Nutrition Label | Read more about the science behind Basis.
+Outcomes for hepatocellular carcinoma (HCC), the most common type of liver cancer, are improved with early-stage detection. However, most cases of HCC are detected in late stages when curative treatments are no longer an option.3,4
 
 [Result 10]
-Title: Your cart is empty
-URL: https://www.elysiumhealth.com/products/index
+Title: More ways to personalize patient care
+URL: https://www.exactsciences.com/cancer-testing/riskguard-providers
 Content:
-## Your cart is empty
+## More ways to personalize patient care
 
-Have an account?
+Pair the Riskguard test with our Oncotype DX Breast Recurrence Score® test to help inform a more comprehensive treatment plan for newly diagnosed ER+/HER2- breast cancer.
 
-Log in to check out faster.
+Add the Riskguard test with our OncoExTra® genomic profiling test to enable more patients with advanced or metastatic cancer to be considered for targeted therapies.
 
-All Products
+## We keep it simple and actionable
 
-### All Products
+We want our results to be simple yet powerful. That's why we only evaluate genes in which a positive result can lead to action based on guidelines and published literature. We provide easy-to-understand results that providers and patients can use to assist with personalized care planning.
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+### Negative sample report
 
-## Your Cart
+### Positive sample report
 
-Loading...
+### Uncertain sample report [...] Exact Sciences is now Abbott.
+Exact Sciences is now Abbott.
+!(/-/media/project/headless/shared/images/flags/us.svg?h=200&iar=0&w=300&rev=37af7af9a7bc47028a5cdb2bfb4fd2fc&hash=625B2D05BF0789F11173E3C99301A18F)
 
-## Order Subtotal
+# The Riskguard® test helps you help your patients
 
-$0
+A health care provider with stethoscope talking to a patient.
+A health care provider with stethoscope talking to a patient.
 
-BasisNAD+ Supplement
+## Gene panel
 
-Elysium Health Home
+## Specimen requirements
 
-### Index
+## Turnaround time
 
-Use left and right arrow keys to navigate.
+An older woman smiling and holding a baby, interacting with an older man and a younger woman.
 
-grid
-grid
+## Harness the power of genetic insights to help personalize treatment and risk-management4-9
 
-Index - Elysium Health
-Index - Elysium Health
+A younger man in glasses, kissing the head of an older woman who is smiling.
 
-"Many scientists and longevity advocates believe this information can not only help us understand our own aging process, but can give us the power to change it."  The Guardian
-"Many scientists and longevity advocates believe this information can not only help us understand our own aging process, but can give us the power to change it."  The Guardian
+### Hereditary cancer is common [...] ## We're here for you
 
-# Index
+#### Loading component...
 
-Biological Age Test
+## References
 
-$299
+Exact Sciences Logo
 
-per per kit
-
-## Purchase Options [...] $299
-
-per per kit
-
-## Purchase Options
-
-Couldn't load pickup availability
-
-## Description
-
-Aging isn’t one thing. Index, a revolutionary at-home biological age test developed by Elysium Health, now measures 10 different aspects of aging using the latest generation technology in the science of epigenetics. With Index you'll receive:
+## Frequently asked questions

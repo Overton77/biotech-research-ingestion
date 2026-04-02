@@ -1,0 +1,22 @@
+{
+  "url": "https://www.veracyte.com/",
+  "instructions": "Find official product/test pages for Veracyte diagnostic products in thyroid, prostate, breast, bladder, and lung. Prioritize current marketed tests and if possible capture intended use / claims and any regulatory or commercial status text. Return discovered URLs with titles.",
+  "results": {
+    "base_url": "https://www.veracyte.com/",
+    "results": [
+      "https://www.prosigna.com/",
+      "https://www.veracyte.com/tests/afirma-thyroid",
+      "https://www.veracyte.com/tests/afirma-thyroid/patients",
+      "https://www.veracyte.com/tests/afirma-thyroid/providers",
+      "https://www.veracyte.com/tests/decipher-bladder",
+      "https://www.veracyte.com/tests/decipher-bladder/patients",
+      "https://www.veracyte.com/tests/decipher-bladder/providers",
+      "https://www.veracyte.com/tests/decipher-prostate",
+      "https://www.veracyte.com/tests/decipher-prostate/patients",
+      "https://www.veracyte.com/tests/decipher-prostate/providers",
+      "https://www.veracyte.com/tests/prosigna-breast"
+    ],
+    "response_time": 18.23,
+    "request_id": "2dda6824-e6bb-4bbe-84b7-225c8ec285fb"
+  }
+}

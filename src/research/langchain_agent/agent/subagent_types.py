@@ -8,6 +8,7 @@ VERCEL_AGENT_BROWSER_SUBAGENT: Final[str] = "vercel_agent_browser"
 CLINICALTRIALS_RESEARCH_SUBAGENT: Final[str] = "clinicaltrials_research"
 TAVILY_RESEARCH_SUBAGENT: Final[str] = "tavily_research"
 DOCLING_DOCUMENT_SUBAGENT: Final[str] = "docling_document"
+EDGAR_RESEARCH_SUBAGENT: Final[str] = "edgar_research"
 
 DEFAULT_STAGE_SUBAGENT_NAMES: Final[tuple[str, ...]] = (
     VERCEL_AGENT_BROWSER_SUBAGENT,
@@ -19,6 +20,7 @@ ALL_SUBAGENT_NAMES: Final[tuple[str, ...]] = (
     CLINICALTRIALS_RESEARCH_SUBAGENT,
     TAVILY_RESEARCH_SUBAGENT,
     DOCLING_DOCUMENT_SUBAGENT,
+    EDGAR_RESEARCH_SUBAGENT,
 )
 
 SUBAGENT_DESCRIPTIONS: Final[dict[str, str]] = {
@@ -42,6 +44,11 @@ SUBAGENT_DESCRIPTIONS: Final[dict[str, str]] = {
     DOCLING_DOCUMENT_SUBAGENT: (
         "Use this subagent to download files or webpages, convert them with Docling, "
         "and produce markdown or JSON artifacts for downstream review."
+    ),
+    EDGAR_RESEARCH_SUBAGENT: (
+        "Use this subagent for SEC EDGAR work: resolve issuers, list and fetch filings "
+        "(10-K, 10-Q, 8-K, etc.), save artifacts under the mission sandbox, and return "
+        "manifest paths for downstream document ingestion."
     ),
 }
 

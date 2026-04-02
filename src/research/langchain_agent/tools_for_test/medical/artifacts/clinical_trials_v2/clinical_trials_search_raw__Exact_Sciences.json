@@ -1,0 +1,764 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03741166",
+          "briefTitle": "Blood Collection Sub-Study for CRC Screening in Individuals 45-49 at Average Risk for CRC."
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colo-rectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Blood Sample Collection",
+              "description": "Subjects participating in the study will have blood drawn at enrollment.",
+              "armGroupLabels": [
+                "Subject aged 45-49 with Average CRC Risk"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06294873",
+          "briefTitle": "Stool Sample Collection Study"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Innovis LLC",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "A screening device for the detection of colorectal and other aerodigestive tract cancers",
+              "description": "DNA test to screen to detect colon cancer and precancerous lesions"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05220501",
+          "briefTitle": "Optimization of Prostate Biopsy - Micro-Ultrasound Versus MRI"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sunnybrook Health Sciences Centre",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Microultrasonography Targeted Biopsy",
+              "description": "All subjects will be biopsied no matter their arm randomization. In this group, MicroUS targets will be identified and sampled.",
+              "armGroupLabels": [
+                "Microultrasonography + MRI",
+                "Microultrasonography only"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "MRI Targeted Biopsy",
+              "description": "All subjects will be biopsied no matter their arm randomization. In this group, mpMRI targets will be identified and sampled.",
+              "armGroupLabels": [
+                "MRI + Conventional Ultrasonography",
+                "Microultrasonography + MRI"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04144751",
+          "briefTitle": "Blood Collection Sub-Study of Exact Sciences Protocol 2019-01: \"Clinical Validation of an Optimized Multi-Target Stool DNA (Mt-sDNA 2.0) Test, For Colorectal Cancer Screening BLUE-C\""
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Blood Sample Collection",
+              "description": "Subjects participating in the study will have blood drawn at enrollment.",
+              "armGroupLabels": [
+                "Subjects Enrolled in 2019-01 BLUE-C"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02560623",
+          "briefTitle": "A Minimally-Invasive Sponge on a String Device for Screening for Barrett's Esophagus"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Mayo Clinic",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Barrett Esophagus"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "Biopsy",
+              "description": "Undergo biopsy",
+              "armGroupLabels": [
+                "Phase 1: Sponge on a String 25 mm 10 pores/inch",
+                "Phase 1: Sponge on a String 25 mm 20 pores/inch",
+                "Phase 2: Cases - Barrett's Esophagus",
+                "Phase 2: Controls - No Barrett's Esophagus"
+              ],
+              "otherNames": [
+                "BIOPSY_TYPE",
+                "Bx"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Biospecimen Collection",
+              "description": "Undergo collection of blood sample",
+              "armGroupLabels": [
+                "Phase 1: Sponge on a String 25 mm 10 pores/inch",
+                "Phase 1: Sponge on a String 25 mm 20 pores/inch"
+              ],
+              "otherNames": [
+                "Biological Sample Collection",
+                "Biospecimen Collected",
+                "Specimen Collection"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Endoscopic Procedure",
+              "description": "Undergo endoscopy",
+              "armGroupLabels": [
+                "Phase 1: Sponge on a String 25 mm 10 pores/inch",
+                "Phase 1: Sponge on a String 25 mm 20 pores/inch",
+                "Phase 2: Cases - Barrett's Esophagus",
+                "Phase 2: Controls - No Barrett's Esophagus"
+              ],
+              "otherNames": [
+                "Endoscopic Examination",
+                "Endoscopy"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Swallowable Sponge Cell Sampling Device",
+              "description": "Undergo swallowable sponge cell sampling assessment",
+              "armGroupLabels": [
+                "Phase 1: Sponge on a String 25 mm 10 pores/inch",
+                "Phase 1: Sponge on a String 25 mm 20 pores/inch",
+                "Phase 2: Cases - Barrett's Esophagus",
+                "Phase 2: Controls - No Barrett's Esophagus"
+              ],
+              "otherNames": [
+                "Cytosponge",
+                "Swallowable Sponge",
+                "Swallowable Sponge Device"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05210283",
+          "briefTitle": "CORRECT Study of Minimal Residual Disease Detection in Colorectal Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "MRD",
+              "description": "ctDNA MRD test",
+              "armGroupLabels": [
+                "Stage ll or lll"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04144738",
+          "briefTitle": "Clinical Validation of An Optimized Multi-Target Stool DNA (Mt-sDNA 2.0) Test, for Colorectal Cancer Screening \"BLUE-C\""
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "mt-sDNA 2.0 screening test",
+              "description": "Stool samples will be collected by the subject for the mt-sDNA screening test.",
+              "armGroupLabels": [
+                "Individuals eligible for CRC Screening"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "FIT test",
+              "description": "Stool samples will be collected by the subject for the FIT test.",
+              "armGroupLabels": [
+                "Individuals eligible for CRC Screening"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Colonoscopy",
+              "description": "Subjects will undergo a screening colonoscopy.",
+              "armGroupLabels": [
+                "Individuals eligible for CRC Screening"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03628651",
+          "briefTitle": "Blood Sample Collection to Evaluate Biomarkers for Hepatocellular Carcinoma"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Hepatocellular Carcinoma",
+            "Hepatocellular Carcinoma Surveillance"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Blood Sample Collection",
+              "description": "HCC subjects will have one blood sample collected.",
+              "armGroupLabels": [
+                "HCC"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Blood Sample Collection",
+              "description": "Surveillance subjects will have a blood sample collected and will be followed for up to 6 months. A second blood sample will be collected at the 6 month visit which will be scheduled no longer than 6 months from enrollment.",
+              "armGroupLabels": [
+                "HCC Surveillance"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06398743",
+          "briefTitle": "First CORRECT Study of Minimal Residual Disease (MRD) Detection in Colorectal Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "MRD",
+              "description": "ctDNA MRD test",
+              "armGroupLabels": [
+                "Stage II or III"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02419716",
+          "briefTitle": "A Study of Cologuard™ in an Average Risk Population Assessing a Three Year Test Interval"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer Screening",
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Cologuard",
+              "description": "Prescription of Cologuard for at-home stool collection"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03821948",
+          "briefTitle": "Blood and Stool Sample Collection in Subjects Participating in Colorectal Cancer Screening: Act Bold"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04395391",
+          "briefTitle": "Home Usability Study of the SARS-CoV-2 (COVID-19) Test"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "COVID-19"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "SARS-CoV-2",
+              "description": "Determine usability of study materials and kit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06401421",
+          "briefTitle": "EXActDNA-003 / NSABP B-64: Study of Molecular Residual Disease Detection in Breast Cancer (MRD)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "ctDNA MRD test",
+              "description": "Blood and tissue samples will be collected for the ctDNA MRD test",
+              "armGroupLabels": [
+                "Participants with High Risk Early Breast Cancer"
+              ],
+              "otherNames": [
+                "Oncodetect™"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03705013",
+          "briefTitle": "Observational Study of Sub-populations From Cologuard Post-Approval Study (2014-01)"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Cologuard",
+              "description": "Observational",
+              "armGroupLabels": [
+                "3-year follow-up Cologuard positive and negative colonoscopy",
+                "3-year follow-up Cologuard positive and no colonoscopy",
+                "Baseline Cologuard positive and negative colonoscopy",
+                "Baseline Cologuard positive and no colonoscopy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05634889",
+          "briefTitle": "The T-REX Trial: Tailored Regional External Beam Radiotherapy in Clinically Node-negative Breast Cancer Patients With 1-2 Sentinel Node Macrometastases."
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Region Skane",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "RADIATION",
+              "name": "De-escalation",
+              "description": "No regional radiotherapy. Radiotherapy is given to the remaining breast after breast conserving surgery. Chest wall radiotherapy after mastectomy only in case of wide spread multifocality.",
+              "armGroupLabels": [
+                "Intervention"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06589310",
+          "briefTitle": "Falcon Real World Evidence Registry"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Exact Sciences Multicancer Early Detection (MCED) Test",
+              "description": "Exact Sciences MCED test, is a qualitative in vitro diagnostic (IVD) for the detection of alterations in circulating tumor DNA and tumor-associated protein levels, which are commonly associated with cancer. It is performed on plasma derived from peripheral blood specimens.",
+              "armGroupLabels": [
+                "Multicancer Early Detection (MCED) cohort"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03789162",
+          "briefTitle": "Blood and Stool Sample Collection in Subjects With a Diagnosis of Colorectal Cancer or Colorectal Lesion: Act Fast"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05410977",
+          "briefTitle": "Collecting Blood and Stool Samples to Detect Colorectal Cancer or Advanced Neoplasia in Lynch Syndrome Patients"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Mayo Clinic",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Carcinoma",
+            "Lynch Syndrome"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "Biospecimen Collection",
+              "description": "Undergo collection of blood and stool samples",
+              "armGroupLabels": [
+                "Observational (biospecimen collection, record review)"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Electronic Health Record Review",
+              "description": "Medical records reviewed",
+              "armGroupLabels": [
+                "Observational (biospecimen collection, record review)"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04473625",
+          "briefTitle": "Stool Collection Sub-Study of Exact Sciences Protocol 2018-01"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer",
+            "Colo-rectal Cancer",
+            "Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Stool Sample Collection",
+              "description": "Subjects participating in the study will provide a stool sample within 30 days of enrollment.",
+              "armGroupLabels": [
+                "Bladder",
+                "Breast",
+                "Colorectal",
+                "Esophageal",
+                "Kidney/Renal Pelvis",
+                "Liver",
+                "Lung",
+                "Ovarian",
+                "Pancreas",
+                "Prostate",
+                "Stomach",
+                "Uterine"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01260168",
+          "briefTitle": "Multi-marker Stool Test for Detection of Colorectal Neoplasia: Marker Panel Selection and Technical Development Studies"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Neoplasms",
+            "Digestive System Diseases",
+            "Colonic Diseases",
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    }
+  ],
+  "pagesFetched": 2,
+  "nextPageToken": "ZVJj7o2Elu8o3lprWs2uqarumpOQJJxtbPOj3_wdkA",
+  "totalCount": 36
+}

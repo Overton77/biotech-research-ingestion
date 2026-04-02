@@ -1,0 +1,630 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03741166",
+          "briefTitle": "Blood Collection Sub-Study for CRC Screening in Individuals 45-49 at Average Risk for CRC."
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colo-rectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Blood Sample Collection",
+              "description": "Subjects participating in the study will have blood drawn at enrollment.",
+              "armGroupLabels": [
+                "Subject aged 45-49 with Average CRC Risk"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06133439",
+          "briefTitle": "Rural Indiana Screening for Colorectal Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "ENROLLING_BY_INVITATION"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Indiana University",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BEHAVIORAL",
+              "name": "Colorectal Screen rates with implementation of evidence-based intervention",
+              "description": "Mailed FIT kits, Cologuard, and diagnostic colonoscopies.",
+              "armGroupLabels": [
+                "Phase 2",
+                "Phase 3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05362344",
+          "briefTitle": "Colorectal Cancer Screening in Cystic Fibrosis"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Washington, the Collaborative Health Studies Coordinating Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Cystic Fibrosis",
+            "Colorectal Cancer",
+            "Adenoma"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "Stool tests",
+              "description": "Non-invasive, stool-based tests for colorectal cancer screening.",
+              "armGroupLabels": [
+                "NICE-CF Cohort"
+              ],
+              "otherNames": [
+                "Stool-based Fecal Immunochemical Testing (FIT) test and Stool-based DNA test (Cologuard) test."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02419716",
+          "briefTitle": "A Study of Cologuard™ in an Average Risk Population Assessing a Three Year Test Interval"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer Screening",
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Cologuard",
+              "description": "Prescription of Cologuard for at-home stool collection"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03705013",
+          "briefTitle": "Observational Study of Sub-populations From Cologuard Post-Approval Study (2014-01)"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Cologuard",
+              "description": "Observational",
+              "armGroupLabels": [
+                "3-year follow-up Cologuard positive and negative colonoscopy",
+                "3-year follow-up Cologuard positive and no colonoscopy",
+                "Baseline Cologuard positive and negative colonoscopy",
+                "Baseline Cologuard positive and no colonoscopy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05714644",
+          "briefTitle": "Community Collaboration to Advance Racial/Ethnic Equity in CRC Screening"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Massachusetts General Hospital",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "FIT kit Screening Test",
+              "description": "FIT kit mailed to the patient's home",
+              "armGroupLabels": [
+                "Mailed FIT Kit"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Cologuard Screening Test",
+              "description": "Cologuard test mailed to the patient's home",
+              "armGroupLabels": [
+                "Cologuard"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06931860",
+          "briefTitle": "Head to Head Trial of Mailed Cologuard to Mailed FIT"
+        },
+        "statusModule": {
+          "overallStatus": "ENROLLING_BY_INVITATION"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of California, San Diego",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer Screening",
+            "Fecal Immunochemical Test",
+            "Multi-target Stool DNA",
+            "Colorectal Cancer (CRC)"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Cologuard",
+              "description": "Multi-target stool DNA test for colorectal cancer screening implemented by Exact Sciences. Cologuard has 94% sensitivity and 87% specificity to detect colorectal cancer.",
+              "armGroupLabels": [
+                "Mailed Cologuard Outreach"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Fecal Immunochemical Test",
+              "description": "Stool blood test for colorectal cancer screening. FIT has 75% sensitivity and 90% specificity to detect colorectal cancer.",
+              "armGroupLabels": [
+                "Mailed Fecal immunochemical test Outreach"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04336397",
+          "briefTitle": "Stool DNA to Improve Colorectal Cancer Screening Among Alaska Native People"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Alaska Native Tribal Health Consortium",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Multi-target stool DNA test",
+              "description": "Cluster randomized trial of high and medium intensity outreach with MT-sDNA or colonoscopy compared with usual care",
+              "armGroupLabels": [
+                "High Intensity",
+                "Medium Intensity"
+              ],
+              "otherNames": [
+                "Cologuard"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Colonoscopy",
+              "description": "Cluster randomized trial of high and medium intensity outreach with MT-sDNA or colonoscopy compared with usual care",
+              "armGroupLabels": [
+                "High Intensity",
+                "Medium Intensity"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06173375",
+          "briefTitle": "Head to Head Pilot Trial of Mailed Cologuard to Mailed FIT"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of California, San Diego",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Cologuard",
+              "description": "Multi-target stool DNA test for colorectal cancer screening implemented by Exact Sciences. Cologuard has 94% sensitivity and 87% specificity to detect colorectal cancer.",
+              "armGroupLabels": [
+                "Mailed Cologuard Outreach"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Fecal Immunochemical Test",
+              "description": "Stool blood test for colorectal cancer screening. FIT has 75% sensitivity and 90% specificity to detect colorectal cancer.",
+              "armGroupLabels": [
+                "Mailed Fecal immunochemical test Outreach"
+              ],
+              "otherNames": [
+                "OC-Sensor Test"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04683731",
+          "briefTitle": "Helping Patients and Providers Make Better Decisions About Colorectal Cancer Screening"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Indiana University",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Cancer Screening Tests"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BEHAVIORAL",
+              "name": "Decision aid without personalized message",
+              "description": "The decision aid without personalized message consists of a PowerPoint presentation converted to mp4 (video) with text, photos, and an audio track, that is advanced by the viewer and can be viewed online. It begins with a 60 sec video on CRC screening produced by the Centers for Disease Control and Prevention (CDC), followed by slides summarizing the advantages and disadvantages of colonoscopy and stool testing with the fecal immunochemical test (FIT) and DNA+FIT (Cologuard). The presentation is approximately 10 minutes long.",
+              "armGroupLabels": [
+                "Group 1",
+                "Group 3"
+              ]
+            },
+            {
+              "type": "BEHAVIORAL",
+              "name": "Decision aid with personalized message",
+              "description": "The decision aid with personalized message will first present the decision aid without personalized message followed by additional PowerPoint slides converted to mp4 (video) with text, photos, and an audio track briefly explaining the risk tool, the participant's score on the 5 risk factors, total score, ACN risk, and implications for screening and test choice. The presentation is approximately 14 minutes long.",
+              "armGroupLabels": [
+                "Group 2",
+                "Group 4"
+              ]
+            },
+            {
+              "type": "BEHAVIORAL",
+              "name": "Provider notification without personalized message",
+              "description": "Providers will receive a message informing them that their enrolled patient is due for CRC screening. The notification will be sent to them through the electronic health record (EHR) within 24 hours of their visit with the enrolled patient.",
+              "armGroupLabels": [
+                "Group 1",
+                "Group 2"
+              ]
+            },
+            {
+              "type": "BEHAVIORAL",
+              "name": "Provider notification with personalized message",
+              "description": "Providers will receive a message informing them that their enrolled patient is due for CRC screening. The notification will also include the patient's ACN risk (very low, low, moderate, high-average) and implications for screening decisions and test choice. Links to a web landing page containing a more detailed explanation of the risk tool and additional references will be included. The notification will be sent to them through the electronic health record (EHR) within 24 hours of their visit with the enrolled patient.",
+              "armGroupLabels": [
+                "Group 3",
+                "Group 4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04473625",
+          "briefTitle": "Stool Collection Sub-Study of Exact Sciences Protocol 2018-01"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer",
+            "Colo-rectal Cancer",
+            "Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Stool Sample Collection",
+              "description": "Subjects participating in the study will provide a stool sample within 30 days of enrollment.",
+              "armGroupLabels": [
+                "Bladder",
+                "Breast",
+                "Colorectal",
+                "Esophageal",
+                "Kidney/Renal Pelvis",
+                "Liver",
+                "Lung",
+                "Ovarian",
+                "Pancreas",
+                "Prostate",
+                "Stomach",
+                "Uterine"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04124406",
+          "briefTitle": "Voyage: Real-World Impact of the Multi-target Stool DNA Test on CRC Screening and Mortality"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colon Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Cologuard",
+              "description": "multi-target stool Deoxyribonucleic Acid (MT-sDNA) screening test",
+              "armGroupLabels": [
+                "Adults Prescribed Cologuard"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04778566",
+          "briefTitle": "Evaluating the Cologuard Test for Use in Lynch Syndrome"
+        },
+        "statusModule": {
+          "overallStatus": "WITHDRAWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Geisinger Clinic",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Lynch Syndrome",
+            "Colorectal Cancer",
+            "Colonic Adenoma",
+            "Colonic Polyp"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Cologuard test",
+              "description": "Cologuard is a stool-DNA screening test for detecting colon cancer",
+              "armGroupLabels": [
+                "Cologuard Study Group"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03728348",
+          "briefTitle": "An Evaluation of a Multi-target Stool DNA (Mt-sDNA) Test, Cologuard, for CRC Screening in Individuals Aged 45-49 and at Average Risk for Development of Colorectal Cancer: Act Now"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "mt-sDNA screening test",
+              "description": "Stool samples will be collected by the subject for the mt-sDNA screening test.",
+              "armGroupLabels": [
+                "Subject aged 45-49 with Average CRC Risk"
+              ],
+              "otherNames": [
+                "Cologuard"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Colonoscopy",
+              "description": "Subjects will undergo a screening colonoscopy.",
+              "armGroupLabels": [
+                "Subject aged 45-49 with Average CRC Risk"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05246839",
+          "briefTitle": "Informed Choice - Compass"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Exact Sciences Corporation",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Colorectal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BEHAVIORAL",
+              "name": "Brief Video",
+              "description": "Videos about colorectal cancer screening.",
+              "armGroupLabels": [
+                "Arm 2 - Brief Video"
+              ]
+            },
+            {
+              "type": "BEHAVIORAL",
+              "name": "Brief Video Plus",
+              "description": "Videos about colorectal cancer screening and modalities.",
+              "armGroupLabels": [
+                "Arm 3 - Brief Video Plus"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pagesFetched": 2,
+  "nextPageToken": null,
+  "totalCount": 15
+}

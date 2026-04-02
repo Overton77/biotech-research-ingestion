@@ -1,0 +1,709 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT02419716",
+      "orgStudyIdInfo": {
+        "id": "Exact Sciences 2014-01"
+      },
+      "organization": {
+        "fullName": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "A Study of Cologuard™ in an Average Risk Population Assessing a Three Year Test Interval",
+      "officialTitle": "A Longitudinal Study of Cologuard™ in an Average Risk Population Assessing a Three Year Test Interval"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2020-04",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2015-04"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2020-03-16",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2020-03-16",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2015-04-09",
+      "studyFirstSubmitQcDate": "2015-04-14",
+      "studyFirstPostDateStruct": {
+        "date": "2015-04-17",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2020-04-01",
+      "lastUpdatePostDateStruct": {
+        "date": "2020-04-02",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      }
+    },
+    "oversightModule": {
+      "oversightHasDmc": false
+    },
+    "descriptionModule": {
+      "briefSummary": "This is a prospective longitudinal study to assess the impact of repeat Cologuard testing at 3 years in average risk patients.",
+      "detailedDescription": "This is a prospective longitudinal study to assess the impact of repeat Cologuard testing at 3 years in average risk patients. Enrolled subjects will be prescribed Cologuard per approved labeling at baseline. Subjects with positive results will be referred to colonoscopy and study participation completed. Subjects with negative Cologuard results will be seen annually for 3 years. At year 3, subjects will repeat Cologuard, followed by colonoscopy, regardless of the Cologuard test outcome. Subjects who have a colonoscopy at any time during the study will be discontinued following collection of the colonoscopy and associated histopathology results."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Colorectal Cancer Screening",
+        "Colorectal Cancer"
+      ],
+      "keywords": [
+        "colorectal cancer",
+        "Colorectal cancer screening"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "OTHER",
+        "timePerspective": "PROSPECTIVE"
+      },
+      "bioSpec": {
+        "retention": "SAMPLES_WITH_DNA",
+        "description": "A portion of the stool sample may be retained, if any remains after the study-related tests for use in a sample bank for use in the future. The samples may be stored for up to twenty (20) years. These stool samples will de-identified."
+      },
+      "enrollmentInfo": {
+        "count": 2404,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "interventions": [
+        {
+          "type": "DEVICE",
+          "name": "Cologuard",
+          "description": "Prescription of Cologuard for at-home stool collection"
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Positive and Negative Predictive Value",
+          "description": "The difference between the positive predictive value (PPV) at year 3 (PPV3) and 1 minus the negative predictive value (NPV) at year 3 (NPV3).",
+          "timeFrame": "Three years"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Colorectal Cancer Incidence",
+          "description": "Observed versus the expected reduction in colorectal cancer incidence at year 3 (T3)",
+          "timeFrame": "3 years"
+        }
+      ],
+      "otherOutcomes": [
+        {
+          "measure": "Predictive value of a positive Cologuard result at baseline (T0)",
+          "description": "Predictive value of a positive Cologuard result at baseline (T0)",
+          "timeFrame": "baseline"
+        },
+        {
+          "measure": "The predicative value of a positive and a negative Cologuard at year 3 (T3).",
+          "description": "The predicative value of a positive and a negative Cologuard at year 3 (T3).",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "The sensitivity and specificity of Cologuard at year 3 (T3).",
+          "description": "The sensitivity and specificity of Cologuard at year 3 (T3).",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "The positive (PLR) and negative (NLR) likelihood ratios at year 3 (T3).",
+          "description": "The positive (PLR) and negative (NLR) likelihood ratios at year 3 (T3).",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "The cumulative risk of false positive result (cFPR) and cumulative risk of a true positive result (cTPR).",
+          "description": "The cumulative risk of false positive result (cFPR) and cumulative risk of a true positive result (cTPR).",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "The probability that a negative Cologuard result at baseline remains negative through 3 years.",
+          "description": "The probability that a negative Cologuard result at baseline remains negative through 3 years.",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "The probability that a negative Cologuard result at baseline (T0) results in no CRC/AA through 3 years.",
+          "description": "The probability that a negative Cologuard result at baseline (T0) results in no CRC/AA through 3 years.",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "The distribution of colorectal epithelial lesions (by Category) among positive Cologuard subjects at T0 and at T3",
+          "description": "The distribution of colorectal epithelial lesions (by Category) among positive Cologuard subjects at T0 and at T3",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "Adherence to repeat Cologuard at year 3 (T3)",
+          "description": "Adherence to repeat Cologuard at T3 will be reported with counts and proportions.",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "Compliance to colonoscopy following a positive Cologuard result",
+          "description": "Cumulative compliance to colonoscopy following a positive Cologuard result",
+          "timeFrame": "baseline"
+        },
+        {
+          "measure": "Cross-over to alternative screening methodologies (e.g. FOBT, colonoscopy, other) at T1,T2, and T3",
+          "description": "Cross-over to alternative screening methodologies (e.g. FOBT, colonoscopy, other) at T1,T2, and T3",
+          "timeFrame": "Years 1, 2, and 3"
+        },
+        {
+          "measure": "The rate of no Cologuard result (e.g. invalid result)",
+          "description": "The rate of no Cologuard result (e.g. invalid result)",
+          "timeFrame": "3 years"
+        },
+        {
+          "measure": "The adverse event rate (events occurring between collection kit distribution and sample submission)",
+          "description": "The adverse event rate (events occurring between collection kit distribution and sample submission)",
+          "timeFrame": "3 years"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Subject has been prescribed Cologuard for colorectal cancer screening\n2. Subject is at average risk for development of colorectal cancer\n3. Subject is 50 years or older\n4. Subject willing and able to sign informed consent.\n\nExclusion Criteria:\n\n1. Subject had a colonoscopy in the previous 9 years\n2. Subject has undergone any double-contrast barium enema, virtual (CT-based) colonoscopy, or flexible sigmoidoscopy within the previous five (5) years.\n3. Subject has had a positive fecal occult blood test or FIT within the previous six (6) months.\n4. Subject has any condition that in the opinion of the investigator should preclude participation in the study (e.g., subject not eligible for a diagnostic colonoscopy).\n5. Subject has a history of colorectal cancer or advanced adenoma.\n6. Subject has a history of aerodigestive tract cancer\n7. Subject has had a prior colorectal resection for any reason other than sigmoid diverticular disease\n8. Subject has had overt rectal bleeding, e.g. hematochezia or melena, within the previous 30 days. (Blood on toilet paper, after wiping, does not constitute rectal bleeding)\n9. Subject has a diagnosis or personal history of any of the following high-risk conditions for colorectal cancer:\n\n   * Inflammatory bowel disease (IBD) including chronic ulcerative colitis (CUC) and Crohn's disease.\n   * 2 first-degree relatives who have been diagnosed with colon cancer. (Note: first-degree relatives include parents, siblings and offspring).\n   * One first-degree relative with CRC diagnosed before the age of 60.\n10. Subject has a family history of:\n\n    * Familial adenomatous polyposis (also referred to as \"FAP\", including attenuated FAP).\n    * Hereditary non-polyposis colorectal cancer syndrome (also referred to as \"HNPCC\" or \"Lynch Syndrome\").\n    * Other hereditary cancer syndromes including but are not limited to Peutz-Jeghers Syndrome, MYH-Associated Polyposis (MAP), Gardner's Syndrome, Turcot's (or Crail's) Syndrome, Cowden's Syndrome, Juvenile Polyposis, Cronkhite-Canada Syndrome, Neurofibromatosis and Familial Hyperplastic Polyposis.",
+      "healthyVolunteers": true,
+      "sex": "ALL",
+      "minimumAge": "50 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ],
+      "studyPopulation": "The study will enroll approximately 2,400 men and women aged 50 years and older at a minimum of 20 sites to achieve a minimum of 1,119 subjects at the Year 3 visit. To increase the point prevalence of CRC in the study population, subject enrollment will be age-weighted toward a slightly older population. Enrollment of at least 65% of subjects age 65 years or older will be targeted",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Thomas Imperiale, MD",
+          "affiliation": "Indiana University",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Thomas C Lenzmeier, M.D., P.C",
+          "city": "Glendale",
+          "state": "Arizona",
+          "zip": "85308",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.53865,
+            "lon": -112.18599
+          }
+        },
+        {
+          "facility": "Central Arizona Medical Associates, PC",
+          "city": "Mesa",
+          "state": "Arizona",
+          "zip": "85206",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.42227,
+            "lon": -111.82264
+          }
+        },
+        {
+          "facility": "Fiel Family and Sports Medicine",
+          "city": "Tempe",
+          "state": "Arizona",
+          "zip": "85283",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.41477,
+            "lon": -111.90931
+          }
+        },
+        {
+          "facility": "Cassidy Medical Group/Radiant Research, Inc.",
+          "city": "Carlsbad",
+          "state": "California",
+          "zip": "92008",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.15809,
+            "lon": -117.35059
+          }
+        },
+        {
+          "facility": "Kindred Medical Institute for Clinical Trials, LLC",
+          "city": "Corona",
+          "state": "California",
+          "zip": "92879",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.87529,
+            "lon": -117.56644
+          }
+        },
+        {
+          "facility": "Paragon Rx Clinical",
+          "city": "Garden Grove",
+          "state": "California",
+          "zip": "92840",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.77391,
+            "lon": -117.94145
+          }
+        },
+        {
+          "facility": "UCLA, Division of Digestive Diseases",
+          "city": "Los Angeles",
+          "state": "California",
+          "zip": "90095",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.05223,
+            "lon": -118.24368
+          }
+        },
+        {
+          "facility": "FACEY Medical Foundation",
+          "city": "Mission Hills",
+          "state": "California",
+          "zip": "91345",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.68609,
+            "lon": -120.43683
+          }
+        },
+        {
+          "facility": "John D. Homan, MD",
+          "city": "Newport Beach",
+          "state": "California",
+          "zip": "92663",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.61891,
+            "lon": -117.92895
+          }
+        },
+        {
+          "facility": "Diverse Research Solutions",
+          "city": "Oxnard",
+          "state": "California",
+          "zip": "93030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.1975,
+            "lon": -119.17705
+          }
+        },
+        {
+          "facility": "Ventura County Gastroenterology",
+          "city": "Oxnard",
+          "state": "California",
+          "zip": "93030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.1975,
+            "lon": -119.17705
+          }
+        },
+        {
+          "facility": "Desert Oasis Healthcare Medical Group",
+          "city": "Palm Springs",
+          "state": "California",
+          "zip": "92262",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.8303,
+            "lon": -116.54529
+          }
+        },
+        {
+          "facility": "Advanced Pain Diagnostics & Solutions",
+          "city": "Sacramento",
+          "state": "California",
+          "zip": "95825",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 38.58157,
+            "lon": -121.4944
+          }
+        },
+        {
+          "facility": "Innovative Research of West Florida",
+          "city": "Clearwater",
+          "state": "Florida",
+          "zip": "33756",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 27.96585,
+            "lon": -82.8001
+          }
+        },
+        {
+          "facility": "Homestead Medical Research",
+          "city": "Homestead",
+          "state": "Florida",
+          "zip": "33030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 25.46872,
+            "lon": -80.47756
+          }
+        },
+        {
+          "facility": "Health Awareness, Inc",
+          "city": "Jupiter",
+          "state": "Florida",
+          "zip": "33458",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 26.93422,
+            "lon": -80.09421
+          }
+        },
+        {
+          "facility": "Precision Clinical Research",
+          "city": "Lauderdale Lakes",
+          "state": "Florida",
+          "zip": "33319",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 26.16647,
+            "lon": -80.20838
+          }
+        },
+        {
+          "facility": "Advanced Bioresearch",
+          "city": "Miami",
+          "state": "Florida",
+          "zip": "33134",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 25.77427,
+            "lon": -80.19366
+          }
+        },
+        {
+          "facility": "Next Phase Research Alliance",
+          "city": "Miami",
+          "state": "Florida",
+          "zip": "33144",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 25.77427,
+            "lon": -80.19366
+          }
+        },
+        {
+          "facility": "Clinical Research Center of Florida",
+          "city": "Pompano Beach",
+          "state": "Florida",
+          "zip": "33060",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 26.23786,
+            "lon": -80.12477
+          }
+        },
+        {
+          "facility": "Health Awareness, Inc-Port St. Lucie",
+          "city": "Port Saint Lucie",
+          "state": "Florida",
+          "zip": "34984",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 27.29393,
+            "lon": -80.35033
+          }
+        },
+        {
+          "facility": "The Kaufmann Clinic, Inc.",
+          "city": "Atlanta",
+          "state": "Georgia",
+          "zip": "30308",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.749,
+            "lon": -84.38798
+          }
+        },
+        {
+          "facility": "Advanced Clinical Research",
+          "city": "Meridian",
+          "state": "Idaho",
+          "zip": "83642",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 43.61211,
+            "lon": -116.39151
+          }
+        },
+        {
+          "facility": "Pharmakon Inc",
+          "city": "Evergreen Park",
+          "state": "Illinois",
+          "zip": "60805",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.72059,
+            "lon": -87.70172
+          }
+        },
+        {
+          "facility": "Indiana University, Eskanazi Hospital, Regenstrief Health Center",
+          "city": "Indianapolis",
+          "state": "Indiana",
+          "zip": "46202",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.76838,
+            "lon": -86.15804
+          }
+        },
+        {
+          "facility": "MedPharmics, LLC",
+          "city": "Metairie",
+          "state": "Louisiana",
+          "zip": "70006",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 29.98409,
+            "lon": -90.15285
+          }
+        },
+        {
+          "facility": "Columbia Medical Practice",
+          "city": "Columbia",
+          "state": "Maryland",
+          "zip": "21045",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.24038,
+            "lon": -76.83942
+          }
+        },
+        {
+          "facility": "Centennial Medical Associates",
+          "city": "Elkridge",
+          "state": "Maryland",
+          "zip": "21075",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.21261,
+            "lon": -76.71358
+          }
+        },
+        {
+          "facility": "Mayo Clinic Minnesota",
+          "city": "Rochester",
+          "state": "Minnesota",
+          "zip": "55905",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 44.02163,
+            "lon": -92.4699
+          }
+        },
+        {
+          "facility": "Nevada Family Care",
+          "city": "Henderson",
+          "state": "Nevada",
+          "zip": "89074",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.0397,
+            "lon": -114.98194
+          }
+        },
+        {
+          "facility": "United Medical Associates",
+          "city": "Binghamton",
+          "state": "New York",
+          "zip": "13901",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.09869,
+            "lon": -75.91797
+          }
+        },
+        {
+          "facility": "Regional Clinical Research, Inc.",
+          "city": "Endwell",
+          "state": "New York",
+          "zip": "13760",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.11285,
+            "lon": -76.02103
+          }
+        },
+        {
+          "facility": "University of North Carolina, Chapel Hill",
+          "city": "Chapel Hill",
+          "state": "North Carolina",
+          "zip": "27599",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.9132,
+            "lon": -79.05584
+          }
+        },
+        {
+          "facility": "Sentral Clinical Research",
+          "city": "Cincinnati",
+          "state": "Ohio",
+          "zip": "45236",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.12711,
+            "lon": -84.51439
+          }
+        },
+        {
+          "facility": "Comprehensive Internal Medicine, Inc.",
+          "city": "Wooster",
+          "state": "Ohio",
+          "zip": "44691",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.80517,
+            "lon": -81.93646
+          }
+        },
+        {
+          "facility": "Family Practice Center of Wooster, Inc./Clinical Trial Developers",
+          "city": "Wooster",
+          "state": "Ohio",
+          "zip": "45150",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.80517,
+            "lon": -81.93646
+          }
+        },
+        {
+          "facility": "Harleysville Medical Associates",
+          "city": "Harleysville",
+          "state": "Pennsylvania",
+          "zip": "19438",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.27955,
+            "lon": -75.38712
+          }
+        },
+        {
+          "facility": "Austin Regional Clinic",
+          "city": "Austin",
+          "state": "Texas",
+          "zip": "78759",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 30.26715,
+            "lon": -97.74306
+          }
+        },
+        {
+          "facility": "PCP for Life (DM Research)",
+          "city": "Montgomery",
+          "state": "Texas",
+          "zip": "77356",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 30.38826,
+            "lon": -95.69634
+          }
+        },
+        {
+          "facility": "Wasatch Clinical Research",
+          "city": "Salt Lake City",
+          "state": "Utah",
+          "zip": "84107",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.76078,
+            "lon": -111.89105
+          }
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "YES",
+      "description": "Individual participant data that underlie the results reported in publications of the study will be shared after deidentification. This may include text, tables, figures, and appendices. The study protocol, statistical analysis plan, informed consent form, and clinical study report will also be shared.",
+      "infoTypes": [
+        "STUDY_PROTOCOL",
+        "SAP",
+        "ICF"
+      ],
+      "timeFrame": "Data will be available from 2 years and ending 4 years after publication. Data will be shared with researchers who provide a methodologically sound proposal to achieve the aims outlined in the approved proposal.",
+      "accessCriteria": "Proposals for access to data should be directed to clinicaltrials@exactsciences.com. To gain access, data requestors will need to provide a methodologically sound proposal and sign a data access agreement. Researchers are required to obtain necessary IRB/EC approvals or waivers as applicable to conduct research. Data will be available between 2 and 4 years after publication through the Sponsor."
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-04-01"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D015179",
+          "term": "Colorectal Neoplasms"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D007414",
+          "term": "Intestinal Neoplasms"
+        },
+        {
+          "id": "D005770",
+          "term": "Gastrointestinal Neoplasms"
+        },
+        {
+          "id": "D004067",
+          "term": "Digestive System Neoplasms"
+        },
+        {
+          "id": "D009371",
+          "term": "Neoplasms by Site"
+        },
+        {
+          "id": "D009369",
+          "term": "Neoplasms"
+        },
+        {
+          "id": "D004066",
+          "term": "Digestive System Diseases"
+        },
+        {
+          "id": "D005767",
+          "term": "Gastrointestinal Diseases"
+        },
+        {
+          "id": "D003108",
+          "term": "Colonic Diseases"
+        },
+        {
+          "id": "D007410",
+          "term": "Intestinal Diseases"
+        },
+        {
+          "id": "D012002",
+          "term": "Rectal Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

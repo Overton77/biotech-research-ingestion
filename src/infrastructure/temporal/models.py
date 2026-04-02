@@ -38,6 +38,7 @@ class StageActivityOutput(BaseModel):
     final_report_text: str = ""
     status: str = "completed"
     error: str | None = None
+    stage_candidate_manifest_path: str = ""
 
 
 # ---------------------------------------------------------------------------
@@ -69,6 +70,33 @@ class KGIngestionOutput(BaseModel):
 
 
 # ---------------------------------------------------------------------------
+# Unstructured ingestion activity I/O
+# ---------------------------------------------------------------------------
+
+
+class UnstructuredIngestionInput(BaseModel):
+    """Serializable input for the ingest_unstructured_documents activity."""
+
+    mission_json: dict = Field(
+        description="ResearchMission.model_dump() — needed for config + mission_id.",
+    )
+    stage_manifest_paths: list[str] = Field(
+        default_factory=list,
+        description="Relative paths to stage_candidate_manifest.json files from completed stages.",
+    )
+
+
+class UnstructuredIngestionOutput(BaseModel):
+    """Serializable output from the ingest_unstructured_documents activity."""
+
+    status: str = "completed"
+    candidates_found: int = 0
+    candidates_ingested: int = 0
+    candidates_failed: int = 0
+    error: str | None = None
+
+
+# ---------------------------------------------------------------------------
 # Workflow-level I/O
 # ---------------------------------------------------------------------------
 
@@ -91,5 +119,6 @@ class MissionWorkflowOutput(BaseModel):
     stages_completed: int = 0
     stages_failed: int = 0
     kg_ingestions_completed: int = 0
+    unstructured_ingestion: UnstructuredIngestionOutput | None = None
     stage_results: list[StageActivityOutput] = Field(default_factory=list)
     kg_results: list[KGIngestionOutput] = Field(default_factory=list)

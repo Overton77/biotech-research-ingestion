@@ -1,0 +1,909 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02668276",
+          "briefTitle": "Engaging Newly Diagnosed Men About Cancer Treatment Options"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Illinois at Chicago",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostatic Neoplasms"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Standard NCCN counseling",
+              "armGroupLabels": [
+                "Standard NCCN counseling"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Standard NCCN counseling and Oncotype DX results",
+              "armGroupLabels": [
+                "Standard NCCN counseling and Oncotype DX results"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03819010",
+          "briefTitle": "Neoadjuvant Letrozole and Palbociclib in Patients With Stage II-IIIB Breast Cancer, HR+, HER2 -"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "MedSIR",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Pre treatment Recurrence Score:18-25 Letrozole + Palbociclib",
+              "description": "Letrozole(2,5 mg/day during 28 days of each Cycle) + Palbociclib(125mg/day during 21 days of each cycle of 28 days) as neoadjuvant treatment during 6 cycles before surgery of Breast Cancer for patients with pre-treatment recurrence Score of 18-25",
+              "armGroupLabels": [
+                "Pre treatment Recurrence Score:18-25 Letrozole + Palbociclib"
+              ],
+              "otherNames": [
+                "None othe intervention name"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Pre treatment Recurrence Score:26-100 Letrozole + Palbociclib",
+              "description": "Letrozole(2,5 mg/day during 28 days of each Cycle) + Palbociclib(125mg/day during 21 days of each cycle of 28 days) as neoadjuvant treatment during 6 cycles before surgery of Breast Cancer for patients with pre-treatment recurrence Score of 26-100",
+              "armGroupLabels": [
+                "Pre treatment Recurrence Score:26-100 Letrozole + Palbociclib"
+              ],
+              "otherNames": [
+                "None othe intervention name"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02766881",
+          "briefTitle": "Evaluation of the DCIS Score for Decisions on Radiotherapy in Patients With Low/Intermediate Risk DCIS"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ontario Clinical Oncology Group (OCOG)",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "DCIS"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01293032",
+          "briefTitle": "Hormone Therapy Or Chemotherapy Before Surgery Based on Gene Expression Analysis in Treating Patients With Breast Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Virginia Commonwealth University",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Ductal Breast Carcinoma in Situ",
+            "Lobular Breast Carcinoma in Situ",
+            "Stage II Breast Cancer",
+            "Stage IIA Breast Cancer",
+            "Stage IIB Breast Cancer",
+            "Stage IIIA Breast Cancer",
+            "Stage IIIB Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "Neoadjuvant Therapy",
+              "description": "Undergo neoadjuvant therapy",
+              "armGroupLabels": [
+                "Group 1 (RS < 11)",
+                "Group 2 Arm 1 (RS 11-25)",
+                "Group 2 Arm 2 (RS 11-25)",
+                "Group 3 (RS > 25)"
+              ],
+              "otherNames": [
+                "Induction Therapy",
+                "Neoadjuvant",
+                "Preoperative Therapy"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Therapeutic Conventional Surgery",
+              "description": "Undergo therapeutic conventional surgery",
+              "armGroupLabels": [
+                "Group 1 (RS < 11)",
+                "Group 2 Arm 1 (RS 11-25)",
+                "Group 2 Arm 2 (RS 11-25)",
+                "Group 3 (RS > 25)"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Laboratory Biomarker Analysis",
+              "description": "Correlative studies",
+              "armGroupLabels": [
+                "Group 1 (RS < 11)",
+                "Group 2 Arm 1 (RS 11-25)",
+                "Group 2 Arm 2 (RS 11-25)",
+                "Group 3 (RS > 25)"
+              ],
+              "otherNames": [
+                "Correlative studies"
+              ]
+            },
+            {
+              "type": "GENETIC",
+              "name": "Gene Expression Analysis",
+              "description": "Undergo Oncotype Dx gene expression profiling. The Oncotype DX gene expression profiling system will be used to calculate a \"Recurrence Score\" (RS).",
+              "armGroupLabels": [
+                "Group 1 (RS < 11)",
+                "Group 2 Arm 1 (RS 11-25)",
+                "Group 2 Arm 2 (RS 11-25)",
+                "Group 3 (RS > 25)"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Systemic Chemotherapy",
+              "description": "Undergo chemotherapy",
+              "armGroupLabels": [
+                "Group 2 Arm 2 (RS 11-25)",
+                "Group 3 (RS > 25)"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Tamoxifen Citrate",
+              "description": "Undergo hormonal therapy",
+              "armGroupLabels": [
+                "Group 1 (RS < 11)",
+                "Group 2 Arm 1 (RS 11-25)"
+              ],
+              "otherNames": [
+                "Nolvadex",
+                "TAM",
+                "tamoxifen",
+                "TMX",
+                "hormonal therapy"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Aromatase Inhibition Therapy",
+              "description": "Undergo hormonal therapy",
+              "armGroupLabels": [
+                "Group 1 (RS < 11)",
+                "Group 2 Arm 1 (RS 11-25)"
+              ],
+              "otherNames": [
+                "Inhibition therapy, aromatase",
+                "Aromatase Inhibition",
+                "hormonal therapy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06786585",
+          "briefTitle": "Extended Clinical Follow up and Biospecimen Collection for Patients Enrolled in TAILORx and RxPONDER: A Companion Protocol"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Eastern Cooperative Oncology Group",
+            "class": "NETWORK"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03495011",
+          "briefTitle": "MRI Characterization of Mammographically Detected DCIS"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Washington",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer, Stage 0"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Breast MRI",
+              "description": "Quantitative, multiparametric breast MRI",
+              "armGroupLabels": [
+                "Cohort A",
+                "Cohort B"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Laboratory Biomarker Analysis",
+              "description": "Only patients with pure DCIS on surgical excision will have advanced pathologic markers and Oncotype Dx DCIS Score testing.",
+              "armGroupLabels": [
+                "Cohort A",
+                "Cohort B"
+              ],
+              "otherNames": [
+                "Oncotype Dx"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06807749",
+          "briefTitle": "Adjuvant Treatment in Premenopausal Breast Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Fondazione Policlinico Universitario Agostino Gemelli IRCCS",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer Early Stage Breast Cancer (Stage 1-3)"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00921115",
+          "briefTitle": "Anti-Hormone Therapy (With Anastrazole and Fulvestrant) Before Surgery to Treat Postmenopausal Women With Breast Cancer."
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Kansas Medical Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Invasive Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Fulvestrant",
+              "description": "Fulvestrant IM on day 14 and on day 28 followed by day 28 of all subsequent cycles thereafter. Treatment will be continued for a total of 4 cycles.",
+              "armGroupLabels": [
+                "Arimidex + Faslodex"
+              ],
+              "otherNames": [
+                "Faslodex"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Anastrazole",
+              "description": "Anastrazole, 1mg by mouth every day of all 28 day cycles and continued for a total of 4 cycles",
+              "armGroupLabels": [
+                "Arimidex + Faslodex"
+              ],
+              "otherNames": [
+                "Arimidex"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04797299",
+          "briefTitle": "Prospective Evaluation of Breast-Conserving Surgery Alone in Low-Risk Ductal Carcinoma in Situ (DCIS)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ontario Clinical Oncology Group (OCOG)",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "DCIS"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04396808",
+          "briefTitle": "Genomics in Michigan to AdJust Outcomes in Prostate canceR (G-MAJOR) for Men With Newly Diagnosed Favorable Risk Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Michigan Rogel Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Decipher",
+              "description": "The Decipher test (GenomeDx Biosciences) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "Decipher Prostate Cancer Classifier"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Prolaris",
+              "description": "The Prolaris test (Myriad Genetics, Inc.) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "Prolaris Prostate Cancer Test"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Oncotype Dx Genomic Prostate Score (GPS)",
+              "description": "The Oncotype Dx GPS test (Exact Sciences corp.) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Standard of care (askMUSIC score)",
+              "description": "AskMUSIC is a risk calculator based on standard clinical and pathologic variables (https://ask.musicurology.com/) and is generally included as part of routine clinical care.",
+              "armGroupLabels": [
+                "Standard of care (no pre-treatment genomics testing)",
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "askMUSIC score"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03790813",
+          "briefTitle": "Informative Tools to Optimize Neoadjuvant Therapy in ER Positive, HER2 Negative Breast Cancers"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "British Columbia Cancer Agency",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Intervention 1",
+              "description": "Ki-67 and Oncotype DX® will be performed on the baseline core biopsy specimen prior to initiation of neoadjuvant systemic therapy.",
+              "armGroupLabels": [
+                "Eligible patients"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Intervention 2",
+              "description": "MRI will be performed prior to initiation of neoadjuvant systemic therapy and at the end of treatment.",
+              "armGroupLabels": [
+                "Eligible patients"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02236572",
+          "briefTitle": "Neoadj ph 2 AI Plus Everolimus in Postmenopausal Women w/ ER Pos/HER2 Neg, Low Risk Score"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Yale University",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Everolimus",
+              "description": "Aromatase inhibitor plus everolimus by mouth daily for 26 weeks. All patients will begin treatment on Cycle 1 Day 1 with both the standard dose of one of the following 3 aromatase inhibitors ( physician's choice) plus everolimus 10 mg by mouth daily:\n\n* Anastrozole 1 mg\n* Letrozole 2.5 mg\n* Exemestane 25 mg",
+              "armGroupLabels": [
+                "Aromatase Inhibitor plus Everolimus"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05837455",
+          "briefTitle": "NeoTAILOR: ABiomarker-directed Approach to Guide Neoadjuvant Therapy for Patients With Stage II/III ER-positive, HER2-negative Breast Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Washington University School of Medicine",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer",
+            "Cancer of the Breast"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "VENTANA MIB-1 Ki67 assay",
+              "description": "Ki67 scoring determination (standard of care) utilizing the Ki67 MIB-1 assay (clone 30-9) (VENTANA) will be performed at baseline, Week 4 (+/- 14 days - high-risk group only), and at time of surgery in accordance with the International Ki67 in Breast Cancer Working Group guidelines.",
+              "armGroupLabels": [
+                "High-risk endocrine-resistant group",
+                "High-risk endocrine-sensitive group",
+                "Low-risk group"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Oncotype DX® Recurrence Score",
+              "description": "Oncotype DX® Recurrence Score (RS) testing - assessing expression of 21 genes including 16 cancer-related genes and 5 reference genes - will be performed as standard of care in a central laboratory (Exact Sciences) on RNA extracted from formalin-fixed paraffin-embedded core-biopsy samples.",
+              "armGroupLabels": [
+                "High-risk endocrine-resistant group",
+                "High-risk endocrine-sensitive group",
+                "Low-risk group"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "PAM50-based Prosigna breast cancer gene signature assay",
+              "description": "This PAM50-based Prosigna breast cancer gene signature assay for intrinsic molecular subtype determination will be performed on formalin-fixed, paraffin-embedded (FFPE) core-biopsy samples.",
+              "armGroupLabels": [
+                "High-risk endocrine-resistant group",
+                "High-risk endocrine-sensitive group",
+                "Low-risk group"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Anastrozole",
+              "description": "Standard of care",
+              "armGroupLabels": [
+                "High-risk endocrine-sensitive group",
+                "Low-risk group"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Combination anthracycline and/or taxane based treatment",
+              "description": "Standard of care",
+              "armGroupLabels": [
+                "High-risk endocrine-resistant group"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02347449",
+          "briefTitle": "The Impact of the Oncotype DX® Breast Cancer Assay on Treatment Decisions in a Canadian Population"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sunnybrook Health Sciences Centre",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Hormone Receptor Positive Malignant Neoplasm of Breast"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Questionnaires, Oncotype Dx Assay",
+              "description": "1. Physician pre-assay questionnaire\n2. Patient pre-assay questionnaire\n3. Oncotype DX® Assay\n4. Physician post- assay questionnaire\n5. Patient post-assay questionnaire",
+              "armGroupLabels": [
+                "Early stage breast cancer"
+              ],
+              "otherNames": [
+                "Oncotype Dx Assay, Questionnaires"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01926964",
+          "briefTitle": "Adjuvant Treatment Recommendation and Oncotype DX® in Early Breast Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Swiss Cancer Institute",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03772197",
+          "briefTitle": "Parallel Comparison of 18 Gene Classifiers and Oncotype DX (Nanostring)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Amwise Diagnostics Pte. Ltd.",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer",
+            "Recurrence"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01446185",
+          "briefTitle": "Treatment Decision Impact of OncotypeDX™ in HR+, N- Breast Cancer Patients"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Genomic Health®, Inc.",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Oncotype DX breast cancer test",
+              "description": "The Oncotype DX breast cancer test measures the expression of 21 genes of an individual tumor to generate an Recurrence Score result that quantifies the magnitude of chemotherapy benefit and the likelihood of recurrence for early-stage breast cancer patients.",
+              "armGroupLabels": [
+                "a HR+, N- or pN1(mi), Her2- breast cancer adjuvant population"
+              ],
+              "otherNames": [
+                "Oncotype DX™"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06484725",
+          "briefTitle": "Oncotype DX in BRCA-mutated Breast Cancer Patients: Our Experience. A Retrospective Observational Monocentric Study"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "IRCCS San Raffaele",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer",
+            "Genetic Predisposition"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "GENETIC",
+              "name": "Oncotype DX assay",
+              "description": "Oncotype DX assay (Genomic Health, Inc, Redwood City, Calif) is a 21 gene panel developed to predict the risk of tumor recurrence in patients with ER-positive and human epidermal growth factor 2 (HER2)- negative breast cancer (BC); nowadays, this test represents a standard of care to guide adjuvant chemotherapy decision recommended in several guidelines. According to Oncotype DX Recurrent Score (RS)® a high RS shows a worse prognosis and predicts chemotherapy benefit in patients with ER-positive HER2-negative BC.",
+              "armGroupLabels": [
+                "Mutated patients",
+                "VUS patients",
+                "Wild type patients"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06046664",
+          "briefTitle": "Oncotype DX DCIS: Impact on Radiotherapy Decision Making"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Royal Marsden NHS Foundation Trust",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "ONCOTYPE DX DCIS test",
+              "description": "The Oncotype DX DCIS score, comprised of 12 of the 21 genes of the Oncotype DX Recurrence score, has been developed by Genomic Health Inc.\n\nTwo clinical utility studies have now been performed in USA, assessing the value of the Oncotype DX DCIS to clinical decision making (18,19) The first study by Alvarado et al. evaluated the influence of the test in 10 centres and in 115 patients (18). The DCIS score led to a change in the treatment recommendation in 36 patients (31.3%; 26 patients had a change to no radiation and 10 patients had a change to recommend radiation). The second study similarly showed change in recommendations following the Oncotype DX DCIS test in 26.4% of cases. It is unclear what the impact of the DCIS score test would be in the UK.",
+              "armGroupLabels": [
+                "DCIS Test"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02476786",
+          "briefTitle": "Endocrine Treatment Alone for Elderly Patients With Estrogen Receptor Positive Operable Breast Cancer and Low Recurrence Score"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Washington University School of Medicine",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer",
+            "Cancer of Breast",
+            "Breast Neoplasms",
+            "Cancer of the Breast"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BEHAVIORAL",
+              "name": "FACT-B",
+              "description": "The FACT-B (Version 4) is a 37-item measure that contains the four general subscales along with the Breast Cancer-Specific subscale that assesses symptoms/concerns of particular relevance to breast cancer (e.g., body image, arm swelling and tenderness).",
+              "armGroupLabels": [
+                "Endocrine therapy alone"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Goserelin",
+              "armGroupLabels": [
+                "Endocrine therapy alone"
+              ],
+              "otherNames": [
+                "Goserelin acetate",
+                "Zoladex"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Anastrozole",
+              "armGroupLabels": [
+                "Endocrine therapy alone"
+              ],
+              "otherNames": [
+                "Arimidex®"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Exemestane",
+              "armGroupLabels": [
+                "Endocrine therapy alone"
+              ],
+              "otherNames": [
+                "Aromasin®"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Fulvestrant",
+              "armGroupLabels": [
+                "Endocrine therapy alone"
+              ],
+              "otherNames": [
+                "Faslodex®"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Tamoxifen",
+              "armGroupLabels": [
+                "Endocrine therapy alone"
+              ],
+              "otherNames": [
+                "Nolvadex®"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Archived tissue collection",
+              "armGroupLabels": [
+                "Endocrine therapy alone"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pagesFetched": 2,
+  "nextPageToken": "ZVJj7o2Elu8o3lprWs2uqarumpOQJJxtbfGs1PAfkA",
+  "totalCount": 32
+}

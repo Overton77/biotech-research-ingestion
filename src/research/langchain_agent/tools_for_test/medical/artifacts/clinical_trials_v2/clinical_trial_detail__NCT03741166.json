@@ -1,0 +1,631 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT03741166",
+      "orgStudyIdInfo": {
+        "id": "2018-10B"
+      },
+      "organization": {
+        "fullName": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "Blood Collection Sub-Study for CRC Screening in Individuals 45-49 at Average Risk for CRC.",
+      "officialTitle": "Blood Collection Sub-Study of Exact Sciences Protocol 2018-10: \"An Evaluation of a Multi-target Stool DNA (Mt-sDNA) Test, Cologuard, for CRC Screening in Individuals Aged 45-49 and at Average Risk for Development of Colorectal Cancer: Act Now\""
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2021-05",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2018-11-08",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2019-04-05",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2019-04-05",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2018-10-31",
+      "studyFirstSubmitQcDate": "2018-11-13",
+      "studyFirstPostDateStruct": {
+        "date": "2018-11-14",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2021-05-12",
+      "lastUpdatePostDateStruct": {
+        "date": "2021-05-17",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      }
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "The primary objective of this sub-study, 2018-10B, is to collect blood specimens to assess new biomarkers for the detection of Colorectal Cancer (CRC).",
+      "detailedDescription": "Subjects who consent to enroll in Exact Sciences Protocol 2018-10, will be asked to participate in this sub-study. Subjects enrolled in the Exact Sciences Protocol 2018-10, who provide written informed consent to participate in this sub-study, will have a blood sample collected at enrollment."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Colo-rectal Cancer"
+      ],
+      "keywords": [
+        "Blood Draw"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "COHORT",
+        "timePerspective": "PROSPECTIVE"
+      },
+      "bioSpec": {
+        "retention": "SAMPLES_WITH_DNA",
+        "description": "Residual blood samples may be used for evaluating performance of biomarkers for feasibility and assay development. Sample may be stored for up to 20 years. These blood samples will be de-identified."
+      },
+      "enrollmentInfo": {
+        "count": 871,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "Subject aged 45-49 with Average CRC Risk",
+          "description": "Subjects will be men and women, 45-49 years of age, who enroll in Exact Sciences Protocol 2018-10. Subjects will provide a blood sample at time of enrollment.",
+          "interventionNames": [
+            "Other: Blood Sample Collection"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "OTHER",
+          "name": "Blood Sample Collection",
+          "description": "Subjects participating in the study will have blood drawn at enrollment.",
+          "armGroupLabels": [
+            "Subject aged 45-49 with Average CRC Risk"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Blood-based biomarkers associated with genetic and epigenetic alterations.",
+          "description": "Biomarkers under evaluation include differential methylation of nucleic acids and altered expression of proteins in blood from subjects at average risk for development of colorectal cancer.",
+          "timeFrame": "Point in time blood collection (1 day) at enrollment"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Subject is currently enrolled in Exact Sciences Protocol 2018-10\n2. Subject is willing and able to provide a blood sample.\n3. Subject is willing and able to sign informed consent.\n\nExclusion Criteria:\n\n1\\. Subject has any condition that in the opinion of the Investigator should preclude participation in the study.",
+      "healthyVolunteers": true,
+      "sex": "ALL",
+      "minimumAge": "45 Years",
+      "maximumAge": "49 Years",
+      "stdAges": [
+        "ADULT"
+      ],
+      "studyPopulation": "Subjects will be men and women, 45-49 years of age, who enroll in Exact Sciences Protocol 2018-10. Up to 942 subjects will be enrolled.",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Thomas Imperiale",
+          "affiliation": "Indiana University",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Mayo Clinic Arizona",
+          "city": "Phoenix",
+          "state": "Arizona",
+          "zip": "85054",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.44838,
+            "lon": -112.07404
+          }
+        },
+        {
+          "facility": "Ventura County Gastroenterology",
+          "city": "Camarillo",
+          "state": "California",
+          "zip": "93012",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.21639,
+            "lon": -119.0376
+          }
+        },
+        {
+          "facility": "Alliance Research Centers",
+          "city": "Laguna Hills",
+          "state": "California",
+          "zip": "92653",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.61252,
+            "lon": -117.71283
+          }
+        },
+        {
+          "facility": "Focilmed",
+          "city": "Oxnard",
+          "state": "California",
+          "zip": "93030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.1975,
+            "lon": -119.17705
+          }
+        },
+        {
+          "facility": "Desert Oasis Healthcare Medical Group",
+          "city": "Palm Springs",
+          "state": "California",
+          "zip": "92262",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.8303,
+            "lon": -116.54529
+          }
+        },
+        {
+          "facility": "Gastroenterology Associates of Fairfield County",
+          "city": "Bridgeport",
+          "state": "Connecticut",
+          "zip": "06606",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.17923,
+            "lon": -73.18945
+          }
+        },
+        {
+          "facility": "Yale University Section of Digestive Diseases and Liver Diseases",
+          "city": "New Haven",
+          "state": "Connecticut",
+          "zip": "06520",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.30815,
+            "lon": -72.92816
+          }
+        },
+        {
+          "facility": "Precision Clinical Research, LLC",
+          "city": "Lauderdale Lakes",
+          "state": "Florida",
+          "zip": "33319",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 26.16647,
+            "lon": -80.20838
+          }
+        },
+        {
+          "facility": "Northshore University Health System Evanston Hospital",
+          "city": "Evanston",
+          "state": "Illinois",
+          "zip": "60201",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.04114,
+            "lon": -87.69006
+          }
+        },
+        {
+          "facility": "DM Clinical Research- Southwest Gastroenterology",
+          "city": "Oak Lawn",
+          "state": "Illinois",
+          "zip": "60453",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.71087,
+            "lon": -87.75811
+          }
+        },
+        {
+          "facility": "Deaconess Clinic- Mt. Pleasant",
+          "city": "Evansville",
+          "state": "Indiana",
+          "zip": "47725",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 37.97476,
+            "lon": -87.55585
+          }
+        },
+        {
+          "facility": "Deaconess Clinic- Gateway",
+          "city": "Newburgh",
+          "state": "Indiana",
+          "zip": "47630",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 37.94449,
+            "lon": -87.40529
+          }
+        },
+        {
+          "facility": "Johnson County ClinTrials, LLC",
+          "city": "Lenexa",
+          "state": "Kansas",
+          "zip": "66219",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 38.95362,
+            "lon": -94.73357
+          }
+        },
+        {
+          "facility": "New Orleans Research Institue",
+          "city": "Metairie",
+          "state": "Louisiana",
+          "zip": "70006",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 29.98409,
+            "lon": -90.15285
+          }
+        },
+        {
+          "facility": "Delta Research Partners, LLC",
+          "city": "Monroe",
+          "state": "Louisiana",
+          "zip": "71201",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 32.50931,
+            "lon": -92.1193
+          }
+        },
+        {
+          "facility": "Louisiana Research Center",
+          "city": "Shreveport",
+          "state": "Louisiana",
+          "zip": "71103",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 32.52515,
+            "lon": -93.75018
+          }
+        },
+        {
+          "facility": "Investigative Clinical Research",
+          "city": "Annapolis",
+          "state": "Maryland",
+          "zip": "21401",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 38.97859,
+            "lon": -76.49184
+          }
+        },
+        {
+          "facility": "Centennial Medical Group",
+          "city": "Elkridge",
+          "state": "Maryland",
+          "zip": "21075",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.21261,
+            "lon": -76.71358
+          }
+        },
+        {
+          "facility": "Capitol Research",
+          "city": "Rockville",
+          "state": "Maryland",
+          "zip": "20850",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.084,
+            "lon": -77.15276
+          }
+        },
+        {
+          "facility": "Commonwealth Clinical Studies",
+          "city": "Brockton",
+          "state": "Massachusetts",
+          "zip": "02302",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.08343,
+            "lon": -71.01838
+          }
+        },
+        {
+          "facility": "Mayo Clinic Rochester",
+          "city": "Rochester",
+          "state": "Minnesota",
+          "zip": "55905",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 44.02163,
+            "lon": -92.4699
+          }
+        },
+        {
+          "facility": "United Medical Associates",
+          "city": "Binghamton",
+          "state": "New York",
+          "zip": "13901",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.09869,
+            "lon": -75.91797
+          }
+        },
+        {
+          "facility": "Asheville Gastroenterology Associates",
+          "city": "Asheville",
+          "state": "North Carolina",
+          "zip": "28801",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.60095,
+            "lon": -82.55402
+          }
+        },
+        {
+          "facility": "Charlotte Gastroenterology & Hepatology, PLLC",
+          "city": "Charlotte",
+          "state": "North Carolina",
+          "zip": "28207",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.22709,
+            "lon": -80.84313
+          }
+        },
+        {
+          "facility": "Wilmington Gastroenterology Associates",
+          "city": "Wilmington",
+          "state": "North Carolina",
+          "zip": "28403",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.23556,
+            "lon": -77.94604
+          }
+        },
+        {
+          "facility": "University Hospitals Cleveland Medical Center",
+          "city": "Cleveland",
+          "state": "Ohio",
+          "zip": "44106",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.4995,
+            "lon": -81.69541
+          }
+        },
+        {
+          "facility": "Great Lakes Gastroenterology Research, LLC",
+          "city": "Mentor",
+          "state": "Ohio",
+          "zip": "44060",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.66616,
+            "lon": -81.33955
+          }
+        },
+        {
+          "facility": "Comprehensive Internal Medicine, Inc.",
+          "city": "Wooster",
+          "state": "Ohio",
+          "zip": "44691",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.80517,
+            "lon": -81.93646
+          }
+        },
+        {
+          "facility": "Family Practice Center of Wooster, Inc./Clinical Trial Developers",
+          "city": "Wooster",
+          "state": "Ohio",
+          "zip": "45150",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.80517,
+            "lon": -81.93646
+          }
+        },
+        {
+          "facility": "Gastroenterology Associates, PA",
+          "city": "Greenville",
+          "state": "South Carolina",
+          "zip": "29615",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.85262,
+            "lon": -82.39401
+          }
+        },
+        {
+          "facility": "Gastro One",
+          "city": "Germantown",
+          "state": "Tennessee",
+          "zip": "38138",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.08676,
+            "lon": -89.81009
+          }
+        },
+        {
+          "facility": "Quality Medical Research, PLLC",
+          "city": "Nashville",
+          "state": "Tennessee",
+          "zip": "37211",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.16589,
+            "lon": -86.78444
+          }
+        },
+        {
+          "facility": "Austin Regional Clinic",
+          "city": "Austin",
+          "state": "Texas",
+          "zip": "78726",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 30.26715,
+            "lon": -97.74306
+          }
+        },
+        {
+          "facility": "University of Texas Health Science Center- McGovern Medical School",
+          "city": "Houston",
+          "state": "Texas",
+          "zip": "77030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 29.76328,
+            "lon": -95.36327
+          }
+        },
+        {
+          "facility": "DM Clinical Research- PCP for Life",
+          "city": "Houston",
+          "state": "Texas",
+          "zip": "77070",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 29.76328,
+            "lon": -95.36327
+          }
+        },
+        {
+          "facility": "Virginia Gastroenterology Institute",
+          "city": "Suffolk",
+          "state": "Virginia",
+          "zip": "23434",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.72836,
+            "lon": -76.58496
+          }
+        },
+        {
+          "facility": "Wisconsin Center for Advanced Research",
+          "city": "Milwaukee",
+          "state": "Wisconsin",
+          "zip": "53215",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 43.0389,
+            "lon": -87.90647
+          }
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "YES",
+      "description": "Individual participant data that underlie the results reported in publications of the study will be shared after de-identification. This may include text, tables, figured, and appendices. The study protocol and informed consent form will also be shared. Data will be shared with researchers who provide a methodologically sound proposal to achieve the aims outlined in the approved proposal.",
+      "infoTypes": [
+        "STUDY_PROTOCOL",
+        "ICF"
+      ],
+      "timeFrame": "Data will be available from 2 years and ending 4 years after publication",
+      "accessCriteria": "Proposals for access to data should be directed to clinicaltrials@exactsciences.com. To gain access, data requestors will need to provide a methodologically sound proposal and sign a data access agreement. Researchers are required to obtain necessary IRB/EC approvals or waivers as applicable to conduct research."
+    }
+  },
+  "documentSection": {
+    "largeDocumentModule": {
+      "largeDocs": [
+        {
+          "typeAbbrev": "Prot",
+          "hasProtocol": true,
+          "hasSap": false,
+          "hasIcf": false,
+          "label": "Study Protocol",
+          "date": "2018-10-16",
+          "uploadDate": "2021-01-21T17:51",
+          "filename": "Prot_000.pdf",
+          "size": 243003
+        }
+      ]
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-04-01"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D003110",
+          "term": "Colonic Neoplasms"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D015179",
+          "term": "Colorectal Neoplasms"
+        },
+        {
+          "id": "D007414",
+          "term": "Intestinal Neoplasms"
+        },
+        {
+          "id": "D005770",
+          "term": "Gastrointestinal Neoplasms"
+        },
+        {
+          "id": "D004067",
+          "term": "Digestive System Neoplasms"
+        },
+        {
+          "id": "D009371",
+          "term": "Neoplasms by Site"
+        },
+        {
+          "id": "D009369",
+          "term": "Neoplasms"
+        },
+        {
+          "id": "D004066",
+          "term": "Digestive System Diseases"
+        },
+        {
+          "id": "D005767",
+          "term": "Gastrointestinal Diseases"
+        },
+        {
+          "id": "D003108",
+          "term": "Colonic Diseases"
+        },
+        {
+          "id": "D007410",
+          "term": "Intestinal Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

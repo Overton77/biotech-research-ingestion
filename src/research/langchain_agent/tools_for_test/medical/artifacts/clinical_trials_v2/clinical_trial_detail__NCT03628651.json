@@ -1,0 +1,1035 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT03628651",
+      "orgStudyIdInfo": {
+        "id": "2017-01"
+      },
+      "organization": {
+        "fullName": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "Blood Sample Collection to Evaluate Biomarkers for Hepatocellular Carcinoma",
+      "officialTitle": "2017-01: Blood Sample Collection to Evaluate Biomarkers for Hepatocellular Carcinoma"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2020-08",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2018-04-02",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2020-03-11",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2020-03-11",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2018-08-09",
+      "studyFirstSubmitQcDate": "2018-08-09",
+      "studyFirstPostDateStruct": {
+        "date": "2018-08-14",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2020-08-04",
+      "lastUpdatePostDateStruct": {
+        "date": "2020-08-06",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      }
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "The primary objective of this study is to obtain de-identified, clinically-characterized whole blood specimens for use in developing and evaluating the performance of new biomarker assays for detection of hepatocellular carcinoma (HCC).",
+      "detailedDescription": "Subjects with untreated Hepatocellular Carcinoma (HCC) and subjects undergoing HCC surveillance will be enrolled and have blood samples collected. Subjects undergoing HCC surveillance will be followed for up to 6 months. Another blood sample will be collected at the 6 month visit which will be scheduled no longer than 6 months from enrollment."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Hepatocellular Carcinoma",
+        "Hepatocellular Carcinoma Surveillance"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "COHORT",
+        "timePerspective": "PROSPECTIVE"
+      },
+      "bioSpec": {
+        "retention": "SAMPLES_WITH_DNA",
+        "description": "Blood samples will not be used other than to develop and evaluate the performance of blood-based biomarker assays to detect cancer. Samples may be stored for up to 10 years."
+      },
+      "enrollmentInfo": {
+        "count": 2150,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "HCC Surveillance",
+          "description": "Approximately 1400 HCC surveillance subjects (controls) will be enrolled.",
+          "interventionNames": [
+            "Other: Blood Sample Collection"
+          ]
+        },
+        {
+          "label": "HCC",
+          "description": "Approximately 700 subjects with untreated clinically diagnosed HCC will be enrolled.",
+          "interventionNames": [
+            "Other: Blood Sample Collection"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "OTHER",
+          "name": "Blood Sample Collection",
+          "description": "HCC subjects will have one blood sample collected.",
+          "armGroupLabels": [
+            "HCC"
+          ]
+        },
+        {
+          "type": "OTHER",
+          "name": "Blood Sample Collection",
+          "description": "Surveillance subjects will have a blood sample collected and will be followed for up to 6 months. A second blood sample will be collected at the 6 month visit which will be scheduled no longer than 6 months from enrollment.",
+          "armGroupLabels": [
+            "HCC Surveillance"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Biomarker Identification",
+          "description": "Biomarkers under evaluation include differential methylation of nucleic acids and altered expression of proteins in blood from subjects with HCC compared to those without (but are at risk of developing the disease so are under surveillance)",
+          "timeFrame": "1 year"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* All Subjects:\n\n  1. Subject is 18 years of age or older\n  2. Subject understands the study procedures and is able to provide informed consent to participate in the study and authorization for release of data, including personal health data, to the study investigator and sponsor\n\nHCC Subjects:\n\n1\\. Subject has a recent (within 6 months of enrollment) untreated clinically diagnosed hepatocellular carcinoma as defined by ≥1 cm lesion exhibiting arterial phase hyperenhancement in combination with washout appearance and/or capsule by 4 phase CT scan or multiphase contrast enhanced MRI or biopsy is positive for HCC.\n\nControl Subjects:\n\n1. Non-cancer subject undergoing routine imaging surveillance for HCC\n2. Definitive lack of HCC within 3 months prior to enrollment as defined by negative imaging, for HCC.\n\n   1. Control Group 1 - negative by ultrasound\n   2. Control Group 2 - negative by CT or MRI\n\nExclusion Criteria:\n\n1. Known cancer diagnosis within the past 5 years (with the exceptions of basal cell or squamous cell skin cancers).\n2. Chemotherapy and/or radiation therapy within 5 years prior to enrollment/sample collection.\n3. Prior or current treatment with sorafenib, regorafenib, or other treatment indicated for HCC.\n4. Any HCC treatment prior to enrollment/blood sample collection (e.g., surgery, ablation, embolization, pharmacotherapy, radiotherapy, liver transplant or other treatment indicated for HCC).\n5. IV contrast (e.g. CT and MRI) within 1 day \\[or 24 hours\\] of blood collection.\n6. Less than 3 days between fine needle aspiration (FNA) of target pathology and blood collection.\n7. Less than 7 days between biopsy (other than FNA) of target pathology and blood collection.\n8. Individual has a condition the Investigator believes would interfere with his or her ability to provide informed consent, comply with the study protocol, which might confound the interpretation of the study results or put the person at undue risk.",
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ],
+      "studyPopulation": "Subjects 18 years of age and older who have clinically diagnosed HCC or are negative for HCC following disease surveillance will be enrolled. Approximately 2100 subjects will be enrolled into the two groups, HCC subjects and control subjects.",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Laura Strong",
+          "affiliation": "Exact Sciences",
+          "role": "STUDY_DIRECTOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Cedars Sinai Medical Center",
+          "city": "Los Angeles",
+          "state": "California",
+          "zip": "90048",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.05223,
+            "lon": -118.24368
+          }
+        },
+        {
+          "facility": "Facey Medical Foundation",
+          "city": "Los Angeles",
+          "state": "California",
+          "zip": "91345",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.05223,
+            "lon": -118.24368
+          }
+        },
+        {
+          "facility": "Office of Dr. John D. Homan MD",
+          "city": "Newport Beach",
+          "state": "California",
+          "zip": "92663-3668",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.61891,
+            "lon": -117.92895
+          }
+        },
+        {
+          "facility": "UC Irvine Health",
+          "city": "Orange",
+          "state": "California",
+          "zip": "92868",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.78779,
+            "lon": -117.85311
+          }
+        },
+        {
+          "facility": "FOMAT Medical Research",
+          "city": "Oxnard",
+          "state": "California",
+          "zip": "93030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.1975,
+            "lon": -119.17705
+          }
+        },
+        {
+          "facility": "Alliance Clinical Research",
+          "city": "Poway",
+          "state": "California",
+          "zip": "92064",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 32.96282,
+            "lon": -117.03586
+          }
+        },
+        {
+          "facility": "Medical Center of Homestead",
+          "city": "Homestead",
+          "state": "Florida",
+          "zip": "33030",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 25.46872,
+            "lon": -80.47756
+          }
+        },
+        {
+          "facility": "Mayo Clinc",
+          "city": "Jacksonville",
+          "state": "Florida",
+          "zip": "32224",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 30.33218,
+            "lon": -81.65565
+          }
+        },
+        {
+          "facility": "Precision Clinical Research, LLC",
+          "city": "Lauderdale Lakes",
+          "state": "Florida",
+          "zip": "33319",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 26.16647,
+            "lon": -80.20838
+          }
+        },
+        {
+          "facility": "Guardian Angel Research Center, Inc.",
+          "city": "Tampa",
+          "state": "Florida",
+          "zip": "33614",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 27.94752,
+            "lon": -82.45843
+          }
+        },
+        {
+          "facility": "Rush University Medical Center",
+          "city": "Chicago",
+          "state": "Illinois",
+          "zip": "60612",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.85003,
+            "lon": -87.65005
+          }
+        },
+        {
+          "facility": "University of Chicago",
+          "city": "Chicago",
+          "state": "Illinois",
+          "zip": "60637",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.85003,
+            "lon": -87.65005
+          }
+        },
+        {
+          "facility": "Indiana University Medical Center",
+          "city": "Indianapolis",
+          "state": "Indiana",
+          "zip": "46202",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.76838,
+            "lon": -86.15804
+          }
+        },
+        {
+          "facility": "University of Iowa",
+          "city": "Iowa City",
+          "state": "Iowa",
+          "zip": "52242",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.66113,
+            "lon": -91.53017
+          }
+        },
+        {
+          "facility": "Mercy Medical Research",
+          "city": "Baltimore",
+          "state": "Maryland",
+          "zip": "21202",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.29038,
+            "lon": -76.61219
+          }
+        },
+        {
+          "facility": "University of Michigan",
+          "city": "Ann Arbor",
+          "state": "Michigan",
+          "zip": "48109",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.27756,
+            "lon": -83.74088
+          }
+        },
+        {
+          "facility": "Henry Ford Hospital (HFH)",
+          "city": "Detroit",
+          "state": "Michigan",
+          "zip": "48202-2608",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.33143,
+            "lon": -83.04575
+          }
+        },
+        {
+          "facility": "Mayo Clinic",
+          "city": "Rochester",
+          "state": "Minnesota",
+          "zip": "55905",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 44.02163,
+            "lon": -92.4699
+          }
+        },
+        {
+          "facility": "Stony Brook Cancer Center",
+          "city": "Stony Brook",
+          "state": "New York",
+          "zip": "11794",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.92565,
+            "lon": -73.14094
+          }
+        },
+        {
+          "facility": "CMC Center for Liver Disease",
+          "city": "Charlotte",
+          "state": "North Carolina",
+          "zip": "28210",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.22709,
+            "lon": -80.84313
+          }
+        },
+        {
+          "facility": "OnSite Clinical Solutions",
+          "city": "Charlotte",
+          "state": "North Carolina",
+          "zip": "28226",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.22709,
+            "lon": -80.84313
+          }
+        },
+        {
+          "facility": "PMG Research of Winston-Salem, LLC",
+          "city": "Winston-Salem",
+          "state": "North Carolina",
+          "zip": "27103",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.09986,
+            "lon": -80.24422
+          }
+        },
+        {
+          "facility": "UH Cleveland Medical Center",
+          "city": "Cleveland",
+          "state": "Ohio",
+          "zip": "44106",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.4995,
+            "lon": -81.69541
+          }
+        },
+        {
+          "facility": "Hospital of the University of Pennsylvania",
+          "city": "Philadelphia",
+          "state": "Pennsylvania",
+          "zip": "19104",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.95238,
+            "lon": -75.16362
+          }
+        },
+        {
+          "facility": "Einstein Medical Center",
+          "city": "Philadelphia",
+          "state": "Pennsylvania",
+          "zip": "19141",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.95238,
+            "lon": -75.16362
+          }
+        },
+        {
+          "facility": "The Jackson Clinic",
+          "city": "Jackson",
+          "state": "Tennessee",
+          "zip": "38301",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.61452,
+            "lon": -88.81395
+          }
+        },
+        {
+          "facility": "Methodist Healthcare University Hospital",
+          "city": "Memphis",
+          "state": "Tennessee",
+          "zip": "38104",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.14953,
+            "lon": -90.04898
+          }
+        },
+        {
+          "facility": "Vanderbilt University Medical Center",
+          "city": "Nashville",
+          "state": "Tennessee",
+          "zip": "37212",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.16589,
+            "lon": -86.78444
+          }
+        },
+        {
+          "facility": "ARC Clinical Research at Wilson Parke",
+          "city": "Austin",
+          "state": "Texas",
+          "zip": "78726",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 30.26715,
+            "lon": -97.74306
+          }
+        },
+        {
+          "facility": "UT Southwestern Medical Center",
+          "city": "Dallas",
+          "state": "Texas",
+          "zip": "75201",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 32.78306,
+            "lon": -96.80667
+          }
+        },
+        {
+          "facility": "ADP Clinical Research",
+          "city": "Magnolia",
+          "state": "Texas",
+          "zip": "77355",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 30.20938,
+            "lon": -95.75078
+          }
+        },
+        {
+          "facility": "University of Virginia",
+          "city": "Charlottesville",
+          "state": "Virginia",
+          "zip": "22908",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 38.02931,
+            "lon": -78.47668
+          }
+        },
+        {
+          "facility": "Bon Secours Liver Institute of Hampton Roads",
+          "city": "Newport News",
+          "state": "Virginia",
+          "zip": "23602",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.98038,
+            "lon": -76.42975
+          }
+        },
+        {
+          "facility": "Hunter Holmes McGuire Medical",
+          "city": "Richmond",
+          "state": "Virginia",
+          "zip": "23249",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 37.55376,
+            "lon": -77.46026
+          }
+        },
+        {
+          "facility": "South Perry Endoscopy",
+          "city": "Spokane",
+          "state": "Washington",
+          "zip": "99202",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 47.65966,
+            "lon": -117.42908
+          }
+        },
+        {
+          "facility": "University of Wisconsin Hospital and Clinics",
+          "city": "Madison",
+          "state": "Wisconsin",
+          "zip": "53705",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 43.07305,
+            "lon": -89.40123
+          }
+        },
+        {
+          "facility": "CHU de Besancon Hopital Jean Minjoz",
+          "city": "Besançon",
+          "zip": "25030",
+          "country": "France",
+          "geoPoint": {
+            "lat": 47.24878,
+            "lon": 6.01815
+          }
+        },
+        {
+          "facility": "CHU Caen",
+          "city": "Caen",
+          "zip": "14000",
+          "country": "France",
+          "geoPoint": {
+            "lat": 49.18585,
+            "lon": -0.35912
+          }
+        },
+        {
+          "facility": "Hopital Henri Mondor",
+          "city": "Créteil",
+          "zip": "94010",
+          "country": "France",
+          "geoPoint": {
+            "lat": 48.79266,
+            "lon": 2.46569
+          }
+        },
+        {
+          "facility": "Centre Hospitalier Universitaire de Grenoble",
+          "city": "La Tronche",
+          "zip": "38700",
+          "country": "France",
+          "geoPoint": {
+            "lat": 45.20507,
+            "lon": 5.74629
+          }
+        },
+        {
+          "facility": "CHRU de LILLE - Hospital HURIEZ",
+          "city": "Lille",
+          "zip": "59037",
+          "country": "France",
+          "geoPoint": {
+            "lat": 50.63391,
+            "lon": 3.05512
+          }
+        },
+        {
+          "facility": "Chru Brabois",
+          "city": "Nancy",
+          "zip": "54500",
+          "country": "France",
+          "geoPoint": {
+            "lat": 48.68439,
+            "lon": 6.18496
+          }
+        },
+        {
+          "facility": "CHU Reims, Hopital Robert Debre",
+          "city": "Reims",
+          "zip": "51092",
+          "country": "France",
+          "geoPoint": {
+            "lat": 49.26526,
+            "lon": 4.02853
+          }
+        },
+        {
+          "facility": "CHU Pontchaillou",
+          "city": "Rennes",
+          "zip": "35000",
+          "country": "France",
+          "geoPoint": {
+            "lat": 48.11109,
+            "lon": -1.67431
+          }
+        },
+        {
+          "facility": "Helios Klinikum Berlin-Buch",
+          "city": "Berlin",
+          "zip": "13125",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 52.52437,
+            "lon": 13.41053
+          }
+        },
+        {
+          "facility": "Universitätsklinikum Bonn",
+          "city": "Bonn",
+          "zip": "53105",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 50.73438,
+            "lon": 7.09549
+          }
+        },
+        {
+          "facility": "Gastroenterologische Studienambulanz",
+          "city": "Cologne",
+          "zip": "50937",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 50.93333,
+            "lon": 6.95
+          }
+        },
+        {
+          "facility": "Universitat Leipzig",
+          "city": "Leipzig",
+          "zip": "04103",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 51.33962,
+            "lon": 12.37129
+          }
+        },
+        {
+          "facility": "Otto-von-Guericke-Universitaet Magdeburg",
+          "city": "Magdeburg",
+          "zip": "39120",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 52.13129,
+            "lon": 11.63189
+          }
+        },
+        {
+          "facility": "Medizinische Klinik und Poliklinik II",
+          "city": "München",
+          "zip": "81377",
+          "country": "Germany",
+          "geoPoint": {
+            "lat": 51.60698,
+            "lon": 13.31243
+          }
+        },
+        {
+          "facility": "Policlinico Sant' Orsola Malpighi",
+          "city": "Bologna",
+          "zip": "40138",
+          "country": "Italy",
+          "geoPoint": {
+            "lat": 44.49381,
+            "lon": 11.33875
+          }
+        },
+        {
+          "facility": "AOU Cagliary",
+          "city": "Cagliari",
+          "zip": "09042",
+          "country": "Italy",
+          "geoPoint": {
+            "lat": 39.23054,
+            "lon": 9.11917
+          }
+        },
+        {
+          "facility": "A.O.U. Policlinico G.Martino",
+          "city": "Messina",
+          "zip": "98125",
+          "country": "Italy",
+          "geoPoint": {
+            "lat": 38.19394,
+            "lon": 15.55256
+          }
+        },
+        {
+          "facility": "Ospedale San Gerardo",
+          "city": "Monza",
+          "zip": "20052",
+          "country": "Italy",
+          "geoPoint": {
+            "lat": 45.58005,
+            "lon": 9.27246
+          }
+        },
+        {
+          "facility": "Ospedale Sant'Andrea Hospital",
+          "city": "Roma",
+          "zip": "00189",
+          "country": "Italy",
+          "geoPoint": {
+            "lat": 44.99364,
+            "lon": 11.10642
+          }
+        },
+        {
+          "facility": "Hgu Alicante",
+          "city": "Alicante",
+          "zip": "03010",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 38.34517,
+            "lon": -0.48149
+          }
+        },
+        {
+          "facility": "Hospital de Mar - Parc de Salut Mar",
+          "city": "Barcelona",
+          "zip": "08003",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 41.38879,
+            "lon": 2.15899
+          }
+        },
+        {
+          "facility": "Hospital Reina Sofia",
+          "city": "Córdoba",
+          "zip": "14014",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 37.89155,
+            "lon": -4.77275
+          }
+        },
+        {
+          "facility": "Universidad Autonoma de Madrid - Hospital Universitario La Paz",
+          "city": "Madrid",
+          "zip": "28046",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 40.4165,
+            "lon": -3.70256
+          }
+        },
+        {
+          "facility": "Parc Tauli Hospital Universitari",
+          "city": "Sabadell",
+          "zip": "08208",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 41.54329,
+            "lon": 2.10942
+          }
+        },
+        {
+          "facility": "Hospital Universitario Marqués de Valdecilla",
+          "city": "Santander",
+          "zip": "39008",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 43.46589,
+            "lon": -3.80493
+          }
+        },
+        {
+          "facility": "Hospital Universitario de Rio Hortega",
+          "city": "Valladolid",
+          "zip": "47012",
+          "country": "Spain",
+          "geoPoint": {
+            "lat": 41.65541,
+            "lon": -4.72353
+          }
+        },
+        {
+          "facility": "Changhua Christian Hospital",
+          "city": "Chang-hua",
+          "zip": "50006",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 24.07327,
+            "lon": 120.56276
+          }
+        },
+        {
+          "facility": "Kaohsiung Medical University Hospital",
+          "city": "Kaohsiung City",
+          "zip": "807",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 22.61626,
+            "lon": 120.31333
+          }
+        },
+        {
+          "facility": "Chang Gung Medical Foundation",
+          "city": "Kaohsiung City",
+          "zip": "83301",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 22.61626,
+            "lon": 120.31333
+          }
+        },
+        {
+          "facility": "China Medical University Hospital",
+          "city": "Taichung",
+          "zip": "40447",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 24.1469,
+            "lon": 120.6839
+          }
+        },
+        {
+          "facility": "Liver DIS Center",
+          "city": "Taichung",
+          "zip": "40705",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 24.1469,
+            "lon": 120.6839
+          }
+        },
+        {
+          "facility": "Taichung Veterans General Hospital",
+          "city": "Taichung",
+          "zip": "40705",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 24.1469,
+            "lon": 120.6839
+          }
+        },
+        {
+          "facility": "National Cheng Kung University Hospital",
+          "city": "Tainan",
+          "zip": "70403",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 22.99083,
+            "lon": 120.21333
+          }
+        },
+        {
+          "facility": "Chi Mei Medical Center - Liuying",
+          "city": "Tainan",
+          "zip": "736",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 22.99083,
+            "lon": 120.21333
+          }
+        },
+        {
+          "facility": "Chang Gung Medical Foundation",
+          "city": "Taoyuan District",
+          "zip": "33305",
+          "country": "Taiwan",
+          "geoPoint": {
+            "lat": 24.9896,
+            "lon": 121.3187
+          }
+        },
+        {
+          "facility": "Phramongkutklao Hospital",
+          "city": "Bangkok",
+          "zip": "10400",
+          "country": "Thailand",
+          "geoPoint": {
+            "lat": 13.75398,
+            "lon": 100.50144
+          }
+        },
+        {
+          "facility": "Sririraj Hospital",
+          "city": "Bangkok",
+          "zip": "10700",
+          "country": "Thailand",
+          "geoPoint": {
+            "lat": 13.75398,
+            "lon": 100.50144
+          }
+        },
+        {
+          "facility": "Chiang Mai University",
+          "city": "Chiang Mai",
+          "zip": "50200",
+          "country": "Thailand",
+          "geoPoint": {
+            "lat": 18.79038,
+            "lon": 98.98468
+          }
+        }
+      ]
+    },
+    "referencesModule": {
+      "references": [
+        {
+          "pmid": "34391922",
+          "type": "DERIVED",
+          "citation": "Chalasani NP, Porter K, Bhattacharya A, Book AJ, Neis BM, Xiong KM, Ramasubramanian TS, Edwards DK 5th, Chen I, Johnson S, Roberts LR, Kisiel JB, Reddy KR, Singal AG, Olson MC, Bruinsma JJ. Validation of a Novel Multitarget Blood Test Shows High Sensitivity to Detect Early Stage Hepatocellular Carcinoma. Clin Gastroenterol Hepatol. 2022 Jan;20(1):173-182.e7. doi: 10.1016/j.cgh.2021.08.010. Epub 2021 Aug 13."
+        },
+        {
+          "pmid": "32889146",
+          "type": "DERIVED",
+          "citation": "Chalasani NP, Ramasubramanian TS, Bhattacharya A, Olson MC, Edwards V DK, Roberts LR, Kisiel JB, Reddy KR, Lidgard GP, Johnson SC, Bruinsma JJ. A Novel Blood-Based Panel of Methylated DNA and Protein Markers for Detection of Early-Stage Hepatocellular Carcinoma. Clin Gastroenterol Hepatol. 2021 Dec;19(12):2597-2605.e4. doi: 10.1016/j.cgh.2020.08.065. Epub 2020 Sep 2."
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "YES",
+      "description": "Individual participant data that underlie the results reported in publications of the study will be shared after deidentification. This may include text, tables, figures, and appendices. The study protocol, statistical analysis plan, informed consent form, and clinical study report will also be shared.",
+      "infoTypes": [
+        "STUDY_PROTOCOL",
+        "ICF"
+      ],
+      "timeFrame": "Data will be available from 2 years and ending 4 years after publication. Data will be shared with researchers who provide a methodologically sound proposal to achieve the aims outlined in the approved proposal.",
+      "accessCriteria": "Proposals for access to data should be directed to clinicaltrials@exactsciences.com. To gain access, data requestors will need to provide a methodologically sound proposal and sign a data access agreement. Researchers are required to obtain necessary IRB/EC approvals or waivers as applicable to conduct research. Data will be available between 2 and 4 years after publication through the Sponsor."
+    }
+  },
+  "annotationSection": {
+    "annotationModule": {
+      "unpostedAnnotation": {
+        "unpostedResponsibleParty": "Exact Sciences Corporation",
+        "unpostedEvents": [
+          {
+            "type": "RELEASE",
+            "date": "2022-08-31"
+          },
+          {
+            "type": "RESET",
+            "date": "2023-07-26"
+          }
+        ]
+      }
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-04-01",
+      "submissionTracking": {
+        "estimatedResultsFirstSubmitDate": "2022-08-31",
+        "submissionInfos": [
+          {
+            "releaseDate": "2022-08-31",
+            "resetDate": "2023-07-26"
+          }
+        ]
+      }
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D006528",
+          "term": "Carcinoma, Hepatocellular"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D000230",
+          "term": "Adenocarcinoma"
+        },
+        {
+          "id": "D002277",
+          "term": "Carcinoma"
+        },
+        {
+          "id": "D009375",
+          "term": "Neoplasms, Glandular and Epithelial"
+        },
+        {
+          "id": "D009370",
+          "term": "Neoplasms by Histologic Type"
+        },
+        {
+          "id": "D009369",
+          "term": "Neoplasms"
+        },
+        {
+          "id": "D008113",
+          "term": "Liver Neoplasms"
+        },
+        {
+          "id": "D004067",
+          "term": "Digestive System Neoplasms"
+        },
+        {
+          "id": "D009371",
+          "term": "Neoplasms by Site"
+        },
+        {
+          "id": "D004066",
+          "term": "Digestive System Diseases"
+        },
+        {
+          "id": "D008107",
+          "term": "Liver Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

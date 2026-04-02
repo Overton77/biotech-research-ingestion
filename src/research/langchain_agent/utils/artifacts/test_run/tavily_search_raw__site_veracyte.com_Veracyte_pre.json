@@ -1,0 +1,48 @@
+{
+  "query": "site:veracyte.com Veracyte press release study Afirma Decipher Prosigna Percepta Envisia validation",
+  "results": {
+    "query": "Veracyte press release study Afirma Decipher Prosigna Percepta Envisia validation",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "url": "https://investor.veracyte.com/news-releases/news-release-details/veracyte-announces-positive-data-three-afirma-studies-be",
+        "title": "Veracyte Announces Positive Data From Three Afirma Studies to Be ...",
+        "content": "Press Release · Veracyte Announces Positive Data From Three Afirma Studies to Be Presented at World Congress on Thyroid Cancer · Contact Investor",
+        "score": 0.9993436,
+        "raw_content": null
+      },
+      {
+        "url": "https://investor.veracyte.com/news-releases/news-release-details/new-publication-demonstrates-ability-veracytes-decipher-bladder",
+        "title": "New Publication Demonstrates Ability of Veracyte's Decipher ...",
+        "content": "In this multicenter retrospective study, scientists evaluated the use of the Decipher Bladder genomic classifier in a cohort of 601 patients.",
+        "score": 0.9992848,
+        "raw_content": null
+      },
+      {
+        "url": "https://investor.veracyte.com/news-releases/news-release-details/veracyte-announces-new-data-demonstrating-envisia-genomic",
+        "title": "Veracyte Announces New Data Demonstrating That Envisia ...",
+        "content": "In this study, two MDDs were asked to make an IPF or non-IPF diagnosis for 94 patients enrolled in the BRAVE (Bronchial Sample Collection for a",
+        "score": 0.9990073,
+        "raw_content": null
+      },
+      {
+        "url": "https://investor.veracyte.com/news-releases/news-release-details/veracyte-announces-publication-data-demonstrating-clinical",
+        "title": "Veracyte Announces Publication of Data Demonstrating Clinical ...",
+        "content": "The Envisia classifier is a highly accurate, clinically validated molecular test that detects a genomic pattern of usual interstitial pneumonia",
+        "score": 0.9988213,
+        "raw_content": null
+      },
+      {
+        "url": "https://investor.veracyte.com/news-releases/news-release-details/veracyte-announces-new-study-published-jama-surgery-demonstrates",
+        "title": "Press Release - Veracyte Investor Relations",
+        "content": "Veracyte Announces New Study Published in JAMA Surgery Demonstrates Afirma GSC's Ability to Significantly Reduce Unnecessary Surgeries in",
+        "score": 0.9986436,
+        "raw_content": null
+      }
+    ],
+    "response_time": 0.78,
+    "request_id": "2e4b9a55-4b88-4d66-a36a-9886bedca433"
+  }
+}

@@ -28,6 +28,7 @@ from pydantic import BaseModel, Field
 
 from src.research.langchain_agent.agent.config import MissionSliceInput, ResearchPromptSpec
 from src.research.langchain_agent.storage.async_mongo_client import mongo_client
+from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 
 logger = logging.getLogger(__name__)
 
@@ -91,6 +92,10 @@ class ResearchMission(BaseModel):
     run_kg: bool = Field(
         default=False,
         description="Run KG ingestion on completed stage reports after the mission finishes.",
+    )
+    unstructured_ingestion: UnstructuredIngestionConfig = Field(
+        default_factory=UnstructuredIngestionConfig,
+        description="Staged unstructured document ingestion after mission candidate manifests are gathered.",
     )
 
 

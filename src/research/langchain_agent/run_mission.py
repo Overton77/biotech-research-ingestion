@@ -52,6 +52,7 @@ from src.research.langchain_agent.models.mission import (
     MissionStage,
     ResearchMission,
 )
+from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 from src.research.langchain_agent.observability.tracing import mission_tracing_context
 from src.research.langchain_agent.workflow.run_mission import run_mission as run_mission_workflow
 
@@ -107,12 +108,18 @@ def load_mission_from_file(path: Path | str) -> ResearchMission:
             )
         )
 
+    ui_raw = raw.get("unstructured_ingestion")
+    unstructured_ingestion = (
+        UnstructuredIngestionConfig(**ui_raw) if ui_raw else UnstructuredIngestionConfig()
+    )
+
     return ResearchMission(
         mission_id=raw["mission_id"],
         mission_name=raw.get("mission_name", raw["mission_id"]),
         base_domain=raw.get("base_domain", ""),
         stages=stages,
         run_kg=raw.get("run_kg", False),
+        unstructured_ingestion=unstructured_ingestion,
     )
 
 
@@ -284,6 +291,9 @@ async def _submit_to_temporal(
     print(f"Stages completed   : {result.stages_completed}")
     print(f"Stages failed      : {result.stages_failed}")
     print(f"KG ingestions      : {result.kg_ingestions_completed}")
+    if result.unstructured_ingestion:
+        ui = result.unstructured_ingestion
+        print(f"Unstructured       : found={ui.candidates_found}, ingested={ui.candidates_ingested}, failed={ui.candidates_failed}")
     for sr in result.stage_results:
         status_icon = "ok" if sr.status == "completed" else "FAIL"
         report_len = len(sr.final_report_text) if sr.final_report_text else 0

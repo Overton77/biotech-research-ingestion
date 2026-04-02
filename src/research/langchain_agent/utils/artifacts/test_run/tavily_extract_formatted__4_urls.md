@@ -1,882 +1,291 @@
-Meta: request_id=bbbb209e-957d-4553-9872-51c8e2507a24, response_time_s=0.33
+Meta: request_id=b112731a-c1a7-44b2-961e-224fec3aed25, response_time_s=16.72
 
 === Extracted Web Content ===
 [Result 1]
-Title: Sign In →
-URL: https://www.generationlab.com/biomarkers
+Title: Tests
+URL: https://www.veracyte.com/who-we-are/
 Content:
-Sign In →
-Order Now 
-→
+Tests
+  + Products
 
-# 460+ Biomarkers 19 Organs & Systems 1 Comprehensive Test
+    - Breast Cancer Prosigna Breast Cancer Assay
+    - Endocrine Cancer Afirma Genomic Sequencing Classifier
+    - In Pipeline Percepta Nasal Swab Test
+    - Urologic Cancers Decipher Prostate Genomic Classifier
+    - Decipher Bladder Genomic Classifier
+    - Publications
+    - Decipher Portal
+    - Afirma Portal
+    - Contact us
 
-Brain Health & Cognition
+    Let's connect. Explore upcoming events.
+  + Oncology Areas
 
-Gene Symbol: 
-DLGAP2
+    - Cancer Types Thyroid
+    - Prostate
+    - Lung
+    - Breast
+    - Bladder
 
-Immune System
+    - Publications
+    - Decipher Portal
+    - Afirma Portal
+    - Contact us
 
-Gene Symbol: 
-AIRE
+    Let's connect. Explore upcoming events.
+ Innovation
+  + Portfolio & test expansion
+  + Enabling global access
+  + MRD technology
 
-Reproductive System
+  2024 Corporate Presentation
+ Company
+  + About Us [...] Our tests are available in the US through our central laboratories. We are also making our tests accessible to patients worldwide through other laboratories that can perform them locally.
 
-Gene Symbol: 
-KCNQ1
+### Our vision
 
-Cardiac System
+To transform cancer care for patients all over the world
 
-Gene Symbol: 
-KCNQ1
+### Our promise
 
-Inflammatory Regulation
+To empower clinicians with the high-value insights they need to guide and assure patients at pivotal moments in the race to diagnose and treat cancer
 
-Gene Symbol: 
-AIRE
+>800K
 
-Gene Symbol: 
-PRDM16
+Our tests have benefited over 800,000 patients.1
 
-Tissue Regeneration
+### J.P. Morgan Healthcare Conference
 
-Gene Symbol: 
-NGF
+Read our latest presentation on strategy, results and more.
 
-Blood Sugar & Insulin Control
+View presentation
 
-Gene Symbol: 
-KCNQ1
+## Our Values
 
-Hepatic System (Liver)
+The fundamental beliefs that guide our team and drive our mission to transform cancer care:
 
-Gene Symbol: 
-KCNQ1
+ We are stronger together
+ We seek a better way
+ We care deeply
+ We make it happen [...] Annual reports
 
-Muscular System
+# Who we are
 
-Gene Symbol: 
-KY
+## About Veracyte
 
-Skeletal System
+Veracyte is a global diagnostics company that empowers clinicians with the high-value insights they need to guide and assure patients at pivotal moments in the race to diagnose and treat cancer. We collaborate closely with physicians and researchers to identify unmet needs that stand in the way of better care. And then, we find the answers.
 
-Gene Symbol: 
-AIRE
+Our high-performing tests enable clinicians to make more confident diagnostic, prognostic and treatment decisions for challenging diseases. These include thyroid, prostate, breast, bladder and lung cancers. We help patients avoid unnecessary procedures and speed time to diagnosis and appropriate treatment. [...] ## Join our team
 
-Nervous System
+Veracyte offers fulfilling career opportunities for curious, driven, and patient-oriented people who are inspired to find answers to some of the most challenging questions in medicine. Join us.
 
-Gene Symbol: 
-GAK
+Working at Veracyte
 
-Respiratory System
+View Job Openings
 
-Gene Symbol: 
-KCNQ1
+## Keep exploring
 
-Digestive System
+Our Leadership
 
-Gene Symbol: 
-AIRE
+Meet the experts driving innovation
 
-Blood & Vascular System
+Events
 
-Gene Symbol: 
-KCNB2
+Connect with us at upcoming conferences
 
-Urinary System
+Press Releases
 
-Gene Symbol: 
-SOX2OT
+Stay informed on our latest updates
 
-Oncogenesis (Cell Mutation)
+Contact Us
 
-Gene Symbol: 
-KCNQ1 [...] Oncogenesis (Cell Mutation)
+Get in touch with our team
 
-Gene Symbol: 
-KCNQ1
+REFERENCES
 
-Fibrosis (Scar Tissue Formation)
-
-Gene Symbol: 
-NGF
-
-Auditory System
-
-Gene Symbol: 
-AIRE
-
-Brain Health & Cognition
-
-Gene Symbol: 
-OTX1
-
-Immune System
-
-Gene Symbol: 
-AHSG
-
-Reproductive System
-
-Gene Symbol: 
-FGF1
-
-Cardiac System
-
-Gene Symbol: 
-CHD5
-
-Inflammatory Regulation
-
-Gene Symbol: 
-TNF
-
-Metabolism
-
-Gene Symbol: 
-KCNQ1
-
-Tissue Regeneration
-
-Gene Symbol: 
-SEMA6A
-
-Blood Sugar & Insulin Control
-
-Gene Symbol: 
-AHSG
-
-Hepatic System (Liver)
-
-Gene Symbol: 
-AHSG
-
-Muscular System
-
-Gene Symbol: 
-DMD
-
-Skeletal System
-
-Gene Symbol: 
-GH2
-
-Nervous System
-
-Gene Symbol: 
-CHD5
-
-Respiratory System
-
-Gene Symbol: 
-TNF
-
-Digestive System
-
-Gene Symbol: 
-NGF
-
-Blood & Vascular System
-
-Gene Symbol: 
-MYBPC3
-
-Urinary System
-
-Gene Symbol: 
-BBS9 [...] Gene Symbol: 
-MYBPC3
-
-Urinary System
-
-Gene Symbol: 
-BBS9
-
-Oncogenesis (Cell Mutation)
-
-Gene Symbol: 
-NGF
-
-Fibrosis (Scar Tissue Formation)
-
-Gene Symbol: 
-PRDM16
-
-Auditory System
-
-Gene Symbol: 
-OTX1
-
-Brain Health & Cognition
-
-Gene Symbol: 
-CHD5
-
-Immune System
-
-Gene Symbol: 
-S100A2
-
-Reproductive System
-
-Gene Symbol: 
-TNF
-
-Cardiac System
-
-Gene Symbol: 
-DMD
-
-Inflammatory Regulation
-
-Gene Symbol: 
-NOTCH4
-
-Metabolism
-
-Gene Symbol: 
-AHSG
-
-Tissue Regeneration
-
-Gene Symbol: 
-FGF1
-
-Blood Sugar & Insulin Control
-
-Gene Symbol: 
-PTPRN2
-
-Hepatic System (Liver)
-
-Gene Symbol: 
-GAK
-
-Muscular System
-
-Gene Symbol: 
-CACNA2D4
-
-Skeletal System
-
-Gene Symbol: 
-FGF1
-
-Nervous System
-
-Gene Symbol: 
-CACNG3
-
-Respiratory System
-
-Gene Symbol: 
-IL1RN
-
-Digestive System
-
-Gene Symbol: 
-TREH
-
-Blood & Vascular System [...] Respiratory System
-
-Gene Symbol: 
-CDH23
-
-Digestive System
-
-Gene Symbol: 
-TNF
-
-Blood & Vascular System
-
-Gene Symbol: 
-PTPRS
-
-Urinary System
-
-Gene Symbol: 
-MEPE
-
-Oncogenesis (Cell Mutation)
-
-Gene Symbol: 
-TNF
-
-Fibrosis (Scar Tissue Formation)
-
-Gene Symbol: 
-TNF
-
-Auditory System
-
-Gene Symbol: 
-VIPR2
-
-Brain Health & Cognition
-
-Gene Symbol: 
-NKX2-8
-
-Immune System
-
-Gene Symbol: 
-IL1RN
-
-Reproductive System
-
-Gene Symbol: 
-CHRNA2
-
-Cardiac System
-
-Gene Symbol: 
-TNF
-
-Inflammatory Regulation
-
-Gene Symbol: 
-TOLLIP
-
-Metabolism
-
-Gene Symbol: 
-PRKAG2
-
-Tissue Regeneration
-
-Gene Symbol: 
-NOTCH4
-
-Blood Sugar & Insulin Control
-
-Gene Symbol: 
-TNF
-
-Hepatic System (Liver)
-
-Gene Symbol: 
-CYP2D6
-
-Muscular System
-
-Gene Symbol: 
-GRM4
-
-Skeletal System
-
-Gene Symbol: 
-SLC51B
-
-Nervous System
-
-Gene Symbol: 
-SYTL2 [...] Gene Symbol: 
-TREH
-
-Blood & Vascular System
-
-Gene Symbol: 
-PRDM16
-
-Urinary System
-
-Gene Symbol: 
-KCNT1
-
-Oncogenesis (Cell Mutation)
-
-Gene Symbol: 
-FGF1
-
-Fibrosis (Scar Tissue Formation)
-
-Gene Symbol: 
-LOXL3
-
-Auditory System
-
-Gene Symbol: 
-KCNQ1
-
-Brain Health & Cognition
-
-Gene Symbol: 
-CPLX2
-
-Immune System
-
-Gene Symbol: 
-TNF
-
-Reproductive System
-
-Gene Symbol: 
-ADAM18
-
-Cardiac System
-
-Gene Symbol: 
-FGF1
-
-Inflammatory Regulation
-
-Gene Symbol: 
-IL1RN
-
-Metabolism
-
-Gene Symbol: 
-TREH
-
-Tissue Regeneration
-
-Gene Symbol: 
-TNF
-
-Blood Sugar & Insulin Control
-
-Gene Symbol: 
-TREH
-
-Hepatic System (Liver)
-
-Gene Symbol: 
-NOTCH4
-
-Muscular System
-
-Gene Symbol: 
-IL1RN
-
-Skeletal System
-
-Gene Symbol: 
-NOTCH4
-
-Nervous System
-
-Gene Symbol: 
-CPLX2
-
-Respiratory System
-
-Gene Symbol: 
-CDH23
-
-Digestive System
+1. Company data on file as of 9/30/2025.
+2. Cancer. World Health Organization. Published February 3, 2022. Accessed July 19, 2023. 
+3. Thyroid Cancer – Statistics. Cancer.Net. Accessed July 19, 2023. 
+4. Bladder Cancer. International Agency for Research on Cancer. Accessed July 19, 2023.
 
 [Result 2]
-Title: Sign In →Order Now →
-URL: https://www.generationlab.com/science
+Title: [![Veracyte home](https://www.veracyte.com/wp-content/themes/veracyte/build/images/veracyte-logo-multicolor.png)](/)
+URL: https://www.veracyte.com/about/leadership
 Content:
-Sign In →Order Now →
+[![Veracyte home](https://www.veracyte.com/wp-content/themes/veracyte/build/images/veracyte-logo-multicolor.png)](/)
 
-# The Cutting-Edge Science Behind SystemAge™
+* Tests
+  + Products
 
-SystemAge uses 20 years of research by Dr. Irina Conboy to measure aging with organ-level precision with AI-powered Epigenetics.
+    - [Breast Cancer Prosigna Breast Cancer Assay](https://www.veracyte.com/prosigna/)
+    - [Endocrine Cancer Afirma Genomic Sequencing Classifier](https://www.veracyte.com/afirma/)
+    - [In Pipeline Percepta Nasal Swab Test](https://www.veracyte.com/percepta-nasal-swab/)
+    - [Urologic Cancers Decipher Prostate Genomic Classifier](https://www.veracyte.com/decipher-prostate/)
+    - [Decipher Bladder Genomic Classifier](https://www.veracyte.com/decipher-bladder/)
+    - [Publications](https://www.veracyte.com/publications/)
+    - [Decipher Portal](https://portal.decipherbio.com/)
+    - [Afirma Portal](https://portal.veracyte.com/)
+    - [Contact us](https://www.veracyte.com/contact/)
 
-Test Now →Test Your Biological Age Now →
+    [![](https://www.veracyte.com/wp-content/uploads/2025/05/veracyte-upcoming-events.jpg)
 
-Entropy Curve
+    Let's connect. Explore upcoming events.](https://www.veracyte.com/events/)
+  + Oncology Areas
 
-Biological Age
+    - [Cancer Types Thyroid](https://www.veracyte.com/thyroid-cancer/)
+    - [Prostate](https://www.veracyte.com/prostate-cancer/)
+    - [Lung](https://www.veracyte.com/lung-cancer/)
+    - [Breast](https://www.veracyte.com/breast-cancer/)
+    - [Bladder](https://www.veracyte.com/bladder-cancer/)
 
-Where science meets longevity
+    - [Publications](https://www.veracyte.com/publications/)
+    - [Decipher Portal](https://portal.decipherbio.com/)
+    - [Afirma Portal](https://portal.veracyte.com/)
+    - [Contact us](https://www.veracyte.com/contact/)
 
-## The Gold Standard in Biological Age Testing
+    [![](https://www.veracyte.com/wp-content/uploads/2025/05/veracyte-upcoming-events.jpg)
 
-Your full-body aging profile, decoded
+    Let's connect. Explore upcoming events.](https://www.veracyte.com/events/)
+* Innovation
+  + [Portfolio & test expansion](https://www.veracyte.com/portfolio/)
+  + [Enabling global access](https://www.veracyte.com/enabling-global-access/)
+  + [MRD technology](https://www.veracyte.com/mrd-technology/)
 
-## 19 Organ Systems, 1 Simple Test
+  [![](https://www.veracyte.com/wp-content/uploads/2025/05/q4-presentation-Promo.jpg)
 
-Our proprietary 460-biomarker panel delivers the most comprehensive aging profile available today. We don't just measure aging. We show you how to reverse it.
+  2024 Corporate Presentation](https://investor.veracyte.com/static-files/0eb0704f-7e1d-4016-87b7-95ee0087f7a4)
+* Company
+  + About Us
 
-1. Auditory System
+    - [Who we are](https://www.veracyte.com/who-we-are/)
+    - [Leadership](https://www.veracyte.com/leadership/)
+    - [Corporate recognition](https://www.veracyte.com/corporate-recognition/)
+  + News & Events
 
-2. Cardiac System
+    - [Events](https://www.veracyte.com/events/)
+    - [Press releases](https://investor.veracyte.com/press-releases)
+    - [In the news](https://www.veracyte.com/in-the-news/)
 
-3. Blood & Vascular System
+    [![](https://www.veracyte.com/wp-content/uploads/2023/09/Navigation_CTA_Who-We-Are.png)
 
-4. Hepatic System (Liver)
+    Who we are](https://www.veracyte.com/who-we-are/)
+  + [Working at Veracyte](https://www.veracyte.com/working-at-veracyte/)
+  + [Contact us](https://www.veracyte.com/contact/)
+* [Careers](https://www.veracyte.com/careers/)
+* Investors
+  + [Overview](https://investor.veracyte.com/)
+  + [Press releases](https://investor.veracyte.com/press-releases)
+  + [Events & presentations](https://investor.veracyte.com/events-presentations)
+  + Financials
 
-5. Muscular System
+    - [SEC filings](https://investor.veracyte.com/financials/sec-filings)
+    - [Quarterly results](https://investor.veracyte.com/financials/quarterly-results)
+    - [Annual reports](https://investor.veracyte.com/financials/annual-reports)
+    - [Stock information](https://investor.veracyte.com/financials/stock-information)
+    - [Analyst coverage](https://investor.veracyte.com/financials/analyst-coverage)
 
-6. Skeletal System
+    [![](https://www.veracyte.com/wp-content/uploads/2023/11/Navigation_CTA_ESG.jpeg)
 
-7. Nervous System
+    ESG information](https://investor.veracyte.com/governance/esg-information)
+  + Governance
 
-8. Brain Health & Cognition
+    - [Governance overview](https://investor.veracyte.com/governance/governance-overview)
+    - [Board of directors](https://www.veracyte.com/leadership/#board_of_directors)
+    - [Committee composition](https://investor.veracyte.com/governance/committee-composition)
+    - [Leadership](https://www.veracyte.com/leadership/#executive_team)
+    - [ESG information](https://investor.veracyte.com/governance/esg-information)
 
-9. Respiratory System [...] 8. Brain Health & Cognition
+    [![](https://www.veracyte.com/wp-content/uploads/2023/11/Navigation_CTA_Annual-Reports.jpeg)
 
-9. Respiratory System
+    Annual reports](https://investor.veracyte.com/financials/annual-reports)
+  + Investor resources
 
-10. Blood Sugar & Insulin Control
+    - [Investor FAQs](https://investor.veracyte.com/investor-resources/investor-faqs)
+    - [Information request](https://investor.veracyte.com/investor-resources/information-request)
+    - [Email alerts](https://investor.veracyte.com/investor-resources/email-alerts)
 
-11. Immune System
+    [![](https://www.veracyte.com/wp-content/uploads/2023/11/Navigation_CTA_Annual-Reports.jpeg)
 
-12. Oncogenesis (Cell Mutation)
+    Annual reports](https://investor.veracyte.com/financials/annual-reports)
 
-13. Metabolism
+# Leadership
 
-14. Inflammatory Regulation
+* Executive team
+* Board of directors
 
-15. Tissue Regeneration
+## Executive team
 
-16. Fibrosis (Scar Tissue Formation)
+[![](https://www.veracyte.com/wp-content/uploads/2025/08/Marc_Stapley-1.jpg)
 
-17. Digestive System
+### Marc Stapley
 
-18. Urinary System
-
-19. Reproductive System
-
-Stop waiting for symptoms to start
-
-## Detect Disease Early, Before it Manifests
-
-Aging is the root cause of most chronic illness. SystemAge is the first and only clinically validated test that detects early biological risks—before you feel a thing.
-
-Your body speaks before disease strikes. We help you listen.
-
-Entropy Curve
-
-Turning health data into real decisions
-
-## Personalization Powered by Our Recommender Engine™ [...] GeroScience
-
-### GeroScience - Jan 18, 2025
-
-DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
-
-Read Paper
-
-PubMed
-
-### PubMed - Dec 11, 2024
-
-The dominance of old blood, and age-related increase in protein production and noise
-
-Read Paper
-
-Aging
-
-### Aging - Sep 12, 2023
-
-Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
-
-Read Paper
-
-Cell Cycle
-
-### Cell Cycle - Jun 15, 2012
-
-Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches
-
-Read Paper
-
-Cell Stem Cell
-
-### Cell Stem Cell - Jan 10, 2008 [...] Dr. George Church, PhD
-
-The Robert Winthrop Professor of Genetics at Harvard Medical School
-
-Generation Lab's organ-level biological age test could define preventative medicine - helping us to catch aging before it leads to disease.
-
-Dr. George Church, PhD
-
-The Robert Winthrop Professor of Genetics at Harvard Medical School
-
-Dr. Robert Langer, PhD
-
-Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
-
-Irina has made significant contributions to Aging Science. her peer reviewed paper on Nature and Science have been cited for 4000 times.
-
-Dr. Robert Langer, PhD
-
-Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
-
-Dr. David Sinclair, AO, PhD
-
-Professor of Genetics, Harvard Medical School [...] Generation Lab's organ-level biological age test could define preventative medicine - helping us to catch aging before it leads to disease.
-
-Dr. George Church, PhD
-
-The Robert Winthrop Professor of Genetics at Harvard Medical School
-
-Dr. Robert Langer, PhD
-
-Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
-
-Irina has made significant contributions to Aging Science. her peer reviewed paper on Nature and Science have been cited for 4000 times.
-
-Dr. Robert Langer, PhD
-
-Professor at MIT, Co-founder of Moderna, pioneer in drug delivery and regenerative medicine
-
-Dr. David Sinclair, AO, PhD
-
-Professor of Genetics, Harvard Medical School
-
-Dr. Conboy’s work proved that factors in blood control and reverse lifespan — not just in mice, but in humans.
+Chief Executive Officer](https://www.veracyte.com/?post_type=team-membe …[truncated]
 
 [Result 3]
-Title: BETA
-URL: https://www.generationlab.com/the-systemage-test
+Title: The Company’s headquarters are in South San Francisco, California, and it has operations in San Diego, California, Austin, Texas, and Haifa, Israel.
+URL: https://www.sec.gov/Archives/edgar/data/0001384101/000138410126000010/vcyt-20251231.htm
 Content:
-BETA
+The Company’s headquarters are in South San Francisco, California, and it has operations in San Diego, California, Austin, Texas, and Haifa, Israel.
 
-### Ongoing Support
+The Company currently offers tests in prostate cancer (Decipher Prostate); thyroid cancer (Afirma); breast cancer (Prosigna); and bladder cancer (Decipher Bladder). In addition, the Company’s Percepta Nasal Swab test is being run in its Clinical Laboratory Improvement Amendments of 1988, or CLIA, certified lab in support of clinical studies. [...] The majority of our revenue presently comes from sales of our Decipher Prostate and Afirma tests. In the near-term, we are focused on continuing to expand Decipher Prostate's penetration and leadership position while also sustaining strong growth for Afirma. We are also focused on investing in innovation to drive durable growth over the medium and long term. In particular, we are prioritizing the following growth drivers: the launch of TrueMRD, our minimal residual disease, or MRD, platform to expand our reach further across the cancer care continuum and the launch of Prosigna as an LDT for the U.S. market to be able to serve more patients in the United States who face a breast cancer diagnosis. In addition, we are focused on longer term growth drivers like the launch of IVD products for [...] In addition, our ability to sustain profitability depends on a number of factors, including but not limited to:
 
-Support you throughout your anti-aging journey, answering questions and updating your Action Plan as needed
+•generating sufficient revenue from our existing diagnostic tests;
 
-### From Dr. Irina Conboy
+•developing and publishing evidence that our tests are informing clinical decisions and receiving positive coverage decisions by payers;
 
-Co-Founder & CSO at Generation Lab
+•launching and commercializing new tests and products;
 
-In this video, Dr. Irina Conboy talks about the science behind epigenetic testing and the scientific development of the SystemAge Test™
+•maintaining effective relationships with our payers; and
 
-Full-Body Aging Insights
+•receiving regulatory approval for our tests and products.
 
-## 460 Biomarkers 19 Systems 1 Complete Profile
+We depend on a few payers for a significant portion of our revenue; if one or more significant payers stops providing reimbursement or decreases the amount of reimbursement for our tests, our revenue could decline. [...] Cash, Cash Equivalents and Restricted Cash:
 
-The first test to Test, Track, and Intervene   
-the causes of aging at an individual level.
+|  |
 
-Measuring Biological Noise
+| December 31, |
+|  | 2025 | 2024 | 2023 |
+| Cash and cash equivalents | $ | 362,578 | $ | 239,087 | $ | 216,454 |
+| Restricted cash | 1,648 | 1,544 | 876 |
+| Total cash, cash equivalents and restricted cash | $ | 364,226 | $ | 240,631 | $ | 217,330 |
 
-## What our tests reveal
+The accompanying notes are an integral part of these consolidated financial statements.
 
-Our test serves as a DNA methylation noise detector, uncovering and measuring biological noise within your body to accurately gauge your biological age.
+87
 
-DNA Methylation Noise Detection
+Table of Contents
 
-1
+VERACYTE, INC.
 
-### Top Aging Factors [...] Sign In →
-Order Now 
-→
+Notes to Consolidated Financial Statements
 
-At-Home Blood Collection Kit
+1. Organization and Description of Business
 
-# The SystemAge™ Test + Action Plan
-
-Subscribe & Save
-
-10% off
-
-$447
-
-Stay in sync with your cellular rhythm. Get recurring tests to fine-tune habits, track progress, and adapt with precision—no guesswork anymore.
-
-Test delivery frequency:
-
-Before & After Bundle
-
-from
-
-$958
-
-One-time Purchase
-
-Total: 
-$447
-billed every 2 months
-
-## What’s included in every kit
-
-### The SystemAge™ Test
-
-The at-home test to reveal the exact biological age and aging speed of 19 of your organs and systems, based on DNA analysis
-
-### Personalized Action Plan
-
-A personalized Action Plan based on your results to slow and reverse your aging
-
-### Clinician Consultation
-
-Speak with a longevity clinician about your results
-
-BETA
-
-### Ongoing Support [...] DNA Methylation Noise Detection
-
-1
-
-### Top Aging Factors
-
-Uncover aging factors across seven body systems and twelve organs, providing the foundation for precise intervention plans.
-
-2
-
-### Aging Stressors
-
-Cumulative molecular stressors contribute to accelerated aging. We measure this pressure to gain comprehensive insights into the pace of aging.
-
-3
-
-### Aging Trajectory
-
-Gain precise insights into aging progress, evaluate the efficacy of intervention plans, and proactively prevent disease for a healthier life.
-
-• Biological Noise •
-
-Proven Accuracy
-
-## Outperforming Competitors
-
-### Accuracy
-
-Generation Lab
-
-99.9% cellular-level precision
-
-Traditional Labs
-
-Accurate, not at cellular level
-
-Bio Clocks
-
-∼ 58%
-
-### Actionable
-
-Generation Lab
-
-Personalized Action Plan based on results [...] Personalized Action Plan based on results
-
-Identifies risks before diseases develop
-
-Access to our trusted clinician network
-BETA
-
-Easy-to-use app with 24/7 AI Health Coach
-
-Traditional Labs
-
-Accurate, not at cellular level
-
-No actionable items
-
-Only detects formed diseases
-
-No integrated platform
-
-Paper report with limited information
-
-Bio Clocks
-
-∼ 58%
-
-Generic recommendations
-
-Limited predictive capability
-
-—
-
-—
-
-## How does the SystemAge™ Test work?
-
-### 01 Easy At-Home Test
-
-### 02 Get Your SystemAge Report + Action Plan
-
-### 03 Consult with Professionals + Retest
-
-How does the
-SystemAge™ Test
-work?
-
-01
-Easy At-Home Test
-
-02
-Get Your SystemAge Report + Action Plan
-
-03
-Consult with Professionals + Retest
-
-## A personalized Action Plan based on test results [...] Generation Lab showed my lungs were aging fast. I followed up with my doctor and found a small nodule early, catching it before it got serious.
-
-Mike
-
-Tech | 45 year-old
-
-Generation Lab’s organ-level biological age test could define preventative medicine—helping us to catch aging before it leads to disease.
-
-Dr. George Church, PhD
-
-The Robert Winthrop Professor of Genetics at Harvard Medical School
-
-As a busy mom at 35, staying healthy is crucial for both me and my family. Finding the right diet has been a challenge. But Generation Lab is a game changer! It's given me clear insights and control over my health. Thrilled to have found it!
-
-Designer | 35 year-old
+Veracyte, Inc., or Veracyte, or the Company, is a global diagnostics company that provides clinicians with tests for patients with, or potentially facing, a cancer diagnosis. Veracyte's tests are used by clinicians for diagnostic, prognostic and treatment decisions.
 
 [Result 4]
-Title: [Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
-URL: https://www.generationlab.com/published-research
+Title: Fourth Quarter 2025 Financial Results
+URL: https://investor.veracyte.com/news-releases/news-release-details/veracyte-announces-fourth-quarter-and-full-year-2025-financial
 Content:
-[Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
+Fourth Quarter 2025 Financial Results
 
+Total revenue for the fourth quarter of 2025 was $140.6 million, an increase of 19% compared to $118.6 million reported in the fourth quarter of 2024. Testing revenue was $135.8 million, an increase of 21% compared to $112.2 million in the fourth quarter of 2024, driven by growth in our Decipher Prostate and Afirma tests. Product revenue was $3.8 million, an increase of 27% compared to $3.0 million in the fourth quarter of 2024. Biopharmaceutical and other revenue was $1.0 million, a decrease compared to $3.5 million in the fourth quarter of 2024 given the restructuring and liquidation proceedings of Veracyte SAS. [...] Adjusted EBITDA for the fourth quarter of 2025 was $42.3 million, an improvement of 62% compared to the fourth quarter of 2024, representing 30.1% of revenue compared to 22.0% of revenue in the same period of 2024.
 
+Full Year 2025 Financial Results
 
-## Published Research
+Total revenue for 2025 was $517.1 million, an increase of 16% compared to $445.8 million reported in 2024. Testing revenue was $493.2 million, an increase of 18% compared to $419.0 million in 2024, driven by growth in our Decipher Prostate and Afirma tests. Product revenue was $14.3 million, an increase of 5% compared to $13.7 million in 2024. Biopharmaceutical and other revenue was $9.7 million, a decrease compared to $13.2 million in 2024 given the restructuring and liquidation proceedings of Veracyte SAS. [...] VERACYTE, INC.
+CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS
+(Unaudited)
+(In thousands, except share and per share amounts)
 
-Dive into the scientific foundation of our tests through decades of rigorous research and peer-reviewed studies published in leading journals.
+Three Months Ended 
 
-GeroScience
+December 31 Twelve Months Ended 
 
-### GeroScience - Jan 18, 2025
-
-DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
-
-[Read Paper](https://link.springer.com/article/10.1007/s11357-024-01460-1)
-
-PubMed
-
-### PubMed - Dec 11, 2024
-
-The dominance of old blood, and age-related increase in protein production and noise
-
-[Read Paper](https://pubmed.ncbi.nlm.nih.gov/39672207/)
-
-Aging
-
-### Aging - Sep 12, 2023
-
-Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
-
-[Read Paper](https://pubmed.ncbi.nlm.nih.gov/37702598/)
-
-Cell Cycle
-
-### Cell Cycle - Jun 15, 2012
-
-Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches
-
-[Read Paper](https://www.tandfonline.com/doi/full/10.4161/cc.20437)
-
-Cell Stem Cell
-
-### Cell Stem Cell - Jan 10, 2008
-
-A Temporal Switch from Notch to Wnt Signaling in Muscle Stem Cells Is Necessary for Normal Adult Myogenesis
-
-[Read Paper](https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(07)00223-8)
-
-Nature
-
-### Nature - Feb 17, 2005
-
-Rejuvenation of aged progenitor cells by exposure to a young systemic environment
-
-[Read Paper](https://www.nature.com/articles/nature03260)
-
-## Experience the science
-
-Discover your true biological age with our revolutionary testing technology.
-
-[Test Your Biological Age Now →](/the-systemage-test)
+December 31
+2025 2024 2025 2024
+Revenue:
+Testing revenue$135,826$112,152$493,154$418,961
+Product revenue 3,848 3,019 14,327 13,650
+Biopharmaceutical and other revenue 962 3,461 9,664 13,153
+Total revenue 140,636 118,632 517,145 445,764 [...] This press release contains forward-looking statements, including, but not limited to our statements related to our plans, objectives, and expectations (financial and otherwise), including with respect to our 2026 financial and operating results; and our intentions with respect to our tests and products, including upcoming product launches. Forward-looking statements can be identified by words such as: “appears,” “anticipate,” “intend,” “plan,” “expect,” “believe,” “should,” “may,” “could,” “would,” “will,” “enable,” “positioned,” “offers,” “designed,” “ultimately,” “strategic,” “outlook,” “guidance,” and similar references to future periods. Actual results may differ materially from those projected or suggested in any forward-looking statements. These statements involve risks and

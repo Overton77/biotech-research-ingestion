@@ -35,6 +35,7 @@ from src.infrastructure.temporal.client import get_temporal_client
 from src.infrastructure.temporal.activities.research_mission import (
     execute_research_stage,
     ingest_kg_from_report,
+    ingest_unstructured_documents,
 )
 from src.infrastructure.temporal.workflows.research_mission import (
     ResearchMissionWorkflow,
@@ -76,6 +77,7 @@ async def main() -> None:
         activities=[
             execute_research_stage,
             ingest_kg_from_report,
+            ingest_unstructured_documents,
         ],
     )
 

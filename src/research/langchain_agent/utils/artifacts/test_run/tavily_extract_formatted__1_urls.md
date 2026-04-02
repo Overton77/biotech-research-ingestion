@@ -1,134 +1,70 @@
-Meta: request_id=f51b9f71-6c22-42a9-a63e-71c221ee1c18, response_time_s=0.01
+Meta: request_id=4797a73f-6c37-43c5-991c-8a46ba9fed00, response_time_s=5.82
 
 === Extracted Web Content ===
 [Result 1]
-Title: [Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
-URL: https://www.generationlab.com/about
+Title: The number of shares outstanding of the Registrant’s $0.01 par value Common Stock as of February 12, 2026 was 190,888,211.
+URL: https://www.sec.gov/Archives/edgar/data/1124140/000112414026000011/exas-20251231.htm
 Content:
-[Sign In →](https://portal.generationlab.com/portal/signup)[Order Now →](/the-systemage-test)
+The number of shares outstanding of the Registrant’s $0.01 par value Common Stock as of February 12, 2026 was 190,888,211.
 
-# On A Mission To Help People Live Younger, Longer
+DOCUMENT INCORPORATED BY REFERENCE
 
-We're living in exciting times, when aging is reversible and diseases can be prevented.
+None.
 
-Our Mission
+  
 
-## Creating the Ageless Generation.
+Table of Contents
 
-Two decades of aging science meets AI. Control your aging biology.
+EXACT SCIENCES CORPORATION
 
-Trusted by authorities in longevity science
+ANNUAL REPORT ON FORM 10‑K
 
-## Medical & Scientific Advisory Board includes
+YEAR ENDED DECEMBER 31, 2025 [...] 3
 
-Dr. George Church, PhD
+  
 
-The Robert Winthrop Professor of Genetics at Harvard Medical School
+Table of Contents
 
-Dr. Adeel Khan, MD
+Item 1.Business
 
-Regenerative Medicine Doctor, CEO & Founder of Eterna Health
+Overview
 
-Dr. Aubrey de Grey
+A leading provider of cancer screening and diagnostic tests, Exact Sciences Corporation (together with its subsidiaries, “Exact,” “we,” “us,” “our” or the “Company”) gives patients and health care professionals the clarity needed to take life-changing action earlier. Building on the success of the Cologuard® and Oncotype DX® tests, we are investing in our pipeline to develop innovative solutions for use before, during, and after a cancer diagnosis. 
 
-Biomedical Gerontologist, Co-founder of SENS Research Foundation
+During 2025, we achieved many milestones, including:
 
-Dr. George Church, PhD
+•delivering more than 5.5 million results to patients with our portfolio of cancer tests, 
 
-The Robert Winthrop Professor of Genetics at Harvard Medical School
+•being recognized as a Great Place to Work for the seventh consecutive year, [...] Table of Contents
 
-Dr. Adeel Khan, MD
+UNITED STATES
 
-Regenerative Medicine Doctor, CEO & Founder of Eterna Health
+SECURITIES AND EXCHANGE COMMISSION
 
-Dr. Aubrey de Grey
+Washington,D.C.20549
 
-Biomedical Gerontologist, Co-founder of SENS Research Foundation
+ _____________________________________________________________________________ 
 
-Driven by passion, united by purpose
+FORM 10-K
+☒ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+For the fiscal year ended: December 31, 2025
+☐TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
 
-## Meet Our Founders
+Commission file number 001-35092
 
-Co-Founder & CSO
+ _____________________________________________________________________________ 
 
-Dr. Irina Conboy, PhD
+EXACT SCIENCES CORPORATION
 
-Pioneer of the science of longevity, UC Berkeley Bioengineering Professor, inventor of the rejuvenating effects of parabiosis, 20+ years leading aging science breakthroughs.
+(Exact name of registrant as specified in its charter)
+Delaware
 
-Co-Founder & CEO
+(State or other jurisdiction of
 
-Alina Rui Su
+incorporation or organization)
 
-Former Harvard Medical School PhD candidate and Forbes 30 Under 30 honoree, first medical device patent at age 15.
+5505 Endeavor Lane, Madison, Wisconsin
 
-Co-Founder & COO
+(Address of principal executive offices)02-0478229
 
-Michael Suswal
-
-Co-founder of Standard AI ($1.5B) and former Y Combinator founder backed by SoftBank.
-
-Co-Founder & CSO
-
-Dr. Irina Conboy, PhD
-
-Pioneer of the science of longevity, UC Berkeley Bioengineering Professor, inventor of the rejuvenating effects of parabiosis, 20+ years leading aging science breakthroughs.
-
-Co-Founder & CEO
-
-Alina Rui Su
-
-Former Harvard Medical School PhD candidate and Forbes 30 Under 30 honoree, first medical device patent at age 15.
-
-Co-Founder & COO
-
-Michael Suswal
-
-Co-founder of Standard AI ($1.5B) and former Y Combinator founder backed by SoftBank.
-
-As featured in
-
-Peer-Reviewed Publications
-
-Backed by
-
-## Our Scientific Principles
-
-The principles that guide everything we do at Generation Lab
-
-### Science-first
-
-We ground everything in evidence-based research and maintain the highest standards of scientific integrity.
-
-### Human-Centered Innovation
-
-We develop technology that enhances human potential. Every product we create is designed with deep empathy for people.
-
-### Longevity for All
-
-Our mission is to democratize longevity technologies and make them available across socioeconomic boundaries.
-
-### Long-Term Impact
-
-Our focus extends beyond immediate commercial success to creating lasting improvements in human health and longevity.
-
-### Science-first
-
-We ground everything in evidence-based research and maintain the highest standards of scientific integrity.
-
-### Human-Centered Innovation
-
-We develop technology that enhances human potential. Every product we create is designed with deep empathy for people.
-
-### Longevity for All
-
-Our mission is to democratize longevity technologies and make them available across socioeconomic boundaries.
-
-### Long-Term Impact
-
-Our focus extends beyond immediate commercial success to creating lasting improvements in human health and longevity.
-
-## Experience the science
-
-Discover your true biological age with our revolutionary testing technology.
-
-[Test Your Biological Age Now →](/the-systemage-test)
+(IRS Employer

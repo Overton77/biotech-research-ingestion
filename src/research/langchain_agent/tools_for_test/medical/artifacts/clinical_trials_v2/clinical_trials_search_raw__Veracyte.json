@@ -1,0 +1,482 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06990542",
+          "briefTitle": "Image-guided, Tumor-focused Radiotherapy Treatment in Intermediate and High-risk Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of California, San Diego",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "RADIATION",
+              "name": "Image-guided tumor-focused radiation therapy",
+              "description": "Image-guided tumor-focused radiation therapy",
+              "armGroupLabels": [
+                "Tumor-focused radiotherapy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04396808",
+          "briefTitle": "Genomics in Michigan to AdJust Outcomes in Prostate canceR (G-MAJOR) for Men With Newly Diagnosed Favorable Risk Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Michigan Rogel Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Decipher",
+              "description": "The Decipher test (GenomeDx Biosciences) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "Decipher Prostate Cancer Classifier"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Prolaris",
+              "description": "The Prolaris test (Myriad Genetics, Inc.) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "Prolaris Prostate Cancer Test"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Oncotype Dx Genomic Prostate Score (GPS)",
+              "description": "The Oncotype Dx GPS test (Exact Sciences corp.) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Standard of care (askMUSIC score)",
+              "description": "AskMUSIC is a risk calculator based on standard clinical and pathologic variables (https://ask.musicurology.com/) and is generally included as part of routine clinical care.",
+              "armGroupLabels": [
+                "Standard of care (no pre-treatment genomics testing)",
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "askMUSIC score"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02609269",
+          "briefTitle": "Decipher Genomics Resource for Intelligent Discovery"
+        },
+        "statusModule": {
+          "overallStatus": "ENROLLING_BY_INVITATION"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "GenomeDx Biosciences Corp",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer",
+            "Bladder Cancer",
+            "Renal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Decipher Cancer Classifier",
+              "description": "The Decipher are gene expression-based tests that are used to better risk stratify or characterize tumor biology that are commercially available through Veracyte, Inc CLIA \\& CAP certified laboratory in San Diego, CA",
+              "armGroupLabels": [
+                "Decipher GRID Patients"
+              ],
+              "otherNames": [
+                "Decipher Biopsy, Decipher RP, Decipher Bladder, Decipher Renal, Decipher Test"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06332274",
+          "briefTitle": "tislelizUMaB in canceR Patients With molEcuLar residuaL Disease"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Gustave Roussy, Cancer Campus, Grand Paris",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Cancer",
+            "Lung Cancer",
+            "Colo-rectal Cancer",
+            "Pancreas Cancer",
+            "Soft Tissue Sarcoma"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Tislelizumab",
+              "description": "Formulation : 100 mg of antibody in 10 mL of isotonic solution (25 mM citrate buffer, 15 mM L-histidine/histidine hydrochloride, 190 mM trehalose-dihydrate, and 0.02% polysorbate 20 at pH 6.5) in a single-use vial.\n\nDose Regimen: Tislelizumab 400 mg every 6 weeks (Q6W) for a maximum of 9 cycles, on the first day of each cycle, in IV.",
+              "armGroupLabels": [
+                "Arm A. MRD(+) - Tislelizumab treatment"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Blood sampling",
+              "description": "Blood sampling for analyses of MRD (Molecular Residual Disease)",
+              "armGroupLabels": [
+                "Arm A. MRD(+) - Tislelizumab treatment",
+                "Arm B. MRD(+) - placebo treatment",
+                "Arm C. MRD(-) - De-escalated follow-up",
+                "Arm D. MRD(-) - De-escalated follow-up"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Placebo",
+              "description": "Pharmaceutical form : Solvent IV bags used for dilution of tislelizumab (for example: \"CHLORURE DE SODIUM FRESENIUS 0,9 %, solution injectable\") Dose Regimen: every 6 weeks (Q6W) for a maximum of 9 cycles, on the first day of each cycle, in IV.",
+              "armGroupLabels": [
+                "Arm B. MRD(+) - placebo treatment"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03769415",
+          "briefTitle": "Harnessing Analysis RNA Expression and Molecular Subtype to Optimize Novel TherapY MBCA"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "UNC Lineberger Comprehensive Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Intrinsic Subtyping of Primary Breast Cancer",
+              "description": "Primary breast tissue will be sent for Nanostring PAM50 Testing to determine intrinsic subtype",
+              "armGroupLabels": [
+                "Intrinsic subtyping of Primary Breast Cancer"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06426628",
+          "briefTitle": "Clinical Utility of Management of Patients With Pulmonary Nodules Using the Percepta Nasal Swab Classifier"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Veracyte, Inc.",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Pulmonary Nodule, Solitary",
+            "Lung Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06282588",
+          "briefTitle": "Treatment of High-Risk Prostate Cancer Guided by Novel Diagnostic Radio- and Molecular Tracers"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Cancer Research Antwerp",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Darolutamide",
+              "description": "2x300 mg tablets twice daily, for up to 96 weeks",
+              "armGroupLabels": [
+                "Phase 2 Open Label",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Nubeqa",
+                "BAY1841788"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Darolutamide matched placebo",
+              "description": "2x300 mg tablets twice daily, for up to 96 weeks",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator"
+              ],
+              "otherNames": [
+                "BAY1841788 matched placebo"
+              ]
+            },
+            {
+              "type": "RADIATION",
+              "name": "Radiotherapy",
+              "description": "Preferred regimens: 60 to 62 Gy delivered in 20 fractions of 3.0 to 3.1Gy per fraction; 36.25 Gy delivered in 5 fractions of 7.25 Gy per fraction, 2-3 fractions per week",
+              "armGroupLabels": [
+                "Phase 2 Open Label",
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Zoladex 3.6Mg Implant",
+              "description": "3.6 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Goserelin acetate 3.6 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Zoladex LA",
+              "description": "10.8 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Goserelin acetate 10.8 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Decapeptyl sustained release 22.5 mg",
+              "description": "22.5 mg, intramusculair injection",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Triptorelin 11.25 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Decapeptyl sustained release 11.25 mg",
+              "description": "11.25 mg, intramusculair injection",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Triptorelin 11.25 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Depo-Eligard 45 mg",
+              "description": "45 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Leuprorelin acetate 45 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Depo-Eligard 22.5 mg",
+              "description": "22.5 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Leuprorelin acetate 22.5 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Depo-Eligard 7.5 mg",
+              "description": "7.5 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Leuprorelin acetate 7.5 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Firmagon 120 MG Injection",
+              "description": "120 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Degarelix 40 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Firmagon 80 MG Injection",
+              "description": "80 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Degarelix 20 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Docetaxel",
+              "description": "75 mg per square m, IV infusion",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Taxotere"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07282808",
+          "briefTitle": "Focal or Radical Therapy: a Lesion-based Molecular Evaluation in Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Singapore General Hospital",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Molecular Evaluation for Risk of Recurrence after FT",
+              "description": "Low Risk - Decipher GC \\<0.5, OR GC 0.5-0.85 and non-PSC-LP subtype High Risk - Decipher GC 0.5-0.85 and PSC-LP subtype, OR GC\\>0.85",
+              "armGroupLabels": [
+                "Focal Therapy, Low Transcriptomic Risk Cohort",
+                "Radical Therapy, High Transcriptomic Risk Cohort"
+              ],
+              "otherNames": [
+                "Decipher GC score",
+                "Transcriptomic Signature"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pagesFetched": 1,
+  "nextPageToken": null,
+  "totalCount": 8
+}

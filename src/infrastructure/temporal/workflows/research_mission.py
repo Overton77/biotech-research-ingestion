@@ -22,6 +22,7 @@ with workflow.unsafe.imports_passed_through():
     from src.infrastructure.temporal.activities.research_mission import (
         execute_research_stage,
         ingest_kg_from_report,
+        ingest_unstructured_documents,
     )
     from src.infrastructure.temporal.models import (
         KGIngestionInput,
@@ -29,6 +30,8 @@ with workflow.unsafe.imports_passed_through():
         MissionWorkflowOutput,
         StageActivityInput,
         StageActivityOutput,
+        UnstructuredIngestionInput,
+        UnstructuredIngestionOutput,
     )
 
 
@@ -167,7 +170,7 @@ class ResearchMissionWorkflow:
                             mission_id=mission_id,
                             stage_json=stage,
                             dependency_reports=dep_reports,
-                            root_filesystem=input.output_dir,
+                            snapshot_output_dir=input.output_dir,
                         ),
                         start_to_close_timeout=timedelta(hours=3),
                         heartbeat_timeout=_STAGE_HEARTBEAT_TIMEOUT,
@@ -190,6 +193,39 @@ class ResearchMissionWorkflow:
                         result.error,
                     )
 
+        # ----- Unstructured document ingestion -----
+        unstructured_result: UnstructuredIngestionOutput | None = None
+        ui_config = mission.get("unstructured_ingestion", {})
+        if ui_config.get("enabled", False):
+            manifest_paths = [
+                r.stage_candidate_manifest_path
+                for r in all_results
+                if r.status == "completed" and r.stage_candidate_manifest_path
+            ]
+            if manifest_paths:
+                workflow.logger.info(
+                    "Running unstructured ingestion — %d stage manifests",
+                    len(manifest_paths),
+                )
+                unstructured_result = await workflow.execute_activity(
+                    ingest_unstructured_documents,
+                    UnstructuredIngestionInput(
+                        mission_json=mission,
+                        stage_manifest_paths=manifest_paths,
+                    ),
+                    start_to_close_timeout=timedelta(hours=2),
+                    heartbeat_timeout=timedelta(minutes=30),
+                    retry_policy=_KG_RETRY,
+                )
+                workflow.logger.info(
+                    "Unstructured ingestion complete: found=%d, ingested=%d, failed=%d",
+                    unstructured_result.candidates_found,
+                    unstructured_result.candidates_ingested,
+                    unstructured_result.candidates_failed,
+                )
+            else:
+                workflow.logger.info("No stage candidate manifests — skipping unstructured ingestion")
+
         # ----- Conditional KG ingestion -----
         kg_results = []
         if input.run_kg:
@@ -202,6 +238,8 @@ class ResearchMissionWorkflow:
                     continue
 
                 slice_input = stage.get("slice_input", {})
+                raw_scope = slice_input.get("temporal_scope")
+                scope_str = raw_scope if isinstance(raw_scope, str) else (raw_scope.get("mode") if isinstance(raw_scope, dict) else None)
                 kg_tasks.append(
                     workflow.execute_activity(
                         ingest_kg_from_report,
@@ -211,7 +249,7 @@ class ResearchMissionWorkflow:
                             targets=slice_input.get("targets", []),
                             stage_type=slice_input.get("stage_type", "targeted_extraction"),
                             research_date=slice_input.get("research_date"),
-                            temporal_scope=slice_input.get("temporal_scope"),
+                            temporal_scope=scope_str,
                             context=f"Mission {mission_id}, stage {result.task_slug}",
                         ),
                         start_to_close_timeout=timedelta(minutes=30),
@@ -247,6 +285,7 @@ class ResearchMissionWorkflow:
             stages_completed=stages_completed,
             stages_failed=stages_failed,
             kg_ingestions_completed=kg_completed,
+            unstructured_ingestion=unstructured_result,
             stage_results=all_results,
             kg_results=list(kg_results),
         )

@@ -145,4 +145,9 @@ node_modules/
 
 
 **/.deepagents/**  
-**/hidden_docs/** 
+**/hidden_docs/**  
+
+**/test_runs/**  
+
+**/agent_outputs/** 
+

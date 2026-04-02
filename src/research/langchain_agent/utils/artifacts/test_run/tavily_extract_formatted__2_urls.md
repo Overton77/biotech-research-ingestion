@@ -1,206 +1,262 @@
-Meta: request_id=5f3bd5ee-2f3b-42e7-bc0f-5fcadc5268e3, response_time_s=8.4
+Meta: request_id=ef97ac22-0ce9-4df7-b80f-0f47bb284ffa, response_time_s=0.09
 
 === Extracted Web Content ===
 [Result 1]
-Title: Your cart is empty
-URL: https://www.elysiumhealth.com/
+Title: Sample type:
+URL: https://www.exactsciences.com/cancer-testing
 Content:
-## Your cart is empty
+Sample type:
 
-Have an account?
+Blood, tumor tissue
 
-[Log in](/account/login) to check out faster.
+### Riskguard® test
 
-![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
+A blood or saliva test that can uncover hereditary risk for certain cancers and help inform treatment decisions
 
-### All Products
+Cancer type:
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+Multiple
 
-## Your Cart
+ Breast cancer
+ Colorectal cancer
+ Endocrine cancer
+ Endometrial cancer
+ Gastric cancer
+ Kidney cancer
+ Ovarian cancer
+ Pancreatic cancer
+ Prostate cancer
+ Skin cancer
 
-Loading...
+Test type:
 
-## Order Subtotal
+Hereditary cancer
 
-$0
+Hereditary cancer tests reveal the risk of developing certain cancers to help inform screening and aid prevention. They can also help guide treatment and therapy selection in patients with cancer.
 
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+Sample type:
 
-**Basis**NAD+ Supplement
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
+Blood, cheek swab, saliva
 
-# [Elysium Health Home](/)
+In development
 
-![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
-![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
-![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
-![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
-![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
-![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
-![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
-![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
+### Oncoliquid™ test
 
-## Start your longevity routine
+A blood (liquid biopsy) test being designed to provide therapy selection guidance for advanced cancer
 
-Choose from science-backed supplements for youthful NAD+, radiant skin, and brain health.
+Cancer type:
 
-![]()
-![](//www.elysiumhealth.com/cdn/shop/files/mens-journal.svg?v=1745861258&width=3200)
-![](//www.elysiumhealth.com/cdn/shop/files/time_53a0830e-696a-4356-87c2-907468076136.svg?v=1745861267&width=3200)
-![](//www.elysiumhealth.com/cdn/shop/files/vogue_4032e5e0-e57b-4dc9-b889-acbbe918af22.svg?v=1745861275&width=3200)
-![](//www.elysiumhealth.com/cdn/shop/files/fast-company.svg?v=1745861282&width=3200)
-![](//www.elysiumhealth.com/cdn/shop/files/wired.svg?v=1745861290&width=3200)
-![](//www.elysiumhealth.com/cdn/shop/files/new-york.svg?v=1745861296&width=3200)
-![](//www.elysiumhealth.com/cdn/shop/files/good-housekeeping.svg?v=1745861302&width=3200)
-![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=)
+Solid tumor [...] Sample type:
 
+Tumor tissue
 
+### Riskguard® test
 
+A blood or saliva test that can uncover hereditary risk for certain cancers and help inform treatment decisions
 
+Cancer type:
 
+Multiple
 
-## "Given the momentum in human studies targeting aging, we are optimistic that the course of human health could be …[truncated]
+ Breast cancer
+ Colorectal cancer
+ Endocrine cancer
+ Endometrial cancer
+ Gastric cancer
+ Kidney cancer
+ Ovarian cancer
+ Pancreatic cancer
+ Prostate cancer
+ Skin cancer
+
+Test type:
+
+Hereditary cancer
+
+Hereditary cancer tests reveal the risk of developing certain cancers to help inform screening and aid prevention. They can also help guide treatment and therapy selection in patients with cancer.
+
+Sample type:
+
+Blood, cheek swab, saliva
+
+## Monitoring and therapy selection
+
+Find and monitor cancer after treatment and get insights to guide therapy selection.\
+
+### Oncodetect® test [...] Test type:
+
+Screening
+
+Screening tests help detect cancer before symptoms appear.
+
+Sample type:
+
+Stool
+
+### Oncoguard® Liver test
+
+A blood test that helps find the most common liver cancer in people with cirrhosis or chronic hepatitis B
+
+Cancer type:
+
+Hepatocellular carcinoma
+
+Hepatocellular carcinoma, also known as "HCC", is the most common type of liver cancer.
+
+Test type:
+
+Surveillance
+
+Surveillance tests help find cancer in people at high risk of a disease.
+
+Sample type:
+
+Blood
+
+### Riskguard® test
+
+A blood or saliva test that can uncover hereditary risk for certain cancers and help inform treatment decisions
+
+Cancer type:
+
+Multiple [...] ### Oncodetect® test
+
+A tumor-informed test that can detect circulating tumor DNA in the blood during or after cancer treatment
+
+Cancer type:
+
+All solid tumors
+
+Test type:
+
+Monitoring, MRD
+
+Monitoring tests look for molecular residual disease (MRD), hard-to-find traces of cancer called circulating tumor DNA (ctDNA) that might be present in blood.
+
+Sample type:
+
+Blood, tumor tissue
+
+### OncoExTra® test
+
+A tumor-tissue test that provides therapy selection guidance for advanced solid tumor cancers
+
+Cancer type:
+
+All solid tumors
+
+Test type:
+
+Therapy selection
+
+Therapy selection tests provide a look into a tumor's unique makeup. They highlight key information to select therapies and/or clinical trials that may help.
+
+Sample type:
+
+Blood, tumor tissue
+
+### Riskguard® test
 
 [Result 2]
-Title: Help Center
-URL: https://www.elysiumhealth.com/products/
+Title: About
+URL: https://www.exactsciences.com/about
 Content:
-Help Center
+# About
 
-   
- Shop All 
+At Exact Sciences, we’re helping to eradicate cancer by preventing it, detecting it earlier, and guiding personalized treatment.
 
- Shop All 
-       Shop All
-       Image 2BasisNAD+ Supplement
-       Image 3MatterLong-Term Brain Health
-       Image 4CofactorAdvanced Collagen System with NAD+ Boost
-       Image 5MosaicSkin Aging Support
-       Image 6VisionEye Longevity
-       Image 7SignalMitochondrial Support
-       Image 8FormatAdvanced Immune Support
-       Image 9Senolytic Complex
-       Image 10Longevity Starter Pack
-       Image 11IndexBiological Age Test
+[Play](#)
 
-   
- Index 
+## Exact Sciences at a glance
 
- Index 
-       Image 12IndexBiological Age Test
-       Aging Research Center
+7
 
-   
- The Science 
+years certified as a Great Place To Work®
 
- The Science 
-       Aging 101
-       Clinical Trials
-       Aging Research Center
+9
 
-   
- The Company 
+research and development centers and labs\*
 
- The Company 
-       Mission
-       Team
-       Scientific Advisory Board
-       News & Media [...] Log inCart
+6500+
 
-   Image 34: Supplements  ### All Products
+global employees\*
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+120+
 
-Go to All Products collection page Shop All Products     
-   Image 35: Supplements  ### Anti-Aging
+countries served\*
 
-Go to Anti-Aging collection page Shop Anti-Aging     
-   Image 36: Supplements  ### B & S
+4M+
 
-Did you know? Taking both Basis AND Signal is your best bet...
+people tested in 2023\*
 
-Go to B & S collection page Shop B & S     
-   Image 37: Supplements  ### Basis
+\* Internal data on file. Exact Sciences Corporation. Madison, WI.
 
-Go to Basis collection page Shop Basis     
-   Image 38: Supplements  ### Basis & Signal
+## A history of innovation
 
-Did you know? Taking both Basis AND Signal is your best bet...
+Explore our history
 
-Go to Basis & Signal collection page Shop Basis & Signal     
-   Image 39: Supplements  ### Brain Health [...] Login to Index
-   Earn a Free Month 
+### 2025
 
-   Register an Index Kit
-   Help Center
+### Launch of three innovative cancer tests
 
-   Log in
-   Help Center
-   Order history
-   Index dashboard
+### 2024
 
-Image 13: Elysium Health Home
-   
-Shop All
+### Publication of BLUE-C study results
 
-       Image 14 Basis NAD+ Supplement for Cellular Aging
-       Image 15 Matter Tri-Vitamin Complex for Brain Aging
-       Image 16 Cofactor Advanced Collagen System with NAD+ Boost
-       Image 17 Signal Mitochondria Support for Metabolic Aging
-       Image 18 Format Immune Health + Inflammaging
-       Image 19 Mosaic Skin Aging + Collagen Support
-       Image 20 Vision Eye Longevity + Protection
-       Image 21 Senolytic Complex Clear senescent cells
-       Image 22 Longevity Starter Pack
-       Image 23 Index Biological Age Test
+### 2023
 
-       Shop All
-       Aging 101 Blog
+### OncoExTra® cancer therapy selection test launches
 
-   
-Index [...] Go to Brain Health collection page Shop Brain Health     
-   Image 40: Format  ### Format
+### 2022
 
-Go to Format collection page Shop Format     
-    ### Free Senolytic
+### PreventionGenetics acquisition
 
-Go to Free Senolytic collection page Shop Free Senolytic     
-   Image 41: New Year, New You  ### Home page
+### 2014
 
-Go to Home page collection page Shop Home page     
-   Image 42: New Year, New You  ### Index
+### Approval for the Cologuard® test
 
-Go to Index collection page Shop Index     
-   Image 43: Matter  ### Matter
+### 2004
 
-Go to Matter collection page Shop Matter     
-   Image 44: Mosaic  ### Mosaic
+### Oncotype DX Breast Recurrence Score® test launches
 
-Go to Mosaic collection page Shop Mosaic     
-   Image 45: New Year, New You  ### New Year, New You
+## Creating a lasting impact
 
-Go to New Year, New You collection page Shop New Year, New You     
-   Image 46: Supplements  ### Performance
+We’re dedicated to making a meaningful difference in every life — and every community — that we touch.
+
+## Corporate impact
+
+Our core values — innovation, integrity, quality, teamwork, and accountability — guide us as we strive to fight cancer, build brighter communities, and create a more sustainable world.
+
+Learn more
+
+## Health equity
+
+Many people face barriers to a healthy lifestyle. Our initiatives are firmly rooted in the human spirit to help underserved communities and drive better health outcomes.
+
+Learn more
+
+## Visionary collaborations
+
+We’re proud to collaborate with some of the brightest minds and leading institutions to fight cancer.
+
+Learn more
+
+## Get in touch
+
+Find customer support, company contacts, and location information all in one place.
+
+Contact us
+
+## Find our offices and labs
+
+Our facilities around the globe provide world-class service.
+
+Explore our locations
+
+## Become part of something meaningful
+
+Are you ready to make a difference in the fight against cancer? Explore open positions and learn why Exact Sciences has been a certified Great Place To Work® for seven years running.
+
+Visit Careers
+
+Search jobs

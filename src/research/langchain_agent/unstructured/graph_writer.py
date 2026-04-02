@@ -2,11 +2,14 @@ from __future__ import annotations
 
 import json
 import hashlib
+import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
 from src.research.langchain_agent.kg.temporal import default_bitemporal_props
+
+logger = logging.getLogger(__name__)
 from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
 from src.research.langchain_agent.unstructured.models import (
     ClaimOccurrenceRecord,
@@ -317,7 +320,7 @@ async def write_unstructured_ingestion_result(
     text_versions: list[DocumentTextVersionRecord],
     segmentations: list[SegmentationRecord],
     chunks: list[ChunkRecord],
-    claim_occurrences: list[ClaimOccurrenceRecord],
+    claim_occurrences: list[ClaimOccurrenceRecord] | None = None,
     relationship_decisions: list[RelationshipDecision],
     research_date: datetime | None = None,
     ingestion_time: datetime | None = None,
@@ -328,20 +331,32 @@ async def write_unstructured_ingestion_result(
     for segmentation in segmentations:
         await _create_segmentation(client, segmentation)
     await _create_chunks(client, chunks)
-    for claim in claim_occurrences:
+
+    claims = claim_occurrences or []
+    for claim in claims:
         await _create_claim_occurrence(client, claim)
-    for decision in relationship_decisions:
-        await _write_relationship(
-            client,
-            decision,
-            research_date=research_date,
-            ingestion_time=ingestion_time,
-        )
+
+    doc_decisions = [d for d in relationship_decisions if d.source_scope == "document"]
+    for decision in doc_decisions:
+        try:
+            await _write_relationship(
+                client,
+                decision,
+                research_date=research_date,
+                ingestion_time=ingestion_time,
+            )
+        except Exception as exc:
+            logger.warning(
+                "Failed to write document-level relationship %s -> %s: %s",
+                decision.relationship_type,
+                decision.target.display_name,
+                exc,
+            )
 
     return {
         "text_versions": len(text_versions),
         "segmentations": len(segmentations),
         "chunks": len(chunks),
-        "claim_occurrences": len(claim_occurrences),
-        "relationships": len(relationship_decisions),
+        "claim_occurrences": len(claims),
+        "document_relationships": len(doc_decisions),
     }

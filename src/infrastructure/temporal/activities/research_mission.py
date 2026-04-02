@@ -17,6 +17,8 @@ from src.infrastructure.temporal.models import (
     KGIngestionOutput,
     StageActivityInput,
     StageActivityOutput,
+    UnstructuredIngestionInput,
+    UnstructuredIngestionOutput,
 )
 
 logger = logging.getLogger(__name__)
@@ -97,6 +99,7 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
         run_input = stage.slice_input.model_copy(deep=True)
         run_input.dependency_reports = input.dependency_reports
 
+        manifest_path = ""
         if stage.iterative_config is not None:
             activity.logger.info("Running iterative stage: %s", slug)
             iter_result = await run_iterative_stage(
@@ -122,8 +125,16 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
                 snapshot_output_dir=snapshot_dir,
             )
             report_text = out.get("final_report_text") or ""
+            inner_result = out.get("result") or out.get("agent_state") or {}
+            manifest_path = (
+                inner_result.get("stage_candidate_manifest_path", "")
+                or out.get("stage_candidate_manifest_path", "")
+            )
+            activity.logger.info(
+                "Stage %s: report_len=%d, manifest_path=%s, out_keys=%s",
+                slug, len(report_text), manifest_path, list(out.keys()),
+            )
 
-        # Fallback: if the slice didn't return report text, read it from disk
         if not report_text:
             report_path = root / "reports" / f"{slug}.md"
             if report_path.exists():
@@ -139,6 +150,7 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
             task_slug=slug,
             final_report_text=report_text,
             status="completed",
+            stage_candidate_manifest_path=manifest_path,
         )
 
     except Exception as exc:
@@ -221,6 +233,127 @@ async def ingest_kg_from_report(input: KGIngestionInput) -> KGIngestionOutput:
         )
         return KGIngestionOutput(
             source_report=input.source_report,
+            status="failed",
+            error=str(exc),
+        )
+
+
+# ---------------------------------------------------------------------------
+# Activity 3: unstructured document ingestion
+# ---------------------------------------------------------------------------
+
+
+@activity.defn
+async def ingest_unstructured_documents(input: UnstructuredIngestionInput) -> UnstructuredIngestionOutput:
+    """Gather mission candidates and run unstructured ingestion for each.
+
+    Performs candidate manifest gathering, document parsing (Docling/LlamaParse),
+    schema-based entity extraction, and Neo4j writes within a single activity.
+    """
+    import json as _json
+    from pathlib import Path as _Path
+
+    from src.research.langchain_agent.agent.config import ROOT_FILESYSTEM
+    from src.research.langchain_agent.models.mission import ResearchMission
+    from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient, Neo4jAuraSettings
+    from src.research.langchain_agent.run_mission import load_mission_from_file
+    from src.research.langchain_agent.unstructured.candidate_collection import gather_mission_candidates
+    from src.research.langchain_agent.unstructured.models import CandidateDocument, UnstructuredIngestionConfig
+    from src.research.langchain_agent.unstructured.paths import mission_unstructured_dir
+    from src.research.langchain_agent.unstructured.run_unstructured_ingestion import run_unstructured_ingestion
+
+    activity.logger.info(
+        "Starting unstructured ingestion — %d stage manifests",
+        len(input.stage_manifest_paths),
+    )
+
+    if not input.stage_manifest_paths:
+        return UnstructuredIngestionOutput(status="skipped", candidates_found=0)
+
+    try:
+        mission_data = input.mission_json
+        mission_id = mission_data.get("mission_id", "unknown")
+        root = ROOT_FILESYSTEM
+
+        ui_raw = mission_data.get("unstructured_ingestion", {})
+        ui_config = UnstructuredIngestionConfig(**ui_raw) if ui_raw else UnstructuredIngestionConfig()
+
+        if not ui_config.enabled:
+            return UnstructuredIngestionOutput(status="skipped", candidates_found=0)
+
+        mission_manifest, mission_manifest_path = gather_mission_candidates(
+            mission_id=mission_id,
+            stage_manifest_paths=input.stage_manifest_paths,
+            root=root,
+        )
+
+        candidates = mission_manifest.candidates
+        activity.logger.info(
+            "Mission candidate manifest: %d candidates from %d stages",
+            len(candidates),
+            len(input.stage_manifest_paths),
+        )
+
+        if not candidates:
+            return UnstructuredIngestionOutput(status="completed", candidates_found=0)
+
+        output_base = mission_unstructured_dir(mission_id, root=root) / "executions"
+        output_base.mkdir(parents=True, exist_ok=True)
+
+        settings = Neo4jAuraSettings.from_env()
+        ingested = 0
+        failed = 0
+
+        async with Neo4jAuraClient(settings) as client:
+            for candidate_payload in candidates:
+                if not candidate_payload.local_path:
+                    failed += 1
+                    continue
+
+                candidate_dir = output_base / candidate_payload.candidate_id
+                try:
+                    result = await run_unstructured_ingestion(
+                        candidate=candidate_payload,
+                        output_dir=candidate_dir,
+                        neo4j_client=client,
+                        config=ui_config,
+                    )
+                    ingested += 1
+                    activity.logger.info(
+                        "Ingested candidate %s — doc_id=%s, chunks=%d, rels=%d",
+                        candidate_payload.candidate_id,
+                        result.document.document_id,
+                        len(result.chunks),
+                        len(result.relationship_decisions),
+                    )
+                except Exception as exc:
+                    failed += 1
+                    activity.logger.error(
+                        "Failed to ingest candidate %s: %s",
+                        candidate_payload.candidate_id,
+                        exc,
+                        exc_info=True,
+                    )
+
+        summary = {
+            "mission_id": mission_id,
+            "candidates_found": len(candidates),
+            "candidates_ingested": ingested,
+            "candidates_failed": failed,
+        }
+        summary_path = mission_unstructured_dir(mission_id, root=root) / "mission_unstructured_summary.json"
+        summary_path.write_text(_json.dumps(summary, indent=2, default=str), encoding="utf-8")
+
+        return UnstructuredIngestionOutput(
+            status="completed",
+            candidates_found=len(candidates),
+            candidates_ingested=ingested,
+            candidates_failed=failed,
+        )
+
+    except Exception as exc:
+        activity.logger.error("Unstructured ingestion failed: %s", exc, exc_info=True)
+        return UnstructuredIngestionOutput(
             status="failed",
             error=str(exc),
         )

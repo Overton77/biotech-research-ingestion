@@ -1,449 +1,343 @@
-Meta: request_id=670fa7d0-3583-45f8-b23a-9e28733ae618, response_time_s=0.47
+Meta: request_id=f477be1c-7210-490a-a576-6e300c01c728, response_time_s=0.22
 
 === Extracted Web Content ===
 [Result 1]
-Title: 13.8 Support and Resources:
-URL: https://www.generationlab.com/terms-of-service?type=provider
+Title: Cancer type:
+URL: https://www.exactsciences.com/cancer-testing
 Content:
-13.8 Support and Resources:
+Cancer type:
 
- Educational Resource: Available in the provider portal.
- Support: Please contactsupport@generationlab.com any time - we're pretty good at replying.
- Feedback: All feedback is greatly appreciated! Please help us improve by sending an email to your dedicated point of contact, or book a feedback session and talk to our team ().
+Multiple
 
-IN WITNESS WHEREOF, the Parties execute this Agreement by clicking agree on these TERMS OF SERVICE as of the Effective Date.
+ Breast cancer
+ Colorectal cancer
+ Endocrine cancer
+ Endometrial cancer
+ Gastric cancer
+ Kidney cancer
+ Ovarian cancer
+ Pancreatic cancer
+ Prostate cancer
+ Skin cancer
 
-EXHIBIT A
+Test type:
 
-Test Means: DNA methylation bisulfite sequencing, or other methods used by Generation Lab via proprietary bioinformatics software, producing a Health Report on the Platform or as a PDF.
+Hereditary cancer
 
-Test & Services Fees: [...] ## 1. DEFINITIONS
+Hereditary cancer tests reveal the risk of developing certain cancers to help inform screening and aid prevention. They can also help guide treatment and therapy selection in patients with cancer.
 
-1.1 "Applicable Law(s)" means all U.S. federal, state, and local laws, including those related to marketing, billing, privacy, and sample handling.
+Sample type:
 
-1.2 "Billing Procedure" means the mutually agreed process for collecting and providing Required Information and billing patients.
+Blood, cheek swab, saliva
 
-1.3 "Collection Kit" means supplies provided or authorized by Generation Lab for collecting Samples.
+In development
 
-1.4 "Product & Services Fee" is defined in Exhibit A.
+### CRC Screening Blood test
 
-1.5 "Documentation" means Generation Lab's test requisition, consent forms, terms of service, and privacy policy.
+A blood test designed to screen for colon cancer and provide people with even more CRC screening options
 
-1.6 "Provider" means a healthcare provider authorized to order Tests under Applicable Laws.
+Cancer type:
 
-1.7 "Required Information" is defined in Section 4.3. [...] 1.7 "Required Information" is defined in Section 4.3.
+Colorectal
 
-1.8 "Health Plan Information" means patient interventions, protocols, and adherence data.
+Colorectal cancer is also known as "colon cancer" and "CRC".
 
-1.9 "Samples" are biological specimens collected via Collection Kits per Generation Lab's instructions.
+Test type:
 
-1.10 "Services" means testing, software, and related products offered by Generation Lab to produce Health Reports.
+Screening
 
-1.11 "Standard Operating Procedures" or "SOPs" means Generation Lab's instructions for sample handling, patient accounts, and Test performance.
+Screening tests help detect cancer before symptoms appear.
 
-1.12 "Test" means the test described in Exhibit A.
+Sample type: [...] Sample type:
 
-1.13 "Health Report" means the Test results report provided by Generation Lab.
+Blood, tumor tissue
 
-1.14 "Third Party" means any entity other than the Parties or their affiliates.
+### Riskguard® test
+
+A blood or saliva test that can uncover hereditary risk for certain cancers and help inform treatment decisions
+
+Cancer type:
+
+Multiple
+
+ Breast cancer
+ Colorectal cancer
+ Endocrine cancer
+ Endometrial cancer
+ Gastric cancer
+ Kidney cancer
+ Ovarian cancer
+ Pancreatic cancer
+ Prostate cancer
+ Skin cancer
+
+Test type:
+
+Hereditary cancer
+
+Hereditary cancer tests reveal the risk of developing certain cancers to help inform screening and aid prevention. They can also help guide treatment and therapy selection in patients with cancer.
+
+Sample type:
+
+Blood, cheek swab, saliva
+
+In development
+
+### Oncoliquid™ test
+
+A blood (liquid biopsy) test being designed to provide therapy selection guidance for advanced cancer
+
+Cancer type:
+
+Solid tumor [...] Sample type:
+
+Tumor tissue
+
+### Riskguard® test
+
+A blood or saliva test that can uncover hereditary risk for certain cancers and help inform treatment decisions
+
+Cancer type:
+
+Multiple
+
+ Breast cancer
+ Colorectal cancer
+ Endocrine cancer
+ Endometrial cancer
+ Gastric cancer
+ Kidney cancer
+ Ovarian cancer
+ Pancreatic cancer
+ Prostate cancer
+ Skin cancer
+
+Test type:
+
+Hereditary cancer
+
+Hereditary cancer tests reveal the risk of developing certain cancers to help inform screening and aid prevention. They can also help guide treatment and therapy selection in patients with cancer.
+
+Sample type:
+
+Blood, cheek swab, saliva
+
+## Monitoring and therapy selection
+
+Find and monitor cancer after treatment and get insights to guide therapy selection.\
+
+### Oncodetect® test [...] ### Oncodetect® test
+
+A tumor-informed test that can detect circulating tumor DNA in the blood during or after cancer treatment
+
+Cancer type:
+
+All solid tumors
+
+Test type:
+
+Monitoring, MRD
+
+Monitoring tests look for molecular residual disease (MRD), hard-to-find traces of cancer called circulating tumor DNA (ctDNA) that might be present in blood.
+
+Sample type:
+
+Blood, tumor tissue
+
+### OncoExTra® test
+
+A tumor-tissue test that provides therapy selection guidance for advanced solid tumor cancers
+
+Cancer type:
+
+All solid tumors
+
+Test type:
+
+Therapy selection
+
+Therapy selection tests provide a look into a tumor's unique makeup. They highlight key information to select therapies and/or clinical trials that may help.
+
+Sample type:
+
+Blood, tumor tissue
+
+### Riskguard® test [...] Cancer type:
+
+Solid tumor
+
+Test type:
+
+Therapy selection
+
+Therapy selection tests provide a look into a tumor's unique makeup. They highlight key information to select therapies and/or clinical trials that may help.
+
+Sample type:
+
+Blood
+
+Introducing Exact Oncology™
+
+From early screening and treatment guidance to monitoring and therapy selection, our clinically-proven testing portfolio is here to answer critical questions across the entire cancer care continuum.
+
+## Solutions for health systems
+
+We’re committed to helping health systems deliver easier, high-quality, and more personalized cancer care for their patients.
+
+## Our state-of-the-art lab facilities
 
 [Result 2]
-Title: Read Paper
-URL: https://www.generationlab.com/providers
+Title: About
+URL: https://www.exactsciences.com/about
 Content:
-Read Paper
+# About
 
-Cell Stem Cell
+At Exact Sciences, we’re helping to eradicate cancer by preventing it, detecting it earlier, and guiding personalized treatment.
 
-### Cell Stem Cell - Jan 10, 2008
+[Play](#)
 
-A Temporal Switch from Notch to Wnt Signaling in Muscle Stem Cells Is Necessary for Normal Adult Myogenesis
+## Exact Sciences at a glance
 
-Read Paper00223-8)
+7
 
-Nature
+years certified as a Great Place To Work®
 
-### Nature - Feb 17, 2005
+9
 
-Rejuvenation of aged progenitor cells by exposure to a young systemic environment
+research and development centers and labs\*
 
-Read Paper
+6500+
 
-Evaluating Biological Noise
+global employees\*
 
-## What Our Tests Reveal
+120+
 
-Our test serves as a DNA methylation noise detector, uncovering and evaluating biological noise within your body to accurately gauge your biological age.
+countries served\*
 
-### Flexible Plan Editing
+4M+
 
-Easily add or remove interventions with dynamic adjustments to dosage, frequency, and duration.
+people tested in 2023\*
 
-Flexible Plan Editing
+\* Internal data on file. Exact Sciences Corporation. Madison, WI.
 
-Easily add or remove interventions with dynamic adjustments to dosage, frequency, and duration. [...] ## Peer-Reviewed Science Papers
+## A history of innovation
 
-Our technology published and grounded in decades of peer-reviewed research and leading journals.
+Explore our history
 
-GeroScience
+### 2025
 
-### GeroScience - Jan 18, 2025
+### Launch of three innovative cancer tests
 
-DNA methylation clocks struggle to distinguish inflammaging from healthy aging, but feature rectification improves coherence and enhances detection of inflammaging
+### 2024
 
-Read Paper
+### Publication of BLUE-C study results
 
-PubMed
+### 2023
 
-### PubMed - Dec 11, 2024
+### OncoExTra® cancer therapy selection test launches
 
-The dominance of old blood, and age-related increase in protein production and noise
+### 2022
 
-Read Paper
+### PreventionGenetics acquisition
 
-Aging
+### 2014
 
-### Aging - Sep 12, 2023
+### Approval for the Cologuard® test
 
-Fail-tests of DNA methylation clocks, and development of a noise barometer for measuring epigenetic pressure of aging and disease
+### 2004
 
-Read Paper
+### Oncotype DX Breast Recurrence Score® test launches
 
-Cell Cycle
+## Creating a lasting impact
 
-### Cell Cycle - Jun 15, 2012
+We’re dedicated to making a meaningful difference in every life — and every community — that we touch.
 
-Heterochronic parabiosis for the study of the effects of aging on stem cells and their niches [...] Sign In →Order Now →
+## Corporate impact
 
-# Unlock theScience of Aging
+Our core values — innovation, integrity, quality, teamwork, and accountability — guide us as we strive to fight cancer, build brighter communities, and create a more sustainable world.
 
-Deliver the most advanced epigenetic healthspan testing to your clients, members, or patients — with actionable insights to optimize longevity.
+Learn more
 
-Become a Provider →Talk to Our Team →
+## Health equity
 
-Science Developed by Dr. Irina Conboy After 20+ Years of Research
+Many people face barriers to a healthy lifestyle. Our initiatives are firmly rooted in the human spirit to help underserved communities and drive better health outcomes.
 
-## Trusted by 275+ Clinics
+Learn more
 
-We’re honored to be the choice of the medical pioneers who use our insights to transform lives, every day.
+## Visionary collaborations
 
-Become a Provider →
+We’re proud to collaborate with some of the brightest minds and leading institutions to fight cancer.
 
-## Going Beyond
+Learn more
 
-Reverse
+## Get in touch
 
-5.2%
+Find customer support, company contacts, and location information all in one place.
 
-Brain Health & CognitionSystemAge: 41.6
+Contact us
 
-Good
+## Find our offices and labs
 
-5.6%
+Our facilities around the globe provide world-class service.
 
-Tissue regenerationSystemAge: 42.1
+Explore our locations
 
-Average
+## Become part of something meaningful
 
-8.7%
+Are you ready to make a difference in the fight against cancer? Explore open positions and learn why Exact Sciences has been a certified Great Place To Work® for seven years running.
 
-Immune systemSystemAge: 44.5
+Visit Careers
 
-Attention
-
-10.2%
-
-Blood Sugar & Insulin ControlSystemAge: 46.2
-
-Attention
-
-16.8%
-
-Inflammatory RegulationSystemAge : 48.5
-
-## Peer-Reviewed Science Papers
+Search jobs
 
 [Result 3]
-Title: Gene Symbol:
-URL: https://www.generationlab.com/biomarkers
+Title: PreventionGenetics, Marshfield, Wisconsin
+URL: https://www.exactsciences.com/about/history
 Content:
-Gene Symbol: 
-MYBPC3
+PreventionGenetics, Marshfield, Wisconsin
 
-Urinary System
+Exact Sciences acquires PreventionGenetics to help more patients know their germline risk of cancer and other diseases. A CLIA-certified and CAP-accredited clinical DNA testing laboratory, PreventionGenetics operates as a wholly owned subsidiary of Exact Sciences.
 
-Gene Symbol: 
-BBS9
+### OncoExTra® cancer therapy selection test launches
 
-Oncogenesis (Cell Mutation)
+A scientist opens an OncoExTra test kit.
 
-Gene Symbol: 
-NGF
+The OncoExTra test is a comprehensive DNA- and RNA-based genomic test, providing physicians and their patients a complete molecular picture of the patient’s cancer to help them understand their disease and make treatment decisions.
 
-Fibrosis (Scar Tissue Formation)
+### Broad Institute collaboration [...] ## 2019 to present
 
-Gene Symbol: 
-PRDM16
+## A global footprint
 
-Auditory System
+An acquisition brings together two of the most powerful brands in cancer care: Cologuard® and Oncotype DX®. Despite challenges brought by the COVID-19 pandemic, Exact Sciences continues to grow its portfolio, expand its impact, and create more ways to reach more patients in more places.
 
-Gene Symbol: 
-OTX1
+### 2019
 
-Brain Health & Cognition
+### FDA lowers approval screening age
 
-Gene Symbol: 
-CHD5
+The FDA lowers the eligibility age for Cologuard testing from 50 to 45 and older. The decision comes at a critical time when the incidence of CRC is rising among American adults younger than 50.4
 
-Immune System
+### Combines with Genomic Health [...] ### Resolution Bioscience acquisition
 
-Gene Symbol: 
-S100A2
+Exact Sciences acquires Resolution Bioscience. Its liquid therapy selection platform complements the OncoExTra® test, allowing Exact Sciences to help more cancer patients determine their most appropriate treatment options.
 
-Reproductive System
+### Reimbursement in Japan
 
-Gene Symbol: 
-TNF
+Ayako M., breast cancer survivor and Oncotype DX ambassador
 
-Cardiac System
+Japan’s Ministry of Health, Labor and Welfare begins reimbursement for the Oncotype DX Breast Recurrence Score  test, giving women in Japan broad access to the insights it provides.
 
-Gene Symbol: 
-DMD
+### RiskguardTM hereditary cancer test launches [...] ### Approval for the Cologuard test
 
-Inflammatory Regulation
+Exact Sciences learns that the Food and Drug Administration (FDA) has approved the Cologuard test and that the Centers for Medicare and Medicaid Services (CMS) intends to cover its use. This marks the first time the two groups simultaneously reviewed a medical device.
 
-Gene Symbol: 
-NOTCH4
+### Cologuard® test launches
 
-Metabolism
+A scientist removes a Cologuard sample container from its shipment box.
 
-Gene Symbol: 
-AHSG
+The Cologuard test is a noninvasive, effective, and affordable prescription-based use-at-home CRC screening test that looks for both abnormal DNA and blood in stool. At the time of launch, it is intended for people age 50 and older of average risk for CRC.
 
-Tissue Regeneration
+### American Cancer Society recommendation [...] Cancerguard is the first MCED test commercially available that analyzes multiple biomarker classes to help detect a wide range of cancers, including those that often go undiagnosed until later stages when treatment options are limited.
 
-Gene Symbol: 
-FGF1
+### The Oncodetect® test launches, advancing the field of MRD
 
-Blood Sugar & Insulin Control
-
-Gene Symbol: 
-PTPRN2
-
-Hepatic System (Liver)
-
-Gene Symbol: 
-GAK
-
-Muscular System
-
-Gene Symbol: 
-CACNA2D4
-
-Skeletal System
-
-Gene Symbol: 
-FGF1
-
-Nervous System
-
-Gene Symbol: 
-CACNG3
-
-Respiratory System
-
-Gene Symbol: 
-IL1RN
-
-Digestive System
-
-Gene Symbol: 
-TREH
-
-Blood & Vascular System [...] Oncogenesis (Cell Mutation)
-
-Gene Symbol: 
-KCNQ1
-
-Fibrosis (Scar Tissue Formation)
-
-Gene Symbol: 
-NGF
-
-Auditory System
-
-Gene Symbol: 
-AIRE
-
-Brain Health & Cognition
-
-Gene Symbol: 
-OTX1
-
-Immune System
-
-Gene Symbol: 
-AHSG
-
-Reproductive System
-
-Gene Symbol: 
-FGF1
-
-Cardiac System
-
-Gene Symbol: 
-CHD5
-
-Inflammatory Regulation
-
-Gene Symbol: 
-TNF
-
-Metabolism
-
-Gene Symbol: 
-KCNQ1
-
-Tissue Regeneration
-
-Gene Symbol: 
-SEMA6A
-
-Blood Sugar & Insulin Control
-
-Gene Symbol: 
-AHSG
-
-Hepatic System (Liver)
-
-Gene Symbol: 
-AHSG
-
-Muscular System
-
-Gene Symbol: 
-DMD
-
-Skeletal System
-
-Gene Symbol: 
-GH2
-
-Nervous System
-
-Gene Symbol: 
-CHD5
-
-Respiratory System
-
-Gene Symbol: 
-TNF
-
-Digestive System
-
-Gene Symbol: 
-NGF
-
-Blood & Vascular System
-
-Gene Symbol: 
-MYBPC3
-
-Urinary System
-
-Gene Symbol: 
-BBS9 [...] Gene Symbol: 
-TREH
-
-Blood & Vascular System
-
-Gene Symbol: 
-PRDM16
-
-Urinary System
-
-Gene Symbol: 
-KCNT1
-
-Oncogenesis (Cell Mutation)
-
-Gene Symbol: 
-FGF1
-
-Fibrosis (Scar Tissue Formation)
-
-Gene Symbol: 
-LOXL3
-
-Auditory System
-
-Gene Symbol: 
-KCNQ1
-
-Brain Health & Cognition
-
-Gene Symbol: 
-CPLX2
-
-Immune System
-
-Gene Symbol: 
-TNF
-
-Reproductive System
-
-Gene Symbol: 
-ADAM18
-
-Cardiac System
-
-Gene Symbol: 
-FGF1
-
-Inflammatory Regulation
-
-Gene Symbol: 
-IL1RN
-
-Metabolism
-
-Gene Symbol: 
-TREH
-
-Tissue Regeneration
-
-Gene Symbol: 
-TNF
-
-Blood Sugar & Insulin Control
-
-Gene Symbol: 
-TREH
-
-Hepatic System (Liver)
-
-Gene Symbol: 
-NOTCH4
-
-Muscular System
-
-Gene Symbol: 
-IL1RN
-
-Skeletal System
-
-Gene Symbol: 
-NOTCH4
-
-Nervous System
-
-Gene Symbol: 
-CPLX2
-
-Respiratory System
-
-Gene Symbol: 
-CDH23
-
-Digestive System
+A new test designed to detect molecular residual disease (MRD) across multiple solid tumors, Oncodetect provides patients and clinicians with the insights needed to make more informed decisions throughout the treatment process.

@@ -250,6 +250,8 @@ async def build_stage_candidate_manifest(
     # Recognize downloaded Edgar filings by metadata files.
     for filings_root in [
         candidate_dir.parent / "edgar",
+        root / "runs" / run_input.task_slug / "subagents" / "edgar_research",
+        root / "runs" / run_input.task_slug / "unstructured" / "edgar",
         root / "workspace" / "runs" / run_input.task_slug / "unstructured" / "edgar",
         root / "workspace" / "runs" / run_input.task_slug / "subagents" / "edgar_research",
         root.parent.parent.parent.parent / "runs" / run_input.task_slug / "unstructured" / "edgar",

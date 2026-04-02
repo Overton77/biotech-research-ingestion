@@ -1,0 +1,65 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02681328",
+          "briefTitle": "Randomized Trial Comparing Performance of Molecular Markers for Indeterminate Thyroid Nodules"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Jonsson Comprehensive Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Thyroid"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Afirma GEC",
+              "description": "Afirma GEC molecular test on collected thyroid tissue",
+              "armGroupLabels": [
+                "Afirma GEC"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "ThyroSeq v.2",
+              "description": "ThyroSeq v.2 molecular test on collected thyroid tissue",
+              "armGroupLabels": [
+                "ThyroSeq v.2"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Afirma GSC",
+              "description": "Afirma GSC molecular test on collected thyroid tissue",
+              "armGroupLabels": [
+                "Afirma GSC"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "ThyroSeq v.3",
+              "description": "ThyroSeq v.3 molecular test on collected thyroid tissue",
+              "armGroupLabels": [
+                "ThyroSeq v.3"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pagesFetched": 1,
+  "nextPageToken": null,
+  "totalCount": 1
+}

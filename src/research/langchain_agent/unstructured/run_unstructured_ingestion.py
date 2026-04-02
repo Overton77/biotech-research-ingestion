@@ -1,30 +1,45 @@
+"""
+Run the full unstructured ingestion pipeline for a single candidate document.
+
+Pipeline steps:
+  1. Parse         — Docling or LlamaParse → Document, TextVersion, Segmentation, Chunks
+  2. Embed         — searchText + vector embeddings for Document, TextVersions, Chunks
+  3. Seed linkage  — attach Document to issuer Organization via direct graph search
+  4. Schema linkage— schema-selection + LLM extraction → Document ABOUT/AUTHORED_BY to
+                     structured nodes (prefers temporal state nodes for Organization/Product)
+  5. Persist       — write Document, TextVersion, Segmentation, Chunks, and document-level
+                     relationships to Neo4j (optional, gated by config.write_to_neo4j)
+
+Chunk-level relationship extraction is intentionally omitted. Only Document-level
+ABOUT / AUTHORED_BY / IS_PRIMARY_SOURCE relationships are created.
+"""
+
 from __future__ import annotations
 
-import asyncio
 import json
+import logging
 from pathlib import Path
-from uuid import uuid4
 
-from src.research.langchain_agent.kg.embedder import (
-    build_embedder,
-    embed_batch,
-)
+from src.research.langchain_agent.kg.embedder import build_embedder, embed_batch
 from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
 from src.research.langchain_agent.unstructured.docling_pipeline import (
     materialize_candidate_with_docling,
     materialize_candidate_with_llamaparse,
 )
+from src.research.langchain_agent.unstructured.document_linker import (
+    link_document_to_structured_nodes,
+)
 from src.research.langchain_agent.unstructured.graph_writer import write_unstructured_ingestion_result
 from src.research.langchain_agent.unstructured.models import (
     CandidateDocument,
-    ClaimOccurrenceRecord,
     GraphTargetRef,
     RelationshipDecision,
     UnstructuredIngestionConfig,
     UnstructuredIngestionResult,
 )
 from src.research.langchain_agent.unstructured.neo4j_tools import search_graph_targets
-from src.research.langchain_agent.unstructured.relationship_agent import decide_chunk_relationships
+
+logger = logging.getLogger(__name__)
 
 
 def _truncate_text(text: str, max_chars: int) -> str:
@@ -147,14 +162,27 @@ async def _seed_document_relationships(
     if match is None:
         return decisions
 
-    target = GraphTargetRef(
-        target_level="identity",
-        target_label=match["label"],
-        target_id_property=match["id_property"],
-        target_id=match["id"],
-        state_id=match.get("state_id"),
-        display_name=match.get("display_name", ""),
-    )
+    state_id = match.get("state_id")
+    if state_id:
+        target = GraphTargetRef(
+            target_level="state",
+            target_label="OrganizationState",
+            target_id_property="id",
+            target_id=match["id"],
+            state_id=state_id,
+            display_name=match.get("display_name", ""),
+            metadata={"seeded": True, "resolved_via": "issuer_state"},
+        )
+    else:
+        target = GraphTargetRef(
+            target_level="identity",
+            target_label=match["label"],
+            target_id_property=match["id_property"],
+            target_id=match["id"],
+            display_name=match.get("display_name", ""),
+            metadata={"seeded": True, "resolved_via": "issuer_identity"},
+        )
+
     decisions.append(
         RelationshipDecision(
             relationship_type="ABOUT",
@@ -193,6 +221,7 @@ async def run_unstructured_ingestion(
     cfg = config or UnstructuredIngestionConfig()
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # ---- Step 1: Parse ----
     if cfg.parser_backend == "llamaparse":
         document, text_versions, segmentations, chunks, artifact_paths = await materialize_candidate_with_llamaparse(
             candidate=candidate,
@@ -210,6 +239,8 @@ async def run_unstructured_ingestion(
             cleaning=cfg.chunk_cleaning,
             enhancement=cfg.chunk_enhancement,
         )
+
+    # ---- Step 2: Embed ----
     await _apply_embeddings(
         candidate=candidate,
         document=document,
@@ -217,88 +248,61 @@ async def run_unstructured_ingestion(
         chunks=chunks,
         config=cfg,
     )
+
+    # ---- Persist parsed artifacts to disk ----
     (output_dir / "document_record.json").write_text(
-        document.model_dump_json(indent=2),
-        encoding="utf-8",
+        document.model_dump_json(indent=2), encoding="utf-8",
     )
     if text_versions:
         (output_dir / "raw_text_version.json").write_text(
-            text_versions[0].model_dump_json(indent=2),
-            encoding="utf-8",
+            text_versions[0].model_dump_json(indent=2), encoding="utf-8",
         )
     if len(text_versions) > 1 and text_versions[1].version_kind == "summary":
         (output_dir / "summary_text_version.json").write_text(
-            text_versions[1].model_dump_json(indent=2),
-            encoding="utf-8",
+            text_versions[1].model_dump_json(indent=2), encoding="utf-8",
         )
     (output_dir / "chunks.json").write_text(
         json.dumps([chunk.model_dump(mode="json") for chunk in chunks], indent=2, default=str),
         encoding="utf-8",
     )
 
+    # ---- Step 3: Seed issuer relationship ----
     relationship_decisions = await _seed_document_relationships(
         client=neo4j_client,
         candidate=candidate,
         document_id=document.document_id,
     )
-    seeded_identity_target = relationship_decisions[0].target if relationship_decisions else None
-    claim_occurrences: list[ClaimOccurrenceRecord] = []
 
-    for chunk in chunks[: cfg.max_relationship_chunks]:
-        batch_decisions = []
-        try:
-            batch = await asyncio.wait_for(
-                decide_chunk_relationships(
-                    client=neo4j_client,
-                    document=document,
-                    chunk=chunk,
-                ),
-                timeout=25,
-            )
-            batch_decisions = list(batch.decisions)
-        except Exception as exc:
-            if seeded_identity_target is not None:
-                batch_decisions = [
-                    RelationshipDecision(
-                        relationship_type="MENTIONS",
-                        source_scope="chunk",
-                        source_record_id=chunk.chunk_id,
-                        target=seeded_identity_target,
-                        rationale=(
-                            "Fallback grounded attachment after bounded relationship extraction "
-                            f"failed or timed out: {type(exc).__name__}"
-                        ),
-                        confidence=0.35,
-                        temporal_note="Fallback bounded attachment",
-                        metadata={"fallback": True, "error": str(exc)},
-                    )
-                ]
-
-        for decision in batch_decisions:
-            if decision.relationship_type == "SUPPORTS" and decision.claim_text:
-                claim = ClaimOccurrenceRecord(
-                    claim_occurrence_id=str(uuid4()),
-                    chunk_id=chunk.chunk_id,
-                    document_id=document.document_id,
-                    claim_text=decision.claim_text,
-                    rationale=decision.rationale,
-                    confidence=decision.confidence,
-                    metadata={"target_label": decision.target.target_label},
+    # ---- Step 4: Schema-based document linkage ----
+    document_text = Path(text_versions[0].text_path).read_text(encoding="utf-8") if text_versions else ""
+    try:
+        schema_decisions = await link_document_to_structured_nodes(
+            client=neo4j_client,
+            document=document,
+            document_text=document_text,
+            targets=[candidate.issuer_name, candidate.issuer_ticker],
+            stage_type="targeted_extraction",
+        )
+        seeded_target_ids = {d.target.target_id for d in relationship_decisions}
+        for sd in schema_decisions:
+            if sd.target.target_id not in seeded_target_ids:
+                relationship_decisions.append(sd)
+                seeded_target_ids.add(sd.target.target_id)
+            else:
+                logger.debug(
+                    "[unstructured] Skipping duplicate schema linkage for %s (already seeded)",
+                    sd.target.display_name,
                 )
-                claim_occurrences.append(claim)
-                decision.source_scope = "claim_occurrence"
-                decision.source_record_id = claim.claim_occurrence_id
-            elif not decision.source_record_id:
-                decision.source_scope = "chunk"
-                decision.source_record_id = chunk.chunk_id
-            relationship_decisions.append(decision)
+    except Exception:
+        logger.exception("Schema-based document linkage failed — continuing with seeded relationships only")
 
+    # ---- Step 5: Build result ----
     result = UnstructuredIngestionResult(
         document=document,
         text_versions=text_versions,
         segmentations=segmentations,
         chunks=chunks,
-        claim_occurrences=claim_occurrences,
+        claim_occurrences=[],
         relationship_decisions=relationship_decisions,
         artifact_paths=artifact_paths,
         metadata={"candidate_id": candidate.candidate_id},
@@ -307,6 +311,7 @@ async def run_unstructured_ingestion(
     result_path = output_dir / "unstructured_ingestion_result.json"
     result_path.write_text(result.model_dump_json(indent=2), encoding="utf-8")
 
+    # ---- Step 6: Write to Neo4j ----
     if cfg.write_to_neo4j:
         counts = await write_unstructured_ingestion_result(
             neo4j_client,
@@ -314,7 +319,7 @@ async def run_unstructured_ingestion(
             text_versions=text_versions,
             segmentations=segmentations,
             chunks=chunks,
-            claim_occurrences=claim_occurrences,
+            claim_occurrences=[],
             relationship_decisions=relationship_decisions,
         )
         counts_path = output_dir / "neo4j_write_counts.json"

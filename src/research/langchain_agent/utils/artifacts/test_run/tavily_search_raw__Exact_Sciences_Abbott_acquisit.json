@@ -1,0 +1,53 @@
+{
+  "query": "Exact Sciences Abbott acquisition 2026 8-K change in control March 2026",
+  "results": {
+    "query": "Exact Sciences Abbott acquisition 2026 8-K change in control March 2026",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1124140/000119312525288902/d38144ddefa14a.htm",
+        "title": "DEFA14A",
+        "content": "Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 or Rule",
+        "score": 0.98524,
+        "published_date": "Wed, 19 Nov 2025 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.exactsciences.com/news-events/press-releases/abbott-to-acquire-exact-sciences-a-leader-in-large-and-fast-growing-cancer-screening-and-precision",
+        "title": "Abbott to acquire Exact Sciences, a leader in large and fast-growing cancer screening and precision",
+        "content": "... • Acquisition adds a new growth vertical to Abbott's already high single-digit growth profile, gaining leadership in the fast-growing",
+        "score": 0.98433,
+        "published_date": "Thu, 20 Nov 2025 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.pdf",
+        "title": "Starbucks 2026 Notice of Annual Meeting of Shareholders and Proxy Statement",
+        "content": "Voting. YOUR VOTE IS VERY. IMPORTANT. Shareholders of record of Starbucks. Corporation as of the close of business on January 16, 2026 (the",
+        "score": 0.98031,
+        "published_date": "Mon, 26 Jan 2026 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.abbottinvestor.com/static-files/4e08b51b-8c53-4665-ba21-0995949ffcd0",
+        "title": "UNITED STATES SECURITIES AND EXCHANGE COMMISSION FORM 10-K Abbott Laboratories",
+        "content": "Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act.",
+        "score": 0.9747,
+        "published_date": "Sat, 10 Jul 2021 00:00:00 GMT",
+        "raw_content": null
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/73309/000119312526127746/d51842dars.pdf",
+        "title": "2025 ANNUAL REPORT",
+        "content": "STEWART B GURLEY TAMMY LYNN GURNEY BRYAN GURR GUSTAVO GURROLA REYES KALA GURUSAMY GURUMURUGAN G GURUSAMY S TAMILSELVAN GURUSHANKAR JAMUNA",
+        "score": 0.96755,
+        "published_date": "Wed, 01 Apr 2026 00:22:01 GMT",
+        "raw_content": null
+      }
+    ],
+    "response_time": 2.0,
+    "request_id": "8c5ae08f-f702-4483-8104-31aca75cb531"
+  }
+}

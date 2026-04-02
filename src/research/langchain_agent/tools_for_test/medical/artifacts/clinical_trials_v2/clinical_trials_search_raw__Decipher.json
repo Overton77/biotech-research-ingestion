@@ -1,0 +1,1996 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02783950",
+          "briefTitle": "Genomics in Michigan Impacting Observation or Radiation"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Michigan Rogel Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Decipher Prostate Cancer Classifier",
+              "description": "The Decipher test (GenomeDx Biosciences, San Diego, CA) is a genomic test that predicts high grade disease, the probability of metastasis and prostate cancer-specific mortality for men with prostate cancer.",
+              "armGroupLabels": [
+                "GC (Decipher) Arm"
+              ],
+              "otherNames": [
+                "Decipher Post-Op"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05568953",
+          "briefTitle": "An Experimental Medicine Decipher of a Minimum Correlate of Cellular Immunity"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Singapore General Hospital",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Infectious Disease",
+            "Yellow Fever",
+            "Japanese Encephalitis",
+            "Viral Infection"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BIOLOGICAL",
+              "name": "Stamaril",
+              "description": "Stamaril is licensed by the Health Sciences Authority (HSA), Singapore. The vaccine are manufactured by Sanofi Pasteur and sourced from Sanofi Pasteur's local distributor.",
+              "armGroupLabels": [
+                "Arm 1 (JE-YF17D vaccine followed by YF17D vaccine)",
+                "Arm 2 (YF17D vaccine followed by JE-YF17D vaccine)",
+                "Arm 3 (Inactivated JE vaccine followed by YF17D vaccine)"
+              ],
+              "otherNames": [
+                "YF17D vaccine"
+              ]
+            },
+            {
+              "type": "BIOLOGICAL",
+              "name": "Imojev",
+              "description": "Imojev is licensed by the Health Sciences Authority (HSA), Singapore. The vaccine are manufactured by Sanofi Pasteur and sourced from Sanofi Pasteur's local distributor.",
+              "armGroupLabels": [
+                "Arm 1 (JE-YF17D vaccine followed by YF17D vaccine)",
+                "Arm 2 (YF17D vaccine followed by JE-YF17D vaccine)"
+              ],
+              "otherNames": [
+                "JE-YF17D vaccine"
+              ]
+            },
+            {
+              "type": "BIOLOGICAL",
+              "name": "Ixiaro",
+              "description": "Ixiaro is licensed by the Health Sciences Authority (HSA), Singapore. The Ixiaro vaccines are manufactured by Valneva and sourced from local distributor, Aenon Pharmaceuticals SEA Pte Ltd.",
+              "armGroupLabels": [
+                "Arm 3 (Inactivated JE vaccine followed by YF17D vaccine)"
+              ],
+              "otherNames": [
+                "Inactivated Japanese Encephalitis vaccine"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07351266",
+          "briefTitle": "Multi-omics Analysis of Renal Cell Carcinoma Mechanisms; Drug Sensitivity Testing in Patient-Derived Cell-based Microtumors"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Cancer Institute and Hospital, Chinese Academy of Medical Sciences",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Renal Cell Carcinoma (Kidney Cancer)"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Multi-region Tumor Sampling and Integrated Multi-omics Analysis and Microtumor PTC Drug Sensitivity Assay",
+              "description": "This integrated intervention involves: 1) Multi-region sampling of intratumoral nodules from resected RCC tumors for multi-omics analysis (single-cell RNA-seq, whole-exome sequencing, spatial transcriptomics) to map molecular and cellular heterogeneity. 2) Parallel generation of patient-derived microtumor (PTC) models from the same nodules for ex vivo drug sensitivity testing against a panel of oncology agents (e.g., Axitinib, Pembrolizumab). The core purpose is to correlate molecular features from omics with functional drug response data to decipher mechanisms of intra-tumoral heterogeneity and resistance.",
+              "armGroupLabels": [
+                "Study Cohort"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03495427",
+          "briefTitle": "PSMA-PET Imaging for Detecting Early Metastatic Prostate Cancer in Men w/ High Decipher Test Scores"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "H. Lee Moffitt Cancer Center and Research Institute",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer",
+            "Recurrent Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "F-DCFPyL Injection",
+              "description": "F-DCFPyL Injection is a radioactive diagnostic imaging agent indicated for imaging of patients with recurrent prostate cancer.",
+              "armGroupLabels": [
+                "Radioactive Diagnostic Imaging"
+              ],
+              "otherNames": [
+                "Imaging agent"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "PSMA PET",
+              "description": "PSMA PET imaging (for men with high GC \\>0.45) will be done after 2 years post-treatment, then yearly up to 5 years.",
+              "armGroupLabels": [
+                "Radioactive Diagnostic Imaging"
+              ],
+              "otherNames": [
+                "Prostate-specific Membrane Antigen (PSMA)",
+                "Positron Emission Tomography (PET)"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05913843",
+          "briefTitle": "DeciFace: Decipher the Influence of Ethnic Backgrounds on the Facial Dysmorphic Features of Rare Mendelian Disorders"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Taiwan University Hospital",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Rare Diseases"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Take photo",
+              "description": "We will use the camera to take 2 front and side images of the participant, and select one of the better images to upload to the facial analysis system (GestaltMatcher Database) for analysis."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03116581",
+          "briefTitle": "Altruistic Decisions"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Hospices Civils de Lyon",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Healthy"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Behavior",
+              "description": "Random-dots tasks: dots appear and move, most have a random trajectory but a given proportion of them move coherently to the same direction.\n\n* Vicarious reward Each trial begins with a cue, showing 'me' or 'him' and filled rectangle filled proportionally to the payoff. The cue and the square are depicted in yellow (oneself) or blue (other), depending on the beneficiary. The moving dots are then presented and the subjects respond. At the end of dots motion, the feedback is presented. If the response was correct, a pile of coins proportional to the payoff is shown. For incorrect responses and misses, a red-colored cross is displayed.\n* Audience effect Each trial begins with the display of two eyes (public) or a padlock (private). The moving dots are shown and the participant answers. Audience condition changes the information available on accuracy when submitting comments. In the observed condition, an arrow shows the response. In the observed condition, no feedback is displayed.",
+              "armGroupLabels": [
+                "Audience effect",
+                "Vicarious reward"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "fMRI (functional Magnetic Resonance Imagery)",
+              "description": "Both behavioral task (audience effect and vicarious reward) will be studied in fMRI (functional Magnetic Resonance Imagery). The same paradigms used in the behavioral experiment will be adapted for fMRI.\n\nAudience Effect experiment: trials will last for 10 seconds maximum. With 80 trials for each condition (public easy, public difficult, private easy and private difficult), the task will count a total of 320 trials and have a 54 minutes duration, in 3 runs of 17 minutes each.\n\nVicarious Reward experiment: trials will have a 10 seconds maximum duration. Using 40 trials for each condition (other low payoff, other high payoff, self low payoff, self high payoff, control condition), the task will have a total of 200 trials and last for 54 minutes, in 6 runs of 9 minutes each.",
+              "armGroupLabels": [
+                "Audience effect",
+                "Vicarious reward"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "MEG (MagnetoEncephaloGraphy)",
+              "description": "Both behavioral task (audience effect and vicarious reward) will be studied in MEG (MagnetoEncephaloGraphy). The same paradigms used in the behavioral experiment will be used in MEG.\n\nAudience Effect experiment: trials will last for 7 seconds maximum. With 100 trials for each condition (public easy, public difficult, private easy and private difficult), the task will count a total of 400 trials and have a 47 minutes duration. Every 100 trials (about 12 minutes of tasks), a break will be proposed to the participants.\n\nVicarious Reward experiment: trials will have a 7.2 seconds maximum duration. Using 75 trials for each condition (other low payoff, other high payoff, self low payoff, self high payoff, control condition), the task will have a total of 375 trials and last for 45 minutes. Every 125 trials (every 15 minutes), a break will be proposed to the participants.",
+              "armGroupLabels": [
+                "Audience effect",
+                "Vicarious reward"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04396808",
+          "briefTitle": "Genomics in Michigan to AdJust Outcomes in Prostate canceR (G-MAJOR) for Men With Newly Diagnosed Favorable Risk Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Michigan Rogel Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Decipher",
+              "description": "The Decipher test (GenomeDx Biosciences) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "Decipher Prostate Cancer Classifier"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Prolaris",
+              "description": "The Prolaris test (Myriad Genetics, Inc.) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "Prolaris Prostate Cancer Test"
+              ]
+            },
+            {
+              "type": "DEVICE",
+              "name": "Oncotype Dx Genomic Prostate Score (GPS)",
+              "description": "The Oncotype Dx GPS test (Exact Sciences corp.) is a genomic test that will be performed on prostate biopsy tissue. Results will be provided to the patient and physician prior to making a treatment decision.",
+              "armGroupLabels": [
+                "Standard of care + pre-treatment genomics testing"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Standard of care (askMUSIC score)",
+              "description": "AskMUSIC is a risk calculator based on standard clinical and pathologic variables (https://ask.musicurology.com/) and is generally included as part of routine clinical care.",
+              "armGroupLabels": [
+                "Standard of care (no pre-treatment genomics testing)",
+                "Standard of care + pre-treatment genomics testing"
+              ],
+              "otherNames": [
+                "askMUSIC score"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04126850",
+          "briefTitle": "Pilot Project: The Amplicon and Metatranscriptomic Study of Intra and Extra Intestinal Microbiome in Non-infectious Uveitis Disease"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Fakultas Kedokteran Universitas Indonesia",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Autoimmune Uveitis",
+            "Behçet Disease",
+            "Vogt-Koyanagi-Harada Disease",
+            "Idiopathic Uveitis",
+            "Noninfectious Panuveitis",
+            "Anterior Uveitis Idiopathic",
+            "Posterior Uveitis",
+            "Intermediate Uveitis"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05852041",
+          "briefTitle": "rhPSMA-73 PET-MRI Imaging for the Detection of Prostate Cancer Among Men Who Are Otherwise Candidates for Active Surveillance"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Northwestern University",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Adenocarcinoma",
+            "Stage I Prostate Cancer AJCC v8",
+            "Stage IIA Prostate Cancer AJCC v8",
+            "Stage IIB Prostate Cancer AJCC v8"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "Biopsy of Prostate",
+              "description": "Undergo MRI/PET prostate biopsy",
+              "armGroupLabels": [
+                "Treatment (rhPSMA, PET-MRI, mpMRI)"
+              ],
+              "otherNames": [
+                "Prostate Biopsy",
+                "Prostatic Biopsy"
+              ]
+            },
+            {
+              "type": "GENETIC",
+              "name": "Decipher Prostate Cancer Test",
+              "description": "Undergo decipher",
+              "armGroupLabels": [
+                "Treatment (rhPSMA, PET-MRI, mpMRI)"
+              ],
+              "otherNames": [
+                "Decipher",
+                "Decipher Metastasis Test",
+                "Decipher Test"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Flotufolastat F-18 Gallium",
+              "description": "Given IV",
+              "armGroupLabels": [
+                "Treatment (rhPSMA, PET-MRI, mpMRI)"
+              ],
+              "otherNames": [
+                "(18F)-rhPSMA-7.3",
+                "18F-rhPSMA-7.3",
+                "18FrhPSMA-7.3",
+                "F-18-rhPSMA-7.3",
+                "Fluorine F 18 radiohybrid PSMA-7.3",
+                "Fluorine F 18 rhPSMA-7.3",
+                "Fluorine-18 rhPSMA-7.3",
+                "rhPSMA-7.3 (18F)"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Magnetic Resonance Imaging",
+              "description": "Undergo PET-MRI",
+              "armGroupLabels": [
+                "Treatment (rhPSMA, PET-MRI, mpMRI)"
+              ],
+              "otherNames": [
+                "Magnetic Resonance",
+                "Magnetic Resonance Imaging Scan",
+                "Medical Imaging, Magnetic Resonance / Nuclear Magnetic Resonance",
+                "MR",
+                "MR Imaging",
+                "MRI",
+                "MRI Scan",
+                "NMR Imaging",
+                "NMRI",
+                "Nuclear Magnetic Resonance Imaging"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Multiparametric Magnetic Resonance Imaging",
+              "description": "Undergo mpMRI",
+              "armGroupLabels": [
+                "Treatment (rhPSMA, PET-MRI, mpMRI)"
+              ],
+              "otherNames": [
+                "MP-MRI",
+                "mpMRI",
+                "Multi-parametric MRI",
+                "Multiparametric MRI"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Positron Emission Tomography",
+              "description": "Undergo PET-MRI",
+              "armGroupLabels": [
+                "Treatment (rhPSMA, PET-MRI, mpMRI)"
+              ],
+              "otherNames": [
+                "Medical Imaging, Positron Emission Tomography",
+                "PET",
+                "PET Scan",
+                "Positron Emission Tomography Scan",
+                "Positron-Emission Tomography",
+                "proton magnetic resonance spectroscopic imaging",
+                "PT"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Radical Prostatectomy",
+              "description": "Undergo radical prostatectomy",
+              "armGroupLabels": [
+                "Treatment (rhPSMA, PET-MRI, mpMRI)"
+              ],
+              "otherNames": [
+                "Prostatovesiculectomy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03237702",
+          "briefTitle": "Decipher Lethal Prostate Cancer Biology - Urine Metabolomics"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Taiwan University Hospital",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Significant Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIETARY_SUPPLEMENT",
+              "name": "Multi-Carotenoids",
+              "description": "All participants in the second stage will receive multi-carotenoids 30 mg qd for 8 weeks.",
+              "armGroupLabels": [
+                "MCS arm"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06502548",
+          "briefTitle": "Endometriosis Transcriptomic Cell Atlas"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University Hospital, Toulouse",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Endometriosis",
+            "Infertility"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "Endometriosis",
+              "description": "Anatomopathology waste will be recovered, i.e. the remainder of the endometriosis lesions and the remainder of the endometrial biopsy.\n\nA blood sample will be taken the day before surgery, as part of the treatment, for a hormonal check-up.",
+              "armGroupLabels": [
+                "Patient with endometriosis"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Tubal ligation or Hysterectomy",
+              "description": "During surgery, an endometrial biopsy will be taken for research purposes. A blood sample will be taken the day before surgery, as part of the treatment, for a hormonal check-up.",
+              "armGroupLabels": [
+                "Healthy control patient"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04073160",
+          "briefTitle": "TRIO Bladder: A Study of Durvalumab Plus Tremelimumab Followed by Concurrent Durvalumab Plus Bladder Radiation in Muscle-Invasive Bladder Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "WITHDRAWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Daniel George, MD",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Bladder Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Tremelimumab",
+              "description": "Tremelimumab and durvalumab will be administered in combination during cycles 1 and 2. Tremelimumab will be administered intravenously at a dose of 75 mg on cycle 1 day 1 and cycle 2 day 1. Cycles are 4 weeks long.",
+              "armGroupLabels": [
+                "Decipher Bladder test subtype basal and cisplatin-ineligible",
+                "Decipher Bladder test subtype non-basal"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Durvalumab",
+              "description": "Tremelimumab and durvalumab will be administered in combination during cycles 1 and 2. Durvalumab will be administered intravenously at a dose of 1500 mg on cycle 1 day 1 and cycle 2 day 1. Cycles are 4 weeks long.\n\nEligible subjects may go on to receive a combination of durvalumab and bladder radiation during cycles 3 and 4. Durvalumab will be administered intravenously at a dose of 1500 mg on cycle 3 day 1 and cycle 4 day 1.\n\nAt the completion of radiation, eligible subjects may continue to receive durvalumab for a maximum of one year from the date of their initial dose. Durvalumab will be administered intravenously at a dose of 1500 mg on the first day of each cycle.",
+              "armGroupLabels": [
+                "Decipher Bladder test subtype basal and cisplatin-ineligible",
+                "Decipher Bladder test subtype non-basal"
+              ],
+              "otherNames": [
+                "Imfinzi"
+              ]
+            },
+            {
+              "type": "RADIATION",
+              "name": "Bladder radiation",
+              "description": "During the durvalumab cycles 3 and 4, eligible subjects will receive 6.5 weeks of radiation to the bladder. Radiation will be administered at a dose of 64 Gy in daily 2 Gy fractions.",
+              "armGroupLabels": [
+                "Decipher Bladder test subtype basal and cisplatin-ineligible",
+                "Decipher Bladder test subtype non-basal"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Intravesicular Therapy",
+              "description": "Subjects will receive intravesicular therapy, if clinically indicated during cycles 5 and beyond of durvalumab administration. Intravesicular therapy will consist of BCG, gemcitabine, mitomycin or a similar drug, depending on institutional standards and treating provider's discretion.",
+              "armGroupLabels": [
+                "Decipher Bladder test subtype basal and cisplatin-ineligible",
+                "Decipher Bladder test subtype non-basal"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05377671",
+          "briefTitle": "Backward Masking Tasks to Decipher Impaired Input-Output Connections in MS @7T"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Assistance Publique Hopitaux De Marseille",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Difference in Regional Brain Activity"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "IRM multimodale a ultra-haute camp",
+              "description": "The MRI includes, in addition to structural task sequences, diffusion imaging and resting state fMRI.",
+              "armGroupLabels": [
+                "Cognitive deficit group",
+                "Without cognitive group"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03234140",
+          "briefTitle": "Constitutional Genetics in Follicular Lymphoma"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Hospices Civils de Lyon",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Follicular Lymphoma",
+            "Genetic Predisposition to Disease"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "GENETIC",
+              "name": "Genome Wide Association Studies",
+              "description": "Using the Genome wide association studies (GWAS) approach on these 1,565 patients, the project plan to identify new prognostic markers. These markers will then be analyzed to decipher the impact of host genetics on somatic alterations and tumor biology, using public or matched patient data.",
+              "armGroupLabels": [
+                "Group \"Genome Wide Association Studies\""
+              ]
+            },
+            {
+              "type": "GENETIC",
+              "name": "Single-nucleotide polymorphisms's genotyping",
+              "description": "Analyze of the influence of single-nucleotide polymorphisms on circulating t(14;18) levels",
+              "armGroupLabels": [
+                "Group \"EPIC\""
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01539096",
+          "briefTitle": "Brain Stimulation-aided Stroke Rehabilitation: Neural Mechanisms of Recovery"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "The Cleveland Clinic",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Stroke"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "tDCS: noninvasive brain stimulation",
+              "description": "TDCS is a method of noninvasive stimulation of the brain. Using electrodes placed in saline-soaked sponges, low level of direct current (1mA) is delivered over the scalp. This intervention is considered safe and noninvasive because it does not involve implantation or injection or any skin penetration. In the present study, tDCS will be delivered for 1 hr each day for 3 days a week for 5 weeks in conjunction with constraint-induced movement therapy for the affected hand.",
+              "armGroupLabels": [
+                "tDCS plus CIMT"
+              ],
+              "otherNames": [
+                "tDCS",
+                "noninvasive brain stimulation",
+                "neuromodulation",
+                "transcranial stimulation",
+                "TCS"
+              ]
+            },
+            {
+              "type": "BEHAVIORAL",
+              "name": "Constraint induced movement therapy (CIMT)",
+              "description": "Patients with stroke affecting the hand will receive constraint-induced movement therapy (CIMT) to re-train movements of the affected hand. Training will involve practicing tasks of daily living with qualified personnel. Training will be delivered for 1 hr each day for 3 days a week for 5 weeks. Patients will also be asked to use their affected hand in daily activities at home for 5 hrs a day while wearing a mitt on the unaffected hand.",
+              "armGroupLabels": [
+                "Sham tDCS plus CIMT",
+                "tDCS plus CIMT"
+              ],
+              "otherNames": [
+                "hand therapy",
+                "CIMT",
+                "forced use therapy",
+                "constraint induced movement therapy",
+                "stroke therapy",
+                "stroke rehabilitation"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Sham tDCS: placebo noninvasive brain stimulation",
+              "description": "Placebo set-up for noninvasive brain stimulation will be similar to that for the active tDCS; sponge electrodes would be placed on the scalp and connected to a batter-operated device. Patients will not receive the effective level of direct current as would delivered in active tDCS intervention. But patients will not be able to decipher whether they are receiving active or placebo tDCS.",
+              "armGroupLabels": [
+                "Sham tDCS plus CIMT"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05014243",
+          "briefTitle": "Targeted Metabolomics to Decipher Dietary Contributions to Pediatric Inflammatory Bowel Disease (IBD) - Main Study"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Colorado, Denver",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Gut Microbiome",
+            "Inflammation",
+            "Irritable Bowel Syndrome"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01539109",
+          "briefTitle": "Improving Spinal Cord Injury Rehabilitation Interventions by Retraining the Brain With Stimulation"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "The Cleveland Clinic",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Spinal Cord Injury"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BEHAVIORAL",
+              "name": "Rehabilitation",
+              "description": "Patients will receive training upon tasks of daily living. Patients will perform these exercises in our laboratory under the supervision of qualified personnel.",
+              "armGroupLabels": [
+                "Rehab and sham tDCS",
+                "Rehab and tDCS"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Noninvasive brain stimulation: tDCS",
+              "description": "TDCS is a method of noninvasive stimulation of the brain. Using electrodes placed in saline-soaked sponges, low level of direct current (2mA) is delivered over the scalp. This intervention is considered safe and noninvasive because it does not involve implantation or injection or any skin penetration. In the present study, tDCS will be delivered to patients in the experimental group for 2 hr each day for 5 days a week for 2 weeks in conjunction with therapy for the affected hand.",
+              "armGroupLabels": [
+                "Rehab and tDCS"
+              ],
+              "otherNames": [
+                "tDCS",
+                "Transcranial Stimulation",
+                "Transcranial Direct Current Stimulation",
+                "Brain stimulation"
+              ]
+            },
+            {
+              "type": "PROCEDURE",
+              "name": "Sham tDCS: placebo noninvasive brain stimulation",
+              "description": "Placebo set-up for noninvasive brain stimulation will be similar to that for the active tDCS; sponge electrodes would be placed on the scalp and connected to a batter-operated device. Patients will not receive the effective level of direct current as would delivered in active tDCS intervention. But patients will not be able to decipher whether they are receiving active or placebo tDCS.",
+              "armGroupLabels": [
+                "Rehab and sham tDCS"
+              ],
+              "otherNames": [
+                "sham tDCS",
+                "placebo tDCS"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05100472",
+          "briefTitle": "A Study of Shorter Course Hormone Therapy and Radiation for High-risk Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Memorial Sloan Kettering Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BIOLOGICAL",
+              "name": "Androgen deprivation therapy (ADT)",
+              "description": "ADT will include bicalutamide 50 mg PO daily started 1-2 weeks before leuprolide 22.5mg IM or SQ delivered every 3 months x 2. Bicalutamide will be continued through radiation and then discontinued on the day of the last fraction. Leuprolide can be given at different doses, but must be given for a total planned duration of 6 months.",
+              "armGroupLabels": [
+                "Hormone Therapy and Radiation"
+              ]
+            },
+            {
+              "type": "RADIATION",
+              "name": "Brachytherapy",
+              "description": "After approximately 3 months (+/- 1 month) of neoadjuvant ADT, patients will undergo general anesthesia for outpatient transperineal high dose rate (HDR) interstitial prostate brachytherapy implant.",
+              "armGroupLabels": [
+                "Hormone Therapy and Radiation"
+              ]
+            },
+            {
+              "type": "RADIATION",
+              "name": "Hypofractionated pelvic External beam radiation",
+              "description": "Patients will receive image-guided, intensity-modulated, hypofractionated radiation therapy targeting the prostate, seminal vesicles and pelvic lymph nodes to a dose of 25 Gy in 5 fractions delivered daily.",
+              "armGroupLabels": [
+                "Hormone Therapy and Radiation"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01834157",
+          "briefTitle": "Improvement of Hand Dysfunction by Arthritis in Systemic Sclerosis"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Prof. Laszlo Czirjak",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Systemic Sclerosis",
+            "Arthritis"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07077239",
+          "briefTitle": "Prostate Cancer Postoperative Stereotactic Body Radiotherapy With Adaptive Technology for Minimizing Toxicity"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Jonsson Comprehensive Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer (CRPC)"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07182279",
+          "briefTitle": "Neoadjuvant High Dose Rate Brachytherapy Prior to Radical Prostatectomy in Patients With Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "The Methodist Hospital Research Institute",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer (Adenocarcinoma)"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Brachytherapy",
+              "description": "All patients will receive a single fraction of HDR-B (15Gy) 4-8 weeks prior to RALP. Patients with high genomic risk or node positivity will receive short course adjuvant AAB.",
+              "armGroupLabels": [
+                "Decipher < 0.85",
+                "Decipher ≥0.85 with AAB"
+              ],
+              "otherNames": [
+                "Brachytherapy pre surgery"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06311396",
+          "briefTitle": "Development of a Neuronal Microscope"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Fondazione IRCCS Ca' Granda, Ospedale Maggiore Policlinico",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Hepatic Carcinoma"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "GENETIC",
+              "name": "genetic model",
+              "description": "Create a complete molecular-level description of the heterogeneous population of cells that are capable of giving rise to tumor transformation in the liver.",
+              "armGroupLabels": [
+                "Neuronal micRoscopy for cEll behaVioural Examination and mAnipuLation"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05951920",
+          "briefTitle": "Lymph Node Aspiration to Decipher the Immune Response of Beta-variant Recombinant Protein Booster Vaccine (VidPrevtyn Beta, Sanofi) Compared to a Bivalent mRNA Vaccine (Comirnaty Original/Omicron BA.4-5, BioNTech-Pfizer) in Adults Previously Vaccinated With at Least 3 Doses of COVID-19 mRNA Vaccine."
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Assistance Publique - Hôpitaux de Paris",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "COVID-19"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "Lymph node aspiration / Blood sampling",
+              "description": "Lymph node aspiration / Blood sampling",
+              "armGroupLabels": [
+                "Lymph node aspiration / Blood sampling"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03251183",
+          "briefTitle": "Validation of CMR Against Invasive Haemodynamics in Patients With HFpEF"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Goethe University",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Heart Failure With Normal Ejection Fraction"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Comprehensive Cardiovascular magnetic resonance (CMR)",
+              "description": "Cardiovascular magnetic resonance (CMR) provides non-invasive, radiation-free and in-depth evaluation of myocardial structure and function. In addition to established tools for assessment of cardiac volume, mass, function and regional myocardial scar with late Gadolinium enhancement (LGE), several novel quantitative CMR parameters will be assessed including T1-mapping or fully quantitative perfusion Imaging.",
+              "armGroupLabels": [
+                "Age/gender matched control group",
+                "Healthy volunteers",
+                "Main group",
+                "Reproducibility group"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Blood sampling",
+              "description": "Blood samples will eventually be analysed for markers related to heart failure (BNP/NT)-pro-BNP, myocardial inflammation and fibrosis (cytokine profiling, Galectin-3, Procollagen Type I and III, hsCRP). Whole blood will be frozen for DNA isolation and genome analysis. Peripheral blood mononuclear cells will be isolated by Ficoll in a subset of patients and will be used for RNA isolation allowing RNA-seq or reverse transcription (RT) - polymerase chain reaction (PCR) analysis.",
+              "armGroupLabels": [
+                "Age/gender matched control group",
+                "Healthy volunteers",
+                "Main group",
+                "Reproducibility group"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "TTE (EchoErgo)",
+              "description": "Measurements will include cavity dimensions, flow velocities, myocardial motion velocity and strain as well as for change of parameters during ergometric stress.",
+              "armGroupLabels": [
+                "Age/gender matched control group",
+                "Healthy volunteers",
+                "Main group"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Invasive pressure-volume (PV) Loops",
+              "description": "Multiple parameters (including EDPVR, ESPVR, dp/dt min, Tau, Ea) will be derived from the various PV loop assessments and additional relevant parameters will be calculated. Right ventricular and pulmonary pressures including pulmonary vascular resistance will be measured with Swan-Ganz catheters using right venous femoral approach.",
+              "armGroupLabels": [
+                "Main group"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Left ventricular (LV) biopsy",
+              "description": "A set of myocardial biopsies for each patient will be stained with Masson Trichrome for qualitative and quantitative assessment of the collagen volume fraction; fat droplets will be identified by red oil staining, Congo Red for amyloid immunohistology will be used to determine total leukocytes (CD45), T-cells (CD3) and monocytes/macrophages (CD68).\n\nA second set of biopsies will be frozen immediately and stored at -80°. Western blot analysis will be performed to determine alterations at the myofilament level including titin isoform composition and phosphorylation status.",
+              "armGroupLabels": [
+                "Main group"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02609269",
+          "briefTitle": "Decipher Genomics Resource for Intelligent Discovery"
+        },
+        "statusModule": {
+          "overallStatus": "ENROLLING_BY_INVITATION"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "GenomeDx Biosciences Corp",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer",
+            "Bladder Cancer",
+            "Renal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Decipher Cancer Classifier",
+              "description": "The Decipher are gene expression-based tests that are used to better risk stratify or characterize tumor biology that are commercially available through Veracyte, Inc CLIA \\& CAP certified laboratory in San Diego, CA",
+              "armGroupLabels": [
+                "Decipher GRID Patients"
+              ],
+              "otherNames": [
+                "Decipher Biopsy, Decipher RP, Decipher Bladder, Decipher Renal, Decipher Test"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05697159",
+          "briefTitle": "7 Tesla MRI Brain Imaging to Decipher Filgotinib's Mode of Analgesic Action in Rheumatoid Arthritis"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "NHS Greater Glasgow and Clyde",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Rheumatoid Arthritis",
+            "Sickness Behavior",
+            "Inflammatory Disease",
+            "Autoimmune",
+            "Pain, Chronic"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02034825",
+          "briefTitle": "Multi-site Decision Impact Study for Decipher"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "GenomeDx Biosciences Corp",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Decipher Questionnaire",
+              "description": "Each participant will complete the pre and post-Decipher eCRQs for a minimum of 5 cases, and a maximum of 25 cases.",
+              "armGroupLabels": [
+                "Practicing urologic surgeons"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06825338",
+          "briefTitle": "Does the 'CATCH My Breath' Vaping Prevention Program Prevent High School Students in Ontario, Canada From Starting to Vape?"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Ontario Institute of Technology",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Vaping Behaviors"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "CATCH My Breath",
+              "description": "CATCH My Breath (CMB) is a school-based vaping prevention curriculum based on best practices from earlier prevention studies that works by fostering social competence and social influence resistance skills. The curriculum design and content targets two key constructs of Social Cognitive Theory: self-efficacy and behavioural capacity (i.e., knowledge and skills). The curriculum provides students with knowledge of why and how to resist vaping. It is delivered through two 60-minute lessons by a trained Public Health Unit presenter. The curriculum lessons provide information about: 1) the physical, mental, and addiction risks associated with vaping, 2) social norms of vaping (e.g., most youth don't vape), 3) media literacy (e.g., how to recognize and decipher marketing of vapes), 4) strategies to resist and avoid vaping, 5)school and provincial policies about vaping. To solidify the content, in-class activities allow students to discuss what they are learning and practice refusal skills.",
+              "armGroupLabels": [
+                "CATCH My Breath (CMB)"
+              ],
+              "otherNames": [
+                "Vaping prevention program",
+                "Vaping prevention curriculum"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02034812",
+          "briefTitle": "Decision Impact Study to Measure the Influence of DECIPHER on Treatment Recommendations for Radiation Oncologists"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "GenomeDx Biosciences Corp",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Decipher Questionnaire",
+              "description": "Pathological data from 12 de-identified patient cases will be reviewed by at least 25 Radiation Oncologists before and after exposure to the Decipher test results. Given the number of patient cases, reviewed by each participant, this allows for assessment of decision making based on 300 patient case reviews at each time point, immediately following RP and at the time of PSA rise.",
+              "armGroupLabels": [
+                "Radiation Oncologists"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02020876",
+          "briefTitle": "Decision Impact Study to Measure the Influence of DECIPHER on Treatment Recommendations"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "GenomeDx Biosciences Corp",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "DECIPHER Questionnaire",
+              "description": "Participants are asked to complete a questionnaire to assess the impact of Decipher on physicians' treatment recommendation. All participants use the same data collection instrument. Each participant opinion is collected based on a random selection of cases.",
+              "armGroupLabels": [
+                "Practicing urologic surgeons"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03237026",
+          "briefTitle": "Predictive and Prognostic Markers for Treatment Outcomes in Prostate Cancer Patients"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Taiwan University Hospital",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "No intervention required",
+              "description": "No intervention required",
+              "armGroupLabels": [
+                "Cohort A",
+                "Cohort B"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02080689",
+          "briefTitle": "Prospective Clinical Utility Study to Assess the Impact of Decipher on Treatment Decisions After Surgery"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "GenomeDx Biosciences Corp",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Decipher",
+              "armGroupLabels": [
+                "Adjuvant setting",
+                "Salvage setting"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06282588",
+          "briefTitle": "Treatment of High-Risk Prostate Cancer Guided by Novel Diagnostic Radio- and Molecular Tracers"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Cancer Research Antwerp",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Darolutamide",
+              "description": "2x300 mg tablets twice daily, for up to 96 weeks",
+              "armGroupLabels": [
+                "Phase 2 Open Label",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Nubeqa",
+                "BAY1841788"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Darolutamide matched placebo",
+              "description": "2x300 mg tablets twice daily, for up to 96 weeks",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator"
+              ],
+              "otherNames": [
+                "BAY1841788 matched placebo"
+              ]
+            },
+            {
+              "type": "RADIATION",
+              "name": "Radiotherapy",
+              "description": "Preferred regimens: 60 to 62 Gy delivered in 20 fractions of 3.0 to 3.1Gy per fraction; 36.25 Gy delivered in 5 fractions of 7.25 Gy per fraction, 2-3 fractions per week",
+              "armGroupLabels": [
+                "Phase 2 Open Label",
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Zoladex 3.6Mg Implant",
+              "description": "3.6 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Goserelin acetate 3.6 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Zoladex LA",
+              "description": "10.8 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Goserelin acetate 10.8 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Decapeptyl sustained release 22.5 mg",
+              "description": "22.5 mg, intramusculair injection",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Triptorelin 11.25 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Decapeptyl sustained release 11.25 mg",
+              "description": "11.25 mg, intramusculair injection",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Triptorelin 11.25 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Depo-Eligard 45 mg",
+              "description": "45 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Leuprorelin acetate 45 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Depo-Eligard 22.5 mg",
+              "description": "22.5 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Leuprorelin acetate 22.5 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Depo-Eligard 7.5 mg",
+              "description": "7.5 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Leuprorelin acetate 7.5 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Firmagon 120 MG Injection",
+              "description": "120 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Degarelix 40 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Firmagon 80 MG Injection",
+              "description": "80 mg, subcutaneous use",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Degarelix 20 mg"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Docetaxel",
+              "description": "75 mg per square m, IV infusion",
+              "armGroupLabels": [
+                "Phase 3 Blinded Comparator",
+                "Phase 3 Blinded Experimental"
+              ],
+              "otherNames": [
+                "Taxotere"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02860793",
+          "briefTitle": "Role of PTK-7 in Acute Myeloid Leukemias"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Institut Paoli-Calmettes",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Acute Myeloid Leukemia"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Bone marrow aspiration",
+              "armGroupLabels": [
+                "AML patients at diagnosis"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Blood sampling",
+              "armGroupLabels": [
+                "AML patients at diagnosis"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05112120",
+          "briefTitle": "Exploiting Leading Edge 7T MRI Brain Imaging to Decipher Olumiant's Mode of Analgesic Action in Rheumatoid Arthritis"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "NHS Greater Glasgow and Clyde",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Rheumatoid Arthritis"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Olumiant",
+              "description": "Olumiant (4mg) will be administered in line with standard of care guidance.",
+              "armGroupLabels": [
+                "Single centre single arm observational cohort"
+              ],
+              "otherNames": [
+                "Baricitinib"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05169970",
+          "briefTitle": "A Study of Stereotactic Body Radiation Therapy (SBRT) Without Androgen Deprivation Therapy (ADT) in People With Unfavorable Intermediate-Risk Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Memorial Sloan Kettering Cancer Center",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "RADIATION",
+              "name": "Stereotactic Body Radiation Therapy (SBRT)",
+              "description": "Patients with a low or intermediate risk Decipher score will receive radiation targeting the seminal prostate and seminal vesicles to a dose of 40 Gy in 5 fractions delivered every other day.",
+              "armGroupLabels": [
+                "Patients with low-intermediate risk Decipher scores"
+              ]
+            },
+            {
+              "type": "RADIATION",
+              "name": "Stereotactic Body Radiation Therapy (SBRT)",
+              "description": "Patients with high risk Decipher scores will receive radiation targeting the prostate and seminal vesicles to a dose of 40 Gy in 5 fractions with a simultaneous integrated boost to 45 Gy of any dominant intraprostatic lesion as well as radiation to the pelvic lymph nodes to a dose of 25 Gy in 5 fractions delivered every other day.",
+              "armGroupLabels": [
+                "Patients with high risk Decipher scores"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05504707",
+          "briefTitle": "DecipHER Trial - DC1 Tx for Early-Stage TNBC and ER Low Positive Breast Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "H. Lee Moffitt Cancer Center and Research Institute",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Triple Negative Breast Cancer",
+            "HER2-negative Breast Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "BIOLOGICAL",
+              "name": "HER2 - primed Dendritic cells",
+              "description": "Dendritic cell will be administered at ultra-sound guided injections. Participants will receive 8 intratumoral injections. These injections will be administered twice per week per week (given 3 days apart). Participants will receive alternating injections (3 days apart) of HER2-primed followed by HER3-primed DCs.\n\nParticipants will be treated at the following dose levels:\n\nDose level 1: HER2 - primed Dendritic cells dose 10-20 million Dose level 2: HER2 - primed Dendritic cells dose 30-50 million Dose level 3: HER2 - primed Dendritic cells dose 80-100 million",
+              "armGroupLabels": [
+                "Dendritic Cell Vaccine dose Escalation"
+              ]
+            },
+            {
+              "type": "BIOLOGICAL",
+              "name": "HER3 - primed Dendritic cells",
+              "description": "Dendritic cell will be administered at ultra-sound guided injections. Participants will receive 8 intratumoral injections. These injections will be administered twice per week per week (given 3 days apart). Participants will receive alternating injections (3 days apart) of HER2-primed followed by HER3-primed DCs.\n\nParticipants will be treated at the following dose levels:\n\nDose level 1: HER3 - primed Dendritic cells dose 10-20 million Dose level 2: HER3 - primed Dendritic cells dose 30-50 million Dose level 3: HER3 - primed Dendritic cells dose 80-100 million",
+              "armGroupLabels": [
+                "Dendritic Cell Vaccine dose Escalation"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02723734",
+          "briefTitle": "Validation Study on the Impact of Decipher® Testing - VANDAAM Study"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "H. Lee Moffitt Cancer Center and Research Institute",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Decipher® Testing",
+              "description": "Decipher® Prostate Cancer Classifier (Post-Op and Biopsy), a Genomic Classifier (GC) test. Biopsy and prostatectomy specimens will be collected for GC testing.",
+              "armGroupLabels": [
+                "African-American Men (AAM)",
+                "Non-African American Men (NAAM)"
+              ],
+              "otherNames": [
+                "Genomic Classifier (GC) test"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02212600",
+          "briefTitle": "Determinants of Function and Clinically Important Outcomes in Proximal Humerus Fractures"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "London Health Sciences Centre",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Humeral Fractures, Proximal"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Observational",
+              "description": "observational cohort of proximal humerus fractures",
+              "armGroupLabels": [
+                "Population"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06388421",
+          "briefTitle": "DeciPHer-ILD: A Real-world Patient Registry in Group 3 Pulmonary Hypertension Associated With Interstitial Lung Disease (PH-ILD)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "United Therapeutics",
+            "class": "INDUSTRY"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Pulmonary Hypertension Due to Lung Diseases and Hypoxia",
+            "Pulmonary Hypertension",
+            "Interstitial Lung Disease"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Prospective study assessments",
+              "description": "Patients will complete prospective assessments at 6- and 12-month intervals for up to 5 years. There will be 1 check in at the first 3 months of enrollment. Follow up visits will include a ±45 day visit window. If an assessment is performed within 45 days of the visit window as part of the patient's standard of care, those values will be used in place of a prospective assessment.",
+              "armGroupLabels": [
+                "Cohort 1",
+                "Cohort 2",
+                "Cohort 3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07202494",
+          "briefTitle": "Integrating Metabolism, Connectivity, and Mesoscale Imaging at Ultra-high Field to Decipher Mechanisms of Resilience and Neurodegeneration in Neurological Diseases and Healthy Aging"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Assistance Publique Hopitaux De Marseille",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Multiple Sclerosis",
+            "Neuromyelitis Optica Spectrum Disorders",
+            "Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD)",
+            "Alzheimer Disease",
+            "Parkinson Disease",
+            "Amyotrophic Lateral Sclerosis (ALS)",
+            "Temporal Lobe Epilepsy",
+            "Epilepsy",
+            "Mild Traumatic Brain Injury",
+            "Healthy Aging"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Imaging Techniques (MRI 3T & 7T, Functional, Structural, and Metabolic Imaging)",
+              "description": "Functional MRI (fMRI) Diffusion Tensor Imaging (DTI) Sodium Imaging (23Na-MRI) Phosphorus Imaging (31P-MRI)",
+              "armGroupLabels": [
+                "Alzheimer's Disease",
+                "Amyotrophic Lateral Sclerosis (ALS)",
+                "Healthy controls",
+                "Mild Traumatic Brain Injury (mTBI)",
+                "Multiple Sclerosis",
+                "Myelin Oligodendrocyte Glycoprotein Antibody Disease (MOGAD)",
+                "Neuromyelitis Optica Spectrum Disorder (NMOSD)",
+                "Non-Temporal Epilepsy",
+                "Parkinson's Disease",
+                "Temporal Epilepsy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07282808",
+          "briefTitle": "Focal or Radical Therapy: a Lesion-based Molecular Evaluation in Prostate Cancer"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Singapore General Hospital",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Prostate Cancer"
+          ]
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Molecular Evaluation for Risk of Recurrence after FT",
+              "description": "Low Risk - Decipher GC \\<0.5, OR GC 0.5-0.85 and non-PSC-LP subtype High Risk - Decipher GC 0.5-0.85 and PSC-LP subtype, OR GC\\>0.85",
+              "armGroupLabels": [
+                "Focal Therapy, Low Transcriptomic Risk Cohort",
+                "Radical Therapy, High Transcriptomic Risk Cohort"
+              ],
+              "otherNames": [
+                "Decipher GC score",
+                "Transcriptomic Signature"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05644431",
+          "briefTitle": "GastrOesophageal Tumor, Immune Microenvionnment (GOTIM)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre Leon Berard",
+            "class": "OTHER"
+          }
+        },
+        "conditionsModule": {
+          "conditions": [
+            "GastroEsophageal Cancer"
+          ]
+        },
+        "armsInterventionsModule": {}
+      }
+    }
+  ],
+  "pagesFetched": 1,
+  "nextPageToken": null,
+  "totalCount": 43
+}

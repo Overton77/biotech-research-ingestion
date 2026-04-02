@@ -1,224 +1,334 @@
-Meta: request_id=bf0281a3-54a3-4a22-95f7-98f7e7ccd40e, response_time_s=0.74
+Meta: request_id=87a59f2f-45ba-42f2-8b8c-c66a77210518, response_time_s=6.84
 
 === Extracted Web Content ===
 [Result 1]
-Title: Measuring 19 Organ Systems with SystemAge
-URL: https://www.generationlab.com/blog/aging-biomarkers
+Title: No compatible source was found for this media.
+URL: https://investor.exactsciences.com/
 Content:
-## Measuring 19 Organ Systems with SystemAge
+No compatible source was found for this media.
 
-Generation Lab is pioneering the next evolution in preventive health testing by bringing longevity science from UC Berkeley and Harvard to your home. The company, co-founded by Dr. Irina Conboy, known as the "mother of longevity" for her aging and regeneration research, builds on over 20 years of research to offer insight into your biological age.
+Session ID: 2026-04-01:9c2d31b9df23a8236e8ebf97 Player Element ID: vjs\_video\_3
 
-The SystemAge test is the first and only at-home epigenetic age testing solution analyzing over 460,000 DNA methylation biomarkers across your genome. SystemAge delivers 19 biological ages for your core organ systems, acting as a "GPS for your health" by showing your current status and goals, instead of one biological age number.
+Beginning of dialog window. Escape will cancel and close the window.
 
-The SystemAge Advantage: [...] Unmatched Precision: Receive detailed biological ages for your Cardiac System, Brain Health, Immune System, Liver Function, Kidney Health, and 14 other critical systems. This organ-specific aging analysis provides actionable insights you can't get elsewhere.
- Clinical-Grade Accuracy: SystemAge is the gold standard in biological age measurement, with clinical-grade accuracy in detecting biological age changes, validated across 2,000+ clinical cases.
- Early Detection Power: The test functions as a "DNA methylation noise detector," identifying risk signals and aging acceleration years before clinical symptoms.
- Unquestionable Scientific Credibility: Backed by 20+ peer-reviewed publications and ongoing research from leading longevity scientists. [...] Not all epigenetic tests are equal. A single, whole-body biological age number is a good start because it's like receiving an overall health grade. But just as a single grade doesn't tell you whether you're failing history while acing mathematics, a single biological age number can't show which organ systems are aging fastest and need the most attention. To create an effective, personalized action plan, you need to understand which systems require intervention. This is the challenge that modern longevity science has solved through organ-specific aging analysis.
+End of dialog window.
 
-## Measuring 19 Organ Systems with SystemAge [...] ## Conclusion
+This is a modal window. This modal can be closed by pressing the Escape key or activating the close button.
 
-Your chronological age is the number of years since you were born. But your biological age is a choice. Understanding the biomarkers of aging gives you the knowledge. Measuring them precisely across all your organ systems provides the data. Taking targeted action based on those insights delivers results. SystemAge is the only platform that combines all three elements, empowering you to control your biology.
+Request printed material
 
-The science is clear, the technology is proven, and the results are measurable. Your biological age is not fixed; it is a dynamic number you can influence and improve with the right knowledge and tools.
+Governance
 
-Find Your Biological Age →
+Effective governance is central to Abbott’s mission. Our leadership team guides the company with integrity, supported by stringent guidelines and a commitment to ethical business conduct. This framework builds trust and ensures responsible operations worldwide.
 
-## Related Articles
+Leadership Team and Board of Directors
 
-Generation Lab [...] ### 5. Metabolic Health
+##
 
-Your body's ability to sense and process nutrients, particularly glucose, changes dramatically with age. The network of signals that tells your cells when to take up nutrients, store energy, and burn fat becomes dysfunctional.
+Director Independence
 
-This breakdown in nutrient sensing is linked to metabolic syndrome, type 2 diabetes, and chronic inflammation. When your cellular "fuel efficiency" declines, it accelerates aging across organ systems and increases your risk for age-related diseases.
+Governance Guidelines
 
-### 6. Mitochondrial Fitness
+Code of Business Conduct
 
-Mitochondria are the "power plants" inside your cells that convert nutrients into energy. As you age, the efficiency and number of these powerhouses decline significantly. This mitochondrial dysfunction affects cellular performance.
+Political Participation [...] undefined
+
+undefined
+
+undefined
+
+undefined
+
+undefined
+
+undefined [...] Code of Business Conduct
+
+Political Participation
+
+## Questions? We’ve got you.
+
+Find contact information for Investor Relations and other resources to help answer your questions.
+
+Investor contacts
+
+Products and Solutions
+
+ Overview
+ Diabetes
+ Nutrition
+ Diagnostics Testing
+ Cardiovascular
+ Pain and Movement
+ Biowearables
+ Medicines
+ All Products
+
+Need Help?
+
+ Where to Buy
+ Contact Us
+ Partners
+ Global Websites
+ Site Map
+
+ opens in a new tab
+ opens in a new tab
+ opens in a new tab
+ opens in a new tab
+ opens in a new tab [...] # Investors
+
+PRODUCTS AND SOLUTIONS
+
+Shaping the future of cancer testing
+
+Reports
+
+Read our 2025 Annual Report
+
+STOCK INFORMATION
+
+NYSE : ABT
+
+102.38
+
+-0.29 
+ (-0.28%)
+
+Updated every 15 minutes
+
+Article
+
+How tech is transforming healthcare
+
+## Detailed Information
+
+Event and conference call calendar
+
+Annual Reports
+
+SEC filings
+
+Video Player is loading.
+
+Current Time 0:00
+
+/
+
+Duration 0:00
+
+Loaded: 0%
+
+Stream Type LIVE
+
+Remaining Time -0:00
+
+1x
+
+ Chapters
+
+ descriptions off, selected
+
+ captions settings, opens captions settings dialog
+ captions off, selected
+
+This is a modal window.
+
+## This video is either unavailable or not supported in this browser
+
+Error Code: MEDIA\_ERR\_SRC\_NOT\_SUPPORTED
+
+Technical details
+:
+
+No compatible source was found for this media.
 
 [Result 2]
-Title: The Generation Lab Difference: Credibility, Proof, and Empowerment
-URL: https://www.generationlab.com/blog/how-is-biological-age-determined
+Title: ![[object Object]](/-/media/project/headless/shared/images/flags/us.svg?h=200&iar=0&w=300&rev=37af7af9a7bc47028a5cdb2bfb4fd2fc&hash=625B2D05BF0789F11173E3C99301A18F)
+URL: https://www.exactsciences.com/about-us
 Content:
-The Most Comprehensive Analysis: SystemAge goes beyond single-number tests. We analyze 460+ DNA methylation biomarkers to measure your biological age across 19 organ systems: Adrenal, Arterial, Brain, Cardiac, Cerebrovascular, Endocrine, Gastrointestinal, Hematologic, Hepatic, Immune, Inflammatory, Metabolic, Muscular, Nervous, Pulmonary, Renal, Reproductive, Skeletal, and Skin systems.
- Unmatched, Clinical-Grade Accuracy: SystemAge delivers clinical-grade accuracy in detecting biological age changes, backed by research in Nature, Aging, and GeroScience. This precision has been validated across 2,000+ test cases, ensuring reliability for important health decisions. [...] SystemAge vs. GlycanAge: GlycanAge focuses on inflammation markers through glycan analysis. While inflammation is important, it represents one aspect of aging. SystemAge offers a comprehensive solution, analyzing inflammatory aging plus 18 other organ systems for a complete picture of your biological health.
+![Exact Sciences is now Abbott.](/-/jssmedia/project/headless/shared/images/logos/exact-sciences-abbott.svg?h=40&iar=0&w=266&rev=0ef1e86a07824feb929ba8f580130ea7&hash=DD8E2D6E72DF7A1B1E0979C04B45F22F)
+![Exact Sciences is now Abbott.](/-/jssmedia/project/headless/shared/images/logos/exact-sciences-abbott.svg?h=40&iar=0&w=266&rev=0ef1e86a07824feb929ba8f580130ea7&hash=DD8E2D6E72DF7A1B1E0979C04B45F22F)
+![[object Object]](/-/media/project/headless/shared/images/flags/us.svg?h=200&iar=0&w=300&rev=37af7af9a7bc47028a5cdb2bfb4fd2fc&hash=625B2D05BF0789F11173E3C99301A18F)
 
-## The Generation Lab Difference: Credibility, Proof, and Empowerment
+# About
 
-SystemAge isn't a wellness trend or lifestyle product. It's a clinical-grade diagnostic tool from 20+ years of pioneering research in aging and regenerative medicine by UC Berkeley and Harvard scientists. Our founding team's work has garnered over 14,000 scientific citations, establishing them as leaders in longevity science. This foundation ensures SystemAge is grounded in rigorous, peer-reviewed science. [...] The ultimate measure of any biological age test is whether you can change your results through targeted interventions. With SystemAge, the answer is yes. Our documented cases show biological age reductions of 5.5 to 13.6 years across different organ systems and intervention types. For example, we recorded a 13.6-year reduction in brain biological age following specific cognitive and metabolic interventions, and an average 5.5-year reduction in patients receiving targeted stem cell therapies. These results demonstrate the complete "Measure, Intervene, Verify" cycle that makes SystemAge a true optimization tool. [...] SystemAge vs. Function Health: Function Health uses 100+ traditional blood biomarkers to assess health. While comprehensive, these markers are reactive because they change after problems have developed. SystemAge's epigenetic age testing is proactive, detecting "biomolecular noise" at the cellular level before it manifests in bloodwork or symptoms.
+![Failed to play video](/-/media/project/headless/one-exact-web/images/about/locations/carousel/location1.jpg?h=396&iar=0&w=528&rev=c40949c775c645ddb8593fa6c41a24c2&hash=FC67458A532D0F1A74263063AE6AA534)
 
-SystemAge vs. Tally Health: Despite backing from longevity researcher Dr. David Sinclair, Tally Health uses a less accurate cheek swab methodology compared to SystemAge's gold-standard blood-based analysis. More importantly, Tally provides only a single biological age number, while SystemAge delivers unique 19 organ-level details for targeted interventions impossible with aggregate measurements. [...] Why organ-specific aging matters:
+## Exact Sciences at a glance
 
- Precision: Pinpoint where your body needs support, allowing for targeted interventions instead of generic anti-aging approaches.
- Early Detection: Identify at-risk organ systems long before symptoms or standard clinical tests detect problems.
- Actionable Insights: Receive tailored recommendations for each system, maximizing your health optimization efforts.
+## A history of innovation
 
-## SystemAge: The Only Test with 19 Organ-Specific Ages
+![Three innovative tests, one defining mission: Cologuard Plus, Cancerguard, Oncodetect.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2F2025-innovative-tests.webp%3Fiar%3D0%26rev%3D48973bd8ecdd489c982ea9683708dd55%26hash%3D8784A03A21ED90FF380141EB7A50A895&w=3840&q=75)
+
+### 2025
+
+### Launch of three innovative cancer tests
+
+![Ten years, Two studies, One bright future.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2F2024-bluec.jpg%3Fh%3D510%26iar%3D0%26w%3D1192%26rev%3D909eecc1c9fd48acbdb6edc2c3e8fd13%26hash%3DBFC87B9E8036B8A4D931127B78E7F95C&w=3840&q=75)
+
+### 2024
+
+### Publication of BLUE-C study results
+
+![A scientist opening an OncoExTra kit.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2F2023-oncoguard-launch.jpg%3Fh%3D510%26iar%3D0%26w%3D1192%26rev%3D89ce53b35fb34570b4ef55283c8b52be%26hash%3D0F7C91FA9217BB19C3AF5CC9C0045FA4&w=3840&q=75)
+
+### 2023
+
+### OncoExTra® cancer therapy selection test launches
+
+![The PreventionGenetics location in Marshfield, Wisconsin.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2F2022-prevention-genetics.jpg%3Fh%3D510%26iar%3D0%26w%3D1192%26rev%3D3846ee74a64e4f44b89bc98f7b89c6a9%26hash%3DBF0C100D99D4ED97B3333C899A5DE68C&w=3840&q=75)
+
+### 2022
+
+### PreventionGenetics acquisition
+
+![A scientist removing a sample container from its shipment box.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2F2014-cologuard-test-launches.jpg%3Fh%3D510%26iar%3D0%26w%3D1192%26rev%3D051b3f9f7dba42fbaeb6e158c905325c%26hash%3D247F80B0F9E5FBC8E08063F5452AD008&w=3840&q=75)
+
+### 2014
+
+### Approval for the Cologuard® test
+
+![A close up of a woman smiling at the camera.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2F2004-odx-introduced-patient-ambassador.jpg%3Fh%3D510%26iar%3D0%26w%3D1192%26rev%3D026a6de92438420faf6bcbc13956fc49%26hash%3DCC28A9B3E94F2762AB92E686C862F47F&w=3840&q=75)
+
+### 2004
+
+### Oncotype DX Breast Recurrence Score® test launches
+
+## Creating a lasting impact
+
+![Four Exact Sciences associates smiling at a team event.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2Ffour-employees-pride-event.jpg%3Fh%3D1576%26iar%3D0%26w%3D1280%26rev%3D2066554790204cb59131ed7cb615cd54%26hash%3D9BF5A10FB3733C235DFE3EF8C3686BF7&w=3840&q=75)
+
+## Corporate impact
+
+![A mother and her two children laughing with their grandmother, who is in a wheelchair.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2Fgrandma-holding-grandkids-hands.jpg%3Fh%3D1576%26iar%3D0%26w%3D1280%26rev%3D06838102f132486ea410b9d1ba97f20b%26hash%3D6A4BC6AE642367799341A71CA50C6D7A&w=3840&q=75)
+
+## Health equity
+
+![A lab technician placing samples into lab equipment for analysis.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2Flab-worker.jpg%3Fh%3D1576%26iar%3D0%26w%3D1280%26rev%3Dd156189319c547a49bc3d20a1ccbe244%26hash%3DA1C54476329D6EA50B46BF05F1D56BE9&w=3840&q=75)
+
+## Visionary collaborations
+
+## Get in touch
+
+## Find our offices and labs
+
+## Become part of something meaningful
+
+![Three Exact Sciences' associates collaborating in the Wisconsin headquarters' atrium.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2Fgroup-working-outside.jpg%3Fh%3D960%26iar%3D0%26w%3D1280%26rev%3Da7c5cac0664d4a11acf3453f415eccdb%26hash%3D30FE9CF3F0192A64B315BA1E509BC2A1&w=3840&q=75)
+![Great Places To Work Certified.](/_next/image?url=%2F-%2Fjssmedia%2Fproject%2Fheadless%2Fone-exact-web%2Fimages%2Fabout%2Flanding%2Fgreat-places-to-work-logo.png%3Fh%3D960%26iar%3D0%26w%3D1280%26rev%3D182af1c6b7b84cc4b35225487bf6cafa%26hash%3D04E09A8B1551F29D9D55C7CE6283AA33&w=3840&q=75)
+![Exact Sciences Logo](/-/jssmedia/project/headless/shared/images/logos/exact-sciences-logo-white.svg?h=48&iar=0&w=132&rev=3c837b6d613d4390b6de0f5d623a2cfa&hash …[truncated]
 
 [Result 3]
-Title: Advanced Epigenetic Analysis: Analyzes over 460 DNA methylation biomarkers to detect aging and disease risk signs years before symptoms.
-URL: https://www.generationlab.com/blog/systemage-test-review
+Title: Fourth quarter conference callAs a result of the pending Merger with Abbott, the Company will not be holding a fourth quarter conference call.
+URL: https://www.exactsciences.com/news-events/press-releases/exact-sciences-announces-record-fourth-quarter-and-full-year-2025-results
 Content:
-Advanced Epigenetic Analysis: Analyzes over 460 DNA methylation biomarkers to detect aging and disease risk signs years before symptoms.
- 19 Organ-Specific Biological Ages: The only test providing detailed aging insights across 19 organ systems, including Cardiac, Brain, Immune, Liver, and Kidney.
- Needle-Free Collection: Simple, convenient at-home blood collection using an innovative, painless device with no needles required.
- Comprehensive Digital Report: Delivers personalized, actionable intervention plans tailored to each organ system's needs.
- Preventive Focus: Acts as your biological "GPS," detecting early aging signals to empower proactive health decisions. [...] Brain Health & Cognition
- Immune System
- Reproductive System
- Cardiac System
- Inflammatory Regulation
- Metabolism
- Tissue Regeneration
- Blood Sugar & Insulin Control
- Hepatic System (Liver)
- Muscular System
- Skeletal System
- Nervous System
- Respiratory System
- Digestive System
- Blood & Vascular System
- Urinary System
- Oncogenesis (Cell Mutation)
- Fibrosis (Scar Tissue Formation)
- Auditory System
-
-This analysis means you're not just getting data. You're getting a precise roadmap of where your body needs attention, allowing you to prioritize interventions for maximum impact.
-
-## Using the SystemAge Test: A Step-by-Step Review
-
-### Step 1: At-Home Sample Collection [...] The documented results are remarkable:
-
- Up to a 13.6-year reduction in brain biological age following specific neurological interventions.
- A 10.4-year reduction in immune system biological age with therapeutic plasma exchange (TPE) treatment.
- A 5.5-year average reduction in biological age with stem cell therapies
- Targeted lifestyle interventions led to consistent improvements across multiple organ systems.
-
-These are actual outcomes from SystemAge users in longevity clinics. Dr. Adeel Khan, a leading longevity physician, notes: "SystemAge is the only test sensitive enough to track the biological improvements in our patients. It has revolutionized how we measure success in age reversal protocols." [...] ## What is the SystemAge Test?
-
-The SystemAge test represents a breakthrough in preventive healthcare. It's the first and only at-home, clinical-grade epigenetic testing solution that measures your biological age across 19 organ systems. While other tests give a single biological age number, SystemAge recognizes that your body doesn't age uniformly. Your heart might be aging like you're 35 while your brain could be aging like you're 50. This insight makes SystemAge revolutionary in democratizing advanced preventive healthcare.
-
-Key features that set SystemAge apart: [...] Comprehensiveness: SystemAge analyzes 19 organ systems compared to TruDiagnostic's 11, providing insights into 8 additional organ systems including sensory system aging and neural development.
- Accuracy: SystemAge's clinical-grade accuracy for detecting biological age changes far exceeds TruDiagnostic's, making it significantly more reliable for tracking intervention effectiveness.
+completed studies and trials; our ability to manage an international business and our expectations regarding our international expansion and opportunities; the potential effects of changing macroeconomic conditions and geopolitical conflict; the possibility that the anticipated benefits from our business acquisitions will not be realized in full or at all or may take longer to realize than expected; the outcome of any potential litigation or legal proceeding; our ability to raise the capital necessary to support our operations or meet our payment obligations under our indebtedness; and risks and uncertainties related to the proposed acquisition of us by Abbott Laboratories, including the possible inability of the parties to consummate the proposed transaction on a timely basis or at all; [...] impact on patients; insurance reimbursement potential; our strategies, commercialization efforts, positioning, competition, resources, capabilities, and expectations for future events or performance; the anticipated benefits of our acquisitions, including estimated synergies and other financial impacts; and the timing of completion of the proposed acquisition of us by Abbott Laboratories. [...] Pending mergerAs previously announced, on November 19, 2025, the Company entered into an Agreement and Plan of Merger (the "Merger Agreement") with Abbott Laboratories ("Abbott") and Badger Merger Sub I, Inc., a direct, wholly owned subsidiary of Abbott ("Merger Sub"), providing for the merger of Merger Sub with and into Exact (the "Merger"). On February 20, 2026, we will hold a special meeting of stockholders to adopt the Merger Agreement. Upon the terms and subject to the conditions set forth in the Merger Agreement, at the effective time of the Merger, the separate existence of Merger Sub will cease, and we will continue as the surviving corporation in the Merger as a wholly-owned subsidiary of Abbott. [...] The consummation of the Merger remains subject to the satisfaction or waiver of customary closing conditions. The two parties are continuing to engage with regulators reviewing the proposed transaction and are working toward closing in the second quarter of 2026, subject to obtaining required regulatory approvals and satisfaction or waiver of other customary closing conditions.  
+  
+Fourth quarter conference callAs a result of the pending Merger with Abbott, the Company will not be holding a fourth quarter conference call.
 
 [Result 4]
-Title: 1. Depth of Analysis
-URL: https://www.generationlab.com/blog/dna-methylation-test-cost
+Title: On November 19, 2025, the Company entered into an Agreement and Plan of Merger (the “Merger Agreemen
+URL: https://www.sec.gov/Archives/edgar/data/1124140/000112414026000011/exas-20251231.htm
 Content:
-### 1. Depth of Analysis
-
-Basic tests provide one aggregate biological age, which is a single number representing your body's aging status. While this satisfies curiosity, it misses a crucial reality: your organs age at different rates.
-
-SystemAge analyzes 19 organ systems, including:
-
- Cardiac and cardiovascular health
- Brain health and cognitive function
- Immune system strength
- Liver detoxification capacity
- Kidney filtration efficiency
- Reproductive health
-
-This organ-specific aging analysis reveals you have the heart of a 30-year-old but the immune system of a 50-year-old. This insight enables targeted interventions instead of generic lifestyle advice.
-
-### 2. Biomarkers & Scientific Method [...] ### 2. Biomarkers & Scientific Method
-
-Analyzing a few hundred methylation sites versus a comprehensive panel impacts both cost and accuracy. SystemAge analyzes 460+ DNA methylation biomarkers chosen for their relevance to aging across organ systems.
-
-The collection method matters. Some competitors use saliva or cheek swabs (like Tally Health), but SystemAge uses blood-based analysis, which is the gold standard for clinical accuracy. Blood contains more comprehensive cellular information than saliva, enabling the detection of subtle but critical aging patterns.
-
-### 3. Clinical-Grade Accuracy and Validation [...] ### 4. Report Actionability
-
-Receiving raw data is vastly different from receiving a personalized, actionable health strategy. Many tests provide generic recommendations. SystemAge provides tailored intervention plans for the 19 organ systems, transforming complex data into a roadmap for health optimization. It acts as your health; it not only shows where you are, but guides you where to go.
-
-### 5. The Collection Method & Lab Process
-
-Clinical-grade testing requires sophisticated laboratory processing and quality control. SystemAge's at-home, needle-free blood collection device provides clinical-quality samples without the pain of finger pricks or lab visits. This convenience and the complex analysis of 460+ biomarkers contribute to the investment.
-
-## Conclusion [...] This guide explains the price differences, helping you make an informed decision about your future health investment. The lowest price might seem appealing, but the true value lies in accuracy, comprehensiveness, and actionability. Generation Lab's SystemAge test represents the new clinical-grade standard, offering insights into your body's aging process across 19 organ systems.
-
-## What Is DNA Methylation?
-
-Think of DNA methylation as your body's software update system. If your DNA is the hardware and your unchanging genetic blueprint, then epigenetics is the software that tells your genes when to turn on and off. DNA methylation is one of the most important epigenetic mechanisms, acting like molecular switches that control gene expression throughout your life. [...] This premium category is defined by SystemAge and similar clinical-grade platforms. These health intelligence systems offer maximum accuracy , detailed organ-level analysis (19 systems), extensive scientific validation from top research institutions, and personalized, actionable intervention strategies. This is not just a test; it is a health optimization platform. And it’s only $500.
-
-## 5 Key Factors Determining DNA Methylation Test Cost
-
-Not all biological age tests are equal. The cost of the DNA methylation test is tied to the technology, analysis depth, and scientific rigor. Understanding these factors will help you evaluate the value.
-
-### 1. Depth of Analysis
+On November 19, 2025, the Company entered into an Agreement and Plan of Merger (the “Merger Agreement”) with Abbott Laboratories (“Abbott”) and Badger Merger Sub I, Inc., a direct, wholly owned subsidiary of Abbott (“Merger Sub”), providing for, among other things, the merger of Merger Sub with and into Exact (the “Merger”) on the terms and subject to the conditions set forth in the Merger Agreement. Upon the terms and subject to the conditions set forth in the Merger Agreement, at the effective time of the Merger (the “Effective Time”), the separate existence of Merger Sub will cease, and the Company will continue as the surviving corporation in the Merger and as a direct, wholly owned subsidiary of Abbott. At the Effective Time, on the terms and subject to the conditions set forth in [...] On November 19, 2025, we entered into an Agreement and Plan of Merger (the “Merger Agreement”) with Abbott Laboratories (“Abbott”) and Badger Merger Sub I, Inc., a direct, wholly owned subsidiary of Abbott (“Merger Sub”), providing for the merger of Merger Sub with and into Exact (the “Merger”) on the terms and subject to the conditions set forth in the Merger Agreement. Upon the terms and subject to the conditions set forth in the Merger Agreement, at the effective time of the Merger (the “Effective Time”), the separate existence of Merger Sub will cease, and we will continue as the surviving corporation in the Merger and as a direct, wholly owned subsidiary of Abbott. At the Effective Time, on the terms and subject to the conditions set forth in the Merger Agreement, each share of our [...] the results of previously completed studies and trials;our ability to manage an international business and our expectations regarding our international expansion and opportunities; the potential effects of changing macroeconomic conditions and geopolitical conflict; the possibility that the anticipated benefits from our business acquisitions will not be realized in full or at all or may take longer to realize than expected; the outcome of any potential litigation or legal proceeding; our ability to raise the capital necessary to support our operations or meet our payment obligations under our indebtedness; and risks and uncertainties related to the proposed acquisition of us by Abbott Laboratories, including the possible inability of the parties to consummate the proposed transaction on a [...] We may raise additional capital to expand our business, to pursue strategic investments, to take advantage of financing opportunities or for other reasons, with certain of the foregoing actions, if we were to move forward with them, requiring Abbott's approval under the Merger Agreement. If we are unable to obtain sufficient additional funds to enable us to fund our business plans and strategic investments, our results of operations and financial condition could be materially adversely affected, and we may be required to delay the implementation of our plans or otherwise scale back our operations. There can be no certainty that we will ever be successful in generating sufficient cash flow from operations to achieve and maintain profitability and meet all of our obligations as they come
 
 [Result 5]
-Title: Unmatched Scientific Credibility: Backed by 20+ peer-reviewed publications and a scientific team with 14,000+ research citations. Trusted by 150+ longevity clinics worldwide for patient care.
-URL: https://www.generationlab.com/blog/best-dna-methylation-tests
+Title: •Co-Founder and Managing Partner (2008-2013)  Keystone Dental – dental implant and manufacturing com
+URL: https://www.sec.gov/Archives/edgar/data/1124140/000112414025000034/exas-20250429.htm
 Content:
-Comprehensive Analysis: SystemAge is the first and only test to measure biological age across 19 organ systems, including Cardiovascular, Neurodegeneration, Immune, Metabolic Health, and 15 other physiological functions.
- Clinical-Grade Accuracy: It boasts clinical-grade accuracy in detecting biological age changes, validated across 2,000+ real-world test cases. This makes it the most accurate biological age test available to consumers.
- Unmatched Scientific Credibility: Backed by 20+ peer-reviewed publications and a scientific team with 14,000+ research citations. Trusted by 150+ longevity clinics worldwide for patient care.
- Actionable Intelligence: Provides personalized intervention plans tailored to your 19 organ system ages, moving beyond generic anti-aging advice. [...] #### Considerations
-
-SystemAge, as a clinical-grade diagnostic tool, represents a premium investment in your long-term health, priced to reflect its depth and scientific accuracy.
-
-Best For: Individuals seeking accurate, comprehensive, and actionable data to control their biological aging process.
-
-### 2. TruDiagnostic
-
-TruDiagnostic, a well-known name in epigenetic testing, analyzes over 900,000 methylation sites to calculate biological age and offers scores for about 11 organ systems. [...] ## Conclusion
-
-After analyzing the DNA methylation tests, evidence points to Generation Lab's SystemAge as the superior choice for longevity optimization. Other options provide insights, but the best DNA methylation test must deliver the highest accuracy, detailed organ-specific analysis, and actionable intervention strategies.
-
-SystemAge meets all criteria with its 19 organ system analysis, clinical-grade accuracy, and proven results in reversing biological age. The research of Dr. Irina Conboy, two decades of scientific validation, and the trust of over 150 longevity clinics worldwide create an unmatched foundation for understanding and optimizing your biological aging process. [...] TruDiagnostic can be a starting point for exploring methylation data, but it lacks both the precision and the comprehensive 19-system organ-specific analysis that sets SystemAge apart as the clinical gold standard.
-
-### 3. Tally Health
-
-Tally Health has gained recognition through its association with renowned longevity researcher Dr. David Sinclair, lending the platform significant brand credibility. The test's primary differentiator is its convenient cheek swab collection method, making it one of the most accessible options for consumers new to epigenetic testing. [...] ### 1. Generation Lab SystemAge
-
-SystemAge represents the pinnacle of at-home epigenetic age testing. It was developed by Generation Lab under Dr. Irina Conboy of UC Berkeley, the "mother of longevity research." This clinical-grade testing solution is the culmination of 20+ years of research from UC Berkeley and Harvard scientists. It is the first and only consumer test that provides a complete, high-resolution picture of your biological aging across organ systems. SystemAge is your health, providing precise coordinates for your current state and directions for your goals.
-
-#### How It Works
+•Co-Founder and Managing Partner (2008-2013)  Keystone Dental – dental implant and manufacturing company  •Chief Executive Officer (2009-2011)  Cytyc Corporation (acquired by Hologic, Inc. in 2007) – in vitro diagnostics and medical device company focused on women’s health  •Executive Vice President and Chief Operating Officer (2002-2007)  •Various other leadership positions (1992-2007)  Abbott Laboratories (Nasdaq: ABT) – a diversified healthcare company  •Various sales, marketing and management positions (1975-1992)  EDUCATION  •B.S., Pharmacy, Northeastern University | [...] than the 90th day prior to such special meeting nor later than the later of (1) the close of business on the 60th day prior to such special meeting or (2) the close of business on the 10th day following the day on which a public announcement is first made regarding such special meeting. We will promptly forward any such nominations to our Corporate Governance and Nominating Committee. Once our Corporate Governance and Nominating Committee receives a recommendation for a director candidate, such candidate will be evaluated in the same manner as other candidates and a recommendation with respect to such candidate will be delivered to our Board of Directors. [...] leadership structure to provide independent oversight of senior management, a highly engaged Board of Directors, and the right balance between (i) effective independent oversight of the Company’s business, (ii) our Board of Directors’ activities, and (iii) consistent corporate leadership. On at least an annual basis, our Corporate Governance and Nominating Committee reviews our corporate leadership structure. As part of its most recent such assessment, the Corporate Governance and Nominating Committee gave thorough consideration to a number of factors, including, but not limited to, the pros and cons of alternative leadership structures given the Company’s current operating and governance environment, investor feedback, and the dynamics of our Board of Directors. [...] fortifying the company’s financial standing and reputation as a premium international skin care and wellness enterprise. She has also overseen three public company sale transactions to strategic acquirers throughout her career.  Pipeline Development/Commercialization: Acquired over four-decade career primarily in the health and personal care industry where she led global commercialization of multiple consumer products at Procter & Gamble (NYSE: PG), McDonald's Corporation (NYSE: MCD), and Arbonne International; led global pipeline development of pharmaceutical products for P&G, and then commercialized in North American market. All leadership positions led to significant business growth and profitability.  Talent Management; Corporate Governance and Sustainability: Developed from her time
 
 [Result 6]
-Title: 19 Individual Organ Ages
-URL: https://www.generationlab.com/blog/best-biological-age-test-kits
+Title: ERROR 404 | Exact Sciences
+URL: https://www.exactsciences.com/our-company
 Content:
-#### 19 Individual Organ Ages
+# ERROR 404 | Exact Sciences
 
-SystemAge moves beyond a single biological age number. It acts as a "DNA methylation noise detector," analyzing 460+ biomarkers to calculate biological ages for 19 organ systems. This organ-specific aging approach is revolutionary because it recognizes that your body doesn't age uniformly. Your heart might age faster than your brain, or your immune system might be in better shape than your metabolism.
+Skip to main contentSkip to footer
 
-The 19 analyzed organ systems include: [...] #### Your Personalized Health GPS
+Image 1: Exact Sciences is now Abbott.
 
-SystemAge delivers more than data. It provides personalized, actionable intervention plans for the 19 organ systems. Instead of generic advice like "eat better and exercise more," you receive specific recommendations based on the fastest aging systems and effective interventions.
+   Health systems 
+   Investor Relations 
+   Careers 
 
-The system shows your health journey location and gives directions to your destination. If your cardiovascular system shows accelerated aging, you'll receive heart-healthy recommendations. If your neurodegeneration score is concerning, you'll get brain-specific protocols for cognitive protection.
+ United States 
 
-#### Track Your Age Reversal [...] The 19 analyzed organ systems include:
+###### Choose your country
 
- Brain Health & Cognition
- Immune System
- Reproductive System
- Cardiac System
- Inflammatory Regulation
- Metabolism
- Tissue Regeneration
- Blood Sugar & Insulin Control
- Hepatic System (Liver)
- Muscular System
- Skeletal System
- Nervous System
- Respiratory System
- Digestive System
- Blood & Vascular System
- Urinary System
- Oncogenesis (Cell Mutation)
- Fibrosis (Scar Tissue Formation)
- Auditory System
+Select to view the solutions available in your location.
 
-#### Validated Clinical-Grade Precision [...] #### Track Your Age Reversal
+   United States 
+   France 
+   Germany 
+   Italy 
+   Japan 
+   Polska 
+   United Kingdom 
 
-SystemAge shines for biohackers and results-oriented individuals. The test measures aging and tracks age reversal interventions precisely. Documented cases show 5.5-13.6 year reductions in biological age through targeted interventions guided by SystemAge results.
+Select
 
-Examples include a 13.6-year reduction in brain aging through targeted cognitive interventions and a 10.4-year improvement in immune system age through personalized supplementation and lifestyle changes. These are measurable, documented outcomes demonstrating the power of precision longevity medicine.
+Cancel
 
-#### Superior User Experience: Simple, Needle-Free Collection [...] SystemAge is trusted by 150+ longevity clinics worldwide and endorsed by leading physicians like Dr. Adeel Khan and George Church. When the world's leading longevity experts choose SystemAge for their patients, it speaks volumes about the test's scientific credibility and clinical utility.
+ Login 
 
-## Conclusion
+###### Patient login
 
-After months of research and testing, the verdict is clear. While several tests indicate your biological age, only SystemAge provides a high-definition, 19-system blueprint for optimal health. It excels in clinical-grade accuracy, comprehensive organ-level analysis, scientific validation, and actionable recommendations. SystemAge is the best biological age test of 2025 and it is in a category of its own.
+Track orders, get results, manage personal information, and more.
+
+###### Provider login
+
+Order tests, track orders, get results, and more.
+
+Main menu
+
+×
+
+  
+
+    Products and services  
+
+### Products and services
+
+Learn more about our innovative products and services that help detect cancer earlier and power smarter treatment decisions. [...] When you visit our website, we store cookies on your browser to collect information. The information collected might relate to you, your preferences or your device, and is mostly used to make the site work as you expect it to and to provide a more personalized web experience. However, you can choose not to allow certain types of cookies, which may impact your experience of the site and the services we are able to offer. Click on the different category headings to find out more and change our default settings according to your preference. You cannot opt-out of our First Party Strictly Necessary Cookies as they are deployed in order to ensure the proper functioning of our website (such as prompting the cookie banner and remembering your settings, to log into your account, to redirect you [...] ## Our Cookie Policy
+
+This website uses cookies to enhance user experience and to analyze performance and traffic on our website. We also share information about your use of our site with our social media, advertising and analytics partners.
+
+Cookie Settings Reject all but Strictly Necessary Accept all
+
+Image 7: Company Logo
+
+Opt-Out Request Honored
+
+## Cookie Settings [...] Insights from the Alpha-CORRECT clinical validation study
+
+Read more 
+       Pipeline 
+       Publications 
+       Clinical studies 
+       Grants 
+       Exact Labs 
+       Exact Academy 
+
+    About  
+
+### About
+
+Learn all about Exact Sciences, including our purpose, the people who drive it, our history, and the impact we’ve made.
+
+Learn more about us Image 3
+###### Bridging hope and health in the Hispanic community
+
+Several Exact Sciences initiatives address disparities in cancer outcomes among U.S. Latinos.
+
+Read more 
+       Leadership 
+       History 
+       Corporate impact 
+       Health equity 
+       Collaborations 
+       Contact 
+
+    News and events  
+
+### News and events

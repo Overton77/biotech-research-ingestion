@@ -1,0 +1,572 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT05210283",
+      "orgStudyIdInfo": {
+        "id": "16-002"
+      },
+      "organization": {
+        "fullName": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      },
+      "briefTitle": "CORRECT Study of Minimal Residual Disease Detection in Colorectal Cancer",
+      "officialTitle": "CORRECT-MRD II: Second Colorectal Cancer Clinical Validation Study to Predict Recurrence Using a Circulating Tumor DNA Assay to Detect Minimal Residual Disease",
+      "acronym": "MRD"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2026-01",
+      "overallStatus": "ACTIVE_NOT_RECRUITING",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2021-12-15",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2027-05-15",
+        "type": "ESTIMATED"
+      },
+      "completionDateStruct": {
+        "date": "2027-05-15",
+        "type": "ESTIMATED"
+      },
+      "studyFirstSubmitDate": "2022-01-13",
+      "studyFirstSubmitQcDate": "2022-01-25",
+      "studyFirstPostDateStruct": {
+        "date": "2022-01-27",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2026-01-08",
+      "lastUpdatePostDateStruct": {
+        "date": "2026-01-12",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Exact Sciences Corporation",
+        "class": "INDUSTRY"
+      },
+      "collaborators": [
+        {
+          "name": "NSABP Foundation Inc",
+          "class": "NETWORK"
+        }
+      ]
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": true,
+      "isUnapprovedDevice": true
+    },
+    "descriptionModule": {
+      "briefSummary": "The CORRECT - MRD II study will prospectively enroll patients who have undergone complete surgical resection for stage II or III colorectal cancer. Maximum duration of participant participation is up to seven years from enrollment to study completion with up to five years of active follow up and up to two years of clinical (passive) follow up."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Colorectal Cancer"
+      ],
+      "keywords": [
+        "Colorectal",
+        "ctDNA"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "COHORT",
+        "timePerspective": "PROSPECTIVE"
+      },
+      "enrollmentInfo": {
+        "count": 1017,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "Stage ll or lll",
+          "description": "Patients with stage ll or lll colorectal cancer",
+          "interventionNames": [
+            "Device: MRD"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DEVICE",
+          "name": "MRD",
+          "description": "ctDNA MRD test",
+          "armGroupLabels": [
+            "Stage ll or lll"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "To validate the association of circulating tumor DNA (ctDNA) with recurrence-free interval (RFI).",
+          "timeFrame": "7 years"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "To assess the sensitivity and specificity of ctDNA positivity for subsequent clinical recurrence.",
+          "timeFrame": "7 years"
+        },
+        {
+          "measure": "To assess the contribution of ctDNA on RFI, independent of clinicopathological risk features and other biomarkers",
+          "timeFrame": "7 years"
+        },
+        {
+          "measure": "To assess time from positive ctDNA to clinical recurrence",
+          "timeFrame": "7 years"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n1. Diagnosis of carcinoma of the colon or rectum (patients with lymphomatous, sarcomatous, or neuroendocrine features are not eligible).\n2. Post complete surgical resection of CRC, with last surgery occurring within 180 days prior to enrollment are eligible if all of the following conditions are met:\n\n   1. in the opinion of the surgeon, all grossly visible tumor was completely resected (\"curative resection\") and\n   2. histologic evaluation by the pathologist confirms the margins of the resected specimens are not involved by malignant cells.\n\n   i. Patients with T4 tumors that have involved an adjacent structure (e.g., bladder, small intestine, ovary, etc.) by direct extension from the primary tumor must have had all or a portion of the adjacent structure removed en bloc with the primary tumor and local radiation therapy will not be utilized.\n3. Pathologic stage II or III\n4. ECOG performance status ≤ 2 (0, 1 or 2).\n5. Able to understand and provide informed consent.\n6. Willing and able to comply with the study requirements, which includes the collection of approximately 43mL of blood for each research blood draw.\n\nExclusion Criteria:\n\n1. Initiated adjuvant therapy for current CRC diagnosis (note: prior neoadjuvant therapy acceptable).\n2. Pregnant or breastfeeding at time of enrollment.\n3. Prior history of any invasive cancer (including CRC) within the past 3 years prior to informed consent, with the exception of non-melanoma skin cancer. Patients with a prior history of noninvasive (in situ) carcinomas may participate after definitive treatment.\n4. Prior transplant history:\n\n   1. Prior allogeneic hematopoietic stem cell transplant at any time.\n   2. Prior solid organ transplant within the last 2 years prior to enrollment.\n5. Multiple cancer diagnoses: Synchronous or asynchronous diagnoses (or suspicion) of multiple primary cancers at the time of eligibility screening.",
+      "healthyVolunteers": false,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ],
+      "studyPopulation": "Patients over the age of 18 who have undergone surgery for stage II or III colorectal cancer",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "locations": [
+        {
+          "facility": "Facey Medical Group - Mission Hills - Endoscopy Center & Gastroenterology",
+          "city": "Mission Hills",
+          "state": "California",
+          "zip": "91345",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.68609,
+            "lon": -120.43683
+          }
+        },
+        {
+          "facility": "Torrance Memorial Hunt Cancer Institute",
+          "city": "Torrance",
+          "state": "California",
+          "zip": "90505",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 33.83585,
+            "lon": -118.34063
+          }
+        },
+        {
+          "facility": "University of Florida Division of Hematology & Oncology",
+          "city": "Gainesville",
+          "state": "Florida",
+          "zip": "32610",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 29.65163,
+            "lon": -82.32483
+          }
+        },
+        {
+          "facility": "Mount Sinai Medical - Comprehensive Cancer Center",
+          "city": "Miami Beach",
+          "state": "Florida",
+          "zip": "33140",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 25.79065,
+            "lon": -80.13005
+          }
+        },
+        {
+          "facility": "Mid Florida Cancer Centers",
+          "city": "Orange City",
+          "state": "Florida",
+          "zip": "32763",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 28.94888,
+            "lon": -81.29867
+          }
+        },
+        {
+          "facility": "Edward Cancer Center",
+          "city": "Elmhurst",
+          "state": "Illinois",
+          "zip": "60126",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 41.89947,
+            "lon": -87.94034
+          }
+        },
+        {
+          "facility": "Illinois Cancer Care",
+          "city": "Peoria",
+          "state": "Illinois",
+          "zip": "61615",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.69365,
+            "lon": -89.58899
+          }
+        },
+        {
+          "facility": "Mercy Medical Center",
+          "city": "Cedar Rapids",
+          "state": "Iowa",
+          "zip": "52403",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 42.00833,
+            "lon": -91.64407
+          }
+        },
+        {
+          "facility": "University of Kansas Cancer Center",
+          "city": "Westwood",
+          "state": "Kansas",
+          "zip": "66205",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.04056,
+            "lon": -94.6169
+          }
+        },
+        {
+          "facility": "MedStar Georgetown Cancer Institute at MedStar Georgetown University Hospital",
+          "city": "Baltimore",
+          "state": "Maryland",
+          "zip": "21237",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.29038,
+            "lon": -76.61219
+          }
+        },
+        {
+          "facility": "Meritus Center for Clinical Research",
+          "city": "Hagerstown",
+          "state": "Maryland",
+          "zip": "21742",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.64176,
+            "lon": -77.71999
+          }
+        },
+        {
+          "facility": "University of Maryland St. Joseph Medical Center",
+          "city": "Towson",
+          "state": "Maryland",
+          "zip": "21093",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.4015,
+            "lon": -76.60191
+          }
+        },
+        {
+          "facility": "Metro Minnesota Community Oncology Consortium (MMCORC)",
+          "city": "Saint Louis Park",
+          "state": "Minnesota",
+          "zip": "55426",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 44.9483,
+            "lon": -93.34801
+          }
+        },
+        {
+          "facility": "Missouri Baptist Medical Center",
+          "city": "St Louis",
+          "state": "Missouri",
+          "zip": "63131",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 38.62727,
+            "lon": -90.19789
+          }
+        },
+        {
+          "facility": "Atrium Health Levine Cancer Institute",
+          "city": "Charlotte",
+          "state": "North Carolina",
+          "zip": "28204",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.22709,
+            "lon": -80.84313
+          }
+        },
+        {
+          "facility": "FirstHealth Outpatient Cancer Center",
+          "city": "Pinehurst",
+          "state": "North Carolina",
+          "zip": "28374",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 35.19543,
+            "lon": -79.46948
+          }
+        },
+        {
+          "facility": "Atrium Health Wake Forest Baptist Medical Center",
+          "city": "Winston-Salem",
+          "state": "North Carolina",
+          "zip": "27157",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.09986,
+            "lon": -80.24422
+          }
+        },
+        {
+          "facility": "Sanford Roger Maris Cancer Center",
+          "city": "Fargo",
+          "state": "North Dakota",
+          "zip": "58104",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 46.87719,
+            "lon": -96.7898
+          }
+        },
+        {
+          "facility": "Columbus NCORP",
+          "city": "Columbus",
+          "state": "Ohio",
+          "zip": "43215",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.96118,
+            "lon": -82.99879
+          }
+        },
+        {
+          "facility": "Interstate Medical Office Central",
+          "city": "Portland",
+          "state": "Oregon",
+          "zip": "97227",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 45.52345,
+            "lon": -122.67621
+          }
+        },
+        {
+          "facility": "UPMC Hillman Cancer Center",
+          "city": "Pittsburgh",
+          "state": "Pennsylvania",
+          "zip": "15232",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.44062,
+            "lon": -79.99589
+          }
+        },
+        {
+          "facility": "Reading Hospital Hematology Oncology",
+          "city": "West Reading",
+          "state": "Pennsylvania",
+          "zip": "19611",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.3337,
+            "lon": -75.94743
+          }
+        },
+        {
+          "facility": "Lankenau Medical Center",
+          "city": "Wynnewood",
+          "state": "Pennsylvania",
+          "zip": "19096",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 40.00289,
+            "lon": -75.27074
+          }
+        },
+        {
+          "facility": "WellSpan York Cancer Center",
+          "city": "York",
+          "state": "Pennsylvania",
+          "zip": "17403",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 39.9626,
+            "lon": -76.72774
+          }
+        },
+        {
+          "facility": "Primsa Health Cancer Institute",
+          "city": "Greenville",
+          "state": "South Carolina",
+          "zip": "29605",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.85262,
+            "lon": -82.39401
+          }
+        },
+        {
+          "facility": "Sanford Cancer Center",
+          "city": "Sioux Falls",
+          "state": "South Dakota",
+          "zip": "57104",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 43.54369,
+            "lon": -96.72796
+          }
+        },
+        {
+          "facility": "Ballad Health Cancer Center",
+          "city": "Kingsport",
+          "state": "Tennessee",
+          "zip": "37660",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 36.54843,
+            "lon": -82.56182
+          }
+        },
+        {
+          "facility": "Marshfield Medical Center Weston",
+          "city": "Weston",
+          "state": "Wisconsin",
+          "zip": "54476",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 44.8908,
+            "lon": -89.54762
+          }
+        },
+        {
+          "facility": "Cross Cancer Institute",
+          "city": "Edmonton",
+          "state": "Alberta",
+          "zip": "T6G1Z2",
+          "country": "Canada",
+          "geoPoint": {
+            "lat": 53.55014,
+            "lon": -113.46871
+          }
+        },
+        {
+          "facility": "Princess Margaret Cancer Center",
+          "city": "Toronto",
+          "state": "Ontario",
+          "zip": "M5G2C1",
+          "country": "Canada",
+          "geoPoint": {
+            "lat": 43.70643,
+            "lon": -79.39864
+          }
+        },
+        {
+          "facility": "Jewish General Hospital",
+          "city": "Montreal",
+          "state": "Quebec",
+          "zip": "H3T1E2",
+          "country": "Canada",
+          "geoPoint": {
+            "lat": 45.50884,
+            "lon": -73.58781
+          }
+        },
+        {
+          "facility": "McGill University Health - Glen Site",
+          "city": "Montreal",
+          "state": "Quebec",
+          "zip": "H4A3J1",
+          "country": "Canada",
+          "geoPoint": {
+            "lat": 45.50884,
+            "lon": -73.58781
+          }
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "YES",
+      "description": "Individual participant data that underlie the results reported in publications of the study will be shared after deidentification. This may include test, tables, figured, and appendices. The study protocol, statistical analysis plan (when applicable), informed consent form (when applicable). May not be reproduced nor disseminated outside of Exact Sciences without permission and the clinical study report (when applicable) will also be shared",
+      "infoTypes": [
+        "STUDY_PROTOCOL",
+        "SAP",
+        "ICF",
+        "CSR",
+        "ANALYTIC_CODE"
+      ],
+      "timeFrame": "Data will be available from 2 years and ending 4 years after publication",
+      "accessCriteria": "Proposals for access to data should be directed to clinicaltrials@exactsciences.com. To gain access, data requestors will need to provide a methodologically sound proposal and sign a data access agreement. Researchers are required to obtain necessary Institutional Review Board (IRB)/Institutional Ethics Committee (IEC) approvals or waivers as applicable to conduct research."
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-04-01"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D015179",
+          "term": "Colorectal Neoplasms"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D007414",
+          "term": "Intestinal Neoplasms"
+        },
+        {
+          "id": "D005770",
+          "term": "Gastrointestinal Neoplasms"
+        },
+        {
+          "id": "D004067",
+          "term": "Digestive System Neoplasms"
+        },
+        {
+          "id": "D009371",
+          "term": "Neoplasms by Site"
+        },
+        {
+          "id": "D009369",
+          "term": "Neoplasms"
+        },
+        {
+          "id": "D004066",
+          "term": "Digestive System Diseases"
+        },
+        {
+          "id": "D005767",
+          "term": "Gastrointestinal Diseases"
+        },
+        {
+          "id": "D003108",
+          "term": "Colonic Diseases"
+        },
+        {
+          "id": "D007410",
+          "term": "Intestinal Diseases"
+        },
+        {
+          "id": "D012002",
+          "term": "Rectal Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

@@ -1,427 +1,596 @@
-Meta: request_id=1951d275-4862-4e87-979f-a994dacb50c6, response_time_s=0.37
+Meta: request_id=76850773-6bf8-4fe9-a89f-3d647ddc1dd0, response_time_s=0.71
 
 === Extracted Web Content ===
 [Result 1]
-Title: [Skip to content](MainContent)
-URL: https://www.elysiumhealth.com/blogs/leadership-team/eric-marcotulli
+Title: I'm a Patient or Caregiver
+URL: https://www.veracyte.com/tests/afirma-thyroid
 Content:
-[Skip to content](#MainContent)
+I'm a Patient or Caregiver
 
+## References Show/Hide
 
-## Your cart is empty
+1. Afirma patients tested from inception through December 31, 2025.
+2. Patel KN, et al. JAMA Surg. 2018. DOI: 10.1001/jamasurg.2018.1153
+3. Angell TE, et al. Thyroid. 2019. DOI: 10.1089/thy.2018.0726
+4. Veracyte, Inc. Company data on file. Updated March 2026.
+5. Rahbari, et al. Future Oncol. 2010. DOI: 10.2217/fon.10.127
+6. American Cancer Society, Cancer Facts & Figures. 2026.
 
-[Continue shopping](/)
+## Disclaimers Show/Hide
 
-### All Products
+Afirma testing is available in the United States as part of Veracyte’s CLIA-validated laboratory developed test (LDT) service, and FDA clearance is not required.
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+Talk to your doctor about whether Veracyte tests might be right for you.
 
-[Go to All Products collection page
-Shop All Products](/collections/all)
+Contact UsPortals [...] Connect With Us
 
+   Ordering Portal  Contact Us
 
+  Resource Centers
 
-* [Register Index](https://my.elysiumhealth.com/index/start)
-* [Help Center](/pages/support)
+   Afirma Thyroid Resources  Decipher Bladder Resources  Decipher Prostate Resources  Prosigna Breast Resources  View All →
 
-[Log in](https://auth.elysiumhealth.com/authorize?response_type=code&client_id=UsPPT7nPkUv1IM3t2NBI3YMgWZr9TVGx&return_to=/account&auto_login=false?redirect=https://www.elysiumhealth.com)[Cart](/cart)
+  Explore
 
+   Patient Video Stories  Frequently Asked Questions
 
+  Connect With Us
 
-# Eric Marcotulli
+   Payment Portal  Contact Us
+ Innovation
 
-CEO
+  Technology
 
-Eric Marcotulli, Elysium Health co-founder and chief executive officer, graduated from Harvard Business School and joined Sequoia Capital as an investment partner. While in Silicon Valley, Marcotulli realized that despite the significant, positive impact of new technologies on our understanding of health and disease, there remained a lack of innovation in the consumer-facing portion of the healthcare market.
+   Veracyte Diagnostics Platform  Clinical Studies  Technology & Pipeline
 
-With a keen interest in aging research and its potential to have a profound impact on the most important areas of health, he created a company focused on developing compelling compounds found in nature that support long-term health.
+  TrueMRD Testing Platform  Cancer Diagnostic Labs
 
+  Research Use Only
 
+   Afirma GRID  Decipher GRID
+ Company
 
-* Choosing a selection results in a full page refresh.
-* Opens in a new window.
+  About Us
+
+   About Veracyte  Leadership  Careers  Working at Veracyte
+
+  News & Events
+
+   Events & Webinars  Press Releases  In the News  Blog
+
+  Connect
+
+   Contact Us
+ Investors
+
+  Welcome
+
+   Overview  Press Releases  Events & Presentations
+
+  Financials [...] Explore
+
+   Patient Video Stories  Frequently Asked Questions
+
+  Connect With Us
+
+   Payment Portal  Contact Us
+ Innovation       
+
+  Innovation
+
+  Technology
+
+   Veracyte Diagnostics Platform  Clinical Studies  Technology & Pipeline
+
+  TrueMRD Testing Platform  Cancer Diagnostic Labs
+
+  Research Use Only
+
+   Afirma GRID  Decipher GRID
+ Company       
+
+  Company
+
+  About Us
+
+   About Veracyte  Leadership  Careers  Working at Veracyte
+
+  News & Events
+
+   Events & Webinars  Press Releases  In the News  Blog
+
+  Connect
+
+   Contact Us
+ Investors       
+
+  Investors
+
+  Welcome
+
+   Overview  Press Releases  Events & Presentations
+
+  Financials
+
+   SEC Filings  Quarterly Results  Annual Reports  Stock Information  Analyst Coverage
+
+  Governance
 
 [Result 2]
-Title: Your cart is empty
-URL: https://www.elysiumhealth.com/blogs/leadership-team/dan-alminana
+Title: I'm a Patient or Caregiver
+URL: https://www.veracyte.com/tests/decipher-prostate
 Content:
-## Your cart is empty
+I'm a Patient or Caregiver
 
-Have an account?
+## References Show/Hide
 
-[Log in](/account/login) to check out faster.
+1. Based on data available from commercial websites as of February 17, 2026.
+2. Decipher patients tested from inception through December 31, 2025.
+3. Company data on file as of February 17, 2026.
+4. American Cancer Society. Cancer Facts & Figures. 2026. Atlanta, GA: American Cancer Society; 2026. Accessed February 12, 2026. 
+5. James ND, et al. Lancet Oncol. 2024. DOI: 10.1016/s0140-6736(24)00651-2
 
-![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
+## Disclaimers Show/Hide
 
-### All Products
+Decipher testing is available in the United States as part of Veracyte’s CLIA-validated laboratory developed test (LDT) service, and FDA clearance is not required.
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+Talk to your doctor about whether Veracyte tests might be right for you.
 
-## Your Cart
+Contact UsPortals [...] © 2026 Veracyte, Inc. All rights reserved.
 
-Loading...
+ Instructions for Use
+ Safety Data Sheets
+ Privacy Notice
+ Accessibility
 
-## Order Subtotal
+ Terms of Use
+ Terms of Sale
+ No Surprises Act
+ Ethics & Compliance
+ Licenses & Certifications
+ Trademarks
+ Site Map
 
-$0
+Global
 
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+This website contains information on products which is targeted to a wide range of audiences and could contain product details or information otherwise not accessible or valid in your country. Please be aware that we do not take any responsibility for accessing such information which may not comply with any legal process, regulation, registration or usage in the country of your origin. [...] Connect With Us
 
-**Basis**NAD+ Supplement
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
-![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
-![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
-![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
-![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
-![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
-![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
-![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
-![Dan Alminana - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c5cbe258c21d15152fc80d733ad54afb.png?v=1629253851&width=384)
-![Dan Alminana - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c5cbe258c21d15152fc80d733ad54afb_800x.png?v=1629253851)
+   Ordering Portal  Contact Us
 
-# Dan Alminana
+  Resource Centers
 
-COO
+   Afirma Thyroid Resources  Decipher Bladder Resources  Decipher Prostate Resources  Prosigna Breast Resources  View All →
 
-Dan Alminana, chief operating officer, began his finance career as a consultant at Deloitte and an associate in Citi Smith Barney’s venture capital coverage group. From there, he served as vice president at JP Morgan Securities, where he launched and led its Silicon Valley venture capital coverage unit.
+  Explore
 
-Dan worked closely with the international healthcare and technology communities, including leading investors and the most advanced, forward-thinking startups in the U.S., Asia, and Europe. His leadership through complex acquisitions, divestitures, and IPOs made him a sought-after specialist for startups transitioning from private to public companies.
+   Patient Video Stories  Frequently Asked Questions
 
-## Products
+  Connect With Us
 
-## Company
+   Payment Portal  Contact Us
+ Innovation
 
-![iHerb logo](https://assets-manager.abtasty.com/f4b5045cf2a942d4103dc320b12f0003/iherb_logo_white.png)
+  Technology
 
-## Support
+   Veracyte Diagnostics Platform  Clinical Studies  Technology & Pipeline
 
-## Follow
+  TrueMRD Testing Platform  Cancer Diagnostic Labs
 
-Enter your email for exclusive offers, company news, more about our science, and more.
+  Research Use Only
 
-These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age.
+   Afirma GRID  Decipher GRID
+ Company
 
-\*Individual results may vary. This timeline may differ from the typical user’s experience and is not intended to represent or guarantee that every user will achieve the same or similar results.
+  About Us
+
+   About Veracyte  Leadership  Careers  Working at Veracyte
+
+  News & Events
+
+   Events & Webinars  Press Releases  In the News  Blog
+
+  Connect
+
+   Contact Us
+ Investors
+
+  Welcome
+
+   Overview  Press Releases  Events & Presentations
+
+  Financials
 
 [Result 3]
-Title: Dr. Guarente holds a B.S. from MIT and a Ph.D. from Harvard.
-URL: https://www.elysiumhealth.com/blogs/leadership-team/leonard-guarente-phd
+Title: I'm a Healthcare Provider
+URL: https://www.veracyte.com/tests/decipher-bladder
 Content:
-Dr. Guarente is best known for his research on the role of sirtuins, a class of proteins that play a key role in regulating metabolic systems. In particular, Dr. Guarente was the first to identify SIR2 as the gene that controls aging in yeast cells, and to show that SIR2 and related proteins function as NAD+ dependent enzymes—the first link between NAD+ and aging. The mammalian version of SIR2, SIRT1 (and its associated proteins), has since been shown by Dr. Guarente and others to play a key role in longevity and metabolic function in mammals. Human studies have begun to show that dietary supplements that raise NAD+ levels exert similar effects in aging humans. [...] Dr. Guarente’s lab is currently focused on a protein involved in muscle repair termed dysferlin, which is defective in a category of muscular dystrophies. Chemical chaperones have been identified that can rescue missense mutations in dysferlin. These molecules will be tested for prolongation of muscle health in normal aging. 
+I'm a Healthcare Provider
 
-Dr. Guarente holds a B.S. from MIT and a Ph.D. from Harvard.
+An older man sits at a table, looking thoughtful, with a woman behind him gently resting her hand on his shoulder. A healthcare professional shows him a medication bottle, conveying a caring and supportive atmosphere.
 
-## Products
+I'm a Patient or Caregiver
 
-## Company
+## References Show/Hide
 
-iHerb logo
+1. Company data on file as of February 17, 2026.
+2. 
+3. Bray F, et al. CA Cancer J Clin. 2024. DOI: 10.3322/caac.21834
+4. 
+5. 
+6. Leslie SW, In: StatPearls (Internet) Treasure Island (FL): StatPearls Publishing; 2025 
 
-## Support
+## Disclaimers Show/Hide
 
-## Follow
+Decipher testing is available in the United States as part of Veracyte’s CLIA-validated laboratory developed test (LDT) service, and FDA clearance is not required.
 
-Enter your email for exclusive offers, company news, more about our science, and more. [...] ## Your cart is empty
+Talk to your doctor about whether Veracyte tests might be right for you. [...] © 2026 Veracyte, Inc. All rights reserved.
 
-Have an account?
+ Instructions for Use
+ Safety Data Sheets
+ Privacy Notice
+ Accessibility
 
-Log in to check out faster.
+ Terms of Use
+ Terms of Sale
+ No Surprises Act
+ Ethics & Compliance
+ Licenses & Certifications
+ Trademarks
+ Site Map
 
-All Products
+Global
 
-### All Products
+This website contains information on products which is targeted to a wide range of audiences and could contain product details or information otherwise not accessible or valid in your country. Please be aware that we do not take any responsibility for accessing such information which may not comply with any legal process, regulation, registration or usage in the country of your origin. [...] Connect With Us
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+   Ordering Portal  Contact Us
 
-## Your Cart
+  Resource Centers
 
-Loading...
+   Afirma Thyroid Resources  Decipher Bladder Resources  Decipher Prostate Resources  Prosigna Breast Resources  View All →
 
-## Order Subtotal
+  Explore
 
-$0
+   Patient Video Stories  Frequently Asked Questions
 
-BasisNAD+ Supplement
+  Connect With Us
 
-Elysium Health Home
+   Payment Portal  Contact Us
+ Innovation
 
-Leonard Guarente, PhD - Elysium Health
-Leonard Guarente, PhD - Elysium Health
+  Technology
 
-# Leonard Guarente, PhD
+   Veracyte Diagnostics Platform  Clinical Studies  Technology & Pipeline
 
-Chief Scientist
+  TrueMRD Testing Platform  Cancer Diagnostic Labs
 
-Dr. Guarente is the Novartis Professor of Biology at MIT, where he has taught and run his lab for more than 40 years. His research has focused on the genetic and molecular basis of aging—first in model organisms and now in humans.
+  Research Use Only
+
+   Afirma GRID  Decipher GRID
+ Company
+
+  About Us
+
+   About Veracyte  Leadership  Careers  Working at Veracyte
+
+  News & Events
+
+   Events & Webinars  Press Releases  In the News  Blog
+
+  Connect
+
+   Contact Us
+ Investors
+
+  Welcome
+
+   Overview  Press Releases  Events & Presentations
+
+  Financials
 
 [Result 4]
-Title: Your cart is empty
-URL: https://www.elysiumhealth.com/blogs/leadership-team/mark-morris
+Title: Breast cancer affects 1 in 83 women in the United States and 1 in 122 women globally.
+URL: https://www.veracyte.com/tests/prosigna-breast
 Content:
-## Your cart is empty
+Breast cancer affects 1 in 83 women in the United States and 1 in 122 women globally.
+ In the US, an estimated 321,910 women and 2,670 men will be diagnosed with invasive breast cancer in 2026.3
+ Among these patients, about 70% will be diagnosed with hormone receptor-positive (HR+) breast cancer.4
 
-Have an account?
+Challenges
 
-[Log in](/account/login) to check out faster.
+### Choosing the best treatment path is paramount to preventing cancer from coming back.
 
-![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
+When breast cancer is caught early, and treated appropriately, there is a 91% 5-year survival rate.3 However, it can recur up to 20 years later.5 Survival after a distant metastatic recurrence is significantly lower and dependent on the subtype of the cancer.6 [...] linkedin logo
+ Logo of X company
+ Logo of youtube
 
-### All Products
+Tests
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+ Afirma  
+  Genomic Sequencing Classifier
+ Decipher  
+  Bladder Genomic Classifier
+ Decipher   
+  Prostate Genomic Classifier
+ Prosigna  
+  Breast Risk of Recurrence Test
 
-## Your Cart
+Explore
 
-Loading...
+ Veracyte Diagnostics   
+  Platform
+ Clinical Studies
+ Technology & Pipeline
+ Scientific Publications
+ Resource Center
+ Document Library
+ Portals
 
-## Order Subtotal
+News & Events
 
-$0
+ In the News
+ Press Releases
+ Events & Webinars
 
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+Company
 
-**Basis**NAD+ Supplement
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
-![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
-![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
-![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
-![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
-![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
-![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
-![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
-![Mark Morris - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c6f5d0f1d893662ba8da680d0e9bd027.jpg?v=1629253876&width=604)
-![Mark Morris - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/c6f5d0f1d893662ba8da680d0e9bd027_800x.jpg?v=1629253876)
+ About Veracyte
+ Leadership
+ Careers
+ Investors
+ Blog
+ Corporate Recognition
 
-# Mark Morris
+© 2026 Veracyte, Inc. All rights reserved.
 
-Chief Product Officer
+ Instructions for Use
+ Safety Data Sheets
+ Privacy Notice
+ Accessibility
+ Cookie Preferences
 
-Mark Morris is the chief product officer at Elysium Health, where he leads all research and product development functions, including new technology evaluation, supply chain development and clinical research. At Elysium, he is also living his passion to further open access research and unlock technologies that can significantly impact human health.
+ Terms of Use
+ Terms of Sale
+ No Surprises Act
+ Ethics & Compliance
+ Licenses & Certifications
+ Trademarks
+ Site Map [...] Genomic testing helps identify patients who may safely avoid chemotherapy – and its toxic long term side effects – while maintaining strong chances of remaining breast cancer-free.
 
-Mark previously held several executive leadership roles in the nutraceutical space and was intimately involved in developing new technologies to various industries including consumer health, animal health, and cosmetics. He also worked as a research scientist at Yazaki Technical Center North America, an R&D center for Yazaki Corporation, headquartered in Japan.
+## Keep exploring
 
-Mark holds a B.S. in chemical engineering from the University of Akron.
+## Clinical Studies
 
-## Products
+Studies demonstrating the impact of our tests across cancer types.
 
-## Company
+Discover
 
-![iHerb logo](https://assets-manager.abtasty.com/f4b5045cf2a942d4103dc320b12f0003/iherb_logo_white.png)
+## Scientific Publications
 
-## Support
+Veracyte publications and references showcasing discoveries and advancements.
 
-## Follow
+Explore
 
-Enter your email for exclusive offers, company news, more about our science, and more.
+## Resource Center
 
-These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age.
+View scientific publications, videos, FAQS, and more.
 
-\*Individual results may vary. This timeline may differ from the typical user’s experience and i …[truncated]
+Explore
+
+## Events
+
+Meet with us and discuss how we support clinicians.
+
+Learn More
+
+## Connect with us
+
+Contact Us
+
+## References Show/Hide
+
+1. Veracyte, Inc. Company data on file. Updated March 2026.
+2. 
+3. 
+4. 
+5. 
+6. 
+
+## Disclaimers Show/Hide
 
 [Result 5]
-Title: Tom received a S.B. from MIT and a Ph.D. from Caltech, both in chemistry, and a J.D. from Rutgers School of Law.
-URL: https://www.elysiumhealth.com/blogs/leadership-team/thomas-e-wilhelm-phd
+Title: Veracyte home
+URL: https://www.veracyte.com/lung-cancer/
 Content:
-Tom received a S.B. from MIT and a Ph.D. from Caltech, both in chemistry, and a J.D. from Rutgers School of Law.
+Veracyte home
 
-## Products
+ Tests
+  + Products
 
-## Company
+    - Breast Cancer Prosigna Breast Cancer Assay
+    - Endocrine Cancer Afirma Genomic Sequencing Classifier
+    - In Pipeline Percepta Nasal Swab Test
+    - Urologic Cancers Decipher Prostate Genomic Classifier
+    - Decipher Bladder Genomic Classifier
+    - Publications
+    - Decipher Portal
+    - Afirma Portal
+    - Contact us
 
-iHerb logo
+    
 
-## Support
+    Let's connect. Explore upcoming events.
+  + Oncology Areas
 
-## Follow
+    - Cancer Types Thyroid
+    - Prostate
+    - Lung
+    - Breast
+    - Bladder
 
-Enter your email for exclusive offers, company news, more about our science, and more.
+    - Publications
+    - Decipher Portal
+    - Afirma Portal
+    - Contact us
 
-These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age. [...] Chief Legal Officer and General Counsel
+    
 
-Thomas Wilhelm is general counsel at Elysium Health. Before joining Elysium, Tom was general counsel and sole lawyer for Tom Ford International, where he was responsible for all legal matters from the corporate level to retail operations. Prior to that, he was associate counsel at Pearson Education and an associate at Cleary, Gottlieb, Steen & Hamilton LLP, an international law firm headquartered in New York City.
+    Let's connect. Explore upcoming events.
+ Innovation
+  + Portfolio & test expansion
+  + Enabling global access
+  + MRD technology
 
-Tom began his professional career as a chemist, working in the laboratories of Richard Schrock and Bob Grubbs, who later shared the 2005 Nobel Prize in Chemistry, and as a patent and chemical information specialist at ExxonMobil. He has numerous patents and papers published in scientific journals from his time as a chemist. [...] \Individual results may vary. This timeline may differ from the typical user’s experience and is not intended to represent or guarantee that every user will achieve the same or similar results.
+  
+
+  2024 Corporate Presentation
+ Company
+  + About Us [...] This webpage contains forward-looking statements. These forward-looking statements involve risks and uncertainties. For more information, read our forward-looking statement.
+
+This website contains information on products that are targeted to a wide range of audiences and could contain product details or information otherwise not accessible or valid in your country.  
+ Please be aware that we do not take any responsibility for you accessing such information that may not comply with any legal process, regulation, registration or usage in the country of your origin. [...] Annual reports
+
+# Improving lung cancer diagnosis and patient management through genomic innovation
+
+Veracyte is evolving lung nodule risk assessment for lung cancer with a simple office-based nasal brush.
+
+Explore Percepta® Nasal Swab test
+
+## The critical need for lung cancer early detection
+
+Lung cancer is the leading cause of death worldwide, and it is well established that early detection and diagnosis can reduce mortality.
+
+~15M
+
+The number of people who are eligible for annual screening in the U.S.1
+
+1.6M
+
+The number of lung nodules discovered incidentally each year.2
+
+4.5%
+
+The percentage of high-risk people in the U.S. who get screened for lung cancer.3
+
+## Pioneering new solutions to inform the lung cancer care continuum
+
+Traditional Approach
 
 [Result 6]
-Title: Your cart is empty
-URL: https://www.elysiumhealth.com/blogs/leadership-team/whitney-christopher
+Title: The Afirma Genomic Sequencing Classifier is available in the US as part of Veracyte’s CLIA-validated laboratory developed test (LDT) service. This test has not been cleared or approved by the FDA.
+URL: https://www.veracyte.com/afirma/
 Content:
-## Your cart is empty
+The Afirma Genomic Sequencing Classifier is available in the US as part of Veracyte’s CLIA-validated laboratory developed test (LDT) service. This test has not been cleared or approved by the FDA.
 
-Have an account?
+This website contains information on products that are targeted to a wide range of audiences and could contain product details or information otherwise not accessible or valid in your country. Please be aware that we do not take any responsibility for you accessing such information that may not comply with any legal process, regulation, registration or usage in the country of your origin. [...] Veracyte home
 
-[Log in](/account/login) to check out faster.
+ Tests
+  + Products
 
-![All Products](//www.elysiumhealth.com/cdn/shop/files/Hero-1.jpg?v=1762187709&width=1500)
+    - Breast Cancer Prosigna Breast Cancer Assay
+    - Endocrine Cancer Afirma Genomic Sequencing Classifier
+    - In Pipeline Percepta Nasal Swab Test
+    - Urologic Cancers Decipher Prostate Genomic Classifier
+    - Decipher Bladder Genomic Classifier
+    - Publications
+    - Decipher Portal
+    - Afirma Portal
+    - Contact us
 
-### All Products
+    
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+    Let's connect. Explore upcoming events.
+  + Oncology Areas
 
-## Your Cart
+    - Cancer Types Thyroid
+    - Prostate
+    - Lung
+    - Breast
+    - Bladder
 
-Loading...
+    - Publications
+    - Decipher Portal
+    - Afirma Portal
+    - Contact us
 
-## Order Subtotal
+    
 
-$0
+    Let's connect. Explore upcoming events.
+ Innovation
+  + Portfolio & test expansion
+  + Enabling global access
+  + MRD technology
 
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
+  
 
-**Basis**NAD+ Supplement
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![Elysium Health Home](//www.elysiumhealth.com/cdn/shop/files/elysium-wordmark.svg?v=1724693675&width=600)
-![](//www.elysiumhealth.com/cdn/shop/files/product_basis-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_matter-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/cofactor-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/product_signal-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_format-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_mosic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_vision-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/product_senolytic-dot_300x.png?v=1761589349)
-![](//www.elysiumhealth.com/cdn/shop/files/longevity-starter-pack-icon_300x.png?v=1738561469)
-![](//www.elysiumhealth.com/cdn/shop/files/index-icon_300x.png?v=1738600867)
-![](//www.elysiumhealth.com/cdn/shop/files/Frame_2044_1_300x.png?v=1740681700)
-![](//www.elysiumhealth.com/cdn/shop/files/arc-1_300x.jpg?v=1737740995)
-![](//www.elysiumhealth.com/cdn/shop/files/aging-101_78fc5901-2b58-4482-b112-1540422f148f_300x.jpg?v=1741284231)
-![](//www.elysiumhealth.com/cdn/shop/files/clinical-trial_7e773da5-1e55-41bd-8bb1-52c4fdcd04e1_300x.jpg?v=1741284190)
-![](//www.elysiumhealth.com/cdn/shop/files/megamenu-featured-image-short-arc_300x.jpg?v=1734764656)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_d9ad6b09-9286-4880-a86c-be0e5e5578cd_300x.jpg?v=1737585232)
-![](//www.elysiumhealth.com/cdn/shop/files/mission_300x.jpg?v=1737585203)
-![](//www.elysiumhealth.com/cdn/shop/files/team_9213b3e5-2a93-4266-b728-e323eddb7d4d_300x.jpg?v=1737654399)
-![](//www.elysiumhealth.com/cdn/shop/files/advisory-board_300x.jpg?v=1737585219)
-![](//www.elysiumhealth.com/cdn/shop/files/news-media_300x.jpg?v=1737585223)
-![Whitney Christopher - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/9f3949f2590f8e81b2fa712893e154aa.png?v=1629253857&width=384)
-![Whitney Christopher - Elysium Health](//www.elysiumhealth.com/cdn/shop/articles/9f3949f2590f8e81b2fa712893e154aa_800x.png?v=1629253857)
+  2024 Corporate Presentation
+ Company
+  + About Us [...] 97%
 
-# Whitney Christopher
+sensitivity2
 
-VP, Communications & Brand Marketing
+99%
 
-Whitney Christopher is vice president of communications and brand marketing at Elysium Health. Prior to joining Elysium, Whitney led communications and product marketing at the design and technology brand Dwell, garnering coverage for its top executives, the launch of its digital platform, and leading the rollout of the Modern by Dwell Magazine collection for Target.
+negative predictive value2
 
-Whitney has also worked with IDG, Volvo, Live Nation, Monogram, LG, Thompson Hotels, and Four Seasons Hotels and Resorts, among others, to grow their brands through meaningful press coverage, events, and partnerships. Throughout her career, she has focused on cultivating relationships and anticipating the needs of others.
+65%
 
-Whitney holds a B.S. in biological sciences from the University of California, Irvine.
+positive predictive value2
 
-## Products
+#### FEATURED PUBLICATIONS
 
-## Company
+In JCEM: “Real-World Performance of the Afirma Genomic Sequencing Classifier (GSC)—A Meta-analysis”
 
-![iHerb logo](https://assets-manager.abtasty.com/f4b5045cf2a942d4103dc320b12f0003/iherb_logo_white.png)
+JCEM article on Afirma GSC real-world performance
 
-## Support
+In JCEM: “Afirma Genomic Sequencing Classifier and Xpression Atlas Molecular Findings in Consecutive Bethesda III-VI Thyroid Nodules”
 
-## Follow
+JCEM article on Afirma GSC findings in thyroid nodules
 
-Enter your email for exclusive offers, company news, more about our science, and more.
+All clinical data
 
-These statements have not been evaluated by the Food and Drug Administration. These products are not intended to screen, diagnose, treat, cure, or prevent any disease or condition or assess risk of any disease or condition. Unless advised by your healthcare professional, biological age should not be used to determine or alter any age-related health or medical treatments based on your chronological age.
-
-\*Individual results may vary. This timeline may differ from t …[truncated]
+## Serving patients across the US
 
 [Result 7]
-Title: Ryan Dellinger, PhD
-URL: https://www.elysiumhealth.com/blogs/leadership-team/ryan-dellinger-phd
+Title: ![Click to visit Veracyte.com](https://prosignastage.wpengine.com/wp-content/uploads/2024/10/veracyte-logo.png)
+URL: https://www.prosigna.com/
 Content:
-# Ryan Dellinger, PhD
+![Click to visit Veracyte.com](https://prosignastage.wpengine.com/wp-content/uploads/2024/10/veracyte-logo.png)
+![Prosigna Logo](https://www.prosigna.com/wp-content/themes/prosigna/img/logo-prosigna.svg)
+![](https://www.prosigna.com/wp-content/uploads/2024/06/Prosigna-Veracyte_HeroImage-1.jpg)
+![](https://www.prosigna.com/wp-content/uploads/2024/11/Prosigna-Veracyte_HeroImage-2-1.png)
 
-VP, Scientific Affairs
+CE-IVD   
+marked
 
-Ryan Dellinger is vice president of scientific affairs at Elysium Health, where he works on product development, intellectual property, scientific collaborations, and clinical trials. Previously, Ryan was director of scientific affairs at another dietary supplement and ingredient company. Prior to that, he was an assistant project scientist at the University of California, Irvine, where he was involved in several pre-clinical and clinical studies investigating skin cancer prevention. [...] Ryan also served as a postdoctoral researcher in the pharmacology department at Penn State University Medical Center, where he spent four years investigating the mechanism of activity of Phase II metabolic enzymes and their role in cancer risk, treatment, and prevention. Ryan holds a B.S. in biochemistry from the University of the Pacific and a Ph.D. in biochemistry and molecular biology from the University of California, San Diego.
+##
 
-## Products
+### THE TEST to answer more than one question
 
-## Company
+The breast cancer risk of recurrence test that confidently guides treatment decisions.
 
-iHerb logo
+* [Why Prosigna](https://www.prosigna.com/why-prosigna/)
+* [Resources](https://www.prosigna.com/resources/)
 
-## Support
+![](https://www.prosigna.com/wp-content/uploads/2024/11/Prosigna-Veracyte_HeroImage-2-1.png)
 
-## Follow
+CE-IVD   
+marked
 
-Enter your email for exclusive offers, company news, more about our science, and more. [...] ## Your cart is empty
+##
 
-Have an account?
+### THE TEST to answer more than one question
 
-Log in to check out faster.
+The breast cancer risk of recurrence test that confidently guides treatment decisions.
 
-All Products
+* [Why Prosigna](https://www.prosigna.com/why-prosigna/)
+* [Resources](https://www.prosigna.com/resources/)
 
-### All Products
+## 
 
-From the Lab to Your Door Promote optimal aging with Basis, support...
+### THE TEST to answer more than one question
 
-## Your Cart
+To speak to a representative, call [+1-650-243-6335](tel:+1-650-243-6335)
 
-Loading...
+or email [[email protected]](/cdn-cgi/l/email-protection#b9d0d7dfd6f9c9cbd6cad0ded7d897dad6d4)
 
-## Order Subtotal
-
-$0
-
-BasisNAD+ Supplement
-
-Elysium Health Home
-
-Ryan Dellinger, PhD - Elysium Health
-Ryan Dellinger, PhD - Elysium Health
-
-# Ryan Dellinger, PhD
-
-VP, Scientific Affairs
+![Veracyte.com](https://www.prosigna.com/wp-content/themes/prosigna/img/logo-veracyte.svg)

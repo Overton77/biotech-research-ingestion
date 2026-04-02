@@ -1,0 +1,280 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT02681328",
+      "orgStudyIdInfo": {
+        "id": "16-000055"
+      },
+      "organization": {
+        "fullName": "Jonsson Comprehensive Cancer Center",
+        "class": "OTHER"
+      },
+      "briefTitle": "Randomized Trial Comparing Performance of Molecular Markers for Indeterminate Thyroid Nodules",
+      "officialTitle": "Randomized Trial Comparing Performance of Molecular Markers for Indeterminate Thyroid Nodules"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2025-12",
+      "overallStatus": "ACTIVE_NOT_RECRUITING",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2016-05-01",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2026-12-01",
+        "type": "ESTIMATED"
+      },
+      "completionDateStruct": {
+        "date": "2027-12-01",
+        "type": "ESTIMATED"
+      },
+      "studyFirstSubmitDate": "2016-02-10",
+      "studyFirstSubmitQcDate": "2016-02-10",
+      "studyFirstPostDateStruct": {
+        "date": "2016-02-12",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2025-12-15",
+      "lastUpdatePostDateStruct": {
+        "date": "2025-12-22",
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "SPONSOR"
+      },
+      "leadSponsor": {
+        "name": "Jonsson Comprehensive Cancer Center",
+        "class": "OTHER"
+      }
+    },
+    "oversightModule": {
+      "oversightHasDmc": false,
+      "isFdaRegulatedDrug": false,
+      "isFdaRegulatedDevice": false
+    },
+    "descriptionModule": {
+      "briefSummary": "The purpose of this study is to compare the performance of Afirma GSC and ThyroSeq v.3 in indeterminate thyroid nodules to determine which test can allow more patients to avoid unnecessary surgery and preserve quality of life. In the initial phase of this study, the performance of Afirma GEC and ThyroSeq v.2 were compared.",
+      "detailedDescription": "1. All patients undergoing thyroid FNA within the UCLA Health System will be randomized at the time of FNA to a single molecular test (GSC or ThyroSeq v.3). In the previous phase of the study, patients were randomized to the previous versions of a single molecular test (GEC or ThyroSeq v.2).\n2. During the FNA, a sample will be collected for the molecular test.\n3. If the cytology results are indeterminate (Bethesda categories 3 or 4), the molecular test will be reflexively sent off.\n4. We will help patients with indeterminate thyroid nodules to establish care with an endocrinologist, if they do not already have one. The physicians will make treatment recommendations using best practices and incorporating the results of the molecular test. We anticipate that most patients with a positive molecular test will undergo surgery, while the majority with a negative test will be surveiled.\n5. Patients who undergo surgery will have histopathologic evaluation of the thyroid, which will determine whether the index thyroid nodule was benign or malignant.\n6. Patients who do not undergo surgery will have a followup ultrasound at 6 and 12 months, or sooner at the discretion of the treating physician.\n7. We will assess thyroid-specific quality of life at baseline (following initial diagnosis of an indeterminate thyroid nodule) and during followup (at 6 and 12 months) using the short version of Thyroid-Related Patient-Reported Outcome."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Thyroid"
+      ]
+    },
+    "designModule": {
+      "studyType": "OBSERVATIONAL",
+      "patientRegistry": false,
+      "designInfo": {
+        "observationalModel": "COHORT",
+        "timePerspective": "PROSPECTIVE"
+      },
+      "enrollmentInfo": {
+        "count": 328,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "Afirma GEC",
+          "description": "single molecular test GEC of collected tissue",
+          "interventionNames": [
+            "Other: Afirma GEC"
+          ]
+        },
+        {
+          "label": "ThyroSeq v.2",
+          "description": "single molecular test ThyroSeq v.2 of collected tissue",
+          "interventionNames": [
+            "Other: ThyroSeq v.2"
+          ]
+        },
+        {
+          "label": "Afirma GSC",
+          "description": "single molecular test GSC of collected tissue",
+          "interventionNames": [
+            "Other: Afirma GSC"
+          ]
+        },
+        {
+          "label": "ThyroSeq v.3",
+          "description": "single molecular test ThyroSeq v.3 of collected tissue",
+          "interventionNames": [
+            "Other: ThyroSeq v.3"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "OTHER",
+          "name": "Afirma GEC",
+          "description": "Afirma GEC molecular test on collected thyroid tissue",
+          "armGroupLabels": [
+            "Afirma GEC"
+          ]
+        },
+        {
+          "type": "OTHER",
+          "name": "ThyroSeq v.2",
+          "description": "ThyroSeq v.2 molecular test on collected thyroid tissue",
+          "armGroupLabels": [
+            "ThyroSeq v.2"
+          ]
+        },
+        {
+          "type": "OTHER",
+          "name": "Afirma GSC",
+          "description": "Afirma GSC molecular test on collected thyroid tissue",
+          "armGroupLabels": [
+            "Afirma GSC"
+          ]
+        },
+        {
+          "type": "OTHER",
+          "name": "ThyroSeq v.3",
+          "description": "ThyroSeq v.3 molecular test on collected thyroid tissue",
+          "armGroupLabels": [
+            "ThyroSeq v.3"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Afirma GEC vs. ThyroSeq v.2 in indeterminate thyroid nodules post best practices surgery",
+          "description": "compare the performance of Afirma GEC and ThyroSeq v.2 in indeterminate thyroid nodules to determine which test can allow more patients to avoid unnecessary surgery and preserve quality of life. (5) Patients who undergo surgery will have histopathologic evaluation of the thyroid, which will determine whether the index thyroid nodule was benign or malignant.",
+          "timeFrame": "12 months. [This phase of the study is now completed]"
+        },
+        {
+          "measure": "2. Afirma GSC vs. ThyroSeq v.3 in indeterminate thyroid nodules post best practices surgery",
+          "description": "compare the performance of Afirma GSC and ThyroSeq v.3 in indeterminate thyroid nodules to determine which test can allow more patients to avoid unnecessary surgery and preserve quality of life. (5) Patients who undergo surgery will have histopathologic evaluation of the thyroid, which will determine whether the index thyroid nodule was benign or malignant.",
+          "timeFrame": "12 months."
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Avoidance of unnecessary surgeries",
+          "description": "Determine the number of unnecessary surgeries avoided based on the number of false-positive test results, and assess whether this translated into improved quality of life.",
+          "timeFrame": "12 months"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Patients with a thyroid nodule who have a thyroid biopsy performed at UCLA health will be eligible for the study and consented if they agree to participate.\n* Patients who have an indeterminate FNA biopsy result (Bethesda category 3 or 4) will be enrolled in the study if they agree to participate.\n\nExclusion Criteria:\n\n* Patients who do not have an indeterminate biopsy result (either patients who have a benign, insufficient, or malignant result).",
+      "healthyVolunteers": false,
+      "sex": "ALL",
+      "minimumAge": "18 Years",
+      "maximumAge": "100 Years",
+      "stdAges": [
+        "ADULT",
+        "OLDER_ADULT"
+      ],
+      "studyPopulation": "Patients undergoing thyroid fine needle aspiration (FNA) within the University of California, Los Angeles (UCLA) Health System",
+      "samplingMethod": "NON_PROBABILITY_SAMPLE"
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Masha Livhits, MC",
+          "affiliation": "Visiting Assistant Professor",
+          "role": "PRINCIPAL_INVESTIGATOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Jonsson Comprehensive Cancer Center at UCLA",
+          "city": "Los Angeles",
+          "state": "California",
+          "zip": "90095-1781",
+          "country": "United States",
+          "geoPoint": {
+            "lat": 34.05223,
+            "lon": -118.24368
+          }
+        }
+      ]
+    },
+    "referencesModule": {
+      "references": [
+        {
+          "pmid": "19846805",
+          "type": "BACKGROUND",
+          "citation": "Cibas ES, Ali SZ; NCI Thyroid FNA State of the Science Conference. The Bethesda System For Reporting Thyroid Cytopathology. Am J Clin Pathol. 2009 Nov;132(5):658-65. doi: 10.1309/AJCPPHLWMI3JV4LA."
+        },
+        {
+          "pmid": "24684467",
+          "type": "BACKGROUND",
+          "citation": "Lee L, How J, Tabah RJ, Mitmaker EJ. Cost-effectiveness of molecular testing for thyroid nodules with atypia of undetermined significance cytology. J Clin Endocrinol Metab. 2014 Aug;99(8):2674-82. doi: 10.1210/jc.2014-1219. Epub 2014 Mar 31."
+        },
+        {
+          "pmid": "22731672",
+          "type": "BACKGROUND",
+          "citation": "Alexander EK, Kennedy GC, Baloch ZW, Cibas ES, Chudova D, Diggans J, Friedman L, Kloos RT, LiVolsi VA, Mandel SJ, Raab SS, Rosai J, Steward DL, Walsh PS, Wilde JI, Zeiger MA, Lanman RB, Haugen BR. Preoperative diagnosis of benign thyroid nodules with indeterminate cytology. N Engl J Med. 2012 Aug 23;367(8):705-15. doi: 10.1056/NEJMoa1203208. Epub 2012 Jun 25."
+        },
+        {
+          "pmid": "26356635",
+          "type": "BACKGROUND",
+          "citation": "Nikiforov YE, Carty SE, Chiosea SI, Coyne C, Duvvuri U, Ferris RL, Gooding WE, LeBeau SO, Ohori NP, Seethala RR, Tublin ME, Yip L, Nikiforova MN. Impact of the Multi-Gene ThyroSeq Next-Generation Sequencing Assay on Cancer Diagnosis in Thyroid Nodules with Atypia of Undetermined Significance/Follicular Lesion of Undetermined Significance Cytology. Thyroid. 2015 Nov;25(11):1217-23. doi: 10.1089/thy.2015.0305. Epub 2015 Sep 10."
+        },
+        {
+          "pmid": "26435428",
+          "type": "BACKGROUND",
+          "citation": "Wu JX, Lam R, Levin M, Rao J, Sullivan PS, Yeh MW. Effect of malignancy rates on cost-effectiveness of routine gene expression classifier testing for indeterminate thyroid nodules. Surgery. 2016 Jan;159(1):118-26. doi: 10.1016/j.surg.2015.05.035. Epub 2015 Oct 2."
+        },
+        {
+          "pmid": "27161519",
+          "type": "BACKGROUND",
+          "citation": "Wu JX, Young S, Hung ML, Li N, Yang SE, Cheung DS, Yeh MW, Livhits MJ. Clinical Factors Influencing the Performance of Gene Expression Classifier Testing in Indeterminate Thyroid Nodules. Thyroid. 2016 Jul;26(7):916-22. doi: 10.1089/thy.2015.0505. Epub 2016 Jun 9."
+        },
+        {
+          "pmid": "35611970",
+          "type": "DERIVED",
+          "citation": "Hu TX, Nguyen DT, Patel M, Beckett K, Douek M, Masamed R, Rhyu J, Kim J, Tseng CH, Yeh MW, Livhits MJ. The Effect Modification of Ultrasound Risk Classification on Molecular Testing in Predicting the Risk of Malignancy in Cytologically Indeterminate Thyroid Nodules. Thyroid. 2022 Aug;32(8):905-916. doi: 10.1089/thy.2021.0659. Epub 2022 Jun 23."
+        },
+        {
+          "pmid": "33394039",
+          "type": "DERIVED",
+          "citation": "Zhu CY, Donangelo I, Gupta D, Nguyen DT, Ochoa JE, Yeh MW, Livhits MJ. Outcomes of Indeterminate Thyroid Nodules Managed Nonoperatively after Molecular Testing. J Clin Endocrinol Metab. 2021 Mar 8;106(3):e1240-e1247. doi: 10.1210/clinem/dgaa887."
+        },
+        {
+          "pmid": "33300952",
+          "type": "DERIVED",
+          "citation": "Livhits MJ, Zhu CY, Kuo EJ, Nguyen DT, Kim J, Tseng CH, Leung AM, Rao J, Levin M, Douek ML, Beckett KR, Cheung DS, Gofnung YA, Smooke-Praw S, Yeh MW. Effectiveness of Molecular Testing Techniques for Diagnosis of Indeterminate Thyroid Nodules: A Randomized Clinical Trial. JAMA Oncol. 2021 Jan 1;7(1):70-77. doi: 10.1001/jamaoncol.2020.5935."
+        },
+        {
+          "pmid": "29590358",
+          "type": "DERIVED",
+          "citation": "Livhits MJ, Kuo EJ, Leung AM, Rao J, Levin M, Douek ML, Beckett KR, Zanocco KA, Cheung DS, Gofnung YA, Smooke-Praw S, Yeh MW. Gene Expression Classifier vs Targeted Next-Generation Sequencing in the Management of Indeterminate Thyroid Nodules. J Clin Endocrinol Metab. 2018 Jun 1;103(6):2261-2268. doi: 10.1210/jc.2017-02754."
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "NO"
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-04-01"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D013959",
+          "term": "Thyroid Diseases"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D004700",
+          "term": "Endocrine System Diseases"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}
