@@ -23,8 +23,13 @@ from src.infrastructure.temporal.activities.deep_research import (
     run_deep_research_mission,
 )
 from src.infrastructure.temporal.activities.research_mission import (
+    emit_mission_progress,
     execute_research_stage,
+    finalize_mission_run,
     ingest_kg_from_report,
+    ingest_unstructured_documents,
+    initialize_mission_run,
+    persist_stage_activity_result,
 )
 from src.infrastructure.temporal.workflows.openai_research import OpenAIResearchWorkflow
 from src.infrastructure.temporal.workflows.deep_research import DeepResearchMissionWorkflow
@@ -38,15 +43,14 @@ DEEP_RESEARCH_TASK_QUEUE = "deep-research-mission"
 async def _init_beanie() -> None:
     """Initialise MongoDB + Beanie so activities can use Beanie documents."""
     from src.models import Message, Thread
-    from src.models.plan import ResearchPlan
-    from src.research.deepagent.models.mission import ResearchMission, ResearchRun
+    from src.research.langchain_agent.models import MissionRunDocument, ResearchPlan
 
     settings = get_settings()
     client = AsyncMongoClient(settings.MONGODB_URI)
     db = client[settings.MONGODB_DB]
     await init_beanie(
         database=db,
-        document_models=[Thread, Message, ResearchPlan, ResearchMission, ResearchRun],
+        document_models=[Thread, Message, ResearchPlan, MissionRunDocument],
     )
     logger.info("Beanie initialised for Temporal worker")
 
@@ -75,8 +79,13 @@ async def main() -> None:
         workflows=[DeepResearchMissionWorkflow, ResearchMissionWorkflow],
         activities=[
             run_deep_research_mission,
+            emit_mission_progress,
             execute_research_stage,
+            finalize_mission_run,
             ingest_kg_from_report,
+            ingest_unstructured_documents,
+            initialize_mission_run,
+            persist_stage_activity_result,
         ],
     )
 

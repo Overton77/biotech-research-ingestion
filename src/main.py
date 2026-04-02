@@ -19,9 +19,8 @@ from src.api.socketio.server import get_sio_mount_app
 from src.config import get_settings
 from src.config.cors import build_allowed_origins, lan_origin_regex
 from src.models import Message, Thread
-from src.models.plan import ResearchPlan 
 from src.models.openai_research import OpenAIResearchPlan, OpenAIResearchRun
-from src.research.deepagent.models.mission import ResearchMission, ResearchRun
+from src.research.langchain_agent.models import MissionRunDocument, ResearchPlan
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -46,10 +45,10 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
             document_models=[
                 Thread, Message, ResearchPlan,
                 OpenAIResearchPlan, OpenAIResearchRun,
-                ResearchMission, ResearchRun,
+                MissionRunDocument,
             ],
         )
-        logger.info("Beanie initialized (Thread, Message, ResearchPlan, OpenAI*, ResearchMission, ResearchRun)")
+        logger.info("Beanie initialized (Thread, Message, LangChain ResearchPlan, OpenAI*, MissionRunDocument)")
 
         yield
 

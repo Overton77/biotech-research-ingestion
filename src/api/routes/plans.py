@@ -5,10 +5,11 @@ from datetime import datetime
 
 from fastapi import APIRouter, HTTPException, status
 from beanie.odm.fields import PydanticObjectId
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
-from src.models.plan import ResearchPlan
+from src.api.routes.langchain_dtos import plan_to_dict
 from src.api.schemas.common import envelope
+from src.research.langchain_agent.models.plan import ResearchPlan, ResearchPlanTask, StarterSource
 
 logger = logging.getLogger(__name__)
 
@@ -42,30 +43,14 @@ async def list_plans(
         .limit(limit)
         .to_list()
     )
-    return envelope({
-        "items": [_plan_to_dict(p) for p in plans],
-        "total": total,
-        "skip": skip,
-        "limit": limit,
-    })
-
-
-def _plan_to_dict(p: ResearchPlan) -> dict:
-    return {
-        "id": str(p.id),
-        "thread_id": str(p.thread_id),
-        "title": p.title,
-        "objective": p.objective,
-        "stages": p.stages,
-        "tasks": [t.model_dump(mode="json") for t in p.tasks],
-        "starter_sources": [s.model_dump(mode="json") for s in p.starter_sources],
-        "status": p.status,
-        "created_at": p.created_at.isoformat(),
-        "updated_at": p.updated_at.isoformat(),
-        "approved_at": p.approved_at.isoformat() if p.approved_at else None,
-        "approver_notes": p.approver_notes,
-        "version": p.version,
-    }
+    return envelope(
+        {
+            "items": [plan_to_dict(p) for p in plans],
+            "total": total,
+            "skip": skip,
+            "limit": limit,
+        }
+    )
 
 
 class PlanPatch(BaseModel):
@@ -76,6 +61,8 @@ class PlanPatch(BaseModel):
     stages: list[str] | None = None
     tasks: list[dict] | None = None
     starter_sources: list[dict] | None = None
+    context: str | None = None
+    approver_notes: str | None = None
     status: str | None = None
 
 
@@ -89,7 +76,7 @@ async def get_plan(plan_id: str) -> dict:
     plan = await ResearchPlan.get(oid)
     if not plan:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Plan not found")
-    return envelope(_plan_to_dict(plan))
+    return envelope(plan_to_dict(plan))
 
 
 @router.patch("/{plan_id}")
@@ -111,16 +98,18 @@ async def update_plan(plan_id: str, body: PlanPatch) -> dict:
     if body.stages is not None:
         plan.stages = body.stages
     if body.tasks is not None:
-        from src.models.plan import ResearchTask
-        plan.tasks = [ResearchTask.model_validate(t) for t in body.tasks]
+        plan.tasks = [ResearchPlanTask.model_validate(t) for t in body.tasks]
     if body.starter_sources is not None:
-        from src.models.plan import StarterSource
         plan.starter_sources = [StarterSource.model_validate(s) for s in body.starter_sources]
+    if body.context is not None:
+        plan.context = body.context
+    if body.approver_notes is not None:
+        plan.approver_notes = body.approver_notes
     if body.status is not None:
         plan.status = body.status
     plan.updated_at = datetime.utcnow()
     await plan.save()
-    return envelope(_plan_to_dict(plan))
+    return envelope(plan_to_dict(plan))
 
 
 class PlanApproveBody(BaseModel):
@@ -144,7 +133,7 @@ async def approve_plan(plan_id: str, body: PlanApproveBody | None = None) -> dic
     plan.approver_notes = body.notes if body else None
     plan.updated_at = datetime.utcnow()
     await plan.save()
-    return envelope(_plan_to_dict(plan))
+    return envelope(plan_to_dict(plan))
 
 
 # ---------------------------------------------------------------------------
@@ -199,6 +188,9 @@ async def launch_plan(plan_id: str) -> dict:
         ResearchMissionWorkflow.run,
         MissionWorkflowInput(
             mission_json=mission.model_dump(mode="json"),
+            plan_id=str(plan.id),
+            thread_id=str(plan.thread_id),
+            workflow_id=workflow_id,
             run_kg=mission.run_kg,
             output_dir=None,
         ),
@@ -206,6 +198,9 @@ async def launch_plan(plan_id: str) -> dict:
         task_queue=DEEP_RESEARCH_TASK_QUEUE,
     )
 
+    plan.mission_id = mission.mission_id
+    plan.workflow_id = workflow_id
+    plan.mission_status = "running"
     plan.status = "executing"
     plan.updated_at = datetime.utcnow()
     await plan.save()

@@ -138,6 +138,9 @@ class ResearchPlan(Document):
     tasks: list[ResearchPlanTask] = Field(default_factory=list)
     starter_sources: list[StarterSource] = Field(default_factory=list)
     context: str = ""
+    mission_id: str | None = None
+    workflow_id: str | None = None
+    mission_status: str | None = None
 
     status: Literal[
         "draft",

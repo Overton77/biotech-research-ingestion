@@ -105,6 +105,7 @@ async def run_iterative_stage(
     memory_manager: Any,
     root_filesystem: Path,
     snapshot_output_dir: Path | None = None,
+    progress_callback: Any | None = None,
 ) -> IterativeStageResult:
     """Execute a stage iteratively until a stop condition is met.
 
@@ -156,6 +157,7 @@ async def run_iterative_stage(
             root_filesystem=root_filesystem,
             iteration=iteration,
             snapshot_output_dir=snapshot_output_dir,
+            progress_callback=progress_callback,
         )
 
         result.iteration_outputs.append(out)

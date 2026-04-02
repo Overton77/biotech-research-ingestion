@@ -39,6 +39,7 @@ class StageActivityOutput(BaseModel):
     status: str = "completed"
     error: str | None = None
     stage_candidate_manifest_path: str = ""
+    stage_run_records: list[dict] = Field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -107,8 +108,38 @@ class MissionWorkflowInput(BaseModel):
     mission_json: dict = Field(
         description="ResearchMission.model_dump() — reconstructed inside activities.",
     )
+    plan_id: str | None = None
+    thread_id: str | None = None
+    workflow_id: str | None = None
     run_kg: bool = False
     output_dir: str | None = None
+
+
+class MissionProgressEventInput(BaseModel):
+    """Serializable payload for broadcasting mission progress from workers."""
+
+    mission_id: str
+    event_type: str
+    payload: dict = Field(default_factory=dict)
+
+
+class MissionStagePersistInput(BaseModel):
+    """Serializable payload for persisting stage results into MongoDB."""
+
+    mission_id: str
+    task_slug: str
+    stage_run_records: list[dict] = Field(default_factory=list)
+    status: str = "completed"
+    error: str | None = None
+
+
+class MissionFinalizeInput(BaseModel):
+    """Serializable payload for final mission status persistence."""
+
+    mission_id: str
+    plan_id: str | None = None
+    status: str = "completed"
+    error: str | None = None
 
 
 class MissionWorkflowOutput(BaseModel):

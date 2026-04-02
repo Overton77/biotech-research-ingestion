@@ -37,6 +37,7 @@ from src.research.langchain_agent.agent.factory import (
     build_memory_report_agent,
     build_research_agent,
 )
+from src.research.langchain_agent.middleware.progress_middleware import ResearchProgressMiddleware
 from src.research.langchain_agent.observability.tracing import (
     get_current_trace_id,
     inject_stage_metadata,
@@ -140,6 +141,7 @@ async def run_single_mission_slice(
     root_filesystem: Path | None = None,
     iteration: int | None = None,
     snapshot_output_dir: Path | None = None,
+    progress_callback: Any | None = None,
 ) -> Dict[str, Any]:
     """
     Run one bounded mission slice: pre-run memory recall, agent execution,
@@ -197,6 +199,15 @@ async def run_single_mission_slice(
         selected_subagent_names=run_input.selected_subagent_names,
         store=store,
         checkpointer=checkpointer,
+        extra_middleware=[
+            ResearchProgressMiddleware(
+                mission_id=run_input.mission_id,
+                task_id=run_input.task_id,
+                progress_callback=progress_callback,
+            )
+        ]
+        if progress_callback
+        else None,
     )
 
     user_message = _build_user_message(run_input)

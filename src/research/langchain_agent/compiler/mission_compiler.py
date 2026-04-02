@@ -1,4 +1,4 @@
-"""Compile ``src.models.plan.ResearchPlan`` → ``ResearchMission`` via a single LLM structured call."""
+"""Compile LangChain ``ResearchPlan`` documents into executable ``ResearchMission`` objects."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from src.research.langchain_agent.models.mission import (
 )
 
 if TYPE_CHECKING:
-    from src.models.plan import ResearchPlan
+    from src.research.langchain_agent.models.plan import ResearchPlan
 
 logger = logging.getLogger(__name__)
 
@@ -124,6 +124,8 @@ that can be executed as a DAG of research stages.
   - targets: entity/topic strings when helpful.
   - selected_tool_names / selected_subagent_names: copy from the plan task if provided; otherwise infer allowed names only.
   - stage_type, max_step_budget, temporal_scope, research_date as appropriate.
+  - temporal_scope.mode MUST be one of: current | as_of_date | date_range | unknown.
+  - Use as_of_date for point-in-time historical snapshots and date_range for bounded windows.
 - prompt_spec: specialize **ResearchPromptSpecModel** for this task (identity, domain_scope, workflow, tool_guidance, subagent_guidance, practical_limits, filesystem_rules, intermediate_files).
 - dependencies: MUST exactly match that plan task's dependencies (list of other task ids).
 - execution_reminders / iterative_config: optional.
@@ -160,6 +162,7 @@ def _plan_to_user_payload(plan: ResearchPlan) -> str:
         "objective": plan.objective,
         "stages": list(plan.stages),
         "tasks": tasks_out,
+        "context": plan.context,
         "starter_sources": [s.model_dump() for s in plan.starter_sources],
     }
     return json.dumps(payload, indent=2)

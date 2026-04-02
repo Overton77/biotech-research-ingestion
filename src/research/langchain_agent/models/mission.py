@@ -134,10 +134,51 @@ def research_prompt_spec_model_to_dataclass(m: ResearchPromptSpecModel) -> Resea
     )
 
 
+class TemporalScopeDraft(BaseModel):
+    mode: Literal["current", "as_of_date", "date_range", "unknown"] = "current"
+    as_of_date: str | None = None
+    range_start: str | None = None
+    range_end: str | None = None
+    description: str = "Current state as of research date."
+
+
+class MissionSliceInputDraft(BaseModel):
+    """Compiler-safe subset of MissionSliceInput without runtime-only fields."""
+
+    task_id: str
+    mission_id: str
+    task_slug: str
+    user_objective: str
+    targets: list[str] = Field(default_factory=list)
+    selected_tool_names: list[str] = Field(
+        default_factory=lambda: ["search_web", "extract_from_urls", "map_website"]
+    )
+    selected_subagent_names: list[str] = Field(default_factory=list)
+    report_required_sections: list[str] = Field(
+        default_factory=lambda: [
+            "Executive Summary",
+            "Key Findings",
+            "Sources",
+            "Open Questions and Next Steps",
+        ]
+    )
+    guidance_notes: list[str] = Field(default_factory=list)
+    stage_type: Literal[
+        "discovery",
+        "entity_validation",
+        "official_site_mapping",
+        "targeted_extraction",
+        "report_synthesis",
+    ] = "discovery"
+    max_step_budget: int = 12
+    temporal_scope: TemporalScopeDraft | None = None
+    research_date: str | None = None
+
+
 class MissionStageDraft(BaseModel):
     """One mission stage as produced by the compiler LLM (before ``mission_id`` is fixed)."""
 
-    slice_input: MissionSliceInput
+    slice_input: MissionSliceInputDraft
     prompt_spec: ResearchPromptSpecModel = Field(default_factory=ResearchPromptSpecModel)
     execution_reminders: list[str] = Field(
         default_factory=lambda: [
@@ -180,10 +221,30 @@ def draft_to_research_mission(draft: ResearchMissionDraft, mission_id: str) -> R
                 "task_id": sd.slice_input.task_id or sd.slice_input.task_slug,
             }
         )
+        temporal_scope = (
+            si.temporal_scope.model_dump()
+            if isinstance(si.temporal_scope, TemporalScopeDraft)
+            else {}
+        )
         ps = research_prompt_spec_model_to_dataclass(sd.prompt_spec)
         out_stages.append(
             MissionStage(
-                slice_input=si,
+                slice_input=MissionSliceInput(
+                    task_id=si.task_id or si.task_slug,
+                    mission_id=mission_id,
+                    task_slug=si.task_slug,
+                    user_objective=si.user_objective,
+                    targets=list(si.targets),
+                    selected_tool_names=list(si.selected_tool_names),
+                    selected_subagent_names=list(si.selected_subagent_names),
+                    report_required_sections=list(si.report_required_sections),
+                    guidance_notes=list(si.guidance_notes),
+                    stage_type=si.stage_type,
+                    max_step_budget=si.max_step_budget,
+                    temporal_scope=temporal_scope,
+                    research_date=si.research_date,
+                    dependency_reports={},
+                ),
                 prompt_spec=ps,
                 execution_reminders=sd.execution_reminders,
                 dependencies=sd.dependencies,
@@ -314,11 +375,14 @@ class MissionRunDocument(Document):
 
     mission_id: str
     mission_name: str
+    research_plan_id: str | None = None
+    thread_id: str | None = None
+    workflow_id: str | None = None
     mission_type: Literal["stage_based", "iterative"] = "stage_based"
     base_domain: str = ""
     targets: list[str] = Field(default_factory=list)
 
-    status: Literal["running", "completed", "failed"] = "running"
+    status: Literal["running", "completed", "partial", "failed"] = "running"
     error: str | None = None
 
     stages: list[StageRunRecord] = Field(default_factory=list)

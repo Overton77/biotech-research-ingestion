@@ -2,7 +2,6 @@
 
 import logging
 from typing import Any, Callable, Awaitable
-from typing_extensions import TypedDict
 
 from langchain_core.messages import HumanMessage
 from langgraph.types import Command
@@ -36,6 +35,93 @@ def _extract_hitl_interrupt(state: Any) -> dict[str, Any] | None:
     return None
 
 
+def _extract_text_parts(content: Any) -> list[str]:
+    if content is None:
+        return []
+    if isinstance(content, str):
+        return [content]
+    if isinstance(content, list):
+        parts: list[str] = []
+        for item in content:
+            parts.extend(_extract_text_parts(item))
+        return parts
+    if isinstance(content, dict):
+        if isinstance(content.get("text"), str):
+            return [content["text"]]
+        if isinstance(content.get("content"), str):
+            return [content["content"]]
+        if isinstance(content.get("output_text"), str):
+            return [content["output_text"]]
+        if isinstance(content.get("summary"), str):
+            return [content["summary"]]
+        if isinstance(content.get("value"), str):
+            return [content["value"]]
+        return []
+    if hasattr(content, "text") and isinstance(content.text, str):
+        return [content.text]
+    if hasattr(content, "content"):
+        return _extract_text_parts(content.content)
+    return []
+
+
+def _extract_assistant_from_state(state: Any) -> str:
+    try:
+        values = getattr(state, "values", {}) or {}
+        messages = values.get("messages") or []
+        for message in reversed(messages):
+            role = getattr(message, "type", "") or getattr(message, "role", "")
+            if role in {"ai", "assistant"}:
+                return "".join(_extract_text_parts(getattr(message, "content", None))).strip()
+    except Exception:
+        logger.debug("Failed to extract assistant content from graph state", exc_info=True)
+    return ""
+
+
+async def _run_and_collect_events(
+    *,
+    stream: Any,
+    on_token: Callable[[str], Awaitable[None]] | None = None,
+    on_tool_start: Callable[[str, str], Awaitable[None]] | None = None,
+    on_tool_end: Callable[[str, str], Awaitable[None]] | None = None,
+) -> tuple[str, str]:
+    full_content: list[str] = []
+    fallback_content = ""
+
+    async for event in stream:
+        kind = event.get("event")
+
+        if kind == "on_chat_model_stream":
+            chunk = event.get("data", {}).get("chunk")
+            tokens = _extract_text_parts(getattr(chunk, "content", None) if chunk else None)
+            for token in tokens:
+                if token:
+                    full_content.append(token)
+                    if on_token:
+                        await on_token(token)
+
+        elif kind == "on_chat_model_end":
+            output = event.get("data", {}).get("output")
+            extracted = "".join(_extract_text_parts(getattr(output, "content", output))).strip()
+            if extracted:
+                fallback_content = extracted
+
+        elif kind == "on_tool_start":
+            name = event.get("name", "")
+            args = event.get("data", {}).get("input", {})
+            args_summary = str(args)[:200] if args else ""
+            if on_tool_start:
+                await on_tool_start(name, args_summary)
+
+        elif kind == "on_tool_end":
+            name = event.get("name", "")
+            output = event.get("data", {}).get("output", "")
+            out_summary = str(output)[:300] if output else ""
+            if on_tool_end:
+                await on_tool_end(name, out_summary)
+
+    return "".join(full_content).strip(), fallback_content
+
+
 async def stream_coordinator_response(
     thread_id: str,
     user_content: str,
@@ -52,44 +138,26 @@ async def stream_coordinator_response(
         "metadata": {"thread_id": thread_id},
     }
     input_state = {"messages": [HumanMessage(content=user_content)]}
-    full_content: list[str] = []
     interrupt_payload: dict[str, Any] | None = None
 
-    async for event in graph.astream_events(input_state, config=config, version="v2"):
-        kind = event.get("event")
-
-        if kind == "on_chat_model_stream":
-            chunk = event.get("data", {}).get("chunk")
-            if chunk and hasattr(chunk, "content") and chunk.content:
-                content = chunk.content
-                token = content if isinstance(content, str) else (content[0] if content else "")
-                if token and isinstance(token, str):
-                    full_content.append(token)
-                    if on_token:
-                        await on_token(token)
-
-        elif kind == "on_tool_start":
-            name = event.get("name", "")
-            args = event.get("data", {}).get("input", {})
-            args_summary = str(args)[:200] if args else ""
-            if on_tool_start:
-                await on_tool_start(name, args_summary)
-
-        elif kind == "on_tool_end":
-            name = event.get("name", "")
-            output = event.get("data", {}).get("output", "")
-            out_summary = str(output)[:300] if output else ""
-            if on_tool_end:
-                await on_tool_end(name, out_summary)
+    streamed_content, fallback_content = await _run_and_collect_events(
+        stream=graph.astream_events(input_state, config=config, version="v2"),
+        on_token=on_token,
+        on_tool_start=on_tool_start,
+        on_tool_end=on_tool_end,
+    )
 
     # After stream completes, check state for interrupt
+    assistant_content = streamed_content or fallback_content
     try:
         state = await graph.aget_state(config)
         interrupt_payload = _extract_hitl_interrupt(state)
+        if not assistant_content:
+            assistant_content = _extract_assistant_from_state(state)
     except Exception:
         logger.exception("Failed to check state for interrupt")
 
-    return "".join(full_content), interrupt_payload
+    return assistant_content, interrupt_payload
 
 
 async def persist_messages(
@@ -157,44 +225,26 @@ async def resume_coordinator_after_approval(
         "configurable": {"thread_id": thread_id},
         "metadata": {"thread_id": thread_id},
     }
-    full_content: list[str] = []
     interrupt_payload: dict[str, Any] | None = None
 
-    async for event in graph.astream_events(
-        Command(resume=resume_value),
-        config=config,
-        version="v2",
-    ):
-        kind = event.get("event")
+    streamed_content, fallback_content = await _run_and_collect_events(
+        stream=graph.astream_events(
+            Command(resume=resume_value),
+            config=config,
+            version="v2",
+        ),
+        on_token=on_token,
+        on_tool_start=on_tool_start,
+        on_tool_end=on_tool_end,
+    )
 
-        if kind == "on_chat_model_stream":
-            chunk = event.get("data", {}).get("chunk")
-            if chunk and hasattr(chunk, "content") and chunk.content:
-                content = chunk.content
-                token = content if isinstance(content, str) else (content[0] if content else "")
-                if token and isinstance(token, str):
-                    full_content.append(token)
-                    if on_token:
-                        await on_token(token)
-
-        elif kind == "on_tool_start":
-            name = event.get("name", "")
-            args = event.get("data", {}).get("input", {})
-            args_summary = str(args)[:200] if args else ""
-            if on_tool_start:
-                await on_tool_start(name, args_summary)
-
-        elif kind == "on_tool_end":
-            name = event.get("name", "")
-            output = event.get("data", {}).get("output", "")
-            out_summary = str(output)[:300] if output else ""
-            if on_tool_end:
-                await on_tool_end(name, out_summary)
-
+    assistant_content = streamed_content or fallback_content
     try:
         state = await graph.aget_state(config)
         interrupt_payload = _extract_hitl_interrupt(state)
+        if not assistant_content:
+            assistant_content = _extract_assistant_from_state(state)
     except Exception:
         pass
 
-    return "".join(full_content), interrupt_payload
+    return assistant_content, interrupt_payload

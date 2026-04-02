@@ -214,6 +214,7 @@ async def build_research_agent(
     store: BaseStore,
     checkpointer: BaseCheckpointSaver[Any], 
     model_name: str = GPT_5_4_MINI,
+    extra_middleware: Sequence[AgentMiddleware] | None = None,
 ) -> CompiledStateGraph[Any, Any, Any, Any]:
     """Build a research agent with the given prompt spec and reminders."""
     selected_tools: List[BaseTool] = [TOOLS_MAP[n] for n in selected_tool_names]
@@ -233,6 +234,8 @@ async def build_research_agent(
         build_shared_filesystem_middleware(backend=filesystem_backend),
         prompt_middleware,
     ]
+    if extra_middleware:
+        middleware.extend(extra_middleware)
     if selected_subagents:
         middleware.append(
             ToolCallLimitMiddleware(

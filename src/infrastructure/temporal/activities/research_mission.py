@@ -8,6 +8,7 @@ Two activities:
 from __future__ import annotations
 
 import logging
+from datetime import datetime, timezone
 from pathlib import Path
 
 from temporalio import activity
@@ -15,11 +16,16 @@ from temporalio import activity
 from src.infrastructure.temporal.models import (
     KGIngestionInput,
     KGIngestionOutput,
+    MissionFinalizeInput,
+    MissionProgressEventInput,
+    MissionStagePersistInput,
+    MissionWorkflowInput,
     StageActivityInput,
     StageActivityOutput,
     UnstructuredIngestionInput,
     UnstructuredIngestionOutput,
 )
+from src.research.deepagent.middleware.progress_callback import create_progress_callback
 
 logger = logging.getLogger(__name__)
 
@@ -64,6 +70,129 @@ def _reconstruct_stage(stage_json: dict):
     )
 
 
+def _utc_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+async def _emit_progress(mission_id: str, event_type: str, payload: dict) -> None:
+    callback = create_progress_callback(mission_id)
+    body = dict(payload)
+    body.setdefault("timestamp", _utc_iso())
+    await callback(event_type, body)
+
+
+@activity.defn
+async def emit_mission_progress(input: MissionProgressEventInput) -> None:
+    """Broadcast a workflow-level progress event through the internal relay."""
+    await _emit_progress(input.mission_id, input.event_type, input.payload)
+
+
+@activity.defn
+async def initialize_mission_run(input: MissionWorkflowInput) -> None:
+    """Create or refresh the canonical MissionRunDocument and linked plan."""
+    from beanie.odm.fields import PydanticObjectId
+    from src.research.langchain_agent.models.mission import MissionRunDocument, ResearchMission
+    from src.research.langchain_agent.models.plan import ResearchPlan
+    from src.research.langchain_agent.storage.models import init_research_agent_beanie
+
+    await init_research_agent_beanie()
+    mission = ResearchMission.model_validate(input.mission_json)
+
+    existing = await MissionRunDocument.find_one({"mission_id": mission.mission_id})
+    if existing is None:
+        doc = MissionRunDocument(
+            mission_id=mission.mission_id,
+            mission_name=mission.mission_name or mission.mission_id,
+            research_plan_id=input.plan_id,
+            thread_id=input.thread_id,
+            workflow_id=input.workflow_id,
+            mission_type="iterative" if any(stage.iterative_config for stage in mission.stages) else "stage_based",
+            base_domain=mission.base_domain,
+            targets=sorted({target for stage in mission.stages for target in stage.slice_input.targets}),
+            max_cycles=max(
+                (stage.iterative_config.max_iterations for stage in mission.stages if stage.iterative_config),
+                default=None,
+            ),
+        )
+        await doc.insert()
+    else:
+        existing.mission_name = mission.mission_name or mission.mission_id
+        existing.research_plan_id = input.plan_id
+        existing.thread_id = input.thread_id
+        existing.workflow_id = input.workflow_id
+        existing.base_domain = mission.base_domain
+        existing.targets = sorted({target for stage in mission.stages for target in stage.slice_input.targets})
+        existing.status = "running"
+        existing.error = None
+        existing.updated_at = datetime.now(timezone.utc)
+        await existing.save()
+
+    if input.plan_id:
+        plan = await ResearchPlan.get(PydanticObjectId(input.plan_id))
+        if plan is not None:
+            plan.mission_id = mission.mission_id
+            plan.workflow_id = input.workflow_id
+            plan.mission_status = "running"
+            plan.status = "executing"
+            plan.updated_at = datetime.utcnow()
+            await plan.save()
+
+
+@activity.defn
+async def persist_stage_activity_result(input: MissionStagePersistInput) -> None:
+    """Append completed stage records to the canonical MissionRunDocument."""
+    from src.api.routes.langchain_dtos import build_iterative_stage_record
+    from src.research.langchain_agent.models.mission import MissionRunDocument, StageRunRecord
+    from src.research.langchain_agent.storage.models import init_research_agent_beanie
+
+    await init_research_agent_beanie()
+    doc = await MissionRunDocument.find_one({"mission_id": input.mission_id})
+    if doc is None:
+        raise ValueError(f"MissionRunDocument not found for mission_id={input.mission_id}")
+
+    stage_records = [StageRunRecord.model_validate(record) for record in input.stage_run_records]
+    if not stage_records:
+        doc.updated_at = datetime.now(timezone.utc)
+        await doc.save()
+        return
+
+    if len(stage_records) == 1 and stage_records[0].iteration is None:
+        doc.append_stage(stage_records[0])
+    else:
+        doc.append_iterative_stage(build_iterative_stage_record(input.task_slug, stage_records))
+        doc.cycles_completed += len(stage_records)
+
+    await doc.save()
+
+
+@activity.defn
+async def finalize_mission_run(input: MissionFinalizeInput) -> None:
+    """Mark the mission run and linked plan as completed or failed."""
+    from beanie.odm.fields import PydanticObjectId
+    from src.research.langchain_agent.models.mission import MissionRunDocument
+    from src.research.langchain_agent.models.plan import ResearchPlan
+    from src.research.langchain_agent.storage.models import init_research_agent_beanie
+
+    await init_research_agent_beanie()
+    doc = await MissionRunDocument.find_one({"mission_id": input.mission_id})
+    if doc is not None:
+        if input.status == "failed":
+            doc.mark_failed(input.error or "Mission failed")
+        else:
+            doc.mark_completed()
+            if input.status != "completed":
+                doc.status = input.status
+        await doc.save()
+
+    if input.plan_id:
+        plan = await ResearchPlan.get(PydanticObjectId(input.plan_id))
+        if plan is not None:
+            plan.status = "failed" if input.status == "failed" else "complete"
+            plan.mission_status = input.status
+            plan.updated_at = datetime.utcnow()
+            await plan.save()
+
+
 # ---------------------------------------------------------------------------
 # Activity 1: execute a research stage
 # ---------------------------------------------------------------------------
@@ -85,13 +214,25 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
 
     stage = _reconstruct_stage(input.stage_json)
     slug = stage.slice_input.task_slug
+    started_at = datetime.now(timezone.utc)
 
     activity.logger.info("Starting research stage: %s (mission=%s)", slug, input.mission_id)
+    await _emit_progress(
+        input.mission_id,
+        "task_started",
+        {
+            "task_id": stage.slice_input.task_id,
+            "task_name": slug,
+            "task_slug": slug,
+            "stage_type": stage.slice_input.stage_type,
+        },
+    )
 
     try:
         store, checkpointer = await get_persistence()
         await init_research_agent_beanie()
         memory_manager = await build_langmem_manager(store=store)
+        progress_callback = create_progress_callback(input.mission_id)
 
         root = Path(input.root_filesystem) if input.root_filesystem else ROOT_FILESYSTEM
         snapshot_dir = Path(input.snapshot_output_dir) if input.snapshot_output_dir else None
@@ -100,6 +241,7 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
         run_input.dependency_reports = input.dependency_reports
 
         manifest_path = ""
+        stage_run_records: list[dict] = []
         if stage.iterative_config is not None:
             activity.logger.info("Running iterative stage: %s", slug)
             iter_result = await run_iterative_stage(
@@ -110,8 +252,25 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
                 memory_manager=memory_manager,
                 root_filesystem=root,
                 snapshot_output_dir=snapshot_dir,
+                progress_callback=progress_callback,
             )
             report_text = iter_result.combined_report
+            stage_run_records = [
+                record.model_dump(mode="json")
+                for record in (
+                    output.get("stage_run_record")
+                    for output in iter_result.iteration_outputs
+                )
+                if record is not None
+            ]
+            manifest_path = next(
+                (
+                    output.get("stage_candidate_manifest_path", "")
+                    for output in reversed(iter_result.iteration_outputs)
+                    if output.get("stage_candidate_manifest_path")
+                ),
+                "",
+            )
         else:
             activity.logger.info("Running single-pass stage: %s", slug)
             out = await run_single_mission_slice(
@@ -123,6 +282,7 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
                 execution_reminders=stage.execution_reminders,
                 root_filesystem=root,
                 snapshot_output_dir=snapshot_dir,
+                progress_callback=progress_callback,
             )
             report_text = out.get("final_report_text") or ""
             inner_result = out.get("result") or out.get("agent_state") or {}
@@ -134,6 +294,8 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
                 "Stage %s: report_len=%d, manifest_path=%s, out_keys=%s",
                 slug, len(report_text), manifest_path, list(out.keys()),
             )
+            if out.get("stage_run_record") is not None:
+                stage_run_records = [out["stage_run_record"].model_dump(mode="json")]
 
         if not report_text:
             report_path = root / "reports" / f"{slug}.md"
@@ -146,15 +308,50 @@ async def execute_research_stage(input: StageActivityInput) -> StageActivityOutp
         activity.logger.info(
             "Stage %s completed — report length: %d chars", slug, len(report_text),
         )
+        completed_at = datetime.now(timezone.utc)
+        await _emit_progress(
+            input.mission_id,
+            "task_completed",
+            {
+                "task_id": stage.slice_input.task_id,
+                "task_name": slug,
+                "task_slug": slug,
+                "stage_type": stage.slice_input.stage_type,
+                "duration_seconds": max(0.0, (completed_at - started_at).total_seconds()),
+                "artifact_count": sum(
+                    1
+                    for record in stage_run_records
+                    for artifact in (
+                        ([record["artifacts"]["final_report"]] if record.get("artifacts", {}).get("final_report") else [])
+                        + record.get("artifacts", {}).get("intermediate_files", [])
+                        + ([record["artifacts"]["memory_report_json"]] if record.get("artifacts", {}).get("memory_report_json") else [])
+                        + ([record["artifacts"]["agent_state_json"]] if record.get("artifacts", {}).get("agent_state_json") else [])
+                    )
+                    if artifact
+                ),
+            },
+        )
         return StageActivityOutput(
             task_slug=slug,
             final_report_text=report_text,
             status="completed",
             stage_candidate_manifest_path=manifest_path,
+            stage_run_records=stage_run_records,
         )
 
     except Exception as exc:
         activity.logger.error("Stage %s failed: %s", slug, exc, exc_info=True)
+        await _emit_progress(
+            input.mission_id,
+            "task_failed",
+            {
+                "task_id": stage.slice_input.task_id,
+                "task_name": slug,
+                "task_slug": slug,
+                "stage_type": stage.slice_input.stage_type,
+                "error": str(exc),
+            },
+        )
         return StageActivityOutput(
             task_slug=slug,
             final_report_text="",
@@ -174,7 +371,7 @@ async def ingest_kg_from_report(input: KGIngestionInput) -> KGIngestionOutput:
     from src.research.langchain_agent.kg.extraction_models import TemporalScope
     from src.research.langchain_agent.kg.run_kg_ingestion import run_kg_ingestion
     from src.research.langchain_agent.kg.schema_selector import load_schema_index
-    from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient, Neo4jAuraSettings
+    from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient, Neo4jAuraSettings
 
     activity.logger.info(
         "Starting KG ingestion for report: %s (targets=%s)",
@@ -255,7 +452,7 @@ async def ingest_unstructured_documents(input: UnstructuredIngestionInput) -> Un
 
     from src.research.langchain_agent.agent.config import ROOT_FILESYSTEM
     from src.research.langchain_agent.models.mission import ResearchMission
-    from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient, Neo4jAuraSettings
+    from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient, Neo4jAuraSettings
     from src.research.langchain_agent.unstructured.candidate_collection import gather_mission_candidates
     from src.research.langchain_agent.unstructured.models import CandidateDocument, UnstructuredIngestionConfig
     from src.research.langchain_agent.unstructured.paths import mission_unstructured_dir

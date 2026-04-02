@@ -20,12 +20,19 @@ from temporalio.common import RetryPolicy
 
 with workflow.unsafe.imports_passed_through():
     from src.infrastructure.temporal.activities.research_mission import (
+        emit_mission_progress,
         execute_research_stage,
+        finalize_mission_run,
         ingest_kg_from_report,
         ingest_unstructured_documents,
+        initialize_mission_run,
+        persist_stage_activity_result,
     )
     from src.infrastructure.temporal.models import (
         KGIngestionInput,
+        MissionFinalizeInput,
+        MissionProgressEventInput,
+        MissionStagePersistInput,
         MissionWorkflowInput,
         MissionWorkflowOutput,
         StageActivityInput,
@@ -111,6 +118,26 @@ _KG_RETRY = RetryPolicy(
     maximum_attempts=2,
 )
 
+_SHORT_RETRY = RetryPolicy(
+    initial_interval=timedelta(seconds=2),
+    backoff_coefficient=2.0,
+    maximum_interval=timedelta(seconds=15),
+    maximum_attempts=3,
+)
+
+
+async def _emit_progress(mission_id: str, event_type: str, payload: dict[str, Any]) -> None:
+    await workflow.execute_activity(
+        emit_mission_progress,
+        MissionProgressEventInput(
+            mission_id=mission_id,
+            event_type=event_type,
+            payload=payload,
+        ),
+        start_to_close_timeout=timedelta(seconds=15),
+        retry_policy=_SHORT_RETRY,
+    )
+
 
 # ---------------------------------------------------------------------------
 # Workflow
@@ -138,6 +165,23 @@ class ResearchMissionWorkflow:
             len(stages),
             input.run_kg,
         )
+        await workflow.execute_activity(
+            initialize_mission_run,
+            input,
+            start_to_close_timeout=timedelta(minutes=2),
+            retry_policy=_SHORT_RETRY,
+        )
+        await _emit_progress(
+            mission_id,
+            "mission_started",
+            {
+                "plan_id": input.plan_id,
+                "thread_id": input.thread_id,
+                "workflow_id": input.workflow_id,
+                "stage_count": len(stages),
+                "run_kg": input.run_kg,
+            },
+        )
 
         levels = _compute_dag_levels(stages)
         workflow.logger.info(
@@ -145,147 +189,254 @@ class ResearchMissionWorkflow:
             len(levels),
             [len(lvl) for lvl in levels],
         )
+        await _emit_progress(
+            mission_id,
+            "dag_levels_computed",
+            {
+                "level_count": len(levels),
+                "stages_per_level": [len(level) for level in levels],
+            },
+        )
 
         report_by_slug: dict[str, str] = {}
         all_results: list[StageActivityOutput] = []
+        try:
+            # ----- Execute stages level by level -----
+            for level_idx, level_stages in enumerate(levels):
+                workflow.logger.info(
+                    "Executing level %d: %d stage(s)",
+                    level_idx,
+                    len(level_stages),
+                )
+                await _emit_progress(
+                    mission_id,
+                    "level_started",
+                    {
+                        "level_index": level_idx,
+                        "stage_slugs": [
+                            stage.get("slice_input", {}).get("task_slug", "")
+                            for stage in level_stages
+                        ],
+                    },
+                )
 
-        # ----- Execute stages level by level -----
-        for level_idx, level_stages in enumerate(levels):
-            workflow.logger.info(
-                "Executing level %d: %d stage(s)",
-                level_idx,
-                len(level_stages),
-            )
+                tasks: list[Any] = []
+                for stage in level_stages:
+                    slug = stage.get("slice_input", {}).get("task_slug", "")
+                    deps = stage.get("dependencies", [])
+                    dep_reports = {d: report_by_slug[d] for d in deps if d in report_by_slug}
 
-            tasks: list[Any] = []
-            for stage in level_stages:
-                slug = stage.get("slice_input", {}).get("task_slug", "")
-                deps = stage.get("dependencies", [])
-                dep_reports = {d: report_by_slug[d] for d in deps if d in report_by_slug}
+                    tasks.append(
+                        workflow.execute_activity(
+                            execute_research_stage,
+                            StageActivityInput(
+                                mission_id=mission_id,
+                                stage_json=stage,
+                                dependency_reports=dep_reports,
+                                snapshot_output_dir=input.output_dir,
+                            ),
+                            start_to_close_timeout=timedelta(hours=3),
+                            heartbeat_timeout=_STAGE_HEARTBEAT_TIMEOUT,
+                            retry_policy=_STAGE_RETRY,
+                        )
+                    )
 
-                tasks.append(
-                    workflow.execute_activity(
-                        execute_research_stage,
-                        StageActivityInput(
+                results: list[StageActivityOutput] = await asyncio.gather(*tasks)
+
+                for result in results:
+                    await workflow.execute_activity(
+                        persist_stage_activity_result,
+                        MissionStagePersistInput(
                             mission_id=mission_id,
-                            stage_json=stage,
-                            dependency_reports=dep_reports,
-                            snapshot_output_dir=input.output_dir,
+                            task_slug=result.task_slug,
+                            stage_run_records=result.stage_run_records,
+                            status=result.status,
+                            error=result.error,
                         ),
-                        start_to_close_timeout=timedelta(hours=3),
-                        heartbeat_timeout=_STAGE_HEARTBEAT_TIMEOUT,
-                        retry_policy=_STAGE_RETRY,
+                        start_to_close_timeout=timedelta(minutes=2),
+                        retry_policy=_SHORT_RETRY,
                     )
+                    all_results.append(result)
+                    if result.status == "completed" and result.final_report_text:
+                        report_by_slug[result.task_slug] = result.final_report_text
+                        workflow.logger.info("Stage completed: %s", result.task_slug)
+                    else:
+                        workflow.logger.warning(
+                            "Stage %s finished with status=%s error=%s",
+                            result.task_slug,
+                            result.status,
+                            result.error,
+                        )
+
+                await _emit_progress(
+                    mission_id,
+                    "level_completed",
+                    {
+                        "level_index": level_idx,
+                        "completed_stage_slugs": [
+                            result.task_slug for result in results if result.status == "completed"
+                        ],
+                        "failed_stage_slugs": [
+                            result.task_slug for result in results if result.status == "failed"
+                        ],
+                    },
                 )
 
-            results: list[StageActivityOutput] = await asyncio.gather(*tasks)
-
-            for result in results:
-                all_results.append(result)
-                if result.status == "completed" and result.final_report_text:
-                    report_by_slug[result.task_slug] = result.final_report_text
-                    workflow.logger.info("Stage completed: %s", result.task_slug)
-                else:
-                    workflow.logger.warning(
-                        "Stage %s finished with status=%s error=%s",
-                        result.task_slug,
-                        result.status,
-                        result.error,
+            # ----- Unstructured document ingestion -----
+            unstructured_result: UnstructuredIngestionOutput | None = None
+            ui_config = mission.get("unstructured_ingestion", {})
+            if ui_config.get("enabled", False):
+                manifest_paths = [
+                    r.stage_candidate_manifest_path
+                    for r in all_results
+                    if r.status == "completed" and r.stage_candidate_manifest_path
+                ]
+                if manifest_paths:
+                    workflow.logger.info(
+                        "Running unstructured ingestion — %d stage manifests",
+                        len(manifest_paths),
                     )
-
-        # ----- Unstructured document ingestion -----
-        unstructured_result: UnstructuredIngestionOutput | None = None
-        ui_config = mission.get("unstructured_ingestion", {})
-        if ui_config.get("enabled", False):
-            manifest_paths = [
-                r.stage_candidate_manifest_path
-                for r in all_results
-                if r.status == "completed" and r.stage_candidate_manifest_path
-            ]
-            if manifest_paths:
-                workflow.logger.info(
-                    "Running unstructured ingestion — %d stage manifests",
-                    len(manifest_paths),
-                )
-                unstructured_result = await workflow.execute_activity(
-                    ingest_unstructured_documents,
-                    UnstructuredIngestionInput(
-                        mission_json=mission,
-                        stage_manifest_paths=manifest_paths,
-                    ),
-                    start_to_close_timeout=timedelta(hours=2),
-                    heartbeat_timeout=timedelta(minutes=30),
-                    retry_policy=_KG_RETRY,
-                )
-                workflow.logger.info(
-                    "Unstructured ingestion complete: found=%d, ingested=%d, failed=%d",
-                    unstructured_result.candidates_found,
-                    unstructured_result.candidates_ingested,
-                    unstructured_result.candidates_failed,
-                )
-            else:
-                workflow.logger.info("No stage candidate manifests — skipping unstructured ingestion")
-
-        # ----- Conditional KG ingestion -----
-        kg_results = []
-        if input.run_kg:
-            kg_tasks = []
-            for result in all_results:
-                if result.status != "completed" or not result.final_report_text:
-                    continue
-                stage = _find_stage(stages, result.task_slug)
-                if stage is None:
-                    continue
-
-                slice_input = stage.get("slice_input", {})
-                raw_scope = slice_input.get("temporal_scope")
-                scope_str = raw_scope if isinstance(raw_scope, str) else (raw_scope.get("mode") if isinstance(raw_scope, dict) else None)
-                kg_tasks.append(
-                    workflow.execute_activity(
-                        ingest_kg_from_report,
-                        KGIngestionInput(
-                            report_text=result.final_report_text,
-                            source_report=result.task_slug,
-                            targets=slice_input.get("targets", []),
-                            stage_type=slice_input.get("stage_type", "targeted_extraction"),
-                            research_date=slice_input.get("research_date"),
-                            temporal_scope=scope_str,
-                            context=f"Mission {mission_id}, stage {result.task_slug}",
+                    await _emit_progress(
+                        mission_id,
+                        "unstructured_ingestion_started",
+                        {"manifest_count": len(manifest_paths)},
+                    )
+                    unstructured_result = await workflow.execute_activity(
+                        ingest_unstructured_documents,
+                        UnstructuredIngestionInput(
+                            mission_json=mission,
+                            stage_manifest_paths=manifest_paths,
                         ),
-                        start_to_close_timeout=timedelta(minutes=30),
-                        heartbeat_timeout=timedelta(minutes=10),
+                        start_to_close_timeout=timedelta(hours=2),
+                        heartbeat_timeout=timedelta(minutes=30),
                         retry_policy=_KG_RETRY,
                     )
-                )
+                    workflow.logger.info(
+                        "Unstructured ingestion complete: found=%d, ingested=%d, failed=%d",
+                        unstructured_result.candidates_found,
+                        unstructured_result.candidates_ingested,
+                        unstructured_result.candidates_failed,
+                    )
+                    await _emit_progress(
+                        mission_id,
+                        "unstructured_ingestion_completed",
+                        unstructured_result.model_dump(mode="json"),
+                    )
+                else:
+                    workflow.logger.info("No stage candidate manifests — skipping unstructured ingestion")
 
-            if kg_tasks:
-                workflow.logger.info("Running KG ingestion for %d report(s)", len(kg_tasks))
-                kg_results = await asyncio.gather(*kg_tasks)
-                workflow.logger.info(
-                    "KG ingestion complete: %d succeeded, %d failed",
-                    sum(1 for r in kg_results if r.status == "completed"),
-                    sum(1 for r in kg_results if r.status == "failed"),
-                )
+            # ----- Conditional KG ingestion -----
+            kg_results = []
+            if input.run_kg:
+                kg_tasks = []
+                for result in all_results:
+                    if result.status != "completed" or not result.final_report_text:
+                        continue
+                    stage = _find_stage(stages, result.task_slug)
+                    if stage is None:
+                        continue
 
-        stages_completed = sum(1 for r in all_results if r.status == "completed")
-        stages_failed = sum(1 for r in all_results if r.status == "failed")
-        kg_completed = sum(1 for r in kg_results if r.status == "completed")
+                    slice_input = stage.get("slice_input", {})
+                    raw_scope = slice_input.get("temporal_scope")
+                    scope_str = raw_scope if isinstance(raw_scope, str) else (raw_scope.get("mode") if isinstance(raw_scope, dict) else None)
+                    kg_tasks.append(
+                        workflow.execute_activity(
+                            ingest_kg_from_report,
+                            KGIngestionInput(
+                                report_text=result.final_report_text,
+                                source_report=result.task_slug,
+                                targets=slice_input.get("targets", []),
+                                stage_type=slice_input.get("stage_type", "targeted_extraction"),
+                                research_date=slice_input.get("research_date"),
+                                temporal_scope=scope_str,
+                                context=f"Mission {mission_id}, stage {result.task_slug}",
+                            ),
+                            start_to_close_timeout=timedelta(minutes=30),
+                            heartbeat_timeout=timedelta(minutes=10),
+                            retry_policy=_KG_RETRY,
+                        )
+                    )
 
-        workflow.logger.info(
-            "Mission %s finished: %d/%d stages completed, %d KG ingestions",
-            mission_id,
-            stages_completed,
-            len(all_results),
-            kg_completed,
-        )
+                if kg_tasks:
+                    workflow.logger.info("Running KG ingestion for %d report(s)", len(kg_tasks))
+                    await _emit_progress(
+                        mission_id,
+                        "kg_ingestion_started",
+                        {"report_count": len(kg_tasks)},
+                    )
+                    kg_results = await asyncio.gather(*kg_tasks)
+                    workflow.logger.info(
+                        "KG ingestion complete: %d succeeded, %d failed",
+                        sum(1 for r in kg_results if r.status == "completed"),
+                        sum(1 for r in kg_results if r.status == "failed"),
+                    )
+                    await _emit_progress(
+                        mission_id,
+                        "kg_ingestion_completed",
+                        {
+                            "completed": sum(1 for r in kg_results if r.status == "completed"),
+                            "failed": sum(1 for r in kg_results if r.status == "failed"),
+                        },
+                    )
 
-        return MissionWorkflowOutput(
-            mission_id=mission_id,
-            status="completed" if stages_failed == 0 else "partial",
-            stages_completed=stages_completed,
-            stages_failed=stages_failed,
-            kg_ingestions_completed=kg_completed,
-            unstructured_ingestion=unstructured_result,
-            stage_results=all_results,
-            kg_results=list(kg_results),
-        )
+            stages_completed = sum(1 for r in all_results if r.status == "completed")
+            stages_failed = sum(1 for r in all_results if r.status == "failed")
+            kg_completed = sum(1 for r in kg_results if r.status == "completed")
+            final_status = "completed" if stages_failed == 0 else "partial"
+
+            workflow.logger.info(
+                "Mission %s finished: %d/%d stages completed, %d KG ingestions",
+                mission_id,
+                stages_completed,
+                len(all_results),
+                kg_completed,
+            )
+            await workflow.execute_activity(
+                finalize_mission_run,
+                MissionFinalizeInput(
+                    mission_id=mission_id,
+                    plan_id=input.plan_id,
+                    status=final_status,
+                ),
+                start_to_close_timeout=timedelta(minutes=2),
+                retry_policy=_SHORT_RETRY,
+            )
+            await _emit_progress(
+                mission_id,
+                "mission_completed",
+                {
+                    "status": final_status,
+                    "stages_completed": stages_completed,
+                    "stages_failed": stages_failed,
+                    "kg_ingestions_completed": kg_completed,
+                },
+            )
+
+            return MissionWorkflowOutput(
+                mission_id=mission_id,
+                status=final_status,
+                stages_completed=stages_completed,
+                stages_failed=stages_failed,
+                kg_ingestions_completed=kg_completed,
+                unstructured_ingestion=unstructured_result,
+                stage_results=all_results,
+                kg_results=list(kg_results),
+            )
+        except Exception as exc:
+            await workflow.execute_activity(
+                finalize_mission_run,
+                MissionFinalizeInput(
+                    mission_id=mission_id,
+                    plan_id=input.plan_id,
+                    status="failed",
+                    error=str(exc),
+                ),
+                start_to_close_timeout=timedelta(minutes=2),
+                retry_policy=_SHORT_RETRY,
+            )
+            await _emit_progress(
+                mission_id,
+                "mission_failed",
+                {"error": str(exc)},
+            )
+            raise

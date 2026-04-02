@@ -6,7 +6,12 @@ from typing import Any
 
 from beanie.odm.fields import PydanticObjectId
 
-from src.models.plan import ResearchPlan, ResearchTask, StarterSource
+from src.api.routes.langchain_dtos import plan_to_dict
+from src.research.langchain_agent.models.plan import (
+    ResearchPlan,
+    ResearchPlanTask,
+    StarterSource,
+)
 from src.services.coordinator_service import (
     stream_coordinator_response,
     persist_messages,
@@ -67,31 +72,12 @@ def _extract_plan_from_interrupt(interrupt_payload: dict[str, Any]) -> tuple[dic
     return plan, interrupt_id
 
 
-def _coerce_tasks_to_models(raw_tasks: list[dict[str, Any]]) -> list[ResearchTask]:
-    """Convert lightweight coordinator task dicts into ResearchTask models.
-
-    The coordinator agent only provides id/title/description/stage/dependencies.
-    We fill in sensible defaults for inputs, outputs. Agent configuration is
-    produced later by the Mission Compiler.
-    """
-    result: list[ResearchTask] = []
+def _coerce_tasks_to_models(raw_tasks: list[dict[str, Any]]) -> list[ResearchPlanTask]:
+    """Convert coordinator task dicts into canonical LangChain plan task models."""
+    result: list[ResearchPlanTask] = []
     for t in raw_tasks:
         try:
-            result.append(
-                ResearchTask(
-                    id=t.get("id", ""),
-                    title=t.get("title", ""),
-                    description=t.get("description", ""),
-                    stage=t.get("stage", ""),
-                    dependencies=t.get("dependencies", []),
-                    estimated_duration_minutes=t.get("estimated_duration_minutes"),
-                    inputs=[],
-                    outputs=[],
-                    selected_tool_names=t.get("selected_tool_names"),
-                    selected_subagent_names=t.get("selected_subagent_names"),
-                    stage_type=t.get("stage_type"),
-                )
-            )
+            result.append(ResearchPlanTask.model_validate(t))
         except Exception as exc:
             logger.warning("Skipping malformed task dict: %s — %s", t, exc)
     return result
@@ -155,7 +141,11 @@ async def handle_send_message(
         )
         tid = PydanticObjectId(thread_id)
         await persist_messages(tid, content, assistant_content, run_id=run_id)
-        await emit_fn("coordinator_stream_end", {"thread_id": thread_id}, room=room)
+        await emit_fn(
+            "coordinator_stream_end",
+            {"thread_id": thread_id, "assistant_content": assistant_content},
+            room=room,
+        )
 
         if interrupt_payload:
             plan_dict, interrupt_id = _extract_plan_from_interrupt(interrupt_payload)
@@ -177,16 +167,11 @@ async def handle_send_message(
                     stages=plan_dict.get("stages") or [],
                     tasks=task_models,
                     starter_sources=starter_sources,
+                    context=plan_dict.get("context") or "",
                     status="pending_approval",
                 )
                 await doc.insert()
-                plan_dict["id"] = str(doc.id)
-                plan_dict["thread_id"] = thread_id
-                plan_dict["status"] = "pending_approval"
-                plan_dict["created_at"] = doc.created_at.isoformat()
-                plan_dict["updated_at"] = doc.updated_at.isoformat()
-                plan_dict["version"] = doc.version
-                plan_dict["starter_sources"] = [s.model_dump() for s in doc.starter_sources]
+                plan_dict = plan_to_dict(doc)
             except Exception as e:
                 logger.warning("Failed to persist plan: %s", e)
 
@@ -259,6 +244,9 @@ async def _launch_mission_for_plan(
             ResearchMissionWorkflow.run,
             MissionWorkflowInput(
                 mission_json=mission.model_dump(mode="json"),
+                plan_id=str(plan_doc.id),
+                thread_id=str(plan_doc.thread_id),
+                workflow_id=workflow_id,
                 run_kg=mission.run_kg,
                 output_dir=None,
             ),
@@ -266,6 +254,9 @@ async def _launch_mission_for_plan(
             task_queue=DEEP_RESEARCH_TASK_QUEUE,
         )
 
+        plan_doc.mission_id = mission.mission_id
+        plan_doc.workflow_id = workflow_id
+        plan_doc.mission_status = "running"
         plan_doc.status = "executing"
         plan_doc.updated_at = datetime.utcnow()
         await plan_doc.save()
@@ -362,7 +353,11 @@ async def handle_plan_approved(
         )
         tid = PydanticObjectId(thread_id)
         await persist_messages(tid, "[Plan approved]", assistant_content, run_id=None)
-        await emit_fn("coordinator_stream_end", {"thread_id": thread_id}, room=room)
+        await emit_fn(
+            "coordinator_stream_end",
+            {"thread_id": thread_id, "assistant_content": assistant_content},
+            room=room,
+        )
 
         # ---- Auto-launch mission from the approved plan ----
         plan_id = plan.get("id") if plan else None
@@ -373,10 +368,20 @@ async def handle_plan_approved(
                 plan_doc.approved_at = datetime.utcnow()
                 plan_doc.updated_at = datetime.utcnow()
 
-                if plan and plan.get("tasks") and not plan_doc.tasks:
+                if plan and plan.get("title"):
+                    plan_doc.title = str(plan["title"])
+                if plan and plan.get("objective") is not None:
+                    plan_doc.objective = str(plan["objective"])
+                if plan and plan.get("stages") is not None:
+                    plan_doc.stages = list(plan["stages"])
+                if plan and plan.get("context") is not None:
+                    plan_doc.context = str(plan["context"])
+                if plan and plan.get("tasks") is not None:
                     plan_doc.tasks = _coerce_tasks_to_models(plan["tasks"])
                 if plan and plan.get("starter_sources") is not None:
                     plan_doc.starter_sources = _coerce_starter_sources(plan["starter_sources"])
+                if plan and plan.get("approver_notes") is not None:
+                    plan_doc.approver_notes = str(plan["approver_notes"])
 
                 await plan_doc.save()
                 logger.info("Plan %s marked as approved", plan_id)
@@ -437,7 +442,22 @@ async def handle_plan_rejected(
         )
         tid = PydanticObjectId(thread_id)
         await persist_messages(tid, "[Plan rejected]", assistant_content, run_id=None)
-        await emit_fn("coordinator_stream_end", {"thread_id": thread_id}, room=room)
+        await emit_fn(
+            "coordinator_stream_end",
+            {"thread_id": thread_id, "assistant_content": assistant_content},
+            room=room,
+        )
+        latest_plan = await (
+            ResearchPlan.find({"thread_id": tid})
+            .sort("-created_at")
+            .limit(1)
+            .first_or_none()
+        )
+        if latest_plan and latest_plan.status == "pending_approval":
+            latest_plan.status = "rejected"
+            latest_plan.approver_notes = notes or latest_plan.approver_notes
+            latest_plan.updated_at = datetime.utcnow()
+            await latest_plan.save()
     except Exception as e:
         logger.exception("plan_rejected failed for thread_id=%s: %s", thread_id, e)
         await emit_fn("error", {"message": str(e), "code": "coordinator_error"}, room=room)
