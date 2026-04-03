@@ -17,6 +17,7 @@ from src.research.langchain_agent.models.plan import (
     ResearchPlanTask,
     StarterSource,
 )
+from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 
 logger = logging.getLogger(__name__)
 
@@ -31,6 +32,12 @@ def _normalize_starter_sources(raw: list[dict[str, Any]] | None) -> list[Starter
     return [StarterSource.model_validate(s) for s in raw]
 
 
+def _normalize_unstructured_ingestion(raw: dict[str, Any] | None) -> UnstructuredIngestionConfig:
+    if not raw:
+        return UnstructuredIngestionConfig()
+    return UnstructuredIngestionConfig.model_validate(raw)
+
+
 @tool
 def create_research_plan(
     objective: str,
@@ -39,6 +46,8 @@ def create_research_plan(
     tasks: list[dict[str, Any]],
     context: str = "",
     starter_sources: list[dict[str, Any]] | None = None,
+    run_kg: bool = False,
+    unstructured_ingestion: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Create a structured research plan for human review and approval.
 
@@ -63,6 +72,9 @@ def create_research_plan(
         tasks: List of task objects (validated against ResearchPlanTask).
         context: Optional summary of web research that informed the plan.
         starter_sources: Optional list of {url, description} for key sources.
+        run_kg: If true, run structured knowledge-graph ingestion on completed stage reports.
+        unstructured_ingestion: Optional overrides for UnstructuredIngestionConfig (document
+            pipeline: enabled, parser_backend, embedding_config, etc.).
     """
     output = ResearchPlanOutput(
         title=title,
@@ -71,6 +83,8 @@ def create_research_plan(
         tasks=_normalize_tasks(tasks),
         context=context,
         starter_sources=_normalize_starter_sources(starter_sources),
+        run_kg=run_kg,
+        unstructured_ingestion=_normalize_unstructured_ingestion(unstructured_ingestion),
         status="approved",
         version=1,
     )

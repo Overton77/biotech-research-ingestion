@@ -19,6 +19,7 @@ from src.research.langchain_agent.models.plan import (
     ResearchPlanOutput,
     ResearchPlanTask,
 )
+from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 
 MISSIONS_DIR = Path(__file__).resolve().parent.parent / "test_runs" / "missions"
 
@@ -176,6 +177,8 @@ def test_research_plan_output_accepts_valid_tasks():
     )
     assert out.tasks[0].stage_type is None
     assert "search_web" in out.tasks[0].selected_tool_names
+    assert out.run_kg is False
+    assert isinstance(out.unstructured_ingestion, UnstructuredIngestionConfig)
 
 
 def test_research_plan_task_rejects_unknown_tool():
@@ -233,3 +236,5 @@ def test_coordinator_prompt_lists_tools():
 
     assert "search_web" in RESEARCH_PLAN_SCHEMA_DESCRIPTION
     assert "vercel_agent_browser" in RESEARCH_PLAN_SCHEMA_DESCRIPTION
+    assert "run_kg" in RESEARCH_PLAN_SCHEMA_DESCRIPTION
+    assert "unstructured_ingestion" in RESEARCH_PLAN_SCHEMA_DESCRIPTION

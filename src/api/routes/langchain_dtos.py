@@ -34,6 +34,8 @@ def plan_to_dict(plan: ResearchPlan) -> dict[str, Any]:
         "tasks": [task.model_dump(mode="json") for task in plan.tasks],
         "starter_sources": [source.model_dump(mode="json") for source in plan.starter_sources],
         "context": plan.context,
+        "run_kg": plan.run_kg,
+        "unstructured_ingestion": plan.unstructured_ingestion.model_dump(mode="json"),
         "status": plan.status,
         "mission_id": plan.mission_id,
         "workflow_id": plan.workflow_id,

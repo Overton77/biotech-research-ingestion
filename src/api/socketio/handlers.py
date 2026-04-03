@@ -12,6 +12,7 @@ from src.research.langchain_agent.models.plan import (
     ResearchPlanTask,
     StarterSource,
 )
+from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 from src.services.coordinator_service import (
     stream_coordinator_response,
     persist_messages,
@@ -59,6 +60,8 @@ def _extract_plan_from_interrupt(interrupt_payload: dict[str, Any]) -> tuple[dic
                 "tasks": args.get("tasks", []),
                 "context": args.get("context", ""),
                 "starter_sources": args.get("starter_sources", []),
+                "run_kg": bool(args.get("run_kg", False)),
+                "unstructured_ingestion": args.get("unstructured_ingestion"),
                 "status": "pending_approval",
                 "version": 1,
             }
@@ -99,6 +102,12 @@ def _coerce_starter_sources(raw: list[dict[str, Any]] | None) -> list[StarterSou
         except Exception as exc:
             logger.warning("Skipping malformed starter_source: %s — %s", s, exc)
     return result
+
+
+def _coerce_unstructured_ingestion(raw: dict[str, Any] | None) -> UnstructuredIngestionConfig:
+    if not raw:
+        return UnstructuredIngestionConfig()
+    return UnstructuredIngestionConfig.model_validate(raw)
 
 
 async def handle_send_message(
@@ -168,6 +177,12 @@ async def handle_send_message(
                     tasks=task_models,
                     starter_sources=starter_sources,
                     context=plan_dict.get("context") or "",
+                    run_kg=bool(plan_dict.get("run_kg", False)),
+                    unstructured_ingestion=_coerce_unstructured_ingestion(
+                        plan_dict.get("unstructured_ingestion")
+                        if isinstance(plan_dict.get("unstructured_ingestion"), dict)
+                        else None
+                    ),
                     status="pending_approval",
                 )
                 await doc.insert()
@@ -336,6 +351,8 @@ async def handle_plan_approved(
                                 "tasks": plan.get("tasks", []),
                                 "context": plan.get("context", ""),
                                 "starter_sources": plan.get("starter_sources", []),
+                                "run_kg": bool(plan.get("run_kg", False)),
+                                "unstructured_ingestion": plan.get("unstructured_ingestion"),
                             },
                         },
                     }
@@ -380,6 +397,12 @@ async def handle_plan_approved(
                     plan_doc.tasks = _coerce_tasks_to_models(plan["tasks"])
                 if plan and plan.get("starter_sources") is not None:
                     plan_doc.starter_sources = _coerce_starter_sources(plan["starter_sources"])
+                if plan and "run_kg" in plan:
+                    plan_doc.run_kg = bool(plan["run_kg"])
+                if plan and isinstance(plan.get("unstructured_ingestion"), dict):
+                    plan_doc.unstructured_ingestion = UnstructuredIngestionConfig.model_validate(
+                        plan["unstructured_ingestion"]
+                    )
                 if plan and plan.get("approver_notes") is not None:
                     plan_doc.approver_notes = str(plan["approver_notes"])
 

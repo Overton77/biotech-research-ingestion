@@ -38,7 +38,7 @@ class ChunkCleaningConfig(BaseModel):
 
 class ChunkEnhancementConfig(BaseModel):
     enabled: bool = False
-    model: str = "gpt-4o"
+    model: str = "gpt-5-mini"
     max_chunks: int = 12
     max_input_chars: int = 3500
 

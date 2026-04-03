@@ -48,6 +48,19 @@ Research plan when calling create_research_plan (arguments must match validation
 **Other fields**
 - context (str): Brief summary of web research that informed the plan (recommended).
 - starter_sources (list[object], optional): {{ "url": str, "description": str }} per item.
+
+**Post-mission ingestion (mission-level; stored on the plan and applied when compiling the mission)**
+- run_kg (bool, default false): If true, after all research stages finish, run **structured** KG ingestion that extracts typed entities/relationships from the compiled stage reports into the knowledge graph. Set true when the user wants findings persisted as graph nodes/edges from the reports.
+- unstructured_ingestion (object, optional): Overrides for the **unstructured** document pipeline (PDFs/HTML/files gathered during stages → parse, chunk, embed, optional Neo4j writes). Maps to ``UnstructuredIngestionConfig``. Common keys:
+  - enabled (bool): Run staged unstructured ingestion on mission candidate manifests.
+  - write_to_neo4j (bool): Write unstructured-derived relationships to Neo4j when appropriate.
+  - validate_in_isolation (bool): Validate ingestion subgraph before linking.
+  - parser_backend: "docling" | "llamaparse"
+  - max_relationship_chunks (int): Cap for relationship extraction per document.
+  - summary_policy: {{ "enabled", "min_chunk_count", "max_input_chars", "model" }}
+  - embedding_config: {{ "enabled", "model", "dimensions", "chunk_max_chars", ... }}
+  - chunk_cleaning / chunk_enhancement: toggles for normalization and optional LLM chunk enhancement.
+  If the user does not care, omit this object or pass {{}} — defaults apply. If they want full-document ingestion after research, set enabled true and align parser_backend with their source types.
 """
 
 # ---------------------------------------------------------------------------
@@ -74,6 +87,8 @@ COORDINATOR_SYSTEM_PROMPT_TEXT: str = """You are the Coordinator for a biotech r
 **When creating the plan**
 - Call create_research_plan only after the user has requested a plan and you have asked your last clarifying question (or the user has answered it).
 - Provide the complete plan upfront. The plan will be paused for human review before execution.
+- Set ``run_kg`` and ``unstructured_ingestion`` from the user's goals: e.g. graph-backed portfolio analysis → run_kg true; deep PDF corpus → unstructured_ingestion.enabled true with suitable parser_backend.
+
 """ + RESEARCH_PLAN_SCHEMA_DESCRIPTION + """
 **After plan submission**
 - If the plan is approved: confirm to the user and summarize next steps. Execution is handled externally by the API; you do not trigger it.

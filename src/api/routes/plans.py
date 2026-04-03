@@ -10,6 +10,7 @@ from pydantic import BaseModel
 from src.api.routes.langchain_dtos import plan_to_dict
 from src.api.schemas.common import envelope
 from src.research.langchain_agent.models.plan import ResearchPlan, ResearchPlanTask, StarterSource
+from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 
 logger = logging.getLogger(__name__)
 
@@ -62,6 +63,8 @@ class PlanPatch(BaseModel):
     tasks: list[dict] | None = None
     starter_sources: list[dict] | None = None
     context: str | None = None
+    run_kg: bool | None = None
+    unstructured_ingestion: dict | None = None
     approver_notes: str | None = None
     status: str | None = None
 
@@ -103,6 +106,12 @@ async def update_plan(plan_id: str, body: PlanPatch) -> dict:
         plan.starter_sources = [StarterSource.model_validate(s) for s in body.starter_sources]
     if body.context is not None:
         plan.context = body.context
+    if body.run_kg is not None:
+        plan.run_kg = body.run_kg
+    if body.unstructured_ingestion is not None:
+        plan.unstructured_ingestion = UnstructuredIngestionConfig.model_validate(
+            body.unstructured_ingestion
+        )
     if body.approver_notes is not None:
         plan.approver_notes = body.approver_notes
     if body.status is not None:

@@ -54,226 +54,129 @@ The platform is in active development and close to completion, but not every res
 - Tavily
 - LangSmith
 
-## System Design
+## Architecture at a glance
 
-The diagram below reflects the actual backend system design as it exists today: a research API and real-time coordination layer in front of approval-gated workflows, Temporal workers, data persistence, and downstream graph ingestion.
-
-```mermaid
-flowchart TD
-    U[Users: investors biohackers researchers] --> W[biotech-research-web]
-
-    subgraph Client["Frontend Client"]
-        W1[Dashboard]
-        W2[Chat Interface]
-        W3[Mission Launcher]
-        W4[Mission Inspector]
-    end
-
-    W --> W1
-    W --> W2
-    W --> W3
-    W --> W4
-
-    W --> API[FastAPI Research API]
-    W --> SIO[Socket.IO /research namespace]
-
-    subgraph Backend["biotech-research-ingestion"]
-        API --> R1[REST routes<br/>threads plans missions runs health openai-research internal]
-        SIO --> C[Coordinator / Planner flow]
-        C --> HITL[Human-in-the-loop approval gate]
-        HITL -->|approve| MC[Mission compilation]
-        HITL -->|reject/edit| C
-
-        MC --> TW[Temporal workflows]
-        API --> TW
-
-        TW --> DA[Deep research workflow<br/>deepagent runtime]
-        TW --> LA[Research mission workflow<br/>langchain_agent]
-        TW --> OA[OpenAI research workflow]
-
-        LA --> TOOLS[Research tools and subagents]
-        DA --> TOOLS
-
-        TOOLS --> T1[Tavily]
-        TOOLS --> T2[Playwright / browser_control]
-        TOOLS --> T3[agent-browser / Vercel]
-        TOOLS --> T4[Docling / LlamaParse]
-        TOOLS --> T5[Edgar / SEC / financial tools]
-        TOOLS --> T6[LangSmith tracing and evaluations]
-    end
-
-    API --> MDB[(MongoDB / Beanie)]
-    LA --> MDB
-    DA --> MDB
-
-    LA --> PERSIST[LangGraph checkpoint + store]
-    PERSIST --> PG[(Postgres)]
-
-    LA --> ART[Run outputs reports artifacts]
-    DA --> ART
-    ART --> S3[(AWS S3)]
-
-    LA --> KG[Knowledge graph ingestion]
-    KG --> NEO[(Neo4j entities relationships coverage)]
-
-    W --> NEO
-```
-
-## Current Operational Research Agent Workflow
-
-The diagram below focuses on the currently operational `src/research/langchain_agent/` workflow. This is the clearest production-style path for staged biotech research, report generation, optional iterative passes, memory use, and graph ingestion.
+One flow: **chat and plan** → **human gate** → **durable missions** → **reports and graph**. Stage-level detail (DAG, subagents, LangMem, KG vs unstructured) is spelled out in **Technical overview** below.
 
 ```mermaid
-flowchart TD
-    M[Mission JSON or approved plan input] --> RM[run_mission.py]
+flowchart TB
+  subgraph client["Client"]
+    WEB["biotech-research-web"]
+  end
 
-    RM --> MODE{Execution mode}
-    MODE -->|local| LOCAL[Local async mission run]
-    MODE -->|default| TEMP[Temporal ResearchMissionWorkflow]
+  subgraph edge["Edge"]
+    API["REST · threads · plans · missions · runs"]
+    SIO["Socket.IO · chat stream · plan_ready · progress"]
+  end
 
-    TEMP --> ACT[execute_research_stage activity]
-    LOCAL --> WF[workflow/run_mission.py]
-    ACT --> WF
+  subgraph core["biotech-research-ingestion"]
+    COORD["Coordinator · research plan"]
+    HITL{"Human approves?"}
+    TEMP["Temporal · DAG stages"]
+    RUN["LangGraph agents · memory · tools"]
+  end
 
-    WF --> ORDER[Topological stage ordering]
-    ORDER --> STAGE{Stage type}
+  subgraph stores["Data"]
+    M[("MongoDB")]
+    P[("Postgres")]
+    S[("S3")]
+    N[("Neo4j")]
+  end
 
-    STAGE -->|single pass| SLICE[run_single_mission_slice]
-    STAGE -->|iterative| ITER[run_iterative_stage]
+  WEB <--> API
+  WEB <--> SIO
+  SIO --> COORD --> HITL
+  HITL -->|yes| TEMP --> RUN
+  HITL -.->|edit / reject| COORD
 
-    ITER --> SLICE
-    ITER --> NEXT[Next-steps evaluation]
+  API --> M
+  RUN --> M
+  RUN --> P
+  RUN --> S
+  RUN --> N
 
-    SLICE --> AGENT[build_research_agent]
-    AGENT --> PROMPT[Dynamic biotech prompt middleware]
-    AGENT --> FSMW[Shared filesystem middleware]
-    AGENT --> SUBS[Named subagents]
-    AGENT --> MEM[LangMem retrieval and writeback]
+  classDef client fill:#0c4a6e,stroke:#38bdf8,color:#f0f9ff
+  classDef edge fill:#14532d,stroke:#4ade80,color:#f0fdf4
+  classDef core fill:#3730a3,stroke:#a5b4fc,color:#eef2ff
+  classDef stores fill:#1e293b,stroke:#94a3b8,color:#f1f5f9
 
-    SUBS --> SB1[browser_control]
-    SUBS --> SB2[vercel_agent_browser]
-    SUBS --> SB3[tavily_research]
-    SUBS --> SB4[docling_document]
-    SUBS --> SB5[clinicaltrials_research]
-    SUBS --> SB6[edgar_research]
-
-    AGENT --> TOOLS2[Selected research tools]
-    TOOLS2 --> TV[Tavily search map extract crawl]
-    TOOLS2 --> DOC[Docling / parsing]
-    TOOLS2 --> FS[Filesystem artifacts and reports]
-
-    SLICE --> REPORT[Stage report markdown + metadata]
-    ITER --> REPORT
-    REPORT --> DEP[Dependency reports injected into downstream stages]
-    DEP --> ORDER
-
-    REPORT --> MONGO[MissionRunDocument / StageRunRecord]
-    REPORT --> SNAP[State snapshots and output files]
-
-    REPORT --> CAND[Candidate gathering]
-    CAND --> UNSTR[Optional unstructured ingestion]
-    UNSTR --> NEO2[Neo4j graph write]
-
-    MEM --> STORE[Postgres-backed LangGraph store/checkpointer]
-    SNAP --> OUT[test_runs output directory]
+  class WEB client
+  class API,SIO edge
+  class COORD,HITL,TEMP,RUN core
+  class M,P,S,N stores
 ```
 
-## High-Level Runtime Flow
+## Technical overview: use cases, stack, and how it fits together
 
-### 1. Conversational planning
+This section consolidates the architecture of the **research mission runtime** (`langchain_agent`), the **coordinator / plan approval loop**, real-time and REST surfaces, and ingestion into Neo4j. (Detailed working notes lived in `INTERMEDIATE_langchain_agent_overview.md` and `INTERMEDIATE_coordinator_plan_websocket.md` at the monorepo root during documentation pass.)
 
-- A user starts in the web client chat interface.
-- Socket.IO streams the coordinator response token-by-token.
-- The coordinator generates a proposed `ResearchPlan`.
-- The plan is persisted and emitted to the client as a human approval event.
+### Use cases
 
-### 2. Human-in-the-loop approval
+- **Planning before spend**: A user describes a biotech research goal in chat; the **coordinator** proposes a structured **research plan** (tasks, tools, subagents, optional `run_kg` and unstructured ingestion flags). Nothing expensive runs until a human **approves** (or edits) the plan.
+- **Staged deep research**: An approved plan compiles to a **mission** executed as a **Temporal** workflow. Stages form a **DAG**: dependents receive upstream **final reports** as context. Stages can be **single-pass** or **iteratively** bounded.
+- **Traceable outputs**: Per-stage markdown reports, filesystem artifacts, LangSmith-friendly traces, S3-backed artifacts, and Mongo **mission run** records support inspection and product UX (`biotech-research-web`: mission inspector, run pages).
+- **Knowledge assets**: Optional **structured KG ingestion** from reports and **unstructured ingestion** from filings and documents land in **Neo4j** for graph navigation, portfolio-style views, and future dashboard search.
 
-- The user approves, edits, or rejects the plan.
-- Approval resumes the coordinator state.
-- The approved plan is compiled into a mission.
-- A Temporal workflow is launched for durable execution.
+### Technology pillars
 
-### 3. Mission execution
+| Layer | Role |
+|--------|------|
+| **FastAPI** | REST: threads, messages, plans, missions, runs, health, internal progress relay |
+| **Socket.IO** (`/research`) | Coordinator streaming, `plan_ready` / approval events, mission launch notifications; **`research_progress`** for live mission updates |
+| **Temporal** | Durable **ResearchMissionWorkflow**: DAG-level parallel stages, optional KG and unstructured activities |
+| **LangChain / LangGraph** | Coordinator graph + research agent graphs; Postgres-backed **checkpointer** and **store** (separate DB usage for coordinator vs mission worker) |
+| **LangMem** | Mission-scoped semantic, episodic, and procedural memories (`namespace` keyed by `mission_id`) |
+| **MongoDB / Beanie** | Threads, messages, **ResearchPlan**, **MissionRunDocument** / stage records |
+| **Neo4j** | Structured extraction graph, document/chunk graph (unstructured path); see **Neo4j GraphQL** below |
+| **AWS S3** | Report and run artifacts |
 
-- Missions can run through the deep research workflow or the current `langchain_agent` workflow.
-- The `langchain_agent` path executes dependency-aware stages, with optional iterative passes.
-- Each stage can use scoped tools, named subagents, memory retrieval, and shared filesystem artifacts.
+### Research mission runtime (`langchain_agent`)
 
-### 4. Persistence and artifacts
+- **Orchestration**: **Temporal** groups stages into **DAG levels** and runs each level in parallel; **in-process** `run_mission.py` uses strict **topological order** (serial). Activities wire **LangMem**, LangGraph persistence, and optional **ResearchProgressMiddleware**.
+- **One stage** (`run_single_mission_slice`): LangMem **recall** → **build_research_agent** → user message (objective, temporal context, **dependency reports**) → agent run → **stage candidate manifest** → memory **writeback** → **StageRunRecord** / S3.
+- **Main agent** (`build_research_agent`): **Tavily-only** tool surface on the parent (`search_web`, `extract_from_urls`, `map_website`, `crawl_website` via `TOOLS_MAP`); **dynamic prompt middleware** injects live state, targets, and fenced memory blocks (procedural / episodic / semantic); **SubAgentMiddleware** delegates to compiled subagents.
+- **Subagents** (selected per task): `browser_control` (Playwright), `vercel_agent_browser` (Deep Agent + **agent-browser** CLI), `tavily_research`, `clinicaltrials_research`, `edgar_research`, `docling_document`. All share **filesystem middleware** for sandbox I/O and handoffs (`handoff.json`).
+- **Per-slice vs chat thread**: Each stage run uses a generated **`run_thread_id`** in LangGraph config for checkpoints. **`thread_id`** on the plan / workflow ties Mongo chat and Temporal metadata—not the same string as the slice checkpoint thread.
+- **Structured KG** (`run_kg`): Schema **index → chunk selection → extraction → searchText / embeddings → Neo4j** (large schema handled in parts). **Unstructured**: candidates from Edgar downloads, written files, visited URLs, subagent artifacts; **Document** (+ text versions, segmentation, chunks); today **only Document** links tightly to structured nodes—full linking is evolving.
 
-- thread, plan, mission, and run records are stored in MongoDB via Beanie
-- LangGraph checkpointing and store state use Postgres-backed persistence in the research workflow
-- reports, outputs, and longer-lived artifacts can be materialized to AWS-backed storage paths
-- state snapshots and run outputs are written for inspection and debugging
+### Coordinator, HITL, and the web client
 
-### 5. Knowledge graph enrichment
+- **Coordinator** (`src/agents/coordinator.py`): `langchain.agents.create_agent` with **HumanInTheLoopMiddleware** on **`create_research_plan`** only (`approve` / `edit` / `reject`). The tool call **interrupts** the compiled graph until **`Command(resume=...)`** supplies a decision.
+- **Tools**: `create_research_plan` (validated plan payload for the compiler), `openai_web_search`. Prompts: `src/prompts/coordinator_prompt_builders.py`.
+- **Streaming** (`coordinator_service.py`): `astream_events` for tokens and tool events; after the run, graph state is inspected for **HITL interrupts** (`state.tasks[].interrupts`).
+- **Socket.IO handlers** (`api/socketio/handlers.py`): **`send_message`** runs the coordinator and, on interrupt, persists a **ResearchPlan** and emits **`plan_ready`** with **`interrupt_id`**. **`plan_approved`** validates the interrupt, resumes with approve or **edit** (full rewritten tool args), updates the plan, then **`create_mission_from_plan`** and starts **ResearchMissionWorkflow**. **`plan_rejected`** resumes with reject and marks the plan rejected.
+- **biotech-research-web**: **`PlanReviewPanel`** listens for `plan_ready`, `mission_compiling`, `mission_launched`, `mission_launch_error`. **`PlanActions`** saves/edits via REST then emits **`plan_approved`** with `thread_id`, `interrupt_id`, and edited plan so the backend can resume and launch. **REST fallback**: `POST /plans/{id}/approve` and `POST /plans/{id}/launch` if WebSocket is unavailable.
 
-- completed reports can feed KG ingestion
-- structured and unstructured flows write entities, chunks, claims, and relationships into Neo4j
-- graph data supports entity coverage, downstream query scenarios, and research inspection
+### Mission progress over WebSocket (research worker path)
 
-## Key Backend Areas
+Separate from coordinator tokens: **ResearchProgressMiddleware** in the research agent invokes a callback that **POSTs** to **`POST /api/v1/internal/research-progress`**, which broadcasts **`research_progress`** to room **`mission:{mission_id}`**. Clients call **`join_mission`** after launch to subscribe.
 
-### API and real-time layer
+### REST API (summary)
 
-- `src/main.py`
-- `src/api/routes/`
-- `src/api/socketio/`
+| Prefix | Purpose |
+|--------|---------|
+| **`/threads`** | Create/list/patch/delete threads; **messages** cursor API |
+| **`/plans`** | List/get/patch plans; **`/approve`**, **`/launch`** (compile + Temporal) |
+| **`/missions`** | Mission documents, status, runs, outputs, artifact metadata and S3-backed content |
+| **`/runs`** | Flattened stage runs; composite run id `mission_id:task_slug:iteration:ordinal` |
+| **`/internal/research-progress`** | Worker → Socket.IO relay (optional **`X-Internal-Secret`**) |
 
-This layer owns the FastAPI app, Socket.IO mount, route registration, startup lifecycle, health checks, thread APIs, plan APIs, mission APIs, and internal progress relay.
+### Neo4j GraphQL schema (domain coverage)
 
-### Coordinator and HITL planning
+The Neo4j **GraphQL** layer exposes a broad product graph: **core commerce**, **diagnostics**, a large slice of **biology** (e.g. biomarkers, compounds), **events** (narratives), and **people**, in addition to research-derived entities. Dashboard and search UX will consume this API as the client matures.
 
-- `src/services/coordinator_service.py`
-- `src/api/socketio/handlers.py`
-- `src/models/plan.py`
+### Human-in-the-loop (summary)
 
-This layer streams coordinator output, captures HITL interrupts, persists plans, and turns approved plans into executable missions.
+Plans are not auto-executed: the client previews the plan, can edit task/tool/subagent choices, and approves or rejects over Socket.IO (with REST support). Approved plans compile to missions and run under Temporal; live **research_progress** events support operator and end-user visibility.
 
-### Current operational research workflow
+### DeepAgents path (separate architecture)
 
-- `src/research/langchain_agent/`
-- `src/research/langchain_agent/workflow/`
-- `src/research/langchain_agent/models/mission.py`
-- `src/research/langchain_agent/run_mission.py`
-
-This is the main staged biotech research workflow in the repo today. It supports local execution and Temporal-backed execution, stage dependencies, iterative stages, report generation, and optional KG ingestion.
-
-### Memory
-
-- `src/research/langchain_agent/memory/`
-- `src/research/langchain_agent/storage/`
-
-This layer uses LangMem and LangGraph persistence to support semantic, episodic, and procedural memory across mission-scoped research runs.
-
-### Knowledge graph and ingestion
-
-- `src/research/langchain_agent/kg/`
-- `src/research/langchain_agent/unstructured/`
-
-These modules handle structured report-to-graph workflows, candidate gathering, unstructured document ingestion, and Neo4j writes.
-
-### DeepAgents path
-
-- `src/research/deepagent/`
-
-This path represents a separate architecture built around DeepAgents mission compilation and runtime execution. It is important to the future system design, but it should be treated as an evolving architecture rather than the sole current operational path.
-
-## Human In The Loop
-
-Human approval is a first-class architectural decision in this platform.
-
-- plans are not assumed correct just because an LLM produced them
-- the client receives a plan preview before mission launch
-- approval, edits, and rejection flow through Socket.IO events
-- approved plans can then be compiled and launched into Temporal workflows
-- progress is streamed back in real time for operational visibility
+- `src/research/deepagent/` — compiled missions and DeepAgents runtime; wired to Temporal but **not** the primary fully operational research path today. Treat as evolving alongside `langchain_agent`.
 
 ## Data and Persistence Layers
 
 - MongoDB + Beanie: threads, messages, research plans, deep research missions, deep research runs, research workflow run records
-- Postgres: LangGraph checkpointer and store backing the mission workflow
+- Postgres: LangGraph checkpointer and store for the **coordinator** graph and the **mission / research** worker graphs (separate connection configuration in practice)
 - AWS S3: artifacts, reports, mission outputs, and externally inspectable run files
 - Neo4j: entities, relationships, graph coverage, unstructured claims/chunks, and downstream query support
 
@@ -330,6 +233,18 @@ uv run python -m src.research.langchain_agent.run_mission \
   --mission-file src/research/langchain_agent/test_runs/missions/<mission>.json \
   --output-dir src/research/langchain_agent/test_runs/run_outputs/<run-name>
 ```
+
+## Video walkthrough
+
+> **Placeholder:** Add a recorded tour of chat → plan review → mission launch → run inspector and (optionally) graph touchpoints.  
+> **Link:** _[URL or “coming soon”]_
+
+## Roadmap and next steps
+
+- **Operator-grade client control**: Integrate full research-system control into **biotech-research-web**—e.g. re-running Temporal activities from selected **state snapshots**, triggering **ingestion of completed reports** on demand, and **injecting context into running workflows** where the platform allows it.
+- **Neo4j GraphQL in the dashboard**: Wire the **Neo4j GraphQL API** into the client as part of the dashboard, with **search** and exploration over the domains the schema already covers (commerce, diagnostics, biology such as biomarkers and compounds, narrative **events**, and **people**).
+- **Evaluations and quality bars**: Run systematic **evaluations** of **memory** usefulness, **tool usage**, **report quality**, **structured ingestion** quality, **unstructured ingestion** quality, and add **factual accuracy** checks against sources or gold criteria.
+- **Agent and ingestion workflows**: Refine **agent and subagent contracts**; likely add dedicated **structured** and **unstructured ingestion** agent workflows (mirroring the research agent pattern with stronger, task-specific tooling and clearer handoffs).
 
 ## Why This Repo Matters
 

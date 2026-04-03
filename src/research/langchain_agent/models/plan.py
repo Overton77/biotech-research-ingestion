@@ -21,6 +21,7 @@ from src.research.langchain_agent.agent.subagent_types import (
     ALL_SUBAGENT_NAMES,
     DEFAULT_STAGE_SUBAGENT_NAMES,
 )
+from src.research.langchain_agent.unstructured.models import UnstructuredIngestionConfig
 
 # ---------------------------------------------------------------------------
 # Pydantic — shared pieces
@@ -104,6 +105,14 @@ class ResearchPlanOutput(BaseModel):
     tasks: list[ResearchPlanTask]
     context: str = ""
     starter_sources: list[StarterSource] = Field(default_factory=list)
+    run_kg: bool = Field(
+        default=False,
+        description="After stages complete, run structured KG ingestion on stage reports.",
+    )
+    unstructured_ingestion: UnstructuredIngestionConfig = Field(
+        default_factory=UnstructuredIngestionConfig,
+        description="Staged unstructured document ingestion (candidates → chunks/embeddings).",
+    )
     status: Literal["draft", "pending_approval", "approved"] = "approved"
     version: int = 1
 
@@ -137,6 +146,10 @@ class ResearchPlan(Document):
     stages: list[str] = Field(default_factory=list)
     tasks: list[ResearchPlanTask] = Field(default_factory=list)
     starter_sources: list[StarterSource] = Field(default_factory=list)
+    run_kg: bool = False
+    unstructured_ingestion: UnstructuredIngestionConfig = Field(
+        default_factory=UnstructuredIngestionConfig,
+    )
     context: str = ""
     mission_id: str | None = None
     workflow_id: str | None = None
@@ -174,6 +187,8 @@ class ResearchPlan(Document):
             tasks=[ResearchPlanTask.model_validate(t.model_dump()) for t in self.tasks],
             context=self.context,
             starter_sources=list(self.starter_sources),
+            run_kg=self.run_kg,
+            unstructured_ingestion=self.unstructured_ingestion.model_copy(),
             status=out_status,
             version=self.version,
         )
