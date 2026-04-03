@@ -87,6 +87,22 @@ async def emit_mission_progress(input: MissionProgressEventInput) -> None:
     await _emit_progress(input.mission_id, input.event_type, input.payload)
 
 
+async def _expected_task_count_for_mission(mission, plan_id: str | None) -> int:
+    """Match list filtering to mission_to_dict task_count when a plan exists."""
+    if plan_id:
+        from beanie.odm.fields import PydanticObjectId
+
+        from src.research.langchain_agent.models.plan import ResearchPlan
+
+        try:
+            plan = await ResearchPlan.get(PydanticObjectId(plan_id))
+        except Exception:
+            plan = None
+        if plan is not None and plan.tasks:
+            return len(plan.tasks)
+    return len(mission.stages)
+
+
 @activity.defn
 async def initialize_mission_run(input: MissionWorkflowInput) -> None:
     """Create or refresh the canonical MissionRunDocument and linked plan."""
@@ -97,6 +113,7 @@ async def initialize_mission_run(input: MissionWorkflowInput) -> None:
 
     await init_research_agent_beanie()
     mission = ResearchMission.model_validate(input.mission_json)
+    expected_tc = await _expected_task_count_for_mission(mission, input.plan_id)
 
     existing = await MissionRunDocument.find_one({"mission_id": mission.mission_id})
     if existing is None:
@@ -113,6 +130,7 @@ async def initialize_mission_run(input: MissionWorkflowInput) -> None:
                 (stage.iterative_config.max_iterations for stage in mission.stages if stage.iterative_config),
                 default=None,
             ),
+            expected_task_count=expected_tc,
         )
         await doc.insert()
     else:
@@ -122,6 +140,7 @@ async def initialize_mission_run(input: MissionWorkflowInput) -> None:
         existing.workflow_id = input.workflow_id
         existing.base_domain = mission.base_domain
         existing.targets = sorted({target for stage in mission.stages for target in stage.slice_input.targets})
+        existing.expected_task_count = expected_tc
         existing.status = "running"
         existing.error = None
         existing.updated_at = datetime.now(timezone.utc)

@@ -66,7 +66,18 @@ async def list_missions(
     research_plan_id: str | None = None,
     thread_id: str | None = None,
     status_filter: str | None = None,
+    min_task_count: int | None = Query(default=None, ge=0),
+    max_task_count: int | None = Query(default=None, ge=0),
 ) -> dict:
+    if (
+        min_task_count is not None
+        and max_task_count is not None
+        and min_task_count > max_task_count
+    ):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="min_task_count cannot be greater than max_task_count",
+        )
     limit = min(limit, 100)
     query: dict[str, Any] = {}
     if research_plan_id:
@@ -75,6 +86,13 @@ async def list_missions(
         query["thread_id"] = thread_id
     if status_filter:
         query["status"] = status_filter
+    if min_task_count is not None or max_task_count is not None:
+        tc_range: dict[str, Any] = {}
+        if min_task_count is not None:
+            tc_range["$gte"] = min_task_count
+        if max_task_count is not None:
+            tc_range["$lte"] = max_task_count
+        query["expected_task_count"] = tc_range
 
     total = await MissionRunDocument.find(query).count()
     docs = await (

@@ -29,7 +29,7 @@ from src.research.langchain_agent.kg.schema_selector import (
     select_schema_chunks,
     load_schema_chunks,
 )
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient
 from src.research.langchain_agent.unstructured.models import (
     DocumentRecord,
     GraphTargetRef,

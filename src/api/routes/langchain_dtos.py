@@ -172,6 +172,7 @@ def mission_to_dict(
     summary = compute_status_summary(doc, expected_task_ids=task_ids)
     return {
         "id": doc.mission_id,
+        "document_id": str(doc.id),
         "mission_id": doc.mission_id,
         "plan_id": doc.research_plan_id,
         "thread_id": doc.thread_id,
@@ -181,6 +182,7 @@ def mission_to_dict(
         "mission_name": doc.mission_name,
         "base_domain": doc.base_domain,
         "mission_type": doc.mission_type,
+        "expected_task_count": doc.expected_task_count,
         "targets": list(doc.targets),
         "status": doc.status,
         "error": doc.error,

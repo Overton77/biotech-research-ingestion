@@ -95,6 +95,7 @@ async def run_mission(
                 for stage in mission.stages
                 for t in stage.slice_input.targets
             }),
+            expected_task_count=len(mission.stages),
             langsmith_run_id=get_current_trace_id(),
         )
         await mission_doc.insert()

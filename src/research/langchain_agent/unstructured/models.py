@@ -14,7 +14,7 @@ class SummaryPolicy(BaseModel):
     enabled: bool = False
     min_chunk_count: int = 80
     max_input_chars: int = 12000
-    model: str = "gpt-5.4-mini"
+    model: str = "gpt-5-mini"
 
 
 class EmbeddingConfig(BaseModel):

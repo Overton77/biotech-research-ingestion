@@ -382,6 +382,9 @@ class MissionRunDocument(Document):
     base_domain: str = ""
     targets: list[str] = Field(default_factory=list)
 
+    #: Planned task/stage count for list filtering (aligned with plan.tasks or mission.stages).
+    expected_task_count: int | None = None
+
     status: Literal["running", "completed", "partial", "failed"] = "running"
     error: str | None = None
 

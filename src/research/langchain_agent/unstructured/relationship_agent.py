@@ -3,7 +3,7 @@ from __future__ import annotations
 from langchain.agents import create_agent
 from langchain.agents.middleware import ToolCallLimitMiddleware
 
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient
 from src.research.langchain_agent.unstructured.models import (
     ChunkRecord,
     DocumentRecord,

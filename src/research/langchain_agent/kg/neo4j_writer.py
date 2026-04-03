@@ -29,7 +29,7 @@ from src.research.langchain_agent.kg.temporal import (
     default_bitemporal_props,
     now_utc,
 )
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient
 
 logger = logging.getLogger(__name__)
 

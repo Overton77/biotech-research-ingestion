@@ -8,9 +8,8 @@ Usage:
     uv run python -m src.infrastructure.temporal.research_worker
 
 Registers:
-    - ResearchMissionWorkflow  (DAG-parallel stage execution)
-    - execute_research_stage   (single stage activity)
-    - ingest_kg_from_report    (KG ingestion activity)
+    - ResearchMissionWorkflow and every activity it schedules (same surface as
+      the deep-research worker in worker.py, minus DeepResearchMissionWorkflow).
 """
 
 from __future__ import annotations
@@ -33,9 +32,13 @@ load_dotenv()
 
 from src.infrastructure.temporal.client import get_temporal_client
 from src.infrastructure.temporal.activities.research_mission import (
+    emit_mission_progress,
     execute_research_stage,
+    finalize_mission_run,
     ingest_kg_from_report,
     ingest_unstructured_documents,
+    initialize_mission_run,
+    persist_stage_activity_result,
 )
 from src.infrastructure.temporal.workflows.research_mission import (
     ResearchMissionWorkflow,
@@ -75,9 +78,13 @@ async def main() -> None:
         task_queue=TASK_QUEUE,
         workflows=[ResearchMissionWorkflow],
         activities=[
+            emit_mission_progress,
             execute_research_stage,
+            finalize_mission_run,
             ingest_kg_from_report,
             ingest_unstructured_documents,
+            initialize_mission_run,
+            persist_stage_activity_result,
         ],
     )
 

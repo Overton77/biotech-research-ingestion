@@ -10,7 +10,7 @@ from typing import Any
 from src.research.langchain_agent.kg.temporal import default_bitemporal_props
 
 logger = logging.getLogger(__name__)
-from src.research.langchain_agent.neo4j_aura import Neo4jAuraClient
+from src.infrastructure.neo4j.neo4j_client import Neo4jAuraClient
 from src.research.langchain_agent.unstructured.models import (
     ClaimOccurrenceRecord,
     ChunkRecord,

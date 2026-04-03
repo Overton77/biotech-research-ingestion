@@ -77,7 +77,7 @@ async def _run(args: argparse.Namespace) -> None:
         run_kg_ingestion,
     )
     from src.research.langchain_agent.kg.schema_selector import load_schema_index
-    from src.research.langchain_agent.neo4j_aura import Neo4jAuraSettings, Neo4jAuraClient
+    from src.infrastructure.neo4j.neo4j_client import Neo4jAuraSettings, Neo4jAuraClient
 
     # Resolve and read the report
     report_path = _resolve_report_path(args.report)
